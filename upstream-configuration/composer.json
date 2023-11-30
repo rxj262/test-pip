@@ -222,7 +222,8 @@
             "composer/installers": true,
             "mglaman/composer-drupal-lenient": true,
             "wikimedia/composer-merge-plugin": true,
-            "oomphinc/composer-installers-extender": true
+            "oomphinc/composer-installers-extender": true,
+            "wikimedia/compsoer-merge-plugin": true
         }
     }
 }
