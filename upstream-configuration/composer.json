@@ -184,7 +184,6 @@
         "drupal/views_filters_populate": "^2.1",
         "drupal/aggregator": "^1.1",
         "oomphinc/composer-installers-extender": "^2.0",
-        "bower-asset/photoswipe": "^5",
         "drupal/ckeditor": "^1.0",
         "ckeditor/liststyle": "^4.8",
         "drupal-ckeditor-libraries-group/fakeobjects": "^4.22",
