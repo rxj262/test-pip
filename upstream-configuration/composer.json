@@ -182,5 +182,5 @@
         "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
         "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
         "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
-    },
+    }
 }
