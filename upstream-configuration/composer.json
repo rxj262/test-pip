@@ -194,5 +194,6 @@
         "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
         "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
