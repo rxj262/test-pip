@@ -9,6 +9,18 @@
         "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "1": {
+            "type": "package",
+            "package": {
+                "name": "enyo/dropzone",
+                "version": "5.7.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/enyo/dropzone/archive/v5.7.1.zip",
+                    "type": "zip"
+                }
+            }
         }
     },
     "require": {
@@ -138,7 +150,6 @@
         "wikimedia/composer-merge-plugin": "^2.1.0",
         "drupal/ldap": "^4.x-dev@dev",
         "drupal/ckeditor_liststyle": "^1.5",
-        "simplesamlphp/composer-module-installer": "^1.3",
         "drupal/dynamic_entity_reference": "^3.0",
         "drupal/classy": "^1.0",
         "drupal/stable": "^2.0",
@@ -152,15 +163,15 @@
         "drupal/views_filters_populate": "^2.1",
         "drupal/aggregator": "^1.1",
         "oomphinc/composer-installers-extender": "^2.0",
-        "npm-asset/slick-carousel": "1.6.0",
         "bower-asset/photoswipe": "^5",
         "drupal/ckeditor": "^1.0",
         "ckeditor/liststyle": "^4.8",
-        "npm-asset/cropper": "3.1.6",
-        "npm-asset/dropzone": "5.1.1",
         "drupal-ckeditor-libraries-group/fakeobjects": "^4.22",
         "drupal-ckeditor-libraries-group/link": "^4.22",
-        "vardot/blazy": "1.8.2.1"
+        "vardot/blazy": "1.8.2.1",
+        "kenwheeler/slick": "^1.6.0",
+        "fengyuanchen/cropper": "dev-master",
+        "enyo/dropzone": "^5.1"
     },
     "extra": {
         "_README": "To make a custom upstream, clone this repository and add any dependencies to be provided by this upstream to this composer.json file. Leave the root-level composer.json file for the exclusive use of each individual site; do not modify it after your custom upstream has been published. See https://pantheon.io/docs/create-custom-upstream for more information."
@@ -182,5 +193,6 @@
         "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
         "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
         "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
-    }
+    },
+    "minimum-stability": "dev"
 }
