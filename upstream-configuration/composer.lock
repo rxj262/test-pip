@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a1e4b0752f6c0d89ba3d32141744391",
+    "content-hash": "2ce25fa19cf0d5584f3dc1ea13976a7b",
     "packages": [
         {
             "name": "appolodev/vanilla-icon-picker",
@@ -71,21 +71,6 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.2.0"
             },
             "time": "2023-11-14T13:51:46+00:00"
-        },
-        {
-            "name": "bower-asset/photoswipe",
-            "version": "v5.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dimsemenov/PhotoSwipe.git",
-                "reference": "03eab19b78f633d4dfc27ba669f93ba4cd1d2570"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dimsemenov/PhotoSwipe/zipball/03eab19b78f633d4dfc27ba669f93ba4cd1d2570",
-                "reference": "03eab19b78f633d4dfc27ba669f93ba4cd1d2570"
-            },
-            "type": "bower-asset"
         },
         {
             "name": "caxy/php-htmldiff",
@@ -209,15 +194,6 @@
                 "source": "https://github.com/Chi-teck/drupal-code-generator/tree/3.3.0"
             },
             "time": "2023-10-21T12:57:05+00:00"
-        },
-        {
-            "name": "ckeditor/liststyle",
-            "version": "4.8.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://download.ckeditor.com/liststyle/releases/liststyle_4.8.0.zip"
-            },
-            "type": "ckeditor-plugin"
         },
         {
             "name": "commerceguys/addressing",
@@ -1918,6 +1894,40 @@
             "support": {
                 "issues": "https://github.com/ckeditor/ckeditor4/issues",
                 "source": "https://github.com/ckeditor/ckeditor4/tree/master/plugins/link"
+            },
+            "time": "2023-02-08T14:53:49+00:00"
+        },
+        {
+            "name": "drupal-ckeditor-libraries-group/liststyle",
+            "version": "4.22.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal-ckeditor-libraries-group/liststyle.git",
+                "reference": "14e353949c40c661f0660052e18546e5a3d865dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal-ckeditor-libraries-group/liststyle/zipball/14e353949c40c661f0660052e18546e5a3d865dd",
+                "reference": "14e353949c40c661f0660052e18546e5a3d865dd",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later",
+                "LGPL-2.1-or-later",
+                "MPL-1.1"
+            ],
+            "description": "CKEditor 4 liststyle plugin",
+            "homepage": "https://ckeditor.com/cke4/addon/liststyle",
+            "keywords": [
+                "CKEditor",
+                "liststyle",
+                "plugin"
+            ],
+            "support": {
+                "issues": "https://github.com/ckeditor/ckeditor4/issues",
+                "source": "https://github.com/ckeditor/ckeditor4/tree/master/plugins/liststyle"
             },
             "time": "2023-02-08T14:53:49+00:00"
         },
@@ -13432,6 +13442,37 @@
                 }
             ],
             "time": "2023-11-24T15:40:42+00:00"
+        },
+        {
+            "name": "levmyshkin/photo-swipe",
+            "version": "5.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/levmyshkin/photo-swipe.git",
+                "reference": "ab2f32ba1398e622d9e2a2d25dc2f8eb2ab81090"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/levmyshkin/photo-swipe/zipball/ab2f32ba1398e622d9e2a2d25dc2f8eb2ab81090",
+                "reference": "ab2f32ba1398e622d9e2a2d25dc2f8eb2ab81090",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PhotoSwipe v5 — JavaScript image gallery and lightbox as Drupal library",
+            "support": {
+                "source": "https://github.com/levmyshkin/photo-swipe/tree/5.2.2"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/photoswipe",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2022-10-06T13:53:36+00:00"
         },
         {
             "name": "masterminds/html5",
