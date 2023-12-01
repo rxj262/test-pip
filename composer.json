@@ -80,7 +80,8 @@
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
-            "pantheon-systems/upstream-management": true
+            "pantheon-systems/upstream-management": true,
+            "wikimedia/composer-merge-plugin": true
         }
     }
 }
