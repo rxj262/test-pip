@@ -82,6 +82,8 @@
             "phpstan/extension-installer": true,
             "pantheon-systems/upstream-management": true,
             "wikimedia/composer-merge-plugin": true
+            "mglaman/composer-drupal-lenient": true,
+            "oomphinc/composer-installers-extender": true
         }
     }
 }
