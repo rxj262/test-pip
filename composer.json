@@ -10,7 +10,7 @@
         },
         {
             "type": "path",
-            "url": "upstream-configuration/locked"
+            "url": "upstream-configuration"
         }
     ],
     "require": {
