@@ -51,7 +51,7 @@
         "drupal/admin_toolbar": "^3.4.1",
         "composer/installers": "^1.9",
         "drupal/core-composer-scaffold": "^10.1",
-        "drupal/core-recommended": "^10.1",
+        "drupal/core-recommended": "^10",
         "pantheon-systems/drupal-integrations": "^10",
         "cweagans/composer-patches": "^1.7",
         "drush/drush": "^11 ||  ^12",
@@ -196,14 +196,18 @@
     "extra": {
         "_README": "To make a custom upstream, clone this repository and add any dependencies to be provided by this upstream to this composer.json file. Leave the root-level composer.json file for the exclusive use of each individual site; do not modify it after your custom upstream has been published. See https://pantheon.io/docs/create-custom-upstream for more information."
     },
-    "installer-types":[
+    "installer-types": [
         "bower-asset",
         "npm-asset",
         "ckeditor-plugin"
     ],
     "installer-paths": {
         "web/core": ["type:drupal-core"],
-        "web/libraries/{$name}": ["type:drupal-library", "type:bower-asset", "type:npm-asset"],
+        "web/libraries/{$name}": [
+            "type:drupal-library",
+            "type:bower-asset",
+            "type:npm-asset"
+        ],
         "web/libraries/ckeditor/plugins/{$name}": ["type:ckeditor-plugin"],
         "web/modules/contrib/{$name}": ["type:drupal-module"],
         "web/profiles/contrib/{$name}": ["type:drupal-profile"],

@@ -4,17 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ce25fa19cf0d5584f3dc1ea13976a7b",
+    "content-hash": "6c81adeecd11f016396124eecabf0af0",
     "packages": [
-        {
-            "name": "appolodev/vanilla-icon-picker",
-            "version": "v1.1.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/AppoloDev/vanilla-icon-picker/archive/refs/tags/v1.1.3.zip"
-            },
-            "type": "drupal-library"
-        },
         {
             "name": "asm89/stack-cors",
             "version": "dev-master",
@@ -2043,7 +2034,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/address.git",
-                "reference": "d1eb93d42604c5fb193148360f83b4b2f0f05cd7"
+                "reference": "7941b5715a86eaf2641bc8e0014fac6a8d609db6"
             },
             "require": {
                 "commerceguys/addressing": "^1.4.2",
@@ -2059,8 +2050,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.12+3-dev",
-                    "datestamp": "1700139967",
+                    "version": "8.x-1.12+4-dev",
+                    "datestamp": "1701384951",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5958,66 +5949,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/fontawesome",
                 "issues": "https://drupal.org/project/issues/fontawesome"
-            }
-        },
-        {
-            "name": "drupal/fontawesome_iconpicker",
-            "version": "dev-3.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/fontawesome_iconpicker.git",
-                "reference": "d36ec608c55538273de746c0450ce6bbc04866c8"
-            },
-            "require": {
-                "appolodev/vanilla-icon-picker": "^1.1",
-                "composer/installers": "^1.9",
-                "drupal/core": "^8.8 || ^9 || ^10",
-                "drupal/fontawesome": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "3.0.0-alpha1+1-dev",
-                    "datestamp": "1689882520",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Charlton",
-                    "homepage": "https://www.drupal.org/user/17089"
-                },
-                {
-                    "name": "cosmicdreams",
-                    "homepage": "https://www.drupal.org/user/42579"
-                },
-                {
-                    "name": "D34dMan",
-                    "homepage": "https://www.drupal.org/user/751698"
-                },
-                {
-                    "name": "truls1502",
-                    "homepage": "https://www.drupal.org/user/325866"
-                }
-            ],
-            "description": "Fontawesome iconpicker using AppoloDev/vanilla-icon-picker",
-            "homepage": "https://www.drupal.org/project/fontawesome_iconpicker",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/fontawesome_iconpicker",
-                "issues": "https://www.drupal.org/project/issues/fontawesome_iconpicker"
             }
         },
         {
@@ -12971,12 +12902,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/csv.git",
-                "reference": "c6017ce31a3bb0470100ed3d9fe705b42fd42732"
+                "reference": "0baf038136463c46e788d5a1a3f3ed0cf9f15a50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/csv/zipball/c6017ce31a3bb0470100ed3d9fe705b42fd42732",
-                "reference": "c6017ce31a3bb0470100ed3d9fe705b42fd42732",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/0baf038136463c46e788d5a1a3f3ed0cf9f15a50",
+                "reference": "0baf038136463c46e788d5a1a3f3ed0cf9f15a50",
                 "shasum": ""
             },
             "require": {
@@ -12986,17 +12917,17 @@
                 "php": "^8.1.2"
             },
             "require-dev": {
-                "doctrine/collections": "^2.1.3",
+                "doctrine/collections": "^2.1.4",
                 "ext-dom": "*",
                 "ext-xdebug": "*",
                 "friendsofphp/php-cs-fixer": "^v3.22.0",
-                "phpbench/phpbench": "^1.2.14",
-                "phpstan/phpstan": "^1.10.26",
-                "phpstan/phpstan-deprecation-rules": "^1.1.3",
-                "phpstan/phpstan-phpunit": "^1.3.13",
-                "phpstan/phpstan-strict-rules": "^1.5.1",
-                "phpunit/phpunit": "^10.3.1",
-                "symfony/var-dumper": "^6.3.3"
+                "phpbench/phpbench": "^1.2.15",
+                "phpstan/phpstan": "^1.10.46",
+                "phpstan/phpstan-deprecation-rules": "^1.1.4",
+                "phpstan/phpstan-phpunit": "^1.3.15",
+                "phpstan/phpstan-strict-rules": "^1.5.2",
+                "phpunit/phpunit": "^10.4.2",
+                "symfony/var-dumper": "^6.4.0"
             },
             "suggest": {
                 "ext-dom": "Required to use the XMLConverter and the HTMLConverter classes",
@@ -13053,7 +12984,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-24T07:36:31+00:00"
+            "time": "2023-11-30T21:23:28+00:00"
         },
         {
             "name": "league/event",

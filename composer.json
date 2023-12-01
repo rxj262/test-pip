@@ -10,7 +10,7 @@
         },
         {
             "type": "path",
-            "url": "upstream-configuration"
+            "url": "upstream-configuration/locked"
         }
     ],
     "require": {
@@ -81,7 +81,7 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
             "pantheon-systems/upstream-management": true,
-            "wikimedia/composer-merge-plugin": true
+            "wikimedia/composer-merge-plugin": true,
             "mglaman/composer-drupal-lenient": true,
             "oomphinc/composer-installers-extender": true
         }
