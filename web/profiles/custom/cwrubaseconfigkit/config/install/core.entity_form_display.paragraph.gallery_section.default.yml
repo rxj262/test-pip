@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery_section.field_gallery_image_caption
+    - field.field.paragraph.gallery_section.field_gallery_image_ref
+    - field.field.paragraph.gallery_section.field_gallery_title
+    - paragraphs.paragraphs_type.gallery_section
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+    - text
+id: paragraph.gallery_section.default
+targetEntityType: paragraph
+bundle: gallery_section
+mode: default
+content:
+  field_gallery_image_caption:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_gallery_image_ref:
+    weight: 2
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser
+    type: inline_entity_form_complex
+    region: content
+  field_gallery_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

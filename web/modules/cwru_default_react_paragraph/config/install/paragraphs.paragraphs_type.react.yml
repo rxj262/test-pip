@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: react
-label: React
-icon_uuid: null
-icon_default: null
-description: 'Please enter the root id of the React app that goes in here. '
-behavior_plugins: {  }

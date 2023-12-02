@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: two_column_content_and_stats
-label: 'Two Column Content and Stats'
-icon_uuid: null
-icon_default: null
-description: ''
-behavior_plugins: {  }

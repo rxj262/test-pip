@@ -1,0 +1,23 @@
+.field--name-field-apply-step-group-title,
+.field--name-field-uga-tab-title {
+  @include button--tab();
+  margin: 10px 20px;
+  @include size(small) {margin: 10px}
+}
+.tab-container {
+  text-align: center;
+  padding-bottom: 30px;
+  position: relative;
+  margin-top: 20px;
+  .tab-contianer__line {
+    height: 5px;
+    background-color: $lime;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45px;
+    transition: top .2s ease-in-out;
+    @include size("medium") {display: none;}
+    @include size("small") {display: block;}
+  }
+}

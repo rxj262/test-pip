@@ -1,0 +1,13 @@
+name: 'Stacked Button'
+description: 'Provides Stacked Buttons paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_icon_picker
+  - entity_reference_revisions
+  - field
+  - link
+  - options
+  - paragraphs
+version: '1.03'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

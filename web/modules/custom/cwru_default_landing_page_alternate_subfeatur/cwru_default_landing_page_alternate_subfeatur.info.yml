@@ -1,0 +1,21 @@
+name: 'Landing Page Alternate Subfeature'
+description: 'Provides Landing Page Alternate Subfeature content type and related configuration. '
+type: module
+dependencies:
+  - cwru_default_alternating_subfeature
+  - cwru_default_centered_intro_text
+  - cwru_default_hero_overlay_text
+  - cwru_default_homepage_w_full_width_5_sub
+  - cwru_default_meta_field_storage
+  - entity_reference_revisions
+  - field
+  - field_group
+  - menu_ui
+  - metatag
+  - node
+  - paragraphs
+  - path
+  - user
+version: '1.03'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

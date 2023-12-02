@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.homepage_w_sidebar
+  module:
+    - content_moderation
+id: b8448396
+label: 'Homepage w/ Sidebar Workflow'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: 1
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 3
+  transitions:
+    draft_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+      to: draft
+      weight: 1
+    draft_published:
+      label: Publish
+      from:
+        - draft
+      to: published
+      weight: 3
+    published_draft:
+      label: 'Create New Draft'
+      from:
+        - published
+      to: draft
+      weight: 7
+    published_published:
+      label: Publish
+      from:
+        - published
+      to: published
+      weight: 8
+  entity_types:
+    node:
+      - homepage_w_sidebar
+  default_moderation_state: draft

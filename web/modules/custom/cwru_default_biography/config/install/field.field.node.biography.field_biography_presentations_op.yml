@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_presentations_op
+    - node.type.biography
+  module:
+    - text
+id: node.biography.field_biography_presentations_op
+field_name: field_biography_presentations_op
+entity_type: node
+bundle: biography
+label: 'Presentations Open Entry'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

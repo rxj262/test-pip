@@ -1,0 +1,9 @@
+{{ attach_library('crew_entrepreneurship/intro-text') }}
+
+{% for item in items %}
+  <div{{ attributes.addClass('intro-text') }}>
+    <h2 class="text-align-center font-size-one-half line-height-one-half">
+      {{ item.content }}
+    </h2>
+  </div>
+{% endfor %}

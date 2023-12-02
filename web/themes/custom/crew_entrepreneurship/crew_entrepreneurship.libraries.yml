@@ -1,0 +1,160 @@
+# These lines define the crew_entrepreneurship/global library.
+global:
+  version: 1.0
+  css:
+    # The SMACSS category, "base", is loaded before other categories. Drupal 8
+    # loads stylesheets based on the SMACSS ordering of:
+    # base, layout, component, state, theme
+    theme:
+      css/style.css: {}
+    base:
+      dist/css/global.css: {}
+      'https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,400,400i,600,600i,700,700i,900': { type: external }
+      'https://use.fontawesome.com/releases/v5.1.1/css/all.css': { type: external }
+      'https://unpkg.com/aos@next/dist/aos.css': { type: external }
+  js:
+    'https://unpkg.com/aos@next/dist/aos.js': { type: external }
+  dependencies:
+    - core/jquery
+
+
+# Example external library.
+# webfonts:
+#   version: 1.x
+#   js:
+#     https://fast.fonts.net/example.js: { type: external, attributes: { async: true }}
+
+# Attach each library by using attach_library() within the components twig template.
+# More info: https://www.drupal.org/node/2456753
+
+# Example component library.
+# site-logo:
+#   css:
+#     component:
+#       dist/css/site-logo.css: {}
+#   # If this library had JavaScript you could specify it like this:
+#   js:
+#     js/script.js: {}
+#   # If this library had dependencies on other libraries, you could specify it like this:
+#   dependencies:
+#     - crew_entrepreneurship/clearfix
+#     - crew_entrepreneurship/visually-hidden
+
+preheader:
+  css:
+    component:
+      dist/css/preheader.css: {}
+
+header:
+  css:
+    component:
+      dist/css/header.css: {}
+
+menu:
+  css:
+    component:
+      dist/css/menu.css: {}
+  js:
+    dist/js/menu.js: {}
+
+search:
+  css:
+    component:
+      dist/css/search.css: {}
+  js:
+    dist/js/search.js: {}
+
+breadcrumb:
+  css:
+    component:
+      dist/css/breadcrumb.css: {}
+
+hero:
+  css:
+    component:
+      dist/css/hero.css: {}
+
+icon-feature:
+  css:
+    component:
+      dist/css/icon-feature.css: {}
+  js:
+    dist/js/icon-feature.js: {}
+
+news:
+  css:
+    component:
+      dist/css/news.css: {}
+  js:
+    dist/js/news.js: {}
+
+event-feed:
+  css:
+    component:
+      dist/css/event-feed.css: {}
+
+stat-group:
+  css:
+    component:
+      dist/css/stat-group.css: {}
+  js:
+    dist/js/stat-group.js: {}
+
+intro-text:
+  css:
+    component:
+      dist/css/intro-text.css: {}
+
+section-title:
+  css:
+    component:
+      dist/css/section-title.css: {}
+
+section-intro:
+  css:
+    component:
+      dist/css/section-intro.css: {}
+
+subfeature-column:
+  css:
+    component:
+      dist/css/subfeature-column.css: {}
+  js:
+    dist/js/subfeature-column.js: {}
+
+content:
+  css:
+    component:
+      dist/css/content.css: {}
+
+single-feature:
+  css:
+    component:
+      dist/css/single-feature.css: {}
+
+column-text:
+  css:
+    component:
+      dist/css/column-text.css: {}
+
+subfeature:
+  css:
+    component:
+      dist/css/subfeature.css: {}
+
+quote:
+  css:
+    component:
+      dist/css/quote.css: {}
+
+scroll-to-top:
+  css:
+    component:
+      dist/css/scroll-to-top.css: {}
+  js:
+    dist/js/scroll-to-top.js: {}
+
+footer:
+  css:
+    component:
+      dist/css/footer.css: {}

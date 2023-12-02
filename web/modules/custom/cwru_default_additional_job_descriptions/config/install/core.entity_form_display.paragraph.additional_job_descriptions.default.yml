@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.additional_job_descriptions.field_additional_job_description
+    - field.field.paragraph.additional_job_descriptions.field_website_job_description_sh
+    - paragraphs.paragraphs_type.additional_job_descriptions
+  module:
+    - text
+id: paragraph.additional_job_descriptions.default
+targetEntityType: paragraph
+bundle: additional_job_descriptions
+mode: default
+content:
+  field_additional_job_description:
+    weight: 7
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_website_job_description_sh:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

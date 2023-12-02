@@ -1,0 +1,13 @@
+article.news-article {
+	div.field--name-field-article-date {
+		margin-bottom: 20px;
+	}
+	div.article-image {
+		margin: 5px 30px 20px 0px;
+		max-width: 100%;
+	}
+	.field--name-field-photo-caption {
+		padding: 10px;
+    	background-color: $lighter-gray;
+	}
+}

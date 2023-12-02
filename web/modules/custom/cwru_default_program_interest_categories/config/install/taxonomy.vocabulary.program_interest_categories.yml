@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Interest Categories (UGA Only)'
+vid: program_interest_categories
+description: ''
+weight: 0

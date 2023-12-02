@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: alternating_subfeature
+label: 'Alternating Subfeature (705x528)'
+effects:
+  e4fe59e2-159e-4fac-89ea-88a24ccff701:
+    uuid: e4fe59e2-159e-4fac-89ea-88a24ccff701
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 705
+      height: 528
+      crop_type: focal_point

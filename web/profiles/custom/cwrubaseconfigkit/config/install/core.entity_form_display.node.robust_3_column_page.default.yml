@@ -1,0 +1,136 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.robust_3_column_page.field_meta_tags
+    - field.field.node.robust_3_column_page.field_robust_3_hero_ref
+    - field.field.node.robust_3_column_page.field_robust_3_page_ref
+    - field.field.node.robust_3_column_page.field_robust_3_page_right_ref
+    - node.type.robust_3_column_page
+  module:
+    - field_group
+    - metatag
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_all_options:
+      children:
+        - group_hero_image
+        - group_main_content
+        - group_right_sidebar
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: 'All Options'
+    group_main_content:
+      children:
+        - field_robust_3_page_ref
+      parent_name: group_all_options
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Main Content'
+    group_right_sidebar:
+      children:
+        - field_robust_3_page_right_ref
+      parent_name: group_all_options
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Right Sidebar'
+    group_hero_image:
+      children:
+        - field_robust_3_hero_ref
+      parent_name: group_all_options
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Hero Image'
+id: node.robust_3_column_page.default
+targetEntityType: node
+bundle: robust_3_column_page
+mode: default
+content:
+  field_meta_tags:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_robust_3_hero_ref:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_robust_3_page_ref:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_robust_3_page_right_ref:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

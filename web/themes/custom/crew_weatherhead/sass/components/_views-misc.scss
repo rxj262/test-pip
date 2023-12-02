@@ -1,0 +1,208 @@
+//external profiles
+.view-external-profiles {
+	.view-content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+
+		.views-row {
+			flex-basis: calc(33% - 30px);
+
+			@media (max-width: $small) {
+				flex-basis: calc(50% - 30px);
+			}
+
+			@media (max-width: $xsmall) {
+				flex-basis: 100%;
+			}
+		}
+
+		.views-field-field-ext-profile-image {
+			margin-bottom: 10px;
+		}
+
+		.img-responsive {
+			width: 100%;
+		}
+	}
+}
+
+//bio list
+.view-meet-our-staff{
+	.media-body{
+		p:last-of-type{
+			margin-bottom:0;
+		}
+	}
+}
+
+//bio page
+.biography {
+	ul {
+		li, li.list-item {
+			margin-bottom: 7px;
+		}
+	}
+	.bio-info-display ul .field--item{
+		margin-bottom: 7px;
+	}
+}
+
+.robust-content-small {
+	.paragraph--type--content {
+		.field--name-field-content.field--type-text-with-summary {
+			.embedded-entity.align-left {
+				@media (max-width: $small) {
+					float: none;
+				}
+			}
+		}
+	}
+}
+
+article.news-article {
+	.content {
+		.field--name-field-article-content {
+			.embedded-entity.align-right {
+				@media (max-width: $small) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+//Fix views buttons
+.views-form {
+	form {
+		.form-submit.btn-info {
+			background-color: $link-blue;
+			border-color: $link-blue;
+			padding: 0.7em 1.2em;
+			line-height: 1;
+			font-family: $arizona-bold;
+			font-size: 1em;
+			&:hover, &:focus {
+				background-color: $cwru-blue;
+				border-color: $cwru-blue;
+			}
+		}
+	}
+}
+
+//Faculty Books
+.view-books {
+	img{
+		border: 1px solid $light-gray;
+		width: 10em;
+	}
+	h2{
+		font-family: $arizona-bold,sans-serif;
+		padding: 0 0 0.3em;
+		margin-top: 0;
+		&::before {
+			content: none;
+		}
+	}
+}
+
+//Research by Topic
+#research-by-topic-department {
+	ul{
+		padding:0;
+		div {
+			ul#researchAccordion.list-group {
+				margin:0;
+
+				li.list-group-item {
+					border:none;
+					border-bottom: 1px solid $light-gray;
+					a {
+						display: block;
+						text-decoration: none;
+						color: $cwru-blue;
+						background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAARCAYAAADtyJ2fAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzEwRTk3N0IzMjcwMTFFNjhDNEFBRjMwMzFGMjVEMjciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzEwRTk3N0EzMjcwMTFFNjhDNEFBRjMwMzFGMjVEMjciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDM3MkM0MTZGM0M1MTFFNUI2MUNBRURGMkMyRTQ4QkYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDM3MkM0MTdGM0M1MTFFNUI2MUNBRURGMkMyRTQ4QkYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5Etn1qAAAAY0lEQVR42mL8//8/AzmAkVyNTOgC3Ib+/0m2EVnT1/MbGUmykVibMfyIrgGXzVgDhxjNOEOVkGa80YFPMxMDmYC6TiUrcMiKDmI14Q0cQkmOAWQjMuYy8PuPLoYNk52tAAIMAL8qddv26/mOAAAAAElFTkSuQmCC)left no-repeat;
+						  
+						h2 {
+							font-size: 1.25em;
+							margin-top: 6px;
+							line-height: 1.5;
+							padding-left: 2em;
+							&::before{
+								content: none;
+							}
+						}
+						&[aria-expanded = true]{
+							background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAARCAYAAADtyJ2fAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0I3REQ4MzYzMjcwMTFFNjlFQ0U4QkRDRERBOTlCQzciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0I3REQ4MzUzMjcwMTFFNjlFQ0U4QkRDRERBOTlCQzciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDM3MkM0MTZGM0M1MTFFNUI2MUNBRURGMkMyRTQ4QkYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDM3MkM0MTdGM0M1MTFFNUI2MUNBRURGMkMyRTQ4QkYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5QpSClAAAAYElEQVR42mL8//8/AzmAiYFMMNQ0chv6/wdhQoqR1TFyGfihaPh6fiMjLk0oNqIrxGYzuhhIDxM2W5AVYtMEdipyAiDkT2QLmIjxHzY5JkIKcIkxETIdlysYR0AiBwgwABbuN4lWwK0JAAAAAElFTkSuQmCC) left no-repeat;
+							
+							h2 {
+								margin-bottom: 10px;
+							}
+						}
+					}
+					div {
+						padding: 0 30px 15px 40px;
+						ul {
+							list-style-type: disc;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#student-resumes{
+	h4{
+		font-family: $arizona-bold;
+		font-size: 1.9em;
+		position: relative;
+		padding-left: 1em;
+		padding-bottom: 0;
+		&::before {
+			content: "";
+			width: 29px;
+			height: 28px;
+			background-image: url("../images/header-square.svg");
+			position: absolute;
+			left: 0;
+			top: 0.15em;
+		
+			@media #{$small-max} {
+			  display: inline-block;
+			  position: initial;
+			  margin-right: 10px;
+			}
+		  }
+		  @media #{$small-max} {
+			padding-left: 0;
+		  }
+	}
+	#card-text {
+		font-size: 1em;
+		margin-top:15px;
+	}
+	#resume-button, #email-button {
+		display: inline-block;
+		background-color: $link;
+		padding: .75em 1.5em;
+		margin: 0;
+		border-radius: 20em;
+		transition: background-color 0.3s;
+		a{
+			font-family: $arizona-bold;
+			font-size: 1em;
+			color: $white;
+			line-height: 1.5;
+			text-decoration: none;
+		}
+		&:hover {
+		  background-color: $cwru-blue;
+		  a{
+			color: $white;
+		  	text-decoration: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{# default plain list of items #}
+<ul>
+  {% for item in vars %}
+    <li>
+      <div><a href="{{ item.link }}">{{ item.title }}</a></div>
+      <div>{{ item.pubDate }}</div>
+      {% autoescape false %}
+        <div>{{ item.description }}</div>
+      {% endautoescape %}
+    </li>
+  {% endfor %}

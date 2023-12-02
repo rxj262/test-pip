@@ -1,0 +1,11 @@
+content_access_roles_gids:
+  administrator: 1
+  school_developer: 2
+  school_admin: 3
+  department_admin: 4
+  content_reviewer: 5
+  content_editor: 6
+  authenticated: 7
+  anonymous: 8
+content_access_node_type:
+  robust_3_column_page: 'a:3:{s:8:"view_own";a:2:{i:0;s:13:"authenticated";i:1;s:9:"anonymous";}s:4:"view";a:2:{i:0;s:13:"authenticated";i:1;s:9:"anonymous";}s:8:"per_node";i:1;}'

@@ -1,0 +1,81 @@
+.field--name-field-homepage-vertical-subfeatu {
+    .paragraph--type--homepage-vertical-subfeature {
+        padding-left: 7rem;
+        padding-right: 5rem;
+        @media #{$medium-max} {
+            padding-right: 0;
+            padding-left: 2rem;
+        }
+        @media #{$small-max} {
+            padding-right: 0;
+            padding-left: 2rem;
+        }
+        .dean-photo {
+            margin-right: 40px;
+            border: 10px solid $drk-orange;
+            box-shadow: 10px 10px #A3483A;
+            padding: 0;
+            @media #{$small-max} {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                margin-right: 0;
+                width: auto;
+                margin-bottom: 2rem;
+            }
+        }
+        .field--name-field-homepage-vertical-sub-titl {
+            color: $cwru-blue;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-top: .2em;
+            margin-bottom: 10px !important;
+            @include underline-title-black;
+            &::before {
+                @media #{$small-max} {   
+                margin-right: 0px;
+                }
+            }
+        }
+        .dean-content-home {
+            margin-right: 50px;
+            @media #{$small-max} {   
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .field--name-field-homepage-vertical-sub-cont {
+            width: 100%; 
+        }
+        .field--name-field-homepage-vertical-sub-link {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            a {
+                margin-bottom: 1em;
+                display: inline-block;
+                padding: 0.8em 1em;
+                background: $cwru-blue;
+                color: #fff;
+                &:hover {
+                    background: $link-blue;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+// .robust-3-column-page {
+// 	.paragraph--type--two-column-subfeature {
+// 		margin: unset;
+// 		.container {
+// 			width: unset !important;
+// 			// padding: 2em 0 !important;
+// 			padding: 1em 0 !important;
+// 			// padding-top: 0 !important;
+// 			@media #{$medium-max} {
+// 				padding: 0 !important;
+// 			}
+// 		}
+// 	}
+// }

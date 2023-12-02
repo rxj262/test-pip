@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: quote_with_image
-label: 'Quote with Image'
-icon_uuid: null
-icon_default: null
-description: ''
-behavior_plugins: {  }

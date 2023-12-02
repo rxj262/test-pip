@@ -1,9 +1,0 @@
-name: Workflows
-description: 'Workflow for Content Moderation'
-type: module
-dependencies:
-  - content_moderation
-  - workflows
-version: '1.01'
-package: 'CWRU Default'
-core_version_requirement: '>=9'

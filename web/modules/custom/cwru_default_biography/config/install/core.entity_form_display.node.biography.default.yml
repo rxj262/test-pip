@@ -1,0 +1,764 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.biography.field_additional_view_order_ref
+    - field.field.node.biography.field_bio_mailing_location_code
+    - field.field.node.biography.field_biography_add_job_desc_ref
+    - field.field.node.biography.field_biography_additional_infor
+    - field.field.node.biography.field_biography_areas_of_experti
+    - field.field.node.biography.field_biography_award_ref
+    - field.field.node.biography.field_biography_building_address
+    - field.field.node.biography.field_biography_course_name_ref
+    - field.field.node.biography.field_biography_credential_ref
+    - field.field.node.biography.field_biography_drupal_site_ref
+    - field.field.node.biography.field_biography_education_ref
+    - field.field.node.biography.field_biography_email
+    - field.field.node.biography.field_biography_ext_appoint_ref
+    - field.field.node.biography.field_biography_ext_appt_open_en
+    - field.field.node.biography.field_biography_first_name
+    - field.field.node.biography.field_biography_image_ref
+    - field.field.node.biography.field_biography_job_description
+    - field.field.node.biography.field_biography_last_name
+    - field.field.node.biography.field_biography_mailing_address
+    - field.field.node.biography.field_biography_office_hours
+    - field.field.node.biography.field_biography_office_location
+    - field.field.node.biography.field_biography_office_number
+    - field.field.node.biography.field_biography_office_ref
+    - field.field.node.biography.field_biography_phone
+    - field.field.node.biography.field_biography_presentation_ref
+    - field.field.node.biography.field_biography_presentations_op
+    - field.field.node.biography.field_biography_professional_mem
+    - field.field.node.biography.field_biography_publication_ref
+    - field.field.node.biography.field_biography_publications_ope
+    - field.field.node.biography.field_biography_recent_funding
+    - field.field.node.biography.field_biography_research_interes
+    - field.field.node.biography.field_biography_research_project
+    - field.field.node.biography.field_biography_residency_ref
+    - field.field.node.biography.field_biography_role_ref
+    - field.field.node.biography.field_biography_secondary_job_de
+    - field.field.node.biography.field_biography_specialties
+    - field.field.node.biography.field_biography_teaching_interes
+    - field.field.node.biography.field_biography_teaching_schedul
+    - field.field.node.biography.field_biography_title_ref
+    - field.field.node.biography.field_biography_view_order
+    - field.field.node.biography.field_cell_phone_number
+    - field.field.node.biography.field_fax_number
+    - field.field.node.biography.field_meta_tags
+    - field.field.node.biography.field_views_filter
+    - node.type.biography
+  module:
+    - content_moderation
+    - entity_browser_entity_form
+    - field_group
+    - ief_table_view_mode
+    - paragraphs
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_all_options:
+      children:
+        - group_main_details
+        - group_secondary_job_description
+        - group_teaching_info
+        - group_research_interest
+        - group_awards_
+        - group_professional_memberships
+        - group_external_appointment
+        - group_publications
+        - group_presentations
+        - group_education
+        - group_residency
+        - group_areas_of_expertise
+        - group_additional_information
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: 'All Options'
+    group_main_details:
+      children:
+        - field_biography_first_name
+        - field_biography_last_name
+        - field_biography_credential_ref
+        - field_biography_role_ref
+        - field_biography_title_ref
+        - field_biography_drupal_site_ref
+        - group_contact_information
+        - field_biography_image_ref
+      parent_name: group_all_options
+      weight: 10
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Main Details'
+    group_contact_information:
+      children:
+        - field_biography_email
+        - field_biography_phone
+        - field_cell_phone_number
+        - field_fax_number
+        - field_biography_office_location
+        - field_biography_office_number
+        - field_biography_building_address
+        - field_biography_mailing_address
+        - field_bio_mailing_location_code
+      parent_name: group_main_details
+      weight: 19
+      format_type: tab
+      format_settings:
+        label: 'Contact Information'
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Contact Information'
+    group_teaching_info:
+      children:
+        - field_biography_teaching_schedul
+        - group_course_information
+        - field_biography_teaching_interes
+        - group_i
+      parent_name: group_all_options
+      weight: 12
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Teaching Information'
+    group_i:
+      children:
+        - field_biography_office_hours
+      parent_name: group_teaching_info
+      weight: 10
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Office Hours'
+    group_professional_memberships:
+      children:
+        - field_biography_professional_mem
+      parent_name: group_all_options
+      weight: 15
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Professional Memberships'
+    group_research_interest:
+      children:
+        - field_biography_research_interes
+        - field_biography_research_project
+        - field_biography_recent_funding
+      parent_name: group_all_options
+      weight: 13
+      format_type: tab
+      format_settings:
+        label: 'Research Information'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Research Information'
+    group_education:
+      children:
+        - field_biography_education_ref
+      parent_name: group_all_options
+      weight: 19
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Education
+    group_awards_:
+      children:
+        - field_biography_award_ref
+      parent_name: group_all_options
+      weight: 14
+      format_type: tab
+      format_settings:
+        label: 'Awards and Honors'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Awards and Honors'
+    group_course_information:
+      children:
+        - field_biography_course_name_ref
+      parent_name: group_teaching_info
+      weight: 7
+      format_type: tab
+      format_settings:
+        label: 'Course Information'
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Course Information'
+    group_publications:
+      children:
+        - field_biography_publication_ref
+        - field_biography_publications_ope
+      parent_name: group_all_options
+      weight: 17
+      format_type: tab
+      format_settings:
+        label: Publications
+        formatter: closed
+        description: |
+          To add publications using our standard formatting please use the 'Add Publication' button. To add publications that are outside of the standard please use the 'Publications Open Entry' area.
+        required_fields: true
+        id: ''
+        classes: tab-help-text
+      label: Publications
+    group_presentations:
+      children:
+        - field_biography_presentation_ref
+        - field_biography_presentations_op
+      parent_name: group_all_options
+      weight: 18
+      format_type: tab
+      format_settings:
+        label: Presentations
+        formatter: closed
+        description: 'To add presentations using our standard formatting please use the ''Add Presentation'' button. To add presentations that are outside of the standard please use the ''Presentations Open Entry'' area.'
+        required_fields: true
+        id: ''
+        classes: tab-help-text
+      label: Presentations
+    group_external_appointment:
+      children:
+        - field_biography_ext_appoint_ref
+        - field_biography_ext_appt_open_en
+      parent_name: group_all_options
+      weight: 16
+      format_type: tab
+      format_settings:
+        label: 'External Appointments'
+        formatter: closed
+        description: 'To add external appointments using our standard formatting please use the ''Add External Appointment'' button. To add external appointments that are outside of the standard please use the ''External Appointments Open Entry'' area.'
+        required_fields: true
+        id: ''
+        classes: tab-help-text
+      label: 'External Appointments'
+    group_residency:
+      children:
+        - field_biography_residency_ref
+      parent_name: group_all_options
+      weight: 20
+      format_type: tab
+      format_settings:
+        label: 'Residencies, Internships and Fellowships'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Residencies, Internships and Fellowships'
+    group_additional_information:
+      children:
+        - field_biography_additional_infor
+      parent_name: group_all_options
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Additional Information'
+    group_for_developers:
+      children:
+        - field_biography_office_ref
+        - field_views_filter
+        - field_biography_view_order
+        - field_additional_view_order_ref
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        label: 'Developer Use Only'
+        description: 'Use these fields to add list splits and view orders to a regular bio view listing. Example: Center for International affairs has 3 Offices with unique view orders for each.'
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Developer Use Only'
+    group_secondary_job_description:
+      children:
+        - field_biography_job_description
+        - field_biography_secondary_job_de
+        - field_biography_add_job_desc_ref
+      parent_name: group_all_options
+      weight: 11
+      format_type: tab
+      format_settings:
+        label: 'Job Descriptions'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Job Descriptions'
+    group_areas_of_expertise:
+      children:
+        - field_biography_areas_of_experti
+        - field_biography_specialties
+      parent_name: group_all_options
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Areas of Expertise'
+id: node.biography.default
+targetEntityType: node
+bundle: biography
+mode: default
+content:
+  field_additional_view_order_ref:
+    type: entity_reference_paragraphs
+    weight: 18
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_bio_mailing_location_code:
+    weight: 42
+    settings:
+      size: 30
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_biography_add_job_desc_ref:
+    type: entity_reference_paragraphs
+    weight: 20
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_biography_additional_infor:
+    weight: 44
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_biography_areas_of_experti:
+    weight: 103
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_biography_award_ref:
+    type: entity_reference_paragraphs
+    weight: 28
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_biography_building_address:
+    weight: 40
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_biography_course_name_ref:
+    weight: 8
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_biography_credential_ref:
+    weight: 12
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_biography_drupal_site_ref:
+    weight: 17
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_biography_education_ref:
+    type: entity_reference_paragraphs
+    weight: 30
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_biography_email:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_biography_ext_appoint_ref:
+    type: entity_reference_paragraphs
+    weight: 31
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_biography_ext_appt_open_en:
+    weight: 32
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_biography_first_name:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_biography_image_ref:
+    weight: 20
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser
+    type: inline_entity_form_complex_table_view_mode
+    region: content
+  field_biography_job_description:
+    weight: 18
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_biography_last_name:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_biography_mailing_address:
+    weight: 41
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_biography_office_hours:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_biography_office_location:
+    weight: 38
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_biography_office_number:
+    weight: 39
+    settings:
+      size: 30
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_biography_office_ref:
+    type: entity_reference_autocomplete_tags
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_phone:
+    weight: 35
+    settings:
+      placeholder: '###.###.####'
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_biography_presentation_ref:
+    type: entity_reference_paragraphs
+    weight: 30
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_biography_presentations_op:
+    weight: 31
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_biography_professional_mem:
+    weight: 20
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_biography_publication_ref:
+    type: entity_reference_paragraphs
+    weight: 29
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_biography_publications_ope:
+    weight: 30
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_biography_recent_funding:
+    weight: 19
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_biography_research_interes:
+    weight: 17
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_biography_research_project:
+    weight: 18
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_biography_residency_ref:
+    type: entity_reference_paragraphs
+    weight: 32
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_biography_role_ref:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_biography_secondary_job_de:
+    weight: 19
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_biography_specialties:
+    weight: 104
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_biography_teaching_interes:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_biography_teaching_schedul:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_biography_title_ref:
+    type: entity_reference_paragraphs
+    weight: 16
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_biography_view_order:
+    weight: 17
+    settings:
+      size: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cell_phone_number:
+    weight: 36
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_fax_number:
+    weight: 37
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_views_filter:
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_biography_media_mentions: true
+  field_biography_university_publi: true
+  field_meta_tags: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

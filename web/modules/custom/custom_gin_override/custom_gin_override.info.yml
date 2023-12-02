@@ -1,0 +1,4 @@
+name: Custom Gin override
+type: module
+description: "Overrides the gin admin theme styles"
+core_version_requirement: '>=9'

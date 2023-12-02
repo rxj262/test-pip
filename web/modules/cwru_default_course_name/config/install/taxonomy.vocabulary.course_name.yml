@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: Courses
-vid: course_name
-description: ''
-hierarchy: 0
-weight: 0

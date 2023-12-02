@@ -1,0 +1,26 @@
+.profile-aside {
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  max-width: 276px;
+
+  img {
+    width: 100%;
+  }
+
+  .caption {
+    padding: 0;
+    margin: 15px 0;
+  }
+
+  .field--label {
+    font-weight: 600;
+    &:after {
+      content: ':';
+    }
+  }
+
+  div.field>div.field--item {
+    margin-bottom: 20px;
+  }
+}

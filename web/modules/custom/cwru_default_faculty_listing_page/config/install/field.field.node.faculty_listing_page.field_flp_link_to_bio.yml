@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_flp_link_to_bio
+    - node.type.faculty_listing_page
+  module:
+    - link
+id: node.faculty_listing_page.field_flp_link_to_bio
+field_name: field_flp_link_to_bio
+entity_type: node
+bundle: faculty_listing_page
+label: 'Link to Faculty Bio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

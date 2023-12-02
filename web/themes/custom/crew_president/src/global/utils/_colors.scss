@@ -1,0 +1,49 @@
+// Colors
+//
+// All Sass color variables prefixed with $color-.
+// This makes it easy to figure out what a variable
+// is for later.
+//
+// Markup:
+// <h3>Primary</h3>
+// <div class="kss-swatch" style="background-color: #0a304e">
+//   <div class="kss-swatch__hex">$color-cwru-blue<br>#0a304e</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #3168a6">
+//   <div class="kss-swatch__hex">$color-link-blue<br>#3168a6</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #c1cd24">
+//   <div class="kss-swatch__hex">$color-lime-green<br>#c1cd24</div>
+// </div>
+// <h3>Grays</h3>
+// <div class="kss-swatch" style="background-color: #FFF">
+//   <div class="kss-swatch__hex">$color-white<br>#FFF</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #000">
+//   <div class="kss-swatch__hex">$color-black<br>#000</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #f6f6f6">
+//   <div class="kss-swatch__hex">$color-off-white<br>#f6f6f6</div>
+// </div>
+//
+// Weight: 999
+//
+// Style guide: colors
+$drk-blue:#09143A;
+$cwru-blue: #003071;
+$link-blue: #006DA3;
+$light-blue: #A6D2E6;
+$green: #61A530;
+$blue-green: #377E72;
+$yellow: #E69E40;
+$ter-orange: #B04027;
+$violet: #692C95;
+$white: #fff;
+$off-white: #f5f5f5;
+$dark-gray: #333;
+$cwru-dark-gray: #999999;
+$med-gray: #535353;
+$light-gray: #c6c6c6;
+$cwru-light-gray: #d3d3d3;
+$lighter-gray: #eee;
+$blk: #000000;

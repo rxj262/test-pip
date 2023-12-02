@@ -1,0 +1,15 @@
+//////////////////////////////////
+// Embedded Image Rules //////////
+//////////////////////////////////
+
+article {
+  &.embedded-entity {
+    margin: 8px 0px;
+    &.align-left {
+      margin-right: 36px;
+    }
+    &.align-right {
+      margin-left: 36px;
+    }
+  }
+}

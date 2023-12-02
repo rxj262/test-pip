@@ -1,0 +1,14 @@
+name: 'Error Page'
+description: 'Provides Error Page content type and related configuration. '
+type: module
+dependencies:
+  - field
+  - menu_ui
+  - node
+  - options
+  - path
+  - text
+  - user
+package: 'CWRU Default'
+version: '1.01'
+core_version_requirement: '>=9'

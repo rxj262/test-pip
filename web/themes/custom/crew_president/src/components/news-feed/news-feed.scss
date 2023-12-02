@@ -1,0 +1,96 @@
+// Import site utilities.
+@import "../../global/utils/init";
+
+.paragraph--type--external-rss {
+  margin-bottom: $size-medium;
+
+  .rss-section-title {
+    @include font-arizona;
+    font-size: $font-size-larger;
+    font-weight: 700;
+    color: $cwru-blue;
+    margin-left: $size-smallest;
+    margin-right: $size-smallest;
+
+    @include breakpoint($bp-lg) {
+      font-size: $font-size-jumbo;
+    }
+  }
+
+  .feed-container.flex {
+    margin-top: $size-medium;
+    margin-bottom: $size-medium;
+
+    @include breakpoint($bp-sm) {
+      display: flex;
+    }
+  }
+
+  .feed-item-anchor {
+    color: unset;
+    font-weight: unset;
+    flex: 1;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .feed-item-block {
+    padding: $size-small $size-small $size-medium;
+    margin-left: $size-medium-small;
+    margin-right: $size-medium-small;
+    margin-bottom: $size-medium-small;
+    border: 5px solid $cwru-blue;
+    transition: background-color 0.4s;
+    height: 100%;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      background-image: url("/socialwork/themes/custom/crew_socialwork/images/arrow.png");
+      background-position: center;
+      background-size: contain;
+      filter: invert(100%);
+      transform: rotate(-90deg);
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      background-color: $lighter-gray;
+
+      &::after {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  .feed-item-daterange {
+    color: $med-gray;
+    font-style: italic;
+    margin-bottom: $size-small;
+  }
+
+  .feed-date-underline {
+    padding-bottom: 4px;
+    border-bottom: 4px solid $link-blue;
+  }
+
+  .feed-item-title {
+    font-size: $font-size-medium;
+    color: $cwru-blue;
+  }
+
+  .field--name-field-subfeature-link {
+    font-size: $font-size-medium;
+    text-align: right;
+    margin-right: $size-medium-small;
+  }
+}

@@ -1,0 +1,44 @@
+.important-dates {
+  background-color: $off-black;
+  color: $white;
+  padding: 40px 0;
+  .important-dates__block {
+    display: flex;
+    margin-top: 20px;
+    .important-dates__date {
+      margin-right: 22px;
+      flex-shrink: 0;
+      .important-dates__month {
+        font-size: 16px;
+      }
+      .important-dates__year {
+        font-size: 34px;
+        margin: 0;
+      }
+    }
+    .important-dates__info {
+      .important-dates__title {
+        margin-top: -10px;
+        color: white;
+      }
+      .important-dates__description {
+        font-size: 18px;
+      }
+      a {
+        color: $white;
+        text-decoration: underline;
+        font-weight: normal;
+        transition: all 0.2s;
+      }
+      a:hover {
+        color: $lime;
+      }
+    }
+  }
+}
+
+.paragraph--type--important-date-button {
+  background-color: $off-black;
+  color: $white;
+  padding-bottom: 40px;
+}

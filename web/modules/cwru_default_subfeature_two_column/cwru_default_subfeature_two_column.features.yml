@@ -1,5 +1,0 @@
-bundle: cwru_default
-excluded:
-  - field.storage.node.field_subfeature_two_column_ref
-  - image.style.subfeature_578x240
-required: true

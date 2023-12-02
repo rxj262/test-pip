@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_full_description
+    - paragraphs.paragraphs_type.hero_full_width
+  module:
+    - text
+id: paragraph.hero_full_width.field_hero_full_description
+field_name: field_hero_full_description
+entity_type: paragraph
+bundle: hero_full_width
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

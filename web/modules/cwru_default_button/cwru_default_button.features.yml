@@ -1,8 +1,0 @@
-bundle: cwru_default
-excluded:
-  - field.field.paragraph.well.field_well_button
-  - field.storage.paragraph.field_stacked_button_color
-  - field.storage.paragraph.field_stacked_button_icon_select
-  - field.storage.paragraph.field_stacked_button_link
-  - field.storage.paragraph.field_well_button
-required: true

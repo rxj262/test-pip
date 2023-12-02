@@ -1,9 +1,0 @@
-name: Awards/Honors
-description: 'Provides Awards/Honors paragraphs type and related configuration.'
-type: module
-dependencies:
-  - field
-  - paragraphs
-version: '1.02'
-package: 'CWRU Default'
-core_version_requirement: '>=9'

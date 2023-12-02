@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_event_date
+    - paragraphs.paragraphs_type.countdown_timer
+  module:
+    - datetime
+id: paragraph.countdown_timer.field_event_date
+field_name: field_event_date
+entity_type: paragraph
+bundle: countdown_timer
+label: 'Event Date'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+30 days'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

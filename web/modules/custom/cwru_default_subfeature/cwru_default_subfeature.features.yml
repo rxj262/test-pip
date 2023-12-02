@@ -1,0 +1,14 @@
+bundle: cwru_default
+excluded:
+  - field.storage.node.field_5_subfeature_ref
+  - field.storage.node.field_alt_subfeature_ref
+  - field.storage.node.field_subfeature_ref
+  - field.storage.node.field_twocol_subfeature_ref
+  - field.storage.paragraph.field_subfeature_two_image_ref
+  - core.entity_form_display.node.homepage_w_full_width_feature.default
+  - core.entity_form_display.node.homepage_w_sidebar.default
+  - core.entity_view_display.node.homepage_w_full_width_feature.default
+  - core.entity_view_display.node.homepage_w_sidebar.default
+  - field.field.node.homepage_w_full_width_feature.field_subfeature_ref
+  - field.field.node.homepage_w_sidebar.field_twocol_subfeature_ref
+required: true

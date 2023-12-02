@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.media_image_medium
+label: 'Media Image - 3 (Medium)'
+targetEntityType: media
+cache: true

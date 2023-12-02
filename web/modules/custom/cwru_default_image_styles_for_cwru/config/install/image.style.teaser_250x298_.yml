@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_250x298_
+label: 'Teaser (250x298)'
+effects:
+  fd84e712-d282-4897-94bb-d29660e2c9fe:
+    uuid: fd84e712-d282-4897-94bb-d29660e2c9fe
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 298
+      crop_type: focal_point

@@ -1,0 +1,38 @@
+name: Program
+description: 'Provides Program content type and related configuration. Program Content Type to hold all of the Program Information for CWRU'
+type: module
+dependencies:
+  - better_exposed_filters
+  - content_moderation
+  - cwru_default_format
+  - cwru_default_image_styles_for_cwru
+  - cwru_default_media_bundles
+  - cwru_default_program_degree_type
+  - cwru_default_program_degree_website
+  - cwru_default_program_interest_categories
+  - cwru_default_program_level
+  - cwru_default_schools
+  - cwru_default_short_degree_type
+  - 'drupal:media (>= 8.4)'
+  - entity_browser_entity_form
+  - entity_reference_revisions
+  - field
+  - field_group
+  - file
+  - image
+  - inline_entity_form
+  - link
+  - media
+  - menu_ui
+  - node
+  - options
+  - paragraphs
+  - path
+  - taxonomy
+  - text
+  - user
+  - views
+version: '1.12'
+package: 'CWRU Default'
+core_incompatible: false
+core_version_requirement: '>=9'

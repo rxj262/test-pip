@@ -1,9 +1,0 @@
-quikpay_handler.response_action_controller_update:
-  path: '/form/{webform_id}/confirmation'
-  defaults:
-    _controller: '\Drupal\quikpay_handler\Controller\ResponseActionController::update'
-    _title: 'update'
-  requirements:
-    _permission: 'access content'
-  options:
-    no_cache: 'TRUE'

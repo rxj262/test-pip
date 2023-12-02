@@ -1,0 +1,44 @@
+.get-started {
+  background-color: $off-black;
+  padding: 35px 0;
+  .header--main {
+    margin-top: 0;
+  }
+  .get-started__links {
+    display: flex;
+    flex-direction: row;
+    @include size("small") {flex-direction: column}
+    .get-started__link {
+      background-color: $cwru-blue;
+      color: $white;
+      border: 3px solid;
+      width: 220px;
+      padding: 14px;
+      text-align: center;
+      margin-left: 32px;
+      transition: background-color .2s ease;
+      @include size("small") {margin: 10px auto 10px 0; width: 100%;}
+      &.get-started__link--orange { border-color: $orange; &:hover {background-color: darken($orange, 30%);}}
+      &.get-started__link--light-blue { border-color: $iceberg; &:hover {background-color: darken($iceberg, 30%);}}
+      &.get-started__link--yellow { border-color: $yellow; &:hover {background-color: darken($yellow, 30%);}}
+      &.get-started__link--green { border-color: $lime; &:hover {background-color: darken($lime, 30%);}}
+      .field--name-field-home-icon-image img {
+        height: 80px;
+        margin-bottom: 14px;
+      }
+      .get-started__label {
+        color: $white;
+        font-size: 13px;
+        font-family: $arizona-bold;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.personal_profile.field_meta_tags
+    - field.field.node.personal_profile.field_personal_profile_content
+    - field.field.node.personal_profile.field_personal_profile_country
+    - field.field.node.personal_profile.field_personal_profile_drupal_si
+    - field.field.node.personal_profile.field_personal_profile_grad_year
+    - field.field.node.personal_profile.field_personal_profile_hometown
+    - field.field.node.personal_profile.field_personal_profile_image_ref
+    - field.field.node.personal_profile.field_personal_profile_major
+    - field.field.node.personal_profile.field_personal_profile_name
+    - field.field.node.personal_profile.field_personal_profile_sa_countr
+    - node.type.personal_profile
+  module:
+    - field_group
+    - metatag
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_profile_aside:
+      children:
+        - field_personal_profile_image_ref
+        - field_personal_profile_hometown
+        - field_personal_profile_country
+        - field_personal_profile_sa_countr
+        - field_personal_profile_major
+        - field_personal_profile_grad_year
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'profile-aside pull-right'
+        element: aside
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Profile Aside'
+    group_profile_information_groupi:
+      children:
+        - field_personal_profile_content
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: profile-info-display
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Profile Information Grouping'
+id: node.personal_profile.default
+targetEntityType: node
+bundle: personal_profile
+mode: default
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_meta_tags:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_personal_profile_content:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_personal_profile_country:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_personal_profile_grad_year:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_personal_profile_hometown:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_personal_profile_image_ref:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_personal_profile_major:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_personal_profile_sa_countr:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_personal_profile_drupal_si: true
+  field_personal_profile_name: true
+  links: true

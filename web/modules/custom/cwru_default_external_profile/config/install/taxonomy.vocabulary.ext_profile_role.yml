@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Role
+vid: ext_profile_role
+description: 'Used for external profile roles in WSOM'
+weight: 0

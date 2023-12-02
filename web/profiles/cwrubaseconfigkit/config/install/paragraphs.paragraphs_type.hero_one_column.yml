@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: hero_one_column
-label: 'Hero Image One Column'
-icon_uuid: null
-description: null
-behavior_plugins: {  }

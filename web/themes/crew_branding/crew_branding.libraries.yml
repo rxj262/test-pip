@@ -1,6 +1,0 @@
-global-styling:
-  version: 1.12
-  css:
-    theme:
-      css/style.css: {}
-      # 'https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?rd5re8': { type: external }

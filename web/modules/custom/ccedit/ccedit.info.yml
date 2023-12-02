@@ -1,0 +1,5 @@
+name: 'ccedit'
+type: module
+description: 'let cc edit that page'
+package: 'Custom'
+core_version_requirement: '>=9'

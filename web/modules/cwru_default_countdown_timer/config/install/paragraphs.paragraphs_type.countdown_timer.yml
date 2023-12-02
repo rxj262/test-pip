@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: countdown_timer
-label: 'Countdown Timer'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

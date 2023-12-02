@@ -1,0 +1,244 @@
+.paragraph--type--two-column-two-color-row {
+	.container {
+		//width: 100%;
+		padding: 0;
+		@media (max-width: $medium)  {
+			width: 100%;
+		}
+		.landing-page-content-row {
+			@media (max-width: $medium)  {
+				padding-left: 20px;
+				margin-right: 0;
+			}
+			@media (max-width: $small)  {
+				padding: 0;
+				margin: 0;
+			}
+			.field--name-field-two-col-two-color-column-o {
+				@media (min-width: $small)  {
+					display: flex;
+					//flex-wrap: wrap;
+					.field--item.field-column:first-child {
+						flex: 1;
+						flex-basis: 54%;
+					}
+					.field--item.field-column {
+						flex: 1;
+						flex-basis: 45%;
+					}
+				}
+			//*****Section Titles & Content*****
+				.paragraph--type--content-w-title-white-bg {
+					@media (min-width: $small)  {
+						display: flex;
+						flex-direction: column;
+						height: 100%;
+					}
+					.content-with-title-column-white {
+						padding-left: 0;
+						padding: 40px;
+						padding-right: 20px;
+						//@media (min-width: 1545px)  {
+							width: 60%;
+						//}
+						@media (min-width: $small)  {
+							width: 100%;
+							height: 100%;
+						}
+						@media (max-width: $small)  {
+							width: 100%;
+							margin-right: -15px;
+							margin-left: 0;
+							padding: 40px;
+							padding-bottom: 40px !important;
+						}
+						@media (max-width: $tiny)  {
+							padding: 20px;
+							padding-bottom: 20px !important;
+						}
+					}
+					.section-content-title h2, .paragraph--type--request-information .field--label {
+						text-transform: uppercase;
+						padding-bottom:40px;
+						color: $blk;
+						&:after {
+							content: '';
+						    display: block;
+						    background-color: $link-blue;
+						    width: 100px;
+						    height: 2px;
+						    margin: 20px 0 20px 0;
+						    @media (max-width: $small) {
+						    	margin: 5px 0 10px;
+						    }
+						}
+						@media (max-width: $medium)  {
+							padding-bottom: 10px;
+						}
+					}
+					.field--name-field-content-white-bg-quote-or- {
+						padding-left: 125px;
+						margin-top: -75px;
+						line-height: 1.7;
+						font-size: 21px;
+						@media (max-width: $medium)  {
+							padding-left: 0;
+							margin-top: 0;
+						}
+						@media (max-width: $tiny)  {
+							font-size: 18px;
+						}
+						.paragraph--type--fast-fact-section {
+							margin-top: 40px;
+							.fast-fact-group {
+								line-height: 1;
+								font-size: 16px;
+								border-left: 5px solid $lime-green;
+								padding-left: 10px;
+								margin-bottom: 15px;
+								margin-top: 20px;
+								.field--name-field-fast-fact-title {
+									font-weight: 700;
+									text-transform: uppercase;
+									margin-bottom: 15px;
+									margin-left: 10px;
+									font-size: 18px;
+								}
+								.field--name-field-fast-fact-fact {
+									margin-left: 10px;
+									margin-bottom: 15px;
+									line-height: 1.5;
+								}
+								.field--name-field-fast-fact-link a {
+									text-decoration: underline;
+									margin-left: 10px;
+								}
+							}
+						}
+
+						//Blockquote
+						.paragraph--type--blockquote-section {
+							margin-top: 30px;
+							.paragraph--type--blockquote {
+								background: url("../images/quotationOpen.png") left top no-repeat;
+								padding-left: 80px;
+								padding-right: 30px;
+								margin-bottom: 20px;
+								font-size: 16px;
+								@media (max-width: $tiny)  {
+									padding-right: 20px;
+								}
+								&:last-child {
+									margin-bottom: 15px;
+								}
+								.field--name-field-blockquote-quote {
+									font-family: $arizona-italic;
+									line-height: 1.5;
+								}
+								.field--name-field-blockquote-byline {
+									font-weight: 700;
+									&:before {
+										content: '';
+									    display: inline-block;
+									    background-color: $blk;
+									    width: 20px;
+									    height: 2px;
+									    margin-right: 5px;
+									    vertical-align: middle;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			//*****Content Blue BG Paragraph*****
+			.paragraph--type--content-w-title-blue-bg {
+				@media (min-width: $small)  {
+					display: flex;
+					flex-direction: column;
+					height: 100%;
+				}
+				.content-with-blue-bg-column {
+					background: $drk-blue;
+					padding: 40px;
+					padding-right: 20px;
+					color: $white;
+					//width: 40%;
+					@media (min-width: $small)  {
+						width: 100%;
+						height: 100%;
+						clip-path: polygon(0% 0, 100% 0%, 100% 100%, 10% 100%);
+						padding-left: 60px;
+						padding-right: 20px;
+					}
+					@media (max-width: $small)  {
+						width: 100%;
+						margin-right: -15px;
+						margin-left: 0;
+						padding: 40px;
+						padding-bottom: 40px !important;
+					}
+					@media (max-width: $tiny)  {
+						padding: 20px;
+						padding-bottom: 20px !important;
+					}
+				}
+				//Request Information
+				.paragraph--type--request-information .field--label {
+					color: $white;
+				}
+				.section-blue-content-title h2, .paragraph--type--request-information .field--label {
+					text-transform: uppercase;
+					padding-bottom: 0px;
+					color: $white;
+					text-align: left;
+					&:after {
+						content: '';
+					    display: block;
+					    background-color: $link-blue;
+					    width: 100px;
+					    height: 2px;
+					    margin: 20px 0 20px 0;
+					    @media (max-width: $small) {
+					    	margin: 5px 0 10px;
+					    }
+					}
+					@media (max-width: $small)  {
+						padding-bottom: 10px;
+					}
+				}
+
+				//Stacked Buttons
+				.paragraph--type--programs-stacked-buttons {
+					.stacked-buttons-group {
+						@media (min-width: $small)  {
+							margin-left: 15%;
+						}
+					}
+					a {
+						background-color: $link-blue;
+						color: $white;
+						min-height: 40px;
+						display: block;
+						font-size: 18px;
+						margin-bottom: 5px;
+						padding: 15px 20px;
+						text-align: center;
+						transition: all 0.3s ease;
+						border: 2px solid transparent;
+						&:hover {
+							text-decoration: none;
+							background-color: $cwru-blue;
+							border-color: $link-blue;
+						}
+						&:after {
+							color: $white;
+						}
+					}	
+				}
+			}
+		}
+	}
+}

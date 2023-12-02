@@ -1,0 +1,62 @@
+// ------ LAYOUT UTILITY CLASSES ------ //
+
+.black-bkg {
+  background-color: $blk;
+}
+
+.blue-bkg,
+.blue-background {
+  color: $white;
+  background-color: $cwru-blue;
+
+  h2::before {
+    background-image: url("../images/header-square-white.svg");
+  }
+
+  a,
+  a:hover {
+    color: $white;
+  }
+
+  .field--type-link a:hover {
+    background-color: $white;
+    color: $link-blue;
+  }
+}
+
+.overflow-image {
+  position: relative;
+  overflow: hidden;
+  max-height: 60vh;
+
+  .field--name-field-image {
+    padding-top: 66.625%;
+
+    img {
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      margin: 0;
+      max-width: none;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.color-white {
+  color: $white;
+}
+
+nav.tabs {
+  font-weight: 500;
+  font-family: $arizona;
+}
+
+#toolbar-administration a {
+  font-weight: 500;
+}

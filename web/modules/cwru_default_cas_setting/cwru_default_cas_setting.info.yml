@@ -1,9 +1,0 @@
-name: 'CAS Settings'
-description: 'CAS setting '
-type: module
-dependencies:
-  - cas
-  - externalauth
-version: '1.02'
-package: 'CWRU Default'
-core_version_requirement: '>=9'

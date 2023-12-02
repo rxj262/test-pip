@@ -1,6 +1,0 @@
-bundle: cwru_default
-excluded:
-  - block.block.bartik_footer
-  - block.block.crew_footer
-  - block.block.views_block__footer_block_footer
-required: true

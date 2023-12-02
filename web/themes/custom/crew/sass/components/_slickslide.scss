@@ -1,0 +1,257 @@
+// Hero Slider Carousel
+//
+// We use the Slick slider api by Ken Wheeler with custom styling. The slideshow should not autoplay and should loop back to the beginning. Text should not be overlayed on top of images. It should be navigable by keyboard only. It should be used in place of hero images. There should not be more than one per page.
+//
+// Markup: slickslide.hbs
+//
+// Weight: -15
+//
+// Style guide: components.slickslide
+
+.slick {
+  display: block;
+  position: relative;
+
+  &:hover,
+  &:focus {
+
+    .carousel-control {
+      opacity: 1;
+    }
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.slick-slider {
+  background-color: $cwru-blue;
+  margin: 22px 0;
+
+  .paragraph--type--hero-one-column {
+    margin: 0;
+  }
+}
+
+.paragraph--type--postgrad-photo-gallery {
+  max-height: 180px;
+
+  .slick-slider {
+    background-color: $white;
+  }
+
+  .slick-track,
+  .slick-slide {
+    max-height: 180px;
+
+    @media #{$jumbo-max} {
+      max-height: 163px;
+    }
+
+    @media #{$large-max} {
+      max-height: 136px;
+    }
+
+    @media #{$medium-max} {
+      max-height: 180px;
+    }
+  }
+}
+
+.slick-arrow {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: transparent;
+  position: absolute;
+  top: 35%;
+
+  &:hover,
+  &:focus {
+    background: transparent;
+  }
+
+  @media #{$small-max} {
+    top: 15%;
+  }
+}
+
+button.slick-arrow {
+  background: transparent;
+  outline: unset;
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev::before {
+  color: $white;
+  content: '\f104';
+  font-family: FontAwesome;
+  font-size: 65px;
+  font-weight: 600;
+  padding: 0 10px;
+  position: absolute;
+  top: 0%;
+  left: 20%;
+}
+
+.slick-next::before {
+  content: '\f105';
+  font-family: FontAwesome;
+  padding: 0 10px;
+  color: $white;
+  position: absolute;
+  font-size: 65px;
+  font-weight: 700;
+  top: 0%;
+  right: 20%;
+}
+
+.paragraph--type--postgrad-photo-gallery {
+
+  .slick-prev::before,
+  .slick-next::before {
+    content: '';
+  }
+}
+
+.carousel-control {
+  text-shadow: none;
+
+  &.left,
+  &.right {
+    background-image: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: transparent;
+  }
+
+  &:focus {
+    background: transparent;
+  }
+}
+
+.paragraph--type--hero-one-column,
+.paragraph--type--hero-full-width {
+
+  a {
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:link:hover &:visited:hover {
+      text-decoration: none;
+    }
+  }
+
+  p,
+  h2 {
+    color: $white;
+  }
+
+  h2 {
+    font-size: 26px;
+    line-height: 1.5;
+    margin: 5px 0 0;
+    padding-bottom: 0;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:link:hover &:visited:hover {
+    text-decoration: none;
+  }
+
+  .carousel-caption {
+    background-color: $cwru-blue;
+    bottom: 0;
+    font-weight: 400;
+    left: 0;
+    padding: 10px 20px 15px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    z-index: unset;
+
+    p {
+      margin: 0;
+      margin-right: 5px;
+    }
+
+    span {
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        color: $light-blue;
+      }
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .paragraph--type--hero-one-column .carousel-caption h2 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 10px 0 10px;
+  }
+}
+
+// Preview slide styles.
+.slide--preview {
+
+  .slide__info-wrapper {
+    background-color: $cwru-blue;
+    padding: 12px 24px;
+  }
+
+  .slide__header {
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 0;
+
+    .field--name-field-gallery-title {
+      padding: 0;
+    }
+  }
+
+  .slide__caption {
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0;
+    width: 100%;
+
+    .field--name-field-gallery-image-caption {
+      background-color: transparent;
+      font-style: normal;
+      padding: 0;
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+}

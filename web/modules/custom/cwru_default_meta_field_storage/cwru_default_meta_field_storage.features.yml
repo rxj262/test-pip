@@ -1,0 +1,5 @@
+bundle: cwru_default
+excluded:
+  - image.style.article_480x480_
+  - image.style.landing_2_725x350_
+required: true

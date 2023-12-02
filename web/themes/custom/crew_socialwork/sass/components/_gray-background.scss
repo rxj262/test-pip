@@ -1,0 +1,60 @@
+.paragraph--type--gray-background-feature {
+  background-color: $off-white;
+  background-image: url('../images/graybkg.png');
+  background-size: cover;
+  background-position: center;
+  margin: 40px -22px;
+  padding: 22px;
+
+  .paragraph--type--content {
+    padding: 0 22px;
+    margin: 0 auto;
+    @include clearfix;
+    // not sure why this was added, but it seems unnecessary
+    // @media #{$small-min}  { width: 720px; }
+    // @media #{$medium-min} { width: 984px; }
+
+    .align-right {
+      @media #{$small-max} { margin-left: 0; }
+    }
+  }
+}
+
+.area-of-study-page .paragraph--type--gray-background-feature {
+  margin: 40px 0;
+}
+
+.paragraph--type--centered-cta {
+  padding: 40px;
+  text-align: center;
+
+  .field--name-field-centered-text-content {
+    margin: 0 auto 40px auto;
+    max-width: 800px;
+
+    h3 { color: $cwru-blue; }
+    p { font-size: 18px; }
+  }
+
+  .field--name-field-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 900px;
+    @media #{$small-max} { flex-direction: column; }
+
+    > .field--item {
+      margin: 0 20px;
+      @media #{$small-max} { margin-bottom: 20px; }
+
+      a {
+        @include button-blue;
+      }
+    }
+  }
+}
+
+.paragraph--type--gray-background-feature .field--name-field-content .align-right {
+  max-width: 40%;
+  @media #{$small-max} { max-width: 100%; }
+}

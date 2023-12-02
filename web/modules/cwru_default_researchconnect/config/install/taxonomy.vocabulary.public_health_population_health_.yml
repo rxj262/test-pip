@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Public Health & Population Health - RC'
-vid: public_health_population_health_
-description: ''
-hierarchy: 0
-weight: 0

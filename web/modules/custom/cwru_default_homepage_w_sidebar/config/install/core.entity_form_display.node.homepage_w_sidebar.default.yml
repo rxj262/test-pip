@@ -1,0 +1,145 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage_w_sidebar.field_hero_twocol_ref
+    - field.field.node.homepage_w_sidebar.field_meta_tags
+    - field.field.node.homepage_w_sidebar.field_twocol_sidebar_ref
+    - field.field.node.homepage_w_sidebar.field_twocol_subfeature_ref
+    - node.type.homepage_w_sidebar
+    - workflows.workflow.ac84b3e9
+  module:
+    - content_moderation
+    - field_group
+    - metatag
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_all_options:
+      children:
+        - group_image_slideshow
+        - group_subfeature
+        - group_sidebar
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: 'All Options'
+    group_image_slideshow:
+      children:
+        - field_hero_twocol_ref
+      parent_name: group_all_options
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Image/Slideshow
+    group_subfeature:
+      children:
+        - field_twocol_subfeature_ref
+      parent_name: group_all_options
+      weight: 21
+      format_type: tab
+      format_settings:
+        label: Content
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Content
+    group_sidebar:
+      children:
+        - field_twocol_sidebar_ref
+      parent_name: group_all_options
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Sidebar
+id: node.homepage_w_sidebar.default
+targetEntityType: node
+bundle: homepage_w_sidebar
+mode: default
+content:
+  field_hero_twocol_ref:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_meta_tags:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_twocol_sidebar_ref:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_twocol_subfeature_ref:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

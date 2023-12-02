@@ -1,0 +1,4 @@
+bundle: cwru_default
+excluded:
+  - field.storage.paragraph.field_biography_degree
+required: true

@@ -1,5 +1,0 @@
-name: 'Custom Calendar'
-type: module
-description: 'Events Calendar based on FullCalendar'
-package: 'Custom'
-core_version_requirement: '>=9'

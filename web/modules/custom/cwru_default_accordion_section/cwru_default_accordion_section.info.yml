@@ -1,0 +1,11 @@
+name: 'Accordion Section'
+description: 'Provides Accordion Section paragraphs type and related configuration.'
+type: module
+dependencies:
+  - entity_reference_revisions
+  - field
+  - paragraphs
+  - text
+version: '1.01'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

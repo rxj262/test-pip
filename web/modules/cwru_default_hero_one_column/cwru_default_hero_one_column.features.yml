@@ -1,7 +1,0 @@
-bundle: cwru_default
-excluded:
-  - image.style.hero_one_column
-  - field.field.node.homepage_w_full_width_feature.field_hero_oncol_ref
-  - core.entity_view_display.media.image.hero_one_column
-  - core.entity_view_mode.media.hero_one_column
-required: true

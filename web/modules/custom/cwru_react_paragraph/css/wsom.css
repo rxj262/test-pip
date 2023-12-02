@@ -1,0 +1,103 @@
+/* Global styles shared for all React apps */
+.loading::after {
+    display: inline-block;
+    animation: dotty steps(1,end) 1s infinite;
+    content: '';
+  }
+  
+  @keyframes dotty {
+      0%   { content: ''; }
+      25%  { content: '.'; }
+      50%  { content: '..'; }
+      75%  { content: '...'; }
+      100% { content: ''; }
+  }
+
+#geographic-interests, #industry-interests, #career-interests, #search-statuses, #filter-text {
+    font-size: 16px;
+}
+
+#filter-label {
+    font-size: 15px;
+}
+
+#card-text {
+    font-size:18px;
+}
+  
+#filter {
+    float: right;
+    width: 25%;
+}
+
+#active-resumes {
+    float:left;
+    width: 70%;
+    text-align: left;
+}
+
+#preamble {
+    border-bottom: 1px solid #cdcdcd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+
+#filter-header {
+    background-color: #626262;
+    color: #ffffff;
+    padding: 3px 6px 4px 6px;
+    margin-bottom: 8px;
+}
+
+#button-link {
+    color: #fff;
+    font-size:14px;
+}
+
+#resume-button, #email-button {
+    align-items: center;
+    width:100%;
+    color: #fff;
+    background-color: #0a304e;
+    border: none;
+    border-radius:25px !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0a304e;
+    border: none;
+}
+
+#resume-button:visited, #email-button:visited {
+    color: #fff;
+    background-color: #0a304e;
+}
+
+#resume-button:hover, #resume-button:active, #email-button:hover, #email-button:active {
+    background-color: #072237 !important;
+}
+
+/* #radios {
+    width:auto;
+    display: block;
+    align-items:center;
+    text-align:center;
+    padding: 20px 0 20px 0;
+    border: black 1px solid;
+    margin-bottom: 25px;
+    margin-top:10px;
+}
+  
+#label {
+    font-family: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    margin: 0 20px 0 20px;
+}
+
+#department, #topic {
+    position: relative;
+} */
+  

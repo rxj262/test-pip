@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_school_ref
+    - paragraphs.paragraphs_type.job_title_affiliation
+    - taxonomy.vocabulary.schools
+id: paragraph.job_title_affiliation.field_biography_school_ref
+field_name: field_biography_school_ref
+entity_type: paragraph
+bundle: job_title_affiliation
+label: School
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      schools: schools
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

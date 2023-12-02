@@ -1,0 +1,92 @@
+.field--name-field-quotes {
+  .paragraph--type--quote {
+    display: flex;
+    color: $cwru-blue;
+    margin-bottom: 40px;
+    @media #{$medium-max} { flex-direction: column; }
+  }
+
+  .field--item:nth-of-type(even) .paragraph--type--quote {
+    flex-direction: row-reverse;
+    @media #{$medium-max} { flex-direction: column; }
+  }
+
+  .field--name-field-quote-portrait {
+    min-width: 45%;
+  }
+
+  .quote-and-name {
+    padding: 40px;
+
+    &::before {
+      content: '“';
+      color: $light-gray;
+      position: absolute;
+      font-size: 200px;
+      line-height: 0.5;
+      margin-left: -20px;
+      @media #{$medium-max} { font-size: 100px; }
+    }
+  }
+
+  .field--name-field-quote {
+    font-size: 40px;
+    padding-left: 40px;
+    @media #{$medium-max} {
+      font-size: 26px;
+      padding-left: 20px;
+    }
+  }
+
+  .field--name-field-quote-name {
+    font-size: 32px;
+    font-style: italic;
+    text-align: right;
+    @media #{$medium-max} { font-size: 22px; }
+
+    &::before {
+      content: '-';
+    }
+  }
+}
+
+.field--name-field-aside-ref-aos {
+  .paragraph--type--quote {
+    margin-bottom: 20px;
+    color: $cwru-blue;
+    background-color: $off-white;
+
+    .field--name-field-image img {
+      width: 100%;
+    }
+
+    .quote-and-name {
+      font-size: 20px;
+      padding: 20px 20px 20px 40px;
+
+      &::before {
+        content: '“';
+        color: $light-gray;
+        position: absolute;
+        font-size: 150px;
+        line-height: 0.7;
+        margin-left: -20px;
+        @media #{$medium-max} { font-size: 100px; }
+      }
+    }
+
+    .field--name-field-quote {
+      padding-left: 40px;
+      padding-top: 10px;
+    }
+
+    .field--name-field-quote-name {
+      font-style: italic;
+      text-align: right;
+
+      &:before {
+        content: '-';
+      }
+    }
+  }
+}

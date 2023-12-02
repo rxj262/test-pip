@@ -1,4 +1,0 @@
-bundle: cwru_default
-excluded:
-  - workflows.workflow.workflow_1
-required: true

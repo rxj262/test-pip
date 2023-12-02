@@ -1,0 +1,266 @@
+// Icon Feature
+//
+// This is the Icon Feature component. It's an example.
+//
+//
+// Style guide: Components.icon-feature
+// Import site utilities.
+@import '../../global/utils/init';
+$svgheight: 666px;
+$svgheight-responsive: 750px;
+
+.field-icon-feature {
+  position: relative;
+  overflow: hidden;
+  background-color: $cwru-blue;
+  @include breakpoint($bp-md) {
+    margin-bottom: $size-large;
+  }
+
+  .icon-feature-illustration svg {
+    height: $svgheight;
+    width: auto;
+  }
+
+  .field-icon-feature-title {
+    @include font-stack-titillium;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-jumbo;
+    letter-spacing: 0.1em;
+  }
+
+  .group-feature-icon-details {
+    color: $white;
+    background-color: $blk;
+    padding: $size-smallest $size-small;
+    width: 100%;
+    max-width: 100%;
+
+    .field-icon-feature-link a {
+      color: $green;
+      text-decoration: underline;
+    }
+
+    &.active {
+      opacity: 1;
+      z-index: $zi-high;
+      animation: boxFade 0.4s ease-in-out;
+    }
+  }
+}
+
+// desktop only
+.field-icon-feature--desktop {
+  height: $svgheight-responsive;
+  @include breakpoint($bp-md) {
+    height: $svgheight;
+  }
+
+  &.color--0 {
+    background-color: $cwru-blue;
+  }
+
+  &.color--1 {
+    background-color: $dark-gray;
+  }
+
+  > .field__item {
+    position: absolute;
+    width: 100%;
+  }
+
+  .icon-feature-illustration {
+    opacity: 0;
+    text-align: right;
+    transition: opacity 0.75s;
+    height: $svgheight;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .field-icon-feature-title {
+    @include text-shadow($white);
+    color: $cwru-blue;
+    position: absolute;
+    top: 0;
+    left: $size-small;
+    z-index: $zi-high;
+    cursor: pointer;
+    transition: color 0.2s, text-shadow 0.2s;
+    @include breakpoint($bp-md) {
+      left: 10%;
+    }
+    @include breakpoint($bp-xl) {
+      left: 15%;
+    }
+
+    &.active,
+    &:hover {
+      @include text-shadow($cwru-blue);
+      color: $white;
+    }
+  }
+
+  .group-feature-icon-details {
+    position: absolute;
+    text-align: right;
+    z-index: $zi-below-ground;
+    opacity: 0;
+    transition: opacity 1s;
+    bottom: 0;
+    width: fit-content;
+    @include breakpoint($bp-md) {
+      max-width: 60%;
+      bottom: $size-medium;
+      right: $size-medium;
+    }
+    @include breakpoint($bp-lg) {
+      max-width: 30%;
+    }
+    @include breakpoint($bp-xl) {
+      right: 30%;
+    }
+  }
+}
+
+// mobile only
+.field-icon-feature--mobile {
+  > .field__item:nth-of-type(even) {
+    background-color: $dark-gray;
+  }
+
+  .field-icon-feature-title {
+    color: $white;
+    background-color: $blk;
+    padding: 0 20px;
+  }
+
+  .icon-feature-illustration svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+// sass-lint:disable no-ids
+.icon-feature-illustration.animate {
+  .learn {
+    #Arrows {
+      animation: rotate 2s infinite linear;
+      transform-origin: 394.5px 233px;
+    }
+  }
+
+  .create {
+    #Bird {animation: bird 0.8s cubic-bezier(0.35, 0.48, 0.32, 1.8)}
+  }
+
+  .connect {
+    #Hand1 {animation: hand1 0.8s ease-in-out}
+    #Hand2 {animation: hand2 0.8s ease-in-out}
+    #Hand3 {animation: hand3 0.8s ease-in-out}
+    #Circle {animation: delayedFade 1s linear}
+  }
+
+  .earn {
+    #BlueGuy {animation: blueguy 0.4s linear}
+    #RedGuy {animation: redguy 0.4s linear}
+    #Dollarsign {animation: money 0.6s linear}
+    #Dots {animation: delayedFade 1s linear}
+  }
+
+  .engage {
+    #Plant1 {animation: plant1 1s cubic-bezier(0.175, 0.885, 0.32, 1.1)}
+    #Plant2 {animation: plant2 1s cubic-bezier(0.175, 0.885, 0.32, 1.1)}
+    #Plant3 {animation: plant3 1s cubic-bezier(0.175, 0.885, 0.32, 1.1)}
+  }
+}
+// sass-lint:enable no-ids
+
+// Learn
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(359deg);}
+}
+
+// Create
+@keyframes bird {
+  from {transform: translateX(300px) rotate(10deg);}
+  to {transform: translateX(0) rotate(0);}
+}
+
+// Connect
+@keyframes hand1 {
+  0% {transform: translateY(-200px);}
+  40% {transform: translateY(-200px);}
+  100% {transform: translateY(0);}
+}
+@keyframes hand2 {
+  0% {transform: translate(-200px, 200px);}
+  20% {transform: translate(-200px, 200px);}
+  80% {transform: translate(0);}
+}
+@keyframes hand3 {
+  0% {transform: translate(200px, 200px);}
+  60% {transform: translate(0);}
+}
+
+// Earn
+@keyframes blueguy {
+  from {transform: translateX(87.000000px) translateY(161px);}
+  to {transform: translateX(137.000000px) translateY(161px);}
+}
+@keyframes redguy {
+  from {transform: translateX(423.221786px) translateY(161.464894px);}
+  to {transform: translateX(373.221786px) translateY(161.464894px);}
+}
+@keyframes money {
+  0% {
+    transform: translateX(300.097815px) translateY(0);
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateX(300.097815px) translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(300.097815px) translateY(71.640129px);
+    opacity: 1;
+  }
+}
+@keyframes delayedFade {
+  0% {opacity: 0}
+  60% {opacity: 0}
+  100% {opacity: 1}
+}
+
+// Engage
+@keyframes plant1 {
+  0% {transform: translateX(128px) translateY(666px);}
+  80% {transform: translateX(128px) translateY(291px);}
+}
+@keyframes plant2 {
+  10% {transform: translateX(322px) translateY(666px);}
+  90% {transform: translateX(322px) translateY(195px);}
+}
+@keyframes plant3 {
+  20% {transform: translateX(523px) translateY(666px);}
+  100% {transform: translateX(523px) translateY(52px);}
+}
+
+// Box
+@keyframes boxFade {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

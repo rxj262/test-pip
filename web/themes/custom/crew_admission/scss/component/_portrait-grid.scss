@@ -1,0 +1,91 @@
+.face-gallery {
+  position: relative;
+  overflow: hidden;
+  .face-gallery__group {
+    cursor: pointer;
+  }
+  .face-gallery__group .field--name-field-portrait-grid-static-image,
+  .face-gallery__group .field--name-field-portrait-grid-img-animated {
+    float: left;
+    width: 33%;
+    margin-bottom: -8px;
+  }
+  .field--name-field-portait-static-lg-img-ref,
+  .face-gallery__text {
+    width: 100%;
+  }
+  .field--name-field-portait-static-lg-img-ref,
+  .face-gallery__text {
+    position: absolute;
+    z-index: 100;
+  }
+  .face-gallery__text {
+    bottom: 0;
+    z-index: 100;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.portrait-text-outside {
+  position: relative;
+}
+.face-gallery__text {
+  background-color: $off-black;
+  color: $white;
+  font-size: 18px;
+  font-family: $arizona-italic;
+  padding: 20px 30px;
+  .face-gallery__quote {
+    color: $lime;
+    font-size: 200px;
+    font-family: $arizona-bold;
+    font-style: normal;
+    opacity: .3;
+    position: absolute;
+    top: -50px;
+    left: 20px;
+  }
+}
+.field--name-field-uga-portrait-ref {
+  margin: 40px 0;
+}
+.field--name-field-portrait-grid-title {
+  font-family: $heading_font;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: .5em;
+}
+.field--name-field-portrait-grid-content {
+  font-size: 26px;
+}
+.field--name-field-portrait-grid-img-animated {
+  img {display: none}
+}
+.face-gallery__group .field--name-field-portrait-grid-static-image {
+  position: relative;
+  article:after {
+    content: '';
+    border-color: transparent transparent transparent transparent;
+    transition: all .2s;
+  }
+  article:hover:after {
+    content: '+';
+    text-indent: -20px;
+    line-height: 2.8;
+    color: $white;
+    font-weight: 700;
+    font-size: 24px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 50px 50px;
+    border-color: transparent transparent $link-blue transparent;
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+    z-index: 10;
+  }
+}

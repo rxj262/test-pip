@@ -1,0 +1,83 @@
+// Intro Text
+//
+// Intro text is large, centered text that is generally used for sites with less images. It should always be used near the top of the homepage or landing page and only one per page.
+//
+// Markup: introtext.hbs
+//
+// Style guide: components.introText
+
+.intro-text {
+  margin: 40px 0;
+  @media #{$medium-min} {
+    padding: 0 143px;
+  }
+}
+.homepage-w-sidebar .intro-text {
+  padding: 0 15px;
+}
+.field--name-field-intro-text-title {
+  font-size: 38px;
+  font-weight: 600;
+  margin-top: 0;
+}
+.field--name-field-intro-text {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.slick + .field--name-field-intro-text-ref .intro-text {
+  margin-top: 20px;
+}
+
+.field--name-field-intro-text {
+  .intro-text,
+  .field--name-field-content {
+    margin: 40px 0;
+    @media #{$medium-min} {
+      padding: 0 143px;
+    }
+  }
+  .field--name-field-intro-text-title {
+    font-size: 38px;
+    font-weight: 600;
+    margin-top: 0;
+  }
+  .field--name-field-intro-text {
+    font-size: 24px;
+    margin: 15px 0;
+  }
+  .field--name-field-content {
+    text-align: center;
+  }
+}
+
+article[about="/bulletin/node/16"] {
+  .field--name-field-intro-text .field--name-field-content,
+  .field--name-field-intro-text .intro-text {
+    margin-top: 50px;
+    margin-bottom: 44px;
+  }
+  .bg-off-white {
+    background-color: $white;
+  }
+}
+
+//MEM Intro Text
+.mem-centered-intro-text {
+  .intro-text {
+      margin: 0;
+    }
+}
+
+//Human Fusions CIT
+.human-fusions-cit {
+  .field--name-field-intro-text {
+    font-size: 5rem;
+    font-weight: bold;
+    color: $cwru-blue;
+    margin: 0;
+    @media (max-width: $medium) {
+      font-size: 3rem;
+    }
+  }
+}

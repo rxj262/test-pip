@@ -1,5 +1,0 @@
-name: 'Webform to node converter'
-type: module
-description: 'Custom handler to convert webform submissions to nodes'
-package: 'Custom'
-core_version_requirement: '>=9'

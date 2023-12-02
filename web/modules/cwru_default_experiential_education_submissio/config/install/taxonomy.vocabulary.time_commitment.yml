@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Time Commitment'
-vid: time_commitment
-description: ''
-weight: 0

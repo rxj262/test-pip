@@ -1,0 +1,116 @@
+// SUBFEATURE GRID
+.subfeature-grid-wrapper {
+  padding: 22px;
+  // Need to replace with the SVG background image
+  // background-color: #EDEDED;
+  // background-image: url('../images/square-bkg.svg');
+  margin: 0 -22px;
+
+  img {
+    width: 100%;
+  }
+  // a:hover {
+  //   transition: 1.5s;
+  //   .subfeature-grid-text {
+  //     background-color: $link-blue;
+  //   }
+  // }
+
+  .field--name-field-section-title {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 800;
+    color: $cwru-blue;
+    margin: 0 0 40px;
+    &:after {
+      content: '';
+      display: block;
+      background-color: $link-blue;
+      width: 35%;
+      height: 4px;
+      margin: 0 auto;
+    }
+    @media #{$small-max} {
+      margin-bottom: 20px;
+    }
+  }
+
+  .field--name-field-subfeature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > .field--item {
+      flex-basis: 33%;
+
+      @media #{$medium-max} {
+        flex-basis: 50%;
+      }
+
+      @media #{$small-max} {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  .paragraph--type--subfeature-grid-section {
+    padding: 0 10px;
+    margin-bottom: 22px;
+  }
+
+  .subfeature-grid-img-text {
+    border: 2px solid $cwru-dark-gray;
+    overflow: hidden;
+    position: relative;
+    background-color: $link-blue;
+    img {
+    transition: .5s;
+    }
+    &:hover {
+      .subfeature-grid-text {
+        background-color: $link-blue;
+      }
+      img {
+        opacity: 0.6;
+      }
+    }       
+
+  }
+
+  .subfeature-grid-text {
+    color: $white;
+    background-color: $cwru-blue;
+    padding: 10px 10px 0;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    width: 100%;
+    transition: .5s;
+    // &:hover {
+    //   background-color: $link-blue;
+    // }
+    @media #{$small-max} {
+      position: static;
+    }
+  }
+
+  .field--name-field-grid-title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 10px;
+    @media #{$small-max} {
+      margin-bottom: 0;
+      padding-bottom: 10px;
+    }
+  }
+
+  .field--name-field-grid-description {
+    padding-bottom: 10px;
+    font-weight: normal;
+
+    @media #{$small-max} {
+      display: block !important;
+    }
+  }
+}

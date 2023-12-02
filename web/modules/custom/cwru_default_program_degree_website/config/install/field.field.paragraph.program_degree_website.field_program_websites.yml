@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_program_websites
+    - paragraphs.paragraphs_type.program_degree_website
+  module:
+    - link
+id: paragraph.program_degree_website.field_program_websites
+field_name: field_program_websites
+entity_type: paragraph
+bundle: program_degree_website
+label: 'Program Website URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

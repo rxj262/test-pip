@@ -1,7 +1,0 @@
-name: 'Better Date Range Format'
-type: module
-description: 'Provide a better way to format date range fields'
-package: 'Custom'
-dependencies:
-  - datetime_range
-core_version_requirement: '>=9'

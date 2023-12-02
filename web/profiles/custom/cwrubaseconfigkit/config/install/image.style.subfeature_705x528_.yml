@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: subfeature_705x528_
+label: 'Subfeature (705x528)'
+effects:
+  a4c42464-b824-4a6c-b377-95f6f701bc30:
+    uuid: a4c42464-b824-4a6c-b377-95f6f701bc30
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 705
+      height: 528
+      crop_type: focal_point

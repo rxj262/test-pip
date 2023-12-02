@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: footer_address
+label: 'Footer Address'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

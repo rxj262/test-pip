@@ -1,0 +1,53 @@
+// Header
+//
+// This is the Header component. Work in progress.
+//
+// Markup: region--header.html.twig
+//
+// Style guide: Layout.header
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.region--header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $cwru-blue;
+  padding: $size-smallest $size-small;
+  flex-direction: column;
+  @include breakpoint($bp-xsm) {
+    flex-direction: row;
+    padding: $size-medium;
+  }
+
+  > div:first-child {
+    flex: 1;
+  }
+
+  nav {
+    flex: 1;
+    max-width: 600px;
+    @include breakpoint($bp-xsm) {
+      flex-basis: 400px;
+    }
+  }
+}
+
+.page-title {
+  display: inline-block;
+  margin-right: $size-medium;
+
+  h1,
+  div {
+    @include font-stack-titillium;
+    color: $white;
+    font-size: 10vw;
+    font-weight: $font-weight-regular;
+    margin: 0;
+    padding: 0;
+    line-height: 1.15;
+    @include breakpoint($bp-xxsm) {
+      font-size: 40px;
+    }
+  }
+}

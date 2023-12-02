@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_one_column_lg
+label: 'Hero One Column LG (1106x415)'
+effects:
+  5af70207-de03-423c-8bae-f3bfc46ddea1:
+    uuid: 5af70207-de03-423c-8bae-f3bfc46ddea1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1106
+      height: 415
+      crop_type: focal_point

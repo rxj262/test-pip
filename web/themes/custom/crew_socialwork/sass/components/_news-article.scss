@@ -1,0 +1,6 @@
+.field--name-field-article-image-ref {
+  max-width: 440px;
+  float: right;
+  margin: 5px 0px 24px 30px;
+  @media #{$medium-max} { width: 100%; margin-bottom: 20px; margin-top: 10px; }
+}

@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media
-id: media.subfeature_wide_image_style
-label: 'Subfeature Wide Image Style'
-targetEntityType: media
-cache: true

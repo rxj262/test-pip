@@ -1,0 +1,6 @@
+.btn-group-vertical .btn {
+	text-align:left; /* Left align our radios. */
+    white-space: normal; /* fix wrapping on long bootstrap radios. */
+}
+
+.bootstrap-datetimepicker-widget table td{ padding:0; }

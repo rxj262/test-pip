@@ -1,0 +1,25 @@
+name: 'Homepage w full width feature'
+description: 'Provides Homepage w full width feature content type and related configuration. '
+type: module
+dependencies:
+  - block
+  - content_moderation
+  - ctools
+  - cwru_default_hero_one_column
+  - cwru_default_meta_field_storage
+  - cwru_default_subfeature
+  - entity_reference_revisions
+  - field
+  - field_group
+  - menu_ui
+  - metatag
+  - node
+  - paragraphs
+  - path
+  - slick_paragraphs
+  - user
+  - views
+  - workflows
+version: '1.05'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

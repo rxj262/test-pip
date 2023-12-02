@@ -1,0 +1,139 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+{{ attach_library('classy/node') }}
+
+<div{{ content_attributes.addClass('container') }}>
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer__block--university">
+      <img src="https://dudbm6bcnmy8e.cloudfront.net/cwru/img/cwru_acronym_blue.svg" alt="cwru logo with tagline" class="footer__logo">
+      <p>&copy; {{ 'now'|date('Y') }} <a href="//www.case.edu/">Case Western Reserve University</a></p>
+      <address>10900 Euclid Ave. Cleveland, Ohio 44106</address>
+      <p>
+        216.368.2000<br />
+        <a href="//www.case.edu/legal.html">Legal Notice</a> | <a href="//case.edu/privacy-statement/">Privacy Policy</a>
+      </p>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 footer__block--department">
+      <img src="/admission/{{directory}}/images/pin-icon.svg" alt="map marker" class="footer__map-icon hidden-sm hidden-xs">
+      <div class="footer__department-info">
+        <h3 class="footer__header">Undergraduate Admission</h3>
+        <p>
+          {{ content.group_mailing_address.field_site_mailing_street[0]['#context'].value }}
+          {{ content.group_mailing_address.field_site_mailing_street_two[0]['#context'].value }}
+          <br>
+          {{ content.group_mailing_address.field_site_mailing_city[0]['#context'].value }},
+          {{ content.group_mailing_address.field_site_mailing_state[0]['#context'].value }}
+          {{ content.group_mailing_address.field_site_mailing_zip_four[0]['#context'].value }}
+        </p>
+        <p>
+          <strong>Phone:</strong> <a href="{{ content.field_site_phone[0]['#url'].uri }}">{{ content.field_site_phone[0]['#title'] }}</a>
+        </p>
+        <p>
+          <strong>Email:</strong> <a href="{{ content.field_site_email[0]['#url'].uri }}">{{ content.field_site_email[0]['#title'] }}</a>
+        </p>
+        <p>
+          <a href="mailto:{{ content.field_site_feedback[0]['#context'].value }}">Site Feedback</a>
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer__block--social">
+      <h3 class="footer__header">Social Media</h3>
+      <div class="footer__social-icons">
+        <a href="https://www.facebook.com/cwruadmission" target="_blank" title="Undergraduate Admission Facebook" class="fa fa-facebook footer__social-icon"></a>
+        <a href="https://twitter.com/cwruadmission" target="_blank" title="Undergraduate Admission Twitter" class="fa fa-twitter footer__social-icon"></a>
+        <a href="https://www.instagram.com/cwruadmission/" target="_blank" title="Undergraduate Admission Instagram" class="fa fa-instagram footer__social-icon"></a>
+        <a href="https://www.youtube.com/user/case" target="_blank" title="Undergraduate Admission YouTube" class="fa fa-youtube footer__social-icon"></a>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 footer__block--links">
+      <h3 class="footer__header">CWRU Links</h3>
+      <ul role="menu" class="page-breadcrumb breadcrumb">
+        <li role="menuitem">
+          <a href="http://case.edu/admissions/">Apply</a>
+          <i class="li-pipe" aria-hidden="true">|</i>
+        </li>
+        <li role="menuitem">
+          <a href="https://case.edu/give/">Give</a>
+          <i class="li-pipe" aria-hidden="true">|</i>
+        </li>
+        <li role="menuitem">
+          <a href="http://case.edu/visit/">Visit</a>
+          <i class="li-pipe" aria-hidden="true">|</i>
+        </li>
+        <li role="menuitem">
+          <a href="https://webapps.case.edu/directory/">Directory</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

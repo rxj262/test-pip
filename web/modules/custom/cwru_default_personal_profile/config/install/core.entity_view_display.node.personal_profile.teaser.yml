@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.personal_profile.field_meta_tags
+    - field.field.node.personal_profile.field_personal_profile_content
+    - field.field.node.personal_profile.field_personal_profile_country
+    - field.field.node.personal_profile.field_personal_profile_drupal_si
+    - field.field.node.personal_profile.field_personal_profile_grad_year
+    - field.field.node.personal_profile.field_personal_profile_hometown
+    - field.field.node.personal_profile.field_personal_profile_image_ref
+    - field.field.node.personal_profile.field_personal_profile_major
+    - field.field.node.personal_profile.field_personal_profile_name
+    - field.field.node.personal_profile.field_personal_profile_sa_countr
+    - node.type.personal_profile
+  module:
+    - user
+id: node.personal_profile.teaser
+targetEntityType: node
+bundle: personal_profile
+mode: teaser
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_meta_tags: true
+  field_personal_profile_content: true
+  field_personal_profile_country: true
+  field_personal_profile_drupal_si: true
+  field_personal_profile_grad_year: true
+  field_personal_profile_hometown: true
+  field_personal_profile_image_ref: true
+  field_personal_profile_major: true
+  field_personal_profile_name: true
+  field_personal_profile_sa_countr: true

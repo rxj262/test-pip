@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.events_image_style_150x150
+label: 'Events Image Style 150x150'
+targetEntityType: media
+cache: true

@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media
-id: media.media_image_large
-label: 'Media Image - 4 (Large)'
-targetEntityType: media
-cache: true

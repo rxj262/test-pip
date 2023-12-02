@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: cwru_hard_coded
-label: 'CWRU Hard Coded'
-revision: 1
-description: 'Hard coded custom block that manages ANY block that doesn''t have fields'

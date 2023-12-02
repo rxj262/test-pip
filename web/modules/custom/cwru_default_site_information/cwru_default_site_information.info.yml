@@ -1,0 +1,23 @@
+name: 'Site Information'
+description: 'Provides Site Information content type and related configuration. '
+type: module
+dependencies:
+  - cwru_default_drupal_site
+  - cwru_default_meta_field_storage
+  - cwru_default_site_affiliation
+  - cwru_default_social
+  - entity_reference_revisions
+  - field
+  - field_group
+  - link
+  - menu_ui
+  - metatag
+  - node
+  - paragraphs
+  - taxonomy
+  - telephone
+  - user
+  - views
+version: '1.11'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

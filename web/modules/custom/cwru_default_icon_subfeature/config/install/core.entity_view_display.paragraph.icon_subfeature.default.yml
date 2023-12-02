@@ -1,0 +1,74 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.icon_subfeature.field_icon_sub_icon_pick_ref
+    - field.field.paragraph.icon_subfeature.field_icon_subfeature_content
+    - field.field.paragraph.icon_subfeature.field_icon_subfeature_link
+    - field.field.paragraph.icon_subfeature.field_icon_subfeature_title
+    - paragraphs.paragraphs_type.icon_subfeature
+  module:
+    - entity_reference_revisions
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_title:
+      children:
+        - field_icon_subfeature_title
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: h3
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Title
+id: paragraph.icon_subfeature.default
+targetEntityType: paragraph
+bundle: icon_subfeature
+mode: default
+content:
+  field_icon_sub_icon_pick_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_icon_subfeature_content:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_icon_subfeature_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_icon_subfeature_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

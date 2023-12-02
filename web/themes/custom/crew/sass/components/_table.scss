@@ -1,0 +1,38 @@
+.table-responsive {
+  margin-bottom: 20px;
+}
+
+.table-responsive.has-scrollbar-x {
+  position: relative;
+
+  &:before {
+    content: 'SCROLL';
+    transform: rotate(90deg);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 10;
+    font-weight: bold;
+    color: $white;
+    letter-spacing: 4px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40%;
+    max-width: 300px;
+    opacity: 1;
+    background: linear-gradient(to left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    transition: opacity .3s;
+  }
+
+  &:hover:after,
+  &:hover:before {
+    pointer-events: none;
+    opacity: 0;
+  }
+}

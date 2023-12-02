@@ -1,9 +1,0 @@
-global-styling:
-  version: 1.0
-  css:
-    base:
-      css/overrides.css: {}
-  js:
-    js/overrides.js: {}
-  dependencies: 
-    - core/jquery

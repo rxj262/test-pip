@@ -1,0 +1,33 @@
+{% set classes = [
+  node.bundle | clean_class,
+  node.isPromoted()
+    ? 'is-promoted',
+  node.isSticky()
+    ? 'is-sticky',
+  not node.isPublished()
+    ? 'is-unpublished',
+  view_mode
+    ? view_mode | clean_class,
+  'clearfix',
+  'equipment-detail-page'
+] %}
+
+<article{{ attributes.addClass(classes) }}>
+   <div{{ content_attributes.addClass('content') }}>
+      <div class='row'>
+      {# check for right_ref sidebar #}
+      {% if content.field_equip_det_right_side_ref.0 %}
+        <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 robust-content-small">
+          {{ content|without('field_equip_det_right_side_ref') }}
+        </div>
+        <aside class="col-lg-4 col-md-6 col-sm-6 col-xs-12" role="complementary">
+          {{ content.field_equip_det_right_side_ref }}
+        </aside>
+      {% else %}
+        <div class="col-md-12 robust-content-small">
+          {{ content }}
+        </div>
+      {% endif %}
+      </div>
+    </div>
+</article>

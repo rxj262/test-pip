@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_ext_org_pub
+    - paragraphs.paragraphs_type.external_appointment
+id: paragraph.external_appointment.field_biography_ext_org_pub
+field_name: field_biography_ext_org_pub
+entity_type: paragraph
+bundle: external_appointment
+label: Organization/Publication
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

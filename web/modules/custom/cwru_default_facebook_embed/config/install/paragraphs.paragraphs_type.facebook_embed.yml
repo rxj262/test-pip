@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: facebook_embed
+label: 'Facebook Embed'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

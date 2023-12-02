@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_social_select
+field_name: field_social_select
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'fa fa-facebook'
+      label: Facebook
+    -
+      value: 'fa fa-linkedin'
+      label: LinkedIn
+    -
+      value: 'fa fa-twitter'
+      label: Twitter
+    -
+      value: 'fa fa-google-plus'
+      label: 'Google Plus'
+    -
+      value: 'fa fa-instagram'
+      label: Instagram
+    -
+      value: 'fa fa-youtube'
+      label: Youtube
+    -
+      value: 'fa fa-flickr'
+      label: Flickr
+    -
+      value: 'fa fa-repeat'
+      label: Orgsync
+    -
+      value: 'fa fa-pinterest'
+      label: Pinterest
+    -
+      value: 'fa fa-weixin'
+      label: WeChat
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

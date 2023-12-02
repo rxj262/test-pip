@@ -1,0 +1,42 @@
+// NEED TO REFACTOR
+.scroll-icon {
+  .scroll-icon__mouse {
+    border: 2px solid $white;
+    border-radius: 11px;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    display: flex;
+    height: 34px;
+    justify-content: center;
+    width: 22px;
+    margin: 0 auto;
+  }
+  .scroll-icon__wheel {
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll-animation;
+    background-color: #fff;
+    border-radius: 2px;
+    background-clip: padding-box;
+    height: 4px;
+    margin-top: 5px;
+    width: 4px;
+  }
+  @keyframes scroll-animation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+  .scroll-icon__label {
+    color: $white;
+    text-transform: uppercase;
+    font-family: $arizona;
+    font-size: 16px;
+    font-family: $arizona-bold;
+    margin: 5px 0 15px;
+  }
+}

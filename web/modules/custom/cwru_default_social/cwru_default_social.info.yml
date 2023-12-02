@@ -1,0 +1,11 @@
+name: Social
+description: 'Provides Social paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_social_url_icon_section
+  - entity_reference_revisions
+  - field
+  - paragraphs
+version: '1.0'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

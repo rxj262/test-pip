@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: gray_callout_with_image
-label: 'Gray Callout with Image'
-icon_uuid: null
-icon_default: null
-description: ''
-behavior_plugins: {  }

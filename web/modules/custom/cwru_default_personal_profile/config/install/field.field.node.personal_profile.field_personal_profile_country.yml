@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personal_profile_country
+    - node.type.personal_profile
+id: node.personal_profile.field_personal_profile_country
+field_name: field_personal_profile_country
+entity_type: node
+bundle: personal_profile
+label: 'Home Country'
+description: 'For International Students, please list your home country.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

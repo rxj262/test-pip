@@ -1,0 +1,79 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.uga_editor
+  module:
+    - ckeditor
+    - editor_file
+third_party_settings:
+  editor_file:
+    status: true
+    scheme: public
+    directory: inline-files
+    extensions: 'pdf doc docx xls xlsx pptx ppt txt'
+format: uga_editor
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Subscript
+            - Superscript
+            - '-'
+            - PasteFromWord
+            - PasteText
+        -
+          name: Links
+          items:
+            - Link
+            - Linkit
+            - DrupalUnlink
+            - Anchor
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - media
+            - video_embed
+            - Blockquote
+            - Table
+        -
+          name: Styles
+          items:
+            - Styles
+        -
+          name: Tools
+          items:
+            - Source
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: "p|Normal\r\nh2|Heading 2\r\nh3|Heading 3\r\nh4|Heading 4\r\nh5|Heading 5\r\nh6|Heading 6\r\na.button--outline|Button\r\ntr.footer|Table Footer"
+    linkit:
+      linkit_profile: linkit
+    video_embed:
+      defaults:
+        children:
+          autoplay: true
+          responsive: true
+          width: '854'
+          height: '480'
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

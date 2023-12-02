@@ -1,5 +1,0 @@
-bundle: cwru_default
-excluded:
-  - image.style.bio_page_and_bio_listing
-  - workflows.workflow.4b7b12f9
-required: true

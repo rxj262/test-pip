@@ -1,0 +1,428 @@
+.subfeature-group-field,
+.field--name-field-subfeature-ref,
+.field--name-field-three-column-subfeature,
+.field--name-field-group-subfeature-section-r,
+.field--name-field-subfeature-2-1,
+.field--name-field-subfeature,
+.field--name-field-two-column-content-ref,
+.field--name-field-news-subfeature {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 11px -11px 11px -11px;
+
+  @media #{$small-max} {
+    flex-direction: column;
+    margin-right: 11px;
+  }
+
+  > .field--item {
+    flex: 1;
+    flex-basis: 30%;
+    margin: 11px;
+    min-width: 162px;
+    position: relative;
+
+    .paragraph--type--stacked-button-wrapper {
+      background-color: $white;
+      height: 100%;
+    }
+  }
+
+  .contextual-region {
+    position: unset;
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+
+  .field--name-field-image {
+    border: 1px solid $lighter-gray;
+  }
+}
+
+.homepage-w-sidebar .field--name-field-group-subfeature-section-r {
+
+  @media #{$small-max} {
+    margin: 11px -11px;
+  }
+}
+
+.robust-3-column-page .field--name-field-group-subfeature-section-r {
+
+  @media #{$large-max} {
+    flex-direction: column;
+  }
+}
+
+.paragraph--type--subfeature,
+.paragraph--type--subfeature-two-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .field--name-field-subfeature-content,
+  .field--name-field-subfeature-two-content {
+    flex-grow: 2;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+}
+
+// equal heights for subfeature views inside of subfeature groups
+.field--name-field-group-subfeature-section-r,
+.field--name-field-subfeature-ref {
+
+  .paragraph--type--view,
+  .view-news-feed,
+  .view-news-article-listing {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .field--name-field-view-viewfield {
+      height: 100%;
+
+      .field__item,
+      .views-element-container {
+        height: 100%;
+      }
+    }
+
+    .view-content {
+      flex-grow: 2;
+    }
+
+    .view-news-article-listing .view-footer {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.field--name-field-subfeature-title,
+.field--name-field-subfeature-two-title,
+.field--name-field-subfeature21-title {
+  color: $cwru-blue;
+  font-weight: 600;
+  font-size: 26px;
+  margin-top: 0 !important; // TODO: Remove need for important tag.
+  padding: 15px 10px 0;
+}
+
+.field--name-field-subfeature-content p,
+.field--name-field-subfeature21-content p {
+  margin: 10px 10px 20px;
+}
+
+.field--name-field-sf-section-link,
+.field--name-field-subfeature-link,
+.field--name-field-subfeature21-link {
+  width: 100%;
+
+  a {
+    @include button-block-blue;
+  }
+
+  .styleguide {
+    color: $white;
+  }
+}
+
+//SUBFEATURE LANDING STYLING
+.field--name-field-sf-section-image-ref .img-responsive {
+  width: 100%;
+}
+
+//TWO COLUMN
+.field--name-field-subfeature-two-link a {
+  @include button-blue;
+}
+
+.field--name-field-subfeature-two-column-ref {
+  border-top: 1px solid $lighter-gray;
+
+  > .field--item:first-child {
+    border-right: 1px solid $lighter-gray;
+    margin-right: 0;
+    padding: 22px 22px 48px 0;
+
+    @media #{$small-max} {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+
+  > .field--item:last-child {
+    margin-left: 0;
+    padding: 22px 0 48px 22px;
+
+    @media #{$small-max} {
+      padding-left: 0;
+    }
+  }
+
+  > .field--item {
+    background-color: $white;
+    flex: 1;
+    margin-top: 0;
+  }
+}
+
+.field--name-field-subfeature-two-content p {
+  margin: 10px 0 20px;
+}
+
+.field--name-field-subfeature-two-title {
+  margin: 15px 0 10px;
+  padding-left: 0;
+}
+
+.field--name-field-subfeature-ref,
+.field--name-field-5-subfeature-ref,
+.field--name-field-subfeature-two-column-ref,
+.field--name-field-three-column-subfeature,
+.field--name-field-subfeature {
+
+  @media #{$small-max} {
+    flex-direction: column;
+  }
+
+  > .field--item {
+
+    @media #{$small-max} {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+// ALTERNATING SUBFEATURE
+.alt-subfeatures {
+  margin-bottom: 30px;
+  padding-bottom: 22px;
+
+  .field--name-field-alt-sub-content {
+
+    h2 {
+      font-size: 36px;
+      margin-top: -8px;
+    }
+
+    ul {
+
+      @media #{$medium-min} {
+        float: left;
+        width: 100%;
+      }
+
+      @media #{$medium-max} {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .field--name-field-alt-sub-title {
+    color: $cwru-blue;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    margin-top: -8px;
+    padding: 0 0 0.3em;
+  }
+}
+
+// office of education abroad layout
+.field--name-field-subfeature-2-1 > .field--item:nth-child(1) {
+  align-self: flex-start;
+  flex: 2;
+  margin-right: 0;
+}
+
+.field--name-field-subfeature-2-1 > .field--item:nth-child(2) {
+  align-self: flex-start;
+  flex: none;
+  margin-left: 44px;
+  width: calc((100% - 44 * 2px) / 3);
+}
+
+.field--name-field-subfeature-2-1 .paragraph--type--external-rss {
+  margin-bottom: 0;
+}
+
+@media #{$small-max} {
+
+  .field--name-field-subfeature-2-1 {
+    flex-direction: column;
+  }
+
+  .field--name-field-subfeature-2-1 > .field--item:nth-child(1) {
+    flex: 1;
+  }
+
+  .field--name-field-subfeature-2-1 > .field--item:nth-child(2) {
+    flex: none;
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+// TODO: Find a better way to target styles.
+.field--name-field-subfeature-link a[href$=".pdf"]:after {
+  color: $white !important; // TODO: Remove need for important tag.
+}
+
+// Subfeature group with news
+.field--name-field-twocol-subfeature-ref div.field--item .paragraph--type--view {
+  height: 100%;
+
+  div.view-header,
+  div.view-footer {
+    height: auto;
+  }
+
+  div.view {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.view-content {
+    flex: 1;
+
+    div.views-row {
+      height: auto;
+    }
+  }
+}
+
+.paragraph--type--subfeatures-group {
+  margin-bottom: 20px;
+}
+
+.no-image .field--name-field-subfeature-title {
+  @include aside-title;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.field--name-field-subfeature-two-image-ref img {
+  width: 100%;
+}
+
+.field--name-field-subfeature-ref > .field--item > .paragraph--type--external-rss {
+  margin-bottom: 0;
+}
+
+.homepage-w-full-width-feature .field--name-field-stacked-subfeature-ref {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 66% auto;
+  grid-template-rows: auto 1fr;
+
+  .field--item:nth-child(3) {
+    grid-row: 1 / span 2;
+    grid-column-start: 2;
+  }
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  .view-header {
+    color: $cwru-blue;
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 0 !important; // TODO: Remove need for important tag.
+    padding: 15px 10px 0 20px;
+  }
+
+  @media #{$small-max} {
+    display: block;
+
+    > .field--item {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+// Medicine Homepage
+// View Subfeature
+.med-hp-view {
+
+  .view-header {
+    margin-bottom: 10px;
+
+    + p {
+      flex-grow: 1px;
+      padding: 0 10px;
+    }
+  }
+
+  .hp-news-block {
+    border-bottom: 1px solid $lighter-gray;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    .article-date {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .article-summary {
+      font-size: 16px;
+    }
+  }
+}
+
+//Stacked Subfeatures
+.medicine-homepage .stacked-hp-group {
+  margin-top: 22px;
+}
+
+//Covid Subfeature
+.med-subfeature-title .field--name-field-subfeature-title {
+  background-color: $dark-gray;
+  color: $white;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.4;
+  min-height: 50px;
+  overflow-wrap: break-word;
+  padding: 11px 22px;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.med-subfeature-img .field--name-field-image {
+  border: none;
+}
+
+//MEM Homepage Subfeatures
+.mem-homepage-content .field--name-field-subfeature-ref {
+  margin-top: 0;
+}
+
+//Dental Vertical Subfeatures
+.dental.row.height-100 {
+
+  .dental-sf-img,
+  .dental-sf-text {
+
+    @media #{$phone-max} {
+      width: 100%;
+    }
+  }
+
+  .dental-sf-img {
+    margin-bottom: 20px;
+  }
+}
+
+//Parking Veritcal Subfeature 
+.parking-vertical-subfeature .field--name-field-vertical-subfeature-section {
+  display: block;
+}

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.thumbnail_image_style
+label: 'Thumbnail Image Style'
+targetEntityType: media
+cache: true

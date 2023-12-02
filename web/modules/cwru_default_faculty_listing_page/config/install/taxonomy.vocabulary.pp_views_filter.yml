@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Personal Profile Views Filter'
-vid: pp_views_filter
-description: 'Taxonomy for creating filtered views of personal profiles'
-weight: 0

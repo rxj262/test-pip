@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_two_column_930x500_
+label: 'Hero Two Column (930x500)'
+effects:
+  680e2e41-f12b-45df-b617-ff571fe1be20:
+    uuid: 680e2e41-f12b-45df-b617-ff571fe1be20
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 930
+      height: 500
+      crop_type: focal_point

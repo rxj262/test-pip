@@ -1,0 +1,82 @@
+body {
+	color: $blk;
+}
+.region-breadcrumbs {
+	display: none;
+}
+.main-container {
+	width: 100%;
+	padding: 0;
+	overflow: hidden;
+}
+.field--name-field-grad-programs-listing {
+	padding: 30px 30px;
+}
+
+h1.page-title, .hero-page-title-info {
+	//display:none;
+}
+
+.h2, h2 {
+	@media (max-width: $tiny)  {
+		font-size: 28px;
+	}
+}
+
+.button-link-blue {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	padding: 10px 16px;
+	line-height: 1.33333;
+	font-size: 20px;
+	transition: all .3s;
+	color: $white !important;
+	background-color: $link-blue;
+	border-color: $link-blue;
+	border: 2px solid transparent;
+	text-decoration: none !important;
+}
+.button-link-blue:hover {
+	background-color: $cwru-blue;
+	border-color: $link-blue !important;
+	text-decoration: none !important;
+}
+
+.region-content {
+	padding-bottom: 0;
+}
+
+.breadcrumb .fa {
+	font-size: 1em;
+}
+
+//Media Queries for Page Titles font sizes
+// @media only screen and (min-width: 1200px) {
+//   .hero-title-container .page-title-name.long-title-fix {
+//     font-size: 100px;
+//   }
+// }
+
+// @media only screen and (max-width: 1199px) {
+//   .hero-title-container .page-title-name.long-title-fix {
+//     font-size: 80px;
+//   }
+// }
+
+// @media only screen and (max-width: 991px) {
+//   .hero-title-container .page-title-name.long-title-fix {
+//     font-size: 60px;
+//     //padding: 20px;
+//     //margin-top: 80px;
+//   }
+// }
+
+// @media only screen and (max-width: 767px) {
+//   .hero-title-container .page-title-name.long-title-fix {
+//     font-size: 30px;
+//     //padding: 20px;
+//     //margin-top: 100px;
+//   }
+// }
