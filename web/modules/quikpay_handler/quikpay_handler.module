@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * @file
+ * Contains quikpay_handler.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\webform\Entity\WebformSubmission;
+
+/**
+ * Implements hook_help().
+ */
+function quikpay_handler_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the quikpay_handler module.
+    case 'help.page.quikpay_handler':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom handler for Quikpay webforms') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function quikpay_handler_theme($existing, $type, $theme, $path) {
+  return [
+    'quikpay_confirmation' => [
+      'variables' => ['payment_var' => NULL],
+    ],
+    'quikpay_confirmation_session_expire' => [
+    ],
+  ];
+}
+
+
+/**
+ * Implements hook_cron().
+ */
+/**
+function quikpay_handler_cron() {
+  $slogan = \Drupal::service('config.factory')->getEditable('system.site')->get('slogan');
+  if ( is_numeric($slogan) ) {
+    $slogan = $slogan + 1;
+    \Drupal::service('config.factory')->getEditable('system.site')->set('slogan', $slogan)->save();
+  }
+
+
+  $webform_id = 'transcript_and_mspe_request_form';
+
+  $submission_ids = \Drupal::service('database')
+    ->select('webform_submission_data', 'wsd')
+    ->fields('wsd', ['sid'])
+    ->condition('wsd.webform_id', $webform_id)
+    ->condition('wsd.name', 'transaction_id')
+    ->condition('wsd.value', '')
+    ->execute()
+    ->fetchAllAssoc('sid');
+
+
+  foreach ($submission_ids as $key => $sid) {
+
+
+    WebformSubmission::load($sid)->delete();
+  }
+}
+ */

@@ -1,0 +1,4 @@
+bundle: cwru_default
+excluded:
+  - image.style.alternating_subfeature
+required: true

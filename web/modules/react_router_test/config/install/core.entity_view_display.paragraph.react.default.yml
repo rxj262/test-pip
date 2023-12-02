@@ -1,0 +1,23 @@
+uuid: e9a7a2b5-cc27-4dce-aedd-45534370bcf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.react.field_root_id
+    - paragraphs.paragraphs_type.react
+_core:
+  default_config_hash: pwprhAPxgTvPiWMOgV4QRKHQEI0gUXr1l6nrq44ffHQ
+id: paragraph.react.default
+targetEntityType: paragraph
+bundle: react
+mode: default
+content:
+  field_root_id:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_external_rss_button
+    - paragraphs.paragraphs_type.external_rss
+  module:
+    - link
+id: paragraph.external_rss.field_external_rss_button
+field_name: field_external_rss_button
+entity_type: paragraph
+bundle: external_rss
+label: 'Read More'
+description: 'You need to define a button which displays below the feeds. You can customize both link URL and text. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

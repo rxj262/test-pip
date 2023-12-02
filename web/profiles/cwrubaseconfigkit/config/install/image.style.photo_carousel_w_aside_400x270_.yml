@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: photo_carousel_w_aside_400x270_
+label: 'Photo Carousel w/ Aside (400x270)'
+effects:
+  e95d740d-3296-40c7-9273-04256d7573fd:
+    uuid: e95d740d-3296-40c7-9273-04256d7573fd
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 270
+      crop_type: focal_point

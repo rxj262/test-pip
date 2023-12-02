@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *
+ * @ingroup templates
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+
+
+{{ menus.title_link(items) }}
+{% macro title_link(items)%}
+{% import _self as menus %}
+
+<ul class="page-sidebar-menu" role="menubar">
+    {% if items %}
+        {% for item in items %}
+                    <li class="nav-item"><a class='nav-link' href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+    {% endif %}
+</ul>
+{% endmacro %}
+
+{% macro menu_links(items, menu_level) %}
+{% import _self as menus %}
+    {% if items %}
+        {% for item in items %}
+            {% set item_classes = [
+              'nav-item',
+              item.in_active_trail and menu_level == 0 ? 'active',
+              item.in_active_trail ? 'open',
+            ] %}
+            <li{{ item.attributes.addClass(item_classes) }} role="menuitem">
+                {{ link(item.title, item.url, { 'class':['nav-link'] } ) }}
+                {% if item.below and item.in_active_trail %}
+                    <ul class="sub-menu">
+                        {{ menus.menu_links(item.below, menu_level +1) }}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    {% endif %}
+{% endmacro %}

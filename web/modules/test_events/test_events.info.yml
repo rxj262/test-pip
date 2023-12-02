@@ -1,0 +1,7 @@
+type: module
+name: Testing JS Component to Get Events
+description: First test POPC for JS Component.
+package: JS Component
+dependencies:
+  - js_component
+core_version_requirement: '>=9'

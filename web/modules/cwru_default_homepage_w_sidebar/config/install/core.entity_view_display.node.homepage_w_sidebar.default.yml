@@ -1,0 +1,69 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage_w_sidebar.field_hero_twocol_ref
+    - field.field.node.homepage_w_sidebar.field_meta_tags
+    - field.field.node.homepage_w_sidebar.field_twocol_sidebar_ref
+    - field.field.node.homepage_w_sidebar.field_twocol_subfeature_ref
+    - node.type.homepage_w_sidebar
+  module:
+    - entity_reference_revisions
+    - slick_paragraphs
+    - user
+id: node.homepage_w_sidebar.default
+targetEntityType: node
+bundle: homepage_w_sidebar
+mode: default
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_hero_twocol_ref:
+    type: slick_paragraphs_vanilla
+    weight: 0
+    label: hidden
+    settings:
+      optionset: cwru_slideshow
+      skin: ''
+      view_mode: default
+      cache: 0
+      current_view_mode: default
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      style: ''
+    third_party_settings: {  }
+    region: content
+  field_twocol_sidebar_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_twocol_subfeature_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_meta_tags: true
+  links: true

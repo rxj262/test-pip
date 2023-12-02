@@ -1,0 +1,8 @@
+name: 'Drupal Site'
+description: 'Provides Drupal Site taxonomy vocabulary and related configuration. Active Drupal Sites'
+type: module
+dependencies:
+  - taxonomy
+package: 'CWRU Default'
+version: '1.01'
+core_version_requirement: '>=9'

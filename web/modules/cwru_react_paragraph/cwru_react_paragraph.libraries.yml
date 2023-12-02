@@ -1,0 +1,32 @@
+global:
+  version: 1.x
+  css:
+    theme:
+      css/styles.css: {}
+      css/wsom.css: {}
+      css/law.css: {}
+app1:
+  version: 1.x
+  js:
+    js/react/app1/dist/app.bundle.js: { minified: true }
+app2:
+  version: 1.x
+  js:
+    js/react/app2/dist/app.bundle.js: { minified: true }
+course-description:
+  version: 1.x
+  js:
+    js/react/courseDescript/dist/app.bundle.js: { minified: true }
+student-resumes:
+  version: 1.x
+  js:
+    js/react/studentResumes/dist/app.bundle.js: { minified: true }
+research-by-topic-department:
+  version: 1.x
+  js:
+    js/react/research-by-topic-department/dist/app.bundle.js: { minified: true }
+law-library-calendar-main:
+  version: 1.x
+  js:
+    js/react/law-library-calendar-main/dist/app.bundle.js: { minified: true }
+

@@ -1,0 +1,49 @@
+#block-sectionnavigation {
+	background-color: $white;
+	margin: 0 calc(50% - 50vw);
+	font-family: $arizona-bold;
+	.section-nav {
+		float: none;
+		@media #{$smallx-max} {
+	    	padding-bottom: 1.3em;
+	    	padding-top: 0.5em;
+	    }
+		.section-nav-title {
+			font-size: 1.5em;
+			padding-left: 1.5em;
+			margin-top: 0.4em;
+			@media #{$small-max} {
+				padding-left: 0;
+				margin-top: 0.7em;
+			}
+		}	
+		.section-nav-title::before {
+			@media #{$small-max} {
+				margin-right: 10px;
+				position: relative;
+				top: 0.25em;
+			}
+		}
+		.section-nav-links {
+			display: flex;
+			flex-wrap: wrap;
+			padding-left: 2.3em;
+			padding-top: 1em;
+			@media #{$small-max} {
+				display: block;
+				padding-left: 0;
+			}
+			li {
+				margin-right: 2em;
+				margin-bottom: .5em;
+				@media #{$small-max} {
+					margin-bottom: 1em;
+				}
+				a:hover {
+					color: $cwru-blue;
+					background-color: none;
+				}
+			}
+		}
+	}	
+}

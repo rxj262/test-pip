@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+function crew_admission_preprocess_page(&$variables) {
+  // remove index.php from the request url
+  $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+  $request = $request->server->all();
+  if (!empty($request['SCRIPT_URI'])) {
+    $request = $request['SCRIPT_URI'];
+    if (!empty($request) && strpos($request, '/index.php')) {
+      $response_url = str_replace('/index.php', '', $request);
+      $response = new \Symfony\Component\HttpFoundation\RedirectResponse($response_url, 301);
+      $response->send();
+      return;
+    }
+  }
+
+  if (isset($variables['node']) && is_object($variables['node'])) {
+    $node_array = $variables['node']->toArray();
+    if ($variables['logged_in'] === FALSE) {
+      $public_no_access = array('content_reference', 'aside_reference', 'webform', 'site_information');
+      if(in_array($node_array['type'][0]['target_id'], $public_no_access)) {
+        throw new \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException();
+      }
+    }
+  }
+}

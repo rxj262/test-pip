@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.titleandaffiliationjobtitleanddepartmentofficeonly
+    - field.field.paragraph.job_title_affiliation.field_biography_center_ref
+    - field.field.paragraph.job_title_affiliation.field_biography_dept_ref
+    - field.field.paragraph.job_title_affiliation.field_biography_school_ref
+    - field.field.paragraph.job_title_affiliation.field_job_title_ref
+    - paragraphs.paragraphs_type.job_title_affiliation
+id: paragraph.job_title_affiliation.titleandaffiliationjobtitleanddepartmentofficeonly
+targetEntityType: paragraph
+bundle: job_title_affiliation
+mode: titleandaffiliationjobtitleanddepartmentofficeonly
+content:
+  field_biography_dept_ref:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_job_title_ref:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_biography_center_ref: true
+  field_biography_school_ref: true

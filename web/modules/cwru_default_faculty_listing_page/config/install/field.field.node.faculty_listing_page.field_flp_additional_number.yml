@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_flp_additional_number
+    - node.type.faculty_listing_page
+  module:
+    - telephone
+id: node.faculty_listing_page.field_flp_additional_number
+field_name: field_flp_additional_number
+entity_type: node
+bundle: faculty_listing_page
+label: 'Additional Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

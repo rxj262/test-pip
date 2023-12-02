@@ -1,0 +1,39 @@
+<?php
+
+/**
+ *
+ * Place your custom PHP code in this file.
+ */
+
+use Drupal\Core\Render\Element;
+
+function crew_law_preprocess_field_group_html_element(&$variables) {
+  $element = [];
+  $children = Element::children($element);
+  if (!empty($children)) {
+    foreach ($children as $key => $child) {
+      $title_child = $variables['element'][$child]['#title'];
+      $val_child = $variables['element'][$child]['#object']->get($child)
+        ->getValue();
+      $variables[$child]['label'] = $title_child;
+      $variables[$child]['value'] = current($val_child[0]);
+    }
+  }
+}
+
+
+function crew_law_preprocess_page(&$variables) {
+  if (isset($variables['node']) && is_object($variables['node'])) {
+    $node_array = $variables['node']->toArray();
+    if ($variables['logged_in'] === FALSE) {
+      $public_no_access = [
+        'faculty_in_the_news',
+        'lw_top_10',
+        'adjunct_faculty'
+      ];
+      if (in_array($node_array['type'][0]['target_id'], $public_no_access)) {
+        throw new \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException();
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains umc_media_experts.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Database\Query\AlterableInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+
+/**
+ * Implements hook_help().
+ */
+function umc_media_experts_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the umc_media_experts module.
+    case 'help.page.umc_media_experts':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('removes duplicated bios from umc site') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function umc_media_experts_theme() {
+  return [
+    'umc_media_experts' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+
+function umc_media_experts_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+ if ($view->id() == 'bef_me') {
+    $query->addField('', 'nid', '', ['function' => 'groupby']);
+    $query->addGroupBy('nid');
+  }
+}
+
+/**
+ * Implements hook_js_alter().
+ */
+function umc_media_experts_js_alter(&$javascript, \Drupal\Core\Asset\AttachedAssetsInterface $assets) {
+
+  // Swap out jQuery to use an updated version of the library.
+//  $javascript['core/misc/autocomplete.js']['data'] = \Drupal::service('extension.list.module')->getPath('umc_media_experts') . '/js/autocomplete.js';
+}

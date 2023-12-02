@@ -1,0 +1,23 @@
+utility.admin:
+  path: '/admin/config/utility'
+  defaults:
+    _controller: 'Drupal\utility\Controller\UtilityController::adminpage'
+    _title: 'Administer Utility'
+  requirements:
+    _permission: 'administer utility'
+
+utility.admin.list_user:
+  path: '/admin/config/utility/list_user'
+  defaults:
+    _form: 'Drupal\utility\Form\ListUserForm'
+    _title: 'List User Form Title'
+  requirements:
+    _permission: 'administer utility'
+
+utility.admin.add_user:
+  path: '/admin/config/utility/add_user'
+  defaults:
+    _form: 'Drupal\utility\Form\AddUserForm'
+    _title: 'Add User Form Title'
+  requirements:
+    _permission: 'administer utility'

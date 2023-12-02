@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_root_id
+    - paragraphs.paragraphs_type.react
+id: paragraph.react.field_root_id
+field_name: field_root_id
+entity_type: paragraph
+bundle: react
+label: 'Root ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

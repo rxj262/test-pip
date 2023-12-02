@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ext_prof_office_building
+    - node.type.external_profile
+id: node.external_profile.field_ext_prof_office_building
+field_name: field_ext_prof_office_building
+entity_type: node
+bundle: external_profile
+label: 'Office Building'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

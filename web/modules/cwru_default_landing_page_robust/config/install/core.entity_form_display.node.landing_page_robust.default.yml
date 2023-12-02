@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page_robust.field_landing_all_options_ref
+    - node.type.landing_page_robust
+  module:
+    - paragraphs
+id: node.landing_page_robust.default
+targetEntityType: node
+bundle: landing_page_robust
+mode: default
+content:
+  field_landing_all_options_ref:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  status: true
+  url_redirects: true
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

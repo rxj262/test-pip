@@ -1,0 +1,9 @@
+name: 'Twitter Embed'
+description: 'CWRU twitter embed'
+type: module
+dependencies:
+  - field
+  - paragraphs
+version: '1.01'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

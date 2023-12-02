@@ -1,0 +1,4 @@
+bundle: cwru_default
+excluded:
+  - image.style.large
+required: true

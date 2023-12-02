@@ -1,0 +1,21 @@
+@media (min-width: 767px) {
+    .vertical-align {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: row;
+    }
+    .vertical-align .vertical-align-column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .vertical-align .vertical-align-column .vertical-align-inner {
+        /* flex: 1; */
+        flex-grow: 1;
+    }
+    html[data-useragent*='Trident'] .vertical-align > .vertical-align-inner {
+        display: table-cell !important;
+    }
+}

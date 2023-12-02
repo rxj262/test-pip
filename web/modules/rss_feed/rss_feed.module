@@ -1,0 +1,439 @@
+<?php
+
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+use Drupal\Core\Menu;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\Core\Menu\MenuActiveTrail;
+use Drupal\Core\Menu\MenuActiveTrailInterface;
+use Drupal\Core\Menu\MenuLinkManagerInterface;
+
+/**
+ * Implements hook_preprocess_PARAGRAPH_TYPE().
+ */
+function rss_feed_preprocess_paragraph__external_rss(&$variables)
+{
+  $gcal_cardinality = $variables['paragraph']->getFieldDefinition('field_external_rss_gcal')->getFieldStorageDefinition()->getCardinality();
+  $type = $variables['paragraph']->field_external_rss_type->value;
+  $is_sidebar_content = _is_sidebar_content($variables);
+  $variables['content']['is_sidebar_content'] = $is_sidebar_content;
+
+  if ($type == 'gcal' and $gcal_cardinality > 1) {
+    $gcal_api_key = "AIzaSyArICltZFp7IhsGpJDBCtY3L1sHsWIpcp4";
+    $date = new \DateTime('today');
+    $today = $date->format(\DateTime::RFC3339);
+    $next_four_weeks = $date->modify('+4 weeks')->format(\DateTime::RFC3339);
+    $cids = $variables['paragraph']->get('field_external_rss_gcal')->getValue();
+    $amount_to_display = $variables['paragraph']->get('field_external_rss_items_to_disp')->value;
+    $events = array();
+    // define events parameters to filter by
+    // @TODO make the following configurable by user
+    $timeMin = $now;
+
+    foreach ($cids as $cid) {
+      $cid = $cid['value'];
+      $event = json_decode(file_get_contents("https://www.googleapis.com/calendar/v3/calendars/$cid/events?key=$gcal_api_key&singleEvents=True&timeMin=$today&timeMax=$next_four_weeks"), true);
+      $events = array_merge($event['items'], $events);
+    }
+
+    // sort events by start dateTime value, ascending order
+    usort($events, function ($a, $b) {
+      return $a['start']['dateTime'] <=> $b['start']['dateTime'];
+    });
+
+    $feed_vars = ['events' => $events, 'items_to_display' => $amount_to_display];
+
+
+    // array_filter to filter out old events
+    $build = [
+      '#theme' => 'rss_feed_multi_gcal',
+      '#vars' => $feed_vars,
+      '#cache' => [
+        'max-age' => 3600,
+      ]
+    ];
+    $variables['content']['rss'] = $build;
+  }
+
+  if (isset($variables['elements']['field_external_rss_type']['#items']) && $variables['elements']['field_external_rss_type']['#items']->value != 'rawrss' && empty($variables['elements']['field_external_rss_news_type']['#items']->value) or (!empty($variables['elements']['field_external_rss_news_type']['#items']->value) && $variables['elements']['field_external_rss_news_type']['#items']->value != 'news') && in_array($variables['elements']['field_external_rss_type']['#items']->value, array('daily', 'mailchimp', 'learningstream', 'd8', 'tb_cg'))) {
+    if (isset($variables['elements']['field_external_rss_sources']['#items'])) {
+      $paragraph_id = $variables['elements']['#paragraph']->id();
+
+      $cid = 'rss_feed:pid:' . $paragraph_id;
+
+      $db_feeds = NULL;
+
+      if ($cache = \Drupal::cache()->get($cid)) {
+        $db_feeds = $cache->data;
+      } else {
+        $rss_sources_count = $variables['elements']['field_external_rss_sources']['#items']->count();
+        $rss_source = $variables['elements']['field_external_rss_sources'];
+        $rss_url = array(); //TODO detect multiple rss source types (mailchimp/GoogleCal/Wordpress etc... and customize $data for comparison)
+        $data = array(); // should hold info of each individual feed, ready for sorting (DESC by timestamp, LIMIT 10).
+        // combine feeds into one array
+        for ($i = 0; $i < $rss_sources_count; $i++) {
+          $rss_url[$i] = $rss_source[$i]['#url']->getUri();
+          $feeds[$i] = simplexml_load_file($rss_url[$i]);
+          if (!empty($feeds[$i]->channel->generator) && $rss_sources_count > 1) {
+            if ($feeds[$i]->channel->generator == 'http://www.campusgroups.com') {
+              $feed_arr['campusgroups_specialhandling'] = 'ISO-8859-1';
+            }
+          }
+
+          $feed = $feeds[$i]->channel->item;
+          foreach ($feed as $item) {
+            $data[] = $item;
+          }
+        }
+        // sbdd = sort by date -- dscending order
+
+        function sbdd($a, $b)
+        {
+          return -1 * strcmp(strtotime($a->pubDate), strtotime($b->pubDate));
+        }
+        // sbda = sort by date -- ascending order
+        function sbda($a, $b)
+        {
+          return 1 * strcmp(strtotime($a->pubDate), strtotime($b->pubDate));
+        }
+
+        // Use feed order instead of re-ordering them since some events are created in a batch so they have identical timestamp.
+        //        if($variables['elements']['field_external_rss_type']['#items']->value != 'learningstream') {
+        //          usort($data, "sbdd");
+        //        }else {
+        //          usort($data, "sbda");
+        //        }
+
+        if ($variables['elements']['field_external_rss_type']['#items']->value == 'learningstream') {
+          usort($data, "sbda");
+        }
+
+        // save it to $feed_arr, ready for cache()->set
+        for ($i = 0; $i < count($data); $i++) {
+          $feed_arr[$i]['title'] = $data[$i]->title->__toString();
+          $feed_arr[$i]['link'] = $data[$i]->link->__toString();
+          $feed_arr[$i]['timestamp'] = strtotime($data[$i]->pubDate);
+          $feed_arr[$i]['year'] = date("o", $feed_arr[$i]['timestamp']);
+          $feed_arr[$i]['month'] = date("M", $feed_arr[$i]['timestamp']);
+          $feed_arr[$i]['day'] = date("d", $feed_arr[$i]['timestamp']);
+          if (property_exists($data[$i], 'description')) {
+            $feed_arr[$i]['description'] = $data[$i]->description->__toString();
+          }
+          // below is for CampusGroups Events because it has separate event date than regular pubDate
+          if ($data[$i]->eventDate) {
+            $feed_arr[$i]['eventdate'] = strtotime($data[$i]->eventDate);
+            $feed_arr[$i]['eventmonth'] = date("M", $feed_arr[$i]['eventdate']);
+            $feed_arr[$i]['eventday'] = date("d", $feed_arr[$i]['eventdate']);
+            $feed_arr[$i]['eventtime'] = date("g:i a", strtotime($data[$i]->eventTime));
+            if ($data[$i]->eventType) {
+              $feed_arr[$i]['eventtype'] = $data[$i]->eventType->__toString();
+            }
+            if ($data[$i]->groupName) {
+              $feed_arr[$i]['groupname'] = $data[$i]->groupName->__toString();
+            }
+          }
+          if (property_exists($data[$i], 'eventEndDate')) {
+            $feed_arr[$i]['eventtodate'] = strtotime($data[$i]->eventEndDate);
+            $feed_arr[$i]['eventtomonth'] = date("M", strtotime($feed_arr[$i]['eventtodate']));
+            $feed_arr[$i]['eventtoday'] = date("d", strtotime($feed_arr[$i]['eventtodate']));
+            $feed_arr[$i]['eventtotime'] = date("g:i a", strtotime($data[$i]->eventEndTime));
+          }
+        }
+        $expiration = (new DateTime())->getTimestamp() + 60 * 60; //Change feeds data to be cached for every hour.
+        $db_feeds = $feed_arr;
+        \Drupal::cache()->set($cid, $db_feeds, $expiration);
+      }
+
+      $variables['content']['rss'] = $db_feeds;
+    }
+  } elseif (!empty($variables['elements']['field_external_rss_news_type']['#items']->value) && $variables['elements']['field_external_rss_news_type']['#items']->value == 'news') {
+    $rss_sources_count = $variables['elements']['field_external_rss_sources']['#items']->count();
+    $rss_source = $variables['elements']['field_external_rss_sources'];
+    $rss_url = array(); //TODO detect multiple rss source types (mailchimp/GoogleCal/Wordpress etc... and customize $data for comparison)
+    $data = array(); // should hold info of each individual feed, ready for sorting (DESC by timestamp, LIMIT 10).
+    // combine feeds into one array
+    for ($i = 0; $i < $rss_sources_count; $i++) {
+      $rss_url[$i] = $rss_source[$i]['#url']->getUri();
+      $feeds[$i] = simplexml_load_file($rss_url[$i]);
+      $feed = $feeds[$i]->channel->item;
+      foreach ($feed as $item) {
+        $data[] = $item;
+      }
+    }
+
+    // 3 feeds simplexml
+    $feed_arr = array();
+
+    /**
+     * individual feed display options:
+     * 1. title with link and date below it, see NIMC site.
+     * 2. tile with link, and date as icon on the left, with event descriptions below the title, see /events page under StudentLife site.
+     * 3. this also deals with different XML resource too.
+     */
+    if ($variables['elements']['field_external_rss_type']['#items']->value == 'cg') {
+      for ($i = 0; $i < count($data); $i++) {
+        $link = $data[$i]->link;
+        $title = $data[$i]->title->__toString();
+        $link = Url::fromUri($link);
+        $excerpt = $data[$i]->description;
+        $date = $data[$i]->eventDate;
+        $month = date("M", strtotime($date));
+        $day = date("d", strtotime($date));
+        $excerpt = _truncate($excerpt, '190'); // custom truncate function
+        $feed_arr[$i] = [
+          '#type' => 'inline_template',
+          '#template' => "<div><div class='feed-item-daterange feed-me'>
+            <span class='month'>{{ month }}</span>
+            <span class='day'>{{ day }}</span>
+            </div></div>
+            <div>
+            <h2 class='font-medium'><a href={{ link }}>{{ title }}</a></h2>
+            <p>{{ excerpt|raw }}</p>
+            </div>",
+          '#context' => [
+            'month' => $month,
+            'day' => $day,
+            'link' => $link->toString(),
+            'title' => $title,
+            'excerpt' => htmlspecialchars($excerpt),
+          ],
+          '#wrapper_attributes' => ['class' => 'feed-item-block flex'],
+        ];
+      }
+    } else { // this is the NIMC senario, RSS feed source generated by Drupal view
+      for ($i = 0; $i < count($data); $i++) {
+        $link = $data[$i]->link;
+        $title = $data[$i]->title->__toString();
+        $link = Url::fromUri($link);
+        $time = $data[$i]->pubDate;
+        $feed_arr[$i] = [
+          '#markup' => new \Drupal\Component\Render\FormattableMarkup('<h2 class="font-medium"><a href="@url">' . $title . '</a></h2><div>' . $time . '</div>', ['@url' => $link->toString()]),
+          '#wrapper_attributes' => ['class' => 'media'],
+        ];
+      }
+    }
+
+    $item_per_page = 25;
+
+    $pager_manager = \Drupal::service('pager.manager');
+
+    $current_page = $pager_manager->createPager(count($feed_arr), $item_per_page)->getCurrentPage();
+
+    $chunks = array_chunk($feed_arr, $item_per_page, TRUE);
+
+    $render = [];
+    $render[] = [
+      '#theme' => 'item_list',
+      '#list_type' => 'ul',
+      '#items' => $chunks[$current_page],
+      '#attributes' => ['class' => 'mv-20 media-list'],
+    ];
+    $render[] = ['#type' => 'pager'];
+    $variables['content']['rss'] = $render;
+  }
+  if (!empty($variables['elements']['field_external_rss_type']['#items']->value) && $variables['elements']['field_external_rss_type']['#items']->value == 'rawrss') {
+
+    $rawrss_url = $variables['elements']['field_external_rss_sources'][0]['#title'];
+    $encoded_rasrss_url = rawurlencode($rawrss_url);
+    // only use api key on requests > 10 items. otherwise, don't use our daily api quota
+    // if ($variables['elements']['field_external_rss_items_to_disp'][0]['#markup'] > 10) {
+    //   $parser = "https://api.rss2json.com/v1/api.json?api_key=rtu7vqylyde7z4tjhe4o0zp1f1rw6mq6j1ylkv6b&order_dir=desc&count=20&rss_url=";
+    // } else {
+    //   $parser = "https://api.rss2json.com/v1/api.json?rss_url=";
+    // }
+    $parser = "https://api.rss2json.com/v1/api.json?rss_url=";
+    $object_url = $parser . $encoded_rasrss_url;
+    $object = file_get_contents($object_url);
+    $data = json_decode($object);
+    $data = $data->items;
+    $feed_arr = array();
+    for ($i = 0; $i < count($data); $i++) {
+      $title = preg_match('/(.*)\s\(([a-zA-Z]{0,9}),\s((\w+)\s(\d+)\w+\s(\d{4})),\s(.*)\)/', $data[$i]->title, $matches);
+      if ($title == 0) {
+        $feed_arr[$i]['title'] = $data[$i]->title;
+        $feed_arr[$i]['timestamp'] = strtotime($data[$i]->pubDate);
+        $feed_arr[$i]['month'] = date("M", $feed_arr[$i]['timestamp']);
+        $feed_arr[$i]['day'] = date("d", $feed_arr[$i]['timestamp']);
+      } else {
+        $datetime = DateTime::createFromFormat('F jS Y', $matches[3]);
+        $feed_arr[$i]['title'] = html_entity_decode($matches[1]);
+        $feed_arr[$i]['month'] = $datetime->format('M');
+        $feed_arr[$i]['day'] =  $datetime->format('d');
+      }
+      $feed_arr[$i]['link'] = $data[$i]->link;
+    }
+    $variables['content']['rss'] = $feed_arr;
+  }
+
+  if (!empty($variables['elements']['field_external_rss_type']['#items']->value) && $variables['elements']['field_external_rss_type']['#items']->value == 'rawrssjobs') {
+
+    $rawrss_url = $variables['elements']['field_external_rss_sources'][0]['#title'];
+    $encoded_rasrss_url = rawurlencode($rawrss_url);
+    // only use api key on requests > 10 items. otherwise, don't use our daily api quota
+    // if ($variables['elements']['field_external_rss_items_to_disp'][0]['#markup'] > 10) {
+    //   $parser = "https://api.rss2json.com/v1/api.json?api_key=rtu7vqylyde7z4tjhe4o0zp1f1rw6mq6j1ylkv6b&order_dir=desc&count=20&rss_url=";
+    // } else {
+    //   $parser = "https://api.rss2json.com/v1/api.json?rss_url=";
+    // }
+    $parser = "https://api.rss2json.com/v1/api.json?rss_url=";
+    $object_url = $parser . $encoded_rasrss_url;
+    $object = file_get_contents($object_url);
+    $data = json_decode($object);
+    $data = $data->items;
+    $feed_arr = array();
+    for ($i = 0; $i < count($data); $i++) {
+      $title = preg_match('/(.*)\s\(([a-zA-Z]{0,9}),\s((\w+)\s(\d+)\w+\s(\d{4})),\s(.*)\)/', $data[$i]->title, $matches);
+      // custom regex to match "Expires: " date in description from Handshake feed for /postgrad
+      $date = preg_match('/Expires: (\d+\/\d+\/\d+)/', $data[$i]->description, $date_matches);
+      if ($title == 0) {
+        $feed_arr[$i]['title'] = $data[$i]->title;
+        $feed_arr[$i]['timestamp'] = strtotime($data[$i]->pubDate);
+        $expireDate = strtotime($date_matches[1]);
+        $feed_arr[$i]['month'] = date("M", $expireDate);
+        $feed_arr[$i]['day'] = date("d", $expireDate);
+      } else {
+        $datetime = DateTime::createFromFormat('F jS Y', $matches[3]);
+        $feed_arr[$i]['title'] = html_entity_decode($matches[1]);
+        $feed_arr[$i]['month'] = $datetime->format('M');
+        $feed_arr[$i]['day'] =  $datetime->format('d');
+      }
+      $feed_arr[$i]['link'] = $data[$i]->link;
+    }
+    $variables['content']['rss'] = $feed_arr;
+  }
+
+  if (!empty($variables['elements']['field_external_rss_news_type']['#items']->value) && $variables['elements']['field_external_rss_news_type']['#items']->value == 'full_news') {
+    $url = $variables['elements']['field_external_rss_sources'][0]['#url']->getUri();
+    $remote_data = simplexml_load_file($url);
+    $items = $remote_data->channel->item;
+    $feed = array();
+    foreach ($items as $item) {
+      $feed[] = $item;
+    }
+    $feed_vars = array();
+    for ($i = 0; $i < count($feed); $i++) {
+      $feed_vars[$i]['title'] = $feed[$i]->title->__toString();
+      $feed_vars[$i]['link'] = $feed[$i]->link->__toString();
+      $feed_vars[$i]['pubDate'] = $feed[$i]->pubDate->__toString();
+      preg_match('/([\w\W]+)(<img.*?src="(.*?)" (.*?) alt="(.*?)"[^\>]+>)([\w\W]+)<\/p>$/', $feed[$i]->description->__toString(), $matches);
+      $feed_vars[$i]['description']['image_src'] = $matches[3];
+      $feed_vars[$i]['description']['image_alt'] = $matches[5];
+      $feed_vars[$i]['description']['text'] = $matches[6];
+    }
+    $feed_vars['user_display_limit'] = $variables['elements']['field_external_rss_items_to_disp'][0]['#markup'];
+    $feed_vars['read_more']['title'] = $variables['elements']['field_external_rss_button'][0]['#title'];
+    $feed_vars['read_more']['link'] = $variables['elements']['field_external_rss_button'][0]['#url_title'];
+    $build = [
+      '#theme' => 'rss_feed_full_news',
+      '#vars' => $feed_vars,
+      '#cache' => [
+        'max-age' => 3600,
+      ]
+    ];
+    $variables['content']['rss'] = $build;
+  }
+
+  if (!empty($variables['elements']['field_external_rss_news_type']['#items']->value) && $variables['elements']['field_external_rss_news_type']['#items']->value == 'mixed') {
+    $parent_field = $variables['paragraph']->parent_field_name->first()->value;
+    $feed_source = $variables['paragraph']->field_external_rss_sources->getValue()[0]['uri'];
+    $display_limit = $variables['paragraph']->field_external_rss_items_to_disp->value;
+    $feed_type = $variables['paragraph']->field_external_rss_type->value;
+    $data_arr = simplexml_load_file($feed_source);
+    $type = '';
+    if (strpos($data_arr->channel->title->__toString(), 'events') !== FALSE) {
+      $type = 'events';
+    } else {
+      $type = 'news';
+    }
+    $data_arr = $data_arr->channel->item;
+    $data = array();
+    $data['type'] = $type;
+    foreach ($data_arr as $key => $item) {
+      $data['feeds'][] = $item;
+    }
+    $feed_arr = array();
+    if ($data['type'] == 'news') {
+      foreach ($data['feeds'] as $key => $item) {
+        $feed_arr[$key]['title'] = $item->title->__toString();
+        $feed_arr[$key]['link'] = $item->link->__toString();
+        $timestamp = $item->pubDate->__toString();
+        $feed_arr[$key]['timestamp'] = $timestamp;
+        $feed_arr[$key]['month'] = date("M", strtotime($timestamp));
+        $feed_arr[$key]['day'] = date("d", strtotime($timestamp));
+        preg_match('/([\w\W]+)(<img.*?src="(.*?)" (.*?) alt="(.*?)"[^\>]+>)([\w\W]+)<\/p>$/', $item->description->__toString(), $matches);
+        $feed_arr[$key]['description']['image_src'] = $matches[3];
+        $feed_arr[$key]['description']['image_alt'] = $matches[5];
+        $feed_arr[$key]['description']['text'] = $matches[6];
+      }
+    } elseif ($data['type'] == 'events') {
+      foreach ($data['feeds'] as $key => $item) {
+        if (isset($item->startTime)) {
+          $feed_arr[$key]['title'] = $item->title->__toString();
+          $feed_arr[$key]['link'] = $item->link->__toString();
+          $timestamp = $item->startTime->__toString();
+          $feed_arr[$key]['timestamp'] = $timestamp;
+          $feed_arr[$key]['month'] = date("M", $timestamp);
+          $feed_arr[$key]['day'] = date("d", $timestamp);
+        }
+      }
+    }
+    // sort feed items by timestamp, newer -> older
+    usort($feed_arr, function ($a, $b) {
+      return strcmp($b['timestamp'], $a['timestamp']);
+    });
+
+    $build = [
+      '#theme' => 'rss_feed_mixed',
+      '#vars' => [
+        'feeds' => $feed_arr,
+        'display_limit' => $display_limit,
+        'parent_field' => $parent_field,
+        'type' => $type,
+      ],
+      '#cache' => [
+        'max-age' => 3600,
+      ]
+    ];
+
+    $variables['content']['rss'] = $build;
+  }
+}
+
+function _truncate($string, $length = 100, $append = '…')
+{
+  $string = trim($string);
+
+  if (strlen($string) > $length) {
+    $string = wordwrap($string, $length);
+    $string = explode("\n", $string, 2);
+    $string = $string[0] . $append;
+  }
+  return $string;
+}
+
+function _is_sidebar_content(array $variables): bool
+{
+  $parent_field_name = $variables['paragraph']->_referringItem->getParent()->getName();
+  $sidebar_machine_names = ['field_twocol_sidebar_ref', 'field_aside_ref', 'field_robust_3_page_right_ref'];
+  return in_array($parent_field_name, $sidebar_machine_names);
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function rss_feed_theme()
+{
+  return [
+    'rss_feed_full_news' => [
+      'variables' => array('vars' => NULL)
+    ],
+    'rss_feed_mixed' => [
+      'variables' => array('vars' => NULL)
+    ],
+    'rss_feed_multi_gcal' => [
+      'variables' => array('vars' => NULL)
+    ],
+  ];
+}

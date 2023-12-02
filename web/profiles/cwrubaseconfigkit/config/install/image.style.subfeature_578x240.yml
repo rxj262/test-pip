@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: subfeature_578x240
+label: 'Subfeature (578x240)'
+effects:
+  1c1e94e6-001f-476e-b955-2e69b7ae5a2e:
+    uuid: 1c1e94e6-001f-476e-b955-2e69b7ae5a2e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 578
+      height: 240
+      crop_type: focal_point

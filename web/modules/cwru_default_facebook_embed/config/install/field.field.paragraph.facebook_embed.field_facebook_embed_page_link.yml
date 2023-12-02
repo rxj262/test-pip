@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_facebook_embed_page_link
+    - paragraphs.paragraphs_type.facebook_embed
+  module:
+    - link
+id: paragraph.facebook_embed.field_facebook_embed_page_link
+field_name: field_facebook_embed_page_link
+entity_type: paragraph
+bundle: facebook_embed
+label: 'Facebook Embed Page Link'
+description: 'Absolute page link of the Facebook page you would like to embed (e.g. https://www.facebook.com/casewesternreserve)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

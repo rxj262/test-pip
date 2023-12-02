@@ -1,0 +1,144 @@
+// NEED TO REFACTOR
+.header--main {
+  font-size: 30px;
+  font-weight: 700;
+  color: $white;
+  &:after {
+    content: "";
+    display: block;
+    background-color: $lime;
+    width: 50px;
+    height: 5px;
+    margin: 5px 0 20px 0;
+  }
+  &--dark {
+    color: $off-black;
+  }
+}
+
+.intro-text {
+  margin: 20px 60px 40px 60px;
+  @include size(small) {
+    margin: 40px 10px;
+  }
+  &.align--Left {
+    margin: 20px 0;
+  }
+  .intro-text__header,
+  .field--name-field-uga-intro-title {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: $heading_font;
+    line-height: 1.3;
+    @include size(small) {
+      font-size: 32px;
+    }
+  }
+  .intro-text__content,
+  .field--name-field-uga-intro-content p {
+    font-size: 26px;
+    margin-bottom: 26px;
+    line-height: 1.4;
+    @include size(small) {
+      font-size: 22px;
+    }
+  }
+}
+
+.bulleted-ul {
+  margin-left: 18px;
+  .bulleted-li {
+    list-style: disc;
+  }
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.body--bold {
+  font-family: $arizona-bold;
+}
+.body--white {
+  color: $white;
+}
+.body--black {
+  color: $off-black;
+}
+.align--right {
+  text-align: right;
+}
+.align--center,
+.align--Centered {
+  text-align: center;
+}
+.align--left,
+.align--Left {
+  text-align: left;
+}
+.float--left {
+  float: left;
+}
+.float--right {
+  float: right;
+}
+.paragraph-margins > p {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+.margin--vertical {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.margin--vertical--25 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.margin--horizontal {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.background-color--gray {
+  background-color: $off-white;
+}
+.background-color--white {
+  background-color: $white;
+}
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include size(small) {
+    flex-direction: column;
+  }
+  &:after {
+    content: "";
+    width: 32%;
+  }
+}
+.screen--black {
+  background-color: transparentize($off-black, 0.5);
+  padding: 40px;
+}
+
+.field--name-field-uga-landing-robust-ref {
+  .intro-text.align--Left {
+    margin: 0;
+  }
+  .field--name-field-uga-intro-content p {
+    margin: 0;
+  }
+  .paragraph--type--uga-stat-black-3col {
+    margin-top: 40px;
+  }
+}

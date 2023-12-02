@@ -1,0 +1,23 @@
+{{ attach_library('crew_thinkbox/imagecontent') }}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    (content.field_image_position_tb['0']['#markup'] == 'Left') ? 'fd-row' : 'fd-row-reverse'
+  ]
+%}
+{% set flex_class = content.field_image_position_tb['0']['#markup'] == 'Left' ? ['fd-row']:['fd-row-reverse'] %}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+    <div>
+      {{ content.field_content_image_tb }}
+    </div>
+    <div>
+      {{ content.group_te }}
+    </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

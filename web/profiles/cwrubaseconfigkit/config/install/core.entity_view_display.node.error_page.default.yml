@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.error_page.field_error_type
+    - node.type.error_page
+  module:
+    - options
+    - user
+id: node.error_page.default
+targetEntityType: node
+bundle: error_page
+mode: default
+content:
+  field_error_type:
+    type: list_default
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

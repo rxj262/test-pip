@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.msass_home_updated.field_hero_buttons
+    - field.field.node.msass_home_updated.field_image_slideshow
+    - field.field.node.msass_home_updated.field_meta_tags
+    - field.field.node.msass_home_updated.field_research_
+    - field.field.node.msass_home_updated.field_stat_group_section_title
+    - field.field.node.msass_home_updated.field_stats
+    - field.field.node.msass_home_updated.field_stats_more_button
+    - field.field.node.msass_home_updated.field_unequal_twho_column
+    - field.field.node.msass_home_updated.field_upcoming_events
+    - field.field.node.msass_home_updated.field_yoast_seo
+    - node.type.msass_home_updated
+  module:
+    - user
+id: node.msass_home_updated.teaser
+targetEntityType: node
+bundle: msass_home_updated
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_hero_buttons: true
+  field_image_slideshow: true
+  field_meta_tags: true
+  field_research_: true
+  field_stat_group_section_title: true
+  field_stats: true
+  field_stats_more_button: true
+  field_unequal_twho_column: true
+  field_upcoming_events: true
+  field_yoast_seo: true

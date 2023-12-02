@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: twitter_embed
+label: 'Twitter Embed'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

@@ -1,0 +1,43 @@
+<div class="footer__block footer__block--department mr-20">
+  <img src="https://dudbm6bcnmy8e.cloudfront.net/cwru-drupal-assets/images/pin-icon.svg" alt="map marker" class="footer__map-icon hidden-sm hidden-xs">
+  <div class="footer__department-info">
+    <div class="footer__header h3">{{ site_name }}</div>
+    {% if content.field_phone %}
+      <div>
+        <strong>Phone:</strong> <a href="{{ content.field_phone[0]['#url'].uri }}">{{ content.field_phone[0]['#title'] }}</a>
+      </div>
+    {% endif %}
+
+    {% if content.field_additional_emails %}
+        {% for item in content.field_additional_emails['#items'] %}
+            <div>
+                <strong>{{item.title}}:</strong> <a href="{{item.uri}}">{{item.uri|replace({'mailto:':''})}}</a>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if content.field_email %}
+      {% if content.field_email[0]['#context'].value %}
+        <div>
+            <strong>Email:</strong> <a href="mailto:{{ content.field_email[0]['#context'].value }}">{{ content.field_email[0]['#context'].value }}</a>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if content.field_site_url_secondary %}
+      <div>
+          <a href="{{ content.field_site_url_secondary[0]['#url'] }}">{{ content.field_site_url_secondary[0]['#title'] }}</a>
+      </div>
+    {% endif %}
+
+    {% if content.field_site_feedback_secondary %}
+      <div class="mb-20">
+        <a href="{{ content.field_site_feedback_secondary[0]['#url'].uri }}">Site Feedback</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% if content.field_address_block %}
+    {{ content.field_address_block }}
+{% endif %}

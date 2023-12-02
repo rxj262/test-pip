@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stacked_button_wrapper.field_stacked_button_wrapper
+    - field.field.paragraph.stacked_button_wrapper.field_stacked_button_wrapper_col
+    - paragraphs.paragraphs_type.stacked_button_wrapper
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.stacked_button_wrapper.default
+targetEntityType: paragraph
+bundle: stacked_button_wrapper
+mode: default
+content:
+  field_stacked_button_wrapper:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_stacked_button_wrapper_col:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

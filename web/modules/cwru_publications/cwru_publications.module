@@ -1,0 +1,45 @@
+<?php
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Access\AccessResult;
+
+/**
+ * Implements template_preprocess_field()
+ */
+function cwru_publications_preprocess_field(&$variables, $hook) {
+  if ($variables['field_name'] == 'field_biography_publications_ope') {
+    $node = $variables['element']['#object'];
+    $dmid = '';
+    if(!empty($node->field_digital_measures_user_id->value)) {
+      $dmid = $node->field_digital_measures_user_id->value;
+    }
+
+    $cid = 'cwru_publications:dmid:' . $dmid;
+    $expiration = (new DateTime())->getTimestamp() + 24*60*60;
+    $pub_data_cache = \Drupal::cache()->get($cid);
+    if($pub_data_cache) {
+      $variables['pub_data'] = $pub_data_cache->data;
+    }else {
+      $dm_fetch_url = "https://applications.case.edu/api/wsom/faculty-research/Service.svc/profile?UserId=$dmid";
+      $dm_data = file($dm_fetch_url);
+      $dm_data_arr = json_decode($dm_data[0]);
+      $pub_data = $dm_data_arr->Publications;
+      $variables['pub_data'] = $pub_data;
+      \Drupal::cache()->set($cid, $pub_data, $expiration);
+    }
+  }
+}
+
+function cwru_publications_block_access(Block $block, $operation, AccountInterface $account) {
+  if($operation == 'view') {
+    if($block->id() == 'sidebar_navigation_courses') {
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if(!empty($node)) {
+        return AccessResult::forbidden()->addCacheableDependency($block);
+      } else {
+        return AccessResult::neutral();
+      }
+    }
+  }
+}

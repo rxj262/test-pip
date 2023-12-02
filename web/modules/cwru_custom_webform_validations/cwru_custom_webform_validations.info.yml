@@ -1,0 +1,7 @@
+name: 'CWRU custom webform validations'
+type: module
+description: 'Provide a central place to hold all webform validations'
+package: 'Custom'
+dependencies:
+  - webform
+core_version_requirement: '>=9'

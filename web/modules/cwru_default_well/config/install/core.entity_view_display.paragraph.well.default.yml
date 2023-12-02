@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.well.field_well_button
+    - field.field.paragraph.well.field_well_color_selector
+    - field.field.paragraph.well.field_well_content
+    - field.field.paragraph.well.field_well_title
+    - paragraphs.paragraphs_type.well
+  module:
+    - link
+    - options
+    - text
+id: paragraph.well.default
+targetEntityType: paragraph
+bundle: well
+mode: default
+content:
+  field_well_button:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_well_color_selector:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_well_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_well_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

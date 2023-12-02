@@ -1,0 +1,81 @@
+.page-head {
+  .headerlink {
+    position: absolute;
+    top: 40%;
+    left: 75px;
+    transform: translateY(-50%);
+    nav {
+      h2 {
+        color: $white;
+        font-size: 1em;
+        font-weight: 400;
+      }
+      & ul li {
+        float: left;
+        font-size: .625em;
+        padding: 0 6px 0 8px;
+        margin: 0;
+        a {
+          padding: 0;
+          text-transform: uppercase;
+          @include white-link();
+          text-decoration: none;
+          &:hover, &:focus {
+            background: transparent;
+            color: $lighter-gray;
+            text-decoration: underline;
+          }
+        }
+      }
+      & ul li:first-child {
+        padding-left: 0;
+      }
+      & ul li:first-child:after {
+        width: 0;
+      }
+      & ul li:after {
+        content: "";
+        background: $lighter-gray;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        width: 2px;
+        height: 75%;
+      }
+      & li:last-child {
+        border: none;
+      }
+    }
+  }
+}
+
+#block-headerlink-2 {
+  clear: both;
+}
+
+#block-headerlink-2 ul {
+  background-color: $off-white;
+}
+#block-headerlink-2 ul li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#block-headerlink-2 ul li a:before {
+  content: "\2022  resources for: ";
+  margin-right: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#block-headerlink-2 a {
+  padding: 14px 21px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+@media all and (max-width: 992px) {
+  .page-head {
+    .headerlink {
+      display: none;
+    }
+  }
+}

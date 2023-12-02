@@ -1,0 +1,93 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event_detail_page.field_event_date_range
+    - field.field.node.event_detail_page.field_event_description
+    - field.field.node.event_detail_page.field_event_image_ref
+    - field.field.node.event_detail_page.field_event_taxonomy
+    - field.field.node.event_detail_page.field_event_url
+    - field.field.node.event_detail_page.field_meta_tags
+    - node.type.event_detail_page
+  module:
+    - datetime_range
+    - field_group
+    - link
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_events_grouping:
+      children:
+        - field_event_date_range
+        - field_event_image_ref
+        - field_event_description
+        - field_event_url
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Events Grouping'
+id: node.event_detail_page.default
+targetEntityType: node
+bundle: event_detail_page
+mode: default
+content:
+  field_event_date_range:
+    weight: 1
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_datetime
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_event_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_event_image_ref:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: article_image_style
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_event_taxonomy:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_url:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  content_moderation_control: true
+  field_meta_tags: true
+  links: true

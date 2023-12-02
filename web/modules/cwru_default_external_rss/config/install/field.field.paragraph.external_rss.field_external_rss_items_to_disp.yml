@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_external_rss_items_to_disp
+    - paragraphs.paragraphs_type.external_rss
+id: paragraph.external_rss.field_external_rss_items_to_disp
+field_name: field_external_rss_items_to_disp
+entity_type: paragraph
+bundle: external_rss
+label: 'Max Item to Display'
+description: 'Define how many feed items you would like to display on the page, you can choose from 3-20, while we recommend 3, 5, or 10 items. '
+required: true
+translatable: false
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings:
+  min: 3
+  max: 20
+  prefix: ''
+  suffix: ''
+field_type: integer

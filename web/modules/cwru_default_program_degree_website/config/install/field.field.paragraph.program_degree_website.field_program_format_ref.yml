@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_program_format_ref
+    - paragraphs.paragraphs_type.program_degree_website
+    - taxonomy.vocabulary.format
+id: paragraph.program_degree_website.field_program_format_ref
+field_name: field_program_format_ref
+entity_type: paragraph
+bundle: program_degree_website
+label: 'Program Format Ref'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      format: format
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

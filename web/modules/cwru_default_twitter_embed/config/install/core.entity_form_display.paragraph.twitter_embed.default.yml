@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.twitter_embed.field_twitter_embed_handle
+    - field.field.paragraph.twitter_embed.field_twitter_embed_height
+    - field.field.paragraph.twitter_embed.field_twitter_embed_title
+    - field.field.paragraph.twitter_embed.field_twitter_embed_tweet_limit
+    - paragraphs.paragraphs_type.twitter_embed
+  module:
+id: paragraph.twitter_embed.default
+targetEntityType: paragraph
+bundle: twitter_embed
+mode: default
+content:
+  field_twitter_embed_handle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_twitter_embed_height:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_twitter_embed_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_twitter_embed_tweet_limit:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

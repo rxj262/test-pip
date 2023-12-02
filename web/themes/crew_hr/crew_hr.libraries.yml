@@ -1,0 +1,9 @@
+global-styling:
+  version: 1.12
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/crew_hr.js: {}
+  dependencies:
+    - core/jquery

@@ -1,0 +1,5 @@
+bundle: cwru_default
+excluded:
+  - field.field.paragraph.accordion.field_accordion_section_ref
+  - field.storage.paragraph.field_accordion_section_ref
+required: true

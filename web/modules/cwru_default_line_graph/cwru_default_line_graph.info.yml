@@ -1,0 +1,9 @@
+name: 'Line Graph'
+description: 'Provides Line Graph paragraph type and related configuration.'
+type: module
+dependencies:
+  - field
+  - paragraphs
+version: '1.12'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

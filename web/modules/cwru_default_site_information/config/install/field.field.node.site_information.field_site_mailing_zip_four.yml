@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_mailing_zip_four
+    - node.type.site_information
+id: node.site_information.field_site_mailing_zip_four
+field_name: field_site_mailing_zip_four
+entity_type: node
+bundle: site_information
+label: 'Zip+Four Code'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 44106-
+default_value_callback: ''
+settings: {  }
+field_type: string

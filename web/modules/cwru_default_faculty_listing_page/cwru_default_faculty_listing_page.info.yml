@@ -1,0 +1,24 @@
+name: 'Affiliate Listing Page'
+type: module
+package: 'CWRU Default'
+dependencies:
+  - content_moderation
+  - cwru_default_drupal_site
+  - cwru_default_media_bundles
+  - entity_browser_entity_form
+  - field
+  - field_group
+  - ief_table_view_mode
+  - link
+  - media
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - telephone
+  - text
+  - user
+  - workflows
+version: '1.5'
+description: 'Provides Affiliate Listing Page content type and related configuration.'
+core_version_requirement: '>=9'

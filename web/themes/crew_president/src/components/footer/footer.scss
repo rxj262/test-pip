@@ -1,0 +1,132 @@
+// Footer
+//
+// This is the Footer component.
+//
+// Markup: node--view--footer--block-footer.html.twig
+//
+// Style guide: Layout.footer
+// Import site utilities.
+@import '../../global/utils/init';
+
+footer {
+  .footer {
+    @include clearfix;
+
+    .views-row {
+      background-color: $off-white;
+    }
+  }
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // padding: $size-medium;
+  padding: 4em 2em 3.5em;
+  // font-size: 14px;
+  font-size: 15px;
+  color: $dark-gray;
+  clear: both;
+  max-width: 1260px;
+  margin: auto;
+  @include breakpoint($bp-sm) {
+    flex-direction: row;
+    // padding: $size-largest $size-medium;
+    // padding: 63px 0 20px;
+    padding: 63px 2em 20px;
+  }
+}
+
+.footer__block {
+  margin-bottom: $size-medium;
+  @include breakpoint($bp-sm) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__header {
+  font-weight: 600;
+  // font-size: 18px;
+  font-size: 19px;
+  margin: 0 0 12px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.footer__block--university {
+  .footer__logo {
+    // margin-bottom: 10px;
+    // max-width: 210px;
+    margin-bottom: 5px;
+    max-width: 233px;
+  }
+
+  address,
+  p {
+    font-style: normal;
+    margin: 0;
+    line-height: 2.1;
+  }
+}
+
+.footer__block--department {
+  display: flex;
+  align-items: flex-start;
+
+  .footer__map-icon {
+    width: 22px;
+    margin-right: 26px;
+    display: none;
+    @include breakpoint($bp-sm) {
+      display: block;
+    }
+  }
+
+  .footer__department-info .footer__mailing-info {
+    margin-bottom: 10px;
+
+    div {
+      display: inline;
+      line-height: 1.4;
+    }
+
+    .comma {
+      margin-left: -3px;
+    }
+  }
+}
+// .footer__block--social {
+//   .footer__social-icons {
+//     .footer__social-icon {
+//       width: 38px;
+//       height: 38px;
+//       font-size: 21px;
+//       font-weight: normal;
+//       margin: 0 8px 8px 0;
+//       padding-top: 8px;
+//       border-radius: 100%;
+//       text-align: center;
+//       display: inline-block;
+//       background-color: $cwru-blue;
+//       color: $white;
+//       transition: background-color .2s;
+//       &:hover {
+//         background-color: $link-blue;
+//         text-decoration: none;
+//       }
+//     }
+//   }
+// }
+
+.footer__block--links .footer-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    display: block;
+    line-height: 1.9;
+    margin: 0;
+  }
+}

@@ -1,0 +1,10 @@
+name: 'Facebook Embed'
+description: 'Provides Facebook Embed paragraphs type and related configuration.'
+type: module
+dependencies:
+  - field
+  - link
+  - paragraphs
+version: '1.01'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

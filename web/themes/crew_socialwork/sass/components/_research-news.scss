@@ -1,0 +1,60 @@
+.research-news {
+  max-width: 984px;
+  margin: 0 auto;
+
+  .view-header {
+    margin-bottom: 20px;
+  }
+  .view-content {
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    > a {
+      display: block;
+      height: 100%;
+    }
+
+    .views-row {
+      border: 2px solid $link-blue;
+      padding: 20px;
+      margin: 10px;
+      flex-grow: 1;
+      flex-basis: 30%;
+
+      > .views-field {
+        background-color: $dark-gray;
+        padding: 20px;
+        height: 100%;
+        transition: background-color 0.3s;
+        position: relative;
+
+        &:hover {
+          background-color: $cwru-blue;
+        }
+      }
+    }
+
+    .title {
+      font-size: 22px;
+      line-height: 1.4;
+      padding-bottom: 40px;
+      height: 100%
+    }
+
+    .desc {
+      font-size: 14px;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 0;
+      letter-spacing: 0.5px;
+    }
+
+    a,
+    a:hover,
+    h3 {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+name: 'Interest Categories'
+description: 'Provides Interest Categories taxonomy vocabulary and related configuration. '
+type: module
+dependencies:
+  - better_exposed_filters
+  - node
+  - taxonomy
+  - user
+  - views
+version: '1.02'
+package: 'CWRU Default'
+core_incompatible: false
+core_version_requirement: '>=9'

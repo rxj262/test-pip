@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.footer
+  module:
+    - views
+  theme:
+    - crew
+id: views_block__footer_block_footer
+theme: crew
+region: footer
+weight: -9
+provider: null
+plugin: 'views_block:footer-block_footer'
+settings:
+  id: 'views_block:footer-block_footer'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

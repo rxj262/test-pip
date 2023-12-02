@@ -1,0 +1,74 @@
+.msass-directory {
+  >.view-filters {
+	margin-bottom: 25px;
+	border-bottom: 1px solid $lighter-gray;
+
+    .form-group {
+        width: 100%;
+    }
+  }
+  fieldset.fieldgroup {
+    width: 32%;
+    margin-right: 2%;
+	&:last-of-type {
+		margin-right: 0;
+		@media #{$small-max} {
+			padding-bottom: 25px;
+		}
+	}
+    @media #{$small-max} {
+      width: 100%;
+      max-width: 460px;
+    }
+
+    legend {
+      border-bottom: none;
+      width: auto;
+      margin-bottom: 5px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .fieldset-wrapper {
+      height: 110px;
+      overflow-y: scroll;
+      border: 1px solid $light-gray;
+
+      div.form-type-checkbox {
+        width: 100%;
+        padding: 4px;
+
+        @media #{$small-max} {
+          margin: 0;
+        }
+      }
+
+      label {
+        font-size: 16px;
+        margin-left: 25px;
+
+        @media #{$small-max} {
+          margin-left: 5px;
+        }
+
+        input {
+          margin: 4px 5px 5px -20px;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+
+body.wait *, body.wait
+{
+    cursor: progress !important;
+}
+
+@-moz-document url-prefix() {
+   .form-control.form-select {
+     padding: 6px 12px;
+     font-size: 14px;
+   }
+ }
+

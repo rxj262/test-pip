@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../all/all.css"/>
+
+</head>
+<body id="kss-node">
+  <div class="kss-wrapper">
+
+    <div class="kss-sidebar">
+      <div class="kss-sidebar-inner">
+        <header class="kss-header">
+          <h1 class="kss-doc-title">Style Guide</h1>
+        </header>
+        <nav class="kss-nav">
+          <ul class="kss-menu">
+            <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+                          <li class="kss-menu-item">
+                <a href="section-components.html"><span class="kss-ref">1</span><span class="kss-name">Components</span></a>
+                              </li>
+                          <li class="kss-menu-item">
+                <a href="section-layout.html"><span class="kss-ref">2</span><span class="kss-name">Layout</span></a>
+                              </li>
+                          <li class="kss-menu-item">
+                <a href="section-colors.html"><span class="kss-ref">3</span><span class="kss-name">Colors</span></a>
+                              </li>
+                          <li class="kss-menu-item">
+                <a href="section-type.html"><span class="kss-ref">4</span><span class="kss-name">Type</span></a>
+                              </li>
+                        <li><button class="kss-menu-full-width js-full-width" title="Remove navigation and padding to show what a component looks like at full page width.">Remove Navigation</button></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="kss-content">
+      <article role="main" class="kss-article">
+      
+        
+                            <div id="kssref-components-menu" class="kss-section kss-depth-2">
+            <div class="kss-style">
+                            <h2 class="kss-title kss-title--level-2">
+                <a class="kss-title__permalink" href="#kssref-components-menu">
+                  Menu
+                </a>
+              </h2>
+
+                              <div class="kss-description">
+                  <p>This is the Menu component. It's an example.</p>
+
+                </div>
+              
+                          </div>
+
+                          <div class="kss-modifier-block">
+
+                <div class="kss-modifier kss-modifier-original">
+                  <div class="kss-modifier-example">
+                    
+
+<button class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i>Navigation + Search</button>
+
+
+0
+
+
+                  </div>
+                </div>
+
+                                                <div class="kss-markup">
+                  <button class="js-show-markup">Show Markup Example</button>
+                  <template>
+                    <pre><code data-language="html">{{ attach_library(&#039;crew_president/menu&#039;) }}
+
+&lt;button class=&quot;menu-toggle&quot;&gt;&lt;i class=&quot;fa fa-bars&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Navigation + Search&lt;/button&gt;
+
+{% import _self as menus %}
+
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      &lt;ul{{ attributes.addClass(&#039;menu-top-level container&#039;) }}&gt;
+      &lt;form action=&quot;//www.case.edu/search-results/&quot; class=&quot;menu-search-mobile&quot; name=&quot;searchForm&quot; role=&quot;search&quot; aria-label=&quot;mobile search&quot;&gt;
+        &lt;div class=&quot;input-group&quot;&gt;
+          &lt;input placeholder=&quot;Search CWRU...&quot; title=&quot;searchbox&quot; type=&quot;search&quot; class=&quot;mobile-search-input&quot; name=&quot;q&quot; maxlength=&quot;128&quot; size=&quot;15&quot; onfocus=&quot;if(!this._haschanged){this.value=&#039;&#039;};this._haschanged=true;&quot;&gt;
+          &lt;span class=&quot;mobile-search-btn-wrapper&quot;&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;mobile-search-btn&quot; aria-label=&quot;Submit Search&quot;&gt;
+              &lt;span class=&quot;sr-only&quot;&gt;Search&lt;/span&gt;
+              &lt;span class=&quot;fa fa-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/span&gt;
+          &lt;input type=&quot;hidden&quot; name=&quot;cx&quot; value=&quot;004305171799132815236:ciq4c8b3yv4&quot;&gt;
+          &lt;input type=&quot;hidden&quot; name=&quot;ie&quot; value=&quot;UTF-8&quot;&gt;
+          &lt;input class=&quot;hidden&quot; role=&quot;button&quot; name=&quot;sa&quot; type=&quot;submit&quot; title=&quot;search&quot; alt=&quot;search&quot;&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    {% else %}
+      &lt;ul class=&quot;menu-dropdown&quot;&gt;
+    {% endif %}
+    {% for item in items %}
+      {% if item.is_expanded and menu_level == 0 %}
+        &lt;li{{ item.attributes.addClass(&#039;menu-item&#039;, &#039;dropdown&#039;) }} role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;
+          &lt;a href=&quot;{{ item.url }}&quot; class=&quot;menu-link&quot;&gt;{{ item.title }} &lt;span class=&quot;arrow&quot; aria-haspopup=&quot;true&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
+        &lt;/li&gt;
+      {% else %}
+        &lt;li{{ item.attributes.addClass(&#039;menu-item&#039;) }}&gt;
+          {{ link(item.title, item.url, {&#039;class&#039;:[&#039;menu-link&#039;]}) }}
+        &lt;/li&gt;
+      {% endif %}
+    {% endfor %}
+    &lt;/ul&gt;
+  {% endif %}
+{% endmacro %}
+</code></pre>
+                  </template>
+                </div>
+                              </div>
+
+                                    </div>
+                    </article>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<!-- Fake drupalSettings -->
+<script type="application/json" data-drupal-selector="drupal-settings-json">
+  {}
+</script>
+<!-- / Fake drupalSettings -->
+<script src="/core/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js"></script>
+<script src="/core/assets/vendor/domready/ready.min.js"></script>
+<script src="/core/misc/drupalSettingsLoader.js"></script>
+<script src="/core/misc/drupal.js"></script>
+<script src="/core/misc/drupal.init.js"></script>
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/rainbow.min.js"></script>
+<script src="kss-assets/main.js"></script>
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

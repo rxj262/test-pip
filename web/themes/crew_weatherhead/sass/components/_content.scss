@@ -1,0 +1,112 @@
+.landing-page-content-type {
+  .paragraph--type--content {
+    margin: 0em calc(50% - 50vw);
+    background: $white;
+    // margin-bottom: 2em;
+    @media #{$medium-max} {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+  }
+}
+
+.robust-3-column-page {
+	.field--name-field-robust-3-page-ref{
+		
+		.field--item:first-child > .paragraph--type--content:first-child {
+			padding-top: 0em;
+		}
+		.field--item > .paragraph--type--content:first-child {
+			padding-top: 1em;
+		}
+	}
+	.paragraph--type--content {
+		margin-bottom: 0.8em;		
+		
+	  	.container {
+	  		padding-right: 0; 
+	  		padding-left: 0;
+	  		padding-bottom: 0.5em;
+	  		padding-top: 0em;
+	  		width: auto;
+	  		//margin-bottom: 2em;
+	  		.field--name-field-content {
+	  			ul:last-of-type {
+	  				margin-bottom: 0;
+	  			}
+				@media #{$xsmall-max} {
+					.embedded-entity {
+						float: none;
+						margin: 8px 0;
+						margin-left: 0;
+						margin-right: 0;
+					}
+				}
+	  		}
+	  		.field--name-field-content h2:first-of-type {
+	  			margin-top: 0.2em;
+	  		}
+	  		.field--name-field-content h2 {
+					margin-bottom: 0.5em;
+				}
+	  	}
+	}
+	.video-embed-field-provider-youtube {
+		margin-top: 1em;
+	}
+}
+
+.robust-3-column-page .field--item .paragraph--type--quick-links-w-horizontal-buttons + .paragraph--type--content {
+	padding-top: 2em;
+}
+
+.robust-3-column-page .paragraph--type--content .container .field--name-field-content p:last-of-type + h2 {
+	margin-top: 20px;
+}
+
+.robust-3-column-page .paragraph--type--content.gray-background, .robust-3-column-page .paragraph--type--content.blue-background {
+	.container {
+		padding: 1.5em 1em 1.2em 1em;
+		.field--name-field-content {
+			h2 {
+				margin-bottom: 0.5em;
+			}
+		}
+	}
+}
+
+.paragraph--type--content.gray-background {
+	background: $off-white;
+	// margin-bottom: 1.5em;
+	margin-bottom: 1em;
+}
+
+.paragraph--type--content.blue-background {
+	background: $cwru-blue;
+	color: $white;
+	// margin-bottom: 1.5em;
+	margin-bottom: 1em;
+	h2, h3, h4, h5, h6 {
+		color: $white;
+	}
+}
+
+.field--item .paragraph--type--content .container .field--name-field-content p:last-of-type {
+	margin-bottom: 0;
+}
+
+//Accordion LIs
+ul.list-group {
+	.collapse.in {
+		ul li.list-item {
+			padding-bottom: 5px;
+		}
+	}
+}
+.field--name-field-accordion-section-content {
+	ul {
+		li {
+			padding-bottom: 5px;
+		}
+	}
+}

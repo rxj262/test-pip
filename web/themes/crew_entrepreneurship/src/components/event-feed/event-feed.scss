@@ -1,0 +1,38 @@
+@import '../../global/utils/init';
+
+.field-events-feed {
+  flex: 1;
+}
+
+.paragraph--type--external-rss {
+  margin: $size-medium $size-small;
+
+  .field--name-field-subfeature-link {
+    text-decoration: underline;
+  }
+}
+
+.feed-item {
+  margin-bottom: $size-medium;
+  font-weight: $font-weight-bold;
+}
+
+.date-time-container {
+  display: inline-block;
+  border: 1px dashed $dark-gray;
+  margin-bottom: $size-smallest;
+  padding: 4px;
+}
+
+.feed-item-daterange, .feed-item-time {
+  padding: $size-smallest;
+}
+
+.feed-item-time {
+  border-left: 1px dashed $dark-gray;
+  padding-left: $size-smallest;
+}
+
+.feed-item-time-to {
+  padding-right: $size-smallest;
+}

@@ -1,0 +1,11 @@
+name: 'Aside Reference Paragraph'
+description: 'Provides Aside Reference paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_aside_reference_content_type
+  - field
+  - node
+  - paragraphs
+version: '1.02'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

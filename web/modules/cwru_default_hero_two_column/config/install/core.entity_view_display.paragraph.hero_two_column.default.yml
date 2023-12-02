@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_two_column.field_hero_two_description
+    - field.field.paragraph.hero_two_column.field_hero_two_image_ref
+    - field.field.paragraph.hero_two_column.field_hero_two_link
+    - field.field.paragraph.hero_two_column.field_hero_two_t
+    - paragraphs.paragraphs_type.hero_two_column
+  module:
+    - link
+    - text
+id: paragraph.hero_two_column.default
+targetEntityType: paragraph
+bundle: hero_two_column
+mode: default
+content:
+  field_hero_two_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_hero_two_image_ref:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: hero_two_column_image_style
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_hero_two_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_hero_two_t:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

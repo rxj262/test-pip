@@ -1,0 +1,19 @@
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - crew
+id: crew_search
+theme: crew
+region: header
+weight: -9
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

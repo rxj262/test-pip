@@ -1,0 +1,12 @@
+name: Courses
+description: 'Provides Courses taxonomy vocabulary and related configuration. '
+type: module
+dependencies:
+  - field
+  - node
+  - path
+  - taxonomy
+  - text
+package: 'CWRU Default'
+version: '1.01'
+core_version_requirement: '>=9'

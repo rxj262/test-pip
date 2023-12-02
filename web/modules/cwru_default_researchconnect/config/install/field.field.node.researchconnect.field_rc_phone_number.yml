@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rc_phone_number
+    - node.type.researchconnect
+  module:
+    - telephone
+id: node.researchconnect.field_rc_phone_number
+field_name: field_rc_phone_number
+entity_type: node
+bundle: researchconnect
+label: 'Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

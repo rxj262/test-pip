@@ -1,0 +1,21 @@
+// Content
+//
+// This is the Content component. It's an example.
+//
+//
+// Style guide: Components.content
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.field-content {
+  max-width: $bp-md;
+  margin: 0 $size-medium;
+  @include breakpoint($bp-lg) {
+    margin: $size-medium auto;
+  }
+}
+
+.paragraph--type--content p {
+  margin-bottom: $size-small;
+}

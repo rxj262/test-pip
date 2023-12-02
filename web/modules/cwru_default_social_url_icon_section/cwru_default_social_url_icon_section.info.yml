@@ -1,0 +1,11 @@
+name: 'Social URL/Icon Section'
+description: 'Provides Social URL/Icon Section paragraphs type and related configuration.'
+type: module
+dependencies:
+  - field
+  - link
+  - options
+  - paragraphs
+version: '1.03'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

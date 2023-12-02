@@ -1,0 +1,8 @@
+name: Specialties
+description: 'Provides Specialties taxonomy vocabulary and related configuration. '
+type: module
+dependencies:
+  - taxonomy
+version: '1.0'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Career Interest Areas'
+vid: career_interest_areas
+description: ''
+weight: 0

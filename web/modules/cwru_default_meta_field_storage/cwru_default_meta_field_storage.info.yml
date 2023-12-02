@@ -1,0 +1,12 @@
+name: 'Meta Field Storage for CWRU'
+description: 'CWRU field storage for the meta tag'
+type: module
+dependencies:
+  - field
+  - focal_point
+  - image
+  - metatag
+  - node
+version: '1.0'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

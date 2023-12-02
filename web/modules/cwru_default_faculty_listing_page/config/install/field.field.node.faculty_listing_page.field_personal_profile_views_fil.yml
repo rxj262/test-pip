@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personal_profile_views_fil
+    - node.type.faculty_listing_page
+    - taxonomy.vocabulary.pp_views_filter
+id: node.faculty_listing_page.field_personal_profile_views_fil
+field_name: field_personal_profile_views_fil
+entity_type: node
+bundle: faculty_listing_page
+label: 'Views Filter'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pp_views_filter: pp_views_filter
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

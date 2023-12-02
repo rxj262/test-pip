@@ -1,0 +1,23 @@
+name: 'Hero Overlay Text'
+description: 'Provides Hero Overlay Text paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_hero_one_column
+  - cwru_default_image_styles_for_cwru
+  - cwru_default_media_bundles
+  - 'drupal:media (>= 8.4)'
+  - entity_browser_entity_form
+  - entity_reference_revisions
+  - field
+  - file
+  - ief_table_view_mode
+  - image
+  - inline_entity_form
+  - link
+  - media
+  - node
+  - paragraphs
+  - text
+version: '1.06'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

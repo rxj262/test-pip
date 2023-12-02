@@ -1,0 +1,845 @@
+//Home Page News
+// .homepage-with-video {
+  .field--name-field-homepage-news-view .paragraph--type--view {
+    .views-element-container.form-group {
+      margin-bottom: 0;
+    }
+  }
+  .field--name-field-homepage-news-view {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .homepage-news-view {
+    background: $lighter-gray;
+    margin-left: -22px;
+    margin-right: -22px;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .latest-news {
+    // margin: 0 calc(50% - 50vw);
+    
+
+    .view-header {
+      .container {
+        padding-bottom: 1em;
+        padding-left: 0;
+        h2 {
+          color: $cwru-blue;
+          @include underline-title;
+          margin: 20px 40px 0 0;
+          padding-top: 0px;
+        }
+        @media #{$small-max} {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .view-content {
+      h3 {
+        color: $link-blue;
+        &:hover {
+          color: $cwru-blue;
+        }
+      }
+      display: flex;
+      .item-list {
+        padding-top: 0;
+        padding-bottom: 0;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          @media #{$small-max} {
+            flex-direction: column;
+          }
+          li.media {
+            border-bottom: none;
+            margin-right: 0;
+            display: block;
+            flex-basis: 30%;
+            background: none;
+            padding: 0;
+            position: relative;
+            border: none;
+            margin-bottom: 0;
+            @media #{$small-max} {
+              margin-right: 0;
+            }
+            @media #{$small-max} {
+              &:last-child {
+                margin-bottom: 1.1em !important;
+                margin-right: 0;
+              }
+            }
+            .views-field-nothing-1 {
+              background: none;
+              padding: 0;
+              @media #{$small-max} {
+                width: 100%;
+              }
+              .field-content {
+                @media #{$small-max} {
+                  width: 100%;
+                  padding-top: 1em;
+                }
+                .media-image-container {
+                  float: none;
+                  margin-right: 0;
+                }
+                h3 {
+                  text-decoration: underline;
+                  padding-bottom: 0.6em;
+                  font-size: 1.1em;
+                  margin-top: 10px;
+                  @media #{$medium-max} {
+                    font-size: 1em;
+                    // margin-top: 0;
+                  }
+                  @media #{$small-max} {
+                    font-size: 1.1em;
+                  }
+                  a:hover{
+                    text-decoration-thickness: unset;
+                    color:$cwru-blue;
+                  }
+                }
+                p {
+                  // font-family: $arizona;
+                  font-size: 0.9em;
+                  @media #{$small-max} {
+                    font-size: 1em;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+              .article-date {
+                font-style: italic;
+                font-size: 1em;
+                margin-top: 0;
+                margin-bottom: 0.4em;
+                // font-family: $arizona;
+                @media #{$small-max} {
+                  font-size: 1em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .view-footer {
+      text-align: right;
+      .field--type-link {
+        padding-top: 0;
+        margin-top: 0;
+        display: inline-block;
+        width: auto;
+        padding: 0;
+        a {
+          margin-bottom: 2em;
+          margin-top: 1.5em;
+          display: inline-block;
+          padding: .8em 1em;
+          @media #{$small-max} {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+// }
+
+//Upcoming Events rss
+.upcoming-events {
+  // font-family: $arizona-bold;
+  // font-weight: 700;
+  margin-left: -22px;
+  margin-right: -22px;
+  padding-top: 20px;
+  padding-bottom: 0;
+  background: $white;
+  
+  .field--name-field-homepage-events-view {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .paragraph--type--external-rss{
+    background: $white;
+    margin-bottom: 0;
+    .rss_section_title { 
+      color: $cwru-blue;
+      @include underline-title;
+      margin: 20px 0;
+      padding-top: 0px;
+      padding-left: 0;
+      background: none;
+      text-transform: capitalize;
+    }
+    .gCalFlow {
+      padding: 0;
+    }
+  .gcf-item-container-block {
+    display: flex;
+   //grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 1em;
+    grid-row-gap: 3.1em;
+    padding-top: 0;
+    // padding-bottom: 1em;
+    @media #{$small-max} {
+      flex-direction: column;
+      row-gap: 0;
+    }
+    &::before,
+    &::after {
+      content: unset;
+    }
+    .gcf-item-block {
+      border-bottom: 0;
+      padding-top: 0;
+      .gcf-item-header-block {
+        display: flex;
+        flex-basis: 30%;
+        @media #{$small-max} {
+          margin-bottom: 1em;
+          flex-basis: unset;
+          margin-right: 0;
+        }
+        .gcf-item-date-block {
+          display: inline-block;
+          margin: 0 0.75em 0 0;
+          text-align: center;
+
+          .gcf-item-daterange {
+            display: flex;
+            flex-direction: column;
+            background: $cwru-blue;
+            position: relative;
+            background-image: url('../images/calendar_date_background.svg');
+            background-repeat: no-repeat;
+            min-width: 80px;
+            padding: 0 0.9em;
+            padding-bottom: 0.7em;
+            padding-top: 0.4em;
+            color: $white;
+            text-transform: uppercase;
+            text-align: center;
+
+            .month {
+              background: none;
+              font-size: 1.2em;
+              text-align: center;
+              width: 100%;
+              font-weight: 900;
+            }
+            .day {
+              background: none;
+              font-size: 2.5em;
+              line-height: 0.7;
+              width: 100%;
+              font-weight: 900;
+              @media #{$medium-max} {
+                font-size: 2em;
+              }
+            }
+            // .event-full-date {
+            //   display: flex;
+            //   flex-direction: column;
+            //   min-width: 90px;
+            //   padding: 0 0.9em;
+            //   padding-bottom: 0.7em;
+            //   .month {
+            //     padding: 0.1em 0;
+            //     color: $white;
+            //     font-size: 1.2em;
+            //     text-transform: uppercase;
+            //   }
+            //   .day {
+            //     color: $white;
+            //     font-size: 2.5em;
+            //     line-height: 0.7;
+            //     @media #{$medium-max} {
+            //       font-size: 2em;
+            //     }
+            //   }
+            // }
+          }
+        }
+        .gcf-item-title-block {
+          a {
+            text-decoration: underline;
+            color: $link-blue;
+            font-size: 1.1em;
+            &:hover {
+              color: $cwru-blue;
+            }
+          }
+        }
+        // .views-field-nothing {
+        //   .event-title {
+        //     font-size: 1.1em;
+        //     line-height: 1.3;
+
+        //     a {
+        //       text-decoration: underline;
+        //       color: $link-blue;
+        //       &:hover {
+        //         color: $cwru-blue;
+        //       }
+        //     }
+
+        //     @media #{$medium-max} {
+        //       font-size: 1em;
+        //     }
+        //   }
+
+        //   .event-time {
+        //     color: $blk;
+        //     font-size: 0.9em;
+        //   //  font-family: $arizona-bold;
+        //   }
+        // }
+      }
+    }
+  }
+}
+  .field--name-field-subfeature-link {
+    text-align: right;
+    padding-top: 0;
+    margin-top: 0;
+    display: inline-block;
+    width: auto;
+    a {
+      margin-bottom: 2em;
+      margin-top: 1.5em;
+      display: inline-block;
+      padding: .8em 1em;
+      width: auto;
+      @media #{$small-max} {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+//Upcoming Events view
+.upcoming-events.events-page.view-display-id-block_3{
+  .view-header{
+    .container {
+      // padding-bottom: 1em;
+      .paragraph-section-title {
+        color: $cwru-blue;
+        @include underline-title;
+        margin: 20px 0;
+        padding-top: 0px;
+        padding-left: 0;
+        background: none;
+        text-transform: capitalize;
+        div{
+          line-height: 1.5;
+        }
+      }
+      p{
+        margin-bottom:0;
+        // font-family: $arizona;
+      }
+    }
+  }
+  .view-content {
+    // .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-column-gap: 1em;
+      grid-row-gap: 3.1em;
+      padding-top: 0;
+      padding-bottom: 1em;
+      @media #{$small-max} {
+        flex-direction: column;
+        row-gap: 0;
+      }
+      &::before,
+      &::after {
+        content: unset;
+      }
+      .views-row {
+        display: flex;
+        // flex-basis: 30%;
+        font-size: 17px;
+        font-weight: 400;
+        list-style-type: none;
+        padding: 8px 22px;
+        text-align: left;
+        width: 100%;
+
+        @media #{$small-max} {
+          margin-bottom: 1em;
+          flex-basis: unset;
+          margin-right: 0;
+        }
+        .views-field-nothing {
+          display: inline-block;
+          margin: 0 0.75em 0.75em 0;
+          min-width: unset;
+          text-align: center;
+
+          .field-content {
+            display: flex;
+            flex-direction: column;
+            background: #003071;
+            position: relative;
+            background-image: url(/medicine/themes/custom/crew_medicine/images/calendar_date_background.svg);
+            background-repeat: no-repeat;
+            min-width: 80px;
+            padding: 0 0.9em;
+            padding-bottom: 0.7em;
+            padding-top: 0.4em;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            .event-full-date {
+
+              .month {
+                background: none;
+                font-size: 1.2em;
+                text-align: center;
+                width: 100%;
+                font-weight: 900;
+                color: #fff;
+                display: block;
+                line-height: 1.4;
+              }
+              .day {
+                background: none;
+                font-size: 2.5em;
+                line-height: 0.7;
+                width: 100%;
+                border: 0;
+                font-weight: 900;
+                
+                @media #{$medium-max} {
+                  font-size: 2em;
+                }
+              }
+            }
+          }
+        }
+        .views-field-nothing-1 {
+          .event-title {
+            font-size: 1.3em;
+            font-weight: 400;
+            line-height: 1.3;
+
+            a {
+              text-decoration: underline;
+            }
+
+            @media #{$medium-max} {
+              font-size: 1em;
+            }
+          }
+
+          .event-time {
+            color: $blk;
+            font-size: 1em;
+            font-weight: 600
+          }
+        }
+      }
+    // }
+  }
+  .view-footer {
+    text-align: right;
+    padding-top: 0;
+    margin-top: 0;
+    display: flex;
+    width: auto;
+    .container{
+      width: 100%;
+      a {
+        margin-bottom: 2em;
+        margin-top: 1.5em;
+        display: inline-block;
+        padding: .8em 1em;
+        width: auto;
+        @media #{$small-max} {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+
+//Event Detail Pages
+.event-details {
+  .subtitle {
+    color: $blk;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 0 15px;
+  }
+
+
+  .field--name-field-event-details-speakers div {
+    &:first-child::after {
+      content: ":";
+    }
+  }
+  .top-box-wrapper {
+    background-color: $lighter-gray;
+    padding: 20px;
+    border: 1px solid $dark-gray;
+
+    .calendar-holder {
+      padding-right: 20px;
+      i {
+        font-size: 40px;
+        color: $cwru-blue;
+      }
+    }
+
+    .atcb-link {
+      display: none;
+    }
+    .atcb-list:first-of-type {
+      visibility: visible;
+      background: none;
+      position: relative;
+      display: inline;
+      z-index: 1;
+    }
+    .atcb-list {
+      display: none;
+    }
+    .atcb-item {
+      display: inline-block;
+      background: none;
+      padding: 0 5px;
+      &:first-of-type {
+        padding-left: 0;
+      }
+    }
+    .field--type-link {
+      a {
+        // margin-top: 0.5em;
+        display: inline-block;
+        background-color: $cwru-blue;
+        color: #fff;
+        padding: .8em 1em;
+        margin: 0;
+        line-height: 1;
+        transition: background-color .3s;
+        text-decoration: none;
+        &:hover{
+          background-color: $link-blue;
+
+        }
+      }
+    }
+    .mb-10:last-of-type {
+      margin-bottom: 5px;
+    }
+  }
+  aside {
+    float: right;
+    padding-bottom: 30px;
+
+    .field--name-field-event-details-image img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Latest News
+
+// .latest-news {
+//   font-family: $arizona-bold;
+//   margin: 0 calc(50% - 50vw);
+//   .view-header {
+//     .container {
+//       // padding-bottom: 1em;
+//       h2 {
+//         color: $white;
+//       }
+//     }
+//   }
+//   .view-content {
+//     .container {
+//       padding-top: 0;
+//       padding-bottom: 0;
+//       ul {
+//         display: flex;
+//         gap: 40px;
+
+//         @media #{$small-max} {
+//           flex-direction: column;
+//           gap: 0;
+//         }
+
+//         li.media {
+//           flex: 1;
+//           position: relative;
+//           margin: 0;
+//           padding: 0;
+//           background-color: $white;
+//           border: 5px solid $orange;
+          // border-image-source: url(/weatherhead/themes/custom/crew_weatherhead/images/dashed-background.svg);
+          // border-image-repeat: round;
+          // border-image-slice: 20;
+  //         @media #{$small-max} {
+  //           margin-bottom: 1.5em;
+  //         }
+
+  //         .views-field-nothing-1 {
+  //           background: $white;
+  //           padding: 1.5em 1em;
+  //           @media #{$small-max} {
+  //             width: 100%;
+  //           }
+  //           .field-content {
+  //             @media #{$small-max} {
+  //               width: 4em;
+  //             }
+  //             h3 {
+  //               text-decoration: underline;
+  //               font-size: 1.1em;
+  //               padding-bottom: 0.75em;
+  //               a {
+  //                 color: $link-blue ;
+  //                 &:hover{
+  //                   color: $cwru-blue;
+  //                   text-decoration-thickness: unset;
+  //                 }
+  //               }
+  //               @media #{$medium-max} {
+  //                 font-size: 1.2em;
+  //               }
+  //             }
+  //           }
+  //           .article-date {
+  //             font-style: italic;
+  //             font-size: 1em;
+  //             color: $cwru-blue;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // .view-footer {
+  //   text-align: right;
+  //   .field--type-link {
+  //     padding-top: 0;
+  //     margin-top: 0;
+  //     a {
+  //       width: auto;
+  //       margin-bottom: 0;
+  //       margin-top: 2em;
+        // &:hover {
+        //   color: $link-blue !important;
+        // }
+        // @media #{$small-max} {
+        //   margin-top: 0;
+        // }
+//       }
+//     }
+//   }
+//   &.blue-bkg{
+//     .view-footer{
+//       a{
+//         &:hover {
+//           color: $link-blue !important;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// News Archive
+
+// .view-id-news_article_listing.view-display-id-block_2 {
+
+// 	h2{
+// 		font-family: $arizona-bold,sans-serif;
+// 		padding: 0 0 0.3em;
+// 		margin-top: 0;
+// 		&::before {
+// 			content: none;
+// 		}
+// 	}
+// }
+// .view-id-news_article_listing.view-display-id-block_2,
+// .view-id-news_article_listing.view-display-id-block_5,
+// .view-id-news_article_listing.view-display-id-block_6,
+// .view-id-news_article_listing.view-display-id-block_7,
+// .view-id-news_article_listing.view-display-id-block_8,
+// .view-id-news_article_listing.view-display-id-block_9,
+// .view-id-news_article_listing.view-display-id-block_10 {
+//   p {
+//     &:last-of-type {
+//       margin-bottom: 0px;
+//     }
+//   }
+// }
+
+//Robust 3 Column Pages Events
+// .robust-3-column-page {
+//   .paragraph--type--view {
+//     background: $white;
+//     .upcoming-events {
+//       margin: 0;
+//       background: none;
+//       margin-top: 1em;
+//       .view-header {
+//         .container {
+//           padding-top: 1.5em;
+//           width: auto;
+//         }
+//       }
+//       .view-content {
+//         .container {
+//           width: 100%;
+//           grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+//           .views-row {
+//             margin-right: 10px;
+//             flex-grow: 1;
+//             .views-field-nothing-1 {
+//               .field-content {
+//                 width: 75px;
+//                 height: 74px;
+//                 .event-full-date {
+//                   min-width: 80px;
+//                   .month {
+//                     padding: 0;
+//                   }
+//                   .day {
+//                     font-size: 2.1em;
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//           .event-time {
+//             display: none;
+//           }
+//         }
+//       }
+//       .view-footer {
+//         .field--type-link {
+//           width: auto;
+//           @media #{$small-min} {
+//             padding-top: 1em;
+//             padding-bottom: 1.5em;
+//           }
+//           a {
+//             @media #{$small-max} {
+//               margin-top: 0;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .paragraph--type--view.gray-background {
+//     background: $off-white;
+//   }
+// }
+
+//Robust 3 Column News
+// .robust-3-column-page {
+//   .paragraph--type--view {
+//     .robust-news-articles {
+//       width: 100%;
+//     }
+//   }
+// }
+
+
+
+// Events Page
+.upcoming-events.events-page {
+  // font-family: $arizona;
+  margin: 0;
+  background: $white;
+
+  .view-content {
+    display: block;
+
+    h2 {
+      background-color: $cwru-blue;
+      padding: 10px 25px;
+      color: $white;
+      margin: 20px 0;
+      font-size: 1.5em;
+      &::before{
+        content: none;
+      }
+    }
+    h3{
+      padding-top: 0;
+    }
+
+    .full-event-row {
+      padding-bottom: 22px;
+      margin-bottom: 22px;
+      margin-top: 0;
+      border-bottom: 1px solid $lighter-gray;
+
+      .right-side {
+        padding: 10px 20px 0 20px;
+        @media #{$medium-max} {
+          padding-left: 0;
+        }
+      }
+
+      .left-side {
+        max-height: 180px;
+        background: $cwru-blue;
+        max-width: 183px;
+        min-width: 183px;
+
+        .event-full-date {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          // font-family: $arizona-bold;
+          background-image: url(/medicine/themes/custom/crew_medicine/images/calendar_date_background.svg);
+          background-size: cover;
+          position: relative;
+          min-height: 175px;
+
+          .month {
+            color: $white;
+            font-size: 1.4em;
+            text-transform: uppercase;
+            background: none;
+            padding-top: 12%;
+          }
+
+          .day {
+            color: $white;
+            font-size: 2.5em;
+            line-height: 1;
+            border: none;
+            background: none;
+            //width: 2.2em;
+            @media #{$medium-max} {
+              font-size: 2em;
+            }
+          }
+
+          .time {
+            background-color: $lighter-gray;
+            margin-top: auto;
+            padding: 5px 10px;
+            font-size: 0.9em;
+            text-align: center;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

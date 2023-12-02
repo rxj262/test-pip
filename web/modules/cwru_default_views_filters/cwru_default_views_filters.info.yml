@@ -1,0 +1,8 @@
+name: 'Views Filters'
+description: 'Provides Views Filters taxonomy vocabulary and related configuration. Catch-all taxonomy for creating filtered views'
+type: module
+dependencies:
+  - taxonomy
+version: '1.0'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

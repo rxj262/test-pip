@@ -1,0 +1,134 @@
+.paragraph--type--programs-listing{
+
+  .field--name-field-programs-listing{
+    width: calc(100% + 3rem);
+    margin-left: -1rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &>.field--item {
+      width: calc(100% - 2rem);
+      min-height: 45rem;
+      margin: 0 1rem 2rem 1rem;
+      display: flex;
+    }
+
+    .paragraph--type--program{
+      a{
+        border: .6rem solid $link-blue;
+        height: 100%;
+        display: flex;
+        color: $blk;
+        text-decoration: none;
+        font-weight: 100;
+        background-color: $off-white;
+        transition-duration: 600ms;
+
+        .program-wrapper{
+          padding:2.6rem 2.6rem 1rem;
+
+          .field--name-field-program-name{
+            font-family: $arizona-bold;
+            font-size:3.2rem;
+            line-height: 1;
+            padding: .4rem 0;
+            margin-bottom:1rem;
+          }
+          .field--name-field-program-description{
+            font-family: $arizona;
+            font-size: 2rem;
+            line-height: 1.5;
+          }
+          .field--name-field-program-link{
+            display:none;
+          }
+        }
+        &:hover{
+          background: $lighter-gray;
+          border: .6rem solid $orange;
+
+        }
+      }
+
+    }
+  }
+
+}
+.robust-3-column-page{
+  .paragraph--type--programs-listing{
+    padding-top:1em;
+  }
+}
+.robust-content-small.col-lg-8 .paragraph--type--programs-listing .field--name-field-programs-listing >.field--item {
+  width: calc(100% - 2rem);
+  @media #{$smallx-min} {
+    width: calc(50% - 2rem);
+  }
+  @media #{$small-min} {
+    width: calc(100% - 2rem);
+  }
+  @media #{$large-min} {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media #{$smallx-min} {
+
+  .paragraph--type--programs-listing{
+
+    .field--name-field-programs-listing{
+      &>.field--item {
+
+        width: calc(50% - 2.2rem);
+
+      }
+    }
+
+  }
+
+}
+
+@media #{$small-medium-min} {
+
+  .paragraph--type--programs-listing{
+
+    .field--name-field-programs-listing{
+      &>.field--item {
+
+        width: calc(33% - 2rem);
+
+      }
+    }
+  }
+
+}
+
+@media #{$medium-min} {
+
+  .paragraph--type--programs-listing{
+    .field--name-field-programs-listing{
+      &>.field--item {
+
+        width: calc(50% - 2.2rem);
+
+      }
+    }
+
+  }
+
+}
+
+@media #{$large-min} {
+
+  .paragraph--type--programs-listing{
+
+    .field--name-field-programs-listing{
+      &>.field--item {
+
+        width: calc(33% - 2rem);
+
+      }
+    }
+  }
+
+}

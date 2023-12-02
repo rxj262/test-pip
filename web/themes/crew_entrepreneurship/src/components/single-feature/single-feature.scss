@@ -1,0 +1,34 @@
+// Single Feature
+//
+// This is the Single Feature component. It's an example.
+//
+//
+// Style guide: Components.single-feature
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.paragraph--type--single-feature {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  max-width: $bp-md;
+  margin: $size-medium;
+  @include breakpoint($bp-sm) {
+    flex-direction: row;
+  }
+  @include breakpoint($bp-lg) {
+    margin: $size-medium auto;
+  }
+
+  > div {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .group-title-intro {
+    @include breakpoint($bp-sm) {
+      margin-right: $size-large;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<?php
+
+function crew_presidentsearch_preprocess_page(&$variables) {
+  $node31 = \Drupal::service('path.current')->getPath();
+  if($node31 !== "/node/31") {
+    return;
+  }
+  $variables['page']['optimal_line_length'] = FALSE;
+}

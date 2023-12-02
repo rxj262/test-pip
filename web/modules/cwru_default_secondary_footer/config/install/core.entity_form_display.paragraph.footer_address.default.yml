@@ -1,0 +1,112 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.footer_address.field_address
+    - field.field.paragraph.footer_address.field_address_2
+    - field.field.paragraph.footer_address.field_city
+    - field.field.paragraph.footer_address.field_mailing_address
+    - field.field.paragraph.footer_address.field_mailing_address_2
+    - field.field.paragraph.footer_address.field_mailing_city
+    - field.field.paragraph.footer_address.field_mailing_state
+    - field.field.paragraph.footer_address.field_mailing_zip
+    - field.field.paragraph.footer_address.field_state
+    - field.field.paragraph.footer_address.field_title
+    - field.field.paragraph.footer_address.field_zip
+    - paragraphs.paragraphs_type.footer_address
+id: paragraph.footer_address.default
+targetEntityType: paragraph
+bundle: footer_address
+mode: default
+content:
+  field_address:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_address_2:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_city:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mailing_address:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mailing_address_2:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mailing_city:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mailing_state:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mailing_zip:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_state:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_zip:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

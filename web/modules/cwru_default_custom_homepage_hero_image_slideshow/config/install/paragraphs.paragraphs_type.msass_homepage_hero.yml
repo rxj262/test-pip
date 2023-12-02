@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: msass_homepage_hero
+label: 'MSASS Homepage Hero'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,124 @@
+// NEEDS REFACTORING FOR THIS THEME
+
+%button {
+  position: relative;
+  display: inline-block;
+  padding: 20px 25px;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  font-family: $arizona-bold;
+}
+
+@mixin button--outline() {
+  @extend %button;
+  color: $off-black;
+  border: 5px solid $off-black;
+  padding-left: 35px;
+  transition: color 0.2s ease-in-out 0.2s;
+  z-index: 3;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1px;
+    background-color: $lime;
+    z-index: -1;
+    transition: all 0.2s ease-in;
+    transition-delay: 0s;
+  }
+
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 9px;
+    left: -6px;
+    width: 6px;
+    height: 50px;
+    transform: rotate(-90deg);
+    background-color: $lime;
+    transition: all 0.1s ease-in-out;
+    transition-delay: 0.2s;
+  }
+
+  &:hover {
+    color: $black;
+    text-decoration: none;
+    &:before {
+      width: 100%;
+      transition-delay: 0.1s;
+    }
+    &:after {
+      top: 0;
+      transform: rotate(0deg);
+      transform: translateX(6px);
+      height: 100%;
+      transition-delay: 0s;
+    }
+  }
+  &.button--white {
+    color: $off-white;
+    border-color: $white;
+    &:hover {
+      color: $black;
+    }
+  }
+  &.button--align-left {
+    margin-left: 23px;
+  }
+  &.button--white {
+    color: $white;
+    border-color: $white;
+  }
+}
+
+@mixin button--tab() {
+  @extend %button;
+  transition: all 0.2s ease;
+  color: $off-black;
+  background-color: $white;
+  border: 5px solid $off-black;
+  cursor: pointer;
+  &:hover,
+  &.active {
+    color: $white;
+    background-color: $cwru-blue;
+    text-decoration: none;
+  }
+  &.active {
+    border-color: $lime;
+  }
+}
+
+.button--outline {
+  @include button--outline();
+}
+.button--tab {
+  @include button--tab();
+}
+
+.field--name-field-uga-aside-content a {
+  @extend %button;
+  transition: all 0.2s ease;
+  color: $white;
+  background-color: $cwru-blue;
+  border: 1px solid $off-black;
+  cursor: pointer;
+  display: block;
+  &:hover,
+  &.active {
+    color: $off-black;
+    background-color: $white;
+    text-decoration: none;
+  }
+  &.active {
+    border-color: $lime;
+  }
+}

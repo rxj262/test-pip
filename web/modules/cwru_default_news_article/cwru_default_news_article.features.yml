@@ -1,0 +1,8 @@
+bundle: cwru_default
+excluded:
+  - block.block.bartik_main_menu
+  - block.block.crew_main_menu
+  - block.block.crew_mobile_nav
+  - block.block.crew_sidebar_navigation
+  - system.menu.main
+required: true

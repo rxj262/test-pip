@@ -1,0 +1,11 @@
+// restrict width of content paragraphs and page title on landing pages
+.lw-landing .paragraph--type--content,
+#block-sectionnavigation + h1.page-header {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.paragraph--type--hero-landing-page + .page-header {
+  margin-left: 22px;
+}

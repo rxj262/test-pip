@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: news_article_path
+label: 'News Article Path'
+type: 'canonical_entities:node'
+pattern: '/news-and-events/[node:title]'
+selection_criteria:
+  c6f3c39a-f52d-42bf-bc2d-1a1df75072e4:
+    id: node_type
+    negate: false
+    uuid: c6f3c39a-f52d-42bf-bc2d-1a1df75072e4
+    context_mapping:
+      node: node
+    bundles:
+      news_article: news_article
+selection_logic: and
+weight: -5
+relationships: {  }

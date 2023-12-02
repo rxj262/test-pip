@@ -1,0 +1,9 @@
+custom-gin:
+  css:
+    theme:
+      css/gin-custom.css: {}
+  js:
+    js/overrides.js: {}
+  dependencies:
+    - core/jquery
+    - core/once

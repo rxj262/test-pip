@@ -1,0 +1,175 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_twocol_sidebar_ref
+    - node.type.homepage_w_sidebar
+    - paragraphs.paragraphs_type.aside
+    - paragraphs.paragraphs_type.button
+    - paragraphs.paragraphs_type.external_rss
+    - paragraphs.paragraphs_type.stacked_button_wrapper
+    - paragraphs.paragraphs_type.view
+  module:
+    - entity_reference_revisions
+id: node.homepage_w_sidebar.field_twocol_sidebar_ref
+field_name: field_twocol_sidebar_ref
+entity_type: node
+bundle: homepage_w_sidebar
+label: Sidebar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      aside: aside
+      button: button
+      external_rss: external_rss
+      view: view
+      stacked_button_wrapper: stacked_button_wrapper
+    target_bundles_drag_drop:
+      accordion:
+        weight: 37
+        enabled: false
+      accordion_section:
+        weight: 38
+        enabled: false
+      alternating_subfeature:
+        weight: 39
+        enabled: false
+      aside:
+        enabled: true
+        weight: 40
+      award_honor:
+        weight: 41
+        enabled: false
+      biography_education:
+        weight: 42
+        enabled: false
+      button:
+        enabled: true
+        weight: 43
+      centered_intro_text:
+        weight: 44
+        enabled: false
+      content:
+        weight: 45
+        enabled: false
+      external_appointment:
+        weight: 46
+        enabled: false
+      gallery:
+        weight: 47
+        enabled: false
+      gallery_section:
+        weight: 48
+        enabled: false
+      hero_full_width:
+        weight: 49
+        enabled: false
+      hero_landing_page:
+        weight: 50
+        enabled: false
+      hero_one_column:
+        weight: 51
+        enabled: false
+      aside_reference:
+        weight: 52
+        enabled: false
+      hero_overlay_text:
+        weight: 52
+        enabled: false
+      hero_text_heavy:
+        weight: 53
+        enabled: false
+      hero_two_column:
+        weight: 54
+        enabled: false
+      icon_subfeature:
+        weight: 55
+        enabled: false
+      external_rss:
+        enabled: true
+        weight: 55
+      facebook_embed:
+        weight: 56
+        enabled: false
+      iframe:
+        weight: 56
+        enabled: false
+      job_title_affiliation:
+        weight: 57
+        enabled: false
+      content_reference:
+        weight: 58
+        enabled: false
+      presentation:
+        weight: 58
+        enabled: false
+      program_degree_website:
+        weight: 59
+        enabled: false
+      publication:
+        weight: 60
+        enabled: false
+      residency:
+        weight: 61
+        enabled: false
+      site_affiliation:
+        weight: 62
+        enabled: false
+      stacked_buttons:
+        weight: 63
+        enabled: false
+      subfeature:
+        weight: 64
+        enabled: false
+      subfeature_two_column:
+        weight: 65
+        enabled: false
+      icon_picker:
+        weight: 65
+        enabled: false
+      tabs:
+        weight: 66
+        enabled: false
+      tab_section:
+        weight: 67
+        enabled: false
+      teaser:
+        weight: 68
+        enabled: false
+      vertical_subfeature:
+        weight: 69
+        enabled: false
+      video:
+        weight: 70
+        enabled: false
+      view:
+        enabled: true
+        weight: 71
+      well:
+        weight: 72
+        enabled: false
+      social:
+        weight: 74
+        enabled: false
+      social_section:
+        weight: 75
+        enabled: false
+      stacked_button_wrapper:
+        enabled: true
+        weight: 77
+      subfeature_landing:
+        weight: 79
+        enabled: false
+      subfeature_section:
+        weight: 80
+        enabled: false
+      subfeatures_group:
+        weight: 84
+        enabled: false
+field_type: entity_reference_revisions

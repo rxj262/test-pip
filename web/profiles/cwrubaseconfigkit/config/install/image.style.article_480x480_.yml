@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: article_480x480_
+label: 'Article (480x480)'
+effects:
+  328df9f6-7810-46d5-83ee-f8b6f355500d:
+    uuid: 328df9f6-7810-46d5-83ee-f8b6f355500d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 480
+      crop_type: focal_point

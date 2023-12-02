@@ -1,0 +1,62 @@
+{% set classes = [
+  node.bundle | clean_class,
+  node.isPromoted()
+    ? 'is-promoted',
+  node.isSticky()
+    ? 'is-sticky',
+  not node.isPublished()
+    ? 'is-unpublished',
+  view_mode
+    ? view_mode | clean_class,
+  'clearfix'
+] %}
+
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+
+  {% if content.field_event_hero_image %}
+    {{ content.field_event_hero_image }}
+  {% endif %}
+
+   <div{{ content_attributes.addClass('event-content') }}>
+      <div class='row'>
+      {# check for right_ref sidebar #}
+      {% if content.field_event_registration_button.0 %}
+        <main class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
+          {% if content.field_event_date %}
+            {{ content.field_event_date }}
+          {% endif %}
+          {% if content.field_event_location %}
+              {{ content.field_event_location }}
+          {% endif %}
+          {% if content.field_event_details_summary %}
+              {{ content.field_event_details_summary }}
+          {% endif %}
+        </main>
+        <aside class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          {{ content.field_event_registration_button }}
+        </aside>
+      {% else %}
+        <div class="col-md-12">
+          {% if content.field_event_date %}
+              {{ content.field_event_date }}
+          {% endif %}
+          {% if content.field_event_location %}
+              {{ content.field_event_location }}
+          {% endif %}
+          {% if content.field_event_details_summary %}
+              {{ content.field_event_details_summary }}
+          {% endif %}
+        </div>
+      {% endif %}
+      </div>
+    </div>
+</article>

@@ -1,0 +1,5 @@
+services:
+  react_router_test.path_processor:
+    class: Drupal\react_router_test\PathProcessor\ReactRouterProcessor
+    tags:
+      - { name: path_processor_inbound }

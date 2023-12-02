@@ -1,0 +1,112 @@
+.paragraph--type--photo-boxes-row {
+	background: $cwru-blue;
+	padding: 40px;
+	padding-bottom: 0;
+	.container-fluid.photo-box-row-container {
+		padding: 0;
+		@media (min-width: $jumbo) {
+			width: 1244px;
+		}
+		@media (min-width: $small) {
+			margin-top: -100px;
+		}
+		@media (max-width: $medium) {
+			width: 100%;
+		}
+		.photo-box-row-row {
+			.field--name-field-photo-boxes-row-section {
+				max-width:1040px;
+				margin: 0 auto;
+				@media (min-width: $small) {
+					display: flex;
+					flex-wrap: wrap;
+				}
+				.field--item.field-column {
+					padding-bottom: 40px;
+					padding-left: 20px; 
+					padding-right: 20px;
+					@media (min-width: $small) {
+						flex: 1;
+						flex-basis: 49%;
+					}
+					@media (max-width: $small) {
+						padding-left: 0;
+						padding-right: 0;
+					}
+					.paragraph--type--photo-box-section {
+						@media (min-width: $small) {
+							display: flex;
+							flex-direction: column;
+							height: 100%;
+						}
+						.photo-box-field {
+							padding: 0;
+							text-align: center;
+							@media (min-width: $small) {
+								height: 100%;
+								width: 100%;
+							}
+							a {
+								max-width: 500px;
+								display: inline-block;
+								border: 1px solid $cwru-light-gray;
+								color: $cwru-blue;
+								transition: all 0.3s ease;
+								&:hover {
+									text-decoration: none;
+									transform: translateY(-10px);
+								}
+								img {
+									border: 0;
+								}
+								.photo-box-title {
+									background: $white;
+									padding: 10px 20px;
+									border: 0;
+									text-align: left;
+									position: relative;
+									display: flex;
+									align-items: center;
+									padding-right: 40px;
+									background-image: url("../images/icon.png");
+									background-repeat: no-repeat;
+									background-position: 98% center;
+									// .arrow {
+									//   border: solid black;
+									//   border-width: 0 3px 3px 0;
+									//   display: inline-block;
+									//   padding: 8px;
+									//   margin-right: 20px;
+									//   position: absolute;
+									//   right: 0;
+									//   border-radius: 4px;
+									// }
+									// .right {
+									//   transform: rotate(-45deg);
+									//   -webkit-transform: rotate(-45deg);
+									// }
+								}
+							}
+							a[href$=".pdf"]:after {
+								display: none;
+							}
+							a[href$=".pdf"] .photo-box-title:after {
+								display: none;
+								content: '\f1c1';
+							    color: $ter-orange;
+							    padding-left: 5px;
+							    padding-right: 2px;
+							    display: inline-block;
+							    line-height: 14px;
+							    font: normal normal normal 14px/1 FontAwesome;
+							    font-size: inherit;
+							    text-rendering: auto;
+							    -webkit-font-smoothing: antialiased;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

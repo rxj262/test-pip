@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage_text_heavy.field_hero_txthvy_ref
+    - field.field.node.homepage_text_heavy.field_icon_subfeature_ref
+    - field.field.node.homepage_text_heavy.field_intro_text_ref
+    - field.field.node.homepage_text_heavy.field_meta_tags
+    - node.type.homepage_text_heavy
+  module:
+    - entity_reference_revisions
+    - user
+id: node.homepage_text_heavy.default
+targetEntityType: node
+bundle: homepage_text_heavy
+mode: default
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_hero_txthvy_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_icon_subfeature_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_intro_text_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_meta_tags: true
+  links: true

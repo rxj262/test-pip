@@ -1,0 +1,10 @@
+name: 'React Paragraph'
+type: module
+core_version_requirement: '>=9'
+dependencies:
+  - 'drupal:field'
+  - 'paragraphs:paragraphs'
+  - 'cwru_react_paragraph'
+version: '1.0'
+package: 'CWRU Default'
+description: 'Provide a field where user can add root_id which is used in cwru_react_paragraph module to connect React app(s).'

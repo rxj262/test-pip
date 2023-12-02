@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.icon_subfeature.field_icon_sub_icon_pick_ref
+    - field.field.paragraph.icon_subfeature.field_icon_subfeature_content
+    - field.field.paragraph.icon_subfeature.field_icon_subfeature_link
+    - field.field.paragraph.icon_subfeature.field_icon_subfeature_title
+    - paragraphs.paragraphs_type.icon_subfeature
+  module:
+    - link
+    - paragraphs
+    - text
+id: paragraph.icon_subfeature.default
+targetEntityType: paragraph
+bundle: icon_subfeature
+mode: default
+content:
+  field_icon_sub_icon_pick_ref:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_icon_subfeature_content:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_icon_subfeature_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_icon_subfeature_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

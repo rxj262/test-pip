@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: photoswipe_scale_to_800px_width_
+label: 'PhotoSwipe (scale to 800px width)'
+effects:
+  4efb1e43-1498-4b6d-acfd-58e961834b32:
+    uuid: 4efb1e43-1498-4b6d-acfd-58e961834b32
+    id: image_scale
+    weight: 1
+    data:
+      width: 950
+      height: null
+      upscale: false

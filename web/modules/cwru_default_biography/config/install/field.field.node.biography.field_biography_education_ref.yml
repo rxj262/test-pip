@@ -1,0 +1,104 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_education_ref
+    - node.type.biography
+    - paragraphs.paragraphs_type.biography_education
+  module:
+    - entity_reference_revisions
+id: node.biography.field_biography_education_ref
+field_name: field_biography_education_ref
+entity_type: node
+bundle: biography
+label: Education
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      biography_education: biography_education
+    target_bundles_drag_drop:
+      accordion:
+        weight: 27
+        enabled: false
+      accordion_section:
+        weight: 28
+        enabled: false
+      alternating_subfeature:
+        weight: 29
+        enabled: false
+      aside:
+        weight: 30
+        enabled: false
+      biography_education:
+        enabled: true
+        weight: 31
+      biography_job_title_department:
+        weight: 32
+        enabled: false
+      button:
+        weight: 33
+        enabled: false
+      centered_intro_text:
+        weight: 34
+        enabled: false
+      content:
+        weight: 35
+        enabled: false
+      gallery:
+        weight: 36
+        enabled: false
+      hero_full_width:
+        weight: 37
+        enabled: false
+      hero_landing_page:
+        weight: 38
+        enabled: false
+      hero_one_column:
+        weight: 39
+        enabled: false
+      hero_overlay_text:
+        weight: 40
+        enabled: false
+      hero_text_heavy:
+        weight: 41
+        enabled: false
+      hero_two_column:
+        weight: 42
+        enabled: false
+      icon_subfeature:
+        weight: 43
+        enabled: false
+      iframe:
+        weight: 44
+        enabled: false
+      stacked_buttons:
+        weight: 45
+        enabled: false
+      subfeature:
+        weight: 46
+        enabled: false
+      subfeature_two_column:
+        weight: 47
+        enabled: false
+      tab_section:
+        weight: 48
+        enabled: false
+      tabs:
+        weight: 49
+        enabled: false
+      vertical_subfeature:
+        weight: 50
+        enabled: false
+      video:
+        weight: 51
+        enabled: false
+      well:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

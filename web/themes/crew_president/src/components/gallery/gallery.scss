@@ -1,0 +1,27 @@
+@import '../../global/utils/init';
+// photo gallery on 3-col robust pages. I need to check with Anand to see if there's a better place to it. 
+.field-photo-gallery {
+  max-width: 75em;
+	margin: 0 auto;
+}
+
+.field-grid-based-gallery {
+  display: grid;
+	grid-template-columns: 1.625fr 1fr;
+	gap: 1em;
+
+  @media (max-width: $bp-sm) {
+    display: block;
+  }
+}
+
+.field-grid-based-gallery .field__item:first-child {
+  grid-row-end: span 2;
+	height: 100%;
+}
+
+.field-grid-based-gallery .field__item img {
+  height: 100%;
+	width: 100%;
+	object-fit: cover;
+}

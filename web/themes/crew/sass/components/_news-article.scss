@@ -1,0 +1,123 @@
+article.news-article {
+
+  div.field--name-field-article-date {
+    margin-bottom: 20px;
+  }
+
+  div.article-image {
+    margin: 5px 0px 20px 30px;
+    max-width: 300px;
+  }
+
+  .field--name-field-photo-caption {
+    background-color: $lighter-gray;
+    padding: 10px;
+  }
+}
+
+// News Article View.
+// NOTE: There isn't a template for this.
+// The HTML is handled in the view.
+.news-articles__block-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  padding-bottom: 0;
+
+  &::after {
+    background-color: $light-blue;
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 5px 0 20px 0;
+    width: 60px;
+  }
+}
+
+.view-news-article-listing .view-footer {
+  text-align: right;
+}
+
+.news-articles__items {
+  padding-left: 0;
+  
+  @media screen and (min-width: 767px) {
+    margin-bottom: 24px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.news-articles__item {
+  list-style-type: none;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 767px) {
+    margin-bottom: 0;
+    width: 33.333%;
+
+    &:nth-child(3n-2) {
+      padding-right: 32px;
+    }
+
+    &:nth-child(3n-1) {
+      padding: 0 16px;
+    }
+
+    &:nth-child(3n-3) {
+      padding-left: 32px;
+    }
+  }
+}
+
+//use the class of one-column to make the fix the news view
+.one-column.view-news-article-listing {
+  .news-articles__item {
+    @media screen and (min-width: 767px) {
+      width: 100%;
+  
+      &:nth-child(3n-2) {
+        padding-right: 0;
+      }
+  
+      &:nth-child(3n-1) {
+        padding: 0;
+      }
+  
+      &:nth-child(3n-3) {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.news-article__img {
+  margin-bottom: 16px;
+
+  .media-image-container {
+    float: none;
+    margin-right: 0;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.news-article__header {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.news-article__date {
+  color: $cwru-blue;
+  font-size: 18px;
+}
+
+.news-articles__btn {
+
+  @media screen and (min-width: 767px) {
+    display: inline-block;
+    width: initial;
+  }
+}

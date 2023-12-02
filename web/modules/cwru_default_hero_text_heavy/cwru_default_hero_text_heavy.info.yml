@@ -1,0 +1,16 @@
+name: 'Hero Text Heavy'
+description: 'Provides Hero Text Heavy paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_image_styles_for_cwru
+  - cwru_default_media_bundles
+  - 'drupal:media (>= 8.4)'
+  - entity_browser_entity_form
+  - field
+  - ief_table_view_mode
+  - inline_entity_form
+  - media
+  - paragraphs
+version: '1.12'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

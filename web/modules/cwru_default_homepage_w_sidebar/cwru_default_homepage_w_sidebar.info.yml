@@ -1,0 +1,31 @@
+name: 'Homepage w/ Sidebar'
+description: 'Provides Homepage w/ Sidebar content type and related configuration. '
+type: module
+dependencies:
+  - content_moderation
+  - cwru_default_aside
+  - cwru_default_button
+  - cwru_default_content
+  - cwru_default_external_rss
+  - cwru_default_hero_one_column
+  - cwru_default_hero_two_column
+  - cwru_default_meta_field_storage
+  - cwru_default_stacked_button_wrapper
+  - cwru_default_stacked_buttons
+  - cwru_default_subfeature_two_column
+  - cwru_default_subfeatures_group
+  - cwru_default_view_paragraph
+  - entity_reference_revisions
+  - field
+  - field_group
+  - menu_ui
+  - metatag
+  - node
+  - paragraphs
+  - path
+  - slick_paragraphs
+  - user
+  - workflows
+version: '1.03'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_topics
+    - node.type.researchconnect
+    - taxonomy.vocabulary.research_topics_rc
+id: node.researchconnect.field_research_topics
+field_name: field_research_topics
+entity_type: node
+bundle: researchconnect
+label: 'Research Topics'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      research_topics_rc: research_topics_rc
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

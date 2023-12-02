@@ -1,0 +1,154 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.researchconnect.field_personal_profile_drupal_si
+    - field.field.node.researchconnect.field_primary_title
+    - field.field.node.researchconnect.field_public_health_population_h
+    - field.field.node.researchconnect.field_rc_description
+    - field.field.node.researchconnect.field_rc_email
+    - field.field.node.researchconnect.field_rc_fax
+    - field.field.node.researchconnect.field_rc_image
+    - field.field.node.researchconnect.field_rc_link
+    - field.field.node.researchconnect.field_rc_phone_number
+    - field.field.node.researchconnect.field_rc_publications
+    - field.field.node.researchconnect.field_research_methods_biostatis
+    - field.field.node.researchconnect.field_research_topics
+    - field.field.node.researchconnect.field_underserved_populations_co
+    - node.type.researchconnect
+  module:
+    - field_group
+    - link
+    - telephone
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_profile_aside:
+      children:
+        - field_rc_image
+        - field_rc_email
+        - field_rc_phone_number
+        - field_rc_fax
+        - field_rc_link
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Profile Aside'
+    group_profile_content:
+      children:
+        - field_primary_title
+        - field_underserved_populations_co
+        - field_rc_description
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Profile Content'
+id: node.researchconnect.default
+targetEntityType: node
+bundle: researchconnect
+mode: default
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_primary_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_rc_description:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_rc_email:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_rc_fax:
+    weight: 7
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_rc_image:
+    type: entity_reference_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_rc_link:
+    weight: 8
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_rc_phone_number:
+    weight: 6
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_rc_publications:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_underserved_populations_co:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_personal_profile_drupal_si: true
+  field_public_health_population_h: true
+  field_research_methods_biostatis: true
+  field_research_topics: true
+  links: true

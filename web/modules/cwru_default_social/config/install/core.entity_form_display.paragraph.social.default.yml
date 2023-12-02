@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social.field_social_ref
+    - field.field.paragraph.social.field_social_title_
+    - paragraphs.paragraphs_type.social
+  module:
+    - paragraphs
+id: paragraph.social.default
+targetEntityType: paragraph
+bundle: social
+mode: default
+content:
+  field_social_ref:
+    type: entity_reference_paragraphs
+    weight: 7
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: social_section
+    third_party_settings: {  }
+    region: content
+  field_social_title_:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

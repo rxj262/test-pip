@@ -1,0 +1,19 @@
+name: 'Hero Full Width'
+description: 'Provides Hero Full Width paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_image_styles_for_cwru
+  - cwru_default_media_bundles
+  - 'drupal:media (>= 8.4)'
+  - entity_browser_entity_form
+  - field
+  - field_group
+  - ief_table_view_mode
+  - inline_entity_form
+  - link
+  - media
+  - paragraphs
+  - text
+version: '1.06'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

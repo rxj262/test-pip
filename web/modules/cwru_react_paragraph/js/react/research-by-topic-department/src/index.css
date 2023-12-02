@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+}
+
+.list-item {
+  font-family: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#container {
+  width:auto;
+  align-items:center;
+  color:red;
+}
+
+#checkboxes {
+  width:auto;
+  display: block;
+  align-items:center;
+  text-align:center;
+  background-color:red;
+  margin: 0 0 10px 0;
+}
+
+label {
+  padding: 0 10px 10px 10px;
+  font-family: "Titillium Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}

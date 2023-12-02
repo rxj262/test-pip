@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stacked_button_color
+    - paragraphs.paragraphs_type.stacked_buttons
+  module:
+    - options
+id: paragraph.stacked_buttons.field_stacked_button_color
+field_name: field_stacked_button_color
+entity_type: paragraph
+bundle: stacked_buttons
+label: 'Button Color Selector'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

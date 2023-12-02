@@ -1,0 +1,10 @@
+.full-width-white-bg {
+	background: $white;
+	margin: 0 calc(50% - 50vw);
+}
+.full-width-gray-bg {
+	background: $lighter-gray;
+	margin: 0 calc(50% - 50vw);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

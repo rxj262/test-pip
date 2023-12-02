@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_well_color_selector
+    - paragraphs.paragraphs_type.well
+  module:
+    - options
+id: paragraph.well.field_well_color_selector
+field_name: field_well_color_selector
+entity_type: paragraph
+bundle: well
+label: 'Color Selector'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

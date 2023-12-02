@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experiential_email_address
+    - node.type.experiential_education_submissio
+id: node.experiential_education_submissio.field_experiential_email_address
+field_name: field_experiential_email_address
+entity_type: node
+bundle: experiential_education_submissio
+label: 'Contact Email Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

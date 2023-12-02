@@ -1,0 +1,6 @@
+name: CWRU Publications
+description: Publications from Digital Measures for weatherhead
+type: module
+package: custom
+version: 1.0
+core_version_requirement: '>=9'

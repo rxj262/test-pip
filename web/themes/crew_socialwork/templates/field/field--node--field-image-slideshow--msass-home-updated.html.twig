@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_field()
+ */
+#}
+<div class="hero hero--home">
+  <div class="hero__video-container">
+   {#  <video autoplay="autoplay" playsinline="playsinline" poster="/law/{{ directory }}/images/20191029-Drone-Video1.png" class="hero__video" title="Introductory video about the Jack, Joseph and Morton Mandel School of Applied Social Sciences" muted loop="loop" width="560" height="315" src="https://www.youtube.com/Ul1t1VNypkk">
+      <source src="/law/{{ directory }}/video/20191029-Drone-Video1.mp4" type="video/mp4" />
+      <source src="/law/{{ directory }}/video/20191029-Drone-Video1.webm" type="video/webm" />
+      <img src="/law/{{ directory }}/images/20191029-Drone-Video1.png" alt="Flying towards the law school building" />
+    </video> #}
+    {# <iframe width="560" height="315" src="https://www.youtube.com/embed/Ul1t1VNypkk?autoplay=1&playlist=Ul1t1VNypkk&loop=1&controls=0&modestbranding=1&rel=0" class="hero__video" title="Introductory video about the Jack, Joseph and Morton Mandel School of Applied Social Sciences" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> #}
+    {# <iframe width="560" height="315" class="hero__video" src="https://www.youtube-nocookie.com/embed/Ul1t1VNypkk?autoplay=1&playlist=Ul1t1VNypkk&loop=1&controls=0&modestbranding=1&showinfo=0&autohide=1&rel=0" title="Introductory video about the Jack, Joseph and Morton Mandel School of Applied Social Sciences" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> #}
+    <iframe src="https://player.vimeo.com/video/687145908?h=010de77f3c&badge=0&autopause=0&player_id=0&app_id=58479&muted=1&autoplay=1&controls=0&loop=1&byline=0&playsinline=1" class="hero__video" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; loop; controls; byline;" title="Introductory video about the Jack, Joseph and Morton Mandel School of Applied Social Sciences"></iframe>
+    {# <video class="hero__video" title="Introductory video about the Jack, Joseph and Morton Mandel School of Applied Social Sciences" autoplay="true" loop="true" playsinline="true" width="560" height="315">
+    <source src="https://player.vimeo.com/video/686885515?h=778c056486&badge=0&autopause=0&player_id=0&app_id=58479" type="video/mp4" playsinline autoplay muted loop>
+    </video> #}
+    <div class="hero-video-overlay"></div>
+  </div>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+</div>
+

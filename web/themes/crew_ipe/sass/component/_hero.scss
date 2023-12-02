@@ -1,0 +1,110 @@
+.field--name-field-fw-hero-headline,
+.field--name-field-fw-hero-subhead {
+  text-align: center;
+  color: $white;
+}
+.field--name-field-fw-hero-headline {
+  font-size: 72px;
+  font-weight: bold;
+  @media #{$medium-max} { font-size: 62px; }
+  @media #{$small-max}  { font-size: 42px; }
+}
+.field--name-field-fw-hero-subhead {
+  font-size: 45px;
+  @media #{$medium-max} { font-size: 32px; }
+  @media #{$small-max}  { font-size: 26px; }
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  &.hero--home {
+    justify-content: center;
+    height: 85vh;
+    color: $white;
+    overflow: hidden;
+    position: relative;
+    .hero__video-container {
+      position: absolute;
+      z-index: -100;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      .hero__video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.hero__title {
+  position: absolute;
+  z-index: 1;
+}
+
+.ipe-homepage {
+  .hero {
+    min-height: auto;
+    .navbar {
+      position: relative;
+    }
+  }
+  .hero.hero--home {
+    justify-content: inherit;
+    height: auto;
+    @media (max-width: $medium)  {
+      justify-content: flex-end;
+    }
+  }
+  .hero__title {
+    padding: 0;
+    position: relative;
+    z-index: 0;
+    .field--name-field-fw-hero-headline {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-45px);
+      width: 100%;
+      text-align: center;
+      text-shadow: 4px 4px $blk;
+      z-index: 999;
+      line-height: 1.1;
+      @media (max-width: $large)  {
+        top: 35%;
+        transform: translateY(-35px);
+      }
+      @media (max-width: $medium)  {
+        top: 50%;
+        transform: translateY(-50px);
+      }
+      @media (max-width: $phone)  {
+        font-size: 28px;
+        top: 65%;
+        transform: translateY(-50px);
+      }
+    }
+    .field--name-field-fw-hero-image {
+      background-color: $blk;
+      img {
+        opacity: .7;
+      }
+    }
+  }
+}

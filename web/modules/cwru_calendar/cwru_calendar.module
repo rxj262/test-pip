@@ -1,0 +1,143 @@
+<?php
+
+/**
+ * @file
+ * Contains cwru_calendar.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+
+/**
+ * Implements hook_help().
+ */
+function cwru_calendar_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cwru_calendar module.
+    case 'help.page.cwru_calendar':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Events Calendar based on FullCalendar') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cwru_calendar_theme() {
+  return [
+    'cwru_calendar' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function cwru_calendar_page_attachments_alter(&$page) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    if ($node->hasField('field_robust_3_page_ref')) {
+      if(!empty($node->field_robust_3_page_ref->getValue())) {
+        $paragraph = $node->field_robust_3_page_ref->getValue();
+        foreach ( $paragraph as $element) {
+          $paragraph = \Drupal\paragraphs\Entity\Paragraph::load($element['target_id']);
+          if ($paragraph->getParagraphType()->id() == 'calendar') {
+            if ($paragraph->hasField("field_event_feed_link") && !empty($paragraph->get("field_event_feed_link"))) {
+              $feed_url = $paragraph->get('field_event_feed_link')->getValue()[0]['uri'];
+              $feed = simplexml_load_file($feed_url)->channel;
+
+              $calendar_events = array();
+              foreach ($feed->item as $item) {
+                $event_link = $item->link->__toString();
+                $event_detail = $item->description->__toString();
+
+                // concatenate and format event START date/time
+                $start_time = $item->eventDate . ' ' . $item->eventTime;
+                $start_time = DateTime::createFromFormat('m/d/Y h:i A', $start_time);
+                $start_time = $start_time->format(DateTime::ATOM);
+
+                // concatenate and format event END date/time
+                $end_time = $item->eventEndDate . ' ' . $item->eventEndTime;
+                $end_time = DateTime::createFromFormat('m/d/Y h:i A', $end_time);
+                $end_time = $end_time->format(DateTime::ATOM);
+                $calendar_events[] = array('title'=>$item->title->__toString(), 'description'=>$event_detail, 'start'=>$start_time, 'end'=>$end_time, 'url'=>$event_link);
+              }
+
+              //              $calendar_events[] = array('allDay'=>true, 'title'=>'multiday event', 'start'=>'2019-02-06T13:00:00+00:00', 'end'=>'2019-02-08T13:00:00+00:00', 'imageurl'=>'https://community.case.edu/upload/cwru/2018/s3_image_upload_614024_169a0fd6d47c4bf89f895667fca686ad_116123940.png');
+              $page['#attached']['library'][] = 'crew/calendar';
+              $page['#attached']['drupalSettings']['crew']['calendar'] = $calendar_events;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_PARAGRAPH_TYPE().
+ * NOTE: The function below prepares a render array with a full pager, and only displays when Javascript is turned off. See the corresponding twig template for details.
+ */
+function cwru_calendar_preprocess_paragraph__calendar(&$variables) {
+  if (!empty($variables['paragraph']->get('field_event_feed_link')->getString())) {
+
+    // Clear cache on pages with calendar in order to display most up to date events.
+    \Drupal::service('page_cache_kill_switch')->trigger();
+
+    $cid = 'custom_calendar' . \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $calendar_events = NULL;
+
+    // this whole method fires 3 times when a calendar is on a page, so we cache the calendar_events for 10 seconds to prevent slowdown from 2nd and 3rd runs
+    if ($cache = \Drupal::cache('data')->get($cid)) {
+      $calendar_events = $cache->data;
+    } else {
+      $feed_url = $variables['paragraph']->get('field_event_feed_link')->getString();
+      $feed = simplexml_load_file($feed_url)->channel;
+      $calendar_events = array();
+      foreach ($feed->item as $item) {
+        $event_link = $item->link->__toString();
+        $event_detail = $item->description->__toString();
+        $start_time = $item->eventDate . ' ' . $item->eventTime;
+        $end_time = $item->eventEndDate . ' ' . $item->eventEndTime;
+        $calendar_events[] = array('title'=>$item->title->__toString(), 'description'=>$event_detail, 'start'=>$start_time, 'end'=>$end_time, 'url'=>$event_link);
+      }
+      $expiration = (new DateTime())->getTimestamp() + 10; //Change feeds data to be cached for every 10 sec.
+      \Drupal::cache('data')->set($cid, $calendar_events, $expiration);
+    }
+
+    $feed_arr = array();
+
+    for ($i = 0; $i < count($calendar_events); $i++ ) {
+      $link = $calendar_events[$i]['url'];
+      $title = $calendar_events[$i]['title'];
+      $start_time = $calendar_events[$i]['start'];
+      $end_time = $calendar_events[$i]['end'];
+
+      $feed_arr[$i] = [
+        '#markup' => new \Drupal\Component\Render\FormattableMarkup('<h2 class="font-medium"><a target="_blank" href="@url">'.$title.'</a></h2><div>'.$start_time.' - '.$end_time.'</div>', ['@url' => $link]),
+        '#wrapper_attributes' => ['class' => 'media'],
+      ];
+    }
+
+    $pager_manager = \Drupal::service('pager.manager');
+    $items_per_page = 20;
+    $current_page = $pager_manager->createPager(count($feed_arr), $items_per_page)->getCurrentPage();
+    $chunks = array_chunk($feed_arr, $items_per_page, TRUE);
+
+    $render = [];
+    $render[] = [
+      '#theme' => 'item_list',
+      '#list_type' => 'ul',
+      '#items' => $chunks[$current_page],
+      '#attributes' => ['class' => 'mv-20 media-list']
+    ];
+    $render[] = ['#type' => 'pager'];
+    $variables['content']['feeds'] = $render;
+  }
+}

@@ -1,0 +1,40 @@
+.field--name-field-our-people-ref {
+  @include pattern-background;
+}
+
+.our-people-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .field-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include size("small") {flex-direction: column;}
+  }
+  .image-wrapper {
+    @include size("small") {margin-bottom: -8px;}
+  }
+  img {
+    width: 350px;
+    height: auto;
+    @include size("small") {width: 100%;}
+  }
+  .description {
+    background-color: $white;
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+    @include size("small") {margin: 0;}
+    .item-list ul {
+      list-style: none;
+      li {
+        margin: 0;
+        .paragraph--type--uga-question-answer {
+          .field--name-field-uga-pp-question {
+            font-family: $arizona-bold;
+          }
+        }
+      }
+    }
+  }
+}

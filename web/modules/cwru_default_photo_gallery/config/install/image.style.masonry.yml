@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: masonry
+label: masonry
+effects:
+  a341514c-f1f0-410b-aa1b-affc9bb684b4:
+    uuid: a341514c-f1f0-410b-aa1b-affc9bb684b4
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: true

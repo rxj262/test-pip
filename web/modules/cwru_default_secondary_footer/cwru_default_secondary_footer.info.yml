@@ -1,0 +1,20 @@
+name: 'Secondary Footer'
+description: 'Provides Secondary Footer content type and related configuration. '
+type: module
+dependencies:
+  - block
+  - content_moderation
+  - cwru_default_social
+  - entity_reference_revisions
+  - field
+  - field_group
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - telephone
+  - user
+  - views
+version: '1.1'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

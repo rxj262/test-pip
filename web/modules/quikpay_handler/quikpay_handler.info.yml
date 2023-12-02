@@ -1,0 +1,7 @@
+name: 'QuikPay Handler'
+type: module
+description: 'Custom handler for Quikpay webforms'
+package: 'Custom'
+core_version_requirement: '>=9'
+dependencies:
+  - session_based_temp_store:session_based_temp_store

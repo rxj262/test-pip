@@ -1,0 +1,36 @@
+.field--name-field-icon-subfeature-ref {
+  display: flex;
+  flex-wrap: wrap;
+  @media #{$medium-max} { flex-direction: column }
+  & > .field--item {
+    flex: 1;
+    margin-bottom: 22px;
+    margin-right: 44px;
+    @media #{$medium-max} { margin-right: 0 }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+  }
+}
+.paragraph--type--icon-subfeature {
+  .field--name-field-icon-sub-icon-pick-ref {
+    float: right;
+    margin-left: 1em;
+    i {
+      font-size: 3em;
+      color: $cwru-blue;
+    }
+  }
+  .field--name-field-icon-subfeature-link a {
+    @include button-blue;
+  }
+}
+.field--name-field-icon-subfeature-title {
+  color: $cwru-blue;
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 10px;
+}

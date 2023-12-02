@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fax_number
+    - node.type.biography
+  module:
+    - telephone
+id: node.biography.field_fax_number
+field_name: field_fax_number
+entity_type: node
+bundle: biography
+label: 'Fax Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

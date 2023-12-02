@@ -1,0 +1,76 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.external_rss.field_external_rss_button
+    - field.field.paragraph.external_rss.field_external_rss_gcal
+    - field.field.paragraph.external_rss.field_external_rss_items_to_disp
+    - field.field.paragraph.external_rss.field_external_rss_sources
+    - field.field.paragraph.external_rss.field_external_rss_title
+    - field.field.paragraph.external_rss.field_external_rss_type
+    - paragraphs.paragraphs_type.external_rss
+  module:
+    - link
+    - options
+id: paragraph.external_rss.default
+targetEntityType: paragraph
+bundle: external_rss
+mode: default
+content:
+  field_external_rss_button:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 255
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_external_rss_gcal:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_external_rss_items_to_disp:
+    weight: 2
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_external_rss_sources:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 255
+      url_plain: true
+      url_only: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_external_rss_title:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_external_rss_type:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

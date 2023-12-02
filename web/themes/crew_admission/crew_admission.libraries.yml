@@ -1,0 +1,23 @@
+global-styling:
+  version: 1.9
+  css:
+    theme:
+      includes/bootstrap/bootstrap.min.css: {}
+      css/style.css: {}
+      'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css': { type: external }
+      'https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900': { type: external, minified: true }
+
+  js:
+    includes/bootstrap/bootstrap.min.js: {}
+    js/functions.js: {}
+    js/rellax.min.js: {}
+    '//webapps.case.edu/t4/rave/jsonp.pl?callback=raveCallback': { type: external }
+    'https://www.youvisit.com/tour/Embed/js3': { type: external, attributes: { defer: defer, async: async }}
+  dependencies:
+    - core/jquery
+
+map-setup:
+  version: 1.0
+  js:
+    'https://maps.googleapis.com/maps/api/js?key=AIzaSyCgstdrPSFLyp6mNY7phA78GZllQZuUcYs': { type: external }
+    js/map.js: {}

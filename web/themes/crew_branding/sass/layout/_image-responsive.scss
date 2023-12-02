@@ -1,0 +1,25 @@
+//////////////////////////////////
+// Responsive Image Rules ////////
+//////////////////////////////////
+
+article.embedded-entity,
+.media-image-container {
+	position: relative;
+	.field--name-field-caption {
+	    position: relative;
+	    margin-top: -20px;
+	    color: $white;
+	    font-size: .5em;
+	    text-shadow: 1px 1px 1px $blk;
+	    padding: 0px 10px;
+	    font-weight: normal;
+	    float: right;
+	    margin-top: -18px;
+	    background: rgba(0,0,0,.7);
+	}
+}
+
+.fluid-image-holder img {
+	width: 100%;
+	height: auto;
+}

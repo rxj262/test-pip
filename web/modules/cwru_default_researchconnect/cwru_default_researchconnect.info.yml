@@ -1,0 +1,22 @@
+name: ResearchConnect
+description: 'Provides ResearchConnect content type and related configuration. This is to be used to add researchers to the Cancer Disparities Research page on the Cancer Center Website'
+type: module
+dependencies:
+  - content_moderation
+  - cwru_default_drupal_site
+  - field
+  - field_group
+  - ief_table_view_mode
+  - link
+  - media
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - telephone
+  - text
+  - user
+  - workflows
+version: '1.03'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

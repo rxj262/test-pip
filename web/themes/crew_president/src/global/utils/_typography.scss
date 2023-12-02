@@ -1,0 +1,44 @@
+// Type
+//
+// Custom is loaded via Google Fonts.
+//
+// Markup:
+// <h1>This is Header 1</h1>
+// <h2>This is Header 2</h2>
+// <h3>This is Header 3</h3>
+// <h4>This is Header 4</h4>
+// <h5>This is Header 5</h5>
+// <h6>This is Header 6</h6>
+// <p>This is a normal paragraph</p>
+// <p><i>This is an italicized paragraph</i></p>
+// <p><strong>This is a bolded paragraph</strong></p>
+//
+// Weight: 999
+//
+// Style guide: Type
+/*
+@mixin font-stack-titillium {
+  font-family: 'Titillium Web', 'Arial', sans-serif;
+}
+*/
+
+@mixin font-arizona {
+  font-family: 'Arizona', 'Arial', sans-serif;
+}
+
+@mixin text-shadow($color: $white) {
+  text-shadow: -2px -2px 0 $color, 2px -2px 0 $color, -2px 2px 0 $color, 2px 2px 0 $color;
+}
+
+// Font sizes
+$font-size-regular: 1em; //20px
+$font-size-medium: 1.2em; //24px
+$font-size-large: 1.6em; //32px
+$font-size-larger: 1.8em; //36px
+$font-size-jumbo: 3em; //60px
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;

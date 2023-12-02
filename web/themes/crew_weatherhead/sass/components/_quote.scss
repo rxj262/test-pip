@@ -1,0 +1,202 @@
+.paragraph--type--quote{ 
+    padding-top: 1em;
+    padding-bottom: 2em;
+
+    .field--name-field-quote{
+        font-family: $arizona-italic;
+        font-size: 2rem;
+        line-height: 1.5;
+        padding-bottom:2.31rem;
+        padding-left: 7.6rem;
+        padding-top: 1.8rem;
+        padding-right: 3rem;
+        position: relative;
+        &::before{
+            content: '“';
+            color: $link-blue;
+            font-weight: 400;
+            font-size: 9rem;
+            line-height: 1;
+            display: block;
+            padding-left: 3rem;
+            background-image: url("../images/hero-title-pattern.svg");
+            background-size: cover; 
+            position: absolute;
+            height: 6rem;
+            width: 6rem;
+            left: 0;
+            top: 0;
+        }
+        
+    }
+    .field--name-field-quote-citation{
+        font-family: $arizona;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1;
+        padding-right: 3rem;
+        text-align: right;
+        position: relative;
+        &::before{
+            content:"\2014 \00a0";
+        }
+        &::after{
+            content: "";
+            background-image: url("../images/blue-triangle.svg");
+            background-size: cover; 
+            position: absolute;
+            height: 3rem;
+            width: 3rem;
+            top: 0;
+            right: 0;
+        }       
+    }
+    .quote-only-container {
+        width: 100%;
+    }
+    
+}
+
+@media #{$smallx-min} {
+    .paragraph--type--quote { 
+        padding-bottom: 3.5em;
+        .field--name-field-quote{
+            font-size: 2.3rem;
+            padding-left: 15.5rem;
+            padding-top: 7.4rem;
+            padding-right: 6rem;
+            &::before{
+                font-size: 17rem;
+                line-height: 1.2;
+                padding-left: 7.5rem;
+                height: 14.8rem;
+                width: 14.8rem;
+            }
+        }
+
+        .field--name-field-quote-citation{
+            font-size: 2.2rem;
+            padding-right: 10rem;
+            &::after{
+                height: 7.3rem;
+                width: 7.3rem;
+                
+            }
+        }
+    }
+}
+
+@media #{$small-min} {
+
+    .paragraph--type--quote { 
+        padding-bottom: 4.5em;
+        .field--name-field-quote{
+            font-size: 2.3rem;
+            padding-left: 23.5rem;
+            padding-top: 10.5rem;
+            &::before{
+                font-size: 20rem;
+                line-height: 1.5;
+                padding-left: 14rem;
+                height: 20rem;
+                width: 20rem;
+            }
+        }
+
+        .field--name-field-quote-citation{
+            font-size: 2.2rem;
+            &::after{
+                height: 11.8rem;
+                width: 11.8rem;
+                top: -2.5rem;
+            }
+        }
+        
+        .photo-quote-citation-container{
+            .field--name-field-quote-image{
+                .media-image-container{
+                    
+                    background-size: 23.8rem;
+                    
+                }
+            }
+           
+        }
+    }
+    
+}
+
+@media #{$medium-min} {
+    .paragraph--type--quote { 
+        padding-bottom: 3.5em;
+        .field--name-field-quote{
+            font-size: 2.3rem;
+            padding-left: 15.5rem;
+            padding-top: 6rem;
+            padding-right: 6rem;
+            &::before{
+                font-size: 17rem;
+                line-height: 1.2;
+                padding-left: 7.5rem;
+                height: 14.8rem;
+                width: 14.8rem;
+            }
+        }
+
+        .field--name-field-quote-citation{
+            font-size: 2.2rem;
+            padding-right: 6rem;
+            &::after{
+                height: 7.3rem;
+                width: 7.3rem;
+                top: 0;
+            }
+        }
+    }
+
+}
+
+@media #{$large-min} {
+
+    .paragraph--type--quote { 
+        padding-bottom: 3.75em;
+        
+        .field--name-field-quote{
+            font-size: 2.3rem;
+            padding-left: 23.5rem;
+            padding-top: 10.5rem;
+            padding-right: 10rem;
+            &::before{
+                font-size: 20rem;
+                line-height: 1.5;
+                padding-left: 14rem;
+                height: 20rem;
+                width: 20rem;
+            }
+        }
+
+        .field--name-field-quote-citation{
+            font-size: 2.2rem;
+            padding-right: 10rem;
+            &::after{
+                height: 10rem;
+                width: 10rem;
+                top: -2.5rem;
+            }
+        }
+        .photo-quote-citation-container{
+            .field--name-field-quote-image{
+                .media-image-container{
+                    
+                    background-size: 23.8rem;
+                    
+                }
+            }
+           
+        }
+    }
+}
+
+
+
+            

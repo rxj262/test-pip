@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="496px" height="1000px" viewBox="0 0 496 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>road</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M209.207379,0 C153.323511,76 113.325376,175.900077 109.414757,250 C98.4375688,458 309,500 309,750 C309,830.666667 264.09332,923 209.207379,1000" id="path-1"></path>
+        <filter x="-56.3%" y="-12.5%" width="202.5%" height="126.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="82.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="-20" dy="10" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="82.5" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="-20" dy="10" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.258823529   0 0 0 0 0.258823529   0 0 0 0 0.258823529  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="road" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Line" stroke-linecap="square" stroke-linejoin="round">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use stroke="#000000" stroke-width="165" xlink:href="#path-1"></use>
+            <use stroke="#FFFFFF" stroke-width="160" xlink:href="#path-1"></use>
+            <use stroke="#646464" stroke-width="150" xlink:href="#path-1"></use>
+        </g>
+        <path d="M209.207379,0 C153.323511,76 113.325376,175.900077 109.414757,250 C98.4375688,458 309,500 309,750 C309,830.666667 264.09332,923 209.207379,1000" id="Line-Copy" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square" stroke-linejoin="round" stroke-dasharray="37"></path>
+        <g id="Tree4-Copy" transform="translate(27.000000, 599.000000)">
+            <ellipse id="Oval" fill="#3F8A70" cx="38.5" cy="55" rx="38.5" ry="34"></ellipse>
+            <ellipse id="Oval-Copy" fill="#3F8A70" cx="59.5" cy="62" rx="38.5" ry="34"></ellipse>
+            <ellipse id="Oval-Copy-2" fill="#3F8A70" cx="61.5" cy="34" rx="34.5" ry="34"></ellipse>
+            <path d="M59,95.996502 L59,0.087900622 C59.8256322,0.0296342532 60.6593045,0 61.5,0 C71.0497763,0 79.6933063,3.82386815 85.9400939,10.0027096 C104.791101,10.2349543 120,25.3671036 120,44 C120,56.4832861 113.17355,67.3952767 102.998883,73.3081487 C102.999624,73.372016 103,73.4359654 103,73.5 C103,82.6126984 95.3888407,90 86,90 C84.0275099,90 82.1334818,89.6739445 80.3720081,89.0743349 C74.576768,93.4201017 67.3440984,96 59.5,96 C59.3330537,96 59.1663844,95.9988314 59,95.996502 Z" id="Combined-Shape" fill="#35735E"></path>
+            <path d="M59.5,142.005849 L59.5,88.6496138" id="Line-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M59.5,88.6496138 L73,68" id="Line-2-Copy" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M46.5,88.6496138 L60,68" id="Line-2-Copy-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round" transform="translate(53.000000, 78.500000) scale(-1, 1) translate(-53.000000, -78.500000) "></path>
+        </g>
+        <g id="Tree-Copy" transform="translate(10.000000, 681.000000)">
+            <polygon id="Triangle" fill="#35735E" points="30 0 30 39 8 39"></polygon>
+            <polygon id="Triangle-Copy" fill="#35735E" points="30 12 30 59.8636364 3 59.8636364"></polygon>
+            <polygon id="Triangle-Copy-2" fill="#35735E" points="30 30 30 83.1818182 0 83.1818182"></polygon>
+            <polygon id="Triangle-Copy-5" fill="#2E6350" transform="translate(41.000000, 19.500000) scale(-1, 1) translate(-41.000000, -19.500000) " points="52 0 52 39 30 39"></polygon>
+            <polygon id="Triangle-Copy-4" fill="#2E6350" transform="translate(43.500000, 35.931818) scale(-1, 1) translate(-43.500000, -35.931818) " points="57 12 57 59.8636364 30 59.8636364"></polygon>
+            <polygon id="Triangle-Copy-3" fill="#2E6350" transform="translate(45.000000, 56.590909) scale(-1, 1) translate(-45.000000, -56.590909) " points="60 30 60 83.1818182 30 83.1818182"></polygon>
+            <path d="M29.5,120.315141 L29.5,59.2343576" id="Line-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+        </g>
+        <g id="Tree" transform="translate(49.000000, 703.000000)">
+            <polygon id="Triangle" fill="#35735E" points="30 0 30 39 8 39"></polygon>
+            <polygon id="Triangle-Copy" fill="#35735E" points="30 12 30 59.8636364 3 59.8636364"></polygon>
+            <polygon id="Triangle-Copy-2" fill="#35735E" points="30 30 30 83.1818182 0 83.1818182"></polygon>
+            <polygon id="Triangle-Copy-5" fill="#2E6350" transform="translate(41.000000, 19.500000) scale(-1, 1) translate(-41.000000, -19.500000) " points="52 0 52 39 30 39"></polygon>
+            <polygon id="Triangle-Copy-4" fill="#2E6350" transform="translate(43.500000, 35.931818) scale(-1, 1) translate(-43.500000, -35.931818) " points="57 12 57 59.8636364 30 59.8636364"></polygon>
+            <polygon id="Triangle-Copy-3" fill="#2E6350" transform="translate(45.000000, 56.590909) scale(-1, 1) translate(-45.000000, -56.590909) " points="60 30 60 83.1818182 30 83.1818182"></polygon>
+            <path d="M29.5,120.315141 L29.5,59.2343576" id="Line-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+        </g>
+        <g id="Tree3" transform="translate(346.000000, 127.000000)">
+            <polygon id="Triangle" fill="#35735E" points="44 0 44 57 12 57"></polygon>
+            <polygon id="Triangle-Copy" fill="#35735E" points="43 17 43 87 4 87"></polygon>
+            <polygon id="Triangle-Copy-2" fill="#35735E" points="44 44 44 121 0 121"></polygon>
+            <polygon id="Triangle-Copy-5" fill="#2E6350" transform="translate(59.000000, 28.500000) scale(-1, 1) translate(-59.000000, -28.500000) " points="75 0 75 57 43 57"></polygon>
+            <polygon id="Triangle-Copy-4" fill="#2E6350" transform="translate(63.500000, 52.000000) scale(-1, 1) translate(-63.500000, -52.000000) " points="83 17 83 87 44 87"></polygon>
+            <polygon id="Triangle-Copy-3" fill="#2E6350" transform="translate(65.000000, 82.500000) scale(-1, 1) translate(-65.000000, -82.500000) " points="87 44 87 121 43 121"></polygon>
+            <path d="M42.5,175.005849 L42.5,86.3401965" id="Line-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+        </g>
+        <g id="Tree4" transform="translate(365.000000, 188.000000)">
+            <ellipse id="Oval" fill="#3F8A70" cx="38.5" cy="55" rx="38.5" ry="34"></ellipse>
+            <ellipse id="Oval-Copy" fill="#3F8A70" cx="59.5" cy="62" rx="38.5" ry="34"></ellipse>
+            <ellipse id="Oval-Copy-2" fill="#3F8A70" cx="61.5" cy="34" rx="34.5" ry="34"></ellipse>
+            <path d="M59,95.996502 L59,0.087900622 C59.8256322,0.0296342532 60.6593045,0 61.5,0 C71.0497763,0 79.6933063,3.82386815 85.9400939,10.0027096 C104.791101,10.2349543 120,25.3671036 120,44 C120,56.4832861 113.17355,67.3952767 102.998883,73.3081487 C102.999624,73.372016 103,73.4359654 103,73.5 C103,82.6126984 95.3888407,90 86,90 C84.0275099,90 82.1334818,89.6739445 80.3720081,89.0743349 C74.576768,93.4201017 67.3440984,96 59.5,96 C59.3330537,96 59.1663844,95.9988314 59,95.996502 Z" id="Combined-Shape" fill="#35735E"></path>
+            <path d="M59.5,142.005849 L59.5,88.6496138" id="Line-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M59.5,88.6496138 L73,68" id="Line-2-Copy" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M46.5,88.6496138 L60,68" id="Line-2-Copy-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round" transform="translate(53.000000, 78.500000) scale(-1, 1) translate(-53.000000, -78.500000) "></path>
+        </g>
+        <g id="Tree5" transform="translate(267.000000, 177.000000)">
+            <ellipse id="Oval" fill="#3F8A70" cx="37" cy="53" rx="37" ry="33"></ellipse>
+            <ellipse id="Oval-Copy" fill="#3F8A70" cx="58" cy="60" rx="37" ry="33"></ellipse>
+            <ellipse id="Oval-Copy-2" fill="#3F8A70" cx="59.5" cy="33" rx="33.5" ry="33"></ellipse>
+            <path d="M57,92.9966113 L57,0.0851537276 C57.7985623,0.0287081828 58.604901,0 59.4180328,0 C68.6547017,0 77.0148373,3.70437227 83.0568121,9.69012495 C101.289753,9.91511201 116,24.5743816 116,42.625 C116,54.7181834 109.397368,65.2891743 99.5562969,71.0172691 C99.5570135,71.0791405 99.557377,71.1410915 99.557377,71.203125 C99.557377,80.0310515 92.195764,87.1875 83.1147541,87.1875 C81.2069358,87.1875 79.375007,86.8716337 77.6712866,86.2907619 C72.0660543,90.5007236 65.0705214,93 57.4836066,93 C57.3221339,93 57.1609292,92.9988679 57,92.9966113 Z" id="Combined-Shape" fill="#35735E"></path>
+            <path d="M57.5,137.042 L57.5,85.6259914" id="Line-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M57.5,85.6662988 L71,66" id="Line-2-Copy" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M44.5,85.6662988 L58,66" id="Line-2-Copy-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round" transform="translate(51.000000, 76.000000) scale(-1, 1) translate(-51.000000, -76.000000) "></path>
+        </g>
+        <g id="Tree6" transform="translate(231.000000, 165.000000)">
+            <ellipse id="Oval" fill="#3F8A70" cx="40" cy="58" rx="40" ry="36"></ellipse>
+            <ellipse id="Oval-Copy" fill="#3F8A70" cx="63" cy="65" rx="40" ry="36"></ellipse>
+            <ellipse id="Oval-Copy-2" fill="#3F8A70" cx="64.5" cy="36" rx="36.5" ry="36"></ellipse>
+            <path d="M62,100.99632 L62,0.0924787794 C62.866237,0.0311777039 63.7409096,0 64.6229508,0 C74.6423882,0 83.7110099,4.02302795 90.2650165,10.5236841 C110.043122,10.7680249 126,26.6883069 126,46.2916667 C126,59.4251239 118.837823,70.9054474 108.162763,77.1262815 C108.16354,77.1934752 108.163934,77.2607553 108.163934,77.328125 C108.163934,86.9154431 100.178456,94.6875 90.3278689,94.6875 C88.258371,94.6875 86.271194,94.3444624 84.4230905,93.7136231 C78.3428386,98.285732 70.7544639,101 62.5245902,101 C62.3494334,101 62.1745672,100.998771 62,100.99632 Z" id="Combined-Shape" fill="#35735E"></path>
+            <path d="M62.5,148.951623 L62.5,92.6850472" id="Line-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M62.5357143,93.6329287 L77,72" id="Line-2-Copy" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M48.5357143,93.6329287 L63,72" id="Line-2-Copy-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round" transform="translate(55.500000, 83.000000) scale(-1, 1) translate(-55.500000, -83.000000) "></path>
+        </g>
+        <g id="Tree2" transform="translate(225.000000, 234.000000)">
+            <polygon id="Triangle" fill="#35735E" points="30 0 30 39 8 39"></polygon>
+            <polygon id="Triangle-Copy" fill="#35735E" points="30 12 30 59.8636364 3 59.8636364"></polygon>
+            <polygon id="Triangle-Copy-2" fill="#35735E" points="30 30 30 83.1818182 0 83.1818182"></polygon>
+            <polygon id="Triangle-Copy-5" fill="#2E6350" transform="translate(41.000000, 19.500000) scale(-1, 1) translate(-41.000000, -19.500000) " points="52 0 52 39 30 39"></polygon>
+            <polygon id="Triangle-Copy-4" fill="#2E6350" transform="translate(43.500000, 35.931818) scale(-1, 1) translate(-43.500000, -35.931818) " points="57 12 57 59.8636364 30 59.8636364"></polygon>
+            <polygon id="Triangle-Copy-3" fill="#2E6350" transform="translate(45.000000, 56.590909) scale(-1, 1) translate(-45.000000, -56.590909) " points="60 30 60 83.1818182 30 83.1818182"></polygon>
+            <path d="M29.5,120.315141 L29.5,59.2343576" id="Line-2" stroke="#5E5E5E" stroke-width="4" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

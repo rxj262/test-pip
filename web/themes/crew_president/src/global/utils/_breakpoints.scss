@@ -1,0 +1,33 @@
+//===========================
+// Breakpoints
+//===========================
+
+$bp-xxsm: 30em;
+$bp-xsm: 40em;
+$bp-sm: 55em;
+$bp-mobile-menu:62em;
+$bp-md: 64em;
+$bp-lg: 75em;
+
+
+@mixin responsive-invisibility($parent) {
+  #{$parent} {
+    display: none !important;
+  }
+}
+
+// @media (max-width: $bp-sm) {
+//   @include responsive-invisibility('.hidden-xs');
+// }
+
+// @media (min-width: $bp-sm) and (max-width: $bp-md) {
+//   @include responsive-invisibility('.hidden-sm');
+// }
+
+@media (min-width: $bp-md) and (max-width: $bp-lg) {
+  @include responsive-invisibility('.hidden-md');
+}
+
+@media (min-width: $bp-lg) {
+  @include responsive-invisibility('.hidden-lg');
+}

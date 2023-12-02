@@ -1,0 +1,144 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage_text_heavy.field_hero_txthvy_ref
+    - field.field.node.homepage_text_heavy.field_icon_subfeature_ref
+    - field.field.node.homepage_text_heavy.field_intro_text_ref
+    - field.field.node.homepage_text_heavy.field_meta_tags
+    - node.type.homepage_text_heavy
+    - workflows.workflow.ac84b3e9
+  module:
+    - content_moderation
+    - field_group
+    - metatag
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_all_options:
+      children:
+        - group_image_slideshow
+        - group_intro_text
+        - group_subfeature
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: 'All Options'
+    group_image_slideshow:
+      children:
+        - field_hero_txthvy_ref
+      parent_name: group_all_options
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Image/Slideshow
+    group_subfeature:
+      children:
+        - field_icon_subfeature_ref
+      parent_name: group_all_options
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Subfeature
+    group_intro_text:
+      children:
+        - field_intro_text_ref
+      parent_name: group_all_options
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Intro Text'
+id: node.homepage_text_heavy.default
+targetEntityType: node
+bundle: homepage_text_heavy
+mode: default
+content:
+  field_hero_txthvy_ref:
+    type: entity_reference_paragraphs
+    weight: 31
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_icon_subfeature_ref:
+    type: entity_reference_paragraphs
+    weight: 32
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_intro_text_ref:
+    type: entity_reference_paragraphs
+    weight: 23
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_meta_tags:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

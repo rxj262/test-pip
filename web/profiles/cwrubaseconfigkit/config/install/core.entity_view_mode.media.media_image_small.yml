@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.media_image_small
+label: 'Media Image - 2 (Small)'
+targetEntityType: media
+cache: true

@@ -1,0 +1,24 @@
+crew-thinkbox.screen-lg-max:
+  label: screen-lg-max
+  mediaQuery: 'all and (max-width: 1200px)'
+  weight: 1
+  multipliers:
+    - 1x
+crew-thinkbox.screen-md-max:
+  label: screen-md-max
+  mediaQuery: 'all and (max-width: 991px)'
+  weight: 1
+  multipliers:
+    - 1x
+crew-thinkbox.screen-sm-max:
+  label: screen-sm-max
+  mediaQuery: 'all and (max-width: 768px)'
+  weight: 1
+  multipliers:
+    - 1x
+crew-thinkbox.screen-xs-max:
+  label: screen-xs-max
+  mediaQuery: 'all and (max-width: 480px)'
+  weight: 1
+  multipliers:
+    - 1x

@@ -1,0 +1,13 @@
+name: Footer
+description: 'CWRU Footer View'
+type: module
+dependencies:
+  - block
+  - cwru_default_site_information
+  - node
+  - system
+  - user
+  - views
+version: '1.01'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

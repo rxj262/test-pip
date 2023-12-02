@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a single views grouping.
+ *
+ * Available variables:
+ * - view: The view object.
+ * - grouping: The grouping instruction.
+ * - grouping_level: A number indicating the hierarchical level of the grouping.
+ * - title: The group heading.
+ * - content: The content to be grouped.
+ * - rows: The rows returned from the view.
+ *
+ * @see template_preprocess_views_view_grouping()
+ *
+ * @ingroup themeable
+ */
+#}
+<div class='sub-accordion-section' >
+  <div class='sub-accordion-section-title'>
+    <p class="h3"><a class='accordion-toggle accordion=toggle-styled collapsed' role='tab' data-toggle='collapse'>{{ title }}</a></p>
+  </div>
+  <div class='sub-accordion-section-content'>
+    {{ content }}
+  </div>
+</div>

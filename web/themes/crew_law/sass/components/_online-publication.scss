@@ -1,0 +1,31 @@
+.field--name-field-op-main-content {
+	.paragraph--type--op-stat-bar-3 {
+		margin-left: -16px;
+		margin-right: -22px;
+		text-align: center;
+		background-color: $dark-gray;
+		background-image: url('../images/stat-pattern.svg');
+		color: $white;
+		padding: 40px;
+		.field--name-field-op-stat-bar-3 {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			.field--item {
+				flex-grow: 1;
+				flex-basis: 0;
+				.paragraph--type--lw-stat-bar-section {
+					padding: 0 20px;
+					@media (max-width: $medium) { 
+						margin-bottom: 40px;
+					}
+					.field--name-field-lw-stat-bar-number {
+						font-weight: bold;
+						font-size: 120px;
+						line-height: 1.2;
+					}
+				}
+			}
+		}
+	}
+}

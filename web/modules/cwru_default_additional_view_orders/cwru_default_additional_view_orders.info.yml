@@ -1,0 +1,11 @@
+name: 'Additional View Order'
+description: 'Provides Additional View Order paragraphs type and related configuration. '
+type: module
+dependencies:
+  - cwru_default_drupal_site
+  - field
+  - paragraphs
+  - taxonomy
+version: '1.0'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

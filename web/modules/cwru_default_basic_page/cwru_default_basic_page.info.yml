@@ -1,0 +1,19 @@
+name: 'Basic Page'
+description: 'Provides Basic Page content type and related configuration. '
+type: module
+dependencies:
+  - cwru_default_aside
+  - cwru_default_meta_field_storage
+  - entity_reference_revisions
+  - field
+  - field_group
+  - menu_ui
+  - metatag
+  - node
+  - paragraphs
+  - path
+  - text
+  - user
+version: '1.06'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

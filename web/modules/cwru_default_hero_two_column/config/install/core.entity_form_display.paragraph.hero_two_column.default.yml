@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_two_column.field_hero_two_description
+    - field.field.paragraph.hero_two_column.field_hero_two_image_ref
+    - field.field.paragraph.hero_two_column.field_hero_two_link
+    - field.field.paragraph.hero_two_column.field_hero_two_t
+    - paragraphs.paragraphs_type.hero_two_column
+  module:
+    - entity_browser_entity_form
+    - ief_table_view_mode
+    - link
+    - text
+id: paragraph.hero_two_column.default
+targetEntityType: paragraph
+bundle: hero_two_column
+mode: default
+content:
+  field_hero_two_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_hero_two_image_ref:
+    weight: 1
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser
+    type: inline_entity_form_complex_table_view_mode
+    region: content
+  field_hero_two_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_hero_two_t:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

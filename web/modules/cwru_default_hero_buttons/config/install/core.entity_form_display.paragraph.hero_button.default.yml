@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_button.field_button_hero
+    - paragraphs.paragraphs_type.hero_button
+  module:
+    - link
+id: paragraph.hero_button.default
+targetEntityType: paragraph
+bundle: hero_button
+mode: default
+content:
+  field_button_hero:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

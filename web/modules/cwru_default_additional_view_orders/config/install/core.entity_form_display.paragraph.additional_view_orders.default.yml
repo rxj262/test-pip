@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.additional_view_orders.field_additional_view_order
+    - field.field.paragraph.additional_view_orders.field_website_view_order_should_
+    - paragraphs.paragraphs_type.additional_view_orders
+  module:
+id: paragraph.additional_view_orders.default
+targetEntityType: paragraph
+bundle: additional_view_orders
+mode: default
+content:
+  field_additional_view_order:
+    weight: 1
+    settings:
+      size: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_website_view_order_should_:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

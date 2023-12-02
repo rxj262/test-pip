@@ -1,0 +1,15 @@
+{%
+  set classes = [
+    field_name|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+
+{% for item in items %}
+  <div{{ attributes.addClass(classes, 'field__item') }}>
+    <div class="image-holder">
+      {{ item.content }}
+      {% include '@crew_entrepreneurship/quote/triangle-lines.svg.twig' %}
+    </div>
+  </div>
+{% endfor %}

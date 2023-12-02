@@ -1,0 +1,6 @@
+name: DMID
+description: Add an ID field to bio content type.
+package: Custom
+
+type: module
+core_version_requirement: '>=9'

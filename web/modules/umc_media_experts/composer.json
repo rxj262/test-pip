@@ -1,0 +1,13 @@
+{
+    "name": "umc_bio_dup_remover",
+    "type": "drupal-module",
+    "description": "removes duplicated bios from umc site",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/umc_bio_dup_remover",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/umc_bio_dup_remover",
+        "source": "http://cgit.drupalcode.org/umc_bio_dup_remover"
+    }
+}

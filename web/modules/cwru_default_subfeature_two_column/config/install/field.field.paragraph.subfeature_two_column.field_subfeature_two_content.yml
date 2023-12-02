@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subfeature_two_content
+    - paragraphs.paragraphs_type.subfeature_two_column
+  module:
+    - text
+id: paragraph.subfeature_two_column.field_subfeature_two_content
+field_name: field_subfeature_two_content
+entity_type: paragraph
+bundle: subfeature_two_column
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

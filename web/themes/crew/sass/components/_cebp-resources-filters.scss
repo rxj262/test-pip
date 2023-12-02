@@ -1,0 +1,242 @@
+// Colors ///////////////
+// $white: #fff;
+// $red: #ee696c;
+// $yellow: #e8ed57;
+// $cwru-blue: #0a304e;
+// $link-blue: #3168a6;
+// $off-black: #1F2325;
+// $blk: #000;
+// $dark-gray: #333;
+// $med-gray: #626262;
+// $light-gray: #c6c6c6;
+// $lighter-gray: #eee;
+// $off-white: #f5f5f5;
+// $lime-green: #C1CD24;
+// // Utility color variables ///////////////
+// $heading: $dark-gray;
+// $link: $link-blue;
+// // Fonts ///////////////
+// $titillium: 'Titillium Web', sans-serif;
+// $depot: 'DepotNew-Regular', sans-serif;
+// $depot-bold: 'DepotNew-Bold';
+// $depot-italic: 'DepotNew-Italic';
+// $depot-bold-italic: 'DepotNew-BoldItalic';
+// $heading_font: $titillium;
+// $body_font: $titillium;
+// // Breakpoints & Media Queries ///////////////
+// $screen: "only screen" !default;
+// $tiny: 360px !default;
+// $xsmall: 481px !default;
+// $small: 767px !default;
+// $medium: 992px !default;
+// $large: 1200px !default;
+// $jumbo: 1300px !default;
+// $small-min:  "#{$screen} and (min-width: #{$small})";
+// $medium-min:  "#{$screen} and (min-width: #{$medium})";
+// $large-min:  "#{$screen} and (min-width: #{$large})";
+// $jumbo-min:  "#{$screen} and (min-width: #{$jumbo})";
+// $small-max:  "#{$screen} and (max-width: #{$small})";
+// $medium-max:  "#{$screen} and (max-width: #{$medium})";
+// $large-max:  "#{$screen} and (max-width: #{$large})";
+// $jumbo-max:  "#{$screen} and (max-width: #{$jumbo})";
+// .cebp-tools-view .view-content {
+// 	display: flex;
+// 	flex-wrap: wrap;
+// 	flex-direction: row;
+// 	justify-content: flex-start;
+// 	@media (max-width: $medium)  {
+// 		flex-direction: column;		
+// 	}
+// 	.views-row {
+// 		flex-basis: 32%;
+// 		flex-grow: 1;
+// 		color: $blk;
+// 		font-weight: 500;
+// 		font-size: 20px;
+// 		border: 7px solid $link-blue;
+// 		padding: 16px 15px 10px 15px;
+// 		margin-bottom: 20px;
+// 		margin-right: 20px;
+// 		position: relative;
+// 		width: calc(49.999% - 20px);
+// 		flex: 0 0 auto;
+// 		overflow-wrap: anywhere;
+// 		@media only screen and (max-width: 1199px) {
+// 			width: calc(49% - 20px);
+// 		}
+// 		@media (max-width: $medium)  {
+// 			flex-basis: 100%;
+// 			margin-left: 0;
+// 			width: 100%;
+// 			//max-width: 100%;
+// 		}
+// 		a:hover {
+// 		    text-decoration: none;
+// 	    }
+// 		.views-field-nothing, .field-content {
+// 			//height: 100%;
+// 		}
+// 		.thinkbox__block {
+// 			.header--main--dark {
+// 				//color: $off-black;
+// 				font-size: 30px;
+// 				font-weight: 700;
+// 			}
+// 			p {
+// 		    	flex-grow: 1;
+// 			}
+// 			.thinkbox__block-summary {
+//             	color: #000;
+//             	//font-family: $depot;
+//             	font-size: 20px;
+//             	font-weight: 400;
+//             	padding: 10px;
+//             }
+//             .contextual-region {
+//                 .field--type-image {
+//                     img {
+//                         margin: auto;
+//                         padding-bottom: 10px;
+//                     }
+//                 }
+//             }
+// 		}
+// 	}
+// }
+
+.cebp-resources-tools {
+	.views-element-container {
+		max-width: 1370px;
+		margin: 0 auto;
+	}
+	.view-filters {
+		float: left;
+		max-width: 300px;
+		padding: 20px;
+		position: relative;
+		margin-right: 15px;
+		padding-left: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		@media (max-width: $small) {
+			float: none;
+			max-width: 100%;
+			margin-right: 0;
+		}
+		.form-type-textfield {
+			width: 100%;
+			margin-top: -20px;
+			.control-label {
+				display: none;
+			}
+			.form-text.form-control {
+				height: 70px;
+				font-size: $font-small;
+				width: 120%;
+				border: 5px solid $cwru-blue;
+			}	
+			@media (max-width: $small) {
+				width: 100%;
+				padding-right: 60px;
+			}	
+		}
+		.form-submit {
+		    //background-color: $lighter-gray;
+		    border: none;
+		    left: -7px;
+	        position: absolute;
+	        top: -13px;
+	        color: $blk;
+	        height: 56px;
+	        width: 40px;
+	        @media (max-width: $small) {
+	            left: -32px;
+	        }
+	        .fa-search {
+	            //color: $med-gray;
+	        }
+		}
+		legend {
+			border-bottom: none;
+			font-size: $font-large;
+			font-weight: 600;
+			@media (max-width: $small) {
+				cursor: pointer;
+				&:before {
+					content: '';
+					background: url("../../../caret-next.svg") no-repeat;
+					transform: rotate(90deg);
+					position: relative;
+					height: 26px;
+					width: 26px;
+					float: right;
+					margin-top: 13px;
+				}
+			}
+		}
+		.fieldgroup.form-wrapper {
+			margin-left: 0;
+			width: 100%;
+			margin-bottom: 0;
+			.fieldset-legend {
+				font-size: 1em;
+			    font-weight: 700;
+			    //font-family: $body_font ,sans-serif;
+			    line-height: 1.2;
+			    margin-bottom: 10px;
+			    &:after {
+			    	content: '';
+				    display: block;
+				    background-color: $link-blue;
+				    width: 50px;
+				    height: 5px;
+				    margin: 5px 0 20px 0;
+			    }
+			}
+			.fieldset-wrapper {
+				height: auto;
+				border: none;
+				.form-item {
+					display: block !important;
+					.control-label {
+						font-size: 1em;
+						font-weight: 500;
+						padding-left: 27px;
+						margin-left: 0;
+						.form-checkbox {
+							margin-right: 10px;
+							margin-left: -27px;
+							margin-top: 8px;
+						}
+					}
+				}
+				@media (max-width: $small) {
+					display: none;
+				}
+				@media (min-width: $small) {
+					display: block !important;
+				}
+			}
+		}
+		.form-actions.form-wrapper {
+			position: absolute;
+			@media (max-width: $small) {
+				right: 21px;
+			}
+		}
+	}
+	.view-knowledge-base .view-content {
+		padding-top: 0;
+		.item-list {
+			ul {
+				margin-left: -10px;
+				margin-right: -10px;
+				li {
+					flex: 350px;
+					margin-left: 10px;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}

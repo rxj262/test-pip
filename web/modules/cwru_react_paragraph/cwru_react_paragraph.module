@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for CWRU React Paragraph module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+define('CWRU_PARAGRAPHS_PREPROCESS_CLASS', 'cwru_react_paragraph.para');
+
+/**
+ * Implements hook_theme().
+ */
+function cwru_react_paragraph_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__react__default' => [],
+  ];
+}
+
+/**
+ * Implements template_preprocess_paragraph__type().
+ */
+function template_preprocess_paragraph__react__default(&$variables) {
+  $app_id = $variables['elements']['#paragraph']->field_root_id->value;
+  $variables['app_id'] = $app_id;
+  $variables['#attached']['library'][] = "cwru_react_paragraph/$app_id";
+}

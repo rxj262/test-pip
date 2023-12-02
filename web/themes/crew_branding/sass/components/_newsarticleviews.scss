@@ -1,0 +1,148 @@
+//_newsarticleviews.scss
+
+// News Views
+//
+// A listing of news items with truncated description text. Ordered by publish date in descending order. Thumbnail images are optional.
+//
+// Weight: -18
+//
+// Style guide: components.news
+
+// News - Subfeature/Sidebar
+//
+// Markup: news-subfeature.hbs
+//
+// Weight: -17
+//
+// Style guide: components.news.subfeature
+
+// News - Standard Page Content W/Images
+//
+// Markup: news-contentImgs.hbs
+//
+// Weight: -16
+//
+// Style guide: components.news.contentImgs
+
+// News - Standard Page Content W/Calendar Icons
+//
+// Markup: news-contentIcons.hbs
+//
+// Weight: -15
+//
+// Style guide: components.news.contentIcons
+
+// News - Sortable Page Content
+//
+// Markup: news-contentSort.hbs
+//
+// Weight: -14
+//
+// Style guide: components.news.contentSort
+
+article.article .field--name-field-related-links {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid $lighter-gray;
+}
+.view-news-article-listing {
+  .view-content {
+    .article-date {
+      font-size: 15px;
+      margin-top: -5px;
+      margin-bottom: 5px;
+    }
+    .media-left {
+      padding-right: 0px;
+      .field--name-field-caption {
+        margin-top: -34px;
+      }
+      .field--name-field-photo-caption {
+        display: none;
+      }
+    }
+    // .view-img-left {
+    //   max-width: 150px;
+    //   .field--name-field-caption {
+    //     float: left;
+    //     display: inline-flex;
+    //   }
+    //   .field--name-field-photo-caption {
+    //     display: inline-flex;
+    //     font-size: .6em;
+    //     max-width: 150px;
+    //     position: relative;
+    //   }
+    // }
+    .media-list {
+      .media:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+.news-article-footer-button {
+  height: 50px;
+  margin-top: -25px;
+}
+.view-international-news-feed- .articleImg {
+  margin-right: 20px;
+  float: left;
+  margin-left: -120px;
+}
+.view-international-news-feed- .small-date {
+  font-size: 13px;
+  color: $cwru-blue;
+}
+.view-international-news-feed- .views-row {
+  padding: 20px 0 20px 120px;
+}
+.news-title {
+  font-size: 24px;
+  margin: 0 0 5px;
+  font-weight: 600;
+}
+.field--name-field-article-date,
+.field--name-field-event-date {
+  margin-bottom: 10px;
+}
+.field--name-field-event-date > .field--label {
+  font-weight: 600;
+}
+.view-utech-news .view-header {
+  @include aside-title();
+  margin-bottom: 20px;
+}
+
+.aside-style-view {
+  background-color: $off-white;
+  .view-header h2 {
+    @include aside-title();
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.4;
+  }
+  .view-content {
+    padding: 10px 20px;
+  }
+}
+.homepage-w-full-width-feature .paragraph--type--view {
+  background-color: $off-white;
+  .view-content {
+    padding: 10px 20px;
+  }
+  .more-link {
+    margin: 0;
+  }
+}
+.field--name-field-subfeature-ref .paragraph--type--view .view-header {
+  @include aside-title();
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.paragraph--type--subfeatures-group .subfeature-news-view {
+  height: 100%;
+}

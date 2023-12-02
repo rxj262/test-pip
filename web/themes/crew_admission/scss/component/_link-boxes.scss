@@ -1,0 +1,57 @@
+.pattern-background {
+  @include pattern-background;
+}
+.link-boxes__margin-fix {
+  margin-top: 40px;
+}
+.link-boxes {
+  transform: translateY(-44px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .flex {
+    display: flex;
+  }
+  .paragraph--type--uga-3col-subfeature {
+    background-color: $white;
+    margin-bottom: 44px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 44px;
+    .field--name-field-uga-3col-sub-image {
+      height: 230px;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+    .link-box__container {
+      padding: 30px;
+      flex-grow: 1;
+      .field--name-field-uga-3col-subfeature-title {
+        @include underline-title(24px);
+      }
+    }
+    .field--name-field-uga-3col-button a {
+      @extend %button;
+      color: $white;
+      background-color: $cwru-blue;
+      width: 100%;
+      margin: 0;
+      text-align: left;
+      font-size: 18px;
+      transition: background-color .2s;
+      &:hover {
+        background-color: $link-blue;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .link-boxes >  .col-md-4 {
+    width: 33.3%;
+  }
+}

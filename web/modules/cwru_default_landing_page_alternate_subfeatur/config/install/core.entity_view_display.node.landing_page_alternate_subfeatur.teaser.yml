@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page_alternate_subfeatur.field_alt_subfeature_ref
+    - field.field.node.landing_page_alternate_subfeatur.field_centered_intro_text_ref
+    - field.field.node.landing_page_alternate_subfeatur.field_hero_overlay_text_ref
+    - field.field.node.landing_page_alternate_subfeatur.field_meta_tags
+    - node.type.landing_page_alternate_subfeatur
+  module:
+    - user
+id: node.landing_page_alternate_subfeatur.teaser
+targetEntityType: node
+bundle: landing_page_alternate_subfeatur
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_alt_subfeature_ref: true
+  field_centered_intro_text_ref: true
+  field_hero_overlay_text_ref: true
+  field_meta_tags: true

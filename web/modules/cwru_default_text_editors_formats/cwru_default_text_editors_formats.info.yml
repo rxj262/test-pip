@@ -1,0 +1,20 @@
+name: 'Text Editors Formats'
+description: 'Text editors and text formats for the Default CWRU build.'
+type: module
+dependencies:
+  - ckeditor
+  - cwru_default_media_bundles
+  - 'drupal:media (>= 8.4)'
+  - editor
+  - editor_file
+  - embed
+  - entity_embed
+  - file
+  - filter
+  - linkit
+  - media
+  - node
+  - video_embed_wysiwyg
+version: '1.17'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

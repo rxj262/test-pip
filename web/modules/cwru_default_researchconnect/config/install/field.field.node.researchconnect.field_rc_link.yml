@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rc_link
+    - node.type.researchconnect
+  module:
+    - link
+id: node.researchconnect.field_rc_link
+field_name: field_rc_link
+entity_type: node
+bundle: researchconnect
+label: 'Link to main faculty bio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

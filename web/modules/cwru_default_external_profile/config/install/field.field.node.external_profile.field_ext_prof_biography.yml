@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ext_prof_biography
+    - node.type.external_profile
+  module:
+    - text
+id: node.external_profile.field_ext_prof_biography
+field_name: field_ext_prof_biography
+entity_type: node
+bundle: external_profile
+label: Biography
+description: 'Click "Edit summary" to add/revise an Exec Ed tagline.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

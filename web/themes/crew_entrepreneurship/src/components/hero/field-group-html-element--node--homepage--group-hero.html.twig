@@ -1,0 +1,20 @@
+{{ attach_library('crew_entrepreneurship/hero') }}
+
+<{{ wrapper_element }} {{ attributes }}>
+  <div class="hero-video-container">
+    <video autoplay muted loop class="hero-video">
+      <source src="{{directory}}/dist/assets/hero.mp4" type="video/mp4" />
+      <img src="{{directory}}/dist/assets/hero.png" alt="Students discussing project around table" />
+    </video>
+  </div>
+  {% if title %}
+  <{{ title_element }}{% if collapsible %} class="field-group-toggler"{% endif %}>{{ title }}</{{ title_element }}>
+  {% endif %}
+  {% if collapsible %}
+  <div class="field-group-wrapper">
+  {% endif %}
+  {{children}}
+  {% if collapsible %}
+  </div>
+  {% endif %}
+</{{ wrapper_element }}>

@@ -1,0 +1,98 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subfeature_two_column_ref
+    - node.type.homepage_w_full_width_5_sub
+    - paragraphs.paragraphs_type.subfeature_two_column
+  module:
+    - entity_reference_revisions
+id: node.homepage_w_full_width_5_sub.field_subfeature_two_column_ref
+field_name: field_subfeature_two_column_ref
+entity_type: node
+bundle: homepage_w_full_width_5_sub
+label: '2 Column Subfeature'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      subfeature_two_column: subfeature_two_column
+    target_bundles_drag_drop:
+      accordion:
+        weight: 25
+        enabled: false
+      accordion_section:
+        weight: 26
+        enabled: false
+      alternating_subfeature:
+        weight: 27
+        enabled: false
+      aside:
+        weight: 28
+        enabled: false
+      button:
+        weight: 29
+        enabled: false
+      centered_intro_text:
+        weight: 30
+        enabled: false
+      content:
+        weight: 31
+        enabled: false
+      gallery:
+        weight: 32
+        enabled: false
+      hero_full_width:
+        weight: 33
+        enabled: false
+      hero_landing_page:
+        weight: 34
+        enabled: false
+      hero_one_column:
+        weight: 35
+        enabled: false
+      hero_overlay_text:
+        weight: 36
+        enabled: false
+      hero_text_heavy:
+        weight: 37
+        enabled: false
+      hero_two_column:
+        weight: 38
+        enabled: false
+      icon_subfeature:
+        weight: 39
+        enabled: false
+      iframe:
+        weight: 40
+        enabled: false
+      stacked_buttons:
+        weight: 41
+        enabled: false
+      subfeature:
+        weight: 42
+        enabled: false
+      subfeature_two_column:
+        enabled: true
+        weight: 43
+      tabs:
+        weight: 44
+        enabled: false
+      tab_section:
+        weight: 45
+        enabled: false
+      vertical_subfeature:
+        weight: 46
+        enabled: false
+      video:
+        weight: 47
+        enabled: false
+      well:
+        weight: 48
+        enabled: false
+field_type: entity_reference_revisions

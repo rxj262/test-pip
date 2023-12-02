@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.fluid_hero
+label: 'Fluid Hero'
+targetEntityType: paragraph
+cache: true

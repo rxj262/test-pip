@@ -1,0 +1,99 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.covid_graph.field_bar_1_data
+    - field.field.paragraph.covid_graph.field_bar_1_label
+    - field.field.paragraph.covid_graph.field_bar_2_data
+    - field.field.paragraph.covid_graph.field_bar_2_label
+    - field.field.paragraph.covid_graph.field_date_labels
+    - field.field.paragraph.covid_graph.field_graph_title
+    - field.field.paragraph.covid_graph.field_line_1_data
+    - field.field.paragraph.covid_graph.field_line_1_label
+    - field.field.paragraph.covid_graph.field_line_2_data
+    - field.field.paragraph.covid_graph.field_line_2_label
+    - paragraphs.paragraphs_type.covid_graph
+id: paragraph.covid_graph.default
+targetEntityType: paragraph
+bundle: covid_graph
+mode: default
+content:
+  field_bar_1_data:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_bar_1_label:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_bar_2_data:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_bar_2_label:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_date_labels:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_graph_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_line_1_data:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_line_1_label:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_line_2_data:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_line_2_label:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

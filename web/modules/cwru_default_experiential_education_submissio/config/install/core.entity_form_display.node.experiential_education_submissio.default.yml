@@ -1,0 +1,147 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.experiential_education_submissio.field_experiential_additional
+    - field.field.node.experiential_education_submissio.field_experiential_based
+    - field.field.node.experiential_education_submissio.field_experiential_credit
+    - field.field.node.experiential_education_submissio.field_experiential_eligible_stud
+    - field.field.node.experiential_education_submissio.field_experiential_email_address
+    - field.field.node.experiential_education_submissio.field_experiential_full_name
+    - field.field.node.experiential_education_submissio.field_experiential_funding
+    - field.field.node.experiential_education_submissio.field_experiential_interest
+    - field.field.node.experiential_education_submissio.field_experiential_offered
+    - field.field.node.experiential_education_submissio.field_experiential_opportunity
+    - field.field.node.experiential_education_submissio.field_experiential_sentence_desc
+    - field.field.node.experiential_education_submissio.field_experiential_time_commitme
+    - field.field.node.experiential_education_submissio.field_experiential_website
+    - node.type.experiential_education_submissio
+    - workflows.workflow.ac84b3e9
+  module:
+    - content_moderation
+    - link
+    - path
+id: node.experiential_education_submissio.default
+targetEntityType: node
+bundle: experiential_education_submissio
+mode: default
+content:
+  field_experiential_additional:
+    weight: 13
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_experiential_based:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_experiential_credit:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_experiential_eligible_stud:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_experiential_email_address:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_experiential_full_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_experiential_funding:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_experiential_interest:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_experiential_offered:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_experiential_opportunity:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_experiential_sentence_desc:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_experiential_time_commitme:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_experiential_website:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 14
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

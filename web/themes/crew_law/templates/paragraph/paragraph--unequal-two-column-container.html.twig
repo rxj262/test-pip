@@ -1,0 +1,20 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+  ]
+%}
+
+{% if 'True' in content.field_gray_background[0] %}
+    {% set background = 'gray-background' %}
+{% else %}
+    {% set background = 'transparent-background' %}
+{% endif %}
+
+{% block paragraph %}
+    <div{{ attributes.addClass(classes, background) }}>
+        {% block content %}
+            {{ content|without('field_gray_background') }}
+        {% endblock %}
+    </div>
+{% endblock paragraph %}

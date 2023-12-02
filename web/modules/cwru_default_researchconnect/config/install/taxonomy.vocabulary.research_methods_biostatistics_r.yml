@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Research Methods & Biostatistics - RC'
+vid: research_methods_biostatistics_r
+description: ''
+hierarchy: 0
+weight: 0

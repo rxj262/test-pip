@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.error_page.field_error_type
+    - node.type.error_page
+  module:
+    - user
+id: node.error_page.teaser
+targetEntityType: node
+bundle: error_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_error_type: true

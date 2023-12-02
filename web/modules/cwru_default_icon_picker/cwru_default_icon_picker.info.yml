@@ -1,0 +1,10 @@
+name: 'Icon Picker'
+description: 'Provides Icon Picker paragraphs type and related configuration.'
+type: module
+dependencies:
+  - field
+  - fontawesome_iconpicker
+  - paragraphs
+version: '1.01'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

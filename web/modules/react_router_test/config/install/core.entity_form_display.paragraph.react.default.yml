@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.react.field_root_id
+    - paragraphs.paragraphs_type.react
+id: paragraph.react.default
+targetEntityType: paragraph
+bundle: react
+mode: default
+content:
+  field_root_id:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

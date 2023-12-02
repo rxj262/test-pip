@@ -1,0 +1,7 @@
+{% block content %}
+  {% if is_front %}
+    <h1>{{ site_name }}</h1>
+  {% else %}
+    <div aria-label="Site title">{{ site_name }}</div>
+  {% endif %}
+{% endblock %}

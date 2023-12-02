@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_add_to_calendar_bu
+    - node.type.event_details
+  module:
+    - addtocalendar
+id: node.event_details.field_display_add_to_calendar_bu
+field_name: field_display_add_to_calendar_bu
+entity_type: node
+bundle: event_details
+label: 'Display Add to Calendar Button'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Add to Calendar'
+  off_label: 'Add to Calendar Disabled'
+  addtocalendar_show: 1
+  addtocalendar_settings:
+    style: '0'
+    atc_title:
+      field: title
+      tokenized: Title
+    atc_description:
+      field: field_event_details_description
+      tokenized: Description
+    atc_location:
+      field: field_event_details_location
+      tokenized: Location
+    atc_organizer:
+      field: token
+      tokenized: 'Weatherhead School of Management'
+    atc_organizer_email:
+      field: token
+      tokenized: 'Weatherhead School of Management'
+    atc_date_start:
+      field: token
+      tokenized: '[node:field_event_details_date_range:0:value]'
+    atc_date_end:
+      field: token
+      tokenized: '[node:field_event_details_date_range:0:end_value]'
+    atc_privacy: public
+    data_secure: auto
+    data_calendars:
+      iCalendar: iCalendar
+      'Google Calendar': 'Google Calendar'
+      Outlook: 0
+      'Outlook Online': 0
+      'Yahoo! Calendar': 0
+field_type: add_to_calendar_field

@@ -1,0 +1,248 @@
+// Navbar
+//
+// Main navigation under the header. Show first level pages in the navbar and third level in a dropdown menu that shows on hover. The dropdown floats right instead if it would exceed the page's container. Switches to accordion style for mobile.
+//
+// Markup: navbar.hbs
+//
+// Weight: -15
+//
+// Style guide: components.navbar
+
+.navbar-default {
+  background-color: $lighter-gray;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.navbar-default .navbar-nav li {
+  margin: 0;
+  border-right: 1px solid $white;
+  .dropdown-menu li {
+    border-right: none;
+  }
+}
+
+.navbar-header .navbar-nav {
+  display: flex;
+  > li {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navbar-default .navbar-nav > li,
+.menu--secondary-navigation > li {
+  > a {
+    color: $cwru-blue;
+    font-size: 18px;
+    padding: 24px 21px 23px;
+    word-wrap: break-word;
+    @media #{$jumbo-max} {
+      padding: 24px 16px 23px;
+    }
+    @media #{$large-max} {
+      font-size: 16px;
+    }
+  }
+  &.expanded.dropdown {
+    > a {
+      padding-right: 46px;
+      @media #{$large-max} {
+        padding-right: 28px;
+      }
+    }
+  }
+}
+
+.navbar-default .navbar-nav > li:hover,
+.navbar-collapse .menu--secondary-navigation > li:hover {
+  background-color: $white;
+}
+
+.navbar-default .navbar-nav .dropdown-menu {
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  min-width: 250px;
+
+  .active {
+    background-color: $lighter-gray;
+    color: $link-blue;
+    &:hover {
+      background-color: $off-white;
+    }
+    a {
+      background-color: $off-white;
+    }
+  }
+
+  li a {
+    color: $cwru-blue;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 13px 21px;
+    border-bottom: 1px solid $lighter-gray;
+    &:hover {
+      color: $link-blue;
+    }
+  }
+}
+
+.navbar-default .navbar-nav > .active {
+  background-color: $light-gray;
+  > a {
+    color: $cwru-blue;
+    background-color: unset;
+  }
+}
+
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active.open > a {
+  background-color: $white;
+  color: $cwru-blue;
+}
+
+.navbar-nav .arrow {
+  height: 67px;
+  width: 32px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.navbar-nav .arrow:before {
+  float: right;
+  width: 20px;
+  text-align: center;
+  display: inline;
+  font-size: 18px;
+  font-family: FontAwesome;
+  height: auto;
+  content: "\f107";
+  font-weight: 400;
+  text-shadow: none;
+  position: absolute;
+  top: 26px;
+  right: 17px;
+  @media #{$large-max} {
+    right: 6px;
+  }
+}
+
+.navbar-nav .expanded.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-default .no-padding {
+  padding: 0;
+}
+
+.navbar-nav.button-right {
+  width: 100%;
+
+  > li:last-of-type {
+    margin-left: auto;
+    background-color: $med-gray;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $light-gray;
+
+      a {
+        color: $cwru-blue;
+      }
+    }
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+//Navbar moved up into the header next the search; Gets hidden on mobile
+.page-head {
+  #block-crew-main-menu {
+    .nav {
+      li {
+        a {
+          color: $white;
+          border-bottom: 5px solid $cwru-blue;
+          top: 10px;
+          padding-bottom: 5px;
+          &:hover, &:focus {
+            background-color: transparent;
+            border-bottom: 2px solid $link-blue;
+          }
+        }
+        @media (max-width: $medium) {
+          display: none;
+        }
+      }
+    }
+  }
+  #block-crew-main-menu .navbar-nav {
+    float: right;
+    margin-right: 45px;
+  }
+  #block-crew-main-menu + div.secondary-search-icon {
+    .navbar__search-form.desktop {
+      position: absolute;
+      right: 0;
+      top: 3px;
+      z-index: 9999;
+      display:block;
+      width: inherit;
+      input {
+        background: url('/programs/themes/custom/crew/images/search-icon1.svg') no-repeat center center;
+        transition: all .4s;
+        width: 19px;
+        padding: 9px;
+        color: transparent;
+        cursor: pointer;
+        border: 0;
+        border-radius: 1px;
+        top: 3px;
+        &::placeholder {
+          opacity: 0;
+        }
+        &:focus {
+          &::placeholder {
+            opacity: 1;
+          }
+          @media (min-width: $medium) {
+            width: 430px;
+            color: $blk;
+            background: $white;
+            padding: 9px 9px 9px 25px;
+            cursor: auto;
+            transition: all 0.4s,background 0.3s 0.1s;
+            position: absolute;
+            right: 0;
+            font-size: 18px;
+            border-radius: 39px;
+            font-style: normal;
+            font-weight: normal;
+          }
+        }
+      }
+      .mobile-search-btn {
+        display: none;
+      }
+    }
+    @media (max-width: $medium) {
+      display: none;
+    }
+  }
+}
+
+//Make Navbar full width (ex: Maltzcenter)
+.navbar-full-width {
+  background: $lighter-gray;
+  .col-xs-12 {
+    ul:first-of-type {
+    border-left: 1px solid $white;
+    }
+  }
+}

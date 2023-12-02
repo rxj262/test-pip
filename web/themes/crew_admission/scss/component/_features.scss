@@ -1,0 +1,41 @@
+// NEED TO REFACTOR
+.field--name-field-homepage-subfeature-ref,
+.field--name-field-campus-full-width-sub-ref {
+  .features--top {
+    height: 80vh;
+    min-height: 500px;
+    padding: 55px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+    @include size("medium") {background-attachment: scroll;}
+    .body--bold {
+      margin-bottom: 40px;
+      width: 470px;
+      @include size("medium") {width: auto;}
+    }
+  }
+  .features--bottom {
+    height: 540px;
+    position: relative;
+    background-size: cover;
+    .row {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 15px;
+      top: auto;
+      padding: 40px 90px;
+      display: flex;
+      // background: linear-gradient(to bottom, transparent 0%, $off-black 100%);
+      @include size("medium") {padding: 40px 0}
+      .button--outline {
+        white-space: nowrap;
+        align-self: flex-end;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

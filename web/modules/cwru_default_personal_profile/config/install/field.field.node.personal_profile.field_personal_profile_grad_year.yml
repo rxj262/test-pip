@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personal_profile_grad_year
+    - node.type.personal_profile
+id: node.personal_profile.field_personal_profile_grad_year
+field_name: field_personal_profile_grad_year
+entity_type: node
+bundle: personal_profile
+label: 'Graduation Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

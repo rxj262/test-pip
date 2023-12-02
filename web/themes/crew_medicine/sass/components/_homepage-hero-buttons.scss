@@ -1,0 +1,117 @@
+.field--name-field-hero-buttons-heading {
+    color: $white;
+    margin: 20px 30px;
+    font-size: 1.3em;
+    font-weight: 700;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 2px;
+        background-color: $light-blue;
+    }
+}
+
+.paragraph--type--hero-button-group {
+    display: flex;
+    background-color: $cwru-blue;
+    margin-left: -22px;
+    margin-right: -22px;
+
+    @media #{$medium-max}  { flex-direction: column; padding-bottom: 15px;}
+}
+
+.paragraph--type--hero-button {
+    border: 1px solid $light-blue;
+}
+
+.field--name-field-hero-buttons-group {
+    color: $white;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+    margin-left: 0;
+
+    @media #{$large-min}  {
+        margin: 20px 40px;
+    }
+
+    @media #{$large-max}  {
+        > .field--item {
+            flex-basis: calc(50% - 40px);
+            margin-left: 20px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            &:nth-child(1) {
+                margin-top: 20px;
+            }
+            &:nth-child(2) {
+                margin-top: 20px;
+            }
+        }
+    }
+    @media #{$medium-max}  {
+        > .field--item {
+            margin-left: 20px;
+            &:nth-child(1) {
+                margin-top: 0px;
+            }
+            &:nth-child(2) {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    @media #{$small-max}  {
+        flex-direction: column;
+
+        > .field--item {
+            // margin-left: 0;
+            margin-right: 20px;
+        }
+    }
+
+    .field--item a {
+        width: 100%;
+        padding: 15px 37px 15px 15px;
+        position: relative;
+        display: block;
+        color: $white;
+        background-color: $drk-blue;
+        transition: background-color 0.2s;
+        font-size: 0.9em;
+
+        &:hover {
+            text-decoration: none;
+            background-color: $link-blue;
+        }
+
+        &::after {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            content: '>';
+            // background-color: $drk-blue;
+            color: $white;
+            padding: 4px;
+            padding-right: 15px;
+            font-weight: 700;
+        }
+
+        @media #{$jumbo-max} {
+            padding-right: 27px;
+        }
+        @media #{$large-max} {
+            padding-right: 37px;
+        }
+
+        @media #{$medium-max}  { font-size: 18px; }
+    }
+}

@@ -1,0 +1,51 @@
+/*
+@mixin font-stack-titillium {
+  font-family: 'Titillium Web', 'Arial', sans-serif;
+}
+*/
+@media (min-width: 64em) and (max-width: 75em) {
+  .hidden-md {
+    display: none !important; } }
+
+@media (min-width: 75em) {
+  .hidden-lg {
+    display: none !important; } }
+
+.region--header {
+  background-color: #003071; }
+  .region--header .header-container {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 22px 17px 26px; }
+    @media screen and (min-width: 1200px) {
+      .region--header .header-container {
+        padding: 22px 0 26px; } }
+    @media screen and (max-width: 992px) {
+      .region--header .header-container {
+        padding: 20px 21px 27px; } }
+    .region--header .header-container > div:first-child {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+
+.page-title {
+  display: inline-block;
+  margin-right: 2em; }
+  .page-title h1,
+  .page-title div {
+    font-family: 'Arizona', 'Arial', sans-serif;
+    color: #fff;
+    font-family: "Arizona-Text", sans-serif;
+    font-size: 10vw;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    line-height: 1.15; }
+    @media (min-width: 30em) {
+      .page-title h1,
+      .page-title div {
+        font-size: 48px; } }
+    @media screen and (max-width: 992px) {
+      .page-title h1,
+      .page-title div {
+        font-size: 38px; } }

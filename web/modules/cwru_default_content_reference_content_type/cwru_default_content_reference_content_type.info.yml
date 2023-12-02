@@ -1,0 +1,13 @@
+name: 'Content Reference Content Type'
+description: 'Provides Content Reference content type and related configuration. '
+type: module
+dependencies:
+  - cwru_default_basic_page
+  - field
+  - menu_ui
+  - node
+  - text
+  - user
+version: '1.06'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

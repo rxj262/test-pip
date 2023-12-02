@@ -1,0 +1,313 @@
+@import url("https://dudbm6bcnmy8e.cloudfront.net/cwru/fonts/Arizona-Fonts/arizona-sans.css");
+@import url("https://dudbm6bcnmy8e.cloudfront.net/cwru/fonts/Arizona-Fonts/arizona-text.css");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+// Base HTML Elements.
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $body_font;
+  font-size: 20px;
+  line-height: 1.42857;
+  background-color: $off-white;
+}
+
+strong {
+  font-weight: 600;
+}
+
+hr {
+  clear: both;
+}
+
+input {
+  border-radius: 0;
+}
+
+::-moz-selection {
+  background: $lighter-gray;
+  color: $blk;
+}
+
+::selection {
+  background: $lighter-gray;
+  color: $blk;
+}
+// Base Headings
+//
+// Weight: -8
+//
+// Markup: headlines.hbs
+//
+// Style guide: base.headlines
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $cwru-blue;
+  font-weight: 600;
+  font-family: $heading_font;
+  padding: 0 0 0.3em;
+  margin: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  color: $blk;
+  font-size: $font-double;
+  font-weight: 900;
+}
+
+.h2,
+h2 {
+  font-size: $font-xlarge;
+  margin-top: 20px;
+}
+
+.h3,
+h3 {
+  color: $blk;
+  font-size: $font-large;
+}
+
+h4 {
+  font-size: $font-medium;
+}
+
+h5 {
+  font-size: $font-medium-small;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+body .menu-item {
+  padding-top: 0;
+  margin: 0;
+}
+
+main {
+  font-size: 1em;
+}
+
+.main-container h1 {
+  margin-top: 12px;
+  font-size: 2.1em;
+}
+
+article h2:first-child,
+.field--name-field-content h2:first-of-type {
+  margin-top: 0;
+}
+// Base Text
+//
+// Weight: -10
+//
+// Markup: text.hbs
+//
+// Style guide: base.text
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $link;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    color: $cwru-blue;
+    text-decoration: underline;
+  }
+}
+#block-sectionnavigation a:focus {
+  background: $lighter-gray !important;
+  color: $blk !important;
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+body p {
+  margin: 15px 0;
+}
+
+.content p {
+  margin-top: 0;
+}
+// Responsive Images
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+// Blockquote
+//
+// Markup: blockquote.hbs
+//
+// Style guide: base.blockquote
+
+blockquote {
+  padding: 12px 30px;
+  margin: 0 0 20px;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: $off-white;
+  color: $gray;
+  border-left: 4px solid $cwru-blue;
+  display: table;
+  width: 100%;
+}
+// List Types
+//
+// Weight: -2
+//
+// Markup: lists.hbs
+//
+// Style guide: base.lists
+// OL items
+ol {
+  margin: 0 0 10px;
+
+  li {
+    margin: 4px 0;
+    padding: 0;
+  }
+}
+
+ol ol {
+  padding: 0 0 0 22.5px;
+}
+
+ol ol ol {
+  padding: 0 0 0 22.5px;
+}
+// UL items
+
+ul {
+  padding: 0 0 0 40px;
+  margin: 0 0 10px;
+
+  li {
+    // margin: 4px 0; (breaks tabdrop plugin)
+    padding: 0;
+  }
+}
+
+ul ul {
+  padding: 0 0 0 22.5px;
+}
+
+ul ul ul {
+  padding: 0 0 0 22.5px;
+}
+
+.field--name-body ul {
+  margin-bottom: 22px;
+}
+
+.field--name-body li {
+  margin-bottom: 10px;
+}
+// Tables
+//
+// Markup: table.hbs
+//
+// Style guide: base.table
+
+table {
+  width: 100%;
+  border: 1px solid $white;
+  margin-bottom: 20px;
+
+  th {
+    font-weight: 600;
+    border: 1px solid $white;
+    text-align: left;
+    color: $off-white;
+    background-color: $cwru-blue;
+    padding: 15px;
+
+    a {
+      color: $white !important;
+      text-decoration: underline !important;
+    }
+  }
+
+  td {
+    border: 1px solid $white;
+    outline: none;
+    padding: 15px;
+    width: unset;
+  }
+
+  tbody {
+    border: 1px solid $off-white;
+    padding: 15px;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: $off-white;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $off-white;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: $lighter-gray;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $off-white;
+  }
+
+  tbody tr:hover {
+    background-color: $off-white;
+  }
+}
+
+iframe {
+  max-width: 100%;
+  border: 0 !important;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid $lighter-gray;
+  border-bottom: 0;
+}
+
+hr.above {
+  border-top: 1px solid $lighter-gray;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+hr.below {
+  border-top: 1px solid $lighter-gray;
+  margin-top: 0;
+}
+
+button {
+  border-radius: 0 !important;
+}
+
+.field--name-field-content li {
+  margin-bottom: 10px;
+}
+
+caption { 
+  color: $med-gray;
+}

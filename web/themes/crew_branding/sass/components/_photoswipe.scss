@@ -1,0 +1,14 @@
+.pswp--open {
+  @media #{$large-min} {
+    position: absolute;
+    width: 750px;
+    max-width: 100%;
+    height: 550px;
+    left: 34.5%;
+    top: 25%;
+  }
+}
+.paragraph--type--photo-gallery {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_flp_view_order
+    - node.type.faculty_listing_page
+id: node.faculty_listing_page.field_flp_view_order
+field_name: field_flp_view_order
+entity_type: node
+bundle: faculty_listing_page
+label: 'View Order'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

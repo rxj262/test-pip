@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/modules/custom/test_events/components/get_events/build/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/modules/custom/test_events/components/get_events/build/static/js/main.d929dde3.chunk.js",
+    "main.js.map": "/modules/custom/test_events/components/get_events/build/static/js/main.d929dde3.chunk.js.map",
+    "runtime-main.js": "/modules/custom/test_events/components/get_events/build/static/js/runtime-main.47f0a007.js",
+    "runtime-main.js.map": "/modules/custom/test_events/components/get_events/build/static/js/runtime-main.47f0a007.js.map",
+    "static/js/2.2fd9664c.chunk.js": "/modules/custom/test_events/components/get_events/build/static/js/2.2fd9664c.chunk.js",
+    "static/js/2.2fd9664c.chunk.js.map": "/modules/custom/test_events/components/get_events/build/static/js/2.2fd9664c.chunk.js.map",
+    "static/js/3.7210795b.chunk.js": "/modules/custom/test_events/components/get_events/build/static/js/3.7210795b.chunk.js",
+    "static/js/3.7210795b.chunk.js.map": "/modules/custom/test_events/components/get_events/build/static/js/3.7210795b.chunk.js.map",
+    "index.html": "/modules/custom/test_events/components/get_events/build/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/modules/custom/test_events/components/get_events/build/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.2fd9664c.chunk.js.LICENSE.txt": "/modules/custom/test_events/components/get_events/build/static/js/2.2fd9664c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47f0a007.js",
+    "static/js/2.2fd9664c.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.d929dde3.chunk.js"
+  ]
+}

@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.external_profile.field_ext_prof_acad_cred_ref
+    - field.field.node.external_profile.field_ext_prof_biography
+    - field.field.node.external_profile.field_ext_prof_degree_ref
+    - field.field.node.external_profile.field_ext_prof_department_ref
+    - field.field.node.external_profile.field_ext_prof_drupal_site_ref
+    - field.field.node.external_profile.field_ext_prof_email
+    - field.field.node.external_profile.field_ext_prof_image
+    - field.field.node.external_profile.field_ext_prof_office_building
+    - field.field.node.external_profile.field_ext_prof_office_number
+    - field.field.node.external_profile.field_ext_prof_phone
+    - field.field.node.external_profile.field_ext_prof_role_ref
+    - field.field.node.external_profile.field_ext_profile_full_name
+    - field.field.node.external_profile.field_ext_profile_image
+    - field.field.node.external_profile.field_ext_profile_meta_tags
+    - field.field.node.external_profile.field_ext_profile_org_info_ref
+    - field.field.node.external_profile.field_ext_profile_view_order
+    - field.field.node.external_profile.field_personal_profile_drupal_si
+    - node.type.external_profile
+  module:
+    - user
+id: node.external_profile.teaser
+targetEntityType: node
+bundle: external_profile
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_ext_prof_acad_cred_ref: true
+  field_ext_prof_biography: true
+  field_ext_prof_degree_ref: true
+  field_ext_prof_department_ref: true
+  field_ext_prof_drupal_site_ref: true
+  field_ext_prof_email: true
+  field_ext_prof_image: true
+  field_ext_prof_office_building: true
+  field_ext_prof_office_number: true
+  field_ext_prof_phone: true
+  field_ext_prof_role_ref: true
+  field_ext_profile_full_name: true
+  field_ext_profile_image: true
+  field_ext_profile_meta_tags: true
+  field_ext_profile_org_info_ref: true
+  field_ext_profile_view_order: true
+  field_personal_profile_drupal_si: true

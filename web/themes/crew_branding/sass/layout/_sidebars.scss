@@ -1,0 +1,98 @@
+// Layout
+//
+// Sidebars Region Styling
+//
+// Markup: sidebars.hbs
+//
+// Style guide: layout.sidebars
+
+//////////////////////////////////
+// Sidebar First /////////////////
+//////////////////////////////////
+.body-sidebars-first {
+  @media #{$small-min}  {
+    aside.sidebar-first {
+      @include span(3 of 12);
+      > * {
+        padding-left: 15px;
+      }
+    }
+    section#content {
+      @include span(9 of 12 last);
+      > * {
+        padding-right: 25px;
+      }
+    }
+  }
+}
+//////////////////////////////////
+// Sidebar Second ////////////////
+//////////////////////////////////
+.body-sidebars-second,
+.page-node-type-homepage-w-sidebar {
+  @media #{$small-min}  {
+    aside.sidebar-second {
+      @include span(3 of 12 last);
+      > * {
+        padding-right: 15px;
+      }
+    }
+    section#content {
+      @include span(9 of 12);
+      > * {
+        padding-left: 25px;
+      }
+    }
+  }
+}
+//////////////////////////////////
+// Sidebar Both //////////////////
+//////////////////////////////////
+.body-sidebars-both {
+  @media #{$small-min}  {
+    aside.sidebar-first {
+      @include span(2 of 12);
+      > * {
+        padding-left: 15px;
+      }
+    }
+    section#content {
+      @include span(8 of 12);
+      > * {
+        padding-right: 25px;
+      }
+    }
+    aside.sidebar-second {
+      @include span(2 of 12 last);
+      > * {
+        padding-right: 15px;
+      }
+    }
+  }
+}
+//////////////////////////////////
+// Sidebar None //////////////////
+//////////////////////////////////
+.body-sidebars-none {
+  section#content {
+    @include span(12 of 12);
+    > * {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+//////////////////////////////////
+// General Sidebar Rules /////////
+//////////////////////////////////
+aside.sidebar {
+  overflow: hidden;
+}
+
+.open a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+outline-color: -webkit-focus-ring-color;
+outline-style: auto;
+outline-width: 5px;
+outline-offset: -2px;
+}

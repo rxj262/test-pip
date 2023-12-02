@@ -1,0 +1,82 @@
+.page-head {
+    .inputs {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: 0;
+
+        &.has-department {
+            margin-top: 10px;
+        }
+    }
+    form {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        width: 230px;
+        display: inline-block;
+        padding: 0;
+    }
+    .form-control {
+        padding-right: 0;
+        color: $med-gray;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 1.42857;
+        border-radius: 25px !important;
+        outline: 0;
+    }
+    .button {
+        padding: 0;
+        height: 34px;
+        z-index: 3;
+        position: relative;
+        background-color: transparent;
+        right: 24px;
+    }
+}
+
+
+.navbar__search-form.desktop {
+	.navbar__search {
+		box-shadow: none;
+		float: right;
+		width: 100%;
+		padding-left: 15px;
+		transition: ease-in-out, width .35s ease-in-out;
+	}
+	.navbar__search:focus {
+		width: 125%;
+	}
+	.form-submit {
+		border: none;
+		box-shadow: none;
+		color: $cwru-blue;
+		z-index: 3;
+	}
+  .input-group-btn > .btn:hover {
+    z-index: 3;
+  }
+}
+
+form[id^="views-exposed-form-echarticles"], form[id^="views-exposed-form-echimages"], form[id^="views-exposed-form-category-view"] {
+    input[id^="edit-combine"], input[id^="edit-title-1"], input[id^="edit-field-photo-caption-value"] {
+        margin: 1em 0;
+    }
+    div[id^="edit-actions"] {
+        margin-top: -6px;
+    }
+}
+
+.view-echarticles, .view-echarticles-full-listing, .view-category-view {
+    .views-row {
+        .views-field-body {
+            font-size: 16px;
+            margin-bottom: 15px;
+            hr, h2, table, img {
+                display: none;
+            }
+        }
+    }
+}

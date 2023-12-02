@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_description
+    - node.type.event_detail_page
+  module:
+    - text
+id: node.event_detail_page.field_event_description
+field_name: field_event_description
+entity_type: node
+bundle: event_detail_page
+label: 'Event Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

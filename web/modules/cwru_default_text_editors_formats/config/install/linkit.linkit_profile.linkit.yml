@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: linkit
+label: linkit
+description: ''
+matchers:
+  4b9ece99-e18b-4d6b-a495-deb6acc4ec51:
+    uuid: 4b9ece99-e18b-4d6b-a495-deb6acc4ec51
+    id: 'entity:node'
+    weight: 0
+    settings:
+      bundles:
+        aside_reference: aside_reference
+        basic_page: basic_page
+        biography: biography
+        content_reference: content_reference
+        error_page: error_page
+        event_detail_page: event_detail_page
+        homepage_text_heavy: homepage_text_heavy
+        homepage_w_full_width_5_sub: homepage_w_full_width_5_sub
+        homepage_w_full_width_feature: homepage_w_full_width_feature
+        homepage_w_sidebar: homepage_w_sidebar
+        landing_page: landing_page
+        landing_page_alternate_subfeatur: landing_page_alternate_subfeatur
+        landing_page_robust: landing_page_robust
+        news_article: news_article
+        personal_profile: personal_profile
+        program: program
+        robust_3_column_page: robust_3_column_page
+      group_by_bundle: true
+      include_unpublished: false
+      metadata: null
+      substitution_type: canonical
+  bb5f7564-662c-4056-91bc-adde9a5daa67:
+    uuid: bb5f7564-662c-4056-91bc-adde9a5daa67
+    id: 'entity:media'
+    weight: 0
+    settings:
+      bundles: {  }
+      group_by_bundle: true
+      metadata: ''
+      substitution_type: media

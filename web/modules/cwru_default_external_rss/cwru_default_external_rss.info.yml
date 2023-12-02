@@ -1,0 +1,12 @@
+name: 'External Feed'
+description: 'Provides External Feed paragraphs type and related configuration.'
+type: module
+dependencies:
+  - field
+  - link
+  - options
+  - paragraphs
+  - rss_feed
+version: '1.03'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

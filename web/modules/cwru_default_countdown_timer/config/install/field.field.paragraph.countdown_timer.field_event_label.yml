@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_event_label
+    - paragraphs.paragraphs_type.countdown_timer
+id: paragraph.countdown_timer.field_event_label
+field_name: field_event_label
+entity_type: paragraph
+bundle: countdown_timer
+label: 'Event Label'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,127 @@
+.field--name-field-uga-stat-box-title,
+.field--name-field-uga-stat-black-title,
+.field--name-field-uga-stat-3col-title {
+  @include underline-title();
+}
+
+.paragraph--type--uga-stat-box {
+  .pattern-background {
+    margin-top: 70px;
+  }
+  .paragraph--type--uga-stat-box-section {
+    padding: 40px 20px;
+    color: $white;
+    text-align: center;
+    background-color: $cwru-blue;
+    border: 3px solid;
+    transform: translateY(-44px);
+    margin-bottom: 40px;
+    &.orange {
+      border-color: $orange;
+    }
+    &.yellow {
+      border-color: $yellow;
+    }
+    &.blue {
+      border-color: $iceberg;
+    }
+    .field--name-field-uga-stat-box-number {
+      font-family: $arizona;
+      font-size: 70px;
+      font-weight: 700;
+    }
+    .field--name-field-uga-stat-box-info p {
+      font-family: $arizona-bold;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.paragraph--type--uga-stat-black-3col {
+  background-color: $off-black;
+  color: $white;
+  padding: 40px 0;
+  &.bkg-blue {
+    background-color: $cwru-blue;
+  }
+  .field--name-field-uga-stat-black-title {
+    color: $white;
+  }
+  .field--name-field-uga-stat-black-stat {
+    color: $lime;
+    font-family: $arizona;
+    font-size: 60px;
+    font-weight: 700;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+  .field--name-field-uga-stat-black-info {
+    padding-top: 20px;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+  .paragraph--type--uga-stat-black-3col-section {
+    display: flex;
+  }
+}
+
+.field--name-field-uga-stat-3col-title {
+  margin: 40px 0 20px 0;
+}
+.field--name-field-uga-three-col-stat-ref {
+  .field--name-field-uga-stat-3col-sub-title {
+    font-family: $arizona;
+    font-weight: 700;
+    font-size: 30px;
+    color: $dark-gray;
+    margin-bottom: 20px;
+  }
+  .field--name-field-uga-stat-3col-stat {
+    font-family: $arizona-bold;
+    font-size: 26px;
+    color: $cwru-blue;
+    line-height: 1;
+  }
+  .field--name-field-uga-stat-3col-info p {
+    color: $dark-gray;
+  }
+}
+
+.field--name-field-uga-stat-2col-black-wrappe {
+  background-color: $off-black;
+  color: $white;
+  padding: 40px 0;
+  .field--name-field-uga-stat-2col-black-title {
+    @include underline-title();
+  }
+  .field--name-field-uga-stat-2col-black-stat {
+    color: $lime;
+    font-family: $arizona-bold;
+    font-size: 30px;
+  }
+  .field--name-field-uga-stat-2col-black-info {
+    font-size: 24px;
+  }
+  .field--name-field-uga-stat-2col-black-ref {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    & > .field__item {
+      flex: 1 0 150px;
+      margin-right: 40px;
+      @include size("medium") {
+        flex: 0 0 200px;
+      }
+    }
+  }
+}
+.field--name-field-uga-stat-2col-extra {
+  background-color: $off-black;
+  color: $white;
+  font-family: $arizona-italic;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}

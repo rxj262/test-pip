@@ -1,0 +1,8 @@
+bundle: cwru_default
+excluded:
+  - field.storage.node.field_aside_ref
+  - image.style.aside_664x374_
+  - image.style.photo_carousel_w_aside_400x270_
+  - core.entity_view_display.media.image.aside_image_style
+  - core.entity_view_mode.media.aside_image_style
+required: true

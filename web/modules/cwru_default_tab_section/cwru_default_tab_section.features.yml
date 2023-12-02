@@ -1,0 +1,5 @@
+bundle: cwru_default
+excluded:
+  - field.field.paragraph.tabs.field_tab_section_ref
+  - field.storage.paragraph.field_tab_section_ref
+required: true

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_landing_page_930x450_
+label: 'Hero Landing Page (930x450)'
+effects:
+  2f421589-dde7-4991-959a-0922e76acaeb:
+    uuid: 2f421589-dde7-4991-959a-0922e76acaeb
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 930
+      height: 450
+      crop_type: focal_point

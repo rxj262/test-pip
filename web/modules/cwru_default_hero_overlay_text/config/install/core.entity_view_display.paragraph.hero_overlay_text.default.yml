@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_overlay_text.field_hero_overlay_button
+    - field.field.paragraph.hero_overlay_text.field_hero_overlay_description
+    - field.field.paragraph.hero_overlay_text.field_hero_overlay_image_ref
+    - paragraphs.paragraphs_type.hero_overlay_text
+  module:
+    - link
+    - text
+id: paragraph.hero_overlay_text.default
+targetEntityType: paragraph
+bundle: hero_overlay_text
+mode: default
+content:
+  field_hero_overlay_button:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_hero_overlay_description:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_hero_overlay_image_ref:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: hero_one_column_image_style
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

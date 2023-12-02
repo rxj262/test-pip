@@ -1,0 +1,16 @@
+name: 'Block Layout'
+description: 'Standard block layout for the CWRU Default setup.'
+type: module
+dependencies:
+  - block
+  - ctools
+  - cwru_default_footer
+  - easy_breadcrumb
+  - node
+  - pathauto
+  - search
+  - system
+  - views
+version: '1.17'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

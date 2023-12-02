@@ -1,0 +1,58 @@
+.ctct-inline-form {
+    #gdpr_text,
+    .ctct-form-footer,
+    .g-recaptcha,
+    .ctct-form-header {
+        display: none;
+    }
+
+    .ctct-form-defaults .ctct-form-custom {
+        .ctct-form-text,
+        .ctct-form-field,
+        .ctct-form-button {
+            font-family: $body_font, sans-serif;
+            font-size: 20px;
+        }
+    }
+
+    div.ctct-form-embed div.ctct-form-defaults {
+        background-color: $off-white;
+        padding: 0;
+    }
+
+    button.ctct-form-button {
+        font-weight: 700;
+        padding: 12px !important;
+        margin-bottom: 20px  !important;
+        background: $cwru-blue !important;
+        border-color: $cwru-blue !important;
+        &:hover {
+            background: $link-blue !important;
+            border-color: $link-blue !important;
+        }
+    }
+
+    .ctct-form-lists {
+      legend.ctct-form-lists-legend {
+        margin-bottom: 0;
+      }
+      .ctct-form-listitem label.ctct-form-listname.ctct-form-checkbox-label {
+        color: $blk;
+      }
+    }
+
+}
+
+.paragraph--type--subfeature .ctct-inline-form {
+    padding-top: 15px;
+    .ctct-form-defaults .ctct-form-custom {
+        .ctct-form-field,
+        .ctct-form-text {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    button {
+        margin-bottom: 0 !important;
+    }
+}

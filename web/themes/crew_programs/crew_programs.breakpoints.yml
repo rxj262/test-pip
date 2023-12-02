@@ -1,0 +1,33 @@
+crew-programs.screen-xl-min:
+  label: screen-xl-min
+  mediaQuery: ''
+  weight: 1
+  multipliers:
+    - 1x
+crew-programs.screen-lg-max:
+  label: screen-lg-max
+  mediaQuery: 'all and (max-width: 1200px)'
+  weight: 1
+  multipliers:
+    - 1x
+crew-programs.screen-md-max:
+  label: screen-md-max
+  mediaQuery: 'all and (max-width: 991px)'
+  weight: 1
+  multipliers:
+    - 1x
+crew-programs.screen-sm-max:
+  label: screen-sm-max
+  mediaQuery: 'all and (max-width: 768px)'
+  weight: 1
+  multipliers:
+    - 1x
+crew-programs.screen-xs-max:
+  label: screen-xs-max
+  mediaQuery: 'all and (max-width: 480px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+
+

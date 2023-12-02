@@ -1,0 +1,17 @@
+.field--label-inline {
+  .field--item,
+  .field--label {
+    display: inline;
+  }
+}
+
+.field--label-inline,
+.service-catalog {
+  .field--label {
+    font-weight: bold;
+
+    &:after {
+      content: ':';
+    }
+  }
+}

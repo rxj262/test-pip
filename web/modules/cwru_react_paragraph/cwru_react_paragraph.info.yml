@@ -1,0 +1,7 @@
+name: CWRU React Paragraph
+type: module
+description: Enable developers to create React apps and hook them up with paragraphs
+package: Custom
+core_version_requirement: '>=9'
+dependencies:
+  - paragraphs

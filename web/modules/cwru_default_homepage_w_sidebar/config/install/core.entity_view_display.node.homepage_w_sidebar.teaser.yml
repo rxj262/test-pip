@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.homepage_w_sidebar.field_hero_twocol_ref
+    - field.field.node.homepage_w_sidebar.field_meta_tags
+    - field.field.node.homepage_w_sidebar.field_twocol_sidebar_ref
+    - field.field.node.homepage_w_sidebar.field_twocol_subfeature_ref
+    - node.type.homepage_w_sidebar
+  module:
+    - user
+id: node.homepage_w_sidebar.teaser
+targetEntityType: node
+bundle: homepage_w_sidebar
+mode: teaser
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_hero_twocol_ref: true
+  field_meta_tags: true
+  field_twocol_sidebar_ref: true
+  field_twocol_subfeature_ref: true

@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_programs_degree_ref
+    - paragraphs.paragraphs_type.program_degree_website
+    - taxonomy.vocabulary.program_degree_type
+id: paragraph.program_degree_website.field_programs_degree_ref
+field_name: field_programs_degree_ref
+entity_type: paragraph
+bundle: program_degree_website
+label: 'CWRU Program Degree Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      program_degree_type: program_degree_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

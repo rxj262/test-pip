@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.researchconnect
+  module:
+    - user
+id: node.researchconnect.teaser
+targetEntityType: node
+bundle: researchconnect
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_primary_title: true
+  field_public_health_population_h: true
+  field_rc_description: true
+  field_rc_email: true
+  field_rc_fax: true
+  field_rc_image: true
+  field_rc_link: true
+  field_rc_phone_number: true
+  field_rc_publications: true
+  field_research_methods_biostatis: true
+  field_research_topics: true
+  field_underserved_populations_co: true
+  field_website_researchconnect_sh: true

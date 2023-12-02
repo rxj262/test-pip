@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_twitter_embed_height
+    - paragraphs.paragraphs_type.twitter_embed
+id: paragraph.twitter_embed.field_twitter_embed_height
+field_name: field_twitter_embed_height
+entity_type: paragraph
+bundle: twitter_embed
+label: 'Twitter Embed Height'
+description: "You have the choice to specify the height (in pixels) of your Twitter embed, this value needs to be greater than 200. \r\nYou <strong>do not</strong> need to include the 'px' suffix. \r\nThis <strong>only</strong> works when you display unlimited tweets. "
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 200
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

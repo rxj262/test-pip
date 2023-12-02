@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Homepage Full Width Feature / 5 Subfeatures'
+type: homepage_w_full_width_5_sub
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

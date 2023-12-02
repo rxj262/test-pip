@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.field_program_description
+    - field.field.node.program.field_program_image_ref
+    - field.field.node.program.field_program_interest_ref
+    - field.field.node.program.field_program_link
+    - field.field.node.program.field_program_pre_professional
+    - field.field.node.program.field_program_school_ref
+    - field.field.node.program.field_program_website_url_ref
+    - field.field.node.program.field_short_degree_type
+    - node.type.program
+  module:
+    - user
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_program_description: true
+  field_program_image_ref: true
+  field_program_interest_ref: true
+  field_program_link: true
+  field_program_pre_professional: true
+  field_program_school_ref: true
+  field_program_website_url_ref: true
+  field_short_degree_type: true

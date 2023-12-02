@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_reference.field_content_reference
+    - paragraphs.paragraphs_type.content_reference
+  module:
+id: paragraph.content_reference.default
+targetEntityType: paragraph
+bundle: content_reference
+mode: default
+content:
+  field_content_reference:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

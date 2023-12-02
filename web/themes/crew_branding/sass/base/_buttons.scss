@@ -1,0 +1,68 @@
+// Buttons
+//
+// WIP
+//
+// Markup: <a href="#" class="{{modifier_class}}">Link Button</a>
+//
+// .button-blue - Main button
+// .button-gray - Secondary button
+// .button-block-blue - Main button full width
+// .button-block-gray - Secondary button full width
+// :hover - Highlight the button when hovered.
+// :disabled - Make the button change appearance to reflect it being disabled.
+// :active - "Press" the button down when clicked.
+//
+// Style guide: base.buttons
+.button-gray,
+.button-gray-link a {
+  @include button-gray;
+}
+.button-blue,
+.button-blue-link a,
+.form-submit.btn-primary {
+  @include button-blue;
+  color: $white !important;
+}
+.button-block-gray,
+.button-block-gray-link a {
+  @include button-block-gray;
+}
+.button-block-blue,
+.button-block-blue-link a {
+  @include button-block-blue;
+  color: $white !important;
+}
+.button-gray-link,
+.button-blue-link,
+.button-block-gray-link,
+.button-block-blue-link {
+  margin-bottom: 22px;
+}
+.button-gray-link a:hover,
+.button-block-gray-link a:hover {
+  color: $white;
+  background-color: $link-blue;
+}
+.paragraph--type--button .field--name-field-button a,
+.field--name-field-aside-ref .paragraph .button-block-blue {
+  padding: 16px;
+  border-bottom: 5px solid $blk;
+  &:hover {
+    border-bottom: 5px solid $cwru-blue;
+  }
+}
+.button-blue-link .field--name-field-button a,
+.button-block-blue-link .field--name-field-button a {
+  border-bottom: 5px solid $blk;
+}
+.button-gray-link .field--name-field-button a,
+.button-block-gray-link .field--name-field-button a {
+  border-bottom: 5px solid $light-gray;
+}
+a.button-gray {
+  color: $cwru-blue;
+  &:hover {
+    text-decoration: none;
+    background-color: $light-gray;
+  }
+}

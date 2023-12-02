@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vertical_subfeatures_group.field_vertical_subfeature_sectio
+    - paragraphs.paragraphs_type.vertical_subfeatures_group
+  module:
+    - entity_reference_revisions
+id: paragraph.vertical_subfeatures_group.default
+targetEntityType: paragraph
+bundle: vertical_subfeatures_group
+mode: default
+content:
+  field_vertical_subfeature_sectio:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

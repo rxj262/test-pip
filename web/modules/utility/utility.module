@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains utility.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function utility_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the utility module.
+    case 'help.page.utility':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provide some popular utitity functions via UI') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function utility_theme() {
+  return [
+    'utility' => [
+      'render element' => 'children',
+    ],
+  ];
+}

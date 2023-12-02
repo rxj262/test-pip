@@ -1,0 +1,135 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stat_items
+    - paragraphs.paragraphs_type.stat
+    - paragraphs.paragraphs_type.stats_group
+  module:
+    - entity_reference_revisions
+id: paragraph.stats_group.field_stat_items
+field_name: field_stat_items
+entity_type: paragraph
+bundle: stats_group
+label: 'Stat Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      stat: stat
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 37
+        enabled: false
+      accordion_section:
+        weight: 38
+        enabled: false
+      additional_job_descriptions:
+        weight: 39
+        enabled: false
+      additional_view_orders:
+        weight: 40
+        enabled: false
+      aside:
+        weight: 41
+        enabled: false
+      award_honor:
+        weight: 42
+        enabled: false
+      biography_education:
+        weight: 43
+        enabled: false
+      button:
+        weight: 44
+        enabled: false
+      content:
+        weight: 45
+        enabled: false
+      external_appointment:
+        weight: 46
+        enabled: false
+      gallery:
+        weight: 47
+        enabled: false
+      gallery_section:
+        weight: 48
+        enabled: false
+      hero_landing_page:
+        weight: 49
+        enabled: false
+      hero_one_column:
+        weight: 50
+        enabled: false
+      icon_picker:
+        weight: 51
+        enabled: false
+      job_title_affiliation:
+        weight: 52
+        enabled: false
+      photo_grid:
+        weight: 53
+        enabled: false
+      photo_row:
+        weight: 54
+        enabled: false
+      photo_section:
+        weight: 55
+        enabled: false
+      presentation:
+        weight: 56
+        enabled: false
+      publication:
+        weight: 57
+        enabled: false
+      quote:
+        weight: 58
+        enabled: false
+      residency:
+        weight: 59
+        enabled: false
+      site_affiliation:
+        weight: 60
+        enabled: false
+      social:
+        weight: 61
+        enabled: false
+      social_section:
+        weight: 62
+        enabled: false
+      stacked_button_wrapper:
+        weight: 63
+        enabled: false
+      stacked_buttons:
+        weight: 64
+        enabled: false
+      stat:
+        weight: 65
+        enabled: true
+      stats_group:
+        weight: 66
+        enabled: false
+      subfeature:
+        weight: 67
+        enabled: false
+      subfeature_landing:
+        weight: 68
+        enabled: false
+      subfeature_section:
+        weight: 69
+        enabled: false
+      tab_section:
+        weight: 70
+        enabled: false
+      tabs:
+        weight: 71
+        enabled: false
+      two_column_content:
+        weight: 72
+        enabled: false
+field_type: entity_reference_revisions

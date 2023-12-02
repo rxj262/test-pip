@@ -1,0 +1,221 @@
+.paragraph--type--hero-one-column {
+  margin: 22px 0;
+
+  .paragraph--carousel-caption {
+    background-color: $cwru-blue;
+    padding: 10px 20px 15px;
+
+    h2 {
+      padding: 0;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+  }
+  .field--name-field-hero-one-description {
+    margin-right: 5px;
+    a:link,
+    a:visited {
+      color: $white;
+      text-decoration: underline;
+    }
+    a:hover,
+    a:active {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  .field--name-field-hero-one-description,
+  .field--name-field-hero-one-link {
+    display: inline-block;
+    //display: block;
+  }
+  .field--name-field-hero-one-description h2,
+  .field--name-field-hero-one-link {
+    color: $white;
+    font-weight: 400;
+    font-size: $font-medium;
+    line-height: 1.5;
+    margin-top: 0;
+  }
+  .field--name-field-hero-one-link a {
+    font-size: $font-small;
+  }
+}
+
+.field--name-field-hero-full-description,
+.field--name-field-hero-full-link {
+  display: inline-block;
+}
+
+.field--name-field-hero-one-link a,
+.field--name-field-hero-full-link a {
+  @include white-link();
+}
+.field--name-field-hero-full-link a:hover {
+  color: $white;
+}
+
+.paragraph--type--hero-full-width {
+  margin-top: 22px;
+}
+
+.field--name-field-hero-landing-image-ref img {
+  width: 100%;
+  padding-top: 15px;
+  .field--name-field-robust-3-hero-ref & {
+    margin-bottom: 1em;
+  }
+}
+
+.field--name-field-hero-overlay-image-ref {
+  margin-bottom: 36px;
+}
+
+// Hero description
+.field--name-field-hero-landing-description {
+  background-color: $lighter-gray;
+  padding: 12px;
+  font-weight: 600;
+  p {
+    margin: 0;
+  }
+}
+
+.field--name-field-printing-services-hero {
+  margin-bottom: 2em;
+}
+
+.paragraph--type--hero-one-column.paragraph--view-mode--fluid-hero {
+  background-color: $cwru-blue;
+
+  .carousel-caption {
+    margin: 0 auto;
+    @media #{$medium-min} {
+      width: 984px;
+    }
+    @media #{$large-min} {
+      width: 1150px;
+    }
+    @media #{$jumbo-min} {
+      width: 1244px;
+    }
+
+    @media #{$medium-max} {
+      width: 100%;
+      background-color: $cwru-blue;
+    }
+  }
+}
+.fluid_content_exists .paragraph--type--hero-one-column {
+  display: none;
+}
+
+.fluid_content_exists .equipment-detail-page .paragraph--type--hero-one-column {
+  display: block;
+}
+
+.paragraph--view-mode--fluid-hero img {
+  width: 100%;
+}
+.paragraph--type--hero-landing-page {
+  margin-bottom: 20px;
+}
+.paragraph--type--hero-one-column {
+  a[href$=".pdf"]:after {
+    content: "";
+    display: block;
+  }
+}
+
+.paragraph--type--hero-image-with-buttons {
+  position: relative;
+
+  .field--name-field-hero-button {
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    bottom: auto;
+    text-align: center;
+
+    @media (max-width: $small) {
+      position: static;
+    }
+
+    .field--item {
+      display: inline-block;
+      margin: 0 10px;
+
+      @media (max-width: $small) {
+        margin: 10px;
+      }
+    }
+
+    a {
+      @include button-blue;
+    }
+  }
+}
+
+.slick--view--news-article-carousel {
+  .news-article-carousel-caption {
+    padding: 10px 20px 15px;
+
+    h2,
+    p {
+      color: $white;
+    }
+  }
+}
+
+//Utility class to use for the hero image to go full width across the sceen.  
+.hero-full-width {
+  margin: 0 calc(50% - 50vw);
+  .paragraph--type--hero-image-full-width, .paragraph--type--hero-one-column, .paragraph--type--hero-image-with-buttons {
+    margin-top: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .slick__slider {
+    margin-top: 0;
+  }
+}
+
+//Hero Carousel link focus
+.field--name-field-hero-one-link div.hero-white-hover {
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}
+//SOM Homepage Hero Image
+.med-hero-image {
+  margin: 0 auto;
+  @media (min-width: $small) {
+    width: 764px;
+  }
+  @media (min-width: $medium) {
+    width: 984px;
+  }
+  @media (min-width: $large) {
+    width: 1150px;
+  }
+  @media (min-width: $jumbo) {
+    width: 1244px;
+  }
+}
+
+//alumni hero links
+.alumni-hero-group {
+  .paragraph--type--hero-one-column { 
+    .field--name-field-hero-one-description, .field--name-field-hero-one-link {
+      //display: inline-block;
+      display: block;
+    }
+  }
+}
+
+.field--name-field-image-hero-buttons img {
+  width: 100%;
+}

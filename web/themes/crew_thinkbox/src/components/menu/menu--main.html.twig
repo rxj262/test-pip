@@ -1,0 +1,107 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *
+ * @ingroup templates
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level, cta) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('menu', 'nav', 'navbar-nav') }} role="menubar">
+        <li class="hidden-md hidden-lg mobile-search-box" role="menuitem" tabindex="0">
+          <form action="//www.case.edu/search-results/" class="navbar__search-form" name="searchForm" role="search" aria-label="main search">
+            <span class="search-icon hidden-md hidden-lg"></span>
+            <input placeholder="Search CWRU" title="searchbox" type="search" class="navbar__search" name="q" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
+            <span class="mobile-search-btn">
+              <button type="submit" class="btn submit" aria-label="Submit Search">
+                <i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">Submit Search</span>
+              </button>
+            </span>
+            <input type="hidden" name="cx" value="004305171799132815236:ciq4c8b3yv4">
+            <input type="hidden" name="ie" value="UTF-8">
+            <input class="hidden" role="button" name="sa" type="submit" title="search" alt="search">
+          </form>
+        </li>
+    {% else %}
+      {% set ctas = [
+        {
+          'text': 'We offer the tools and resources you need to bring your idea to life.',
+          'button': 'Explore Our Equipment',
+          'url': '/thinkbox/equipment'
+        },
+        {
+          'text': 'With business support, office space and more, we can help you take your ideas to market.',
+          'button': 'Find Support',
+          'url': '/thinkbox/entrepreneurship'
+        },
+        {
+          'text': 'Connect with us through an upcoming workshop, skills class or training session.',
+          'button': 'View Our Event Schedule',
+          'url': '/thinkbox/events'
+        },
+        {
+          'text': 'Students and community members can qualify for financial support on a range of projects.',
+          'button': 'Learn More',
+          'url': '/thinkbox/funding'
+        },
+        {
+          'text': 'From academic support to projects that make headlines, we’re known for making an impact.',
+          'button': 'See How',
+          'url': '/thinkbox/impact'
+        },
+        {
+          'text': 'Sears think[box] is Case Western Reserve University’s seven-story, full-service innovation center.',
+          'button': 'Discover Sears think[box]',
+          'url': '/thinkbox/about'
+        }
+      ] %}
+      <ul{{ attributes.addClass('dropdown-menu') }} role="menu" aria-hidden="true" tabindex="0">
+      <div class="cta">
+        <p>{{ctas[cta - 1].text}}</p>
+        <a class="round-button" href={{ctas[cta - 1].url}}>{{ctas[cta - 1].button}}</a>
+      </div>
+      <div class="columns">
+    {% endif %}
+    {% for item in items %}
+      {%
+        set item_classes = [
+          item.is_expanded? 'expanded',
+          item.is_expanded and menu_level == 0 ? 'dropdown',
+          item.in_active_trail ? 'active',
+        ]
+      %}
+        <li{{ item.attributes.addClass(item_classes) }} role="menuitem" tabindex="-1">
+        {{ link(item.title, item.url) }}
+      {% if item.below %}
+        {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav'), menu_level + 1, loop.index) }}
+      {% endif %}
+      </li>
+    {% endfor %}
+    {% if menu_level == 0 %}
+      </ul>
+    {% else %}
+      </div>
+      </ul>
+    {% endif %}
+  {% endif %}
+{% endmacro %}

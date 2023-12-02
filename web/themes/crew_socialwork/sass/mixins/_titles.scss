@@ -1,0 +1,23 @@
+// TITLE FOR UNDERLINE
+@mixin underline-title {
+    color: $cwru-blue;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 2px;
+        background-color: $link-blue;
+    }
+}
+
+.underline-title {
+    @include underline-title;
+
+    &.white {
+        color: $white;
+    }
+}

@@ -1,0 +1,444 @@
+a,
+a:link,
+a:visited {
+  cursor: pointer;
+}
+
+/* Switch tabs from vertical to horizontal */
+.adminimal .vertical-tabs__menu-item.is-selected > a {
+  padding-left: 15px;
+  width: auto;
+}
+.adminimal .vertical-tabs__menu-item a {
+  padding: 15px 15px 10px;
+  background-color: #e1e1e0;
+}
+details.vertical-tabs__pane > .details-wrapper {
+  padding: 0.25em 1em 0.5em;
+}
+.vertical-tabs .vertical-tabs__menu {
+  width: 140px;
+}
+.vertical-tabs .vertical-tabs__panes {
+  margin-left: 140px;
+}
+.adminimal .field-group-tabs-wrapper .vertical-tabs {
+  margin: 15px 0;
+  padding-top: 44px;
+  background: #e1e1e0;
+}
+.vertical-tabs > .vertical-tabs__menu {
+  margin-top: -30px;
+}
+.filter-help {
+  display: none;
+}
+
+/* Floating Aside toolbar breakpoints */
+@media screen and (max-width: 1200px) {
+  .layout-region-node-secondary {
+    width: 100%;
+    float: none;
+    margin-top: 15px;
+  }
+  .layout-region-node-main,
+  .layout-region-node-footer {
+    width: 100%;
+    float: none;
+    padding-right: 0;
+  }
+  .vertical-tabs .vertical-tabs__menu {
+    width: 100%;
+  }
+  .vertical-tabs .vertical-tabs__panes {
+    margin-left: 0px;
+  }
+  .vertical-tabs__menu-item {
+    margin-top: -22px;
+    display: inline-block;
+    border-right: 1px #fcfcfa solid;
+  }
+  .adminimal .vertical-tabs .vertical-tabs__menu-item.is-selected {
+    border-right: 1px solid #fcfcfc;
+  }
+  .adminimal .vertical-tabs__menu-item.is-selected {
+    margin-bottom: -18px;
+    width: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .vertical-tabs__menu-item:nth-child(3),
+  .vertical-tabs .vertical-tabs__menu-item:last-of-type {
+    display: inline-block;
+    border: 1px #b5b5b5 solid;
+    margin: -22px -2px 16px 0px;
+    width: 34%;
+  }
+  .vertical-tabs__menu-item {
+    display: inline-block;
+    border: 1px #b5b5b5 solid;
+    margin: -22px -1px 16px;
+    width: 33%;
+    text-align: center;
+  }
+  .adminimal .vertical-tabs .vertical-tabs__menu-item.is-selected {
+    border: 1px #b5b5b5 solid;
+    margin-left: -1px;
+    margin-right: -1px;
+    margin-bottom: -18px;
+    display: inline-block;
+    width: 33%;
+  }
+  .adminimal .vertical-tabs .vertical-tabs__menu-item:nth-child(3).is-selected,
+  .adminimal .vertical-tabs .vertical-tabs__menu-item:last-of-type.is-selected {
+    width: 34%;
+    margin-right: -2px;
+    margin-left: 0px;
+  }
+  .adminimal .vertical-tabs .vertical-tabs__menu-item:nth-child(4).is-selected,
+  .adminimal
+    .vertical-tabs
+    .vertical-tabs__menu-item:first-of-type.is-selected {
+    margin-right: 0px;
+    margin-left: -2px;
+  }
+  .adminimal .field-group-tabs-wrapper .vertical-tabs {
+    padding-top: 90px;
+  }
+  .vertical-tabs > .vertical-tabs__menu {
+    margin-top: -75px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .layout-region-node-secondary {
+    width: 28%;
+    float: right;
+  }
+  .layout-region-node-main,
+  .layout-region-node-footer {
+    width: 72%;
+  }
+  .adminimal .field-group-tabs-wrapper .vertical-tabs {
+    margin: 15px 0;
+    padding-top: 0px;
+    background: #e1e1e0;
+  }
+  .vertical-tabs > .vertical-tabs__menu {
+    margin-top: 0px;
+  }
+  .vertical-tabs__menu-item {
+    margin-top: 0px;
+    display: list-item;
+    border-bottom: 1px #fcfcfa solid;
+  }
+  .adminimal .vertical-tabs .vertical-tabs__menu-item.is-selected {
+    border-bottom: 1px solid #fcfcfc;
+  }
+  .vertical-tabs .vertical-tabs__menu {
+    width: 18%;
+  }
+  .vertical-tabs .vertical-tabs__panes {
+    margin-left: 18%;
+  }
+}
+.iconpicker-popover {
+  left: 254px !important;
+}
+.fontawesome-iconpicker-element {
+  border-width: 2px !important;
+  border-color: #000000 !important;
+}
+
+/* Link Edit Modal Window */
+.cke_reset_all > table.cke_dialog .cke_dialog_body {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Entity Browser View Filters */
+form.entity-browser-image-browser-form
+  div.view-new-media-library
+  > .view-filters
+  .form--inline,
+form.entity-browser-embed-browser-form
+  div.view-new-media-library
+  > .view-filters
+  .form--inline {
+  margin-bottom: 20px;
+}
+form.entity-browser-image-browser-form
+  div.view-new-media-library
+  > .view-filters
+  .form--inline
+  > div:last-child,
+form.entity-browser-embed-browser-form
+  div.view-new-media-library
+  > .view-filters
+  .form--inline
+  > div:last-child {
+  clear: none;
+  float: left;
+  margin: 30px 0px 0px 10px;
+}
+
+/* Entity Browser select button */
+form.entity-browser-embed-browser-form > div.form-actions,
+form.entity-browser-image-browser-form > div.form-actions {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 14px 8px 1px;
+  margin: 0px;
+  background-color: #fff;
+}
+
+/* Entity Browser Media Sizing */
+@media screen and (max-width: 729px) {
+  form.entity-browser-image-browser-form
+    div.view-new-media-library
+    > .view-content
+    .views-row,
+  form.entity-browser-embed-browser-form
+    div.view-new-media-library
+    > .view-content
+    .views-row {
+    flex-direction: column;
+  }
+  form.entity-browser-image-browser-form > div.form-actions,
+  form.entity-browser-embed-browser-form > div.form-actions {
+    padding-left: 0px;
+  }
+  form.entity-browser-image-browser-form
+    div.view-new-media-library
+    > .view-filters
+    .form--inline
+    > div:last-child,
+  form.entity-browser-embed-browser-form
+    div.view-new-media-library
+    > .view-filters
+    .form--inline
+    > div:last-child {
+    clear: left;
+    margin: 10px 0px 0px 0px;
+  }
+}
+
+/*MEDIA STYLING - REMOVE ABOVE STYLE FOR PAGE TO LOOK CORRECT*/
+.view-content,
+.entities-list {
+  margin: 1.5em 0 43px;
+  padding: 0;
+  -moz-column-gap: 1em;
+  -webkit-column-gap: 1em;
+  column-gap: 1em;
+}
+
+.view-media-library .dropbutton-multiple .dropbutton-widget {
+  padding-right: 0px;
+}
+
+.js .view-media-library .dropbutton-widget .dropbutton-action a {
+  width: auto;
+}
+
+/*Hide Revision Log Messages*/
+.entity-browser-embed-browser-form .field--name-revision-log-message,
+.field--type-entity-reference .field--name-revision-log-message,
+.entity-browser-image-browser-form .field--name-revision-log-message,
+.media-image-add-form div:nth-last-child(2) {
+  display: none;
+}
+
+/*Anand Check this out*/
+/*This was hiding the media add form - Jess can talk to you about it*/
+/*It comes from the style above - we just need a different way to target those revision log messages on the media add page*/
+.media-image-add-form div:nth-last-child(2) {
+  display: block;
+}
+
+/*Add spacing to entity forms*/
+.ief-form > .fieldset-wrapper > div > div {
+  margin-bottom: 10px;
+}
+.ief-form > .fieldset-wrapper > div > div:last-child {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.grid-item:hover,
+.grid-item:active {
+  border: 2px solid #3168a6 !important;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.grid-item.checked {
+  border: 2px solid #3168a6 !important;
+  background: url("../images/checkmark.svg") no-repeat center center !important;
+  margin-bottom: 18px;
+}
+
+.grid-item.checked img {
+  opacity: 0.3;
+}
+
+.grid-item img,
+.grid-item-library img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+.grid-item img::selection,
+.grid-item-library img::selection {
+  background: transparent;
+}
+
+.views-field-entity-browser-select {
+  display: none;
+}
+
+.grid-item-library,
+.grid-item,
+.item-container {
+  display: inline-block;
+  background: #fff;
+  padding: 1.5em;
+  margin: 0 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  text-align: center;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+@media only screen and (min-width: 450px) {
+  .entity-browser-embed-browser-form .view-content,
+  .entity-browser-image-browser-form .view-content,
+  .entity-browser-embed-browser-form .entities-list,
+  .entity-browser-image-browser-form .entities-list,
+  .view-media-library .view-content {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .entity-browser-embed-browser-form .view-content,
+  .entity-browser-image-browser-form .view-content,
+  .entity-browser-embed-browser-form .entities-list,
+  .entity-browser-image-browser-form .entities-list,
+  .view-media-library .view-content {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .entity-browser-embed-browser-form .view-content,
+  .entity-browser-image-browser-form .view-content,
+  .entity-browser-embed-browser-form .entities-list,
+  .entity-browser-image-browser-form .entities-list,
+  .view-media-library .view-content {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .entity-browser-embed-browser-form .view-content,
+  .entity-browser-image-browser-form .view-content,
+  .entity-browser-embed-browser-form .entities-list,
+  .entity-browser-image-browser-form .entities-list,
+  .view-media-library .view-content {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+.entity-browser-embed-browser-form > #edit-actions,
+.entity-browser-image-browser-form > #edit-actions {
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+.entity-browser-embed-browser-form > nav > ul,
+.entity-browser-image-browser-form > nav > ul {
+  border-color: #ddd;
+}
+
+.field--name-field-biography-areas-of-experti div.clearfix:after {
+  display: initial;
+}
+
+/* Fix icon picker position */
+.iconpicker-container {
+  position: relative;
+}
+.iconpicker-container .iconpicker-popover {
+  left: 0px !important;
+  top: 50px;
+}
+
+/*Help Text inside of Tabs*/
+.tab-help-text .details-description {
+  margin: 10px 0px 15px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/*Save Area for Content Moderation*/
+#edit-footer {
+  float: left;
+  margin-right: 20px;
+}
+#edit-actions.action-big-margin-changer {
+  float: left;
+  margin-top: 41px;
+  /* margin-left: -26px; */
+}
+#edit-actions.action-margin-changer {
+  margin-top: 9px;
+  float: left;
+}
+#edit-moderation-state-0 > .js-form-item-moderation-state-0-state > label {
+  display: none;
+}
+#edit-actions > input {
+  padding-bottom: 5px;
+}
+
+/* override grayed out buttons in update to d9 */
+.adminimal .button--small {
+  border-color: #a6a6a6;
+  border-radius: 0px;
+  color: #1a1a1a;
+  font-weight: 600;
+  background: #f9f9f9;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+  border-width: 0;
+  background-color: #0a304e;
+  display: block;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active {
+  color: #fff !important;
+}
+
+
+.paragraph-type-title.js-form-wrapper.form-wrapper {
+  flex-basis: 165px !important;
+}

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gallery_size
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - options
+id: paragraph.gallery.field_gallery_size
+field_name: field_gallery_size
+entity_type: paragraph
+bundle: gallery
+label: 'Gallery Size'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: small-gallery
+default_value_callback: ''
+settings: {  }
+field_type: list_string

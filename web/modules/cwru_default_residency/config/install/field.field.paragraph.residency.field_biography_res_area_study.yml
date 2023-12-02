@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_res_area_study
+    - paragraphs.paragraphs_type.residency
+id: paragraph.residency.field_biography_res_area_study
+field_name: field_biography_res_area_study
+entity_type: paragraph
+bundle: residency
+label: 'Area of Study'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

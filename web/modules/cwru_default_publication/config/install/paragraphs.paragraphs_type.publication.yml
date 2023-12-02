@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: publication
+label: Publication
+behavior_plugins: {  }

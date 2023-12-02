@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.experiential_education_submissio.field_experiential_additional
+    - field.field.node.experiential_education_submissio.field_experiential_based
+    - field.field.node.experiential_education_submissio.field_experiential_eligible_stud
+    - field.field.node.experiential_education_submissio.field_experiential_email_address
+    - field.field.node.experiential_education_submissio.field_experiential_full_name
+    - field.field.node.experiential_education_submissio.field_experiential_funding
+    - field.field.node.experiential_education_submissio.field_experiential_interest
+    - field.field.node.experiential_education_submissio.field_experiential_offered
+    - field.field.node.experiential_education_submissio.field_experiential_opportunity
+    - field.field.node.experiential_education_submissio.field_experiential_sentence_desc
+    - field.field.node.experiential_education_submissio.field_experiential_time_commitme
+    - field.field.node.experiential_education_submissio.field_experiential_website
+    - node.type.experiential_education_submissio
+  module:
+    - user
+id: node.experiential_education_submissio.teaser
+targetEntityType: node
+bundle: experiential_education_submissio
+mode: teaser
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_experiential_additional: true
+  field_experiential_based: true
+  field_experiential_eligible_stud: true
+  field_experiential_email_address: true
+  field_experiential_full_name: true
+  field_experiential_funding: true
+  field_experiential_interest: true
+  field_experiential_offered: true
+  field_experiential_opportunity: true
+  field_experiential_sentence_desc: true
+  field_experiential_time_commitme: true
+  field_experiential_website: true

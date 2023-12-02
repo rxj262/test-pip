@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.icon_picker.field_icon_picker
+    - paragraphs.paragraphs_type.icon_picker
+  module:
+    - fontawesome_iconpicker
+id: paragraph.icon_picker.default
+targetEntityType: paragraph
+bundle: icon_picker
+mode: default
+content:
+  field_icon_picker:
+    weight: 0
+    label: hidden
+    settings:
+      size: fa-1x
+    third_party_settings: {  }
+    type: fontawesome_iconpicker_formatter_type
+    region: content
+hidden: {  }

@@ -1,0 +1,143 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.experiential_education_submissio.field_experiential_additional
+    - field.field.node.experiential_education_submissio.field_experiential_based
+    - field.field.node.experiential_education_submissio.field_experiential_credit
+    - field.field.node.experiential_education_submissio.field_experiential_eligible_stud
+    - field.field.node.experiential_education_submissio.field_experiential_email_address
+    - field.field.node.experiential_education_submissio.field_experiential_full_name
+    - field.field.node.experiential_education_submissio.field_experiential_funding
+    - field.field.node.experiential_education_submissio.field_experiential_interest
+    - field.field.node.experiential_education_submissio.field_experiential_offered
+    - field.field.node.experiential_education_submissio.field_experiential_opportunity
+    - field.field.node.experiential_education_submissio.field_experiential_sentence_desc
+    - field.field.node.experiential_education_submissio.field_experiential_time_commitme
+    - field.field.node.experiential_education_submissio.field_experiential_website
+    - node.type.experiential_education_submissio
+  module:
+    - link
+    - user
+id: node.experiential_education_submissio.default
+targetEntityType: node
+bundle: experiential_education_submissio
+mode: default
+content:
+  field_experiential_additional:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_experiential_based:
+    weight: 8
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_experiential_credit:
+    weight: 11
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_experiential_eligible_stud:
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_experiential_email_address:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_experiential_full_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_experiential_funding:
+    weight: 10
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_experiential_interest:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_experiential_offered:
+    weight: 7
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_experiential_opportunity:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_experiential_sentence_desc:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_experiential_time_commitme:
+    weight: 9
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_experiential_website:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: null
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  content_moderation_control: true
+  links: true

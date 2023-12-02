@@ -1,0 +1,94 @@
+/*
+@mixin font-stack-titillium {
+  font-family: 'Titillium Web', 'Arial', sans-serif;
+}
+*/
+@media (min-width: 64em) and (max-width: 75em) {
+  .hidden-md {
+    display: none !important; } }
+
+@media (min-width: 75em) {
+  .hidden-lg {
+    display: none !important; } }
+
+.paragraph--type--featured-initiatives-group {
+  margin-bottom: 2em; }
+  .paragraph--type--featured-initiatives-group .field-featured-initiative-title {
+    font-family: 'Arizona', 'Arial', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #003071;
+    margin-left: 0.5em;
+    margin-right: 0.5em; }
+    @media (min-width: 75em) {
+      .paragraph--type--featured-initiatives-group .field-featured-initiative-title {
+        font-size: 3em; } }
+  .paragraph--type--featured-initiatives-group .field-featured-initiative-descri {
+    font-size: 1.2em;
+    margin: 1em 2em; }
+    @media (min-width: 64em) {
+      .paragraph--type--featured-initiatives-group .field-featured-initiative-descri {
+        margin: 2em 4em; } }
+  @media (min-width: 55em) {
+    .paragraph--type--featured-initiatives-group .field-featured-initiative {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em; }
+      .paragraph--type--featured-initiatives-group .field-featured-initiative .field__item:first-child {
+        grid-row-end: span 1; }
+      .paragraph--type--featured-initiatives-group .field-featured-initiative .field__item {
+        font-size: 1.2em; } }
+  @media (min-width: 64em) {
+    .paragraph--type--featured-initiatives-group .field-featured-initiative {
+      grid-template-columns: 1.765fr 1fr 1fr; }
+      .paragraph--type--featured-initiatives-group .field-featured-initiative .field__item:first-child {
+        grid-row-end: span 2;
+        font-size: 1.8em; } }
+
+.paragraph--type--featured-initiatives {
+  position: relative;
+  height: 100%; }
+  .paragraph--type--featured-initiatives .field-initiative-title {
+    font-family: 'Arizona', 'Arial', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 20px 0.5em;
+    font-size: 1.6em;
+    line-height: 1; }
+    .paragraph--type--featured-initiatives .field-initiative-title::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      background-image: url("/socialwork/themes/custom/crew_socialwork/images/arrow.png");
+      background-position: center;
+      background-size: contain;
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg); }
+  .paragraph--type--featured-initiatives article {
+    overflow: hidden; }
+  .paragraph--type--featured-initiatives img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transition: scale 0.5s;
+    -o-transition: scale 0.5s;
+    transition: scale 0.5s; }
+    .paragraph--type--featured-initiatives img:hover {
+      scale: 1.07; }
+  .paragraph--type--featured-initiatives .field-initiative-image.field__item .field-image {
+    font-size: 0; }
+  .paragraph--type--featured-initiatives .field-initiative-image,
+  .paragraph--type--featured-initiatives .field-image,
+  .paragraph--type--featured-initiatives article {
+    height: 100%; }

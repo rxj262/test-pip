@@ -1,0 +1,20 @@
+bundle: cwru_default
+excluded:
+  - block.block.bartik_content
+  - block.block.crew_content
+  - block.block.seven_content
+  - core.entity_form_display.block_content.basic.default
+  - core.entity_view_display.block_content.basic.default
+  - field.field.block_content.basic.body
+  - field.field.paragraph.well.field_well_content
+  - field.field.paragraph.teaser.field_teaser_content
+  - field.storage.node.field_article_content
+  - field.storage.node.field_landing_content
+  - field.storage.paragraph.field_vertical_sub_content
+  - field.storage.paragraph.field_well_content
+  - field.storage.paragraph.field_teaser_content
+  - user.role.content_reviewer
+  - user.role.content_editor
+  - core.entity_view_mode.block_content.token
+  - core.entity_view_mode.menu_link_content.token
+required: true

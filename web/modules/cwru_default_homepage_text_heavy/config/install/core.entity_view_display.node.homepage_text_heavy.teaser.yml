@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.homepage_text_heavy.field_hero_txthvy_ref
+    - field.field.node.homepage_text_heavy.field_icon_subfeature_ref
+    - field.field.node.homepage_text_heavy.field_intro_text_ref
+    - field.field.node.homepage_text_heavy.field_meta_tags
+    - node.type.homepage_text_heavy
+  module:
+    - user
+id: node.homepage_text_heavy.teaser
+targetEntityType: node
+bundle: homepage_text_heavy
+mode: teaser
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_hero_txthvy_ref: true
+  field_icon_subfeature_ref: true
+  field_intro_text_ref: true
+  field_meta_tags: true

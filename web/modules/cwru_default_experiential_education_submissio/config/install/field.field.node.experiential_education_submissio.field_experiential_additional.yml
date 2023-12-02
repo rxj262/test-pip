@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experiential_additional
+    - node.type.experiential_education_submissio
+id: node.experiential_education_submissio.field_experiential_additional
+field_name: field_experiential_additional
+entity_type: node
+bundle: experiential_education_submissio
+label: 'Is there any additional information you would like to share about this opportunity?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

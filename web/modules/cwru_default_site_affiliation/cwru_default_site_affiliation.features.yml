@@ -1,0 +1,5 @@
+bundle: cwru_default
+excluded:
+  - field.storage.node.field_site_affiliation
+  - field.field.node.site_information.field_site_affiliation
+required: true

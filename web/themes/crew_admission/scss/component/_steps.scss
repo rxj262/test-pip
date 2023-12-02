@@ -1,0 +1,53 @@
+.steps {
+  padding: 70px 0;
+  @include size(medium) {padding-bottom: 120px}
+  .step {
+    background-color: $white;
+    border: 5px solid $off-black;
+    padding: 40px 90px;
+    position: relative;
+    @include size(medium) {padding: 10px 20px;}
+    .field--name-field-apply-step-number {
+      display: inline-block;
+    }
+    .step__title {
+      font-size: 36px;
+      @include size(medium) {font-size: 30px;}
+    }
+    .step__arrow {
+      background-color: $white;
+      border: 5px solid $off-black;
+      position: absolute;
+      height: 70px;
+      width: 70px;
+      position: absolute;
+      top: calc(50% - 35px);
+      cursor: pointer;
+      transition: background-color .2s;
+      @include size(medium) {top: calc(100% + 20px)}
+      &:hover {
+        background-color: $lighter-gray;
+      }
+      &.arrow--next {
+        right: -35px;
+        @include size(medium) {right: -5px}
+      }
+      &.arrow--prev {
+        left: -35px;
+        @include size(medium) {left: -5px}
+      }
+      .arrow {
+        height: 33px;
+        width: 33px;
+        margin-top: 12px;
+        margin-left: 20px;
+      }
+      &.arrow--next .arrow {
+        background: url("../images/caret-next.svg") no-repeat;
+      }
+      &.arrow--prev .arrow {
+        background: url("../images/caret-prev.svg") no-repeat;
+      }
+    }
+  }
+}

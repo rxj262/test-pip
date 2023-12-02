@@ -1,0 +1,22 @@
+{{ attach_library('crew_thinkbox/stats') }}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+{% if content.field_stats_dark_background[0]['#markup'] == 'On' %}
+  {% set dark = 'dark-background' %}
+{% else %}
+  {% set dark = 'light-background' %}
+{% endif %}
+  <div{{ attributes.addClass(classes, dark) }}>
+    {% block content %}
+      <h2>{{ content.field_stat_group_title }}</h2>
+      {{ content|without('field_stat_group_title') }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: gallery_item
+label: 'Gallery item'
+effects:
+  e01cd55f-e046-4caa-aaf7-0f0b70e5aa3a:
+    uuid: e01cd55f-e046-4caa-aaf7-0f0b70e5aa3a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 946
+      height: 473

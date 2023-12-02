@@ -1,0 +1,8 @@
+react_router_test.overview: 
+  path: /events/{react_route} 
+  defaults: 
+    _controller: \Drupal\react_router_test\Controller\ReactRouterTestController::overview
+    _title: 'React Router Test' 
+    react_route: ''
+  requirements:
+    _permission: 'access content'

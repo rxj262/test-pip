@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.aside_reference.field_aside_reference
+    - paragraphs.paragraphs_type.aside_reference
+id: paragraph.aside_reference.default
+targetEntityType: paragraph
+bundle: aside_reference
+mode: default
+content:
+  field_aside_reference:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

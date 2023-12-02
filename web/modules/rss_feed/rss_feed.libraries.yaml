@@ -1,0 +1,10 @@
+rss:
+  version: 1.01
+  js:
+#    js/jquery.gcal_flow.js: {}
+#    js/globalize.min.js: {}
+#    js/gcal_call.js: {}
+#    js/jquery-2.2.4.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

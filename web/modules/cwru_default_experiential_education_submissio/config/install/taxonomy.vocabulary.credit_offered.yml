@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Credit Offered'
+vid: credit_offered
+description: ''
+weight: 0

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ext_profile_view_order
+    - node.type.external_profile
+id: node.external_profile.field_ext_profile_view_order
+field_name: field_ext_profile_view_order
+entity_type: node
+bundle: external_profile
+label: 'View Order'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

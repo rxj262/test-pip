@@ -1,0 +1,8 @@
+name: 'Departments & Offices'
+description: 'Provides Departments &amp; Offices taxonomy vocabulary and related configuration. '
+type: module
+dependencies:
+  - taxonomy
+version: '1.01'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

@@ -1,0 +1,133 @@
+.paragraph--type--quote-with-image {
+  margin: 0 calc(50% - 50vw);
+  font-size: 1.2em;
+  line-height: 1.4;
+
+  .container {
+    .two-column-container {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 200px;
+          height: 200px;
+          left: -55px;
+          top: -30px;
+          bottom: 0;
+          z-index: 1;
+          background-image: url(/weatherhead/themes/custom/crew_weatherhead/images/hero-title-pattern.svg);
+          background-size: contain;
+          @media #{$smallx-min} {
+            width: 240px;
+            height: 240px;
+          }
+          @media #{$small-min} {
+            flex-wrap: unset;
+            width: 200px;
+            height: 200px;
+          }
+          @media #{$large-min} {
+            width: 240px;
+            height: 240px;
+          }
+        }
+        @media #{$small-min} {
+          flex-wrap: unset;
+        }
+
+      .quote-image-container{
+        margin:auto;
+        z-index: 2;
+        @media #{$smallx-min} {
+          margin:unset;
+        }
+      }
+      .quote-content {
+        width: 100%;
+        text-align: left;
+        margin-left: 1.5em;
+        padding-top: 1em;
+        @media #{$small-min} {
+          margin-left: 3em;
+          padding-top: unset;
+          // width: 100%
+        }
+        @media #{$medium-min} {
+          width: 60%;
+        }
+        @media #{$large-min} {
+          padding-top: 2em;
+        }
+        .quote-and-citation-section {
+          .field--name-field-quote p {
+            font-size: 1em;
+            font-style: italic;
+            padding: 0.25em 30px;
+            line-height: 1.45;
+            position: relative;
+            @media #{$medium-min} {
+              font-size: 1.4em;
+            }
+            @media #{$small-max} {
+              font-size: 1em;
+              padding: 0em 0px 0px 10px;
+            }
+          }
+          .field--name-field-quote p:before {
+            color: $link-blue;
+            content: '“';
+            font-weight: 400;
+            font-size: 5em;
+            display: block;
+            padding-left: 10px;
+            position: absolute;
+            left: -60px;
+            top: -60px;
+          }
+          .field--name-field-quote-citation {
+            font-size: 1.1em;
+            line-height: 1.4;
+            text-align: right;
+            &::before{
+              content:"\2014 \00a0";
+              margin-left: 1em;
+            }
+            @media #{$small-max} {
+              font-size: .8em;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.robust-3-column-page .paragraph--type--quote-with-image {
+  margin: auto;
+  .container {
+    width: 100%;
+    // padding-top: 1em;
+    padding-bottom: 1em;
+    .two-column-container {
+      &::before {
+        left: -35px;
+      }
+      .quote-content {
+        .quote-and-citation-section {
+          .field--name-field-quote p:before {
+            font-size: 4.5em;
+          }
+          .field--name-field-quote p {
+            padding: 0 0 0 .75em;
+            @media #{$medium-min} {
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

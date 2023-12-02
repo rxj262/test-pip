@@ -1,0 +1,21 @@
+@mixin law-button {
+    width: 100%;
+    background-color: $cwru-blue;
+    padding: 15px 40px 15px 20px;
+    position: relative;
+
+    &:after {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        content: '>';
+        background-color: $blk;
+        color: $white;
+        padding: 4px;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,16 @@
+name: Content
+description: 'Provides Content paragraphs type and related configuration.'
+type: module
+dependencies:
+  - block
+  - block_content
+  - field
+  - menu_link_content
+  - node
+  - paragraphs
+  - system
+  - text
+  - user
+version: '1.02'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

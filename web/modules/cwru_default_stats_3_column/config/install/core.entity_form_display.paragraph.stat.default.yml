@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stat.field_description
+    - field.field.paragraph.stat.field_value
+    - paragraphs.paragraphs_type.stat
+  module:
+    - text
+id: paragraph.stat.default
+targetEntityType: paragraph
+bundle: stat
+mode: default
+content:
+  field_description:
+    type: text_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_value:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

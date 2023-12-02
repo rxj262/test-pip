@@ -1,0 +1,132 @@
+.field--name-field-homepage-subfeatures-ref {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 2.5em;
+    .field--name-field-homepage-subfeature-sectio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 2em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        @media #{$small-max} {
+            flex-direction: column;
+            row-gap: 0;
+        }
+        &+div {
+            @media #{$medium-max} {
+                margin-bottom: 1em;
+            }
+        }
+        &>.field--item {
+            flex-basis: 45%;
+            // &:last-of-type {
+            //     .paragraph--type--subfeature-with-button {
+            //         .field--name-field-three-column-subfeature-bu {
+            //             a {
+            //                 // margin-top: 1em;
+            //             }
+            //         }
+            //     }
+            // }
+        }
+        .field--name-field-homepage-subfeature-title {
+            color: $cwru-blue;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-top: .2em;
+            @include underline-title;
+            &::before {
+                @media #{$small-max} {   
+                margin-right: 0px;
+                }
+            }
+        }
+        .field--name-field-homepage-subfeature-link {
+            padding-top: 0;
+            margin-top: 0;
+            display: inline-block;
+            width: auto;
+            padding: 0;
+            a {
+              margin-bottom: 1em;
+              //margin-top: 1em;
+              display: inline-block;
+              padding: .8em 1em;
+              background: $cwru-blue;
+              color: $white;
+              &:hover {
+                  background: $link-blue;
+                  text-decoration: none;
+              }
+              @media #{$small-max} {
+                margin-top: 0;
+              }
+            }
+        }
+    }
+    .paragraph--type--homepage-vertical-subfeature {
+        margin-top: 2em;
+        .dean-photo {
+            margin-right: 30px;
+            @media #{$small-max} {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                margin-right: 0;
+            }
+        }
+        .field--name-field-homepage-vertical-sub-titl {
+            color: $cwru-blue;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-top: .2em;
+            @include underline-title;
+            &::before {
+                @media #{$small-max} {   
+                margin-right: 0px;
+                }
+            }
+        }
+        .dean-content-home {
+            margin-right: 50px;
+            @media #{$small-max} {   
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .field--name-field-homepage-vertical-sub-cont {
+            width: 100%; 
+        }
+        .field--name-field-homepage-vertical-sub-link {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            a {
+                margin-bottom: 1em;
+                display: inline-block;
+                padding: 0.8em 1em;
+                background: $cwru-blue;
+                color: #fff;
+                &:hover {
+                    background: $link-blue;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+// .robust-3-column-page {
+// 	.paragraph--type--two-column-subfeature {
+// 		margin: unset;
+// 		.container {
+// 			width: unset !important;
+// 			// padding: 2em 0 !important;
+// 			padding: 1em 0 !important;
+// 			// padding-top: 0 !important;
+// 			@media #{$medium-max} {
+// 				padding: 0 !important;
+// 			}
+// 		}
+// 	}
+// }

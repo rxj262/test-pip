@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mailing_city
+    - paragraphs.paragraphs_type.footer_address
+id: paragraph.footer_address.field_mailing_city
+field_name: field_mailing_city
+entity_type: paragraph
+bundle: footer_address
+label: 'Mailing City'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

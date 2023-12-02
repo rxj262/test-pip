@@ -1,0 +1,595 @@
+//Event Detail Pages
+
+.event-details {
+  .subtitle {
+    color: $blk;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 0 15px;
+  }
+  // .event-details:has(.subtitle){
+  //   aside{
+  //     margin-top: 2.6em;
+  //   }
+  // }
+
+  .field--name-field-event-details-speakers div {
+    &:first-child::after {
+      content: ":";
+    }
+  }
+  .top-box-wrapper {
+    background-color: $lighter-gray;
+    padding: 20px;
+    border: 1px solid $dark-gray;
+
+    .calendar-holder {
+      padding-right: 20px;
+      i {
+        font-size: 40px;
+        color: $cwru-blue;
+      }
+    }
+
+    .atcb-link {
+      display: none;
+    }
+    .atcb-list:first-of-type {
+      visibility: visible;
+      background: none;
+      position: relative;
+      display: inline;
+      z-index: 1;
+    }
+    .atcb-list {
+      display: none;
+    }
+    .atcb-item {
+      display: inline-block;
+      background: none;
+      padding: 0 5px;
+      &:first-of-type {
+        padding-left: 0;
+      }
+    }
+    .field--type-link {
+      a {
+        margin-top: 0.5em;
+      }
+    }
+    .mb-10:last-of-type {
+      margin-bottom: 5px;
+    }
+  }
+  article aside {
+    float: right;
+    padding-bottom: 30px;
+
+    .field--name-field-event-details-image img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+//Upcoming Events
+.upcoming-events {
+  font-family: $arizona-bold;
+  margin: 0 calc(50% - 50vw);
+  background: $white;
+
+  .view-header{
+    .container {
+      padding-bottom: 1em;
+      p{
+        margin-bottom:0;
+        font-family: $arizona;
+      }
+    }
+  }
+  .view-content {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-column-gap: 1em;
+      grid-row-gap: 3.1em;
+      padding-top: 0;
+      padding-bottom: 1em;
+      @media #{$small-max} {
+        flex-direction: column;
+        row-gap: 0;
+      }
+      &::before,
+      &::after {
+        content: unset;
+      }
+      .views-row {
+        display: flex;
+        flex-basis: 30%;
+        @media #{$small-max} {
+          margin-bottom: 1em;
+          flex-basis: unset;
+          margin-right: 0;
+        }
+        .views-field-nothing-1 {
+          display: inline-block;
+          margin: 0 0.75em 0.75em 0;
+          text-align: center;
+
+          .field-content {
+            display: flex;
+            flex-direction: column;
+            background: $cwru-blue;
+            position: relative;
+            background-image: url(/weatherhead/themes/custom/crew_weatherhead/images/calendar_date_background.svg);
+            background-repeat: no-repeat;
+
+            .event-full-date {
+              display: flex;
+              flex-direction: column;
+              min-width: 90px;
+              padding: 0 0.9em;
+              padding-bottom: 0.7em;
+              .month {
+                padding: 0.1em 0;
+                color: $white;
+                font-size: 1.2em;
+                text-transform: uppercase;
+              }
+              .day {
+                color: $white;
+                font-size: 2.5em;
+                line-height: 0.7;
+                @media #{$medium-max} {
+                  font-size: 2em;
+                }
+              }
+            }
+          }
+        }
+        .views-field-nothing {
+          .event-title {
+            font-size: 1.1em;
+            line-height: 1.3;
+
+            a {
+              text-decoration: underline;
+            }
+
+            @media #{$medium-max} {
+              font-size: 1em;
+            }
+          }
+
+          .event-time {
+            color: $blk;
+            font-size: 0.9em;
+           font-family: $arizona-bold;
+          }
+        }
+      }
+    }
+  }
+  .view-footer {
+    text-align: right;
+    // margin-top: 1em;
+    .field--type-link {
+      padding-top: 0;
+      margin-top: 0;
+      a {
+        width: auto;
+        margin-bottom: 0;
+        @media #{$small-max} {
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+}
+
+// Events Page
+.upcoming-events.events-page {
+  font-family: $arizona;
+  margin: 0;
+  background: $white;
+
+  .view-content {
+    display: block;
+
+    h2 {
+      background-color: $cwru-blue;
+      padding: 10px 25px;
+      color: $white;
+      margin: 20px 0;
+      font-size: 1.5em;
+      &::before{
+        content: none;
+      }
+    }
+    h3{
+      padding-top: 0;
+    }
+
+    .full-event-row {
+      padding-bottom: 22px;
+      margin-bottom: 22px;
+      margin-top: 0;
+      border-bottom: 1px solid $lighter-gray;
+
+      .right-side {
+        padding: 10px 20px 0 20px;
+        @media #{$medium-max} {
+          padding-left: 0;
+        }
+      }
+
+      .left-side {
+        max-height: 180px;
+        background: $cwru-blue;
+        max-width: 183px;
+        min-width: 183px;
+
+        .event-full-date {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          font-family: $arizona-bold;
+          background-image: url(/weatherhead/themes/custom/crew_weatherhead/images/calendar_date_background.svg);
+          background-size: cover;
+          position: relative;
+          min-height: 175px;
+
+          .month {
+            color: $white;
+            font-size: 1.4em;
+            text-transform: uppercase;
+            background: none;
+            padding-top: 12%;
+          }
+
+          .day {
+            color: $white;
+            font-size: 2.5em;
+            line-height: 1;
+            border: none;
+            background: none;
+            //width: 2.2em;
+            @media #{$medium-max} {
+              font-size: 2em;
+            }
+          }
+
+          .time {
+            background-color: $lighter-gray;
+            margin-top: auto;
+            padding: 5px 10px;
+            font-size: 0.9em;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Latest News
+
+.latest-news {
+  font-family: $arizona-bold;
+  margin: 0 calc(50% - 50vw);
+  .view-header {
+    .container {
+      // padding-bottom: 1em;
+      h2 {
+        color: $white;
+      }
+    }
+  }
+  .view-content {
+    .container {
+      padding-top: 0;
+      padding-bottom: 0;
+      ul {
+        display: flex;
+        gap: 40px;
+
+        @media #{$small-max} {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        li.media {
+          flex: 1;
+          position: relative;
+          margin: 0;
+          padding: 0;
+          background-color: $white;
+          border: 5px solid $orange;
+          // border-image-source: url(/weatherhead/themes/custom/crew_weatherhead/images/dashed-background.svg);
+          // border-image-repeat: round;
+          // border-image-slice: 20;
+          @media #{$small-max} {
+            margin-bottom: 1.5em;
+          }
+
+          .views-field-nothing-1 {
+            background: $white;
+            padding: 1.5em 1em;
+            @media #{$small-max} {
+              width: 100%;
+            }
+            .field-content {
+              @media #{$small-max} {
+                width: 4em;
+              }
+              h3 {
+                text-decoration: underline;
+                font-size: 1.1em;
+                padding-bottom: 0.75em;
+                a {
+                  color: $link-blue ;
+                  &:hover{
+                    color: $cwru-blue;
+                    text-decoration-thickness: unset;
+                  }
+                }
+                @media #{$medium-max} {
+                  font-size: 1.2em;
+                }
+              }
+            }
+            .article-date {
+              font-style: italic;
+              font-size: 1em;
+              color: $cwru-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  .view-footer {
+    text-align: right;
+    .field--type-link {
+      padding-top: 0;
+      margin-top: 0;
+      a {
+        width: auto;
+        margin-bottom: 0;
+        margin-top: 2em;
+        // &:hover {
+        //   color: $link-blue !important;
+        // }
+        // @media #{$small-max} {
+        //   margin-top: 0;
+        // }
+      }
+    }
+  }
+  &.blue-bkg{
+    .view-footer{
+      a{
+        &:hover {
+          color: $link-blue !important;
+        }
+      }
+    }
+  }
+}
+
+//Home Page News
+.homepage-with-video {
+  .field--name-field-homepage-views .paragraph--type--view {
+    .views-element-container.form-group {
+      margin-bottom: 0;
+    }
+  }
+  .latest-news {
+    margin: 0 calc(50% - 50vw);
+    background: $off-white;
+
+    .view-header {
+      .container {
+        padding-bottom: 1em;
+        h2 {
+          color: $cwru-blue;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+        @media #{$small-max} {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .view-content {
+      display: flex;
+      .container {
+        padding-top: 0;
+        padding-bottom: 0;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          @media #{$small-max} {
+            flex-direction: column;
+          }
+          li.media {
+            border-bottom: none;
+            margin-right: 0;
+            display: block;
+            flex-basis: 30%;
+            background: none;
+            padding: 0;
+            position: relative;
+            border: none;
+            margin-bottom: 0;
+            @media #{$small-max} {
+              margin-right: 0;
+            }
+            @media #{$small-max} {
+              &:last-child {
+                margin-bottom: 1.1em !important;
+                margin-right: 0;
+              }
+            }
+            .views-field-nothing-1 {
+              background: $off-white;
+              padding: 0;
+              @media #{$small-max} {
+                width: 100%;
+              }
+              .field-content {
+                @media #{$small-max} {
+                  width: 100%;
+                  padding-top: 1em;
+                }
+                .media-image-container {
+                  float: none;
+                  margin-right: 0;
+                }
+                h3 {
+                  text-decoration: underline;
+                  padding-bottom: 0.6em;
+                  @media #{$medium-max} {
+                    font-size: 1.2em;
+                    margin-top: 0;
+                  }
+                  a:hover{
+                    text-decoration-thickness: unset;
+                    color:$cwru-blue;
+                  }
+                }
+                p {
+                  font-family: $arizona;
+                  font-size: 1.1em;
+                  @media #{$small-max} {
+                    font-size: 1em;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+              .article-date {
+                font-style: italic;
+                font-size: 1.1em;
+                margin-top: 0;
+                margin-bottom: 0.4em;
+                font-family: $arizona;
+                @media #{$small-max} {
+                  font-size: 1em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .view-footer {
+      .field--type-link {
+        a {
+          @media #{$small-max} {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// News Archive
+
+.view-id-news_article_listing.view-display-id-block_2 {
+
+	h2{
+		font-family: $arizona-bold,sans-serif;
+		padding: 0 0 0.3em;
+		margin-top: 0;
+		&::before {
+			content: none;
+		}
+	}
+}
+.view-id-news_article_listing.view-display-id-block_2,
+.view-id-news_article_listing.view-display-id-block_5,
+.view-id-news_article_listing.view-display-id-block_6,
+.view-id-news_article_listing.view-display-id-block_7,
+.view-id-news_article_listing.view-display-id-block_8,
+.view-id-news_article_listing.view-display-id-block_9,
+.view-id-news_article_listing.view-display-id-block_10 {
+  p {
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+//Robust 3 Column Pages Events
+.robust-3-column-page {
+  .paragraph--type--view {
+    background: $white;
+    .upcoming-events {
+      margin: 0;
+      background: none;
+      margin-top: 1em;
+      .view-header {
+        .container {
+          padding-top: 1.5em;
+          width: auto;
+        }
+      }
+      .view-content {
+        .container {
+          width: 100%;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          .views-row {
+            margin-right: 10px;
+            flex-grow: 1;
+            .views-field-nothing-1 {
+              .field-content {
+                width: 75px;
+                height: 74px;
+                .event-full-date {
+                  min-width: 80px;
+                  .month {
+                    padding: 0;
+                  }
+                  .day {
+                    font-size: 2.1em;
+                  }
+                }
+              }
+            }
+          }
+          .event-time {
+            display: none;
+          }
+        }
+      }
+      .view-footer {
+        .field--type-link {
+          width: auto;
+          @media #{$small-min} {
+            padding-top: 1em;
+            padding-bottom: 1.5em;
+          }
+          a {
+            @media #{$small-max} {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .paragraph--type--view.gray-background {
+    background: $off-white;
+  }
+}
+
+//Robust 3 Column News
+.robust-3-column-page {
+  .paragraph--type--view {
+    .robust-news-articles {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+name: 'Content Reference Paragraph'
+description: 'Provides Content Reference paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_content_reference_content_type
+  - field
+  - node
+  - paragraphs
+version: '1.02'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

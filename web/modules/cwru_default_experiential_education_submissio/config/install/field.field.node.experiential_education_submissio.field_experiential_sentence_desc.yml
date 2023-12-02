@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experiential_sentence_desc
+    - node.type.experiential_education_submissio
+id: node.experiential_education_submissio.field_experiential_sentence_desc
+field_name: field_experiential_sentence_desc
+entity_type: node
+bundle: experiential_education_submissio
+label: 'One Sentence Description'
+description: 'Please provide a brief one sentence description for your program or opportunity.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

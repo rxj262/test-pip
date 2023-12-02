@@ -1,0 +1,10 @@
+name: 'Two Column Content'
+description: 'Two column content layout. '
+type: module
+dependencies:
+  - entity_reference_revisions
+  - field
+  - paragraphs
+version: '1.00'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

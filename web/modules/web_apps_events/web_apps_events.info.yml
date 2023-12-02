@@ -1,0 +1,7 @@
+type: module
+name: JS Component to Get Events
+description: Get a list of events from LawApps DNN database.
+package: JS Component
+dependencies:
+  - js_component
+core_version_requirement: '>=9'

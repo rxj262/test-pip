@@ -1,0 +1,27 @@
+name: 'Media Bundles'
+description: 'Install Media Bundles'
+type: module
+version: '1.34'
+package: 'CWRU Default'
+dependencies:
+  - content_moderation
+  - crop
+  - cwru_default_image_styles_for_cwru
+  - dropzonejs_eb_widget
+  - 'drupal:media (>= 8.4)'
+  - entity_browser
+  - entity_browser_entity_form
+  - field
+  - file
+  - focal_point
+  - image
+  - link
+  - media
+  - path
+  - responsive_image
+  - user
+  - video_embed_field
+  - video_embed_media
+  - views
+  - views_infinite_scroll
+core_version_requirement: '>=9'

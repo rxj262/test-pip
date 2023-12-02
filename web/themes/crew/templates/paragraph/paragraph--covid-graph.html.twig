@@ -1,0 +1,22 @@
+{{ attach_library('crew/covid-graph') }}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    'covid-graph-container',
+    'mb-20',
+  ]
+%}
+{% block paragraph %}
+        {% block content %}
+<h3 class="mv-20">{{ content.field_graph_title }}</h3>
+  <div{{ attributes.addClass(classes) }}>
+    <canvas width="960" height="400" id="{{ paragraph.id() }}">
+        <div class="sr-only">
+        {{ content }}
+    </div>
+    </canvas>
+  </div>
+        {% endblock %}
+{% endblock paragraph %}

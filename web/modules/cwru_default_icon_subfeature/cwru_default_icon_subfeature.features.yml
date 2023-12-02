@@ -1,0 +1,4 @@
+bundle: cwru_default
+excluded:
+  - field.storage.node.field_icon_subfeature_ref
+required: true

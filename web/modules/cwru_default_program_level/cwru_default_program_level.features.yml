@@ -1,0 +1,5 @@
+bundle: cwru_default
+excluded:
+  - field.field.node.program.field_programs_program_level
+  - field.storage.node.field_programs_program_level
+required: true

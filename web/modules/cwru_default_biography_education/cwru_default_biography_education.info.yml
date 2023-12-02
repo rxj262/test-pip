@@ -1,0 +1,13 @@
+name: 'Education Information'
+description: 'Provides Education Information paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_degree
+  - entity_reference_revisions
+  - field
+  - node
+  - paragraphs
+  - taxonomy
+version: '1.04'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

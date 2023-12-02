@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: anonymous
+label: 'Anonymous user'
+weight: -3
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'never autoplay videos'
+  - 'search content'
+  - 'view media'
+  - 'view the administration theme'

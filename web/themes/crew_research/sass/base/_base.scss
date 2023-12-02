@@ -1,0 +1,8 @@
+.homepage-container {
+  padding: 3rem 40px;
+  margin-right: -22px;
+  margin-left: -22px;
+  @media #{$small-max} {
+    padding: 3rem 20px;
+  }
+}

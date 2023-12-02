@@ -1,0 +1,21 @@
+name: 'Gallery Section'
+description: 'Provides Gallery Section paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_aside
+  - cwru_default_image_styles_for_cwru
+  - cwru_default_media_bundles
+  - 'drupal:media (>= 8.4)'
+  - entity_browser_entity_form
+  - entity_reference_revisions
+  - field
+  - file
+  - ief_table_view_mode
+  - image
+  - inline_entity_form
+  - media
+  - paragraphs
+  - text
+version: '1.06'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

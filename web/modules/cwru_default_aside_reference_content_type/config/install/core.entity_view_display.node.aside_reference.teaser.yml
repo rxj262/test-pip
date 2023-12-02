@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.aside_reference.field_aside_reference
+    - node.type.aside_reference
+  module:
+    - user
+id: node.aside_reference.teaser
+targetEntityType: node
+bundle: aside_reference
+mode: teaser
+content: {  }
+hidden:
+  field_aside_reference: true
+  links: true

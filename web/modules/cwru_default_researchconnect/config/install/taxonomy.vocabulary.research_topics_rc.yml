@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Research Topics - RC'
+vid: research_topics_rc
+description: ''
+hierarchy: 0
+weight: 0

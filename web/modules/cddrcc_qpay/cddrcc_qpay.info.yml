@@ -1,0 +1,5 @@
+name: CDDRCC QuikPay
+type: module
+description: 'Post payment processor, including displaying successful page and sending email'
+package: Development
+core_version_requirement: '>=9'

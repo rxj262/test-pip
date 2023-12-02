@@ -1,0 +1,8 @@
+name: 'CWRU Hard Coded'
+description: 'Provides CWRU Hard Coded custom block type and related configuration. Hard coded custom block that manages ANY block that doesn''t have fields'
+type: module
+dependencies:
+  - block_content
+version: '1.0'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

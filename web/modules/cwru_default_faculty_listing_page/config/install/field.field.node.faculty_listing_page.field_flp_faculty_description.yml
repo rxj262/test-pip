@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_flp_faculty_description
+    - node.type.faculty_listing_page
+  module:
+    - text
+id: node.faculty_listing_page.field_flp_faculty_description
+field_name: field_flp_faculty_description
+entity_type: node
+bundle: faculty_listing_page
+label: 'Faculty Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

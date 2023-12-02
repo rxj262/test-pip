@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.site_affiliation.field_site_center_ref
+    - field.field.paragraph.site_affiliation.field_site_department_ref
+    - field.field.paragraph.site_affiliation.field_site_school_ref
+    - paragraphs.paragraphs_type.site_affiliation
+  module:
+id: paragraph.site_affiliation.default
+targetEntityType: paragraph
+bundle: site_affiliation
+mode: default
+content:
+  field_site_center_ref:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_site_department_ref:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_site_school_ref:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

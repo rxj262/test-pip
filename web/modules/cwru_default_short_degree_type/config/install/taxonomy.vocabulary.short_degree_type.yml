@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Short Degree Type (UGA Only)'
+vid: short_degree_type
+description: 'Short Categories of Degree Type for public views and searches.'
+weight: 0

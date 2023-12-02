@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.facebook_embed.field_facebook_embed_height
+    - field.field.paragraph.facebook_embed.field_facebook_embed_page_link
+    - paragraphs.paragraphs_type.facebook_embed
+  module:
+    - link
+id: paragraph.facebook_embed.default
+targetEntityType: paragraph
+bundle: facebook_embed
+mode: default
+content:
+  field_facebook_embed_height:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_facebook_embed_page_link:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

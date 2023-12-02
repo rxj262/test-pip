@@ -1,0 +1,223 @@
+<?php
+
+use Drupal\Core\Mail\MailManagerInterface;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Component\Utility\Html;
+
+
+
+/******** pre payment process *********/
+/*
+function cddrcc_qpay_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+      $form['actions'][$action]['#submit'][] = 'mymodule_form_submit';
+    }
+  }
+}
+function mymodule_form_submit(array $form, FormStateInterface $form_state){
+    //die("I'm not getting run, why :(");
+    drupal_set_message("Why won't this message show?");
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********* post payment process **********/
+
+/**
+ * Implements HOOK_preprocess_node().
+ */
+function cddrcc_qpay_preprocess_node(&$variables) {
+  if ($variables['url'] == '/medicine/cddrcc/ideas-registration/success') {
+    if(!empty($_GET['transactionStatus'])) {
+
+// Get user variables
+//
+
+$userChoice3 = $_GET["userChoice3"];  // title
+$userChoice4 = $_GET["userChoice4"];  // first name
+$userChoice5 = $_GET["userChoice5"];  // last name
+$userChoice6 = $_GET["userChoice6"];  // institution
+$userChoice7 = $_GET["userChoice7"];  // degree
+$userChoice8 = $_GET["userChoice8"];  // specialty
+$userChoice9 = $_GET["userChoice9"];  // address
+$userChoice10 = $_GET["userChoice10"];  // city
+$userChoice11 = $_GET["userChoice11"];  // state
+$userChoice12 = $_GET["userChoice12"];  // zip
+$userChoice13 = $_GET["userChoice13"];  // phone
+$userChoice14 = $_GET["userChoice14"];  // email
+$userChoice15 = $_GET["userChoice15"];  // 4ssn
+$userChoice16 = $_GET["userChoice16"];  // sun event 1
+$userChoice17 = $_GET["userChoice17"];  // sun event 2
+$userChoice18 = $_GET["userChoice18"];  // mon event
+$userChoice19 = $_GET["userChoice19"];  // tue event
+$userChoice20 = $_GET["userChoice20"];  // clinic course 
+$userChoice21 = $_GET["userChoice21"];  // sat reception
+
+//
+//Get transaction variables
+//
+   $transactionType = $_GET["transactionType"];
+   $transactionStatus = $_GET["transactionStatus"];
+   $transactionId = $_GET["transactionId"];
+   $transactionTotalAmount = $_GET["transactionTotalAmount"];
+   $transactionDate = $_GET["transactionDate"];
+   $transactionAcountType = $_GET["transactionAcountType"];
+   $transactionDescription = $_GET["transactionDescription"];
+   $orderType = $_GET["orderType"];
+   $payerFullName = $_GET["payerFullName"];
+   $accountHolderName = $_GET["accountHolderName"];
+   $email = $_GET["email"];
+   $final_total=number_format(($transactionTotalAmount/100),2);
+   _mail_sender();
+    }
+  }
+}
+
+/**
+* Implements hook_mail().
+*/
+/*
+function cddrcc_qpay_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key) {
+    case 'payment_notification':
+      $message['header'] = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>';
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('IDEAS Symposium Registration Information');
+	
+      $params['message'] = "<p>Cleveland IDEAS Symposium Quikpay Registration Information</p><p>Thank you, ".$_GET['accountHolderName']."! Your registration for the Cleveland Ideas Symposium has been successful. Per your request, your ".$_GET['transactionAcountType']." has been charged $ $final_total. Listed below are the details of your registration. If you have any questions please contact Ashley Mathews at Ashley.Mathews@UHhospitals.org or 216-844-7375</p><h4>Registration Information</h4><p>Title-  ".$_GET['userChoice3']."</p><p>First Name-  ".$_GET['userChoice4']."</p><p>Last Name-  ".$_GET['userChoice5']."</p><p>Institution-  ".$_GET['userChoice6']."</p><p>Degree-  ".$_GET['userChoice7']."</p><p>Specialty-  ".$_GET['userChoice8']."</p><p>Address-  ".$_GET['userChoice9']."</p><p>City-  ".$_GET['userChoice10']."</p><p>State-  ".$_GET['userChoice11']."</p><p>Zip-  ".$_GET['userChoice12']."</p><p>Phone-  ".$_GET['userChoice13']."</p><p>Email-  ".$_GET['userChoice14']."</p><p>SSN-  ".$_GET['userChoice15']."</p>
+
+
+<p>".$_GET['userChoice16']."</p><p>Keynote-  ".$_GET['userChoice17']."</p><p>Welcome Reception-  ".$_GET['userChoice18']."</p><p>9-7 Workshop-  ".$_GET['userChoice19']."</p><p>9-8 Workshop-  ".$_GET['userChoice20']."</p><p>9-9 Clinical-  ".$_GET['userChoice21']."</p><h4>Total Paid-  $ $final_total</h4><p>Account Holder Name-  ".$_GET['accountHolderName']."</p><p>Account Holder Email-  ".$_GET['email']."</p>";
+
+      $message['body'][] = $params['message'];
+      break;
+  }
+}
+*/
+
+
+function _mail_sender() {
+
+   $transactionTotalAmount = $_GET["transactionTotalAmount"];
+   $final_total=number_format(($transactionTotalAmount/100),2);
+
+
+
+// Always set content-type when sending HTML email
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+// More headers
+$headers .= 'From: <noreply@case.edu>' . "\r\n";
+$headers .= 'CC: ashley.mathews@uhhospitals.org, jxc1247@case.edu' . "\r\n";
+
+$to = $_GET['email'];
+$subject = t('IDEAS Symposium Registration Information');
+$message = "
+<html>
+<head>
+<title>HTML email</title>
+</head>
+<body>
+<p>Cleveland IDEAS Symposium Quikpay Registration Information</p>
+        	 
+<p>Thank you, ".$_GET['accountHolderName']."! Your registration for the Cleveland Ideas Symposium has been successful. Per your request, your ".$_GET['transactionAcountType']." has been charged $ $final_total. Listed below are the details of your registration. If you have any questions please contact Ashley Mathews at Ashley.Mathews@UHhospitals.org or 216-844-0068</p>
+
+<h4>Registration Information</h4>
+";
+
+!empty($_GET['userChoice3']) ? $message .= "<p>Title-  ".$_GET['userChoice3']."</p>" : $message .= "";
+
+$message .="
+
+<p>First Name-  ".$_GET['userChoice4']."</p>
+<p>Last Name-  ".$_GET['userChoice5']."</p>
+<p>Institution-  ".$_GET['userChoice6']."</p>
+<p>Degree-  ".$_GET['userChoice7']."</p>
+<p>Specialty-  ".$_GET['userChoice8']."</p>
+<p>Address-  ".$_GET['userChoice9']."</p>
+<p>City-  ".$_GET['userChoice10']."</p>
+<p>State-  ".$_GET['userChoice11']."</p>
+<p>Zip-  ".$_GET['userChoice12']."</p>
+<p>Phone-  ".$_GET['userChoice13']."</p>
+<p>Email-  ".$_GET['userChoice14']."</p>
+";
+
+!empty($_GET['userChoice15']) ? $message .= "<p>SSN-: ".$_GET['userChoice15']."</p>" : $message .= "";
+!empty($_GET['userChoice16']) ? $message .= "<p>Sunday, September 16 - Basic Science: ".$_GET['userChoice16']."</p>" : $message .= "";
+!empty($_GET['userChoice17']) ? $message .= "<p>Sunday, September 16 - Basic Science: ".$_GET['userChoice17']."</p>" : $message .= "";
+!empty($_GET['userChoice18']) ? $message .= "<p>".$_GET['userChoice18']."</p>" : $message .= "";
+!empty($_GET['userChoice19']) ? $message .= "<p>".$_GET['userChoice19']."</p>" : $message .= "";
+  switch ($_GET['userChoice20']) {
+    case '5000':
+        $userChoice20 = 'Physician';
+        break;
+    case '4000':
+        $userChoice20 = 'Physician - Ohio Gastroenterology Society Member';
+        break;
+  }
+
+$message .= "<p>Saturday, September 22 - Clinical Course (".$userChoice20.")</p>";
+!empty($_GET['userChoice21']) ? $message .= "<p>".$_GET['userChoice21']."</p>" : $message .= "";
+
+$message .= "
+<h4>Total Paid-  $ $final_total</h4>
+<p>Account Holder Name-  ".$_GET['accountHolderName']."</p>
+<p>Account Holder Email-  ".$_GET['email']."</p>
+</body>
+</html>
+";
+
+
+mail($to,$subject,$message,$headers);
+
+}
+
+
+
+
+
+
+
+
+
+/** 
+  $mailManager = \Drupal::service('plugin.manager.mail');
+  $module = 'cddrcc_qpay';
+  $key = 'payment_notification'; // Replace with Your key
+  $to = 'cxc891@case.edu';
+#  $params['message'] = $message;
+#  $params['title'] = $label;
+  $langcode = \Drupal::currentUser()->getPreferredLangcode();
+  $send = true;
+
+  $result = $mailManager->mail($module, $key, $to, $langcode, NULL, $send);
+  if ($result['result'] != true) {
+    $message = t('There was a problem sending your email notification to @email.', array('@email' => $to));
+    drupal_set_message($message, 'error');
+    \Drupal::logger('mail-log')->error($message);
+    return;
+  }
+
+  $message = t('An email notification has been sent to @email ', array('@email' => $to));
+  drupal_set_message($message);
+  \Drupal::logger('mail-log')->notice($message);
+}
+**/
+
+?>

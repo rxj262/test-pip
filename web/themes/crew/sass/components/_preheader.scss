@@ -1,0 +1,35 @@
+/**********************************************
+***********************************************
+Page Header
+***********************************************
+**********************************************/
+
+.page-header-top {
+  // background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAABGCAIAAABpHdIJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowZjBlYWYxYS1lY2ViLTRmZGUtOGJiYi01Nzc0MjhmZDc1M2YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MTYxMjg0NzRDOEZDMTFFNUI1QkY5MDk4NjQwMjE1M0QiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTYxMjg0NzNDOEZDMTFFNUI1QkY5MDk4NjQwMjE1M0QiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpmMmUyNDkyYy03Y2RiLTRhZTYtOGZjMy0wY2E3MTkwYjBjMDAiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDphNjU2ZjhlZS1kMzY0LTExNzgtODhjNi1mMTA3MzAzZGQ1OTkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz62retYAAAAYklEQVR42oyQQQ6AIAwEV9KLX/Ef/v9JI2A1aEoDBzYsLUx3249TkklUKerrKyYYT3dl9XCTuN1N6/u/PXp6VpLcRT8QsqD5mA0CH6WMJWRJhEhvICzmmVEvwT+SUTe5BBgA6OYtCGFP9zkAAAAASUVORK5CYII=);
+  // background-repeat: none;
+  // background-size: contain;
+  background: $drk-blue;
+  max-height: 70px;
+
+	.page-logo {
+    float: left;
+    display: block;
+    width: 290px;
+    height: 70px;
+    margin-left: -22px;
+    padding: 19px 0px;
+    @media #{$medium-max} { margin-left: 0; }
+    @media #{$small-max} { 
+      height: 52px; 
+      padding: 10px 0px;
+      margin: 4px 0;
+      img {
+        height: 30px;
+      }
+    }
+	}
+
+  a {
+  	color: $white;
+  }
+}

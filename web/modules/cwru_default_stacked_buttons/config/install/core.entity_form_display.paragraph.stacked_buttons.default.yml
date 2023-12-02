@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stacked_buttons.field_stacked_button_color
+    - field.field.paragraph.stacked_buttons.field_stacked_button_icon_select
+    - field.field.paragraph.stacked_buttons.field_stacked_button_link
+    - paragraphs.paragraphs_type.stacked_buttons
+  module:
+    - link
+    - paragraphs
+id: paragraph.stacked_buttons.default
+targetEntityType: paragraph
+bundle: stacked_buttons
+mode: default
+content:
+  field_stacked_button_color:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_stacked_button_icon_select:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_stacked_button_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

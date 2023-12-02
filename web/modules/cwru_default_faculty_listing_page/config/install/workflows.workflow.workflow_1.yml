@@ -1,0 +1,68 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faculty_listing_page
+    - node.type.personal_profile
+    - node.type.researchconnect
+  module:
+    - content_moderation
+id: workflow_1
+label: 'Workflow 1'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: 0
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 1
+    unpublished:
+      published: false
+      default_revision: true
+      label: Unpublished
+      weight: 2
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+    keep_unpublished:
+      label: 'Keep Unpublished'
+      from:
+        - unpublished
+      to: unpublished
+      weight: 3
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+    republish:
+      label: Republish
+      from:
+        - unpublished
+      to: published
+      weight: 2
+    unpublish:
+      label: Unpublish
+      from:
+        - published
+      to: unpublished
+      weight: 4
+  entity_types:
+    node:
+      - faculty_listing_page
+      - personal_profile
+      - researchconnect
+  default_moderation_state: draft

@@ -1,0 +1,10 @@
+bundle: cwru_default
+excluded:
+  - views.view.uga_programs_view
+  - core.entity_view_mode.node.program_card
+  - core.entity_view_mode.paragraph.program_sorter_centered_into_text
+  - field.storage.node.field_program_sorter_hero_img_fu
+  - field.storage.paragraph.field_program_contact_card
+  - field.storage.paragraph.field_program_contact_request_in
+  - core.entity_form_mode.paragraph.program_sorter_centered_into_text
+required: true

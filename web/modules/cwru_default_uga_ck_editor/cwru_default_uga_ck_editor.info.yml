@@ -1,0 +1,13 @@
+name: 'UGA CK Editor'
+description: 'Editor for UGA'
+type: module
+dependencies:
+  - ckeditor
+  - editor
+  - editor_file
+  - entity_embed
+  - filter
+  - video_embed_wysiwyg
+version: '1.05'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

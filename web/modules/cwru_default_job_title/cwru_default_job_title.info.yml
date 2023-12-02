@@ -1,0 +1,10 @@
+name: 'Job Title'
+description: 'Provides Job Title taxonomy vocabulary and related configuration. '
+type: module
+dependencies:
+  - field
+  - paragraphs
+  - taxonomy
+version: '1.01'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

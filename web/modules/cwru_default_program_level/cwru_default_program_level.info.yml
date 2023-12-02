@@ -1,0 +1,10 @@
+name: 'Program Level'
+description: 'Provides Program Level taxonomy vocabulary and related configuration. '
+type: module
+dependencies:
+  - field
+  - node
+  - taxonomy
+version: '1.0'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

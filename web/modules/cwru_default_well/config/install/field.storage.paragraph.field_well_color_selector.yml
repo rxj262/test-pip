@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_well_color_selector
+field_name: field_well_color_selector
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'well well-gray'
+      label: 'Gray Background'
+    -
+      value: 'well well-blue'
+      label: 'Blue Background'
+    -
+      value: 'well well-gray well-button'
+      label: 'Gray Background with Button'
+    -
+      value: 'well well-blue well-button'
+      label: 'Blue Background with Button'
+    -
+      value: 'well well-gray well-icon'
+      label: 'Gray Background with Icon'
+    -
+      value: 'well well-blue well-icon'
+      label: 'Blue Background with Icon'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

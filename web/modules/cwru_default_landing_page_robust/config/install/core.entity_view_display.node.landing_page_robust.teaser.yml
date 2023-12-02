@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page_robust.field_landing_all_options_ref
+    - node.type.landing_page_robust
+  module:
+    - user
+id: node.landing_page_robust.teaser
+targetEntityType: node
+bundle: landing_page_robust
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_landing_all_options_ref: true

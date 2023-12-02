@@ -1,0 +1,4 @@
+bundle: cwru_default
+excluded:
+  - views.view.uga_programs_view
+required: true

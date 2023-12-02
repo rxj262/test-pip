@@ -1,0 +1,170 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_twocol_subfeature_ref
+    - node.type.homepage_w_sidebar
+    - paragraphs.paragraphs_type.external_rss
+    - paragraphs.paragraphs_type.subfeatures_group
+  module:
+    - entity_reference_revisions
+id: node.homepage_w_sidebar.field_twocol_subfeature_ref
+field_name: field_twocol_subfeature_ref
+entity_type: node
+bundle: homepage_w_sidebar
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      external_rss: external_rss
+      subfeatures_group: subfeatures_group
+    target_bundles_drag_drop:
+      accordion:
+        weight: 24
+        enabled: false
+      accordion_section:
+        weight: 25
+        enabled: false
+      alternating_subfeature:
+        weight: 26
+        enabled: false
+      aside:
+        weight: 27
+        enabled: false
+      button:
+        weight: 28
+        enabled: false
+      centered_intro_text:
+        weight: 29
+        enabled: false
+      gallery:
+        weight: 30
+        enabled: false
+      hero_full_width:
+        weight: 31
+        enabled: false
+      hero_landing_page:
+        weight: 32
+        enabled: false
+      hero_one_column:
+        weight: 33
+        enabled: false
+      hero_overlay_text:
+        weight: 34
+        enabled: false
+      hero_text_heavy:
+        weight: 35
+        enabled: false
+      hero_two_column:
+        weight: 36
+        enabled: false
+      icon_subfeature:
+        weight: 37
+        enabled: false
+      iframe:
+        weight: 38
+        enabled: false
+      stacked_buttons:
+        weight: 39
+        enabled: false
+      subfeature:
+        weight: 40
+        enabled: false
+      subfeature_two_column:
+        weight: 41
+        enabled: false
+      award_honor:
+        weight: 41
+        enabled: false
+      biography_education:
+        weight: 42
+        enabled: false
+      tab_section:
+        weight: 42
+        enabled: false
+      tabs:
+        weight: 43
+        enabled: false
+      vertical_subfeature:
+        weight: 44
+        enabled: false
+      content:
+        weight: 45
+        enabled: false
+      video:
+        weight: 45
+        enabled: false
+      well:
+        weight: 46
+        enabled: false
+      external_appointment:
+        weight: 46
+        enabled: false
+      gallery_section:
+        weight: 48
+        enabled: false
+      aside_reference:
+        weight: 52
+        enabled: false
+      external_rss:
+        enabled: true
+        weight: 55
+      facebook_embed:
+        weight: 56
+        enabled: false
+      job_title_affiliation:
+        weight: 57
+        enabled: false
+      content_reference:
+        weight: 58
+        enabled: false
+      presentation:
+        weight: 58
+        enabled: false
+      program_degree_website:
+        weight: 59
+        enabled: false
+      publication:
+        weight: 60
+        enabled: false
+      residency:
+        weight: 61
+        enabled: false
+      site_affiliation:
+        weight: 62
+        enabled: false
+      icon_picker:
+        weight: 65
+        enabled: false
+      teaser:
+        weight: 68
+        enabled: false
+      view:
+        weight: 71
+        enabled: false
+      social:
+        weight: 74
+        enabled: false
+      social_section:
+        weight: 75
+        enabled: false
+      stacked_button_wrapper:
+        weight: 77
+        enabled: false
+      subfeature_landing:
+        weight: 79
+        enabled: false
+      subfeature_section:
+        weight: 80
+        enabled: false
+      subfeatures_group:
+        enabled: true
+        weight: 83
+field_type: entity_reference_revisions

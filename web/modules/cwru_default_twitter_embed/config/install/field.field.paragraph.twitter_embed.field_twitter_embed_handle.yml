@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_twitter_embed_handle
+    - paragraphs.paragraphs_type.twitter_embed
+id: paragraph.twitter_embed.field_twitter_embed_handle
+field_name: field_twitter_embed_handle
+entity_type: paragraph
+bundle: twitter_embed
+label: 'Twitter Embed Handle'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: cwru
+default_value_callback: ''
+settings: {  }
+field_type: string

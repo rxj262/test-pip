@@ -1,0 +1,31 @@
+.personal-profile {
+  .profile-info-display {
+    @include span(12);
+    float: none;
+    @media #{$large-min}  { margin-right: 0; }
+    .field--label {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .field--item {
+      margin-bottom: 12px;
+    }
+    .field__items {
+      margin-left: 22px;
+    }
+  }
+  .pull-right {
+    @media #{$small-max}  { float: none !important; }
+  }
+  .profile-aside {
+    border: 1px solid $light-gray;
+    padding: 12px;
+    margin-left: 22px;
+    margin-bottom: 22px;
+    @media #{$small-max}  { margin-left: 0; }
+
+    div.field {
+      margin-bottom: 12px;
+    }
+  }
+}

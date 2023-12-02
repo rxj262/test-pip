@@ -1,0 +1,19 @@
+.homepage-w-sidebar__content {
+  @include span(12);
+  @media #{$small-min} { @include span(9); }
+  padding-right: 22px;
+  border-right: 1px solid $lighter-gray;
+}
+
+.homepage-w-sidebar__sidebar {
+  @include span(12);
+  @media #{$small-min} { @include span(3 last); }
+}
+
+.media-list span.views-field {
+  display: block;
+}
+
+.eq-height {
+  @media #{$medium-min} {display: flex}
+}

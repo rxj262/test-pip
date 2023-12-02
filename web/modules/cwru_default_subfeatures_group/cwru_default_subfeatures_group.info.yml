@@ -1,0 +1,11 @@
+name: 'Subfeature Robust'
+description: 'Provides Subfeatures Group paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_subfeature_section
+  - entity_reference_revisions
+  - field
+  - paragraphs
+version: '1.05'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

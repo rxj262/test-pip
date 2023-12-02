@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_viewfield
+    - paragraphs.paragraphs_type.view
+  module:
+    - viewfield
+id: paragraph.view.field_view_viewfield
+field_name: field_view_viewfield
+entity_type: paragraph
+bundle: view
+label: Viewfield
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  force_default: 0
+  allowed_views:
+    content: 0
+    block_content: 0
+    files: 0
+    frontpage: 0
+    international_news_feed: 0
+    media: 0
+    user_admin_people: 0
+    comments_recent: 0
+    content_recent: 0
+    redirect: 0
+    redirect_404: 0
+    taxonomy_term: 0
+    uga_programs_view: 0
+    who_s_new: 0
+    who_s_online: 0
+  allowed_display_types:
+    block: 0
+    feed: 0
+    default: 0
+    page: 0
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

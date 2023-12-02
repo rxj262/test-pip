@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ext_prof_email
+    - node.type.external_profile
+id: node.external_profile.field_ext_prof_email
+field_name: field_ext_prof_email
+entity_type: node
+bundle: external_profile
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

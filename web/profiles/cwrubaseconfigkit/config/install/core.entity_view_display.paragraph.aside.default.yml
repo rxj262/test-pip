@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.aside.field_aside_button
+    - field.field.paragraph.aside.field_aside_content
+    - field.field.paragraph.aside.field_aside_title
+    - field.field.paragraph.aside.field_field_aside_image_ref
+    - paragraphs.paragraphs_type.aside
+  module:
+    - link
+    - text
+id: paragraph.aside.default
+targetEntityType: paragraph
+bundle: aside
+mode: default
+content:
+  field_aside_button:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_aside_content:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_aside_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_field_aside_image_ref:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: aside_image_style
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

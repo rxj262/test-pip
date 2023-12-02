@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page_alternate_subfeatur.field_alt_subfeature_ref
+    - field.field.node.landing_page_alternate_subfeatur.field_centered_intro_text_ref
+    - field.field.node.landing_page_alternate_subfeatur.field_hero_overlay_text_ref
+    - field.field.node.landing_page_alternate_subfeatur.field_meta_tags
+    - node.type.landing_page_alternate_subfeatur
+  module:
+    - entity_reference_revisions
+    - user
+id: node.landing_page_alternate_subfeatur.default
+targetEntityType: node
+bundle: landing_page_alternate_subfeatur
+mode: default
+content:
+  field_alt_subfeature_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_centered_intro_text_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_hero_overlay_text_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_meta_tags: true
+  links: true

@@ -1,0 +1,216 @@
+h1, h2, h3, h4, h5, h6 {
+  color: #0a304e;
+  font-weight: 600;
+  padding: 0 0 .3em;
+  margin: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  color: black;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+h3, .h3 {
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+h4 {
+  font-size: 26px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+hr {
+  clear: both;
+}
+
+hr:before, hr:after {
+  content: " ";
+  display: table;
+}
+
+hr:after {
+  clear: both;
+}
+
+blockquote {
+  padding: 12px 30px;
+  margin: 0px 0px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #f5f5f5;
+  border-left: 4px solid #0a304e;
+  display: table;
+  width: 100%;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #3168a6;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #0a304e;
+  text-decoration: underline;
+}
+
+.button-gray {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  padding: 10px 16px;
+  line-height: 1.33333;
+  font-size: 20px;
+  color: #333;
+  background-color: #eee;
+  border-color: #eee;
+  transition: all .3s;
+}
+
+.button-gray:focus, .button-gray.focus, .button-gray:hover, .button-gray:active, .button-gray.active {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.button-gray:hover {
+  text-decoration: none;
+}
+
+.button-blue {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  padding: 10px 16px;
+  line-height: 1.33333;
+  font-size: 20px;
+  color: #fff;
+  background-color: #0a304e;
+  border-color: #0a304e;
+  transition: all .3s;
+  color: white !important;
+}
+
+.button-blue:focus, .button-blue.focus, .button-blue:hover, .button-blue:active, .button-blue.active {
+  background-color: #3168a6;
+  border-color: #3168a6;
+  color: #fff;
+}
+
+.button-blue:hover, .button-blue:link:hover {
+  text-decoration: none;
+}
+
+.button-block-gray {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  padding: 10px 16px;
+  line-height: 1.33333;
+  font-size: 20px;
+  color: #333;
+  background-color: #eee;
+  border-color: #eee;
+  transition: all .3s;
+  text-align: center;
+  display: block;
+  width: 100%;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 9px;
+}
+
+.button-block-gray:focus, .button-block-gray.focus, .button-block-gray:hover, .button-block-gray:active, .button-block-gray.active {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.button-block-gray:hover {
+  text-decoration: none;
+}
+
+.button-block-blue {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  padding: 10px 16px;
+  line-height: 1.33333;
+  font-size: 20px;
+  color: #fff;
+  background-color: #0a304e;
+  border-color: #0a304e;
+  transition: all .3s;
+  text-align: center;
+  display: block;
+  width: 100%;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 9px;
+  color: white !important;
+}
+
+.button-block-blue:focus, .button-block-blue.focus, .button-block-blue:hover, .button-block-blue:active, .button-block-blue.active {
+  background-color: #3168a6;
+  border-color: #3168a6;
+  color: #fff;
+}
+
+.button-block-blue:hover, .button-block-blue:link:hover {
+  text-decoration: none;
+}
+
+.cke_editable .align-right img {
+  margin-left: 22px;
+}
+
+.cke_editable .align-left img {
+  margin-right: 22px;
+}
+
+.indent {
+  text-indent: 20px;
+}
+
+.font-large {
+  font-size: 1.5em;
+}
+
+.well-blue {
+  background-color: #0a304e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}

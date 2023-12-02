@@ -1,0 +1,25 @@
+.bio-grid-view {
+	.view-content {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			li.media {
+				flex-basis: 33%;
+				display: flex;
+				flex-direction: column;
+				border-bottom: none;
+				.media-image-container {
+					float: none;
+					margin: auto;
+					display: table;
+				}
+				@media #{$small-max} {
+					flex-basis: 49%;
+				}
+				@media #{$phone-max} {
+					flex-basis: 100%;
+				}
+			}
+		}
+	}
+}

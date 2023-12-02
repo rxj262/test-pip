@@ -1,0 +1,119 @@
+// Biography
+//
+// The biography listing is a list which typically includes a thumbnail image, a name which links to the full bio page, and a description. Departments and titles are bolded.
+//
+// Markup: biography.hbs
+//
+// Style guide: components.biography
+
+.biography,
+.researchconnect {
+  .bio-info-display {
+    @include span(12);
+    float: none;
+    @media #{$large-min} {
+      margin-right: 0;
+    }
+
+    .field--label {
+      //font size here
+      font-size: 18px;
+      font-weight: 600;
+
+      &:after {
+        content: ":";
+      }
+    }
+
+    .field--item {
+      margin-bottom: 12px;
+    }
+
+    .field__items {
+      margin-left: 22px;
+    }
+  }
+
+  .field--name-field-biography-center-ref,
+  .field--name-field-biography-dept-ref,
+  .field--name-field-biography-school-ref,
+  .field--name-field-job-title-ref,
+  .field--name-field-primary-title {
+    font-weight: 600;
+  }
+
+  .pull-right {
+    @media #{$small-max} {
+      float: none !important;
+    }
+  }
+
+  .profile-aside {
+    border: 1px solid $light-gray;
+    padding: 12px;
+    margin-left: 22px;
+    margin-bottom: 22px;
+    word-break: break-all;
+    @media #{$small-max} {
+      margin-left: 0;
+    }
+
+    .field--name-field-biography-image-ref,
+    .field--name-field-rc-image {
+      margin-bottom: 12px;
+    }
+  }
+
+  .office-location-title div:first-child,
+  .field--name-field-primary-title div:first-child {
+    font-weight: 600;
+  }
+
+  .field--name-field-biography-job-description {
+    margin: 22px 0;
+  }
+
+  .bio-title-group {
+    div {
+      display: inline;
+    }
+
+    .field--name-field-biography-credential-ref .field--item:before {
+      content: ", ";
+      margin-left: -8px;
+    }
+  }
+}
+
+.field--name-field-biography-title-ref > .field--item,
+.field--name-field-primary-title > .field--item {
+  margin-bottom: 10px;
+}
+
+.paragraph--type--job-title-affiliation div,
+.paragraph--type--biography-education div,
+.paragraph--type--external-appointment div,
+.paragraph--type--residency div,
+.paragraph--type--award-honor div {
+  display: inline;
+}
+
+.paragraph--type--job-title-affiliation .field--item:before,
+.paragraph--type--biography-education .field:before,
+.paragraph--type--external-appointment .field:before,
+.paragraph--type--residency .field:before,
+.paragraph--type--award-honor .field:before {
+  content: ", ";
+  margin-left: -4px;
+}
+
+.paragraph--type--job-title-affiliation .field--name-field-job-title-ref:before,
+.paragraph--type--biography-education
+  .field--name-field-biography-degree:before,
+.paragraph--type--external-appointment
+  .field--name-field-biography-ext-title:before,
+.paragraph--type--residency .field--name-field-biography-res-area-study:before,
+.paragraph--type--award-honor .field--name-field-biography-award-honor:before {
+  content: "";
+  margin-left: 0;
+}

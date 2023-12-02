@@ -1,0 +1,8 @@
+name: 'Content Access Settings'
+description: 'Content Access Settings'
+type: module
+dependencies:
+  - content_access
+version: '1.0'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

@@ -1,0 +1,105 @@
+.event-detail-page {
+	.main-information-wrapper {
+		h2 {
+			margin-top: 25px;
+		}
+		.event-location-wrapper {
+			margin-bottom: 20px;
+			.field--name-field-event-location {
+				margin-bottom: 20px;
+			}
+		}
+		.field--name-field-webcast-archive-title {
+			font-size: 20px;
+		    color: $cwru-blue;
+		    font-weight: 600;
+		    padding: 0 0 0.3em;
+		    margin: 0;
+		    line-height: 1.1
+		}
+	}
+	.calendar-holder {
+		padding: 20px 19px;
+		i {
+			font-size: 40px;
+			color: $cwru-blue;
+		}
+	}
+	.top-box-wrapper {
+		background-color: $off-white;
+		font-size: 18px;
+		border: 1px solid $dark-gray;
+		@media #{$phone-max} {
+            flex-direction: column;
+        }
+		.basic-details-wrapper {
+			padding-top: 15px;
+			.field--name-field-add-to-calendar-button {
+				.atcb-link {
+					display: none;
+				}
+				.atcb-list:first-of-type {
+					visibility: visible;
+					background: none;
+					position: relative;
+					display: inline;
+					z-index: 1;
+				}
+				.atcb-list {
+					display: none;
+				}
+				.atcb-item {
+					display: inline-block;
+					background: none;
+					padding: 0 5px;
+				}
+			}
+			.field--name-field-event-url {
+				display: inline-block;
+				margin-right: 10px;
+				margin-bottom: 15px;
+				a {
+					font-weight: 600;
+					font-size: 18px;
+				}
+			}
+		}
+		.pd-hours-and-social {
+			padding-top: 15px;
+			.pd-credit-display {
+				background-color: $cwru-blue;
+				color: $white;
+				padding: 15px 20px;
+				margin-bottom: 10px;
+				max-width: 370px;
+				span:only-child {
+					display: none;
+				}
+			}
+			.social-media-share-buttons {
+				.social-sharing-buttons {
+					margin: 0 0 15px 0;
+					svg {
+						fill: $link-blue;
+						&:hover{
+							fill: $cwru-blue;
+						}
+					}
+				}
+			}
+		}
+	}
+	.event-aside-wrapper {
+		.field--name-field-event-host {
+			color: $white;
+			background-color: $cwru-blue;
+			padding: 15px 20px 5px;
+			border-top: 1px solid $white;
+			margin-bottom: 25px;
+			font-size: 18px;
+		}
+		@media #{$medium-max} {
+            max-width: 400px;
+        }
+	}
+}

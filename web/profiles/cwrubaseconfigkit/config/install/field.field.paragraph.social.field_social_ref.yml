@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_ref
+    - paragraphs.paragraphs_type.social
+    - paragraphs.paragraphs_type.social_section
+  module:
+    - entity_reference_revisions
+id: paragraph.social.field_social_ref
+field_name: field_social_ref
+entity_type: paragraph
+bundle: social
+label: 'Social Icon Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social_section: social_section
+    target_bundles_drag_drop:
+      award_honor:
+        weight: 11
+        enabled: false
+      biography_education:
+        weight: 12
+        enabled: false
+      external_appointment:
+        weight: 13
+        enabled: false
+      job_title_affiliation:
+        weight: 14
+        enabled: false
+      presentation:
+        weight: 15
+        enabled: false
+      publication:
+        weight: 16
+        enabled: false
+      residency:
+        weight: 17
+        enabled: false
+      site_affiliation:
+        weight: 18
+        enabled: false
+      social:
+        weight: 19
+        enabled: false
+      social_section:
+        enabled: true
+        weight: 20
+field_type: entity_reference_revisions

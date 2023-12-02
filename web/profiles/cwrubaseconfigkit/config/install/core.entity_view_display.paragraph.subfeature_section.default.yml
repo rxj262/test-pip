@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.subfeature_section.field_sf_section_content
+    - field.field.paragraph.subfeature_section.field_sf_section_image_ref
+    - field.field.paragraph.subfeature_section.field_sf_section_link
+    - field.field.paragraph.subfeature_section.field_sf_section_pdf_link
+    - field.field.paragraph.subfeature_section.field_sf_section_title
+    - paragraphs.paragraphs_type.subfeature_section
+  module:
+    - file_url
+    - link
+    - text
+id: paragraph.subfeature_section.default
+targetEntityType: paragraph
+bundle: subfeature_section
+mode: default
+content:
+  field_sf_section_content:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sf_section_image_ref:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: subfeature_image_style
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_sf_section_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_sf_section_pdf_link:
+    weight: 4
+    label: hidden
+    settings:
+      mode: link
+    third_party_settings: {  }
+    type: file_url_default
+    region: content
+  field_sf_section_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

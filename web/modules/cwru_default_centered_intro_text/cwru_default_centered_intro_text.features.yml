@@ -1,0 +1,4 @@
+bundle: cwru_default
+excluded:
+  - field.storage.node.field_centered_intro_text_ref
+required: true

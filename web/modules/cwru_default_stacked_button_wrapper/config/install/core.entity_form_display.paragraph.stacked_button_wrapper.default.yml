@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stacked_button_wrapper.field_stacked_button_wrapper
+    - field.field.paragraph.stacked_button_wrapper.field_stacked_button_wrapper_col
+    - paragraphs.paragraphs_type.stacked_button_wrapper
+  module:
+    - paragraphs
+id: paragraph.stacked_button_wrapper.default
+targetEntityType: paragraph
+bundle: stacked_button_wrapper
+mode: default
+content:
+  field_stacked_button_wrapper:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_stacked_button_wrapper_col:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

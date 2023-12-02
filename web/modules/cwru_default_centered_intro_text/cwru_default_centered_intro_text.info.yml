@@ -1,0 +1,12 @@
+name: 'Centered Intro Text'
+description: 'Provides Centered Intro Text paragraphs type and related configuration.'
+type: module
+dependencies:
+  - entity_reference_revisions
+  - field
+  - node
+  - paragraphs
+  - text
+version: '1.08'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

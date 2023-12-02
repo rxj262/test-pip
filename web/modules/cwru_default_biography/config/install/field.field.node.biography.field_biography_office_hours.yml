@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_office_hours
+    - node.type.biography
+  module:
+    - text
+id: node.biography.field_biography_office_hours
+field_name: field_biography_office_hours
+entity_type: node
+bundle: biography
+label: 'Office Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

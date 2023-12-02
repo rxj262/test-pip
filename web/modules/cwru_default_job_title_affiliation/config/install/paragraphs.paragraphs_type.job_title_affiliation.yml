@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: job_title_affiliation
+label: 'Title and Affiliation'
+behavior_plugins: {  }

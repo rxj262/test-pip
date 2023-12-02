@@ -1,0 +1,12 @@
+name: Button
+description: 'Provides Button paragraphs type and related configuration.'
+type: module
+dependencies:
+  - field
+  - field_group
+  - link
+  - options
+  - paragraphs
+version: '1.05'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

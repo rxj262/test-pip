@@ -1,0 +1,156 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_block
+    - node.type.secondary_footer
+    - paragraphs.paragraphs_type.footer_address
+  module:
+    - entity_reference_revisions
+id: node.secondary_footer.field_address_block
+field_name: field_address_block
+entity_type: node
+bundle: secondary_footer
+label: 'Address Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      footer_address: footer_address
+    target_bundles_drag_drop:
+      accordion:
+        weight: 44
+        enabled: false
+      accordion_section:
+        weight: 45
+        enabled: false
+      additional_job_descriptions:
+        weight: 46
+        enabled: false
+      additional_view_orders:
+        weight: 47
+        enabled: false
+      aside:
+        weight: 48
+        enabled: false
+      aside_reference:
+        weight: 49
+        enabled: false
+      award_honor:
+        weight: 50
+        enabled: false
+      biography_education:
+        weight: 51
+        enabled: false
+      button:
+        weight: 52
+        enabled: false
+      content:
+        weight: 53
+        enabled: false
+      content_reference:
+        weight: 54
+        enabled: false
+      external_appointment:
+        weight: 55
+        enabled: false
+      external_rss:
+        weight: 56
+        enabled: false
+      facebook_embed:
+        weight: 57
+        enabled: false
+      footer_address:
+        enabled: true
+        weight: 58
+      gallery:
+        weight: 59
+        enabled: false
+      gallery_section:
+        weight: 60
+        enabled: false
+      hero_landing_page:
+        weight: 61
+        enabled: false
+      hero_one_column:
+        weight: 62
+        enabled: false
+      hero_text_heavy:
+        weight: 63
+        enabled: false
+      hero_two_column:
+        weight: 64
+        enabled: false
+      icon_picker:
+        weight: 65
+        enabled: false
+      icon_subfeature:
+        weight: 66
+        enabled: false
+      job_title_affiliation:
+        weight: 67
+        enabled: false
+      presentation:
+        weight: 68
+        enabled: false
+      publication:
+        weight: 69
+        enabled: false
+      residency:
+        weight: 70
+        enabled: false
+      site_affiliation:
+        weight: 71
+        enabled: false
+      social:
+        weight: 72
+        enabled: false
+      social_section:
+        weight: 73
+        enabled: false
+      stacked_button_wrapper:
+        weight: 74
+        enabled: false
+      stacked_buttons:
+        weight: 75
+        enabled: false
+      subfeature:
+        weight: 76
+        enabled: false
+      subfeature_landing:
+        weight: 77
+        enabled: false
+      subfeature_section:
+        weight: 78
+        enabled: false
+      subfeature_two_column:
+        weight: 79
+        enabled: false
+      tab_section:
+        weight: 80
+        enabled: false
+      tabs:
+        weight: 81
+        enabled: false
+      twitter_embed:
+        weight: 82
+        enabled: false
+      vertical_subfeature:
+        weight: 83
+        enabled: false
+      vertical_subfeatures_group:
+        weight: 84
+        enabled: false
+      view:
+        weight: 85
+        enabled: false
+      well:
+        weight: 86
+        enabled: false
+field_type: entity_reference_revisions

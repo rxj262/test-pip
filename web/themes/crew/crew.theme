@@ -1,0 +1,263 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+use Drupal\taxonomy\Entity\Term;
+
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ * Use an alternative html level template to remove GTM and GA code on siteinformation pages.
+ */
+function crew_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  global $base_path;
+  global $base_url;
+  if($base_path == '/siteinformation/' || $base_url == 'http://case.edu.siteinformation.dd:8083') {
+    $suggestions[] = $hook . '__' . 'no_gtm';
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function crew_preprocess_block(&$variables) {
+  $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
+  if($variables['plugin_id']=='page_title_block') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface) {
+      if ($node->getType() == 'biography'){
+        $nid = $node->id();
+        $ac = $node->get('field_biography_credential_ref')->getValue();
+        $term = array();
+	      foreach($ac as $i=>$k){
+          $term[$i] = Term::load($k['target_id'])->getName();
+		    }
+        if(!empty($term)){
+          $term_str = implode(', ', $term);
+          $old_title = $node->get('title')->getValue();
+          $variables['content']['#title'] = $old_title[0]['value']. ', ' .$term_str;
+		    }
+      }
+    }
+  }
+}
+
+/**
+ * Implements crew_preprocess_node().
+ */
+function crew_preprocess_node(&$variables) {
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+
+  $variables['footer_options'] = theme_get_setting('footer_options','crew');
+  if (isset($variables['elements']['field_error_type'])) {
+    global $base_url;
+    $variables['site_url'] = $base_url;
+  }
+  //  lifelonglearning lecture content type add a day field and display it inline with the date field, this is only for the content type node page, not the Views listing, which is handled inside Views
+  if (!empty($variables['node']) && method_exists($variables['node'], 'bundle')){
+    if($variables['node']->bundle() == 'lecture') {
+      $variables['content']['field_course_date'][0]['#context']['value'] = $variables['content']['field_lecture_day'][0]['#context']['value'] .' '. $variables['content']['field_course_date'][0]['#context']['value'];
+      unset($variables['content']['field_lecture_day'][0]); // hide the lecture day value display, label is set to hidden in 'manage display' section of the content type.
+    }
+  }
+  // prepare email address from site_info to display on error pages
+  if (!empty($variables['node'])) {
+    $bundle = $variables['node']->bundle();
+    if ($bundle == 'error_page') {
+      $query = \Drupal::entityQuery('node');
+      $query->accessCheck(TRUE);
+      $query->condition('status', 1);
+      $query->condition('type', 'site_information');
+      $entity_ids = $query->execute();
+      if (!empty($entity_ids)) {
+        $siteinfo_node = \Drupal\node\Entity\Node::load(reset($entity_ids));
+        $email = $siteinfo_node->field_site_feedback->value;
+        $variables['site_email'] = $email;
+      } else {
+        $variables['site_email'] = false;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function crew_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  // Remove the block and replace dashes with underscores in the block ID to
+  // use for the hook name.
+  if (isset($variables['attributes']['block'])) {
+    $hook = str_replace(array('block-', '-'), array('', '_'), $variables['attributes']['block']);
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
+  }
+}
+
+function crew_preprocess_menu__main(&$variables) {
+  $variables['header_options'] = theme_get_setting('header_options','crew');
+  // list of sites that will have menu links hidden
+  $second_nav_subsite_names = array('nursing');
+  $is_secondary_nav_subsite = false;
+  $i = 0;
+  while (!$is_secondary_nav_subsite && $i < count($second_nav_subsite_names)) {
+    $is_secondary_nav_subsite = (strpos($GLOBALS['base_url'], $second_nav_subsite_names[$i]) !== false);
+    $i++;
+  }
+  $is_mobile_nav = ($variables['attributes']['block'] == 'block-crew-mobile-nav');
+  // if on subsite that gets links replaced
+  if ($is_secondary_nav_subsite && !$is_mobile_nav) {
+    $items_to_be_removed = array('Students', 'Faculty & Staff', 'Alumni');
+    // list of main nav items
+    $header_items = $variables['items'];
+    foreach ($header_items as $key => $item) {
+      // if menu item title is right, hide the menu item
+      if (in_array($header_items[$key]['title'], $items_to_be_removed)) {
+        $variables['items'][$key]['attributes'] -> addClass('hidden');
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function crew_preprocess_page(&$variables) {
+  // Limit content area length to improve readability on some content types
+  if (isset($variables['node']) && is_object($variables['node'])) {
+    $node_array = $variables['node']->toArray();
+    $readability_content_types = array('landing_page', 'basic_page', 'landing_page_robust', 'robust_3_column_page', 'biography', 'news_article', 'funding_opportunity2', 'article', 'webform', 'event_detail_page', 'tools', 'research_projects');
+    foreach($node_array['type'] as $i => $j) {
+      if(in_array($j['target_id'], $readability_content_types)) {
+        $variables['page']['optimal_line_length'] = TRUE;
+      }
+    }
+    if ($variables['logged_in'] === FALSE) {
+      $public_no_access = array('content_reference', 'aside_reference', 'site_information');
+      if(in_array($node_array['type'][0]['target_id'], $public_no_access)) {
+        throw new \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException();
+      }
+      // if hide_biographies is checked in theme settings, biography nodes will throw 404
+      $bio_no_access = array('biography');
+      if (isset(theme_get_setting('header_options', 'crew')['hide_biographies'])) {
+        if (theme_get_setting('header_options','crew')['hide_biographies'] == true) {
+          if (in_array($node_array['type'][0]['target_id'], $bio_no_access)) {
+            throw new \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException();
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function crew_preprocess_menu__toolbar__admin(&$vars) {
+  global $base_url;
+  $vars['base_url'] = $base_url;
+}
+function crew_preprocess_paragraph(&$vars) {
+  global $base_url;
+  $vars['base_url'] = $base_url;
+}
+
+/**
+ * Implement template_preprocess_paragraph__PARAGRAPH_TYPE()
+ */
+function crew_preprocess_paragraph__stacked_buttons(&$vars) {
+  if(isset($vars['content']['field_stacked_button_icon_select']['#object'])) {
+    $vars_array = $vars['content']['field_stacked_button_icon_select']['0']['#paragraph']->toArray();
+    if(isset($vars_array['field_icon_picker'][0]['value'])) {
+      $vars['icon'] = $vars_array['field_icon_picker'][0]['value'];
+    }
+  }
+}
+
+/**
+ * Implement template_preprocess_html()
+ */
+/* comment out for now since this is already set via the metatag module.
+function crew_preprocess_html(&$variables) {
+  $variables['head_title']['tail'] = 'Case Western Reserve University';
+}
+*/
+
+/**
+ * Implement template_preprocess_region()
+ */
+function crew_preprocess_region(&$variables) {
+  if($variables['region'] == "header") {
+    $variables['department_header'] = theme_get_setting('department_header','crew');
+    $variables['department_header_url'] = theme_get_setting('department_header_url','crew');
+    $variables['header_options'] = theme_get_setting('header_options','crew');
+    $variables['school_name'] = theme_get_setting('school_name','crew');
+    $variables['school_url'] = theme_get_setting('school_url','crew');
+    
+    $second_nav_subsite_names = array('nursing');
+    $is_secondary_nav_subsite = false;
+    $i = 0;
+    while (!$is_secondary_nav_subsite && $i < count($second_nav_subsite_names)) {
+      $is_secondary_nav_subsite = (strpos($GLOBALS['base_url'], $second_nav_subsite_names[$i]) !== false);
+      $i++;
+    }
+    $variables['padded_secondary_nav'] = $is_secondary_nav_subsite;
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function crew_page_attachments_alter(array &$attachments) {
+  // Trim all meta tags to a max of 300 characters.
+  if (!empty($attachments['#attached']['html_head'])) {
+    // Adjust this as needed.
+    $max_length = 300;
+    foreach ($attachments['#attached']['html_head'] as &$tag) {
+      // Only process meta tags with a 'content' attribute, that way it will
+      // exclude LINK tags or meta tags which do not have a "content" value.
+      if (isset($tag[0]['#tag']) && $tag[0]['#tag'] == 'meta') {
+        if (isset($tag[0]['#attributes']['content'])) {
+          if (!is_string($tag[0]['#attributes']['content'])) {
+            $tag[0]['#attributes']['content'] = (string) $tag[0]['#attributes']['content'];
+          }
+          if (strlen($tag[0]['#attributes']['content']) > $max_length) {
+            $string = substr($tag[0]['#attributes']['content'], 0, 150);
+            $string = preg_replace('/\s+/', ' ', $string);
+            $tag[0]['#attributes']['content'] = ltrim($string) . '...';
+          }
+        }
+      }
+    }
+  }
+
+  // datalayer custom variables
+  $datalayer_vars = [];
+
+  $site_name = \Drupal::config('system.site')->get('name');
+  // get page title
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+
+  $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+
+  if (is_string($title)) {
+    $title = trim($title);
+  }
+  if (is_array($title)) {
+    $title = $title['#markup'];
+  }
+
+  $datalayer_vars['site_name'] = "$title | $site_name";
+  $new_datalayer_arr = array(
+    'event' => 'ga4_site_name',
+    'ga4_site_name' => "$title | $site_name",
+  );
+
+  $attachments['#attached']['drupalSettings']['crew']['datalayer'] = $datalayer_vars;
+  $attachments['#attached']['drupalSettings']['crew']['new_datalayer'] = $new_datalayer_arr;
+}

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.biography_page_image_style
+label: 'Biography Page Image Style'
+targetEntityType: media
+cache: true

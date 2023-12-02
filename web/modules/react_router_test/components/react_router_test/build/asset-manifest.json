@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/admissions/jd-admissions2/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/admissions/jd-admissions2/static/js/main.3df4d4ee.chunk.js",
+    "main.js.map": "/admissions/jd-admissions2/static/js/main.3df4d4ee.chunk.js.map",
+    "runtime-main.js": "/admissions/jd-admissions2/static/js/runtime-main.a2b2cd70.js",
+    "runtime-main.js.map": "/admissions/jd-admissions2/static/js/runtime-main.a2b2cd70.js.map",
+    "static/js/2.b8179823.chunk.js": "/admissions/jd-admissions2/static/js/2.b8179823.chunk.js",
+    "static/js/2.b8179823.chunk.js.map": "/admissions/jd-admissions2/static/js/2.b8179823.chunk.js.map",
+    "static/js/3.6bead549.chunk.js": "/admissions/jd-admissions2/static/js/3.6bead549.chunk.js",
+    "static/js/3.6bead549.chunk.js.map": "/admissions/jd-admissions2/static/js/3.6bead549.chunk.js.map",
+    "index.html": "/admissions/jd-admissions2/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/admissions/jd-admissions2/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.b8179823.chunk.js.LICENSE.txt": "/admissions/jd-admissions2/static/js/2.b8179823.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/admissions/jd-admissions2/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2b2cd70.js",
+    "static/js/2.b8179823.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.3df4d4ee.chunk.js"
+  ]
+}

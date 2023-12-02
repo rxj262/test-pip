@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_line_2_data
+    - paragraphs.paragraphs_type.covid_graph
+id: paragraph.covid_graph.field_line_2_data
+field_name: field_line_2_data
+entity_type: paragraph
+bundle: covid_graph
+label: 'Line 2 Data'
+description: Optional
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

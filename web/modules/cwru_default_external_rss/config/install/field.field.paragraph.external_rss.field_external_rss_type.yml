@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_external_rss_type
+    - paragraphs.paragraphs_type.external_rss
+  module:
+    - options
+id: paragraph.external_rss.field_external_rss_type
+field_name: field_external_rss_type
+entity_type: paragraph
+bundle: external_rss
+label: 'Feed Type'
+description: 'You can only pick one.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

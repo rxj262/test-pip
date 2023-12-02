@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event_details.field_display_add_to_calendar_bu
+    - field.field.node.event_details.field_event_details_address
+    - field.field.node.event_details.field_event_details_date_range
+    - field.field.node.event_details.field_event_details_description
+    - field.field.node.event_details.field_event_details_event_type
+    - field.field.node.event_details.field_event_details_image
+    - field.field.node.event_details.field_event_details_link
+    - field.field.node.event_details.field_event_details_location
+    - field.field.node.event_details.field_event_details_speakers
+    - field.field.node.event_details.field_event_details_sponsor
+    - field.field.node.event_details.field_event_details_subtitle
+    - field.field.node.event_details.field_event_details_tags
+    - field.field.node.event_details.field_event_details_time_zone
+    - node.type.event_details
+  module:
+    - user
+id: node.event_details.teaser
+targetEntityType: node
+bundle: event_details
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_display_add_to_calendar_bu: true
+  field_event_details_address: true
+  field_event_details_date_range: true
+  field_event_details_description: true
+  field_event_details_event_type: true
+  field_event_details_image: true
+  field_event_details_link: true
+  field_event_details_location: true
+  field_event_details_speakers: true
+  field_event_details_sponsor: true
+  field_event_details_subtitle: true
+  field_event_details_tags: true
+  field_event_details_time_zone: true

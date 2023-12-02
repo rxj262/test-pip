@@ -1,0 +1,26 @@
+name: 'Robust 3-Column Page'
+description: 'Provides Robust 3-Column Page content type and related configuration. '
+type: module
+dependencies:
+  - cwru_default_accordion
+  - cwru_default_aside
+  - cwru_default_button
+  - cwru_default_content
+  - cwru_default_gallery
+  - cwru_default_hero_landing_page
+  - cwru_default_hero_one_column
+  - cwru_default_meta_field_storage
+  - cwru_default_tabs
+  - entity_reference_revisions
+  - field
+  - field_group
+  - menu_ui
+  - metatag
+  - node
+  - paragraphs
+  - path
+  - slick_paragraphs
+  - user
+package: 'CWRU Default'
+version: '1.13'
+core_version_requirement: '>=9'

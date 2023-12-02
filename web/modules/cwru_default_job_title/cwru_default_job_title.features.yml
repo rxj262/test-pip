@@ -1,0 +1,4 @@
+bundle: cwru_default
+excluded:
+  - field.storage.paragraph.field_job_title_ref
+required: true

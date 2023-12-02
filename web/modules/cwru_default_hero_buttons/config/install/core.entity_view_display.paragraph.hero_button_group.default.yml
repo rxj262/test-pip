@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_button_group.field_hero_buttons_group
+    - field.field.paragraph.hero_button_group.field_hero_buttons_heading
+    - paragraphs.paragraphs_type.hero_button_group
+  module:
+    - entity_reference_revisions
+id: paragraph.hero_button_group.default
+targetEntityType: paragraph
+bundle: hero_button_group
+mode: default
+content:
+  field_hero_buttons_group:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_hero_buttons_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

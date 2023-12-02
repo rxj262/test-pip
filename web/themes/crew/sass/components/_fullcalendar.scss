@@ -1,0 +1,57 @@
+#calendar {
+    .btn.active {
+        box-shadow: none;
+    }
+
+    .fc-main-title {
+        font-size: $font-large;
+        color: $cwru-blue;
+        font-weight: 700;
+    }
+
+    .fc-head table {
+        margin-bottom: 0;
+    }
+
+    .fc-body tr {
+        background-color: transparent;
+    }
+
+    .fc-today {
+        display: table-cell;
+        color: $cwru-blue;
+
+        &.fc-day {
+            background-color: rgba(0, 122, 184, 0.15);
+        }
+        &.fc-day-header {
+            color: $white;
+        }
+    }
+
+    .fc-day.fc-other-month {
+        background-color: $off-white;
+    }
+
+    .fc-day-top.fc-other-month {
+        opacity: .75;
+    }
+
+    .fc-content-skeleton tbody,
+    .fc-content-skeleton tr {
+        border-bottom-color: transparent;
+    }
+
+    .fc-event, .fc-event-dot {
+        color: $white;
+        background-color: $link-blue;
+        border-color: $link-blue;
+    }
+
+    .fc-list-item {
+        background-color: $white;
+    }
+    .fc-month-view .fc-scroller {
+        overflow-y: hidden !important;
+    }
+}

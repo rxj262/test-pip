@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: vertical_subfeature
+label: 'Vertical Subfeature'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

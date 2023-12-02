@@ -1,0 +1,25 @@
+.paragraph--type--hero-two-column {
+  margin-bottom: 22px;
+
+  .paragraph--carousel-caption {
+    background-color: $cwru-blue;
+    padding: 10px 20px 15px;
+
+    h2 {
+      padding: 0;
+    }
+  }
+  .field--name-field-hero-two-description,
+  .field--name-field-hero-two-link {
+    display: inline-block;
+    color: $white;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .field--name-field-hero-two-link a {
+    @include white-link();
+    margin-left: 10px;
+  }
+}

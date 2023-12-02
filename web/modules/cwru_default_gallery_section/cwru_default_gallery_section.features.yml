@@ -1,0 +1,5 @@
+bundle: cwru_default
+excluded:
+  - field.field.paragraph.gallery.field_gallery_section_ref
+  - field.storage.paragraph.field_gallery_section_ref
+required: true

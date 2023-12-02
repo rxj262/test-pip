@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_with_caption_medium
+label: 'Media Image with Caption - 3 (Medium)'
+targetEntityType: media
+cache: true

@@ -1,0 +1,15 @@
+name: 'Icon Subfeature'
+description: 'Provides Icon Subfeature paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_icon_picker
+  - entity_reference_revisions
+  - field
+  - field_group
+  - link
+  - node
+  - paragraphs
+  - text
+version: '1.02'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

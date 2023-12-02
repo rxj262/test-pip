@@ -1,0 +1,57 @@
+@import '../../global/utils/init';
+
+.paragraph--type--aside,
+.paragraph--type--president-stat {
+  color: $white;
+  background-color: $blk;
+  padding: $size-small;
+
+  @include breakpoint($bp-md) {
+    min-width: 400px;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  .field-aside-title,
+  .field-s {
+    @include font-arizona;
+    font-size: 50px;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+    margin-bottom: $size-smallest;
+  }
+
+  .field-field-aside-image-ref,
+  .field-aside-content {
+    margin-bottom: $size-small;
+  }
+
+  .field-aside-button {
+    background-color: $link-blue;
+    padding: $size-small;
+    font-size: $font-size-medium;
+    text-transform: uppercase;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.paragraph--type--president-stat {
+  display: flex;
+
+  .field-s {
+    flex: 2;
+    text-align: right;
+    padding-right: $size-smallest;
+  }
+
+  .field-stat-description-president {
+    flex: 3;
+  }
+}

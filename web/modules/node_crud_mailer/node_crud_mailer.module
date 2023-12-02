@@ -1,0 +1,163 @@
+<?php
+
+/**
+ * @file
+ * Contains node_crud_mailer.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Component\Render\PlainTextOutput;
+
+
+/**
+ * Implements hook_help().
+ */
+function node_crud_mailer_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the node_crud_mailer module.
+    case 'help.page.node_crud_mailer':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Sends out email notifications when a node is created, updated or removed') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+* Implements hook_mail().
+*/
+function node_crud_mailer_mail($key, &$message, $params) {
+  // Email subject should include site name, action, node title, message should show a link to the node, or empty when action is delete.
+ 
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+
+  $message['headers']['From'] = 'webteam@case.edu';
+ 
+  switch ($key) {
+    case 'create_node':
+      $message['from'] = 'webteam@case.edu';
+      $message['subject'] = t('Drupal Node Creation: @title -- @site', array('@title' => $params['node_title'], '@site' => $params['site_name']), $options);
+      $message['body'][] = $params['message'];
+      break;
+    case 'update_node':
+      $message['from'] = 'webteam@case.edu';
+      $message['subject'] = t('Drupal Node Update: @title -- @site', array('@title' => $params['node_title'], '@site' => $params['site_name']), $options);
+      $message['body'][] = $params['message'];
+      break;
+    case 'delete_node':
+      $message['from'] = 'webteam@case.edu';
+      $message['subject'] = t('Drupal Node Deletion: @title -- @site', array('@title' => $params['node_title'], '@site' => $params['site_name']), $options);
+      $message['body'][] = $params['message'];
+      break;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function node_crud_mailer_node_insert(EntityInterface $entity) {
+  // Check for envionment first, this function should only run in prod
+  $non_prod = $_SERVER['AH_NON_PRODUCTION'];
+  if ($non_prod == 0) {
+    // See if we can get a preview
+    $view_builder = \Drupal::entityManager()->getViewBuilder('node');
+    $full_output = $view_builder->view($entity);
+    $plain_output = strip_tags(render($full_output)->jsonSerialize(), '<h1><h2><h3><h4><br>');
+    $plain_output = trim($plain_output);
+    $trimmed_output = preg_replace('/\s+/', '', $plain_output);
+  
+    // Get site name and host
+    $site_path = \Drupal::service('site.path'); // e.g.: 'sites/default'    
+    $site_path = explode('/', $site_path);
+    $site_name = $site_path[1];
+    $host = \Drupal::request()->getHost();
+    
+    // Prepare mail vars
+    $mailManager = \Drupal::service('plugin.manager.mail');
+    $module = 'node_crud_mailer';
+    $key = 'create_node';
+    $to = 'webteam@case.edu';
+    $params['node_title'] = $entity->label();
+    $params['content_type'] = $entity->bundle();
+    $params['node_link'] = $entity->toLink()->toString();
+    $params['site_name'] = $site_name;
+    $params['message'] = 'Node ID: ' . $entity->id() . '<br>Node title: ' . $params['content_type'] . '<br>Plain content: ' . $trimmed_output . '</strong>';
+    $langcode = \Drupal::currentUser()->getPreferredLangcode();
+    $send = true;
+  
+    $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+    // Log result if needed
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ * This hook does an identical job of the insert hook above.
+ */
+function node_crud_mailer_node_update(EntityInterface $entity) {
+  // Check for envionment first, this function should only run in prod
+  $non_prod = $_SERVER['AH_NON_PRODUCTION'];
+  if ($non_prod == 0) {
+    // See if we can get a preview
+    $view_builder = \Drupal::entityManager()->getViewBuilder('node');
+    $full_output = $view_builder->view($entity);
+    $plain_output = strip_tags(render($full_output)->jsonSerialize(), '<h1><h2><h3><h4><br>');
+    $plain_output = trim($plain_output);
+    $trimmed_output = preg_replace('/\s+/', '', $plain_output);
+  
+    // Get site name and host
+    $site_path = \Drupal::service('site.path'); // e.g.: 'sites/default'    
+    $site_path = explode('/', $site_path);
+    $site_name = $site_path[1];
+    
+    // Prepare mail vars
+    $mailManager = \Drupal::service('plugin.manager.mail');
+    $module = 'node_crud_mailer';
+    $key = 'update_node';
+    $to = 'webteam@case.edu';
+    $params['node_title'] = $entity->label();
+    $params['content_type'] = $entity->bundle();
+    $params['node_link'] = $entity->toLink()->toString();
+    $params['site_name'] = $site_name;
+    $params['message'] = 'Node ID: ' . $entity->id() . '<br>Content Type: ' . $params['content_type'] . '<br>Plain content: ' . $trimmed_output . '</strong>';
+    $langcode = \Drupal::currentUser()->getPreferredLangcode();
+    $send = true;
+  
+    $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+    // Log result if needed
+  } 
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ */
+function node_crud_mailer_node_delete(EntityInterface $entity) {
+  // Check for envionment first, this function should only run in prod
+  $non_prod = $_SERVER['AH_NON_PRODUCTION'];
+  if ($non_prod == 0) {
+    // Get site name and host
+    $site_path = \Drupal::service('site.path'); // e.g.: 'sites/default'
+    $site_path = explode('/', $site_path);
+    $site_name = $site_path[1];
+    
+    // Prepare mail vars
+    $mailManager = \Drupal::service('plugin.manager.mail');
+    $module = 'node_crud_mailer';
+    $key = 'delete_node';
+    $to = 'webteam@case.edu';
+    $params['node_title'] = $entity->label();
+    $params['node_link'] = $entity->toLink()->toString();
+    $params['site_name'] = $site_name;
+    $params['message'] = 'Node ID: ' . $entity->id();
+    $langcode = \Drupal::currentUser()->getPreferredLangcode();
+    $send = true;
+  
+    $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+    // Log result if needed
+  }
+}

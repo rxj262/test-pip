@@ -1,0 +1,5 @@
+type: module
+name: React Router Test
+description: Test to see how Drupal handles React Router
+core_version_requirement: '>=9'
+package: React Components

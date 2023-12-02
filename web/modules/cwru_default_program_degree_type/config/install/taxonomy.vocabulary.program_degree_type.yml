@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Degree Type'
+vid: program_degree_type
+description: ''
+weight: 0

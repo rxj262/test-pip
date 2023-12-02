@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sf_section_pdf_link
+    - paragraphs.paragraphs_type.subfeature_section
+  module:
+    - file_url
+id: paragraph.subfeature_section.field_sf_section_pdf_link
+field_name: field_sf_section_pdf_link
+entity_type: paragraph
+bundle: subfeature_section
+label: 'Subfeature PDF Link (optional) '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file_url

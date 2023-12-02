@@ -1,0 +1,39 @@
+.field--name-field-ipe-gen-content-ref {
+    background-color: $white;
+    padding: 40px 22px;
+    @media (max-width: $small) {
+		padding: 0;
+	}
+}
+
+.ipe-homepage {
+	.field--name-field-ipe-gen-content-ref {
+		padding-top: 0;
+		padding-bottom: 0;
+		background: none;
+		.field--type-text-with-summary {
+			margin: 0 auto;
+			padding: 0 20px 20px;
+			background-color: $white;
+			@media (min-width: $small) {
+					max-width: 764px;
+				}
+				@media (min-width: $medium) {
+					max-width: 984px;
+				}
+				@media (min-width: $large) {
+					max-width: 1150px;
+				}
+				@media (min-width: $jumbo) {
+					max-width: 1244px;
+				}
+			.video-embed-field-responsive-video {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+	footer {
+		padding-top: 37px;
+	}
+}

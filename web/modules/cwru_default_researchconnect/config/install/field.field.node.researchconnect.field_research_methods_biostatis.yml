@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_methods_biostatis
+    - node.type.researchconnect
+    - taxonomy.vocabulary.research_methods_biostatistics_r
+id: node.researchconnect.field_research_methods_biostatis
+field_name: field_research_methods_biostatis
+entity_type: node
+bundle: researchconnect
+label: 'Research Methods & Biostatistics'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      research_methods_biostatistics_r: research_methods_biostatistics_r
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

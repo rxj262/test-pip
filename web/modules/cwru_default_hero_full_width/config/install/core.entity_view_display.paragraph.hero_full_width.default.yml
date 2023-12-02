@@ -1,0 +1,75 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_full_width.field_hero_full_description
+    - field.field.paragraph.hero_full_width.field_hero_full_image_ref
+    - field.field.paragraph.hero_full_width.field_hero_full_link
+    - field.field.paragraph.hero_full_width.field_hero_full_title
+    - paragraphs.paragraphs_type.hero_full_width
+  module:
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_caption:
+      children:
+        - field_hero_full_title
+        - field_hero_full_description
+        - field_hero_full_link
+      parent_name: ''
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: carousel-caption
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Caption
+id: paragraph.hero_full_width.default
+targetEntityType: paragraph
+bundle: hero_full_width
+mode: default
+content:
+  field_hero_full_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_hero_full_image_ref:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: hero_full_width_image_style
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_hero_full_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_hero_full_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,14 @@
+name: 'Title and Affiliation'
+description: 'Provides Title and Affiliation paragraphs type and related configuration.'
+type: module
+dependencies:
+  - cwru_default_centers
+  - cwru_default_departments
+  - cwru_default_job_title
+  - cwru_default_schools
+  - field
+  - paragraphs
+  - taxonomy
+version: '1.05'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

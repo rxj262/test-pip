@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.alternating_subfeature_image_style
+label: 'Alternating Subfeature Image Style'
+targetEntityType: media
+cache: true

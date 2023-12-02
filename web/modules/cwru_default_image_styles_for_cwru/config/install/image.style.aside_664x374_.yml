@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: aside_664x374_
+label: 'Aside (664x374)'
+effects:
+  d7a5fb49-b78e-46d7-bdf6-f30892c47a2e:
+    uuid: d7a5fb49-b78e-46d7-bdf6-f30892c47a2e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 664
+      height: 374
+      crop_type: focal_point

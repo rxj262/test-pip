@@ -1,0 +1,4 @@
+bundle: cwru_default
+excluded:
+  - entity_browser.browser.gallery_media_library
+required: true

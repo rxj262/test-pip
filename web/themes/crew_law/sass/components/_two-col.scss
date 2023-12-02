@@ -1,0 +1,55 @@
+.field--name-field-lw-two-col-content-ref {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    @media #{$small-max}  { 
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    > .field--item {
+        flex-basis: 50%;
+        margin-left: 22px;
+        margin-right: 22px;
+        max-width: 450px;
+    }
+}
+
+// unequal two column on homepage
+.paragraph--type--unequal-two-column-container {
+    display: flex;
+    margin: 40px 0;
+
+    @media #{$medium-max}  { flex-direction: column; }
+
+    &.gray-background {
+        background-color: $lighter-gray;
+        margin: 40px -22px;
+        padding: 40px;
+    }
+
+    &.transparent-background .field--name-field-left-side {
+        border-right: 1px solid $lighter-gray;
+
+        @media #{$small-max}  { border-right: none; }
+    }
+
+    .field--name-field-left-side {
+        flex: 2;
+        padding-right: 40px;
+        margin-right: 40px;
+
+        @media #{$small-max}  {
+            padding-right: 0;
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+    }
+
+    .field--name-field-right-side {
+        flex: 1;
+    }
+}

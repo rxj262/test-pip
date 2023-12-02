@@ -1,0 +1,12 @@
+name: Presentation
+description: 'Provides Presentation paragraphs type and related configuration.'
+type: module
+dependencies:
+  - datetime
+  - entity_reference_revisions
+  - field
+  - node
+  - paragraphs
+version: '1.01'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

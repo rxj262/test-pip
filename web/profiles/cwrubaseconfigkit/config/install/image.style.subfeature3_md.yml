@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: subfeature3_md
+label: 'Subfeature 3-wide MD (385x289)'
+effects:
+  f1f8c5f9-6b1b-4925-942a-2daa6a90aa4c:
+    uuid: f1f8c5f9-6b1b-4925-942a-2daa6a90aa4c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 385
+      height: 289
+      crop_type: focal_point

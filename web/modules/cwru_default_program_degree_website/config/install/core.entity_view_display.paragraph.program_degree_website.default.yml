@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_degree_website.field_program_format_ref
+    - field.field.paragraph.program_degree_website.field_program_websites
+    - field.field.paragraph.program_degree_website.field_programs_degree_ref
+    - paragraphs.paragraphs_type.program_degree_website
+  module:
+    - link
+id: paragraph.program_degree_website.default
+targetEntityType: paragraph
+bundle: program_degree_website
+mode: default
+content:
+  field_program_format_ref:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_program_websites:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_programs_degree_ref:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

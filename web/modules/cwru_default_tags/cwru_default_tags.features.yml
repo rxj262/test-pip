@@ -1,0 +1,4 @@
+bundle: cwru_default
+excluded:
+  - field.storage.node.field_meta_tags
+required: true

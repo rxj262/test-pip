@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cwru_hard_coded
+id: block_content.cwru_hard_coded.default
+targetEntityType: block_content
+bundle: cwru_hard_coded
+mode: default
+content: {  }
+hidden: {  }

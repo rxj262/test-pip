@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personal_profile_drupal_si
+    - node.type.personal_profile
+    - taxonomy.vocabulary.drupal_site
+id: node.personal_profile.field_personal_profile_drupal_si
+field_name: field_personal_profile_drupal_si
+entity_type: node
+bundle: personal_profile
+label: 'Website Personal Profile Should Appear On'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      drupal_site: drupal_site
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

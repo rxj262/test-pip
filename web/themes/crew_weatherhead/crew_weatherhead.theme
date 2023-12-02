@@ -1,0 +1,110 @@
+<?php
+
+use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function crew_weatherhead_preprocess_page(&$variables) {
+  // Limit content area length to improve readability on some content types
+  if (isset($variables['node']) && is_object($variables['node'])) {
+    $node_array = $variables['node']->toArray();
+    $readability_content_types = array('landing_page');
+    foreach($node_array['type'] as $i => $j) {
+      if(in_array($j['target_id'], $readability_content_types)) {
+        $variables['page']['optimal_line_length'] = FALSE;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function crew_weatherhead_preprocess_html(&$variables) {
+  if($node = _is_node()) {
+    $variables['attributes']['class'][] = str_replace('_', '-', $node->bundle());
+    $current_path = \Drupal::service('path.current')->getPath();
+    $current_path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+    if (($node->getType() == 'robust_3_column_page') && 
+      (strpos($current_path_alias, '/academics/graduate/') !== false || strpos($current_path_alias, '/academics/doctorate/') !== false)) {
+      $token_service = \Drupal::token();
+      $current_title = $variables['head_title']['title'];
+      $text = substr_replace($current_title, "| [node:menu-link:parent:title] ", strpos($current_title, '|'), 0); 
+      $new_title = $token_service->replace($text, ['node' => $node]);
+      $variables['head_title']['title'] = $new_title;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function crew_weatherhead_preprocess_page_title(&$variables) {
+  // Add section name to page title for screen readers in the Academics section.
+  if (($node = \Drupal::routeMatch()->getParameter('node')) && ($node instanceof \Drupal\node\NodeInterface)) {
+    $current_path = \Drupal::service('path.current')->getPath();
+    $current_path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+    if (($node->getType() == 'robust_3_column_page') && (strpos($current_path_alias, '/academics') !== false)) {
+      $term_labels = [];
+      $section_terms = $node->get('field_section')->getValue();
+      foreach ($section_terms as $section_term){
+        $term = Term::load($section_term['target_id']);
+        if (!empty($term)) {
+          $term_label = Term::load($section_term['target_id'])->getName();
+          $term_labels[] = $term_label;
+        }
+      }
+      $page_title = $node->getTitle();
+      if ($term_label !== $page_title) {
+        $variables['title'] = ['#markup' => '<span class="sr-only">' . $term_label . '</span>' . $page_title];
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function crew_weatherhead_page_attachments_alter(array &$page) {
+  if(_is_node()) {
+    $node = _is_node();
+    $current_path = \Drupal::service('path.current')->getPath();
+    $current_path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+    if (($node->getType() == 'robust_3_column_page') && 
+      (strpos($current_path_alias, '/academics/graduate/') !== false || strpos($current_path_alias, '/academics/doctorate/') !== false)) {
+      $current_title = '';
+      $headers = $page['#attached']['html_head'];
+      foreach($headers as $index => &$header) {
+        if($header[1] == 'og_title') {
+          $current_title = $header[0]['#attributes']['content'];
+          $token_service = \Drupal::token();
+          $text = substr_replace($current_title, "| [node:menu-link:parent:title] ", strpos($current_title, '|'), 0); 
+          $new_title = $token_service->replace($text, ['node' => $node]);
+          $new_og_title = array(
+            array(
+              "#tag" => "meta",
+              "#attributes" => array(
+                "property" => "og:title",
+                "content" => $new_title,
+              ),
+            ),
+            "og_title",
+          );
+          $page['#attached']['html_head'][] = $new_og_title;
+        }
+      }
+    }
+  }
+}
+
+function _is_node() {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    return $node;
+  } else {
+    return FALSE;
+  }
+}

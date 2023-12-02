@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personal_profile_content
+    - node.type.personal_profile
+  module:
+    - text
+id: node.personal_profile.field_personal_profile_content
+field_name: field_personal_profile_content
+entity_type: node
+bundle: personal_profile
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

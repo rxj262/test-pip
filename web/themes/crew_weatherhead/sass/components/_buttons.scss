@@ -1,0 +1,32 @@
+.field--type-link a,
+a.button-blue {
+  display: inline-block;
+  background-color: $link;
+  color: $white;
+  padding: 1em 1.5em;
+  margin: 0;
+  border-radius: 20em;
+  line-height: 1;
+  transition: background-color 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $cwru-blue;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.blue-background, .blue-bkg {
+  .field--type-link a,
+  a.button-blue{
+    &:hover {
+      background-color: $white;
+      color: $link;
+      text-decoration: none;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,32 @@
+<div id="cwruravealert"></div>
+<script type="text/javascript">
+  function raveCallback(data) {
+    if (data !== undefined) {
+      if (window['console']) { console.log(data); }
+      var div = document.getElementById('cwruravealert');
+      div.style.backgroundColor = data.bgcolor;
+      div.style.color = data.fgcolor;
+      div.style.width = '100%';
+      div.style.fontWeight = '500';
+      div.style.fontFamily = 'Titillium Web';
+      div.style.padding = '5px 1% 5px 1%';
+      var alert_div = document.createElement('div');
+      alert_div.style.margin = 'auto';
+      alert_div.style.maxWidth = '1000px';
+      alert_div.style.width = '100%';
+      alert_div.style.fontWeight = '500';
+      alert_div.style.fontFamily = 'Titillium Web';
+      alert_div.style.textAlign = 'center';
+      var field;
+      for (field of ['header', 'status', 'event', 'headline', 'description', 'instruction', 'note', 'web', 'contact']) {
+        if (data[field]) {
+          var field_div = document.createElement('div');
+          field_div.innerHTML = data[field];
+          alert_div.appendChild(field_div);
+        }
+      }
+      div.appendChild(alert_div);
+    }
+  }
+</script>
+<script type="text/javascript" src="//webapps.case.edu/t4/rave/jsonp.pl?callback=raveCallback"></script>

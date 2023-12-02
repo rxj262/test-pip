@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage_w_full_width_feature.field_hero_oncol_ref
+    - field.field.node.homepage_w_full_width_feature.field_meta_tags
+    - field.field.node.homepage_w_full_width_feature.field_subfeature_ref
+    - node.type.homepage_w_full_width_feature
+  module:
+    - entity_reference_revisions
+    - metatag
+    - slick_paragraphs
+    - user
+id: node.homepage_w_full_width_feature.default
+targetEntityType: node
+bundle: homepage_w_full_width_feature
+mode: default
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_hero_oncol_ref:
+    type: slick_paragraphs_vanilla
+    weight: 101
+    label: hidden
+    settings:
+      optionset: cwru_slideshow
+      skin: ''
+      view_mode: default
+      cache: 0
+      current_view_mode: default
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      style: ''
+    third_party_settings: {  }
+    region: content
+  field_meta_tags:
+    weight: 103
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_subfeature_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

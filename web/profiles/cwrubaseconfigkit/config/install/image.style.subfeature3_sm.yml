@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: subfeature3_sm
+label: 'Subfeature 3-wide SM (720x300)'
+effects:
+  2f119ef9-3c0c-40c7-80c0-56516258e1a8:
+    uuid: 2f119ef9-3c0c-40c7-80c0-56516258e1a8
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 300
+      crop_type: focal_point

@@ -1,0 +1,95 @@
+.paragraph--type--programs-section {
+  background-image: url("../images/home-hero-pattern.svg");
+  background-repeat: no-repeat;
+  background-position-x: -50px;
+
+  .container {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    @media #{$small-max} {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+  }
+
+  .field--name-field-hp-programs-section-title {
+    font-size: 4em;
+    font-weight: 300;
+    line-height: 1.1;
+    @media #{$xsmall-max} {
+      font-size: 3em;
+    }
+  }
+
+  .field--name-field-hp-programs-list-item {
+    .link-wrapper {
+      margin: 1em 0;
+      border-bottom: 1px solid $white;
+      @media #{$small-max} {
+        margin: 0;
+      }
+    }
+
+    a {
+      display: block;
+      font-size: 1.6em;
+      text-decoration: none;
+      padding: 0.5em 0;
+      @media #{$small-min} {
+        padding-top: 0;
+        &:hover{
+          text-decoration: underline;
+          text-decoration-thickness: 3px;
+        }
+      }
+      
+    }
+  }
+
+  .paragraph--type--programs-content {
+    & > .field {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .field--name-field-hp-programs-title2.field {
+    font-size: 2.4em;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+  .program-section-top-row,
+  .program-setion-bottom-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 70px;
+    @media #{$small-max} {
+        gap: 30px;
+      }
+    > * {
+      flex: 1;
+      @media #{$small-max} {
+        width: 100%;
+      }
+    }
+    .paragraph--type--our-programs-list {
+      .field--name-field-hp-programs-title1 {
+        // h2 {
+        //   &::before {
+        //     @media #{$small-max} {   
+        //       margin-right: 10px;
+        //     }
+        //   }
+        // }
+      }
+      @media #{$small-max} {
+        margin-bottom: 1em;
+      }
+    }
+  }
+  .program-setion-bottom-row {
+    @media #{$small-max} {
+      flex-direction: column;
+    }
+  }
+}

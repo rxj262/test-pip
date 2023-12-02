@@ -1,0 +1,30 @@
+.funding-opportunity2 {
+  .field--label {
+    font-weight: bold;
+  }
+  .field-group {
+    padding: 0 20px;
+    margin: 20px 0;
+  }
+  .field--name-field-research-step-number {
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+  }
+  .field--name-field-opportunity-title,
+  .field-group > h3:first-of-type {
+    margin: 0 -20px 20px -20px;
+    padding: 10px 20px;
+    background-color: $off-white;
+  }
+  .field--name-field-opportunity-title {
+    //font size here
+    font-size: 30px;
+    line-height: 1.1;
+    color: $blk;
+    font-weight: 600;
+  }
+  .field--name-field-number-of-applications2 {
+    margin-bottom: 15px;
+  }
+}

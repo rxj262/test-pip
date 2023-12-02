@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.msass_affiliate_personal_profile.field_biography
+    - field.field.node.msass_affiliate_personal_profile.field_center_affiliation
+    - field.field.node.msass_affiliate_personal_profile.field_email
+    - field.field.node.msass_affiliate_personal_profile.field_name
+    - field.field.node.msass_affiliate_personal_profile.field_phone
+    - node.type.msass_affiliate_personal_profile
+  module:
+    - user
+id: node.msass_affiliate_personal_profile.teaser
+targetEntityType: node
+bundle: msass_affiliate_personal_profile
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_biography: true
+  field_center_affiliation: true
+  field_email: true
+  field_name: true
+  field_phone: true

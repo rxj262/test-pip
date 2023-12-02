@@ -1,0 +1,33 @@
+name: 'News Article'
+description: 'Provides News Article content type and related configuration. '
+type: module
+dependencies:
+  - block
+  - content_moderation
+  - ctools
+  - cwru_default_media_bundles
+  - cwru_default_meta_field_storage
+  - cwru_default_tags
+  - datetime
+  - 'drupal:media (>= 8.4)'
+  - entity_browser_entity_form
+  - field
+  - field_group
+  - file
+  - ief_table_view_mode
+  - image
+  - inline_entity_form
+  - link
+  - media
+  - menu_ui
+  - metatag
+  - node
+  - path
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+version: '1.16'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

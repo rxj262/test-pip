@@ -1,0 +1,11 @@
+name: 'CWRU Calendar'
+description: 'Custom calendar built on FullCalendar JS'
+type: module
+dependencies:
+  - field
+  - link
+  - paragraphs
+  - cwru_calendar
+version: '1.0'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

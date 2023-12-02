@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vertical_subfeatures_group.field_vertical_subfeature_sectio
+    - paragraphs.paragraphs_type.vertical_subfeatures_group
+  module:
+    - paragraphs
+id: paragraph.vertical_subfeatures_group.default
+targetEntityType: paragraph
+bundle: vertical_subfeatures_group
+mode: default
+content:
+  field_vertical_subfeature_sectio:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

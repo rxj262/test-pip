@@ -1,0 +1,5 @@
+name: 'Node CRUD Mailer'
+type: module
+description: 'Sends out email notifications when a node is created, updated or removed'
+package: 'Custom'
+core_version_requirement: '>=9'

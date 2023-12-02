@@ -1,0 +1,17 @@
+react_library:
+  js:
+    components/react_cebp_events/build/static/js/2.chunk.js: {}
+    components/react_cebp_events/build/static/js/3.chunk.js: {}
+    components/react_cebp_events/build/static/js/runtime.js: {}
+    components/react_cebp_events/build/static/js/main.js: {}
+  css:
+    components/react_cebp_events/build/static/css/main.css: {}
+
+react_aside_library:
+  js:
+    components/react_cebp_events_aside/build/static/js/2.chunk.js: {}
+    components/react_cebp_events_aside/build/static/js/3.chunk.js: {}
+    components/react_cebp_events_aside/build/static/js/runtime.js: {}
+    components/react_cebp_events_aside/build/static/js/main.js: {}
+  css: 
+    components/react_cebp_events_aside/build/static/css/chunk.css: {}

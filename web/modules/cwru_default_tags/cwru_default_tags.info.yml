@@ -1,0 +1,11 @@
+name: Tags
+description: 'Provides Tags taxonomy vocabulary and related configuration. Use tags to group articles on similar topics into categories.'
+type: module
+dependencies:
+  - field
+  - metatag
+  - node
+  - taxonomy
+version: '1.01'
+package: 'CWRU Default'
+core_version_requirement: '>=9'

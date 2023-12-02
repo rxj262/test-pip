@@ -1,0 +1,5 @@
+bundle: cwru_default
+excluded:
+  - field.field.node.biography.field_biography_education_ref
+  - field.storage.node.field_biography_education_ref
+required: true

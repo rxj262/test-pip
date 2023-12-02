@@ -1,0 +1,12 @@
+utility.admin:
+  title: 'Utility'
+  description: 'Utility Administration Page'
+  parent: system.admin_config_development
+  route_name: utility.admin
+  weight: 1
+utility.form:
+  title: 'Utility Form'
+  description: 'Utility Form Administration Page'
+  parent: system.admin_config_development.utility
+  route_name: utility.user.form
+  weight: 1

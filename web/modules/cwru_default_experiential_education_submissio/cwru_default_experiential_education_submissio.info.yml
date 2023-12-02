@@ -1,0 +1,21 @@
+name: 'Experiential Education Submission'
+description: 'Provides Experiential Education Submission content type and related configuration. '
+type: module
+dependencies:
+  - better_exposed_filters
+  - content_moderation
+  - field
+  - link
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - text
+  - user
+  - views
+  - webform
+  - webform_to_node
+version: '1.0'
+package: 'CWRU Default'
+core_incompatible: false
+core_version_requirement: '>=9'

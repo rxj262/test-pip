@@ -1,0 +1,42 @@
+.paragraph--type--image-content-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px 0 80px 0;
+  gap: 40px;
+}
+
+.paragraph--type--image-content-section > div {
+  flex: 1;
+  flex-basis: 400px;
+}
+
+/* .field--name-field-content-image-tb {
+  margin-right: 40px;
+} */
+
+.field--name-field-title-content-tb {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.field--name-field-content-tb {
+  margin-bottom: 40px;
+}
+
+.field--name-field-link-content-tb a {
+  color: #fff !important;
+  background-color: #006DA3;
+  padding: 10px 20px;
+  border-radius: 50px;
+  min-width: 300px;
+  display: inline-block;
+  text-align: center;
+}
+
+.fd-row {
+  flex-direction: row;
+}
+.fd-row-reverse {
+  flex-direction: row-reverse;
+}

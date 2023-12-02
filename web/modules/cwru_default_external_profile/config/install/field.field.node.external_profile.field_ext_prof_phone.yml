@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ext_prof_phone
+    - node.type.external_profile
+  module:
+    - telephone
+id: node.external_profile.field_ext_prof_phone
+field_name: field_ext_prof_phone
+entity_type: node
+bundle: external_profile
+label: Phone
+description: 'Enter phone number using the format ###.###.####'
+required: false
+translatable: false
+default_value:
+  -
+    value: '###.###.####'
+default_value_callback: ''
+settings: {  }
+field_type: telephone
