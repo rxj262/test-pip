@@ -218,6 +218,7 @@
         "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
     },
     "minimum-stability": "dev",
+    "prefer-stable" : true,
     "config": {
         "allow-plugins": {
             "cweagans/composer-patches": true,
