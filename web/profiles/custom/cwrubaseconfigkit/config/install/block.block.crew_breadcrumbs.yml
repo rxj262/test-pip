@@ -18,8 +18,8 @@ settings:
   provider: system
   label_display: '0'
 visibility:
-  node_type:
-    id: node_type
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
     bundles:
       basic_page: basic_page
       biography: biography

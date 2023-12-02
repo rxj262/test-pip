@@ -1,7 +1,7 @@
 name: CWRU Base Config Kit
 type: profile
 description: 'This is the base configuration profile for CWRU. This profile includes all of the necessary modules for the CWRU distribution.'
-core_version_requirement: '^8.8 || ^9'
+core_version_requirement: '>=9'
 
 distribution:
   name: CWRU Base Distribution.
@@ -10,7 +10,6 @@ distribution:
 install:
   - admin_toolbar
   - admin_toolbar_tools
-  - adminimal_admin_toolbar
   - anchor_link
   - automated_cron
   - better_exposed_filters
@@ -23,7 +22,6 @@ install:
   - checklistapi
   - ckeditor
   - coffee
-  - color
   - config
   - config_update
   - contextual
@@ -78,8 +76,6 @@ install:
   - page_manager
   - paragraphs_edit
   - path
-  - quickedit
-  - rdf
   - redirect
   - redirect_404
   - redirect_domain
@@ -115,11 +111,7 @@ install:
   - yoast_seo
   - memcache
 themes:
-  - stable
-  - classy
-  - bartik
-  - seven
   - bootstrap
   - crew
-  - adminimal_theme
-  - crew_admin
+  - gin
+  - olivero
