@@ -168,7 +168,6 @@
         "kint-php/kint": "^5.0.5",
         "league/oauth2-client": "^2.7.0",
         "mglaman/composer-drupal-lenient": "^1.0.3",
-        "wikimedia/composer-merge-plugin": "^2.1.0",
         "drupal/ldap": "^4.x-dev@dev",
         "drupal/ckeditor_liststyle": "^1.5",
         "drupal/dynamic_entity_reference": "^3.0",
@@ -225,7 +224,6 @@
             "drupal/core-composer-scaffold": true,
             "composer/installers": true,
             "mglaman/composer-drupal-lenient": true,
-            "wikimedia/composer-merge-plugin": true,
             "oomphinc/composer-installers-extender": true
         }
     }
