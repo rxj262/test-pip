@@ -9,7 +9,7 @@
 $config_directories = array();
 //$site_dir = 'case.edu.nutrition';
 $settings['config_sync_directory'] =  $app_root . "/../config";
-$settings['install_profile'] = 'cwrubaseconfigkit';
+//$settings['install_profile'] = 'cwrubaseconfigkit';
 
 
 // Drupal 8 Memcache
