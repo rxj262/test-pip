@@ -11,6 +11,18 @@
         {
             "type": "path",
             "url": "upstream-configuration"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "appolodev/vanilla-icon-picker",
+                "version": "v1.1.3",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/AppoloDev/vanilla-icon-picker/archive/refs/tags/v1.1.3.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
@@ -21,7 +33,8 @@
         "pantheon-systems/drupal-integrations": "^10",
         "cweagans/composer-patches": "^1.7",
         "drush/drush": "^11 || ^12",
-        "pantheon-systems/upstream-management": "^1.0"
+        "pantheon-systems/upstream-management": "^1.0",
+        "drupal/fontawesome_iconpicker": "^3"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
