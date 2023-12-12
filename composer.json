@@ -50,11 +50,6 @@
                 "[project-root]/.editorconfig": false,
                 "[project-root]/pantheon.upstream.yml": false,
                 "[project-root]/.gitattributes": false
-            },
-            "patches": {
-                "drupal/linkit": {
-                    "Hide delete button from sidebar" : "https://www.drupal.org/files/issues/2023-06-15/gin-theme-keep-delete-button.patch"
-                }
             }
         },
         "installer-paths": {
@@ -70,6 +65,11 @@
             "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
         },
         "composer-exit-on-patch-failure": true,
+        "patches": {
+            "drupal/linkit": {
+                "Hide delete button from sidebar" : "https://www.drupal.org/files/issues/2023-06-15/gin-theme-keep-delete-button.patch"
+            }
+        },
         "patchLevel": {
             "drupal/core": "-p2"
         },
