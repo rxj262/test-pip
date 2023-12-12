@@ -10,36 +10,12 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "1": {
-            "type": "package",
-            "package": {
-                "name": "enyo/dropzone",
-                "version": "5.7.1",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/enyo/dropzone/archive/v5.7.1.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        "2": {
-            "type": "package",
-            "package": {
-                "name": "ckeditor/liststyle",
-                "version": "4.8.0",
-                "type": "ckeditor-plugin",
-                "dist": {
-                    "url": "https://download.ckeditor.com/liststyle/releases/liststyle_4.8.0.zip",
-                    "type": "zip"
-                }
-            }
-        }
     },
     "require": {
         "drupal/admin_toolbar": "^3.4.1",
         "composer/installers": "^1.9",
-        "drupal/core-composer-scaffold": "^10.1",
-        "drupal/core-recommended": "^10",
+        "drupal/core-composer-scaffold": "10.1.6",
+        "drupal/core-recommended": "10.1.6",
         "pantheon-systems/drupal-integrations": "^10",
         "cweagans/composer-patches": "^1.7",
         "drush/drush": "^11 ||  ^12",
@@ -178,7 +154,8 @@
         "fengyuanchen/cropper": "dev-master",
         "drupal/acquia_purge": "^1.0@dev",
         "levmyshkin/photo-swipe": "^5.2.2",
-        "drupal-ckeditor-libraries-group/liststyle": "^4.8"
+        "drupal-ckeditor-libraries-group/liststyle": "^4.8",
+        "enyo/dropzone": "^5.1"
     },
     "extra": {
         "_README": "To make a custom upstream, clone this repository and add any dependencies to be provided by this upstream to this composer.json file. Leave the root-level composer.json file for the exclusive use of each individual site; do not modify it after your custom upstream has been published. See https://pantheon.io/docs/create-custom-upstream for more information."
