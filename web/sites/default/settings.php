@@ -45,7 +45,7 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] == 'test
  */
 
 // Configure Redis
-
+/*
 if (defined(
  'PANTHEON_ENVIRONMENT'
 ) && !\Drupal\Core\Installer\InstallerKernel::installationAttempted(
@@ -116,7 +116,7 @@ if (defined(
    ],
  ];
 }
-
+ */
 
 /**
  * Load services definition file.
