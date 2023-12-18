@@ -95,3 +95,7 @@
 
 # Ignore .env files as they are personal
 #/.env
+
+# CWRU Setup
+/web/themes/custom/*/node_modules
+.lando.yml
