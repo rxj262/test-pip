@@ -1,5 +1,0 @@
-# Schema for the theme setting configuration file of the crew theme.
-
-crew.settings:
-  type: theme_settings
-  label: 'crew settings'
