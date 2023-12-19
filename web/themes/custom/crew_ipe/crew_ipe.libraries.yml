@@ -1,9 +1,0 @@
-global-styling:
-  version: 1.12
-  css:
-    theme:
-      css/style.css: {}
-  js:
-    js/functions.js: {}
-  dependencies:
-    - core/jquery
