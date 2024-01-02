@@ -158,6 +158,7 @@
         "vardot/slick": "1.6.0.1",
         "vardot/dropzone": "v5.1.1",
         "drupal/pantheon_advanced_page_cache": "2.1.2",
+        "pantheon-systems/pantheon_domain_masking": "2.0.1",
         "asm89/stack-cors": "v2.1.1",
         "caxy/php-htmldiff": "v0.1.15",
         "chi-teck/drupal-code-generator": "3.3.0",
