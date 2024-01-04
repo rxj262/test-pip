@@ -1,3 +1,4 @@
+
 (function ($) {
   var BREAKPOINTS = [
     { name: "small", size: 768 },
