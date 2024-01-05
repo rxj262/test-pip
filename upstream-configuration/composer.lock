@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76a7c7e33e2f52c814e3ef8dd9786f92",
+    "content-hash": "be70e7c6dd3cef47f321cd06d549edc8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4819,6 +4819,10 @@
                     "role": "Maintainer"
                 },
                 {
+                    "name": "Greg Boggs",
+                    "homepage": "https://www.drupal.org/user/153069"
+                },
+                {
                     "name": "hmartens",
                     "homepage": "https://www.drupal.org/user/622826"
                 },
@@ -7510,14 +7514,13 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ldap.git",
-                "reference": "93b883c683a6225d33310c4825af5e53f7d6bfbd"
+                "reference": "ebc2b1f1abafab21ba3149b18660db7a249f8a07"
             },
             "require": {
                 "drupal/authorization": "^1.0",
                 "drupal/core": "^9.3 || ^10",
                 "drupal/externalauth": "^2.0",
                 "drupal/ldap_servers": "*",
-                "php": ">=7.2.0",
                 "symfony/ldap": "^5.4 || ^6.0"
             },
             "provide": {
@@ -7536,8 +7539,8 @@
                     "dev-4.x": "4.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-4.6+4-dev",
-                    "datestamp": "1703267476",
+                    "version": "8.x-4.6+6-dev",
+                    "datestamp": "1704256675",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -10077,17 +10080,17 @@
         },
         {
             "name": "drupal/siteimprove",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/siteimprove.git",
-                "reference": "2.0.1"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/siteimprove-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "77be7be61880416e9364c414122465254020fb80"
+                "url": "https://ftp.drupal.org/files/projects/siteimprove-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "9e716fcd5ae3e7b23a1c8a9bdc6a0980085c2642"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10"
@@ -10098,8 +10101,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1687955571",
+                    "version": "2.0.2",
+                    "datestamp": "1704376526",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12028,6 +12031,15 @@
                 "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.16.0"
             },
             "time": "2023-03-20T10:51:12+00:00"
+        },
+        {
+            "name": "enyo/dropzone",
+            "version": "5.7.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/enyo/dropzone/archive/v5.7.1.zip"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "ezyang/htmlpurifier",
