@@ -237,6 +237,18 @@ $file-types: (
 	.paragraph--type--button.button-block-gray-link .field--name-field-button a[href$=".pdf"]::after {
 		color: #cc080a !important;
 	}
+	.paragraph--type--stacked-button-wrapper.blue_button a[href$=".pdf"]::after {
+		color: #FFFFFF;
+	}
+	.paragraph--type--stacked-button-wrapper.blue_button a:hover[href$=".pdf"]::after {
+		color: #003071;
+	}
+	.paragraph--type--stacked-button-wrapper.grey_button a[href$=".pdf"]::after {
+		color: #FFFFFF;
+	}
+	.paragraph--type--stacked-button-wrapper.grey_button a:hover[href$=".pdf"]::after {
+		color: #003071;
+	}
 
 	a[href$=".#{$name}"] + .fa-lock:before {
 		color: map-get($files, iconcolor);

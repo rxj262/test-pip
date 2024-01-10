@@ -1085,6 +1085,10 @@ div.view {
   position: absolute;
 }
 
+//PQHS News Article Carousel
+.view-news-article-carousel.pqhs-homepage-news-article-carousel .slick-slider {
+  margin: 0 0;
+}
 
 //PQHS Events Calendar Icon and Details
 .view-full-event-listing {
@@ -1548,5 +1552,14 @@ li.world-med-path:last-child {
       margin-right: 6px;
     }
   }
-    
+
+}
+
+.entrepreneurship-homepage-news {
+  .field--name-field-news-and-events-feeds {
+    @media (max-width: $small) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
