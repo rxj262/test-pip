@@ -12,23 +12,6 @@ $settings['config_sync_directory'] =  $app_root . "/../config";
 //$settings['install_profile'] = 'cwrubaseconfigkit';
 
 
-// Drupal 8 Memcache
-// @TODO disable memcache on all sites once moved to pantheon
-$settings['memcache']['extension'] = 'Memcached';
-$settings['memcache']['stampede_protection'] = TRUE;
-if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
-$settings['container_yamls'][] = $app_root . '/sites/default/memcache.yml';
-}
-if (isset($settings['memcache']['servers'])) {
-// Memcache settings
-$settings['cache']['bins']['bootstrap'] = 'cache.backend.memcache';
-$settings['cache']['bins']['discovery'] = 'cache.backend.memcache';
-$settings['cache']['bins']['config'] = 'cache.backend.memcache';
-// Use memcache as the default bin
-$settings['cache']['default'] = 'cache.backend.memcache';
-}
-
-
 // Disable all flows on non-prod environments to make sure CMS Content Sync core is only used by prod sites.
 /*
 if (!isset($_ENV['AH_SITE_ENVIRONMENT']) || $_ENV['AH_SITE_ENVIRONMENT'] != 'prod') {
