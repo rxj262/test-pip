@@ -21,13 +21,13 @@
     if ($(".toolbar-menu").length > 0) {
       // add menu link for content hub biographies
       bio_link =
-        '<li class="menu-item"><a href="http://cwru.prod.acquia-sites.com/biographies/caslogin" class="toolbar-icon">Biographies - Content Hub</a></li>';
+        '<li class="menu-item"><a href="https://live-cwru-biographies.pantheonsite.io/caslogin" class="toolbar-icon">Biographies - Content Hub</a></li>';
       $("a.toolbar-icon-admin-toolbar-tools-extra-linksnode-add+ul").append(
         bio_link
       );
       if (window.location.pathname.indexOf("/node/add") !== -1) {
         $("ul.admin-list").append(
-          '<li class="clearfix"><a href="http://cwru.prod.acquia-sites.com/biographies/caslogin" target="_blank"><span class="label">Biographies - Content Hub</span></a></li>'
+          '<li class="clearfix"><a href="https://live-cwru-biographies.pantheonsite.io/caslogin" target="_blank"><span class="label">Biographies - Content Hub</span></a></li>'
         );
         $("ul.admin-list li").sort(asc_sort).appendTo("ul.admin-list");
       }
@@ -101,8 +101,8 @@
       }
 
       $(
-        '.toolbar-menu a[href="http://cwru.prod.acquia-sites.com/biographies/caslogin"], ' +
-          '.toolbar-menu a[href="http://cwru.prod.acquia-sites.com/personalprofiles/caslogin"]'
+        '.toolbar-menu a[href="https://live-cwru-biographies.pantheonsite.io/caslogin"], ' +
+          '.toolbar-menu a[href="https://live-cwru-personalprofiles.pantheonsite.io/caslogin"]'
       ).attr("target", "_blank"); //dev ENV
       $(
         '.toolbar-menu a[href="https://case.edu/biographies/caslogin"], ' +
@@ -233,7 +233,7 @@
     $('#edit-menu-enabled').click(function() {
       enableSaveButton();
     });
-    
+
     $('#edit-menu-menu-parent').click(function() {
       enableSaveButton();
     });

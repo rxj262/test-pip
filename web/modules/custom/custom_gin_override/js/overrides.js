@@ -27,14 +27,14 @@
       }
 
       // add menu link for content hub biographies
-      bio_link_node_add = '<div class="admin-item"><a class="admin-item__link" title="Biographies - Content Hub" href="http://cwru.prod.acquia-sites.com/biographies/caslogin"></a><div class="admin-item__title"> Biographies- Content Hub</div></div>';
+      bio_link_node_add = '<div class="admin-item"><a class="admin-item__link" title="Biographies - Content Hub" href="https://live-cwru-biographies.pantheonsite.io/caslogin"></a><div class="admin-item__title"> Biographies- Content Hub</div></div>';
 
       if (window.location.pathname.indexOf("/node/add") !== -1) {
         $("div.admin-list").append(bio_link_node_add);
         $("div.admin-list div.admin-item").sort(asc_sort).appendTo("div.admin-list");
       }
 
-      bio_link_dropdown = '<li class="menu-item"><a href="http://cwru.prod.acquia-sites.com/biographies/caslogin" class="toolbar-icon toolbar-icon-admin-toolbar-tools-extra-linksnode-add-basic-page">Biographies - Content Hub</a></li>';
+      bio_link_dropdown = '<li class="menu-item"><a href="https://live-cwru-biographies.pantheonsite.io/caslogin" class="toolbar-icon toolbar-icon-admin-toolbar-tools-extra-linksnode-add-basic-page">Biographies - Content Hub</a></li>';
 
       $("a.toolbar-icon-admin-toolbar-tools-extra-linksnode-add+ul").append(bio_link_dropdown);
 
@@ -105,8 +105,8 @@
       }
 
       $(
-        '.toolbar-menu a[href="http://cwru.prod.acquia-sites.com/biographies/caslogin"], ' +
-        '.toolbar-menu a[href="http://cwru.prod.acquia-sites.com/personalprofiles/caslogin"]'
+        '.toolbar-menu a[href="https://live-cwru-biographies.pantheonsite.io/caslogin"], ' +
+        '.toolbar-menu a[href="https://live-cwru-personalprofiles.pantheonsite.io/caslogin"]'
       ).attr("target", "_blank"); //dev ENV
       $(
         '.toolbar-menu a[href="https://case.edu/biographies/caslogin"], ' +
@@ -325,13 +325,13 @@
 
 //       $("#edit-actions--3").addClass("action-big-margin-changer");
 //       $("#edit-moderation-state-0-state > option").each(function () {
-    
+
 //         if (typeof $(this)[0] !== 'undefined') {
-        
+
 //           if ($(this)[0].innerText == "Draft") {
-           
+
 //             $(this)[0].innerText = "Save Draft";
-       
+
 //             $(this)[0].innerText = $(this)[0].innerText.replace("ed", "");
 //           }
 //         }
