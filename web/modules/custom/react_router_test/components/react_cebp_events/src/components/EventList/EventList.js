@@ -35,6 +35,7 @@ const EventList = ({ item }) => (
 							</div>
 						</div>
 						<div className="event-details">
+							{/*<span className="event-categories"><p>{item.Categories}</p></span>*/}
 							<span className="event-title"><a href={EVENT_DETAIL_SERVER_PATH + "/" + CEBP_EVENTS_PAGE + "/id/" + item.EventId + "/" + eventNameForURL(item.EventName, format(new Date(item.EventStartDate), 'P'))} rel="noopener noreferrer">{item.EventName}</a></span>
 							<span className="event-speaker"><p>{item.EventSummary}</p></span>
 							<span className="event-cle-hours">{item.CEUs} CEUs</span>
