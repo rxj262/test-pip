@@ -816,6 +816,12 @@
 
     if ($('.bio-list-view').length > 0) {
       $('.scrolling-view .fieldset-wrapper label').each(function () {
+        $(this)[0].innerHTML = $(this)[0].innerHTML.replace("Neurosciences - ", "");
+      });
+    }
+
+    if ($('.bio-list-view').length > 0) {
+      $('.scrolling-view .fieldset-wrapper label').each(function () {
         $(this)[0].innerHTML = $(this)[0].innerHTML.replace("Schubert Center - ", "");
       });
     }
