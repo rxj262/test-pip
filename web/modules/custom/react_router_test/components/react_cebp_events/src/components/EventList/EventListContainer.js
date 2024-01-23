@@ -19,7 +19,7 @@ function getModuleId(location) {
 		case 'case.edu/law': return LAW_EVENTS_MID;
 		case 'localhost': return CEBP_EVENTS_MID;
 		default: return CEBP_EVENTS_MID
-	}	
+	}
 }
 var moduleId = getModuleId(window.location.hostname);
 const EVENTS_API = BASE_URL_API_PATH + GET_ALL_EVENTS_ENDPOINT + "?" + moduleId + "&" + CEBP_EVENTS_START + "&" + CEBP_EVENTS_END;
@@ -29,7 +29,7 @@ class EventsListContainer extends Component {
 		isFetching: false,
         events: []
 	};
-	
+
     async componentDidMount() {
         this.fetchEvents();
 		console.log("MMMmmm" + this.state.events.length);
@@ -61,15 +61,15 @@ class EventsListContainer extends Component {
 
 	renderItems = () => {
 		const { events, isLoading, error } = this.state;
-	
+
 		if (error) {
 		  return <div>{error}</div>;
 		}
-	
+
 		if (isLoading) {
 		  return <div>Loading...</div>;
 		}
-	
+
 		function showSudCoeEvents(e) {
 			console.log('show sud coe');
 			var courses = document.querySelectorAll('.cebp-event')
@@ -99,13 +99,13 @@ class EventsListContainer extends Component {
 		return (
 			<div>
 				{/* wsom uses rounded button class - button-block-blue n-mb-15 */}
-				<p><a class="button-blue" href="#" onClick={showSudCoeEvents}>Only Show SUD CEO Events</a>&nbsp;&nbsp;<a class="button-blue" href="#" onClick={showAllEvents}>Show all Events</a></p>
+				<p><a class="button-blue" href="#" onClick={showSudCoeEvents}>Only Show SUD COE Events</a>&nbsp;&nbsp;<a class="button-blue" href="#" onClick={showAllEvents}>Show all Events</a></p>
 				{events.map(event => (
 					<div>
 						<div>{this.showMonthHeader(format(new Date(event.EventStartDate), 'LLLL'))}</div>
 						<div key={event.EventId} className="cebp-event" data-categories={event.Categories}>
 							<div className="field field--name-field-robust-3-page-ref field--type-entity-reference-revisions field--label-hidden field--items">
-								<div className="field--item"> 
+								<div className="field--item">
 									<div className="paragraph paragraph--type--view paragraph--view-mode--default">
 										<div className="field field--name-field-view-viewfield field--type-viewfield field--label-hidden">
 											<div className="field__item field__item-label-hidden">
@@ -127,7 +127,7 @@ class EventsListContainer extends Component {
 			</div>
 		);
 	};
-	
+
 	render() {
 		return <div>{this.renderItems()}</div>;
 	}

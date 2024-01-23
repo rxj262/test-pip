@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/modules/custom/react_router_test/components/react_cebp_events/build/static/css/main.073c9b0a.css",
-    "main.js": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/main.9c8cab1e.js",
-    "static/js/787.e4016c42.chunk.js": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/787.e4016c42.chunk.js",
+    "main.css": "/modules/custom/react_router_test/components/react_cebp_events/build/static/css/main.a617e044.chunk.css",
+    "main.js": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/main.16f361d5.chunk.js",
+    "main.js.map": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/main.16f361d5.chunk.js.map",
+    "runtime-main.js": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/runtime-main.b43a2e29.js",
+    "runtime-main.js.map": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/runtime-main.b43a2e29.js.map",
+    "static/js/2.d531419c.chunk.js": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/2.d531419c.chunk.js",
+    "static/js/2.d531419c.chunk.js.map": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/2.d531419c.chunk.js.map",
+    "static/js/3.1b223b68.chunk.js": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/3.1b223b68.chunk.js",
+    "static/js/3.1b223b68.chunk.js.map": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/3.1b223b68.chunk.js.map",
     "index.html": "/modules/custom/react_router_test/components/react_cebp_events/build/index.html",
-    "main.073c9b0a.css.map": "/modules/custom/react_router_test/components/react_cebp_events/build/static/css/main.073c9b0a.css.map",
-    "main.9c8cab1e.js.map": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/main.9c8cab1e.js.map",
-    "787.e4016c42.chunk.js.map": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/787.e4016c42.chunk.js.map"
+    "static/css/main.a617e044.chunk.css.map": "/modules/custom/react_router_test/components/react_cebp_events/build/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.d531419c.chunk.js.LICENSE.txt": "/modules/custom/react_router_test/components/react_cebp_events/build/static/js/2.d531419c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.9c8cab1e.js"
+    "static/js/runtime-main.b43a2e29.js",
+    "static/js/2.d531419c.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.16f361d5.chunk.js"
   ]
 }

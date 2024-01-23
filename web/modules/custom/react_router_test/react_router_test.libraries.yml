@@ -1,10 +1,12 @@
 react_library:
   js:
-    components/react_cebp_events/build/static/js/787.chunk.js: {}
-    components/react_cebp_events/build/static/js/main.js: {}
+    components/react_cebp_events/build/static/js/2.d531419c.chunk.js: {}
+    components/react_cebp_events/build/static/js/3.1b223b68.chunk.js: {}
+    components/react_cebp_events/build/static/js/main.16f361d5.chunk.js: {}
+    components/react_cebp_events/build/static/js/runtime-main.b43a2e29.js: {}
   css:
     theme:
-      components/react_cebp_events/build/static/css/main.css: {}
+      components/react_cebp_events/build/static/css/main.a617e044.chunk.css: {}
 
 react_aside_library:
   js:
@@ -12,6 +14,6 @@ react_aside_library:
     components/react_cebp_events_aside/build/static/js/3.chunk.js: {}
     components/react_cebp_events_aside/build/static/js/runtime.js: {}
     components/react_cebp_events_aside/build/static/js/main.js: {}
-  css: 
+  css:
     theme:
       components/react_cebp_events_aside/build/static/css/chunk.css: {}
