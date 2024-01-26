@@ -404,14 +404,6 @@
     $('.page-head').css("border-bottom", "none");
   }
 
-  // hide alumni, students, and faculty-staff from medicine main navigation & mobile
-  // console.log(drupalSettings.path.baseUrl);
-  if (window.location.href.indexOf("medicine") > -1) {
-    $('ul[block="block-crew-main-menu"] a[href$="/alumni"]').parent().css("display", "none");
-    $('ul[block="block-crew-main-menu"] a[href$="/students"]').parent().css("display", "none");
-    $('ul[block="block-crew-main-menu"] a[href$="/faculty-staff"]').parent().css("display", "none");
-  }
-
   // hide alumni, students, and faculty-staff from dental main navigation & mobile
   // console.log(drupalSettings.path.baseUrl);
   if (window.location.href.indexOf("dental") > -1) {
@@ -790,14 +782,6 @@
       $("form input#edit-combine").val(function (i, v) {
         return v.replace("UMC - ", "");
       })
-    }
-    if (window.location.href.indexOf("medicine") > -1) {
-
-      console.log("test");
-      $('.field--name-field-value:contains(#)').html(function (_, html) {
-        return html.replace(/(#)/g, '<sup>$1</sup>');
-      });
-
     }
   });
 
