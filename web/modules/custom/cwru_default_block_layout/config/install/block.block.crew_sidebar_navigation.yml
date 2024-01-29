@@ -23,8 +23,8 @@ settings:
   depth: 5
   expand_all_items: false
 visibility:
-  node_type:
-    id: node_type
+  'entity_bundle: node':
+    id: 'entity_bundle: node'
     bundles:
       basic_page: basic_page
       biography: biography
