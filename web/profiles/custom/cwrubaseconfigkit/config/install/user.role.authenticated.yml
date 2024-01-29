@@ -6,13 +6,9 @@ label: 'Authenticated user'
 weight: -4
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
-  - 'edit own comments'
   - 'never autoplay videos'
-  - 'post comments'
   - 'search content'
-  - 'skip comment approval'
   - 'view media'
   - 'view the administration theme'
