@@ -128,7 +128,7 @@
         "drupal/workbench_moderation": "^1.7.0",
         "drupal/xmlsitemap": "^1.4.0",
         "drupal/yearonly": "^9.1.0",
-        "drupal/yoast_seo": "^2.0.0-alpha8",
+        "drupal/yoast_seo": "^1.8",
         "kint-php/kint": "^5.0.5",
         "league/oauth2-client": "^2.7.0",
         "mglaman/composer-drupal-lenient": "^1.0.3",
