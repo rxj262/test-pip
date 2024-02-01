@@ -98,4 +98,5 @@
 
 # CWRU Setup
 /web/themes/custom/*/node_modules
+/web/modules/custom/*/node_modules
 .lando.yml
