@@ -85,8 +85,8 @@
             "drupal/linkit": {
                 "HR file patch": "patches/linkit-cwru-hr.patch"
             },
-            "drupal/photoswipe": {
-                "photoswipe media error": "https://www.drupal.org/files/issues/2022-10-12/3271273-media-entity-reference-field-used-with-photoswipe-display-option-21.patch"
+            "drupal/core": {
+                "Adding non-existent permissions to a role is not allowed": "https://www.drupal.org/files/issues/2023-09-14/3358586-11.patch"
             }
         },
         "patchLevel": {
