@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_intro_text_title
+    - paragraphs.paragraphs_type.centered_intro_text
+id: paragraph.centered_intro_text.field_intro_text_title
+field_name: field_intro_text_title
+entity_type: paragraph
+bundle: centered_intro_text
+label: 'Centered Intro Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

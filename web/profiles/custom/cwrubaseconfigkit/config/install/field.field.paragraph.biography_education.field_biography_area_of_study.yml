@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_area_of_study
+    - paragraphs.paragraphs_type.biography_education
+id: paragraph.biography_education.field_biography_area_of_study
+field_name: field_biography_area_of_study
+entity_type: paragraph
+bundle: biography_education
+label: 'Area of Study'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

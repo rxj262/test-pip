@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_additional_infor
+    - node.type.biography
+  module:
+    - text
+id: node.biography.field_biography_additional_infor
+field_name: field_biography_additional_infor
+entity_type: node
+bundle: biography
+label: 'Additional Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

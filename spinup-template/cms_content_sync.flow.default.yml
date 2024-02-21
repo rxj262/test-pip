@@ -1,0 +1,301 @@
+langcode: en
+status: true
+dependencies: {  }
+id: NEW_SITE_NAME_filter
+name: 'NEW_SITE_NAME filter'
+type: pull
+variant: simple
+simple_settings:
+  poolAssignment: force
+  mode: automatically
+  deletions: true
+  embeddedDeletions: true
+  updateBehavior: force_and_forbid_editing
+  ignoreUnpublishedChanges: true
+  allowExplicitUnpublishing: true
+  pushMenuItems: true
+  pushPreviews: true
+  mergeLocalChanges: false
+  resolveUserReferences: mail
+  poolSelectionWidget: checkboxes
+  entityTypeSettings:
+    block_content:
+      allBundles:
+        mode: disabled
+    crop:
+      allBundles:
+        mode: dependency
+    file:
+      perBundle:
+        file:
+          mode: dependency
+          previewViewMode: table
+    media:
+      perBundle:
+        document:
+          mode: disabled
+          previewViewMode: disabled
+        gallery:
+          mode: disabled
+          previewViewMode: disabled
+        image:
+          mode: dependency
+          previewViewMode: table
+        instagram:
+          mode: disabled
+          previewViewMode: disabled
+        tweet:
+          mode: disabled
+          previewViewMode: disabled
+        video:
+          mode: disabled
+          previewViewMode: disabled
+    menu_link_content:
+      allBundles:
+        mode: disabled
+    node:
+      perBundle:
+        aside_reference:
+          mode: disabled
+          previewViewMode: disabled
+        basic_page:
+          mode: disabled
+          previewViewMode: disabled
+        biography:
+          mode: default
+          previewViewMode: table
+          filters:
+            -
+              type: includes-reference
+              fieldMachineName: field_biography_drupal_site_ref
+              values:
+                -
+                  namespaceMachineName: taxonomy_term
+                  machineName: drupal_site
+                  remoteUuid: NEW_DRUPAL_SITE_UUID
+        error_page:
+          mode: disabled
+          previewViewMode: disabled
+        homepage_w_sidebar:
+          mode: disabled
+          previewViewMode: disabled
+        news_article:
+          mode: disabled
+          previewViewMode: disabled
+        personal_profile:
+          mode: disabled
+          previewViewMode: disabled
+        robust_3_column_page:
+          mode: disabled
+          previewViewMode: disabled
+        site_information:
+          mode: default
+          previewViewMode: table
+          filters:
+            -
+              type: includes-reference
+              fieldMachineName: field_site_drupal_site_ref
+              values:
+                -
+                  namespaceMachineName: taxonomy_term
+                  machineName: drupal_site
+                  remoteUuid: NEW_DRUPAL_SITE_UUID
+    paragraph:
+      perBundle:
+        accordion:
+          mode: disabled
+          previewViewMode: disabled
+        accordion_section:
+          mode: disabled
+          previewViewMode: disabled
+        additional_job_descriptions:
+          mode: dependency
+          previewViewMode: table
+        additional_view_orders:
+          mode: dependency
+          previewViewMode: table
+        alternating_subfeature:
+          mode: disabled
+          previewViewMode: disabled
+        aside:
+          mode: disabled
+          previewViewMode: disabled
+        aside_reference:
+          mode: disabled
+          previewViewMode: disabled
+        award_honor:
+          mode: dependency
+          previewViewMode: table
+        biography_education:
+          mode: dependency
+          previewViewMode: table
+        button:
+          mode: disabled
+          previewViewMode: disabled
+        centered_intro_text:
+          mode: disabled
+          previewViewMode: disabled
+        content:
+          mode: disabled
+          previewViewMode: disabled
+        external_appointment:
+          mode: dependency
+          previewViewMode: table
+        external_rss:
+          mode: disabled
+          previewViewMode: disabled
+        facebook_embed:
+          mode: disabled
+          previewViewMode: disabled
+        gallery:
+          mode: disabled
+          previewViewMode: disabled
+        gallery_section:
+          mode: disabled
+          previewViewMode: disabled
+        hero_full_width:
+          mode: disabled
+          previewViewMode: disabled
+        hero_landing_page:
+          mode: disabled
+          previewViewMode: disabled
+        hero_one_column:
+          mode: disabled
+          previewViewMode: disabled
+        hero_overlay_text:
+          mode: disabled
+          previewViewMode: disabled
+        hero_text_heavy:
+          mode: disabled
+          previewViewMode: disabled
+        hero_two_column:
+          mode: disabled
+          previewViewMode: disabled
+        icon_picker:
+          mode: disabled
+          previewViewMode: disabled
+        icon_subfeature:
+          mode: disabled
+          previewViewMode: disabled
+        iframe:
+          mode: disabled
+          previewViewMode: disabled
+        job_title_affiliation:
+          mode: dependency
+          previewViewMode: table
+        presentation:
+          mode: dependency
+          previewViewMode: table
+        program_degree_website:
+          mode: disabled
+          previewViewMode: disabled
+        publication:
+          mode: dependency
+          previewViewMode: table
+        residency:
+          mode: dependency
+          previewViewMode: table
+        site_affiliation:
+          mode: dependency
+          previewViewMode: table
+        social:
+          mode: dependency
+          previewViewMode: table
+        social_section:
+          mode: dependency
+          previewViewMode: table
+        stacked_button_wrapper:
+          mode: disabled
+          previewViewMode: disabled
+        stacked_buttons:
+          mode: disabled
+          previewViewMode: disabled
+        subfeature:
+          mode: disabled
+          previewViewMode: disabled
+        subfeature_landing:
+          mode: disabled
+          previewViewMode: disabled
+        subfeature_section:
+          mode: disabled
+          previewViewMode: disabled
+        subfeature_two_column:
+          mode: disabled
+          previewViewMode: disabled
+        subfeatures_group:
+          mode: disabled
+          previewViewMode: disabled
+        tab_section:
+          mode: disabled
+          previewViewMode: disabled
+        tabs:
+          mode: disabled
+          previewViewMode: disabled
+        twitter_embed:
+          mode: disabled
+          previewViewMode: disabled
+        vertical_subfeature:
+          mode: disabled
+          previewViewMode: disabled
+        video:
+          mode: disabled
+          previewViewMode: disabled
+        view:
+          mode: disabled
+          previewViewMode: disabled
+        well:
+          mode: disabled
+          previewViewMode: disabled
+    taxonomy_term:
+      perBundle:
+        academic_credentials:
+          mode: dependency
+          previewViewMode: table
+        centers:
+          mode: dependency
+          previewViewMode: table
+        course_name:
+          mode: dependency
+          previewViewMode: table
+        degree:
+          mode: dependency
+          previewViewMode: table
+        departments:
+          mode: dependency
+          previewViewMode: table
+        drupal_site:
+          mode: default
+          previewViewMode: table
+        format:
+          mode: disabled
+          previewViewMode: disabled
+        job_title:
+          mode: dependency
+          previewViewMode: table
+        program_degree_type:
+          mode: dependency
+          previewViewMode: table
+        program_interest_categories:
+          mode: disabled
+          previewViewMode: disabled
+        roles:
+          mode: dependency
+          previewViewMode: table
+        schools:
+          mode: dependency
+          previewViewMode: table
+        short_degree_type:
+          mode: disabled
+          previewViewMode: disabled
+        tags:
+          mode: disabled
+          previewViewMode: disabled
+        views_filters:
+          mode: dependency
+          previewViewMode: table
+    redirect:
+      allBundles:
+        mode: disabled
+  pools: null
+per_bundle_settings: null
+sync_entities: null

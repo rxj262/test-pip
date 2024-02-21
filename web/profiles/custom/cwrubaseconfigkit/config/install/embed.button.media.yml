@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.image_with_caption
+    - core.entity_view_mode.media.image_with_caption_large
+    - core.entity_view_mode.media.image_with_caption_medium
+    - core.entity_view_mode.media.image_with_caption_small
+    - core.entity_view_mode.media.media_image_large
+    - core.entity_view_mode.media.media_image_medium
+    - core.entity_view_mode.media.media_image_original
+    - core.entity_view_mode.media.media_image_small
+    - entity_browser.browser.embed_browser
+    - media.type.image
+  module:
+    - entity_embed
+    - media
+label: Media
+id: media
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - image
+  display_plugins:
+    - 'view_mode:media.image_with_caption'
+    - 'view_mode:media.image_with_caption_large'
+    - 'view_mode:media.image_with_caption_medium'
+    - 'view_mode:media.image_with_caption_small'
+    - 'view_mode:media.media_image_large'
+    - 'view_mode:media.media_image_medium'
+    - 'view_mode:media.media_image_original'
+    - 'view_mode:media.media_image_small'
+  entity_browser: embed_browser
+  entity_browser_settings:
+    display_review: false
+icon: {  }
+icon_uuid: null

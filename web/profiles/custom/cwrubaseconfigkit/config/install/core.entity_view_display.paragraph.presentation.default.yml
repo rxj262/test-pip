@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.presentation.field_biography_conference_name
+    - field.field.paragraph.presentation.field_biography_presentation_dat
+    - field.field.paragraph.presentation.field_biography_presentation_tit
+    - paragraphs.paragraphs_type.presentation
+  module:
+    - datetime
+id: paragraph.presentation.default
+targetEntityType: paragraph
+bundle: presentation
+mode: default
+content:
+  field_biography_conference_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_biography_presentation_dat:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_biography_presentation_tit:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

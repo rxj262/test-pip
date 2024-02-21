@@ -1,0 +1,4 @@
+cms_content_sync_authentication_type: basic_auth
+cms_content_sync_sync_core_url: 'https://us1.sync-core.cms-content-sync.io/sync-core'
+cms_content_sync_disable_dynamic_pool_assignment: true
+cms_content_sync_enable_preview: false

@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.residency.field_biography_res_area_study
+    - field.field.paragraph.residency.field_biography_res_institution
+    - field.field.paragraph.residency.field_residency_year
+    - paragraphs.paragraphs_type.residency
+  module:
+    - yearonly
+id: paragraph.residency.default
+targetEntityType: paragraph
+bundle: residency
+mode: default
+content:
+  field_biography_res_area_study:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_biography_res_institution:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_residency_year:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: yearonly_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

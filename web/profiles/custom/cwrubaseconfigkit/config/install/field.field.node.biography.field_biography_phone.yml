@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_phone
+    - node.type.biography
+  module:
+    - telephone
+id: node.biography.field_biography_phone
+field_name: field_biography_phone
+entity_type: node
+bundle: biography
+label: Phone
+description: 'Enter phone number using the format ###.###.####'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

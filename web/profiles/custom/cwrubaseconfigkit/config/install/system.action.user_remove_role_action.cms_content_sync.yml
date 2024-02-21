@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.cms_content_sync
+  module:
+    - user
+id: user_remove_role_action.cms_content_sync
+label: 'Remove the Content Sync role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: cms_content_sync

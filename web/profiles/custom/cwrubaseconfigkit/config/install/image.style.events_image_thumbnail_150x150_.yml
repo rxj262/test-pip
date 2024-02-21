@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: events_image_thumbnail_150x150_
+label: 'Events Image Thumbnail (150x150)'
+effects:
+  be647148-b2e1-4b4d-b70a-68d3ab84ab93:
+    uuid: be647148-b2e1-4b4d-b70a-68d3ab84ab93
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      crop_type: focal_point
