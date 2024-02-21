@@ -6,6 +6,7 @@ dependencies:
     - node.type.error_page
   module:
     - path
+    - workflow_buttons
 id: node.error_page.default
 targetEntityType: node
 bundle: error_page
@@ -18,11 +19,18 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_error_type:
+    type: options_select
     weight: 32
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+  moderation_state:
+    type: workflow_buttons
+    weight: 128
     region: content
+    settings:
+      show_current_state: false
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -31,24 +39,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 15
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 122
+    region: content
     settings:
       display_label: true
-    weight: 122
     third_party_settings: {  }
-    region: content
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 16
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -61,11 +69,11 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50

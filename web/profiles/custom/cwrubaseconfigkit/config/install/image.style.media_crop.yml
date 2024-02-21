@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - crop.type.media_crop
   module:
     - crop
 name: media_crop
@@ -12,3 +14,4 @@ effects:
     weight: 2
     data:
       crop_type: media_crop
+      automatic_crop_provider: null

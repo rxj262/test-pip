@@ -10,59 +10,50 @@ dependencies:
     - image.style.thumbnail
     - media.type.image
   module:
-    - image
-    - path
+    - focal_point
 id: media.image.default
 targetEntityType: media
 bundle: image
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 10
+  field_caption:
+    type: string_textfield
+    weight: 2
     region: content
-    settings: {  }
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-  field_media_image:
+  field_image:
+    type: image_focal_point
+    weight: 0
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
-    type: image_image
-    weight: 0
+  field_photo_caption:
+    type: string_textfield
+    weight: 3
     region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   name:
     type: string_textfield
-    weight: -5
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 100
-    region: content
-    third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    region: content
     third_party_settings: {  }
 hidden:
-  field_caption: true
-  field_image: true
+  created: true
+  field_media_image: true
   field_media_in_library: true
-  field_photo_caption: true
+  path: true
+  status: true
+  uid: true

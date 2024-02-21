@@ -3,8 +3,8 @@ status: true
 dependencies: {  }
 id: cwru_thumbnail
 name: cwru_thumbnail
-label: 'CWRU Thumbnail'
 weight: 0
+label: 'CWRU Thumbnail'
 group: thumbnail
 skin: asnavfor
 breakpoints: 0

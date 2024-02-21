@@ -162,6 +162,12 @@ settings:
       aside_reference:
         weight: 51
         enabled: false
+      additional_job_descriptions:
+        weight: 54
+        enabled: false
+      additional_view_orders:
+        weight: 55
+        enabled: false
       content_reference:
         weight: 57
         enabled: false
@@ -170,5 +176,11 @@ settings:
         enabled: false
       subfeatures_group:
         weight: 84
+        enabled: false
+      twitter_embed:
+        weight: 97
+        enabled: false
+      vertical_subfeatures_group:
+        weight: 99
         enabled: false
 field_type: entity_reference_revisions

@@ -5,6 +5,14 @@ dependencies:
     - filter.format.basic_html
   module:
     - ckeditor
+    - editor_file
+third_party_settings:
+  editor_file:
+    status: true
+    scheme: public
+    directory: inline-files
+    extensions: 'pdf doc docx xls xlsx pptx ppt txt'
+    max_size: '128 MB'
 format: basic_html
 editor: ckeditor
 settings:
@@ -39,9 +47,7 @@ settings:
           name: Tools
           items:
             - Source
-  plugins:
-    stylescombo:
-      styles: ''
+  plugins: {  }
 image_upload:
   status: true
   scheme: public

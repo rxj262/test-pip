@@ -1,15 +1,13 @@
-uuid: 9fa44aca-d907-46cd-a6f8-205176a7dffc
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.media.gallery.field_media_in_library
     - field.field.media.gallery.field_slide
+    - image.style.gallery_item
     - media.type.gallery
   module:
     - slick
-_core:
-  default_config_hash: 6fLv5XOJWQbvruueOiRp17WBJY_V1Vw855o19nFxN68
 id: media.gallery.default
 targetEntityType: media
 bundle: gallery
@@ -84,10 +82,10 @@ content:
         randomize: '0'
         variableWidth: '0'
       color_field: ''
-      grid: '0'
+      grid: 0
       grid_header: ''
-      grid_medium: '0'
-      grid_small: '0'
+      grid_medium: 0
+      grid_small: 0
       preserve_keys: false
       visible_items: 0
       display: main

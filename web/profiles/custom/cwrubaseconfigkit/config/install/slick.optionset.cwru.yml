@@ -3,8 +3,8 @@ status: true
 dependencies: {  }
 id: cwru
 name: cwru
-label: CWRU
 weight: 0
+label: CWRU
 group: ''
 skin: ''
 breakpoints: 0

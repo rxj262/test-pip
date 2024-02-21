@@ -5,13 +5,17 @@ core_version_requirement: '>=9'
 
 distribution:
   name: CWRU Base Distribution.
+  install:
+    theme: crew
 
 # Required modules
 install:
   - admin_toolbar
+  - cwru_default_error_page
   - admin_toolbar_tools
   - anchor_link
   - automated_cron
+  - basic_auth
   - better_exposed_filters
   - big_pipe
   - blazy
@@ -23,30 +27,35 @@ install:
   - ckeditor
   - coffee
   - config
+  - config_filter
+  - config_ignore
   - config_update
+  - contact
+  - content_moderation
   - contextual
   - crop
-  - contact
   - ctools
   - ctools_block
-  - cwru_default_error_page
+  - custom_gin_override
   - datetime
   - dblog
   - diff
   - dropzonejs
   - dropzonejs_eb_widget
+  - dynamic_entity_reference
   - dynamic_page_cache
   - easy_breadcrumb
   - editor
   - editor_file
   - embed
+  - encrypt
   - entity
   - entity_block
   - entity_browser
   - entity_browser_entity_form
   - entity_embed
   - entity_reference_revisions
-  - externalauth
+  - fakeobjects
   - features
   - features_ui
   - field
@@ -56,11 +65,19 @@ install:
   - file_url
   - filter
   - focal_point
+  - fontawesome
   - fontawesome_iconpicker
+  - gin_toolbar
   - help
   - history
+  - ief_table_view_mode
   - image
   - inline_entity_form
+  - jquery_ui
+  - jquery_ui_datepicker
+  - jquery_ui_slider
+  - jquery_ui_touch_punch
+  - key
   - link
   - linkit
   - media
@@ -68,14 +85,19 @@ install:
   - media_entity_instagram
   - media_entity_slideshow
   - media_entity_twitter
+  - menu_link_content
   - menu_ui
   - metatag
+  - metatag_open_graph
+  - mysql
   - node
   - options
   - page_cache
   - page_manager
   - paragraphs_edit
   - path
+  - path_alias
+  - real_aes
   - redirect
   - redirect_404
   - redirect_domain
@@ -101,15 +123,22 @@ install:
   - viewfield
   - views_infinite_scroll
   - views_ui
+  - workflow_buttons
+  - workflows
   - xmlsitemap_custom
   - xmlsitemap_engines
-  - menu_link_content
+  - yearonly
+  - yoast_seo
   - pathauto
   - xmlsitemap
+  - externalauth
   - views
   - paragraphs
-  - yoast_seo
-  - memcache
+  - cms_content_sync
+  - cms_content_sync_health
+  - cms_content_sync_developer
+  - cms_content_sync_views
+
 themes:
   - bootstrap
   - crew

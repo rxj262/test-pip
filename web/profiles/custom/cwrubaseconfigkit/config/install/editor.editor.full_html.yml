@@ -5,6 +5,13 @@ dependencies:
     - filter.format.full_html
   module:
     - ckeditor
+    - editor_file
+third_party_settings:
+  editor_file:
+    status: true
+    scheme: public
+    directory: inline-files
+    extensions: 'pdf doc docx xls xlsx pptx ppt txt'
 format: full_html
 editor: ckeditor
 settings:
@@ -16,16 +23,20 @@ settings:
           items:
             - Bold
             - Italic
-            - Strike
             - Superscript
             - Subscript
-            - '-'
             - RemoveFormat
+            - Indent
+            - Outdent
+            - PasteText
+            - '-'
         -
           name: Linking
           items:
+            - Link
             - DrupalLink
             - DrupalUnlink
+            - Anchor
         -
           name: Lists
           items:
@@ -34,27 +45,37 @@ settings:
         -
           name: Media
           items:
-            - Blockquote
-            - DrupalImage
+            - media
             - Table
+            - video_embed
+            - Blockquote
             - HorizontalRule
         -
           name: 'Block Formatting'
           items:
-            - Format
+            - Styles
         -
           name: Tools
           items:
-            - ShowBlocks
             - Source
   plugins:
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: linkit
     stylescombo:
-      styles: ''
+      styles: "p|Normal\r\nh2|Heading 2\r\nh3|Heading 3\r\nh4|Heading 4\r\nh5|Heading 5\r\nh6|Heading 6\r\na.button-blue|Blue Button\r\na.button-gray|Gray Button\r\na.button-block-blue|Full Width Blue Button\r\na.button-block-gray|Full Width Gray Button"
+    video_embed:
+      defaults:
+        children:
+          autoplay: false
+          responsive: true
+          width: '854'
+          height: '480'
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

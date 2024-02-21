@@ -8,7 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.gallery_section
   module:
     - entity_browser_entity_form
-    - inline_entity_form
+    - ief_table_view_mode
     - text
 id: paragraph.gallery_section.default
 targetEntityType: paragraph
@@ -33,10 +33,13 @@ content:
       allow_existing: true
       match_operator: CONTAINS
       override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: image_browser
-    type: inline_entity_form_complex
+    type: inline_entity_form_complex_table_view_mode
     region: content
   field_gallery_title:
     weight: 0

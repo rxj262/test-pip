@@ -4,5 +4,4 @@ dependencies: {  }
 name: 'Drupal Site'
 vid: drupal_site
 description: 'Active Drupal Sites'
-hierarchy: 0
 weight: 0

@@ -21,7 +21,6 @@ description: ''
 tag: ''
 base_table: media_field_data
 base_field: mid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -604,21 +603,20 @@ display:
         - url.query_args
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.audio.default'
         - 'config:core.entity_view_display.media.document.default'
         - 'config:core.entity_view_display.media.document.media_library'
-        - 'config:core.entity_view_display.media.file.default'
         - 'config:core.entity_view_display.media.gallery.default'
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.alternating_subfeature_image_style'
         - 'config:core.entity_view_display.media.image.article_image_style'
+        - 'config:core.entity_view_display.media.image.aside_image_style'
         - 'config:core.entity_view_display.media.image.biography_listing_image_style'
         - 'config:core.entity_view_display.media.image.biography_page_image_style'
+        - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.gallery_item_image_style'
         - 'config:core.entity_view_display.media.image.hero_full_width_image_style'
         - 'config:core.entity_view_display.media.image.hero_landing_page_image_style'
+        - 'config:core.entity_view_display.media.image.hero_one_column'
         - 'config:core.entity_view_display.media.image.hero_one_column_image_style'
         - 'config:core.entity_view_display.media.image.hero_two_column_image_style'
         - 'config:core.entity_view_display.media.image.image_with_caption'
@@ -641,6 +639,7 @@ display:
         - 'config:core.entity_view_display.media.instagram.media_library'
         - 'config:core.entity_view_display.media.tweet.default'
         - 'config:core.entity_view_display.media.tweet.media_library'
+        - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.video.media_library'
   entity_browser_2:
     display_plugin: entity_browser
@@ -1569,20 +1568,20 @@ display:
         - url.query_args
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.media.audio.default'
         - 'config:core.entity_view_display.media.document.default'
         - 'config:core.entity_view_display.media.document.media_library'
-        - 'config:core.entity_view_display.media.file.default'
         - 'config:core.entity_view_display.media.gallery.default'
         - 'config:core.entity_view_display.media.gallery.media_library'
         - 'config:core.entity_view_display.media.image.alternating_subfeature_image_style'
         - 'config:core.entity_view_display.media.image.article_image_style'
+        - 'config:core.entity_view_display.media.image.aside_image_style'
         - 'config:core.entity_view_display.media.image.biography_listing_image_style'
         - 'config:core.entity_view_display.media.image.biography_page_image_style'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.gallery_item_image_style'
         - 'config:core.entity_view_display.media.image.hero_full_width_image_style'
         - 'config:core.entity_view_display.media.image.hero_landing_page_image_style'
+        - 'config:core.entity_view_display.media.image.hero_one_column'
         - 'config:core.entity_view_display.media.image.hero_one_column_image_style'
         - 'config:core.entity_view_display.media.image.hero_two_column_image_style'
         - 'config:core.entity_view_display.media.image.image_with_caption'

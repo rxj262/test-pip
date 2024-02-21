@@ -9,7 +9,7 @@ field_name: field_hero_one_title
 entity_type: paragraph
 bundle: hero_one_column
 label: Title
-description: ''
+description: '<em>Optional field to create a title above the image description information</em>'
 required: false
 translatable: false
 default_value: {  }

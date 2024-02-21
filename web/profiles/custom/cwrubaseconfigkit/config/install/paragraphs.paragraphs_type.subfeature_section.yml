@@ -4,5 +4,6 @@ dependencies: {  }
 id: subfeature_section
 label: 'Subfeature Section'
 icon_uuid: null
+icon_default: null
 description: null
 behavior_plugins: {  }

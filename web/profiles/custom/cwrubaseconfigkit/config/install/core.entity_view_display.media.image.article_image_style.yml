@@ -8,7 +8,7 @@ dependencies:
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
     - field.field.media.image.field_photo_caption
-    - image.style.article_480x480_
+    - image.style.article_300x300_
     - media.type.image
   module:
     - image
@@ -29,16 +29,23 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: article_480x480_
+      image_style: article_300x300_
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
+  field_photo_caption:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   created: true
   field_media_image: true
   field_media_in_library: true
-  field_photo_caption: true
   name: true
   thumbnail: true
   uid: true

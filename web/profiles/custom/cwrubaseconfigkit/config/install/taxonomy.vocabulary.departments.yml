@@ -4,5 +4,4 @@ dependencies: {  }
 name: 'Departments & Offices'
 vid: departments
 description: ''
-hierarchy: 0
 weight: 0

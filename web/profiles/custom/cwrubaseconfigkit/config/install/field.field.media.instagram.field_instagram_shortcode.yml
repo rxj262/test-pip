@@ -9,7 +9,7 @@ field_name: field_instagram_shortcode
 entity_type: media
 bundle: instagram
 label: 'Instagram Shortcode'
-description: 'Instagram post''s unique identifier. Ex: BHak8cShinX is the shortcode for www.instagram.com/p/BHak8cShinX/'
+description: "Instagram post's unique identifier. Ex: BHak8cShinX is the shortcode for www.instagram.com/p/BHak8cShinX/"
 required: false
 translatable: false
 default_value: {  }

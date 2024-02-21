@@ -21,20 +21,20 @@ widget_selector_configuration: {  }
 widgets:
   39293247-4c41-4f37-a475-f745ea0ab508:
     settings:
-      view: new_media_library
-      view_display: entity_browser_4
       submit_text: Select
       auto_select: false
+      view: new_media_library
+      view_display: entity_browser_4
     uuid: 39293247-4c41-4f37-a475-f745ea0ab508
     weight: 1
     label: Library
     id: view
   4a97059f-c1a8-40ce-a432-7e0218fbeb49:
     settings:
+      submit_text: Save
       entity_type: media
       bundle: image
       form_mode: default
-      submit_text: Save
     uuid: 4a97059f-c1a8-40ce-a432-7e0218fbeb49
     weight: 2
     label: 'Upload Image'

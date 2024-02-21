@@ -1,11 +1,8 @@
-uuid: e41a7a07-a7a9-4315-9b7f-a6800f33557c
 langcode: en
 status: true
 dependencies:
   module:
     - media
-_core:
-  default_config_hash: fm7okggWKhZ4XPDOu2aXXYCUaki4GxFH4sR4WkSCq-8
 id: media_unpublish_action
 label: 'Unpublish media'
 type: media

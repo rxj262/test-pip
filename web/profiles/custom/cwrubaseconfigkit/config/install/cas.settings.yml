@@ -1,10 +1,11 @@
 server:
   version: '2.0'
-  hostname: ''
+  hostname: login.case.edu
   port: 443
-  path: /
+  path: /cas
   verify: 0
   cert: ''
+  protocol: https
 gateway:
   check_frequency: -2
   paths:
@@ -27,16 +28,25 @@ proxy:
   can_be_proxied: false
   proxy_chains: ''
 user_accounts:
-  prevent_normal_login: true
   auto_register: false
   email_assignment_strategy: 0
   email_hostname: ''
   email_attribute: ''
   auto_assigned_roles: {  }
-  restrict_password_management: false
-  restrict_email_management: false
+  restrict_password_management: true
+  restrict_email_management: true
+  prevent_normal_login: false
 advanced:
   debug_log: false
   connection_timeout: 10
-login_link_enabled: false
+login_link_enabled: true
 login_link_label: 'CAS Login'
+login_success_message: ''
+error_handling:
+  login_failure_page: ''
+  message_validation_failure: ''
+  message_no_local_account: ''
+  message_subscriber_denied_reg: ''
+  message_subscriber_denied_login: ''
+  message_account_blocked: ''
+  message_username_already_exists: ''

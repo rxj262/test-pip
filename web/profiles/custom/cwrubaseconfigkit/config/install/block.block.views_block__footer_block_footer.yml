@@ -10,14 +10,14 @@ dependencies:
 id: views_block__footer_block_footer
 theme: crew
 region: footer
-weight: -9
+weight: -7
 provider: null
 plugin: 'views_block:footer-block_footer'
 settings:
   id: 'views_block:footer-block_footer'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
   items_per_page: none
 visibility: {  }

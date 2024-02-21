@@ -17,24 +17,27 @@ targetEntityType: node
 bundle: robust_3_column_page
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: hidden
   field_meta_tags:
-    weight: 4
+    type: metatag_empty_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 4
     region: content
   field_robust_3_hero_ref:
     type: slick_paragraphs_vanilla
-    weight: 3
     label: hidden
     settings:
       optionset: cwru
-      skin: ''
       view_mode: default
       cache: 0
-      current_view_mode: default
-      override: false
+      use_theme_field: false
+      skin: ''
       overridables:
         arrows: '0'
         autoplay: '0'
@@ -44,28 +47,34 @@ content:
         mouseWheel: '0'
         randomize: '0'
         variableWidth: '0'
+      override: false
       skin_arrows: ''
       skin_dots: ''
-      style: ''
     third_party_settings: {  }
+    weight: 3
     region: content
   field_robust_3_page_ref:
     type: entity_reference_revisions_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
     region: content
   field_robust_3_page_right_ref:
     type: entity_reference_revisions_entity_view
-    weight: 2
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 2
     region: content
+  workflow_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: hidden
 hidden:
   links: true

@@ -15,8 +15,8 @@ plugin: page_title_block
 settings:
   id: page_title_block
   label: 'Page Title'
-  provider: core
   label_display: '0'
+  provider: core
 visibility:
   request_path:
     id: request_path
@@ -29,10 +29,6 @@ visibility:
       basic_page: basic_page
       biography: biography
       event_detail_page: event_detail_page
-      homepage_text_heavy: homepage_text_heavy
-      homepage_w_full_width_5_sub: homepage_w_full_width_5_sub
-      homepage_w_full_width_feature: homepage_w_full_width_feature
-      homepage_w_sidebar: homepage_w_sidebar
       landing_page: landing_page
       landing_page_alternate_subfeatur: landing_page_alternate_subfeatur
       landing_page_robust: landing_page_robust
