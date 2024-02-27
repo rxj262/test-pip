@@ -1,0 +1,13 @@
+diff --git a/core/lib/Drupal/Core/Field/Plugin/Field/FieldWidget/EntityReferenceAutocompleteWidget.php b/core/lib/Drupal/Core/Field/Plugin/Field/FieldWidget/EntityReferenceAutocompleteWidget.php
+index 68885f24d..83315cb01 100644
+--- a/core/lib/Drupal/Core/Field/Plugin/Field/FieldWidget/EntityReferenceAutocompleteWidget.php
++++ b/core/lib/Drupal/Core/Field/Plugin/Field/FieldWidget/EntityReferenceAutocompleteWidget.php
+@@ -116,7 +116,7 @@ public function formElement(FieldItemListInterface $items, $delta, array $elemen
+       // Entity reference field items are handling validation themselves via
+       // the 'ValidReference' constraint.
+       '#validate_reference' => FALSE,
+-      '#maxlength' => 1024,
++      '#maxlength' => 4096,
+       '#default_value' => $referenced_entities[$delta] ?? NULL,
+       '#size' => $this->getSetting('size'),
+       '#placeholder' => $this->getSetting('placeholder'),
