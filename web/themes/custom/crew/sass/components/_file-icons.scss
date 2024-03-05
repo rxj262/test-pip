@@ -222,7 +222,12 @@ $file-types: (
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  	a[href$=".#{$name}"].blue-background:after,
+  .blue_button {
+    a[href$=".#{$name}"]:after {
+      color: $white;
+    }
+  }
+  a[href$=".#{$name}"].blue-background:after,
 	a[href$=".#{$name}"].button-blue:after,
 	a[href$=".#{$name}"].button-block-blue:after {
 		color: $white;
