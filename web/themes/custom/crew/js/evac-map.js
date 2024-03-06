@@ -28,7 +28,7 @@ var places = [
 	['Barking Spider',41.511348,-81.606956,'Adjacent parking lot'],
 	['Barrie House (11920 Carlton) PMA',41.501362,-81.59992,'Sidewalk in front of building'],
 	['Bellflower Hall',41.511833,-81.605102,'Sidewalk in front of building'],
-	['Beta Theta Pi/Sigma Phi Epsilon',41.502381,-81.601543,'Parking lot in front of Delta Gamma'],
+	['Beta Theta Pi/Pi Beta Phi',41.502381,-81.601543,'Parking lot in front of Delta Gamma'],
 	['Bingham',41.502598,-81.607188,'Sidewalk in front of building in the middle of the quad'],
 	['Bio Enterprise',41.498884,-81.608032,'Adjacent parking lot'],
 	['Biomedical Research Building',41.504671,-81.604844,'Sidewalk in front of BRB between Wood and UH'],
@@ -40,6 +40,7 @@ var places = [
 	['Clapp Hall',41.503919,-81.606357,'Sidewalk in front of building'],
 	['Clark Hall',41.509141,-81.607724,'Sidewalk in front of building'],
 	['Clarke Tower',41.514439,-81.605831,'In front of building near pavilion'],
+	['Cleveland Hearing and Speech',41.511654,-81.602881,'Rear parking lot'],
 	['Coffee House',41.511379,-81.607059,'Rear parking lot'],
 	['Crawford',41.504435,-81.609432,'Sidewalk in front of building quad side'],
 	['Cutler House',41.513761,-81.605233,'Courtyard near Storrs'],
@@ -102,11 +103,13 @@ var places = [
 	['Nursing School (Podium Level)',41.50533,-81.603576,'Outside main podium entrance by white statue'],
 	['Olin (front)',41.502484,-81.607509,'Sidewalk in front of building quad side'],
 	['Olin (rear)',41.502006,-81.608061,'Rear parking lot'],
+	['Overlook House',41.503536,-81.598458,'Sidewalk in front of building'],
 	['Pathology',41.504739,-81.606706,'Sidewalk in front of building by UH'],
 	['Peter B. Lewis',41.510113,-81.607397,'Sidewalk in front of building, Ford Drive and Bellflower Road intersection'],
 	['Phi Delta Theta',41.502682,-81.601382,'Parking lot in front of the building near Beta Theta Pi'],
 	['Phi Gamma Delta',41.510791,-81.606455,'Sidewalk in front of building'],
-	['Phi Kappa Tau/Sigma Chi',41.501181,-81.60059,'Side parking lot'],
+	['Alpha Gamma Delta/Sigma Chi',41.501181,-81.60059,'Side parking lot'],
+	['Phi Kappa Psi',41.501481,-81.600773,'In front of Kappa Alpha Theta'],
 	['Phi Kappa Theta',41.514145,-81.609407,'Sidewalk in front of building'],
 	['Phi Mu',41.511482,-81.605219,'Sidewalk in front of the building'],
 	['Phi Sigma Rho (Scholar’s House)',41.501229,-81.600937,'Adjacent side parking lot'],
@@ -124,9 +127,11 @@ var places = [
 	['Service Building (front)',41.503725,-81.603821,'Adjacent side parking lot at end of dock ramp (Lot 26)'],
 	['Service Building (rear)',41.50428,-81.603589,'Podium Level behind Robbins'],
 	['Sherman House',41.512983,-81.605596,'In front of Norton'],
+	['Sigma Alpha Epsilon',41.514426,-81.608793,'Sidewalk in front of building'],
 	['Sigma Nu',41.50269,-81.601247,'Parking lot in front of Phi Delta Theta'],
 	['Smith House',41.512041,-81.607488,'Tree in front of Cutter & Smith near the street'],
 	['Staley House',41.500371,-81.602732,'Courtyard in front of Tippit'],
+	['Stephanie Tubbs Jones (NRV 8)',41.515011,-81.605062,'Area in front of main entrance'],
 	['Stone Commons',41.513042,-81.607708,'Rear parking lot'],
 	['Storrs House',41.513922,-81.605784,'Courtyard near Pierce'],
 	['Strosacker',41.503161,-81.607602,'Sidewalk in front of building quad side'],
@@ -155,10 +160,11 @@ var places = [
 	['Wolstein Hall',41.510871,-81.606063,'Sidewalk in front of building'],
 	['Wolstein Research (WRB), Front',41.505991,-81.602868,'Corner of Cornell Rd and Circle Dr'],
 	['Wolstein Research (WRB), Rear',41.507301,-81.602563,'Rear parking lot'],
+	['Wyant Athletic and Wellness Center, Front',41.514200,-81.603020,'Area in front of main entrance'],
 	['Wood',41.504397,-81.605098,'Sidewalk in front of building between Wood and UH'],
 	['Yost Hall',41.50371,-81.60885,'Sidewalk in front of building quad side'],
 	['Zeta Beta Tau',41.513853,-81.607615,'Rear parking lot'],
-	['Zeta Psi',41.502113,-81.600307,'Adjacent side parking lot'],
+	['Tri Sigma',41.502113,-81.600307,'Adjacent side parking lot'],
 ];
 
 var map;
@@ -186,9 +192,9 @@ window.selectBuilding = function() {
 	} else {
 		map.setZoom(17);
 	}
-	
+
 	markers[selectedIndex].setIcon('https://dudbm6bcnmy8e.cloudfront.net/cwru-drupal-assets/images/circle.png');
-	
+
 	if (place[0] == 'Reset Map') {
 		var txt = place[3];
 		markers[selectedIndex].setIcon('');
@@ -197,9 +203,9 @@ window.selectBuilding = function() {
 	}
 
 	var leg = document.getElementById('legend');
-	
+
 	var newTxt = document.createTextNode(txt);
-	
+
 	leg.replaceChild(newTxt, leg.firstChild);
 	if (typeof place[4] !== 'undefined') {
 		var a = document.createElement('a');
@@ -212,7 +218,7 @@ window.selectBuilding = function() {
 	}
 }
 
-function addOption(txt) { 
+function addOption(txt) {
 	var list = document.getElementById('buildingList');
 	var newOpt = document.createElement('option');
 	var newTxt = document.createTextNode(txt);
