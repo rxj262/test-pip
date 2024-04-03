@@ -99,4 +99,6 @@
 # CWRU Setup
 /web/themes/custom/*/node_modules
 /web/modules/custom/*/node_modules
-.lando.yml
+/.lando.yml
+/web/sites/default/settings.ddev.php
+/.ddev/
