@@ -1,0 +1,226 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.travel_trip.field_luminary_society_members
+    - field.field.node.travel_trip.field_t
+    - field.field.node.travel_trip.field_trip_brochure
+    - field.field.node.travel_trip.field_trip_contact_info
+    - field.field.node.travel_trip.field_trip_details_highlights
+    - field.field.node.travel_trip.field_trip_image
+    - field.field.node.travel_trip.field_trip_inclusions
+    - field.field.node.travel_trip.field_trip_leader_link
+    - field.field.node.travel_trip.field_trip_leader_name
+    - field.field.node.travel_trip.field_trip_pricing
+    - node.type.travel_trip
+  module:
+    - datetime_range
+    - entity_browser_entity_form
+    - field_group
+    - ief_table_view_mode
+    - path
+    - text
+    - workflow_buttons
+third_party_settings:
+  field_group:
+    group_all_fields:
+      children:
+        - group_overview_information
+        - group_main_details
+      label: 'All Fields'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_overview_information:
+      children:
+        - field_t
+        - group_trip_leader
+        - field_trip_pricing
+        - field_trip_brochure_url
+        - field_trip_brochure
+      label: 'Overview Information'
+      region: content
+      parent_name: group_all_fields
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_main_details:
+      children:
+        - field_trip_details_highlights
+        - field_trip_inclusions
+        - field_trip_contact_info
+        - field_luminary_society_members
+      label: 'Main Details'
+      region: content
+      parent_name: group_all_fields
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_trip_leader:
+      children:
+        - field_trip_leader_name
+        - field_trip_leader_link
+      label: 'Trip Leader'
+      region: content
+      parent_name: group_overview_information
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: false
+id: node.travel_trip.default
+targetEntityType: node
+bundle: travel_trip
+mode: default
+content:
+  field_luminary_society_members:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_t:
+    type: daterange_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_trip_brochure:
+    type: entity_reference_autocomplete
+    weight: 27
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_trip_contact_info:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_trip_details_highlights:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_trip_image:
+    type: inline_entity_form_complex_table_view_mode
+    weight: 1
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser
+  field_trip_inclusions:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_trip_leader_link:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_trip_leader_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_trip_pricing:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: workflow_buttons
+    weight: 28
+    region: content
+    settings:
+      show_current_state: false
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

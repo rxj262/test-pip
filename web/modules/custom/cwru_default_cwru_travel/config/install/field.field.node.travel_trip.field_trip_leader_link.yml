@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trip_leader_link
+    - node.type.travel_trip
+id: node.travel_trip.field_trip_leader_link
+field_name: field_trip_leader_link
+entity_type: node
+bundle: travel_trip
+label: 'Leader Profile URL'
+description: 'http://example.com'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

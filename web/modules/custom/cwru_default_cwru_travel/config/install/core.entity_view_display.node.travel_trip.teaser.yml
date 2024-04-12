@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.travel_trip.field_luminary_society_members
+    - field.field.node.travel_trip.field_t
+    - field.field.node.travel_trip.field_trip_brochure
+    - field.field.node.travel_trip.field_trip_contact_info
+    - field.field.node.travel_trip.field_trip_details_highlights
+    - field.field.node.travel_trip.field_trip_image
+    - field.field.node.travel_trip.field_trip_inclusions
+    - field.field.node.travel_trip.field_trip_leader_link
+    - field.field.node.travel_trip.field_trip_leader_name
+    - field.field.node.travel_trip.field_trip_pricing
+    - node.type.travel_trip
+  module:
+    - user
+id: node.travel_trip.teaser
+targetEntityType: node
+bundle: travel_trip
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_luminary_society_members: true
+  field_t: true
+  field_trip_brochure: true
+  field_trip_contact_info: true
+  field_trip_details_highlights: true
+  field_trip_image: true
+  field_trip_inclusions: true
+  field_trip_leader_link: true
+  field_trip_leader_name: true
+  field_trip_pricing: true

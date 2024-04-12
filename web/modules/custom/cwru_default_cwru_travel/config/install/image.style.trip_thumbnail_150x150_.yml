@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: trip_thumbnail_150x150_
+label: 'Trip Thumbnail (150x150)'
+effects:
+  e547ae6e-2a17-43fe-9843-8f8251bec2d8:
+    uuid: e547ae6e-2a17-43fe-9843-8f8251bec2d8
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 150
+      crop_type: focal_point

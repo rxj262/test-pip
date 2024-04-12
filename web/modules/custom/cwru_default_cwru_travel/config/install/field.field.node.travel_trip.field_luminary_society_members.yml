@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_luminary_society_members
+    - node.type.travel_trip
+  module:
+    - text
+id: node.travel_trip.field_luminary_society_members
+field_name: field_luminary_society_members
+entity_type: node
+bundle: travel_trip
+label: 'Luminary Society Members Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

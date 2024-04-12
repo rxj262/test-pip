@@ -1,0 +1,115 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.travel_trip.field_luminary_society_members
+    - field.field.node.travel_trip.field_t
+    - field.field.node.travel_trip.field_trip_brochure
+    - field.field.node.travel_trip.field_trip_contact_info
+    - field.field.node.travel_trip.field_trip_details_highlights
+    - field.field.node.travel_trip.field_trip_image
+    - field.field.node.travel_trip.field_trip_inclusions
+    - field.field.node.travel_trip.field_trip_leader_link
+    - field.field.node.travel_trip.field_trip_leader_name
+    - field.field.node.travel_trip.field_trip_pricing
+    - node.type.travel_trip
+  module:
+    - datetime_range
+    - text
+    - user
+id: node.travel_trip.default
+targetEntityType: node
+bundle: travel_trip
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 116
+    region: hidden
+  field_luminary_society_members:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_t:
+    type: daterange_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_trip_brochure:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: document_url
+      link: false
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_trip_contact_info:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_trip_details_highlights:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_trip_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: hero_landing_page_image_style
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_trip_inclusions:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_trip_leader_link:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_trip_leader_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_trip_pricing:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  workflow_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 115
+    region: hidden
+hidden:
+  links: true

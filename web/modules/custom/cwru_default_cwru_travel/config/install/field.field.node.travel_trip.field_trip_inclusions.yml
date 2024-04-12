@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trip_inclusions
+    - node.type.travel_trip
+  module:
+    - text
+id: node.travel_trip.field_trip_inclusions
+field_name: field_trip_inclusions
+entity_type: node
+bundle: travel_trip
+label: 'Trip Inclusions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

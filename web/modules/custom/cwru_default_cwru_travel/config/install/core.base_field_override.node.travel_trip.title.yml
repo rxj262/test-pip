@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.travel_trip
+id: node.travel_trip.title
+field_name: title
+entity_type: node
+bundle: travel_trip
+label: 'Trip Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

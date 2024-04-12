@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.trip_thumbnail_150x150_
+label: 'Trip Thumbnail (150x150)'
+targetEntityType: media
+cache: true
