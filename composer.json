@@ -86,9 +86,6 @@
                 "HR file patch": "patches/linkit-cwru-hr.patch"
             },
             "drupal/core": {
-                "Adding non-existent permissions to a role is not allowed": "https://www.drupal.org/files/issues/2023-09-14/3358586-11.patch"
-            },
-            "drupal/core": {
                 "Increase char limit for entityautocomplete field": "patches/entity_autocomplete_char_limit.patch"
             }
         },
