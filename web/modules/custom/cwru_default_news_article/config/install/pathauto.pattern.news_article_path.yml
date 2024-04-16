@@ -9,7 +9,7 @@ type: 'canonical_entities:node'
 pattern: '/news-and-events/[node:title]'
 selection_criteria:
   c6f3c39a-f52d-42bf-bc2d-1a1df75072e4:
-    id: node_type
+    id: 'entity_bundle:node'
     negate: false
     uuid: c6f3c39a-f52d-42bf-bc2d-1a1df75072e4
     context_mapping:
