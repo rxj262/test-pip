@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.trip_thumbnail_150x150_
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_photo_caption
+    - image.style.trip_thumbnail_150x150_
+    - media.type.image
+  module:
+    - image
+id: media.image.trip_thumbnail_150x150_
+targetEntityType: media
+bundle: image
+mode: trip_thumbnail_150x150_
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: trip_thumbnail_150x150_
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_caption: true
+  field_media_image: true
+  field_media_in_library: true
+  field_photo_caption: true
+  name: true
+  thumbnail: true
+  uid: true
