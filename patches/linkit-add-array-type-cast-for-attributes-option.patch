@@ -1,0 +1,25 @@
+From 271544f601e083005a8f80b3f6ac57e5b9f629e5 Mon Sep 17 00:00:00 2001
+From: Sascha Grossenbacher <saschagros@gmail.com>
+Date: Sat, 16 Mar 2024 12:42:33 +0100
+Subject: [PATCH] Add array type cast for attributes option
+
+---
+ src/Plugin/Field/FieldFormatter/LinkitFormatter.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/Plugin/Field/FieldFormatter/LinkitFormatter.php b/src/Plugin/Field/FieldFormatter/LinkitFormatter.php
+index 70cc5e3..fcdd55a 100644
+--- a/src/Plugin/Field/FieldFormatter/LinkitFormatter.php
++++ b/src/Plugin/Field/FieldFormatter/LinkitFormatter.php
+@@ -130,7 +130,7 @@ class LinkitFormatter extends LinkFormatter {
+         if (!empty($parsed_url['fragment'])) {
+           $url->setOption('fragment', $parsed_url['fragment']);
+         }
+-        $attributes = $url->getOption('attributes');
++        $attributes = (array) $url->getOption('attributes');
+         // Restore rel and target options.
+         if (!empty($settings['rel'])) {
+           $attributes['rel'] = $settings['rel'];
+-- 
+GitLab
+

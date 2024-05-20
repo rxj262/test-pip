@@ -83,7 +83,8 @@
                 "Hide delete button from sidebar": "https://www.drupal.org/files/issues/2023-06-15/gin-theme-keep-delete-button.patch"
             },
             "drupal/linkit": {
-                "HR file patch": "patches/linkit-cwru-hr.patch"
+                "HR file patch": "patches/linkit-cwru-hr.patch",
+                "https://www.drupal.org/project/linkit/issues/3428696": "patches/linkit-add-array-type-cast-for-attributes-option.patch"
             },
             "drupal/core": {
                 "Increase char limit for entityautocomplete field": "patches/entity_autocomplete_char_limit.patch"
