@@ -11,30 +11,30 @@
 		<script type="text/javascript">
 			// <![CDATA[
 			function limittoFullText(myForm) {
-				if (myForm.fulltext_checkbox.checked) 
+				if (myForm.fulltext_checkbox.checked)
 				myForm.clv0.value = "Y";
-				else 
+				else
 				myForm.clv0.value = "N";
 			}
 
 			function limittoScholarly(myForm) {
-				if (myForm.scholarly_checkbox.checked) 
+				if (myForm.scholarly_checkbox.checked)
 				myForm.clv1.value = "Y";
-				else 
+				else
 				myForm.clv1.value = "N";
 			}
 
 			function limittoCatalog(myForm) {
-				if (myForm.catalog_only_checkbox.checked) 
+				if (myForm.catalog_only_checkbox.checked)
 				myForm.clv2.value = "Y";
-				else 
+				else
 				myForm.clv2.value = "N";
 			}
 
 			function limittoIR(myForm) {
-				if (myForm.IR_only_checkbox.checked) 
+				if (myForm.IR_only_checkbox.checked)
 				myForm.clv3.value = "Y";
-				else 
+				else
 				myForm.clv3.value = "N";
 			}
 
@@ -204,7 +204,7 @@
 								<span class="input-group-btn">
 									<input class="button-blue" type="submit" value="Search">
 								</span>
-							</div>							
+							</div>
 							<span class="input-group-btn">
 								<input class="button-blue mt-20" onclick="openCatalog()" type="button" target="_blank" value="Browse CWRU Catalog">
 							</span>
@@ -265,7 +265,7 @@
 								<input class="form-control" name="database" placeholder="Search by database name" type="text"/>
 								<span class="input-group-btn">
 									<input class="button-blue" type="submit" value="Search">
-									<a class="button-gray" href="https://chs.libguides.com/az.php?s=177717" target="_blank">Browse List</a>
+									<a class="button-gray" href="https://chs.libguides.com/az/databases?s=177717" target="_blank">Browse List</a>
 								</span>
 							</div>
 
@@ -313,7 +313,7 @@
 					</div>
 				</div>
 
-					
+
 
 				{# MOBILE STARTS HERE #}
 				<div class="accordion visible-xs visible-sm" id="lawLibraryMobileSearch">
@@ -552,7 +552,7 @@
 										<option value="__Orightresult__U?lang=eng">ISBN</option>
 										<option value="__Orightresult__U?lang=eng">ISSN</option>
 									</select>
-									
+
 									<input name="ohiolink" placeholder="Search by keyword/subject, title, author, ISBN, ISSN, etc." type="text"/>
 									<input name="Search" class="button-blue" type="submit" value="Search">
 
