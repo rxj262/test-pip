@@ -235,16 +235,16 @@ function rss_feed_preprocess_paragraph__external_rss(&$variables)
   if (!empty($variables['elements']['field_external_rss_type']['#items']->value) && $variables['elements']['field_external_rss_type']['#items']->value == 'rawrss') {
 
     $rawrss_url = $variables['elements']['field_external_rss_sources'][0]['#title'];
-    $encoded_rasrss_url = rawurlencode($rawrss_url);
+//    $encoded_rasrss_url = rawurlencode($rawrss_url);
     // only use api key on requests > 10 items. otherwise, don't use our daily api quota
     // if ($variables['elements']['field_external_rss_items_to_disp'][0]['#markup'] > 10) {
     //   $parser = "https://api.rss2json.com/v1/api.json?api_key=rtu7vqylyde7z4tjhe4o0zp1f1rw6mq6j1ylkv6b&order_dir=desc&count=20&rss_url=";
     // } else {
     //   $parser = "https://api.rss2json.com/v1/api.json?rss_url=";
     // }
-    $parser = "https://api.rss2json.com/v1/api.json?rss_url=";
-    $object_url = $parser . $encoded_rasrss_url;
-    $object = file_get_contents($object_url);
+    $queries = http_build_query(array('api_key' => 'rtu7vqylyde7z4tjhe4o0zp1f1rw6mq6j1ylkv6b', 'rss_url' => $rawrss_url));
+    $parser = "https://api.rss2json.com/v1/api.json?" . $queries;
+    $object = file_get_contents($parser);
     $data = json_decode($object);
     $data = $data->items;
     $feed_arr = array();
