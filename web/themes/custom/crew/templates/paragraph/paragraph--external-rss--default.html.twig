@@ -115,7 +115,7 @@
               {% if (type == 'd8' or type == 'daily' or type == 'mailchimp' or type == 'learningstream' or type == 'rawrss' or type == 'tb_cg' or type == 'rawrssjobs') %}
                 {% if content.rss is null %}
                   <p class='m-20'>No data available at this time...</p>
-                {% else %}  
+                {% else %}
                   <div class='feed flex-1'>
                     <ul>
                         {% for i in 0..min(count, feedcount) %}
@@ -131,7 +131,7 @@
                                 <div>
                                 {% if type == 'd8' %}
                                   <div class='feed-item-daterange'>
-                                      {{ content.rss['timestamp']|date("F d, o") }}
+                                      {{ content.rss[i]['timestamp']|date("F d, o") }}
                                   </div>
                                 {% else %}
                                   <div class='feed-item-daterange'>
