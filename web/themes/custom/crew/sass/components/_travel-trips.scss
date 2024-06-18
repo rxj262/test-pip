@@ -1,5 +1,3 @@
-
-
 .travel-trip{
   .top-box-wrapper {
     background-color: $lighter-gray;
@@ -32,7 +30,18 @@
   a[href$=".pdf"]:after {
 		content: "\f1c1";
 	}
+
+  iframe {
+    height: 500px;
+    @media #{$large-max} {
+        height: 370px;
+    }
+    @media #{$small-max} {
+      height: 250px;
+    }
+  }
 }
+
 .view-travel{
   h2{
     font-family: "DepotNew-Bold",sans-serif;
@@ -46,7 +55,3 @@
     padding-right:0;
   }
 }
-
-
-
-

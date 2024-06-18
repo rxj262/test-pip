@@ -78,10 +78,11 @@
   <div{{ content_attributes.addClass('content') }}>
     <div class="robust-content-small">
       <div>
-        {% if content.field_trip_image %}
-          {{ content.field_trip_image }}  
-        {% endif %}
-        
+          {% if content.field_video.0 is not empty %}
+              {{ content.field_video }}
+          {% else %}
+                {{ content.field_trip_image }}
+          {% endif %}
       </div>
       <h1> {{ label }} </h1>
 
@@ -96,7 +97,7 @@
             <div class="mb-10">
               <p> <span class="bold">Trip Dates:&nbsp;</span>{{ content.field_t['0'].start_date['#attributes'].datetime|date('F Y') }} - {{ content.field_t['0'].end_date['#attributes'].datetime|date('F Y') }}</p>
             </div>
-          {% else %} 
+          {% else %}
             <div class="mb-10">
               <p> <span class="bold">Trip Dates:&nbsp;</span>{{ content.field_t['0'].start_date['#attributes'].datetime|date('l, F j, Y') }} - {{ content.field_t['0'].end_date['#attributes'].datetime|date('l, F j, Y') }}</p>
             </div>
