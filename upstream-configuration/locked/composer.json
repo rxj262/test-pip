@@ -120,7 +120,7 @@
         "drupal/twig_tweak": "3.3.0",
         "drupal/video_embed_field": "2.5.0",
         "drupal/view_unpublished": "1.2.0",
-        "drupal/viewfield": "3.0.0-beta9",
+        "drupal/viewfield": "3.0.0-beta10",
         "drupal/views_autocomplete_filters": "1.7.0",
         "drupal/views_infinite_scroll": "2.0.2",
         "drupal/webform": "dev-6.2.x",
@@ -321,6 +321,7 @@
         "allow-plugins": {
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
             "composer/installers": true,
             "mglaman/composer-drupal-lenient": true,
             "oomphinc/composer-installers-extender": true

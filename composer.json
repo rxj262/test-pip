@@ -79,10 +79,9 @@
         },
         "composer-exit-on-patch-failure": true,
         "patches": {
-            "drupal/gin": {
-            },
+            "drupal/gin": [],
             "drupal/linkit": {
-                "HR file patch": "patches/linkit-cwru-hr.patch",
+                "HR file patch": "patches/linkit-cwru-hr.patch"
             },
             "drupal/core": {
                 "Increase char limit for entityautocomplete field": "patches/entity_autocomplete_char_limit.patch"
@@ -115,7 +114,8 @@
             "phpstan/extension-installer": true,
             "pantheon-systems/upstream-management": true,
             "mglaman/composer-drupal-lenient": true,
-            "oomphinc/composer-installers-extender": true
+            "oomphinc/composer-installers-extender": true,
+            "php-http/discovery": true
         }
     }
 }
