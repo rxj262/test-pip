@@ -192,6 +192,7 @@
         "allow-plugins": {
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
             "composer/installers": true,
             "mglaman/composer-drupal-lenient": true,
             "oomphinc/composer-installers-extender": true
