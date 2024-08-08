@@ -217,7 +217,7 @@
     if ($('.toolbar-menu').length > 0) {
       // hide extra menu links for media
       linkholder = $('a[data-drupal-link-system-path="admin/content/media"]')[0].href.replace("admin/content/media", "media/add");
-      $('a[data-drupal-link-system-path="admin/content/media"]').parent().addClass("menu-item--expanded").append('<ul class="toolbar-menu"><li class="menu-item"><a href="' + linkholder + '" class="toolbar-icon" data-drupal-link-system-path="media/add">Add Media</a></li></ul>');
+//      $('a[data-drupal-link-system-path="admin/content/media"]').parent().addClass("menu-item--expanded").append('<ul class="toolbar-menu"><li class="menu-item"><a href="' + linkholder + '" class="toolbar-icon" data-drupal-link-system-path="media/add">Add Media</a></li></ul>');
       $('a[data-drupal-link-system-path="media/add"]+ul li').hide();
       $('a[data-drupal-link-system-path="media/add"]+ul a[data-drupal-link-system-path="media/add/document"]').parent().show();
       $('a[data-drupal-link-system-path="media/add"]+ul a[data-drupal-link-system-path="media/add/image"]').parent().show();

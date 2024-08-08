@@ -45,6 +45,7 @@
       linkholder = $(
         'a[data-drupal-link-system-path="admin/content/media"]'
       )[0].href.replace("admin/content/media", "media/add");
+      /*
       $(
         '.toolbar-menu-administration a[data-drupal-link-system-path="admin/content/media"]'
       )
@@ -55,6 +56,7 @@
           linkholder +
           '" class="toolbar-icon" data-drupal-link-system-path="media/add">Add Media</a></li></ul>'
         );
+      */
       $('a[data-drupal-link-system-path="media/add"]+ul li').hide();
       $(
         'a[data-drupal-link-system-path="media/add"]+ul a[data-drupal-link-system-path="media/add/document"]'
