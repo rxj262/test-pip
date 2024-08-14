@@ -170,6 +170,10 @@
     {% if "holoanatomy" in base_path %} <!-- change this from \/ to holoanatomy -->
       {% set header_wrapper_class = ['navbar-full-width'] %}
     {% endif %}
+    {% if "iseb" in base_path %} <!-- change this from \/ to ISEB -->
+      {% set header_wrapper_class = ['navbar-full-width'] %}
+    {% endif %}
+
 
     <div{{ header_attributes.addClass(header_wrapper_class) }} >
       <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="navigation" aria-labelledby="block-crew-main-menu">
