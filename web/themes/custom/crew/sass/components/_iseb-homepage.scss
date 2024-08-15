@@ -1,3 +1,11 @@
+.cwru-iseb {
+  .main-container.container {
+    @media #{$medium-max} {
+      width: 100%;
+    }
+  }
+}
+
 .custom-homepage-iseb {
   //Nav
   //   header {
@@ -78,7 +86,7 @@
       margin: 0 9rem 6rem;
     }
     @media #{$small-max} {
-      margin-bottom: 6rem;
+      margin: 0 0 6rem;
     }
 
     .paragraph--type--homepage-horizontal-subfeature {
@@ -96,27 +104,34 @@
           padding: 0;
 
           @media #{$small-max} {
-            width: 100%;
+            width: 80% !important;
             padding-left: 0;
             padding-right: 0;
             margin-right: 0;
             width: auto;
             margin-bottom: 2rem;
           }
+          @media #{$phone-max} {
+            width: 100% !important;
+          }
         }
-
-        .field--name-field-horizontal-subfeature-link {
-          a {
-            display: inline-block;
-            background: $cwru-blue;
-            color: #fff;
-            padding: 1em 1.5em;
-            margin: 0;
-            line-height: 1;
-            transition: background-color 0.3s;
-            text-decoration: none;
-            &:hover {
-              background: $link-blue;
+        .featured-content-home {
+          @media #{$small-max} {
+            margin-top: 1rem;
+          }
+          .field--name-field-horizontal-subfeature-link {
+            a {
+              display: inline-block;
+              background: $cwru-blue;
+              color: #fff;
+              padding: 1em 1.5em;
+              margin: 0;
+              line-height: 1;
+              transition: background-color 0.3s;
+              text-decoration: none;
+              &:hover {
+                background: $link-blue;
+              }
             }
           }
         }
@@ -130,9 +145,14 @@
     margin-right: -22px;
     padding-left: 22px;
     padding-right: 22px;
+    background: url("../images/iseb/ISEB-background-image.png") no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 3rem;
+    margin-bottom: 5rem;
 
     .paragraph--type--external-rss {
-      background: $white;
+      background: none;
 
       .feed-full-news {
         .homepage-listing {
@@ -151,6 +171,13 @@
               display: block;
               height: 100%;
               padding: 20px;
+
+              @media #{$medium-max} {
+                width: 80%;
+              }
+              @media #{$phone-max} {
+                width: 100%;
+              }
 
               h3 {
                 margin-top: 2rem;
@@ -182,7 +209,13 @@
 
             .img-ratio-container {
               overflow: hidden;
-              height: 200px;
+              height: 230px;
+              @media #{$small-max} {
+                height: 300px;
+              }
+              @media #{$phone-max} {
+                height: 230px;
+              }
 
               img {
                 height: 100%;
@@ -312,6 +345,10 @@
             background: $white;
             padding-bottom: 10rem;
             margin-bottom: 0;
+
+            @media #{$phone-max} {
+              padding-bottom: 6rem;
+            }
 
             .paragraph--type--gallery-section {
               .field--name-field-gallery-image-caption {
