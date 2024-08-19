@@ -81,9 +81,13 @@
   .homepage-horizontal-subfeature {
     @media #{$small-min} {
       margin: 0 3rem 6rem;
+      padding-top: 4rem;
+      padding-bottom: 2rem;
     }
     @media #{$medium-min} {
       margin: 0 9rem 6rem;
+      padding-top: 4rem;
+      padding-bottom: 2rem;
     }
     @media #{$small-max} {
       margin: 0 0 6rem;
@@ -253,6 +257,10 @@
 
   //Stats
   .homepage-container.stat-container {
+    @media #{$small-min} {
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+    }
     @media #{$small-max} {
       margin-bottom: 6rem;
     }
