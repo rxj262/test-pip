@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for wsom_subsite_styles module.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function wsom_subsite_styles_page_attachments(array &$page) {
+  if ((array_key_exists('DDEV_SITENAME', $_SERVER) || array_key_exsits('PANTHEON_SITE_NAME', $_SERVER)) === FALSE) {
+    return;
+  }
+  if (_is_wsom_subsite() === TRUE) {
+    $page['#attached']['library'][] = 'wsom_subsite_styles/global-styling';
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function wsom_subsite_styles_preprocess_page(&$variables) {
+  if ((array_key_exists('DDEV_SITENAME', $_SERVER) || array_key_exsits('PANTHEON_SITE_NAME', $_SERVER)) === FALSE) {
+    return;
+  }
+  if (_is_wsom_subsite() === FALSE && \Drupal::currentUser()->id() > '0') {
+    \Drupal::messenger()->addStatus(t('This module is only for WSOM subsites, this site it not one of them, please disable the \'wsom_subsite_styles\' module.'));
+  }
+}
+
+function _is_wsom_subsite() : bool {
+  $subsite_list = ['cwru-familybusiness', 'cwru-xlab', 'cwru-coachingresearchlab'];
+    $site_name = $_SERVER['DDEV_SITENAME'] ?? $_SERVER['PANTHEON_SITE_NAME'];
+    return in_array($site_name, $subsite_list) ?? TRUE :: FALSE;
+}
