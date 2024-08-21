@@ -30,7 +30,7 @@ function wsom_subsite_styles_preprocess_page(&$variables) {
 }
 
 function _is_wsom_subsite() : bool {
-  $subsite_list = ['cwru-familybusiness', 'cwru-xlab', 'cwru-coachingresearchlab'];
+  $subsite_list = ['cwru-fowler', 'cwru-familybusiness', 'cwru-xlab', 'cwru-coachingresearchlab'];
     $site_name = $_SERVER['DDEV_SITENAME'] ?? $_SERVER['PANTHEON_SITE_NAME'];
     return in_array($site_name, $subsite_list) ?? TRUE :: FALSE;
 }

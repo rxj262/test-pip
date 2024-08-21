@@ -1,4 +1,4 @@
-# This module is for adding additional CSS styles to WSOM subsites - [xlab](https://case.edu/weatherhead/xlab), [coachingresearchlab](https://case.edu/weatherhead/coachingresearchlab) and [familybusiness](https://case.edu/weatherhead/familybusiness).
+# This module is for adding additional CSS styles to WSOM subsites - [fowler](https://case.edu/weatherhead/fowler/), [xlab](https://case.edu/weatherhead/xlab/), [coachingresearchlab](https://case.edu/weatherhead/coachingresearchlab/) and [familybusiness](https://case.edu/weatherhead/familybusiness/).
 ## Enable module on one or more of these sites and the styles will be applied automatically.
 - By default the module loads the `wsom_subsite_styles.theme.min.css` file under the `css` directory.
 - There are 2 files inside `css` directory, use the regular one for editing purposes and use the `.min.css` as the production ready version.
