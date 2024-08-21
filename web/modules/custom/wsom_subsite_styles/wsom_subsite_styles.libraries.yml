@@ -1,4 +1,0 @@
-global-styling:
-  css:
-    theme:
-      css/wsom_subsite_styles.theme.min.css: {}

@@ -1,5 +1,0 @@
-name: 'wsom_subsite_styles'
-type: module
-description: 'provides a library consists of css used for WSOM subsites - fowler, xlab, coachingresearchlab and familybusiness'
-package: Custom
-core_version_requirement: ^10 || ^11
