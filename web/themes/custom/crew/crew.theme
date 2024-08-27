@@ -33,7 +33,6 @@ function crew_preprocess_html(&$variables) {
 }
 
 function _is_node() {
-  if($_SERVER['PANTHEON_SITE_NAME'] == 'cwru-iseb') {
     $node = \Drupal::routeMatch()->getParameter('node');
     if ($node instanceof \Drupal\node\NodeInterface) {
       return $node;
@@ -219,7 +218,7 @@ function crew_preprocess_region(&$variables) {
     $variables['header_options'] = theme_get_setting('header_options','crew');
     $variables['school_name'] = theme_get_setting('school_name','crew');
     $variables['school_url'] = theme_get_setting('school_url','crew');
-    
+
     $second_nav_subsite_names = array('nursing');
     $is_secondary_nav_subsite = false;
     $i = 0;
