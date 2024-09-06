@@ -33,15 +33,13 @@ function crew_preprocess_html(&$variables) {
 }
 
 function _is_node() {
-    $node = \Drupal::routeMatch()->getParameter('node');
-    if ($node instanceof \Drupal\node\NodeInterface) {
-      return $node;
-    } else {
-      return FALSE;
-    }
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    return $node;
+  } else {
+    return FALSE;
   }
 }
-
 
 /**
  * Implements hook_preprocess_block().
