@@ -1,5 +1,13 @@
 (function ($) {
   $(document).ready(function () {
+
+    // force file replacement to use override.
+    if (window.location.pathname.indexOf("/media/") !== -1) {
+      if ($('input[name=keep_original_filename').length > 0) {
+        $('input[name=keep_original_filename').attr("disabled",true);
+      }
+    }
+
     // only allow to add 'document' and 'image' on /media/add page for non-admin roles
     if (
       window.location.pathname.indexOf("/media/add") !== -1 &&
