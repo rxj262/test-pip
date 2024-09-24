@@ -3,8 +3,13 @@
 
     // force file replacement to use override.
     if (window.location.pathname.indexOf("/media/") !== -1) {
-      if ($('input[name=keep_original_filename').length > 0) {
-        $('input[name=keep_original_filename').attr("disabled",true);
+      if ($('input[name=keep_original_filename]').length > 0) {
+        $('input#edit-keep-original-filename').click(function() {
+          return false;
+        });
+        $('input#edit-keep-original-filename').css({'cursor': 'not-allowed'});
+        $('.form-item--keep-original-filename  label.form-item__label').css({'cursor':'not-allowed'});
+        $('input#edit-keep-original-filename + span.checkbox-toggle .checkbox-toggle__inner').css('background-color', '#ccc');
       }
     }
 
