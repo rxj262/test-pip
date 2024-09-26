@@ -1,0 +1,89 @@
+.main-container .paragraph--type--stats-group-orange .container {
+    padding-bottom: 10px;
+    padding-left: 0;
+}
+
+.stat-container {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-top: 1rem;
+
+    @media #{$medium-max} {
+        margin: 0 calc(50% - 50vw);
+    }
+}
+
+.paragraph--type--stats-group-orange {
+    padding-top: 0;
+    background: transparent;
+    margin-bottom: 25px;
+
+    .container {
+        @media #{$small-min} {
+            padding-bottom: 1rem;
+        }
+
+        @media #{$small-max} {
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .paragraph-section-title {
+        margin-top: 0;
+
+        .field--name-field-stats-group-orange-title {
+            font-size: 35px;
+        }
+    }
+
+    .stats-section-container {
+        background: transparent;
+        padding: 0;
+        margin: 0;
+
+        .field--name-field-stats-group-orange-items {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+
+            @media #{$small-max} {
+                flex-direction: column;
+            }
+
+            &>.field--item {
+                text-align: center;
+                flex-grow: 0;
+                margin: 20px 0;
+                flex-basis: 30%;
+
+                .paragraph--type--orange-stat {
+                    text-align: center;
+
+                    .field--name-field-orange-stat-value {
+                        color: $orange;
+                        font-size: 2.5em;
+                        font-weight: 700;
+                        line-height: 1em;
+                    }
+
+                    .field--name-field-orange-stat-description {
+                        color: $blk;
+                        font-size: 0.9em;
+                    }
+
+                    @media #{$small-max} {
+                        text-align: left;
+                    }
+                }
+
+                @media #{$small-max} {
+                    margin-bottom: 0.3em;
+                }
+            }
+        }
+    }
+}
