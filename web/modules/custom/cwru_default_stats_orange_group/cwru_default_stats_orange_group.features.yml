@@ -1,0 +1,5 @@
+bundle: cwru_default
+excluded:
+  - field.field.paragraph.stat.field_stat_description
+  - field.field.paragraph.stat.field_stat_value
+required: true

@@ -1,0 +1,95 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stats_group_orange.field_stats_group_orange_items
+    - field.field.paragraph.stats_group_orange.field_stats_group_orange_title
+    - paragraphs.paragraphs_type.stats_group_orange
+  module:
+    - entity_reference_revisions
+    - field_group
+third_party_settings:
+  field_group:
+    group_container:
+      children:
+        - group_paragraph_section_title
+      label: Container
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: container
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_paragraph_section_title:
+      children:
+        - field_stats_group_orange_title
+      label: 'Paragraph Section Title'
+      parent_name: group_container
+      region: content
+      weight: 3
+      format_type: html_element
+      format_settings:
+        classes: paragraph-section-title
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: h2
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_stats_section:
+      children:
+        - field_stats_group_orange_items
+      label: 'Stats Section'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: stats-section-container
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: paragraph.stats_group_orange.default
+targetEntityType: paragraph
+bundle: stats_group_orange
+mode: default
+content:
+  field_stats_group_orange_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_stats_group_orange_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

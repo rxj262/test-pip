@@ -1,0 +1,195 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stats_group_orange_items
+    - paragraphs.paragraphs_type.orange_stat
+    - paragraphs.paragraphs_type.stats_group_orange
+  module:
+    - entity_reference_revisions
+id: paragraph.stats_group_orange.field_stats_group_orange_items
+field_name: field_stats_group_orange_items
+entity_type: paragraph
+bundle: stats_group_orange
+label: 'Stats - Group Orange Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      orange_stat: orange_stat
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 56
+        enabled: false
+      accordion_section:
+        weight: 57
+        enabled: false
+      additional_job_descriptions:
+        weight: 58
+        enabled: false
+      additional_view_orders:
+        weight: 59
+        enabled: false
+      aside:
+        weight: 60
+        enabled: false
+      award_honor:
+        weight: 61
+        enabled: false
+      biography_education:
+        weight: 62
+        enabled: false
+      button:
+        weight: 63
+        enabled: false
+      centered_intro_text:
+        weight: 64
+        enabled: false
+      content:
+        weight: 65
+        enabled: false
+      content_with_button:
+        weight: 66
+        enabled: false
+      events_view:
+        weight: 67
+        enabled: false
+      external_appointment:
+        weight: 68
+        enabled: false
+      external_rss:
+        weight: 69
+        enabled: false
+      full_width_feature:
+        weight: 70
+        enabled: false
+      gallery:
+        weight: 71
+        enabled: false
+      gallery_section:
+        weight: 72
+        enabled: false
+      gray_callout_with_image:
+        weight: 73
+        enabled: false
+      hero_landing_page:
+        weight: 74
+        enabled: false
+      hero_one_column:
+        weight: 75
+        enabled: false
+      homepage_vertical_subfeature:
+        weight: 76
+        enabled: false
+      horizontal_buttons:
+        weight: 77
+        enabled: false
+      horizontal_content_with_video:
+        weight: 78
+        enabled: false
+      icon_picker:
+        weight: 79
+        enabled: false
+      job_title_affiliation:
+        weight: 80
+        enabled: false
+      orange_stat:
+        weight: 82
+        enabled: true
+      presentation:
+        weight: 81
+        enabled: false
+      program:
+        weight: 82
+        enabled: false
+      programs_listing:
+        weight: 83
+        enabled: false
+      publication:
+        weight: 84
+        enabled: false
+      quick_links_w_horizontal_buttons:
+        weight: 85
+        enabled: false
+      quote_and_citation:
+        weight: 86
+        enabled: false
+      quote_with_image:
+        weight: 87
+        enabled: false
+      residency:
+        weight: 88
+        enabled: false
+      site_affiliation:
+        weight: 89
+        enabled: false
+      social:
+        weight: 90
+        enabled: false
+      social_section:
+        weight: 91
+        enabled: false
+      stacked_button_wrapper:
+        weight: 93
+        enabled: false
+      stacked_buttons:
+        weight: 92
+        enabled: false
+      stat:
+        weight: 94
+        enabled: false
+      stats_group:
+        weight: 95
+        enabled: false
+      stats_group_orange:
+        weight: 96
+        enabled: false
+      subfeature:
+        weight: 97
+        enabled: false
+      subfeature_landing:
+        weight: 98
+        enabled: false
+      subfeature_section:
+        weight: 99
+        enabled: false
+      subfeature_with_button:
+        weight: 100
+        enabled: false
+      subfeature_with_link:
+        weight: 101
+        enabled: false
+      tab_section:
+        weight: 103
+        enabled: false
+      tabs:
+        weight: 102
+        enabled: false
+      three_column_subfeature:
+        weight: 104
+        enabled: false
+      two_column_content_and_photo:
+        weight: 105
+        enabled: false
+      two_column_content_and_stats:
+        weight: 106
+        enabled: false
+      two_column_content_with_stacked_:
+        weight: 107
+        enabled: false
+      two_column_subfeature:
+        weight: 108
+        enabled: false
+      two_column_text:
+        weight: 109
+        enabled: false
+      view:
+        weight: 110
+        enabled: false
+field_type: entity_reference_revisions

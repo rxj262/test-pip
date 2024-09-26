@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.orange_stat.field_orange_stat_description
+    - field.field.paragraph.orange_stat.field_orange_stat_value
+    - paragraphs.paragraphs_type.orange_stat
+  module:
+    - text
+id: paragraph.orange_stat.default
+targetEntityType: paragraph
+bundle: orange_stat
+mode: default
+content:
+  field_orange_stat_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_orange_stat_value:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

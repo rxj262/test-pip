@@ -1,0 +1,12 @@
+name: 'Stats - Orange Group'
+description: "Stats - Orange Group paragraph that's typically used on the robust three column pages. Adds ‘Stats - Orange Group’ paragraph to the robust content type and related configuration."
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - 'drupal:field'
+  - 'drupal:text'
+  - 'entity_reference_revisions:entity_reference_revisions'
+  - 'field_group:field_group'
+  - 'paragraphs:paragraphs'
+version: '1.0'
+package: 'CWRU Default'

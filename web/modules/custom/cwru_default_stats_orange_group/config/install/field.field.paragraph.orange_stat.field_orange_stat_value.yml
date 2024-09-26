@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_orange_stat_value
+    - paragraphs.paragraphs_type.orange_stat
+  module:
+    - text
+id: paragraph.orange_stat.field_orange_stat_value
+field_name: field_orange_stat_value
+entity_type: paragraph
+bundle: orange_stat
+label: Value
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stats_group_orange_title
+    - paragraphs.paragraphs_type.stats_group_orange
+id: paragraph.stats_group_orange.field_stats_group_orange_title
+field_name: field_stats_group_orange_title
+entity_type: paragraph
+bundle: stats_group_orange
+label: 'Stats - Group Orange Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
