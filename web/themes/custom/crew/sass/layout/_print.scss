@@ -1,0 +1,10 @@
+@media print {
+  .footer__block--social {
+    display: none;
+  }
+  a,
+  a:link,
+  a:visited {
+    word-wrap: break-word !important;
+  }
+}
