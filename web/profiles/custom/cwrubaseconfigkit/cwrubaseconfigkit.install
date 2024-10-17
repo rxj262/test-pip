@@ -87,6 +87,20 @@ function cwrubaseconfigkit_install() {
     $cas_user_manager->setCasUsernameForAccount($account, 'arb269');
   }
 
+  // Lauren Conners
+  $user_add = \Drupal\user\Entity\User::create();
+  $user_add->setUsername('lkc47');
+  $user_add->setEmail('lkc47@case.edu');
+  $user_add->enforceIsNew();
+  $user_add->activate();
+  $user_add->roles[] = 'department_admin';
+  $res = $user_add->save();
+  if ($res == 1) {
+    $account = user_load_by_name('lkc47');
+    $cas_user_manager->setCasUsernameForAccount($account, 'lkc47');
+  }
+
+  // utech user
   $user_add = \Drupal\user\Entity\User::create();
   $user_add->setUsername('hgg14');
   $user_add->setEmail('hgg14@case.edu');
