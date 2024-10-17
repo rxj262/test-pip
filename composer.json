@@ -87,6 +87,9 @@
             },
             "drupal/core": {
                 "Increase char limit for entityautocomplete field": "patches/entity_autocomplete_char_limit.patch"
+            },
+            "drupal/focal_point": {
+                "Preview results in Error": "https://www.drupal.org/files/issues/2024-07-18/Preview-results-in-Error-3462165.patch"
             }
         },
         "patchLevel": {

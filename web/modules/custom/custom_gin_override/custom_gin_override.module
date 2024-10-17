@@ -4,13 +4,15 @@ use Drupal\gin\GinSettings;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityFormInterface;
 use Drupal\Core\Utility\ThemeRegistry;
+use Drupal\Core\Session\AccountInterface;
 
 
 /**
  * Implements hook_page_attachments()
  */
 function custom_gin_override_page_attachments(array &$attachments) {
-  // Get theme settings (optional).
+  
+    // Get theme settings (optional).
   /** @var \Drupal\gin\GinSettings $settings */
   $settings = \Drupal::classResolver(GinSettings::class);
 
@@ -83,5 +85,60 @@ function custom_gin_override_menu_links_discovered_alter(&$links) {
    }
   }
 
+/**
+* Implements hook_preprocess_HOOK() for page templates.
+*/
+function custom_gin_override_preprocess_page(array &$variables) {
+// Get the current user.
+$current_user = \Drupal::currentUser();
 
-  
+
+
+// Check if the user is authenticated.
+if ($current_user->isAuthenticated()) {
+// Create the banner message markup.
+$banner_markup = '
+<div class="access-banner">
+<div>Digital Accessibility Training</div>
+All Drupal users must complete
+<a href="https://canvas.case.edu/enroll/JLMY7D" style="color: #000000" target="_blank">Digital Accessibility training</a>.
+If you haven\'t completed the course by Oct. 31, your editing access will be temporarily suspended until you can do so.
+</div>';
+
+
+
+// Get the current path.
+$current_path = \Drupal::service('path.current')->getPath();
+
+
+
+// Check if the current path is an admin page.
+if (preg_match('~^/admin~', $current_path)) {
+
+if (isset($variables['page']['breadcrumb']['#markup'])) {
+// Prepend the banner message to existing markup.
+$variables['page']['breadcrumb']['#markup'] = $banner_markup . $variables['page']['breadcrumb']['#markup'];
+} else {
+// If no existing markup, just set the banner.
+$variables['page']['breadcrumb']['#markup'] = $banner_markup;
+}
+
+
+
+} else {
+
+
+
+if (isset($variables['page']['header']['#markup'])) {
+// Prepend the banner message to existing markup.
+$variables['page']['rave_region']['#markup'] = $banner_markup . $variables['page']['rave_region']['#markup'];
+} else {
+// If no existing markup, just set the banner.
+$variables['page']['rave_region']['#markup'] = $banner_markup;
+}
+}
+
+
+
+}
+}
