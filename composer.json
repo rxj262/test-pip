@@ -83,7 +83,7 @@
                 "Hide delete button from sidebar": "https://www.drupal.org/files/issues/2023-06-15/gin-theme-keep-delete-button.patch"
             },
             "drupal/linkit": {
-                "HR file patch": "patches/linkit-cwru-hr.patch"
+                "HR file patch": "patches/linkit-cwru-hr.patch",
                 "Modified external link detect": "patches/external-link-pantheon.patch"
             },
             "drupal/core": {
