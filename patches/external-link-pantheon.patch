@@ -1,0 +1,20 @@
+diff --git modules/linkit/src/Utility/LinkitHelper.php modules/linkit/src/Utility/LinkitHelper.php
+index e1ba0f7f4..cd80b690c 100644
+--- modules/linkit/src/Utility/LinkitHelper.php
++++ modules/linkit/src/Utility/LinkitHelper.php
+@@ -74,6 +74,15 @@ class LinkitHelper {
+     }
+
+     if ($host && UrlHelper::isExternal($input)) {
++      if ($host == 'case.edu') {
++        $cwru_site_path = \Drupal::request()->getBasePath();
++        $cwru_site_path = explode('/', $cwru_site_path);
++        $cwru_site_name = $cwru_site_path[1];
++        $input_site = explode('/', $input)[1];
++        if ($cwru_site_name !== $input_site) {
++          return $input;
++        }
++      }
+       if (UrlHelper::externalIsLocal($input, \Drupal::request()->getSchemeAndHttpHost())) {
+         // The link points to this domain. Make it relative to perform an entity
+         // lookup.
