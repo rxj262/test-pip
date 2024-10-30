@@ -520,7 +520,8 @@ article .content-moderation-entity-moderation-form {
   }
 }
 
-.access-banner {
+/* Accessibility Banner Styling */
+/* .access-banner {
   background: #FF9239;
   color: #000000;
   font-weight: 700;
@@ -537,4 +538,4 @@ article .content-moderation-entity-moderation-form {
 .region-breadcrumb .access-banner a {
   color: #000000;
   text-decoration: underline;
-}
+} */
