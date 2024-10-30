@@ -77,15 +77,6 @@
   ]
 %}
 
-<script>
-    if (window.location.port != '8083') { // do not run this on Acquia DevDestop, which uses port 8083
-      window.setTimeout(function() {
-        window.location = "{{ site_url }}" //window.location.protocol + "//" + window.location.host + drupalSettings.path.baseUrl;
-      }, 5000);
-    }
-</script>
-
-
 <article{{ attributes.addClass(classes) }}>
 
   <div{{ content_attributes.addClass('content col-sm-12 col-md-8 col-md-offset-2') }}>

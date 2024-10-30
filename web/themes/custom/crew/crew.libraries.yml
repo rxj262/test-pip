@@ -164,3 +164,7 @@ ksl-landing-page:
   dependencies:
     - core/jquery
     - core/drupalSettings
+
+error_page:
+  js:
+    js/error-page-redirect.js: {}

@@ -74,10 +74,7 @@ function crew_preprocess_node(&$variables) {
   $variables['site_name'] = $config->get('name');
 
   $variables['footer_options'] = theme_get_setting('footer_options','crew');
-  if (isset($variables['elements']['field_error_type'])) {
-    global $base_url;
-    $variables['site_url'] = $base_url;
-  }
+
   //  lifelonglearning lecture content type add a day field and display it inline with the date field, this is only for the content type node page, not the Views listing, which is handled inside Views
   if (!empty($variables['node']) && method_exists($variables['node'], 'bundle')){
     if($variables['node']->bundle() == 'lecture') {
@@ -277,6 +274,15 @@ function crew_page_attachments_alter(array &$attachments) {
     'ga4_site_name' => "$title | $site_name",
   );
 
+  // add error page redriect library
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    if ($node->bundle() == 'error_page') {
+      global $base_url;
+      $attachments['#attached']['drupalSettings']['crew']['error_page']['base_url'] = $base_url;
+      $attachments['#attached']['library'][] = 'crew/error_page';
+    }
+  }
   $attachments['#attached']['drupalSettings']['crew']['datalayer'] = $datalayer_vars;
   $attachments['#attached']['drupalSettings']['crew']['new_datalayer'] = $new_datalayer_arr;
 }
