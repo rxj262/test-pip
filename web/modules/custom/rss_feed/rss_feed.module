@@ -172,20 +172,38 @@ function rss_feed_preprocess_paragraph__external_rss(&$variables)
      * 3. this also deals with different XML resource too.
      */
     if ($variables['elements']['field_external_rss_type']['#items']->value == 'cg') {
-      for ($i = 0; $i < count($data); $i++) {
+      if (isset($variables['elements']['field_external_rss_image'])) {
+        $show_image = $variables['paragraph']->get('field_external_rss_image')->value;
+      } else {
+        $show_image = '0';
+      }
+
+      for ($i = 0; $i < count($data); $i++) { 
         $link = $data[$i]->link;
         $title = $data[$i]->title->__toString();
+        
         $link = Url::fromUri($link);
         $excerpt = $data[$i]->description;
         $date = $data[$i]->eventDate;
-        $month = date("M", strtotime($date));
-        $day = date("d", strtotime($date));
+        if ($show_image == '1') {
+          $image_url = $data[$i]->eventPhotoFullUrl;
+          $image_url = preg_replace('/e3_image/', '/r2_image', $image_url);  
+          $event_img = '<img class="rssimg" src="'. $image_url .' " />';
+          
+        } else {
+          $month ='<span class="month">' . date("M", strtotime($date)) . '</span>';
+          $day = '<span class="day">' . date("d", strtotime($date)) . '</span>';
+        // $month = date("M", strtotime($date));
+        // $day = date("d", strtotime($date));
+        }
+       
         $excerpt = _truncate($excerpt, '190'); // custom truncate function
         $feed_arr[$i] = [
           '#type' => 'inline_template',
           '#template' => "<div><div class='feed-item-daterange feed-me'>
-            <span class='month'>{{ month }}</span>
-            <span class='day'>{{ day }}</span>
+            {{ month|raw }}
+            {{ day|raw }}
+             {{ event_img|raw }}
             </div></div>
             <div>
             <h2 class='font-medium'><a href={{ link }}>{{ title }}</a></h2>
@@ -197,6 +215,7 @@ function rss_feed_preprocess_paragraph__external_rss(&$variables)
             'link' => $link->toString(),
             'title' => $title,
             'excerpt' => htmlspecialchars($excerpt),
+            'event_img' => $event_img,
           ],
           '#wrapper_attributes' => ['class' => 'feed-item-block flex'],
         ];
