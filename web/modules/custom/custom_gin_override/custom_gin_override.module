@@ -88,7 +88,7 @@ function custom_gin_override_menu_links_discovered_alter(&$links) {
 /**
 * Implements hook_preprocess_HOOK() for page templates.
 */
-function custom_gin_override_preprocess_page(array &$variables) {
+/*function custom_gin_override_preprocess_page(array &$variables) {
 // Get the current user.
 $current_user = \Drupal::currentUser();
 
@@ -142,3 +142,4 @@ $variables['page']['rave_region']['#markup'] = $banner_markup;
 
 }
 }
+*/
