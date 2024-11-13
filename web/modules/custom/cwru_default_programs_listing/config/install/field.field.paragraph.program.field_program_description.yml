@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_program_description
+    - paragraphs.paragraphs_type.program
+  module:
+    - text
+id: paragraph.program.field_program_description
+field_name: field_program_description
+entity_type: paragraph
+bundle: program
+label: 'Program Description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

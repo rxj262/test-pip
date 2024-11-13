@@ -1,0 +1,13 @@
+name: 'Programs Listing'
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - 'drupal:field'
+  - 'drupal:link'
+  - 'drupal:text'
+  - 'entity_reference_revisions:entity_reference_revisions'
+  - 'linkit:linkit'
+  - 'paragraphs:paragraphs'
+version: '1.0'
+package: 'CWRU Default'
+description: 'Provides Programs Listing paragraph type and related configuration.'

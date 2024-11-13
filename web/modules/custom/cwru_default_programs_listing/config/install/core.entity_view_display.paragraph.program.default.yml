@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program.field_program_description
+    - field.field.paragraph.program.field_program_link
+    - field.field.paragraph.program.field_program_name
+    - paragraphs.paragraphs_type.program
+  module:
+    - linkit
+    - text
+id: paragraph.program.default
+targetEntityType: paragraph
+bundle: program
+mode: default
+content:
+  field_program_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_program_link:
+    type: linkit
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+      linkit_profile: linkit
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_program_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
