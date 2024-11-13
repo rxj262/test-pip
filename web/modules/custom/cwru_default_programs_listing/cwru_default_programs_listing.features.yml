@@ -1,0 +1,4 @@
+bundle: cwru_default
+excluded:
+  - webform.webform.quikpay_
+required: true

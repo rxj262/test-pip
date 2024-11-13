@@ -1,0 +1,174 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_programs_listing
+    - paragraphs.paragraphs_type.program
+    - paragraphs.paragraphs_type.programs_listing
+  module:
+    - entity_reference_revisions
+id: paragraph.programs_listing.field_programs_listing
+field_name: field_programs_listing
+entity_type: paragraph
+bundle: programs_listing
+label: 'Programs Listing'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      program: program
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 50
+        enabled: false
+      accordion_section:
+        weight: 51
+        enabled: false
+      additional_job_descriptions:
+        weight: 52
+        enabled: false
+      additional_view_orders:
+        weight: 53
+        enabled: false
+      aside:
+        weight: 54
+        enabled: false
+      award_honor:
+        weight: 55
+        enabled: false
+      biography_education:
+        weight: 56
+        enabled: false
+      button:
+        weight: 57
+        enabled: false
+      call_out:
+        weight: 58
+        enabled: false
+      content:
+        weight: 59
+        enabled: false
+      degree_info_other_cost:
+        weight: 60
+        enabled: false
+      degree_info_round:
+        weight: 61
+        enabled: false
+      degree_info_term:
+        weight: 62
+        enabled: false
+      degree_info_tuition:
+        weight: 63
+        enabled: false
+      event_date_range:
+        weight: 64
+        enabled: false
+      external_appointment:
+        weight: 65
+        enabled: false
+      full_width_feature:
+        weight: 66
+        enabled: false
+      gallery:
+        weight: 67
+        enabled: false
+      gallery_section:
+        weight: 68
+        enabled: false
+      gray_callout_with_image:
+        weight: 69
+        enabled: false
+      hero_landing_page:
+        weight: 70
+        enabled: false
+      hero_one_column:
+        weight: 71
+        enabled: false
+      icon_picker:
+        weight: 72
+        enabled: false
+      job_title_affiliation:
+        weight: 73
+        enabled: false
+      news_link:
+        weight: 74
+        enabled: false
+      news_text:
+        weight: 75
+        enabled: false
+      organization_information:
+        weight: 76
+        enabled: false
+      presentation:
+        weight: 77
+        enabled: false
+      program:
+        weight: 78
+        enabled: true
+      program_url:
+        weight: 80
+        enabled: false
+      programs_listing:
+        weight: 79
+        enabled: false
+      publication:
+        weight: 81
+        enabled: false
+      quote:
+        weight: 82
+        enabled: false
+      quote_and_citation:
+        weight: 83
+        enabled: false
+      quote_with_image:
+        weight: 84
+        enabled: false
+      react:
+        weight: 85
+        enabled: false
+      residency:
+        weight: 86
+        enabled: false
+      site_affiliation:
+        weight: 87
+        enabled: false
+      social:
+        weight: 88
+        enabled: false
+      social_section:
+        weight: 89
+        enabled: false
+      stacked_button_wrapper:
+        weight: 91
+        enabled: false
+      stacked_buttons:
+        weight: 90
+        enabled: false
+      stat:
+        weight: 92
+        enabled: false
+      stats_group:
+        weight: 93
+        enabled: false
+      subfeature_landing:
+        weight: 94
+        enabled: false
+      subfeature_section:
+        weight: 95
+        enabled: false
+      tab_section:
+        weight: 97
+        enabled: false
+      tabs:
+        weight: 96
+        enabled: false
+      view:
+        weight: 98
+        enabled: false
+field_type: entity_reference_revisions

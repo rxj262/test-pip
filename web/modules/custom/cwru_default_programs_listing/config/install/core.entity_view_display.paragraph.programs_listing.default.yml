@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.programs_listing.field_programs_listing
+    - paragraphs.paragraphs_type.programs_listing
+  module:
+    - entity_reference_revisions
+id: paragraph.programs_listing.default
+targetEntityType: paragraph
+bundle: programs_listing
+mode: default
+content:
+  field_programs_listing:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
