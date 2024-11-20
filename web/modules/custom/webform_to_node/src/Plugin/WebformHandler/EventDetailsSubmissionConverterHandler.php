@@ -62,14 +62,12 @@ class EventDetailsSubmissionConverterHandler extends WebformHandlerBase {
   $field_event_end_date = $form_state->getValue('event_date_range1')[0]['end'];
   $event_end_date = str_replace("+0000", "", $field_event_end_date);
 
-  // Get the summary and link details from the form.
-  $field_event_details_description_summary = $form_state->getValue('event_description_summary');
+  // Get link details from the form.
   $field_event_details_link_title = $form_state->getValue('event_link')['title'];
   $field_event_details_link_url = $form_state->getValue('event_link')['url'];
 
-  // Prepare the body text and summary for the node.
+  // Prepare the body text for the node.
   $body_text = $field_event_details_description; // Main body text
-  $summary_text = $field_event_details_description_summary; // Summary text
 
   // Prepare the link field.
   $field_event_details_link = [
@@ -89,7 +87,6 @@ class EventDetailsSubmissionConverterHandler extends WebformHandlerBase {
     'field_event_details_speakers' => $field_event_details_speakers,
     'field_event_details_description' => [ 
       'value' => $body_text,
-      'summary' => $summary_text, 
       'format' => 'full_html', 
     ],
     'field_event_details_link' => $field_event_details_link,
