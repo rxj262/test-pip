@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.homepage_w_full_width_feature.field_hero_oncol_ref
-    - field.field.node.homepage_w_full_width_feature.field_intro_text
+    - field.field.node.homepage_w_full_width_feature.field_intro_text_ref
     - field.field.node.homepage_w_full_width_feature.field_meta_tags
     - field.field.node.homepage_w_full_width_feature.field_subfeature_ref
     - node.type.homepage_w_full_width_feature
