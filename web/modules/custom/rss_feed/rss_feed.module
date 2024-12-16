@@ -14,10 +14,29 @@ use Drupal\Core\Menu\MenuLinkManagerInterface;
  */
 function rss_feed_preprocess_paragraph__external_rss(&$variables)
 {
+
   $gcal_cardinality = $variables['paragraph']->getFieldDefinition('field_external_rss_gcal')->getFieldStorageDefinition()->getCardinality();
   $type = $variables['paragraph']->field_external_rss_type->value;
   $is_sidebar_content = _is_sidebar_content($variables);
   $variables['content']['is_sidebar_content'] = $is_sidebar_content;
+
+  // PubMed feed listing
+  if ($type == 'pubmed') {
+    $pubmed_source = $variables['paragraph']->field_external_rss_sources->uri;
+
+    $pubmed_content = file_get_contents($pubmed_source);
+    $pubmed_xml = simplexml_load_string($pubmed_content);
+    $pubmed_titles = [];
+    $pubmed_pubdate = [];
+    foreach ($pubmed_xml->channel->item as $pubmed_item) {
+      $dateString = $pubmed_item->pubDate->__toString();
+      $pubmed_items[] = [
+        'title' => "<a href=" . $pubmed_item->link->__toString(). ">" . $pubmed_item->title->__toString() ."</a>",
+        'pubdate' => date_format(new DateTime($dateString), 'M d'),
+      ];
+    }
+    $variables['content']['pubmed_items'] = $pubmed_items;
+  }
 
   if ($type == 'gcal' and $gcal_cardinality > 1) {
     $gcal_api_key = "AIzaSyArICltZFp7IhsGpJDBCtY3L1sHsWIpcp4";
