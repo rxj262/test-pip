@@ -4,5 +4,14 @@ dependencies: {  }
 id: front
 label: 'Front page'
 tags:
-  canonical_url: '[site:url]'
   shortlink: '[site:url]'
+  title: '[site:name] | Case Western Reserve University'
+  canonical_url: '[site:url]'
+  keywords: ''
+  og_image_width: '265'
+  og_image: 'https://case.edu/images/cwru-social-logo.jpg'
+  og_image_height: '265'
+  og_type: website
+  og_url: '[site:url]'
+  og_image_type: "'image/jpeg'"
+  og_title: '[site:name] | Case Western Reserve University'

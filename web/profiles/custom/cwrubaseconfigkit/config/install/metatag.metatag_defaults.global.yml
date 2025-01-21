@@ -4,5 +4,21 @@ dependencies: {  }
 id: global
 label: Global
 tags:
-  canonical_url: '[current-page:url]'
-  title: '[current-page:title] | [site:name]'
+  shortlink: '[current-page:url:unaliased]'
+  referrer: no-referrer-when-downgrade
+  rights: 'Copyright © [date:html_year] Case Western Reserve University. All rights reserved.'
+  title: '[node:title] | [site:name] | Case Western Reserve University'
+  canonical_url: '[current-page:url:absolute]'
+  og_email: ''
+  og_phone_number: ''
+  og_latitude: ''
+  og_street_address: '10900 Euclid Ave.'
+  og_locale: en_US
+  og_region: Ohio
+  og_longitude: ''
+  og_country_name: 'United States'
+  og_locality: Cleveland
+  og_image: '[node:field_article_image_ref:entity:field_image:original_image:url][node:field_hero_one_image_ref:entity:field_image:original_image:url][node:field_hero_landing_image_ref:entity:field_image:original_image:url]'
+  og_postal_code: '44106'
+  og_url: '[current-page:url:absolute]'
+  og_site_name: '[site:name] | Case Western Reserve University'
