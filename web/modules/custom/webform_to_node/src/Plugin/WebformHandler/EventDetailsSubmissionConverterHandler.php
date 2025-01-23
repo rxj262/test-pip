@@ -67,7 +67,7 @@ class EventDetailsSubmissionConverterHandler extends WebformHandlerBase {
   $field_event_details_link_url = $form_state->getValue('event_link')['url'];
 
   // Prepare the body text for the node.
-  $body_text = $field_event_details_description; // Main body text
+  $body_text = $field_event_details_description['value']; 
 
   // Prepare the link field.
   $field_event_details_link = [
