@@ -107,7 +107,7 @@
         "drupal/seckit": "2.0.3",
         "drupal/seo_checklist": "5.2.2",
         "drupal/session_based_temp_store": "1.4.0",
-        "drupal/simple_gmap": "dev-3.1.x",
+        "drupal/simple_gmap": "3.1.0",
         "drupal/simple_oauth": "5.2.5",
         "drupal/siteimprove": "2.0.2",
         "drupal/slick": "2.11.0",
