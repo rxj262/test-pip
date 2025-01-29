@@ -23,5 +23,4 @@ ddev drush en -y basic_auth metatag_open_graph cms_content_sync_developer cms_co
 ddev drush en -y cwru_default_biography
 ddev drush cr
 
-ddev drush cex -y
-mv spinup-template/cms_content_sync.flow.${FlowMachineName}_filter.yml config/
+ddev drush cex -y && mv spinup-template/cms_content_sync.flow.${FlowMachineName}_filter.yml config/
