@@ -88,6 +88,9 @@
             },
             "drupal/core": {
                 "Increase char limit for entityautocomplete field": "patches/entity_autocomplete_char_limit.patch"
+            },
+            "drupal/xmlsitemap": {
+                "Fix xsl path issue when generating sitemap in case.edu domain": "patches/sitemap_fix.patch"
             }
         },
         "patchLevel": {
