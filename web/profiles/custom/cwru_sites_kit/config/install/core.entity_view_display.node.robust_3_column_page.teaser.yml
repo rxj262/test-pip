@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.robust_3_column_page.field_meta_tags
+    - field.field.node.robust_3_column_page.field_robust_3_hero_ref
+    - field.field.node.robust_3_column_page.field_robust_3_page_ref
+    - field.field.node.robust_3_column_page.field_robust_3_page_right_ref
+    - field.field.node.robust_3_column_page.field_sites
+    - node.type.robust_3_column_page
+  module:
+    - user
+id: node.robust_3_column_page.teaser
+targetEntityType: node
+bundle: robust_3_column_page
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_meta_tags: true
+  field_robust_3_hero_ref: true
+  field_robust_3_page_ref: true
+  field_robust_3_page_right_ref: true
+  field_sites: true
+  workflow_buttons: true

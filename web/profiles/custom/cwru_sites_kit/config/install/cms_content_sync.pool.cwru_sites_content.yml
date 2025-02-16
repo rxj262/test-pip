@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cwru_sites_content
+label: 'Cwru Sites Content'
+backend_url: null

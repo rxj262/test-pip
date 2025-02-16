@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.biography_page_image_style
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_image
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_photo_caption
+    - field.field.media.image.field_sites
+    - image.style.bio_listing
+    - media.type.image
+  module:
+    - image
+id: media.image.biography_page_image_style
+targetEntityType: media
+bundle: image
+mode: biography_page_image_style
+content:
+  field_caption:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: bio_listing
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_image: true
+  field_media_in_library: true
+  field_photo_caption: true
+  field_sites: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,39 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - node
+    - system
+  theme:
+    - crew
+id: crew_sidebar_navigation
+theme: crew
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Sidebar Navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 5
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      basic_page: basic_page
+      biography: biography
+      landing_page: landing_page
+      landing_page_alternate_subfeatur: landing_page_alternate_subfeatur
+      landing_page_robust: landing_page_robust
+      news_article: news_article
+      personal_profile: personal_profile
+      robust_3_column_page: robust_3_column_page

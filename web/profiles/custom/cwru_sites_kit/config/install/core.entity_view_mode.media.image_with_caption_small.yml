@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_with_caption_small
+label: 'Media Image with Caption - 2 (Small)'
+description: ''
+targetEntityType: media
+cache: true

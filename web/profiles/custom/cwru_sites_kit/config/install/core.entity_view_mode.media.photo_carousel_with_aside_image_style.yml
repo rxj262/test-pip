@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.photo_carousel_with_aside_image_style
+label: 'Photo Carousel With Aside Image Style'
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: biography_listing
+label: 'Biography Listing (176x210)'
+effects:
+  d8902c73-f809-4305-a0ba-efb15990468f:
+    uuid: d8902c73-f809-4305-a0ba-efb15990468f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 176
+      height: 210
+      crop_type: focal_point

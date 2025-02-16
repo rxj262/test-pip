@@ -1,0 +1,96 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.subfeature_section.field_sf_section_content
+    - field.field.paragraph.subfeature_section.field_sf_section_image_ref
+    - field.field.paragraph.subfeature_section.field_sf_section_link
+    - field.field.paragraph.subfeature_section.field_sf_section_pdf_link
+    - field.field.paragraph.subfeature_section.field_sf_section_title
+    - paragraphs.paragraphs_type.subfeature_section
+  module:
+    - entity_browser_entity_form
+    - field_group
+    - file_url
+    - inline_entity_form
+    - linkit
+    - text
+third_party_settings:
+  field_group:
+    group_document_link:
+      children:
+        - field_sf_section_pdf_link
+      label: 'Document Link'
+      region: hidden
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.subfeature_section.default
+targetEntityType: paragraph
+bundle: subfeature_section
+mode: default
+content:
+  field_sf_section_content:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_sf_section_image_ref:
+    type: inline_entity_form_complex
+    weight: 1
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser
+  field_sf_section_link:
+    type: linkit
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      linkit_profile: linkit
+      linkit_auto_link_text: false
+    third_party_settings: {  }
+  field_sf_section_pdf_link:
+    type: file_url_generic
+    weight: 7
+    region: content
+    settings:
+      progress_indicator: throbber
+      add_new_label: 'Upload a new file or enter a URL'
+    third_party_settings: {  }
+  field_sf_section_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

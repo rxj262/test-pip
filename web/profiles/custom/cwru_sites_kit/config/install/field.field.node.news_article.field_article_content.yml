@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_content
+    - node.type.news_article
+  module:
+    - text
+id: node.news_article.field_article_content
+field_name: field_article_content
+entity_type: node
+bundle: news_article
+label: 'Article Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

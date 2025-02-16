@@ -1,0 +1,12 @@
+include_invalid_paths: true
+excluded_paths: ''
+include_home_segment: true
+home_segment_title: Home
+include_title_segment: true
+title_from_page_when_available: false
+title_segment_as_link: false
+segments_separator: null
+use_menu_title_as_fallback: true
+remove_repeated_segments: true
+language_path_prefix_as_segment: false
+segment_display_minimum: 1

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_one_column
+label: 'Hero One Column (1200x450)'
+effects:
+  988509aa-61f3-40c1-8bf6-29ece4fde244:
+    uuid: 988509aa-61f3-40c1-8bf6-29ece4fde244
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 450
+      crop_type: focal_point

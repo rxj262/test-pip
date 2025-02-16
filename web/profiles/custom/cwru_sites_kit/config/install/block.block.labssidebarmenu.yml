@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - labs_custom_blocks
+  theme:
+    - crew
+id: labssidebarmenu
+theme: crew
+region: sidebar_first
+weight: 0
+provider: null
+plugin: labs_sidebar_menu
+settings:
+  id: labs_sidebar_menu
+  label: 'Labs Sidebar Menu'
+  label_display: '0'
+  provider: labs_custom_blocks
+visibility: {  }

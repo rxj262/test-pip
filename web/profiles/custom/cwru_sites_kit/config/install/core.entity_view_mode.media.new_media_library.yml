@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.new_media_library
+label: 'New Media Library'
+description: ''
+targetEntityType: media
+cache: true

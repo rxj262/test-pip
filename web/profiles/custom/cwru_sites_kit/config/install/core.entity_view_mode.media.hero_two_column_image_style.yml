@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.hero_two_column_image_style
+label: 'Hero Two Column Image Style'
+description: ''
+targetEntityType: media
+cache: true

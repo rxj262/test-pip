@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ief_table
+label: 'Inline Entity Form Table'
+description: ''
+targetEntityType: media
+cache: true

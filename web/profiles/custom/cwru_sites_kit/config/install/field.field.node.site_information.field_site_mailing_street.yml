@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_mailing_street
+    - node.type.site_information
+id: node.site_information.field_site_mailing_street
+field_name: field_site_mailing_street
+entity_type: node
+bundle: site_information
+label: 'Mailing Address'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '10900 Euclid Ave.'
+default_value_callback: ''
+settings: {  }
+field_type: string

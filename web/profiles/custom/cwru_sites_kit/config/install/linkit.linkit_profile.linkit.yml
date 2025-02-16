@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - labs_custom_blocks
+    - node
+label: linkit
+id: linkit
+description: ''
+matchers:
+  4b9ece99-e18b-4d6b-a495-deb6acc4ec51:
+    id: 'entity:node'
+    uuid: 4b9ece99-e18b-4d6b-a495-deb6acc4ec51
+    settings:
+      metadata: '- [node:field_sites:entity:name]'
+      bundles:
+        biography: biography
+        error_page: error_page
+        event_detail_page: event_detail_page
+        homepage_w_full_width_feature: homepage_w_full_width_feature
+        news_article: news_article
+        robust_3_column_page: robust_3_column_page
+      group_by_bundle: true
+      substitution_type: canonical
+      limit: 100
+      include_unpublished: false
+    weight: 0
+  bb5f7564-662c-4056-91bc-adde9a5daa67:
+    id: 'entity:media'
+    uuid: bb5f7564-662c-4056-91bc-adde9a5daa67
+    settings:
+      metadata: '- [media:field_sites:entity:name]'
+      bundles: {  }
+      group_by_bundle: true
+      substitution_type: media
+      limit: 100
+      include_unpublished: 0
+    weight: 0

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_award_year
+    - paragraphs.paragraphs_type.award_honor
+id: paragraph.award_honor.field_biography_award_year
+field_name: field_biography_award_year
+entity_type: paragraph
+bundle: award_honor
+label: 'Year Received'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

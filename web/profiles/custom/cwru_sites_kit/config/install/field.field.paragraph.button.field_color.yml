@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.button
+  module:
+    - options
+id: paragraph.button.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: button
+label: Style
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: button-block-blue-link
+default_value_callback: ''
+settings: {  }
+field_type: list_string

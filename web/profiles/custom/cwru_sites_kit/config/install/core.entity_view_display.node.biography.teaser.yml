@@ -1,0 +1,118 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.biography.field_additional_view_order_ref
+    - field.field.node.biography.field_bio_mailing_location_code
+    - field.field.node.biography.field_biography_add_job_desc_ref
+    - field.field.node.biography.field_biography_additional_infor
+    - field.field.node.biography.field_biography_areas_of_experti
+    - field.field.node.biography.field_biography_award_ref
+    - field.field.node.biography.field_biography_building_address
+    - field.field.node.biography.field_biography_course_name_ref
+    - field.field.node.biography.field_biography_credential_ref
+    - field.field.node.biography.field_biography_drupal_site_ref
+    - field.field.node.biography.field_biography_education_ref
+    - field.field.node.biography.field_biography_email
+    - field.field.node.biography.field_biography_ext_appoint_ref
+    - field.field.node.biography.field_biography_ext_appt_open_en
+    - field.field.node.biography.field_biography_first_name
+    - field.field.node.biography.field_biography_image_ref
+    - field.field.node.biography.field_biography_job_description
+    - field.field.node.biography.field_biography_last_name
+    - field.field.node.biography.field_biography_mailing_address
+    - field.field.node.biography.field_biography_office_hours
+    - field.field.node.biography.field_biography_office_location
+    - field.field.node.biography.field_biography_office_number
+    - field.field.node.biography.field_biography_office_ref
+    - field.field.node.biography.field_biography_phone
+    - field.field.node.biography.field_biography_presentation_ref
+    - field.field.node.biography.field_biography_presentations_op
+    - field.field.node.biography.field_biography_professional_mem
+    - field.field.node.biography.field_biography_publication_ref
+    - field.field.node.biography.field_biography_publications_ope
+    - field.field.node.biography.field_biography_recent_funding
+    - field.field.node.biography.field_biography_research_interes
+    - field.field.node.biography.field_biography_research_project
+    - field.field.node.biography.field_biography_residency_ref
+    - field.field.node.biography.field_biography_role_ref
+    - field.field.node.biography.field_biography_secondary_job_de
+    - field.field.node.biography.field_biography_specialties
+    - field.field.node.biography.field_biography_teaching_interes
+    - field.field.node.biography.field_biography_teaching_schedul
+    - field.field.node.biography.field_biography_title_ref
+    - field.field.node.biography.field_biography_view_order
+    - field.field.node.biography.field_cell_phone_number
+    - field.field.node.biography.field_fax_number
+    - field.field.node.biography.field_meta_tags
+    - field.field.node.biography.field_sites
+    - field.field.node.biography.field_views_filter
+    - node.type.biography
+  module:
+    - user
+id: node.biography.teaser
+targetEntityType: node
+bundle: biography
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_additional_view_order_ref: true
+  field_bio_mailing_location_code: true
+  field_biography_add_job_desc_ref: true
+  field_biography_additional_infor: true
+  field_biography_areas_of_experti: true
+  field_biography_award_ref: true
+  field_biography_building_address: true
+  field_biography_course_name_ref: true
+  field_biography_credential_ref: true
+  field_biography_drupal_site_ref: true
+  field_biography_education_ref: true
+  field_biography_email: true
+  field_biography_ext_appoint_ref: true
+  field_biography_ext_appt_open_en: true
+  field_biography_first_name: true
+  field_biography_image_ref: true
+  field_biography_job_description: true
+  field_biography_last_name: true
+  field_biography_mailing_address: true
+  field_biography_media_mentions: true
+  field_biography_office_hours: true
+  field_biography_office_location: true
+  field_biography_office_number: true
+  field_biography_office_ref: true
+  field_biography_phone: true
+  field_biography_presentation_ref: true
+  field_biography_presentations_op: true
+  field_biography_professional_mem: true
+  field_biography_publication_ref: true
+  field_biography_publications_ope: true
+  field_biography_recent_funding: true
+  field_biography_research_interes: true
+  field_biography_research_project: true
+  field_biography_residency_ref: true
+  field_biography_role_ref: true
+  field_biography_secondary_job_de: true
+  field_biography_specialties: true
+  field_biography_teaching_interes: true
+  field_biography_teaching_schedul: true
+  field_biography_title_dept_ref: true
+  field_biography_title_ref: true
+  field_biography_university_publi: true
+  field_biography_view_order: true
+  field_cell_phone_number: true
+  field_fax_number: true
+  field_meta_tags: true
+  field_sites: true
+  field_views_filter: true
+  workflow_buttons: true

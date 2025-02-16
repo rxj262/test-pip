@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.hero_one_column
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_image
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_photo_caption
+    - field.field.media.image.field_sites
+    - media.type.image
+    - responsive_image.styles.hero_image_one_column_responsive
+  module:
+    - responsive_image
+id: media.image.hero_one_column
+targetEntityType: media
+bundle: image
+mode: hero_one_column
+content:
+  field_caption:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: hero_image_one_column_responsive
+      image_link: ''
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_image: true
+  field_media_in_library: true
+  field_photo_caption: true
+  field_sites: true
+  name: true
+  thumbnail: true
+  uid: true

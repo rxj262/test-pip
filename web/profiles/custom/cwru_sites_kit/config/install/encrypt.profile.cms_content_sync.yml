@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - key.key.cms_content_sync
+  module:
+    - real_aes
+  enforced:
+    module:
+      - cms_content_sync
+id: cms_content_sync
+label: 'Content Sync'
+encryption_method: real_aes
+encryption_key: cms_content_sync
+encryption_method_configuration: {  }

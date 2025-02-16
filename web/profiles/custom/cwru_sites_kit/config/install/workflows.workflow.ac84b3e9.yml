@@ -1,0 +1,82 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.biography
+    - node.type.event_detail_page
+    - node.type.news_article
+    - node.type.robust_3_column_page
+    - node.type.site_information
+  module:
+    - content_moderation
+id: ac84b3e9
+label: 'Workflow 1'
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      label: Unpublished
+      weight: 1
+      published: false
+      default_revision: true
+    draft:
+      label: Draft
+      weight: 2
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 3
+      published: true
+      default_revision: true
+  transitions:
+    archived_published:
+      label: Republish
+      from:
+        - archived
+      to: published
+      weight: 1
+    draft_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+      to: draft
+      weight: 2
+    draft_published:
+      label: Publish
+      from:
+        - draft
+      to: published
+      weight: 3
+    keep_unpublished:
+      label: 'Keep Unpublished'
+      from:
+        - archived
+      to: archived
+      weight: 4
+    published_archived:
+      label: Unpublish
+      from:
+        - published
+      to: archived
+      weight: 5
+    published_draft:
+      label: 'Create New Draft'
+      from:
+        - published
+      to: draft
+      weight: 6
+    published_published:
+      label: Publish
+      from:
+        - published
+      to: published
+      weight: 7
+  entity_types:
+    node:
+      - biography
+      - event_detail_page
+      - news_article
+      - robust_3_column_page
+      - site_information
+  default_moderation_state: draft

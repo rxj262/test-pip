@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.subfeature_section.field_sf_section_content
+    - field.field.paragraph.subfeature_section.field_sf_section_image_ref
+    - field.field.paragraph.subfeature_section.field_sf_section_link
+    - field.field.paragraph.subfeature_section.field_sf_section_pdf_link
+    - field.field.paragraph.subfeature_section.field_sf_section_title
+    - paragraphs.paragraphs_type.subfeature_section
+  module:
+    - file_url
+    - linkit
+    - text
+id: paragraph.subfeature_section.default
+targetEntityType: paragraph
+bundle: subfeature_section
+mode: default
+content:
+  field_sf_section_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_sf_section_image_ref:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: subfeature_image_style
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_sf_section_link:
+    type: linkit
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+      linkit_profile: default
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_sf_section_pdf_link:
+    type: file_url_default
+    label: hidden
+    settings:
+      mode: link
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_sf_section_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

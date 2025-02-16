@@ -1,0 +1,87 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.biography
+    - node.type.event_detail_page
+    - node.type.homepage_w_full_width_feature
+    - node.type.news_article
+    - node.type.robust_3_column_page
+    - workflows.workflow.ac84b3e9
+    - workflows.workflow.b8336871
+  module:
+    - content_moderation
+    - dropzonejs
+    - entity_browser
+    - filter
+    - media
+    - node
+    - path
+    - system
+    - toolbar
+    - video_embed_field
+id: department_admin
+label: 'Department Admin'
+weight: -7
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access embed_browser entity browser pages'
+  - 'access file_browser entity browser pages'
+  - 'access image_browser entity browser pages'
+  - 'access media overview'
+  - 'access media_embed entity browser pages'
+  - 'access media_library entity browser pages'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer menu'
+  - 'create event_detail_page content'
+  - 'create media'
+  - 'create news_article content'
+  - 'create robust_3_column_page content'
+  - 'create url aliases'
+  - 'delete any event_detail_page content'
+  - 'delete any media'
+  - 'delete any news_article content'
+  - 'delete any robust_3_column_page content'
+  - 'delete media'
+  - 'delete own robust_3_column_page content'
+  - 'dropzone upload files'
+  - 'edit any biography content'
+  - 'edit any event_detail_page content'
+  - 'edit any homepage_w_full_width_feature content'
+  - 'edit any news_article content'
+  - 'edit any robust_3_column_page content'
+  - 'edit own robust_3_column_page content'
+  - 'never autoplay videos'
+  - 'revert all revisions'
+  - 'revert event_detail_page revisions'
+  - 'revert homepage_w_full_width_feature revisions'
+  - 'revert news_article revisions'
+  - 'revert robust_3_column_page revisions'
+  - 'update any media'
+  - 'update media'
+  - 'use ac84b3e9 transition archived_published'
+  - 'use ac84b3e9 transition draft_draft'
+  - 'use ac84b3e9 transition draft_published'
+  - 'use ac84b3e9 transition keep_unpublished'
+  - 'use ac84b3e9 transition published_archived'
+  - 'use ac84b3e9 transition published_draft'
+  - 'use ac84b3e9 transition published_published'
+  - 'use b8336871 transition create_new_draft'
+  - 'use b8336871 transition publish'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view event_detail_page revisions'
+  - 'view homepage_w_full_width_feature revisions'
+  - 'view latest version'
+  - 'view media'
+  - 'view news_article revisions'
+  - 'view own unpublished content'
+  - 'view robust_3_column_page revisions'
+  - 'view the administration theme'

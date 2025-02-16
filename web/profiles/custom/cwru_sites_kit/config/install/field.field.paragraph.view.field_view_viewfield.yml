@@ -1,0 +1,57 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_viewfield
+    - paragraphs.paragraphs_type.view
+  module:
+    - viewfield
+id: paragraph.view.field_view_viewfield
+field_name: field_view_viewfield
+entity_type: paragraph
+bundle: view
+label: Viewfield
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  force_default: false
+  allowed_views:
+    full_event_listing: full_event_listing
+    homepage_events_listing: homepage_events_listing
+    meet_our_staff: meet_our_staff
+    news_article_listing: news_article_listing
+    available_sites: '0'
+    content: '0'
+    block_content: '0'
+    content_sync_entity_status: '0'
+    authmap: '0'
+    files: '0'
+    fluid_hero: '0'
+    footer: '0'
+    frontpage: '0'
+    media_library: '0'
+    moderated_content: '0'
+    new_media_library: '0'
+    user_admin_people: '0'
+    content_recent: '0'
+    redirect: '0'
+    redirect_404: '0'
+    taxonomy_term: '0'
+    watchdog: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+  allowed_display_types:
+    block: '0'
+    default: '0'
+    entity_browser: '0'
+    entity_reference: '0'
+    feed: '0'
+    page: '0'
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: viewfield

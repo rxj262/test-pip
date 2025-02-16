@@ -1,0 +1,113 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subfeature_ref
+    - node.type.homepage_w_full_width_feature
+    - paragraphs.paragraphs_type.subfeature
+    - paragraphs.paragraphs_type.view
+  module:
+    - entity_reference_revisions
+id: node.homepage_w_full_width_feature.field_subfeature_ref
+field_name: field_subfeature_ref
+entity_type: node
+bundle: homepage_w_full_width_feature
+label: Subfeature
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      subfeature: subfeature
+      view: view
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 24
+        enabled: false
+      accordion_section:
+        weight: 25
+        enabled: false
+      additional_job_descriptions:
+        weight: 31
+        enabled: false
+      additional_view_orders:
+        weight: 32
+        enabled: false
+      aside:
+        weight: 27
+        enabled: false
+      award_honor:
+        weight: 34
+        enabled: false
+      biography_education:
+        weight: 35
+        enabled: false
+      button:
+        weight: 28
+        enabled: false
+      centered_intro_text:
+        weight: 29
+        enabled: false
+      content:
+        weight: 38
+        enabled: false
+      external_appointment:
+        weight: 39
+        enabled: false
+      gallery:
+        weight: 30
+        enabled: false
+      gallery_section:
+        weight: 41
+        enabled: false
+      hero_landing_page:
+        weight: 32
+        enabled: false
+      hero_one_column:
+        weight: 33
+        enabled: false
+      job_title_affiliation:
+        weight: 44
+        enabled: false
+      presentation:
+        weight: 45
+        enabled: false
+      publication:
+        weight: 46
+        enabled: false
+      residency:
+        weight: 47
+        enabled: false
+      site_affiliation:
+        weight: 48
+        enabled: false
+      social:
+        weight: 49
+        enabled: false
+      social_section:
+        weight: 50
+        enabled: false
+      subfeature:
+        weight: 40
+        enabled: true
+      subfeature_landing:
+        weight: 52
+        enabled: false
+      subfeature_section:
+        weight: 53
+        enabled: false
+      tab_section:
+        weight: 42
+        enabled: false
+      tabs:
+        weight: 43
+        enabled: false
+      view:
+        weight: 56
+        enabled: true
+field_type: entity_reference_revisions

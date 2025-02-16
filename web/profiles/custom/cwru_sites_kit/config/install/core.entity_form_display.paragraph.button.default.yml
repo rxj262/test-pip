@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.button.field_button
+    - field.field.paragraph.button.field_color
+    - paragraphs.paragraphs_type.button
+  module:
+    - linkit
+id: paragraph.button.default
+targetEntityType: paragraph
+bundle: button
+mode: default
+content:
+  field_button:
+    type: linkit
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      linkit_profile: linkit
+      linkit_auto_link_text: false
+    third_party_settings: {  }
+  field_color:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

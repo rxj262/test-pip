@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: menu_parent_with_node_title
+label: 'Menu Parent with Menu Title'
+type: 'canonical_entities:node'
+pattern: '/[node:menu-link:parents:join-path]/[node:menu-link]'
+selection_criteria:
+  6b7318d8-96aa-4544-9f0f-d142763f6ec4:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 6b7318d8-96aa-4544-9f0f-d142763f6ec4
+    context_mapping:
+      node: node
+    bundles:
+      biography: biography
+      event_detail_page: event_detail_page
+      news_article: news_article
+      robust_3_column_page: robust_3_column_page
+      homepage_w_full_width_feature: homepage_w_full_width_feature
+selection_logic: and
+weight: -5
+relationships: {  }

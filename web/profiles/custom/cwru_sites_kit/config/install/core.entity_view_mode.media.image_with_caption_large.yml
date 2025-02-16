@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_with_caption_large
+label: 'Media Image with Caption - 4 (Large)'
+description: ''
+targetEntityType: media
+cache: true

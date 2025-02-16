@@ -1,0 +1,11 @@
+langcode: en
+name: 'Drush Site-Install'
+mail: webteam@case.edu
+slogan: ''
+page:
+  403: /node/3
+  404: /node/4
+  front: /user/1
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

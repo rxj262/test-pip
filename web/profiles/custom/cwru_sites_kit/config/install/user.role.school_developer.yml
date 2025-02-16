@@ -1,0 +1,145 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.error_page
+    - node.type.robust_3_column_page
+    - taxonomy.vocabulary.tags
+    - workflows.workflow.ac84b3e9
+  module:
+    - block
+    - block_content
+    - coffee
+    - contact
+    - content_moderation
+    - contextual
+    - crop
+    - dropzonejs
+    - embed
+    - entity_browser
+    - field_ui
+    - file
+    - filter
+    - help
+    - image
+    - media
+    - metatag
+    - node
+    - paragraphs
+    - path
+    - pathauto
+    - redirect
+    - system
+    - taxonomy
+    - toolbar
+    - video_embed_field
+    - xmlsitemap
+    - yoast_seo
+id: school_developer
+label: 'School Developer'
+weight: -9
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access coffee'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access embed_browser entity browser pages'
+  - 'access file_browser entity browser pages'
+  - 'access files overview'
+  - 'access help pages'
+  - 'access image_browser entity browser pages'
+  - 'access media overview'
+  - 'access media_embed entity browser pages'
+  - 'access media_library entity browser pages'
+  - 'access site reports'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
+  - 'administer blocks'
+  - 'administer coffee'
+  - 'administer contact forms'
+  - 'administer contact_message display'
+  - 'administer contact_message fields'
+  - 'administer contact_message form display'
+  - 'administer content types'
+  - 'administer crop'
+  - 'administer crop types'
+  - 'administer display modes'
+  - 'administer embed buttons'
+  - 'administer entity browsers'
+  - 'administer image styles'
+  - 'administer media display'
+  - 'administer media fields'
+  - 'administer media form display'
+  - 'administer menu'
+  - 'administer meta tags'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer node form display'
+  - 'administer nodes'
+  - 'administer paragraph display'
+  - 'administer paragraph fields'
+  - 'administer paragraph form display'
+  - 'administer paragraphs types'
+  - 'administer pathauto'
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
+  - 'administer url aliases'
+  - 'administer user display'
+  - 'administer user fields'
+  - 'administer user form display'
+  - 'administer xmlsitemap'
+  - 'administer yoast seo'
+  - 'bypass node access'
+  - 'create error_page content'
+  - 'create media'
+  - 'create robust_3_column_page content'
+  - 'create url aliases'
+  - 'delete any error_page content'
+  - 'delete any media'
+  - 'delete any robust_3_column_page content'
+  - 'delete error_page revisions'
+  - 'delete media'
+  - 'delete own error_page content'
+  - 'delete own robust_3_column_page content'
+  - 'delete terms in tags'
+  - 'dropzone upload files'
+  - 'edit any error_page content'
+  - 'edit any robust_3_column_page content'
+  - 'edit own error_page content'
+  - 'edit own robust_3_column_page content'
+  - 'edit terms in tags'
+  - 'never autoplay videos'
+  - 'notify of path changes'
+  - 'revert all revisions'
+  - 'revert error_page revisions'
+  - 'revert robust_3_column_page revisions'
+  - 'update any media'
+  - 'update media'
+  - 'use ac84b3e9 transition archived_published'
+  - 'use ac84b3e9 transition draft_draft'
+  - 'use ac84b3e9 transition draft_published'
+  - 'use ac84b3e9 transition keep_unpublished'
+  - 'use ac84b3e9 transition published_archived'
+  - 'use ac84b3e9 transition published_draft'
+  - 'use ac84b3e9 transition published_published'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use yoast seo'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view error_page revisions'
+  - 'view latest version'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view robust_3_column_page revisions'
+  - 'view the administration theme'

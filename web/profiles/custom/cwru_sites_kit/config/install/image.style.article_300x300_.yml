@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: article_300x300_
+label: 'Article (300x300)'
+effects:
+  328df9f6-7810-46d5-83ee-f8b6f355500d:
+    uuid: 328df9f6-7810-46d5-83ee-f8b6f355500d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      crop_type: focal_point

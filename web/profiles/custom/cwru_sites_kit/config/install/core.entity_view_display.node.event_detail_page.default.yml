@@ -1,0 +1,100 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event_detail_page.field_event_date_range
+    - field.field.node.event_detail_page.field_event_description
+    - field.field.node.event_detail_page.field_event_image_ref
+    - field.field.node.event_detail_page.field_event_taxonomy
+    - field.field.node.event_detail_page.field_event_url
+    - field.field.node.event_detail_page.field_meta_tags
+    - field.field.node.event_detail_page.field_sites
+    - node.type.event_detail_page
+  module:
+    - datetime_range
+    - field_group
+    - linkit
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_events_grouping:
+      children:
+        - field_event_date_range
+        - field_event_image_ref
+        - field_event_description
+        - field_event_url
+        - field_sites
+      label: 'Events Grouping'
+      parent_name: ''
+      region: hidden
+      weight: 4
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.event_detail_page.default
+targetEntityType: node
+bundle: event_detail_page
+mode: default
+content:
+  field_event_date_range:
+    type: daterange_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_datetime
+      from_to: both
+      separator: '-'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_event_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_event_image_ref:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: article_image_style
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_event_taxonomy:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_event_url:
+    type: linkit
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+      linkit_profile: default
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  content_moderation_control: true
+  field_meta_tags: true
+  field_sites: true
+  links: true
+  workflow_buttons: true

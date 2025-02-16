@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - media
+    - search
+    - system
+    - video_embed_field
+id: anonymous
+label: 'Anonymous user'
+weight: -3
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'never autoplay videos'
+  - 'search content'
+  - 'view media'
+  - 'view the administration theme'

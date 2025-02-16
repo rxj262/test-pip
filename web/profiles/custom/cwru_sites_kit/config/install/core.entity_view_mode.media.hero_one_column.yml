@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.hero_one_column
+label: 'Hero One Column'
+description: ''
+targetEntityType: media
+cache: true

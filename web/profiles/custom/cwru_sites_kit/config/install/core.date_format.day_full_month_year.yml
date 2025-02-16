@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: day_full_month_year
+label: 'Day Full Month Year'
+locked: false
+pattern: '\D\a\t\e \R\e\l\e\a\s\e\d\: d F Y'

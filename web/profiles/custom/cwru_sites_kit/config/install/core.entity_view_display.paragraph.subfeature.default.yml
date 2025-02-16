@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.subfeature.field_subfeature_content
+    - field.field.paragraph.subfeature.field_subfeature_image_ref
+    - field.field.paragraph.subfeature.field_subfeature_link
+    - field.field.paragraph.subfeature.field_subfeature_pdf_link
+    - field.field.paragraph.subfeature.field_subfeature_title
+    - paragraphs.paragraphs_type.subfeature
+  module:
+    - file_url
+    - linkit
+    - text
+id: paragraph.subfeature.default
+targetEntityType: paragraph
+bundle: subfeature
+mode: default
+content:
+  field_subfeature_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_subfeature_image_ref:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: subfeature_image_style
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_subfeature_link:
+    type: linkit
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+      linkit_profile: default
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_subfeature_pdf_link:
+    type: file_url_default
+    label: hidden
+    settings:
+      mode: link
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_subfeature_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

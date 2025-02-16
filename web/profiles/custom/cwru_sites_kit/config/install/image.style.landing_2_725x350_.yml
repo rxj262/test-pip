@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: landing_2_725x350_
+label: 'Landing 2 (725x350)'
+effects:
+  96974938-a064-4276-a76e-4522607ff4fd:
+    uuid: 96974938-a064-4276-a76e-4522607ff4fd
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 725
+      height: 350
+      crop_type: focal_point

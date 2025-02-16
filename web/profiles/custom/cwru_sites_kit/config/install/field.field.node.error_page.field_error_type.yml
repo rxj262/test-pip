@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_error_type
+    - node.type.error_page
+  module:
+    - options
+id: node.error_page.field_error_type
+field_name: field_error_type
+entity_type: node
+bundle: error_page
+label: 'Error Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

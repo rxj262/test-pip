@@ -1,0 +1,169 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news_article.field_article_content
+    - field.field.node.news_article.field_article_date
+    - field.field.node.news_article.field_article_image_ref
+    - field.field.node.news_article.field_article_link
+    - field.field.node.news_article.field_article_taxonomy
+    - field.field.node.news_article.field_meta_tags
+    - field.field.node.news_article.field_sites
+    - node.type.news_article
+  module:
+    - datetime
+    - entity_browser_entity_form
+    - field_group
+    - ief_table_view_mode
+    - link
+    - metatag
+    - path
+    - text
+    - workflow_buttons
+third_party_settings:
+  field_group:
+    group_all_options:
+      children:
+        - group_image
+        - group_content
+      label: 'All Options'
+      region: hidden
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        id: ''
+        direction: vertical
+    group_content:
+      children:
+        - field_article_date
+        - field_article_content
+        - field_article_link
+        - field_article_taxonomy
+      label: Content
+      region: hidden
+      parent_name: group_all_options
+      weight: 15
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_image:
+      children:
+        - field_article_image_ref
+      label: Image
+      region: hidden
+      parent_name: group_all_options
+      weight: 14
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.news_article.default
+targetEntityType: node
+bundle: news_article
+mode: default
+content:
+  field_article_content:
+    type: text_textarea_with_summary
+    weight: 28
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_article_date:
+    type: datetime_default
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_article_image_ref:
+    type: inline_entity_form_complex_table_view_mode
+    weight: 3
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser
+  field_article_link:
+    type: link_default
+    weight: 29
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_article_taxonomy:
+    type: entity_reference_autocomplete
+    weight: 30
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 2
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_sites:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  moderation_state:
+    type: workflow_buttons
+    weight: 100
+    region: content
+    settings:
+      show_current_state: false
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

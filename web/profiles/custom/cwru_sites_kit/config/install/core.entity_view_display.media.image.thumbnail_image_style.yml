@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.thumbnail_image_style
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_image
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.field_photo_caption
+    - field.field.media.image.field_sites
+    - image.style.thumbnail
+    - media.type.image
+  module:
+    - image
+id: media.image.thumbnail_image_style
+targetEntityType: media
+bundle: image
+mode: thumbnail_image_style
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_caption: true
+  field_media_image: true
+  field_media_in_library: true
+  field_photo_caption: true
+  field_sites: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - crew
+id: ravealert
+theme: crew
+region: rave_region
+weight: -8
+provider: null
+plugin: 'block_content:f56c66be-a247-4f62-8a55-ca2c32197469'
+settings:
+  id: 'block_content:f56c66be-a247-4f62-8a55-ca2c32197469'
+  label: 'RAVE Alert'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
