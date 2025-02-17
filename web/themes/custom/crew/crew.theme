@@ -101,11 +101,7 @@ function crew_preprocess_node(&$variables) {
     }
   }
 
-  if (\Drupal::moduleHandler()->moduleExists('pantheon_domain_masking')) {
-    $subpath = \Drupal::config('pantheon_domain_masking.settings')->get('subpath');
-    $variables['subpath'] = (string)$subpath;
-    \Drupal::logger('cc')->notice((string)$subpath);
-  }
+  $variables['subpath'] = (string)$_ENV["PANTHEON_SITE_NAME"];
 }
 
 /**

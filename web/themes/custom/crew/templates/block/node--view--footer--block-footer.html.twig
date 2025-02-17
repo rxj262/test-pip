@@ -198,7 +198,7 @@
     {% if content.field_site_email[0]['#title'] %}
       {% for email in content.field_site_email %}
         {% if email['#title'] is defined and email is iterable %}
-          {% if subpath == 'umc' %}
+          {% if subpath == 'cwru-umc' %}
             <script>
               {# console.log("{{ email|e('js') }}"); #}
             </script>
