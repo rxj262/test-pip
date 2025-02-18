@@ -43,8 +43,7 @@
         "cweagans/composer-patches": "^1.7",
         "pantheon-systems/upstream-management": "^1.0",
         "drupal/fontawesome_iconpicker": "^3",
-        "enyo/dropzone": "^5.7",
-        "drupal/gin": "^4.0"
+        "enyo/dropzone": "^5.7"
     },
     "require-dev": {
         "drupal/core-dev": "^10"

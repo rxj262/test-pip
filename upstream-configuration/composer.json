@@ -148,6 +148,7 @@
         "oomphinc/composer-installers-extender": "^2.0",
         "drupal/ckeditor": "^1.0",
         "drupal-ckeditor-libraries-group/fakeobjects": "^4.22",
+        "drupal/gin_toolbar": "^2.0",
         "drupal-ckeditor-libraries-group/link": "^4.22",
         "vardot/blazy": "1.8.2.1",
         "fengyuanchen/cropper": "dev-master",
