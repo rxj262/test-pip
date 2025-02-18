@@ -101,7 +101,8 @@ function crew_preprocess_node(&$variables) {
     }
   }
 
-  $variables['subpath'] = (string)$_ENV["PANTHEON_SITE_NAME"];
+  $variables['subpath'] = isset($_ENV["PANTHEON_SITE_NAME"]) ? (string) $_ENV["PANTHEON_SITE_NAME"] : '';
+
 }
 
 /**
