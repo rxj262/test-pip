@@ -138,7 +138,7 @@
         "drupal/classy": "^1.0",
         "drupal/stable": "^2.0",
         "drupal/contribute": "1.x-dev@dev",
-        "drupal/gin": "3.0-rc10",
+        "drupal/gin": "^4.0",
         "drupal/recaptcha": "^3.2",
         "drupal/workflow_buttons": "^1.0@beta",
         "drupal/ape": "^1.6",
