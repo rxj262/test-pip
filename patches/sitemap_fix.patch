@@ -1,0 +1,12 @@
+--- web/modules/contrib/xmlsitemap/src/XmlSitemapWriter.php	2025-02-17 14:53:34
++++ web/modules/contrib/xmlsitemap/src/XmlSitemapWriter.php.new	2025-02-17 14:57:36
+@@ -137,6 +137,9 @@
+         $xls_url = $base_url . '/' . $xls_url->getInternalPath();
+       }
+     }
++    if (\Drupal::moduleHandler()->moduleExists('pantheon_domain_masking')) {
++      $xls_url = \Drupal::config('pantheon_domain_masking.settings')->get('subpath') . '/sitemap.xsl';
++    }
+     $this->writePi('xml-stylesheet', 'type="text/xsl" href="' . $xls_url . '"');
+     $this->writeRaw(PHP_EOL);
+   }
