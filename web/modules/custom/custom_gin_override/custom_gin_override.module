@@ -37,7 +37,7 @@ function custom_gin_override_page_attachments(array &$attachments) {
      
       $entity = $form_state->getFormObject()->getEntity();
       $state = $form['moderation_state']['widget'][0]['#type'];
-
+      
       if ($form_id == 'node_robust_3_column_page_form' || $form_id == 'node_robust_3_column_page_edit_form') {
         $form['field_robust_3_page_ref']['widget']['add_more']['#prefix'] = '<div class="no-content">Add new section</div>';
         $form['field_robust_3_page_right_ref']['widget']['add_more']['#prefix'] = '<div class="no-content">Add new section</div>';
@@ -49,11 +49,11 @@ function custom_gin_override_page_attachments(array &$attachments) {
         if ($entity->isNew()) {
           $form['actions']['#prefix'] = '<div class="actions-desc page-add">Saving options</div>';
         } else {
-          if ($entity->isPublished()) {
-            $form['actions']['#prefix'] = '<div class="actions-desc">Saving options</div>';
-          }
+         if ($entity->isPublished()) {
+           $form['actions']['#prefix'] = '<div class="actions-desc">Saving options</div>';
+          } 
           else {
-            $form['actions']['#prefix'] = '<div class="actions-desc-update">Saving options</div>';
+             $form['actions']['#prefix'] = '<div class="actions-desc-update">Saving options</div>';
           }
 
         }
@@ -64,7 +64,17 @@ function custom_gin_override_page_attachments(array &$attachments) {
 
 
     }
+  
 
+/**
+* Implements hook_preprocess_HOOK() for page templates.
+*/
+function custom_gin_override_preprocess_page(array &$variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if ($route_name == 'node.edit' || preg_match('/^entity.node.edit_form/', $route_name)) {
+    $variables['page']['breadcrumb']['#suffix'] = '<div class="actions-desc-header">Saving options</div>';
+  } 
+}
 /**
 * Implements hook_menu_links_discovered_alter().
 */

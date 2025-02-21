@@ -270,7 +270,6 @@ body.gin--edit-form [value="Preview"] {
   margin-right: 0;
 }
 
-body.gin--edit-form [data-drupal-selector="edit-actions"],
 body.gin--edit-form .meta-sidebar__trigger {
   display: inline-block;
 }
@@ -434,8 +433,11 @@ body .toolbar-icon-new-main-nav:before {
   -webkit-mask-image: url("../images/sprite.svg#structure-view") !important;
 }
 
-body .node-form .dropbutton .dropbutton__items {
-  position: relative !important;
+.dropbutton .dropbutton__items {
+  position: absolute !important;
+  left: 0 !important;
+  top: 35px !important;
+  max-height: unset !important;
 }
 
 body .messages--error {
@@ -539,3 +541,86 @@ article .content-moderation-entity-moderation-form {
   color: #000000;
   text-decoration: underline;
 } */
+
+
+/* Gin Workflow buttons updates after Core Updates */
+
+.gin-more-actions__menu {
+  visibility: visible !important;
+  opacity: 1 !important;
+  flex-direction: row !important;
+  box-shadow: none !important;
+  margin-top: -38px;
+  background-color: transparent !important;
+}
+
+body .gin-sticky-form-actions .gin-more-actions__menu .button.button {
+  margin-right: 8px !important;
+  padding: 13px 16px !important;
+}
+
+body .gin-sticky-form-actions .gin-more-actions__menu .action-link.action-link {
+  display: flex;
+  border: 2px solid !important;
+  border-color: rgb(204, 61, 61) !important;
+  font-weight: 700;
+  margin-left: 57px !important;
+  padding-bottom: 11px;
+  padding-top: 11px;
+}
+
+.gin-sticky-form-actions .gin-more-actions__trigger::before {
+  display: none !important;
+}
+
+body .gin-sticky-form-actions .gin-more-actions__menu .action-link.action-link::before,
+body .gin-sticky-form-actions .action-link--danger::before {
+  background-color: rgb(204, 61, 61) !important;
+  display: block;
+  -webkit-mask-image: url("/themes/contrib/gin/dist/media/sprite.svg#trash-view");
+  mask-image: url("/themes/contrib/gin/dist/media/sprite.svg#trash-view");
+  margin-top: -1px;
+}
+
+body .gin-sticky-form-actions .gin-more-actions__menu .action-link.action-link:hover::before,
+body .gin-sticky-form-actions .action-link--danger:hover::before {
+  background-color: #fff !important;
+}
+
+body .gin-sticky-form-actions--preprocessed~.layout-container form.gin--has-sticky-form-actions .gin-sticky-form-actions {
+  position: static !important;
+  overflow: visible !important;
+  height: 71px;
+  width: 462px !important;
+  word-wrap: normal;
+}
+
+.layout-node-form .gin-sticky-form-actions:nth-child(2),
+.layout-node-form .actions-desc:first-child {
+  display: none !important;
+}
+
+.gin-breadcrumb-wrapper .actions-desc-header {
+  margin-left: 62%;
+}
+
+
+body .gin-sticky-form-actions--preprocessed~.layout-container form.gin--has-sticky-form-actions .gin-sticky-form-actions {
+  width: 468px !important;
+}
+
+body .gin-sticky-form-actions .action-link--danger {
+  display: inline-flex;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 10px;
+  padding-right: 9px;
+}
+
+.dropbutton-multiple.open .add-more-button-aside input {
+  padding: .75em 2em;
+}
+
+.gin-sticky-form-actions--preprocessed #block-gin-page-title h1.page-title {
+  max-width: 60%;
+}
