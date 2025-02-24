@@ -34,7 +34,11 @@ function custom_gin_override_page_attachments(array &$attachments) {
     // Check if it's an entity form.
 
     if ($form_state->getFormObject() instanceof EntityFormInterface) {
-     
+      $route_name = \Drupal::routeMatch()->getRouteName();
+      if ($route_name == 'node.add') {
+        $form['#attributes']['class'][] = 'form-add';
+      } 
+
       $entity = $form_state->getFormObject()->getEntity();
       $state = $form['moderation_state']['widget'][0]['#type'];
       
