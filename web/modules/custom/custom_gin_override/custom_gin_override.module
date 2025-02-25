@@ -37,7 +37,11 @@ function custom_gin_override_page_attachments(array &$attachments) {
       $route_name = \Drupal::routeMatch()->getRouteName();
       if ($route_name == 'node.add') {
         $form['#attributes']['class'][] = 'form-add';
-      } 
+      } else {
+        if ($route_name == 'entity.media.edit_form' || $route_name == 'entity.node.edit_form' ) {
+          $form['#attributes']['class'][] = 'form-edit';
+        }
+      }
 
       $entity = $form_state->getFormObject()->getEntity();
       $state = $form['moderation_state']['widget'][0]['#type'];
