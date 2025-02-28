@@ -670,14 +670,6 @@ summary.claro-details__summary,
   top: -40px;
 }
 
-.saving-options-header:has(+.gin-more-actions__menu .workflow-buttons-published_draft) {
-  left: -205%;
-}
-
-.saving-options-header:has(+.gin-more-actions__menu .workflow-buttons-published_archived) {
-  left: 0%;
-}
-
 header.page-add .saving-options-header {
   left: -90px;
 }
@@ -687,19 +679,13 @@ header.page-add .saving-options-header {
   left: -205%;
 }
 
-
-
 .saving-options-header:has(+.gin-more-actions__menu .workflow-buttons-archived_published) {
   left: -364%;
 }
 
 
 header.page-add .saving-options-header:has(+.gin-more-actions__menu .workflow-buttons-draft_draft) {
-  left: -82%;
-}
-
-body.page-node-type-homepage-w-full-width-feature header .saving-options-header {
-  left: -333% !important;
+  left: -82% !important;
 }
 
 @media screen and (max-width: 840px) {}
@@ -781,4 +767,22 @@ body.path-media .gin-more-actions__menu {
 
 body.page-node-type-uga-homepage header .saving-options-header {
   left: -205%;
+}
+
+body.page-node-type-apply-landing-page .saving-options-header {
+  left: -204%;
+}
+
+body.page-node-type-program .saving-options-header:has(+.gin-more-actions__menu .workflow-buttons-draft_draft),
+body.page-node-type-program .saving-options-header:has(+.gin-more-actions__menu .workflow-buttons-published_archived) {
+  left: 0px;
+}
+
+body.page-node-type-biography .saving-options-header:has(+.gin-more-actions__menu .workflow-buttons-published_draft),
+body.page-node-type-uga-tuition-aid-landing .saving-options-header {
+  left: -233px;
+}
+
+body.page-node-type-uga-campus-life-landing .saving-options-header {
+  left: -236px;
 }
