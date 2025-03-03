@@ -45,8 +45,7 @@ form details.js-form-wrapper {
 }
 .js input.form-autocomplete,
 .js input.form-autocomplete.ui-autocomplete-loading {
-  background-position: 100% center;
-  background-repeat: no-repeat;
+  background : none;
 }
 .js[dir="rtl"] input.form-autocomplete,
 .js[dir="rtl"] input.form-autocomplete.ui-autocomplete-loading {
