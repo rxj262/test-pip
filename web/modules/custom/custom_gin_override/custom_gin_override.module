@@ -55,10 +55,10 @@ function custom_gin_override_page_attachments(array &$attachments) {
       if ($state == 'select') {
      
         if ($entity->isNew()) {
-          $form['actions']['#prefix'] = '<div class="actions-desc page-add">Saving options</div>';
+         // $form['actions']['#prefix'] = '<div class="actions-desc page-add">Saving options</div>';
         } else {
          if ($entity->isPublished()) {
-           $form['actions']['#prefix'] = '<div class="actions-desc">Saving options</div>';
+         //  $form['actions']['#prefix'] = '<div class="actions-desc">Saving options</div>';
           } 
           else {
             $form['actions']['#prefix'] = '<div class="actions-desc-update"></div>';
