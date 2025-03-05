@@ -3,10 +3,10 @@
    $('#gin-sticky-edit-preview').remove();
    $('.gin-more-actions__trigger').remove();
  
-   $("<div class='saving-options-header'>Saving Options</div>").insertBefore(".page-wrapper__node-edit-form header .gin-more-actions__menu");
-   if (window.location.pathname.indexOf("/node/add") !== -1) {
-    $('header').addClass('page-add');
-   }
+  //  $("<div class='saving-options-header'>Saving Options</div>").insertBefore(".page-wrapper__node-edit-form header .gin-more-actions__menu");
+  //  if (window.location.pathname.indexOf("/node/add") !== -1) {
+  //   $('header').addClass('page-add');
+  //  }
  
    // force file replacement to use override.
    if (window.location.pathname.indexOf("/media/") !== -1) {
