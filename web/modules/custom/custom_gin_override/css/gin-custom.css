@@ -786,3 +786,6 @@ body.page-node-type-uga-tuition-aid-landing .saving-options-header {
 body.page-node-type-uga-campus-life-landing .saving-options-header {
   left: -236px;
 }
+.gin-table-scroll-wrapper {
+  overflow: visible !important;
+}
