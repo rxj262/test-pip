@@ -53,7 +53,7 @@
     padding: 12px;
     margin-left: 22px;
     margin-bottom: 22px;
-    word-break: break-all;
+    word-break: break-word;
     @media #{$small-max} {
       margin-left: 0;
     }
