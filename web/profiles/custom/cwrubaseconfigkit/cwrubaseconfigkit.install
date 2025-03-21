@@ -180,4 +180,8 @@ function cwrubaseconfigkit_install() {
   // $y = \Drupal::service('yoast_seo.manager');
   // $y->attachYoastSeoFields('node', 'basic_page');
 #  $y->attachYoastSeoFields('node', 'robust_3_colum_page'); can't do this yet since robust-3-col has not been installed at this point.
+
+  // set module weight for workflow_buttons
+  module_set_weight('workflow_buttons', -1);
+
 }
