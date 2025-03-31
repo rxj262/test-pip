@@ -88,6 +88,9 @@
             },
             "drupal/xmlsitemap": {
                 "Fix xsl path issue when generating sitemap in case.edu domain": "patches/sitemap_fix.patch"
+            },
+            "drupal/workflow_buttons": {
+                "limit loading of node edit form on full view mode only": "https://www.drupal.org/files/issues/2022-12-21/workflow_buttons_limit_form.patch"
             }
         },
         "patchLevel": {
