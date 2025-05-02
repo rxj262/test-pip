@@ -557,6 +557,7 @@ article .content-moderation-entity-moderation-form {
 body .gin-sticky-form-actions .gin-more-actions__menu .button.button {
   margin-right: 8px !important;
   padding: 13px 16px !important;
+  width: auto;
 }
 
 body .gin-sticky-form-actions .gin-more-actions__menu .action-link.action-link {
