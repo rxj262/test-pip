@@ -1316,25 +1316,25 @@
   //     .attr("src", newURL);
   // });
 
-  // $(document).ready(function () {
-  //   // Still use has(.white_background) to narrow the scope
-  //   var containers = $("div.field, div.field--item:has(.white_background)");
+  $(document).ready(function () {
+    // Still use has(.white_background) to narrow the scope
+    var containers = $("div.field, div.field--item:has(.white_background)");
 
-  //   containers.each(function () {
-  //     var $current = $(this);
-  //     var $next = $current.nextAll("div.field, div.field--item").first();
+    containers.each(function () {
+      var $current = $(this);
+      var $next = $current.nextAll("div.field, div.field--item").first();
 
-  //     if ($next.length) {
-  //       var $currentFirstDiv = $current.children("div").first();
-  //       var $nextFirstDiv = $next.children("div").first();
+      if ($next.length) {
+        var $currentFirstDiv = $current.children("div").first();
+        var $nextFirstDiv = $next.children("div").first();
 
-  //       if (
-  //         $currentFirstDiv.hasClass("white_background") &&
-  //         $nextFirstDiv.hasClass("white_background")
-  //       ) {
-  //         $currentFirstDiv.css("padding-bottom", "0");
-  //       }
-  //     }
-  //   });
-  // });
+        if (
+          $currentFirstDiv.hasClass("white_background") &&
+          $nextFirstDiv.hasClass("white_background")
+        ) {
+          $currentFirstDiv.css("padding-bottom", "0");
+        }
+      }
+    });
+  });
 })(jQuery);
