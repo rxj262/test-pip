@@ -450,9 +450,23 @@
             right: 1%;
             bottom: 2%;
 
-            &::before {
-              content: url(../images/pause.svg);
-              color: #fff;
+            // &::before {
+            //   content: url("../images/pause.svg");
+            //   color: #fff;
+            // }
+          }
+
+          .play-me {
+            &:before {
+              content: url("../images/play.svg");
+              color: $white;
+            }
+          }
+
+          .pause-me {
+            &:before {
+              content: url("../images/pause.svg");
+              color: $white;
             }
           }
         }
