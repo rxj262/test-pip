@@ -30,6 +30,12 @@ function crew_preprocess_html(&$variables) {
       $variables['attributes']['class'][] = str_replace('_', '-','cwru-iseb', $node->bundle());
     }
   }
+  /**
+  * Puts the content type name as a class on the body tag
+  */
+  if($node = _is_node()) {
+    $variables['attributes']['class'][] = str_replace('_', '-', $node->bundle());
+  }
 }
 
 function _is_node() {
@@ -63,6 +69,18 @@ function crew_preprocess_block(&$variables) {
 		    }
       }
     }
+  }
+
+  // Target a specific block by plugin ID or region.
+  $plugin_id = $variables['plugin_id'];
+  $region = $variables['elements']['#configuration']['region'];
+  // Example: Add a wrapper only for Landing Hero region
+  if ($region == 'landing_hero') {
+    $variables['attributes']['class'][] = 'landing-hero-wrapper';
+  }
+  // Or for a specific block by plugin ID
+  if ($plugin_id == 'block_content:landing_hero') {
+    $variables['attributes']['class'][] = 'custom-landing-hero-block';
   }
 }
 
