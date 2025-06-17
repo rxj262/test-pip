@@ -30,6 +30,28 @@
   }
 }
 
+@mixin button-link-blue() {
+  @include button;
+  color: $white;
+  background-color: $link-blue;
+  border-color: $link-blue;
+  transition: all 0.3s;
+
+  &:focus,
+  &.focus,
+  &:hover,
+  &:active,
+  &.active {
+    background-color: $white;
+    border-color: $white;
+    color: $dark-gray;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 @mixin button-blue() {
   @include button;
   color: $white;
@@ -49,6 +71,128 @@
 
   &:hover,
   &:link:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin button-blue-bg() {
+  @include button;
+  color: $white;
+  background-color: $cwru-blue;
+  border: 2px solid $cwru-blue;
+  transition: all 0.3s;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  padding: 0.8rem 1.4rem;
+  line-height: 1.33333;
+  font-size: 2rem;
+
+  &:focus,
+  &.focus,
+  &:hover,
+  &:active,
+  &.active {
+    background-color: $link-blue;
+    border-color: $link-blue;
+    color: $white;
+  }
+
+  &:hover,
+  &:link:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin button-white-bg() {
+  @include button;
+  color: $cwru-blue;
+  background-color: $white;
+  border: 2px solid $cwru-blue;
+  transition: all 0.3s;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  padding: 0.8rem 1.4rem;
+  line-height: 1.33333;
+  font-size: 2rem;
+
+  &:focus,
+  &.focus,
+  &:hover,
+  &:active,
+  &.active {
+    color: $white;
+    background-color: $link-blue;
+    border-color: $link-blue;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin button-orange-bg() {
+  @include button;
+  color: $white;
+  background-color: $orange;
+  border: 2px solid $orange;
+  transition: all 0.3s;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  padding: 0.8rem 1.4rem;
+  line-height: 1.33333;
+  font-size: 2rem;
+
+  &:focus,
+  &.focus,
+  &:hover,
+  &:active,
+  &.active {
+    background-color: $link-blue;
+    border-color: $link-blue;
+    color: $white;
+  }
+
+  &:hover,
+  &:link:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin button-gray-bg() {
+  @include button;
+  color: $dark-gray;
+  background-color: $lighter-gray;
+  border: 2px solid $dark-gray;
+  transition: all 0.3s;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  padding: 0.8rem 1.4rem;
+  line-height: 1.33333;
+  font-size: 2rem;
+
+  &:focus,
+  &.focus,
+  &:hover,
+  &:active,
+  &.active {
+    background-color: $link-blue;
+    border-color: $link-blue;
+    color: $white;
+  }
+
+  &:hover {
     text-decoration: none;
   }
 }
