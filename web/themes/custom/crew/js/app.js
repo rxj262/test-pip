@@ -1263,58 +1263,58 @@
   // YOUTUBE: Load autoplay attributes BEFORE button click
   // The video will only auto play with this attributes
   // For videos within the content of the page
-  // $(".paragraph--type--image-or-video")
-  //   .find("div .video-embed-field-responsive-video iframe")
-  //   .attr("allow", "autoplay; fullscreen");
+  $(".paragraph--type--image-or-video")
+    .find("div .video-embed-field-responsive-video iframe")
+    .attr("allow", "autoplay; fullscreen");
 
-  // // video autoplay on button click
-  // $(".play-button-container").on("click", function (e) {
-  //   $(this).parent().find(".field--name-field-image-or-video-image").fadeOut();
-  //   $(this).fadeOut();
+  // video autoplay on button click
+  $(".play-button-container").on("click", function (e) {
+    $(this).parent().find(".field--name-field-image-or-video-image").fadeOut();
+    $(this).fadeOut();
 
-  //   var videoURL = $(this).parent().find("iframe").prop("src");
-  //   var newURL = videoURL + "&autoplay=1&mute=0";
-  //   newURL = newURL.replace("autoplay=0", "");
+    var videoURL = $(this).parent().find("iframe").prop("src");
+    var newURL = videoURL + "&autoplay=1&mute=0";
+    newURL = newURL.replace("autoplay=0", "");
 
-  //   $(this)
-  //     .closest(".paragraph--type--image-or-video")
-  //     .find("div .video-embed-field-responsive-video iframe")
-  //     .attr("src", newURL);
-  // });
+    $(this)
+      .closest(".paragraph--type--image-or-video")
+      .find("div .video-embed-field-responsive-video iframe")
+      .attr("src", newURL);
+  });
 
-  // //Play and Pause button for Homepage hero video
-  // $(document).on("click", "#playPause.pause-me", function (e) {
-  //   $("#homeHero").vimeo("pause");
-  //   $(this).addClass("play-me").removeClass("pause-me");
-  //   $(this).attr("aria-label", "Play video");
-  // });
+  //Play and Pause button for Homepage hero video
+  $(document).on("click", "#playPause.pause-me", function (e) {
+    $("#homeHero").vimeo("pause");
+    $(this).addClass("play-me").removeClass("pause-me");
+    $(this).attr("aria-label", "Play video");
+  });
 
-  // $(document).on("click", "#playPause.play-me", function (e) {
-  //   $("#homeHero").vimeo("play");
-  //   $(this).addClass("pause-me").removeClass("play-me");
-  //   $(this).attr("aria-label", "Pause video");
-  // });
+  $(document).on("click", "#playPause.play-me", function (e) {
+    $("#homeHero").vimeo("play");
+    $(this).addClass("pause-me").removeClass("play-me");
+    $(this).attr("aria-label", "Pause video");
+  });
 
-  // // FOR HOME PAGE REBRANDED: Load autoplay attributes BEFORE button click
-  // // The video will only auto play with this attributes
-  // $(".paragraph--type--hero-with-video")
-  //   .find("div .field--name-field-hero-with-video-embed-code iframe")
-  //   .attr("allow", "autoplay; fullscreen");
+  // FOR HOME PAGE REBRANDED: Load autoplay attributes BEFORE button click
+  // The video will only auto play with this attributes
+  $(".paragraph--type--hero-with-video")
+    .find("div .field--name-field-hero-with-video-embed-code iframe")
+    .attr("allow", "autoplay; fullscreen");
 
-  // // video autoplay on button click
-  // $(".play-button-container").on("click", function (e) {
-  //   $(this).parent().find(".field--name-field-image-or-video-image").fadeOut();
-  //   $(this).fadeOut();
+  // video autoplay on button click
+  $(".play-button-container").on("click", function (e) {
+    $(this).parent().find(".field--name-field-image-or-video-image").fadeOut();
+    $(this).fadeOut();
 
-  //   var videoURL = $(this).parent().find("iframe").prop("src");
-  //   var newURL = videoURL + "&autoplay=1&mute=0";
-  //   newURL = newURL.replace("autoplay=0", "");
+    var videoURL = $(this).parent().find("iframe").prop("src");
+    var newURL = videoURL + "&autoplay=1&mute=0";
+    newURL = newURL.replace("autoplay=0", "");
 
-  //   $(this)
-  //     .closest(".paragraph--type--hero-with-video")
-  //     .find("div .field--name-field-hero-with-video-embed-code iframe")
-  //     .attr("src", newURL);
-  // });
+    $(this)
+      .closest(".paragraph--type--hero-with-video")
+      .find("div .field--name-field-hero-with-video-embed-code iframe")
+      .attr("src", newURL);
+  });
 
   $(document).ready(function () {
     // Still use has(.white_background) to narrow the scope
