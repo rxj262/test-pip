@@ -1,13 +1,17 @@
 .homepage-w-sidebar__content {
   @include span(12);
-  @media #{$small-min} { @include span(9); }
+  @media #{$small-min} {
+    @include span(9);
+  }
   padding-right: 22px;
   border-right: 1px solid $lighter-gray;
 }
 
 .homepage-w-sidebar__sidebar {
   @include span(12);
-  @media #{$small-min} { @include span(3 last); }
+  @media #{$small-min} {
+    @include span(3 last);
+  }
 }
 
 .media-list span.views-field {
@@ -15,5 +19,85 @@
 }
 
 .eq-height {
-  @media #{$medium-min} {display: flex}
+  @media #{$medium-min} {
+    display: flex;
+  }
+}
+
+.robust-3-column-page {
+  article {
+    .paragraph--type--content {
+      h2:first-child,
+      .field--name-field-content h2:first-of-type {
+        margin-top: 1.5rem;
+      }
+    }
+    .content {
+      .row {
+        .field--name-field-robust-3-page-ref {
+          .field--item:first-child {
+            .paragraph:first-child {
+              padding-top: 0;
+            }
+          }
+          .field--item:first-child {
+            .paragraph.paragraph--type--content:first-child {
+              h2:first-child {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.landing-page-rebranded,
+body.home-page-rebranded {
+  background-color: $white;
+  .main-container.container {
+    padding: 0;
+
+    .region-content {
+      padding-bottom: 0;
+    }
+
+    .paragraph--type--centered-cta,
+    .paragraph--type--horizontal-subfeature,
+    .paragraph--type--two-column-subfeature,
+    .paragraph--type--quick-links-w-horizontal-buttons,
+    .paragraph--type--quote-with-image,
+    .paragraph--type--two-column-text,
+    .paragraph--type--three-column-subfeature,
+    .paragraph--type--stat-group-with-images,
+    .paragraph--type--stats-group,
+    .paragraph--type--events-or-news-view,
+    .paragraph--type--stat-annotations {
+      margin: 0 calc(50% - 50vw);
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+      @media #{$small-max} {
+        padding: 4rem 0;
+      }
+      .container {
+        margin: 0 auto;
+        @media #{$small-min} {
+          width: 764px;
+        }
+        @media #{$medium-min} {
+          width: 984px;
+        }
+        @media #{$large-min} {
+          width: 1150px;
+        }
+        @media #{$jumbo-min} {
+          width: 1244px;
+        }
+        @media #{$small-max} {
+          padding: 0 2.2rem;
+        }
+      }
+    }
+  }
 }
