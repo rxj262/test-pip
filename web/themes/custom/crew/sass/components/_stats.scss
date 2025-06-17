@@ -1,114 +1,297 @@
+// .paragraph--type--stats-group {
+//   background-color: $off-white;
+//   padding: 20px;
+//   margin-bottom: 20px;
+//   clear: right;
+
+//   .field--name-field-stat-group-title {
+//     color: $cwru-blue;
+//     font-size: 34px;
+//     font-weight: 600;
+//   }
+
+//   .field--name-field-stat-items {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     margin: 0 -20px;
+
+//     > .field--item {
+//       flex-grow: 1;
+//       flex-basis: 44%;
+//       margin: 20px 20px;
+//     }
+//   }
+
+//   .paragraph--type--stat {
+//     display: flex;
+//   }
+
+//   .field--name-field-value {
+//     font-size: 60px;
+//     font-weight: 300;
+//     margin-right: 20px;
+//     line-height: 1;
+
+//     sup {
+//       font-size: 37px;
+//       top: 0;
+//     }
+//   }
+
+//   .field--name-field-description {
+//     color: $cwru-blue;
+//     font-size: 18px;
+//     font-weight: 700;
+//     font-style: italic;
+//   }
+
+//   //2 column stats feature, ex: rothleadership
+//   .stats-section-container {
+//     background: $cwru-blue;
+//     margin: -20px;
+//     padding: 20px 40px 30px;
+//     clear: right;
+//     .field--name-field-stat-group-title {
+//       font-size: 1.75em;
+//       color: $white;
+//     }
+//     .field--name-field-stat-items {
+//       .field--item {
+//         margin-bottom: 0;
+//       }
+//       .paragraph--type--stat {
+//         flex-direction: column;
+//         text-align: left;
+//         color: $white;
+//         .field--name-field-stat-value {
+//           font-size: 2.5em;
+//           font-weight: 700;
+//           line-height: 1em;
+//         }
+//         // .field--name-field-stat-description {
+//         //   font-weight: 600;
+//         // }
+//       }
+//     }
+//   }
+// }
+
+// // 3 column stats feature, ex: give
+// .paragraph--type--stats-section {
+//   background: $off-white;
+//   padding: 1em 3em 1em 2em;
+//   margin: 1rem 0;
+//   .paragraph--type--stats-group {
+//     padding: 0;
+//     margin-bottom: 0px;
+//     .field--name-field-stat-items {
+//       margin: 0;
+
+//       > .field--item {
+//         flex-grow: 0;
+//         margin: 20px 0;
+//         flex-basis: 100%;
+//         @media #{$small-min} {
+//           text-align: center;
+//           flex-basis: 30%;
+//         }
+
+//         .field--name-field-stat__value {
+//           font-size: 2.5em;
+//           font-weight: 700;
+//           color: $dark-gray;
+//           line-height: 1em;
+//         }
+//       }
+//     }
+//   }
+//   h2 + .field--name-field-stat-group {
+//     .paragraph--type--stats-group {
+//       margin-bottom: 20px;
+//     }
+//   }
+// }
+
 .paragraph--type--stats-group {
-  background-color: $off-white;
-  padding: 20px;
-  margin-bottom: 20px;
-  clear:right;
-
-  .field--name-field-stat-group-title {
-    color: $cwru-blue;
-    font-size: 34px;
-    font-weight: 600;
+  background: $off-white;
+  margin: 0;
+  padding: 2rem 2.5rem 3rem;
+  @media #{$small-max} {
+    margin: 0 calc(50% - 50vw);
+    padding: 2rem 2.5rem 3rem;
   }
 
-  .field--name-field-stat-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 -20px;
+  .container {
+    padding: 0;
+    width: 100%;
 
-    > .field--item {
-      flex-grow: 1;
-      flex-basis: 44%;
-      margin: 20px 20px;
+    h2 {
+      margin: 0;
+      padding-bottom: 0;
     }
-  }
 
-  .paragraph--type--stat {
-    display: flex;
-  }
-
-  .field--name-field-value {
-    font-size: 60px;
-    font-weight: 300;
-    margin-right: 20px;
-    line-height: 1;
-
-    sup {
-      font-size: 37px;
-      top: 0;
-    }
-  }
-
-  .field--name-field-description {
-    color: $cwru-blue;
-    font-size: 18px;
-    font-weight: 700;
-    font-style: italic;
-  }
-
-  //2 column stats feature, ex: rothleadership
-  .stats-section-container {
-    background: $cwru-blue;
-    margin: -20px;
-    padding: 20px 40px 30px;
-    clear: right;
-    .field--name-field-stat-group-title {
-      font-size: 1.75em;
-      color: $white;
-    }
-    .field--name-field-stat-items {
-      .field--item {
-        margin-bottom: 0;
-      }
-      .paragraph--type--stat {
-        flex-direction: column;
-        text-align: left;
-        color: $white;
-        .field--name-field-stat-value {
-          font-size: 2.5em;
-          font-weight: 700;
-          line-height: 1em;
+    .field--name-field-stats-group-description {
+      margin-top: 2rem;
+      p {
+        &:last-child {
+          margin-bottom: 0;
         }
-        // .field--name-field-stat-description {
-        //   font-weight: 600;
-        // }
+      }
+    }
+
+    .stats-grouping {
+      margin-top: 2rem;
+      .field--name-field-stat-items {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 3rem;
+        @media #{$small-max} {
+          flex-direction: column;
+        }
+
+        & > .field--item {
+          flex-basis: 29%;
+          margin: 0;
+          flex-grow: 0;
+          @media #{$medium-max} {
+            flex-basis: 46%;
+          }
+          @media #{$small-max} {
+            flex-basis: 100%;
+          }
+
+          .paragraph--type--stat {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            @media #{$small-max} {
+              text-align: left;
+            }
+
+            .field--name-field-value {
+              color: $orange;
+              font-size: 5rem;
+              font-weight: 700;
+              margin: 0;
+            }
+
+            .field--name-field-description {
+              color: $blk;
+              font-style: normal;
+              text-align: center;
+              @media #{$small-max} {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .field--name-field-stats-group-button {
+      text-align: right;
+      margin-top: 3rem;
+    }
+  }
+
+  &.white_background {
+    background: $white;
+    padding-left: 0;
+    padding-right: 0;
+    @media #{$small-max} {
+      margin: 0 calc(50% - 50vw);
+      padding: 2rem 2.5rem 3rem;
+    }
+  }
+
+  &.gray_pattern_background {
+    background: url("../images/pattern_hexagon_gray.jpg") center center;
+  }
+
+  &.two_stats {
+    .container {
+      .stats-grouping {
+        .field--name-field-stat-items {
+          & > .field--item {
+            flex-basis: 47%;
+            @media #{$large-max} {
+              flex-basis: 46%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.four_stats {
+    .container {
+      .stats-grouping {
+        .field--name-field-stat-items {
+          & > .field--item {
+            flex-basis: 21%;
+            @media #{$large-max} {
+              flex-basis: 20%;
+            }
+          }
+        }
       }
     }
   }
 }
 
-// 3 column stats feature, ex: give
-.paragraph--type--stats-section{
-  background: $off-white;
-  padding: 1em 3em 1em 2em;
-  margin:1rem 0;
+section.has-sidebar:has(aside) {
   .paragraph--type--stats-group {
-    padding: 0;
-    margin-bottom: 0px;
-    .field--name-field-stat-items{
-      margin:0;
+    .container {
+      .stats-grouping {
+        .field--name-field-stat-items {
+          gap: 6rem;
+          & > .field--item {
+            flex-grow: 0;
+          }
+          @media #{$large-max} {
+            flex-direction: column;
 
-      >.field--item{
-        flex-grow: 0;
-        margin: 20px 0;
-        flex-basis: 100%;
-        @media #{$small-min} {
-          text-align: center;
-          flex-basis: 30%;
-        }
-
-        .field--name-field-stat__value{
-          font-size: 2.5em;
-          font-weight: 700;
-          color: $dark-gray;
-          line-height: 1em;
+            & > .field--item {
+              flex-basis: 100%;
+              flex-grow: 1;
+            }
+          }
         }
       }
     }
   }
-  h2 + .field--name-field-stat-group{
-    .paragraph--type--stats-group {
-      margin-bottom: 20px;
+}
+
+.landing-page-rebranded,
+.home-page-rebranded {
+  .paragraph--type--stats-group {
+    .container {
+      h2 {
+        .field--name-field-stat-group-title {
+          @include inline-title-orange;
+          color: $cwru-blue;
+        }
+      }
+      @media #{$small-min} {
+        .field--name-field-stats-group-description,
+        .stats-grouping {
+          margin-top: 4rem;
+
+          .field--name-field-stat-items {
+            flex-grow: 1;
+            @media #{$medium-min} {
+              gap: 6rem;
+            }
+          }
+        }
+
+        .field--name-field-stats-group-button {
+          margin-top: 5rem;
+        }
+      }
     }
   }
 }
