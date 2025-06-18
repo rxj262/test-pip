@@ -1,0 +1,31 @@
+.paragraph--type--button-with-background {
+  .field--name-field-button-with-bg-link {
+    a {
+      @include button-blue-bg;
+    }
+  }
+
+  &.white_button_background {
+    .field--name-field-button-with-bg-link {
+      a {
+        @include button-white-bg;
+      }
+    }
+  }
+
+  &.orange_button_background {
+    .field--name-field-button-with-bg-link {
+      a {
+        @include button-orange-bg;
+      }
+    }
+  }
+
+  &.gray_button_background {
+    .field--name-field-button-with-bg-link {
+      a {
+        @include button-gray-bg;
+      }
+    }
+  }
+}

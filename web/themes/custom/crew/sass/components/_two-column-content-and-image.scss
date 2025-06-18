@@ -1,0 +1,140 @@
+.landing-page-rebranded,
+.home-page-rebranded {
+  .paragraph--type--two-column-content-and-photo {
+    margin: 0 calc(50% - 50vw);
+    margin-bottom: 6rem;
+    padding-top: 7rem;
+    @media #{$medium-max} {
+      margin-bottom: 4rem;
+    }
+    @media #{$small-max} {
+      padding-top: 4rem;
+    }
+
+    .container {
+      padding: 0;
+
+      .two-column-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6rem;
+        flex-direction: row;
+        margin-bottom: -2em;
+        @media #{$small-medium-min} {
+          min-height: 475px;
+        }
+        @media #{$medium-max} {
+          flex-direction: column;
+        }
+        @media #{$small-max} {
+          gap: 4rem;
+        }
+
+        .two-col-content-body {
+          width: 50%;
+          flex: 1;
+          padding-bottom: 12rem;
+          // margin-bottom: 2.5em;
+          @media #{$medium-max} {
+            width: 100%;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+          @media #{$small-max} {
+            padding-left: 2rem;
+            padding-right: 2rem;
+          }
+
+          h2 {
+            padding: 0;
+          }
+
+          .field--name-field-2-col-content-photo-body {
+            margin-top: 3rem;
+
+            p {
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          .field--name-field-two-col-content-photo-butt {
+            margin-top: 3rem;
+          }
+        }
+
+        .two-column-photo-container {
+          width: 40%;
+          position: relative;
+          overflow: hidden;
+          @media #{$medium-max} {
+            width: 100%;
+          }
+
+          * {
+            position: unset;
+          }
+
+          img {
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            margin: 0;
+            max-width: none;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            object-fit: cover;
+            @media #{$medium-max} {
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+
+    &.text_right {
+      .container {
+        .two-column-container {
+          flex-direction: row-reverse;
+          @media #{$medium-max} {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    &.blue_background {
+      color: $white;
+      background: $cwru-blue;
+
+      h2 {
+        color: $white;
+      }
+
+      .field--name-field-2-col-content-photo-body {
+        color: $white;
+        a {
+          color: $white;
+          text-decoration: underline;
+
+          &:hover {
+            color: $white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &.gray_background {
+      background: $off-white;
+    }
+
+    &.gray_pattern_background {
+      background: url("../images/pattern_hexagon_gray.jpg") center center;
+    }
+  }
+}

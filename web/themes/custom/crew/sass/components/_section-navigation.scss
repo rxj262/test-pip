@@ -1,0 +1,61 @@
+.landing-page-rebranded {
+  #block-sectionnavigation {
+    background-color: $light-black;
+    margin: 0 calc(50% - 50vw);
+    font-weight: 800;
+    padding: 0;
+
+    .section-nav {
+      float: none;
+      padding: 2rem;
+      margin: 0 auto;
+      @media #{$small-min} {
+        width: 764px;
+        padding-left: 2rem;
+      }
+      @media #{$medium-min} {
+        width: 984px;
+      }
+      @media #{$large-min} {
+        width: 1150px;
+      }
+      @media #{$jumbo-min} {
+        width: 1244px;
+      }
+      @media #{$small-max} {
+        padding-bottom: 2.6rem;
+        padding-top: 1rem;
+      }
+
+      h2.section-nav-title {
+        margin-top: 0;
+        margin-bottom: 0 !important;
+        color: $white;
+        font-size: 3rem;
+        @include underline-title-orange;
+        @media #{$small-max} {
+          padding-left: 0;
+          margin-top: 2.4rem;
+        }
+      }
+
+      .section-nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        padding-top: 2rem;
+
+        li {
+          margin-right: 4rem;
+          margin-bottom: 1rem;
+
+          a {
+            font-weight: 800;
+            color: $white;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

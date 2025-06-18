@@ -66,19 +66,6 @@ article.article .field--name-field-related-links {
       }
     }
 
-    // .view-img-left {
-    //   max-width: 150px;
-    //   .field--name-field-caption {
-    //     float: left;
-    //     display: inline-flex;
-    //   }
-    //   .field--name-field-photo-caption {
-    //     display: inline-flex;
-    //     font-size: .6em;
-    //     max-width: 150px;
-    //     position: relative;
-    //   }
-    // }
     .media-list {
       .media:last-child {
         margin-bottom: 0px;
@@ -118,7 +105,7 @@ article.article .field--name-field-related-links {
   margin-bottom: 10px;
 }
 
-.field--name-field-event-date>.field--label {
+.field--name-field-event-date > .field--label {
   font-weight: 600;
 }
 
@@ -166,6 +153,468 @@ article.article .field--name-field-related-links {
   height: 100%;
 }
 
-.homepage-w-full-width-feature .bg-off-white.view-news-and-highlights .view-header {
+.homepage-w-full-width-feature
+  .bg-off-white.view-news-and-highlights
+  .view-header {
   padding: 0px;
+}
+
+//Rebranded Recent News and Upcoming Events Views 06-12-2025
+.paragraph--type--events-or-news-view {
+  .container {
+    @media #{$small-min} {
+      padding: 0;
+    }
+
+    h2 {
+      padding-bottom: 0;
+    }
+
+    .field--name-field-events-or-news-description {
+      margin-top: 2rem;
+    }
+
+    .field--name-field-external-feed-or-view {
+      margin-top: 2rem;
+      .paragraph--type--view {
+        .field--name-field-view-viewfield {
+          .views-element-container.form-group {
+            margin-bottom: 0;
+            .recent-news-rebranded {
+              .view-content {
+                display: flex;
+                gap: 5rem;
+                margin-top: 4rem;
+                @media #{$small-max} {
+                  flex-direction: column;
+                  gap: 3rem;
+                  margin-top: 2rem;
+                }
+
+                & > .views-row {
+                  flex-basis: 33%;
+
+                  .views-field-field-article-image-ref {
+                    img {
+                      border: 1px solid $med-gray;
+                    }
+                  }
+
+                  .views-field-title {
+                    margin-top: 1.5rem;
+                    a {
+                      text-decoration: underline;
+
+                      &:hover {
+                        text-decoration: none;
+                      }
+                    }
+                  }
+
+                  .views-field-field-article-date {
+                    display: block;
+                    margin: 0;
+                    margin-top: 1rem;
+
+                    .field-content.article-date {
+                      font-size: 1.8rem;
+                      color: $cwru-dark-gray;
+                      margin: 0;
+                      display: block;
+                      text-align: left;
+
+                      .month,
+                      .day {
+                        background: transparent;
+                        font-size: inherit;
+                        color: $cwru-dark-gray;
+                        padding: 0;
+                        border: 0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .upcoming-events-rebranded {
+              background: transparent;
+              height: unset;
+
+              .view-content,
+              .view-homepage-events-listing {
+                display: flex;
+                gap: 6rem 5rem;
+                margin-top: 4rem;
+                flex-wrap: wrap;
+
+                @media #{$small-max} {
+                  flex-direction: column;
+                  gap: 3rem;
+                  margin-top: 3rem;
+                }
+
+                & > .views-row {
+                  flex-basis: 30%;
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  border: 0;
+                  font-size: unset;
+                  gap: 2rem;
+                  @media #{$large-max} {
+                    flex-basis: 47%;
+                  }
+                  @media #{$medium-max} {
+                    flex-basis: 100%;
+                  }
+
+                  .views-field-nothing {
+                    margin: 0;
+                    display: block;
+                    min-width: auto;
+
+                    .field-content {
+                      display: flex;
+                      flex-direction: column;
+                      color: $white;
+                      text-align: center;
+                      background-color: $cwru-blue;
+                      background-image: url("../images/calendar_date_background.svg");
+                      background-repeat: no-repeat;
+                      min-width: auto;
+                      width: 90px;
+                      height: 92px;
+                      padding: 1rem 0 1.5rem;
+
+                      .month {
+                        border: 0;
+                        background: transparent;
+                        padding: 0;
+                        font-weight: 700;
+                        font-size: 2.4rem;
+                        text-transform: uppercase;
+                        line-height: 1;
+                      }
+
+                      .day {
+                        font-weight: 900;
+                        background: transparent;
+                        border: 0;
+                        padding: 0;
+                        line-height: 0.8;
+                        color: inherit;
+                        font-size: 6rem;
+                      }
+                    }
+                  }
+
+                  .views-field-title {
+                    margin: 0;
+                    a {
+                      text-decoration: underline;
+                      font-size: 2.2rem;
+
+                      &:hover {
+                        text-decoration: none;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .view-homepage-events-listing {
+              .view-content {
+                @media #{$large-max} {
+                  flex-direction: row;
+                }
+                @media #{$medium-max} {
+                  flex-direction: column;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .paragraph--type--external-rss {
+        margin-bottom: 0;
+        background: transparent;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        .feed-full-news {
+          .media-list {
+            display: flex;
+            gap: 4rem;
+
+            li.media {
+              display: flex;
+              flex-direction: column;
+              border: 0;
+              padding: 0;
+              margin: 0;
+
+              .media-object {
+                margin: 0;
+                padding: 0;
+                float: none;
+
+                .media-image-container {
+                  margin: 0;
+                  height: 200px;
+                  width: 100%;
+                  overflow: hidden;
+
+                  .img-responsive {
+                    object-fit: cover;
+                  }
+                }
+              }
+
+              .media-body {
+                width: 100%;
+                padding-top: 1.5rem;
+
+                h3 {
+                  padding: 0;
+
+                  a {
+                    text-decoration: underline;
+                    font-size: 2rem;
+
+                    &:hover {
+                      text-decoration: none;
+                    }
+                  }
+                }
+
+                .article-date {
+                  color: $cwru-dark-gray;
+                  font-size: 1.8rem;
+                }
+
+                div {
+                  margin-top: 1rem;
+                }
+              }
+            }
+          }
+
+          .homepage-listing {
+            display: flex;
+            gap: 4rem;
+            @media #{$small-max} {
+              flex-direction: column;
+            }
+
+            .homepage-listing-item {
+              display: flex;
+              flex-direction: column;
+
+              .homepage-listing-item-link {
+                color: unset;
+                padding: 0;
+                display: block;
+                height: 100%;
+
+                &:hover {
+                  color: unset;
+                  text-decoration: unset;
+                }
+
+                .img-ratio-container {
+                  height: 200px;
+                  width: 100%;
+                  overflow: hidden;
+                  display: flex;
+
+                  .img-responsive {
+                    object-fit: cover;
+                  }
+                }
+
+                h3 {
+                  padding: 0;
+                  text-decoration: underline;
+                  font-size: 2rem;
+                  color: $link-blue;
+                  margin-top: 1rem;
+                  line-height: 1.4;
+
+                  &:hover {
+                    text-decoration: none;
+                  }
+                }
+
+                .article-date {
+                  color: $cwru-dark-gray;
+                  font-size: 1.8rem;
+                  margin-top: 1rem;
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+
+          .field--name-field-featured-news-link {
+            margin-top: 5rem;
+            @media #{$small-max} {
+              margin-top: 3rem;
+            }
+
+            a {
+              @include button-blue-bg;
+            }
+          }
+        }
+
+        // &:has(.feed-events-date) {
+        //   .feed.flex-1 {
+        //     padding: 0;
+
+        //     ul {
+        //       margin-top: 0;
+        //       display: flex;
+        //       flex-wrap: wrap;
+        //       gap: 6rem 5rem;
+        //       @media #{$small-max} {
+        //         flex-direction: column;
+        //         gap: 3rem;
+        //       }
+
+        //       li.feed-item-block.flex.feed-events-date {
+        //         padding: 0;
+        //         flex-basis: 30%;
+        //         display: flex;
+        //         border: 0;
+        //         font-size: unset;
+        //         gap: 2rem;
+        //         border: 0;
+        //         list-style-type: none;
+        //         @media #{$large-max} {
+        //           flex-basis: 47%;
+        //         }
+        //         @media #{$medium-max} {
+        //           flex-basis: 100%;
+
+        //           div {
+        //             div.feed-item-daterange.feed-me {
+        //               display: flex;
+        //               flex-direction: column;
+        //               color: $white;
+        //               text-align: center;
+        //               background-color: $cwru-blue;
+        //               background-image: url("../images/calendar_date_background.svg");
+        //               background-repeat: no-repeat;
+        //               min-width: auto;
+        //               width: 90px;
+        //               height: 92px;
+        //               padding: 1rem 0 1.5rem;
+
+        //               .month {
+        //                 border: 0;
+        //                 background: transparent;
+        //                 padding: 0;
+        //                 font-weight: 700;
+        //                 font-size: 2.4rem;
+        //                 text-transform: uppercase;
+        //                 line-height: 1;
+        //               }
+
+        //               .day {
+        //                 font-weight: 900;
+        //                 background: transparent;
+        //                 border: 0;
+        //                 padding: 0;
+        //                 line-height: 0.8;
+        //                 color: inherit;
+        //                 font-size: 6rem;
+        //               }
+        //             }
+        //           }
+
+        //           div {
+        //             div .feed-item-title {
+        //               margin: 0;
+
+        //               a {
+        //                 font-size: 2.5rem;
+        //                 text-decoration: underline;
+
+        //                 &:hover {
+        //                   text-decoration: none;
+        //                 }
+        //               }
+        //             }
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
+      }
+    }
+
+    .field--name-field-events-or-news-button {
+      margin-top: 3rem;
+    }
+  }
+
+  &.gray_background {
+    background: $off-white;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  &.gray_pattern_background {
+    background: url("../images/pattern_hexagon_gray.jpg") center center;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.landing-page-rebranded,
+.home-page-rebranded {
+  .paragraph--type--events-or-news-view {
+    .container {
+      h2 {
+        .field--name-field-events-or-news-title {
+          @include inline-title-orange;
+          color: $cwru-blue;
+        }
+      }
+
+      .field--name-field-external-feed-or-view {
+        @media #{$small-max} {
+          margin-top: 3rem;
+        }
+      }
+      @media #{$small-min} {
+        .field--name-field-events-or-news-description {
+          margin-top: 4rem;
+        }
+
+        .field--name-field-external-feed-or-view {
+          margin-top: 4rem;
+        }
+
+        .field--name-field-events-or-news-button {
+          text-align: right;
+          margin-top: 5rem;
+        }
+      }
+    }
+  }
+}
+
+.paragraph--type--events-or-news-view:has(.field--name-field-events-or-news-button) {
+  .paragraph--type--external-rss {
+    .feed-full-news {
+      .field--name-field-featured-news-link {
+        display: none;
+      }
+    }
+  }
 }

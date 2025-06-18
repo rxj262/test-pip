@@ -168,3 +168,10 @@ ksl-landing-page:
 error_page:
   js:
     js/error-page-redirect.js: {}
+
+vimeo-video:
+  js:
+    js/app.js: {}
+    "https://cdn.rawgit.com/jrue/Vimeo-jQuery-API/master/dist/jquery.vimeo.api.min.js":
+      { type: external }
+    https://player.vimeo.com/api/player.js: { type: external }

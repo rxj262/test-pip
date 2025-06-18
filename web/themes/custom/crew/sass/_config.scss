@@ -34,6 +34,7 @@ $light-gray: #c6c6c6;
 $cwru-light-gray: #d3d3d3;
 $lighter-gray: #eee;
 $blk: #000000;
+$light-black: #1f2325;
 $orange: #d63d1f;
 
 // Utility color variables ///////////////
@@ -74,20 +75,29 @@ $susy: (
 $screen: "only screen" !default;
 
 $phone: 480px !default;
+$smallx: 620px !default;
 $small: 768px !default;
+$small-medium: 871px !default;
 $medium: 992px !default;
+$medium-hero: 1044px !default;
 $large: 1200px !default;
 $jumbo: 1300px !default;
 
 $phone-min: "#{$screen} and (min-width: #{$phone})";
+$smallx-min: "#{$screen} and (min-width: #{$smallx})";
 $small-min: "#{$screen} and (min-width: #{$small})";
+$small-medium-min: "#{$screen} and (min-width: #{$small-medium})";
 $medium-min: "#{$screen} and (min-width: #{$medium})";
+$medium-hero-min: "#{$screen} and (min-width: #{$medium-hero})";
 $large-min: "#{$screen} and (min-width: #{$large})";
 $jumbo-min: "#{$screen} and (min-width: #{$jumbo})";
 
 $phone-max: "#{$screen} and (max-width: #{$phone})";
+$smallx-max: "#{$screen} and (max-width: #{$smallx})";
 $small-max: "#{$screen} and (max-width: #{$small})";
+$small-medium-max: "#{$screen} and (max-width: #{$small-medium})";
 $medium-max: "#{$screen} and (max-width: #{$medium})";
+$medium-hero-max: "#{$screen} and (max-width: #{$medium-hero})";
 $large-max: "#{$screen} and (max-width: #{$large})";
 $jumbo-max: "#{$screen} and (max-width: #{$jumbo})";
 

@@ -1,0 +1,142 @@
+.paragraph--type--quote-with-image {
+  padding: 2rem 2rem 3rem;
+  margin: 0;
+  @media #{$small-max} {
+    margin: 0 calc(50% - 50vw);
+  }
+
+  .two-column-container.container {
+    display: flex;
+    width: auto;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    @media #{$small-max} {
+      flex-direction: column;
+    }
+
+    .quote-image-container {
+      flex-basis: 30%;
+      margin-left: 1rem;
+
+      .field--name-field-image {
+        &::before {
+          position: absolute;
+          top: 2%;
+          left: 3%;
+          width: 100%;
+          height: 100%;
+          border: 2px solid $orange;
+          content: "";
+          border-radius: 50%;
+          max-width: 300px;
+          max-height: 300px;
+        }
+
+        img {
+          border-radius: 50%;
+          overflow: hidden;
+          max-width: 300px;
+          max-height: 300px;
+        }
+      }
+    }
+    .quote-content {
+      font-weight: 800;
+      color: $blk;
+      flex-basis: 70%;
+      margin-top: 0;
+      flex: 1;
+
+      .paragraph--type--quote-and-citation {
+        @media #{$small-min} {
+          padding-left: 6rem;
+        }
+
+        .quote-and-citation-section {
+          .field--name-field-quote {
+            font-size: 2.6rem;
+            @media #{$small-max} {
+              padding: 3rem 5rem 0;
+            }
+
+            &::before {
+              content: "";
+              width: 50px;
+              height: 36px;
+              display: block;
+              background: url("../images/orange-quote.svg") center center;
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+          }
+
+          .field--name-field-citation {
+            color: $cwru-blue;
+            padding-left: 30px;
+            position: relative;
+            @media #{$small-max} {
+              padding-left: 8rem;
+            }
+
+            &::before {
+              content: "";
+              width: 25px;
+              height: 2px;
+              display: block;
+              background: $blk;
+              position: absolute;
+              left: 0;
+              top: 14px;
+              @media #{$small-max} {
+                left: 5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.robust-3-column-page {
+  .paragraph--type--quote-with-image {
+    &.gray_background {
+      @media #{$small-max} {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &.gray_pattern_background {
+      @media #{$small-max} {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &.blue_background {
+      @media #{$small-max} {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &.blue_pattern_background {
+      @media #{$small-max} {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  section.has-sidebar:has(aside) {
+    .paragraph--type--quote-with-image {
+      .two-column-container.container {
+        flex-direction: column;
+
+        .quote-image-container {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}

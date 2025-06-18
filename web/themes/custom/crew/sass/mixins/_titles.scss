@@ -1,0 +1,62 @@
+// TITLE FOR UNDERLINE
+@mixin underline-title-orange {
+  color: $white;
+  font-size: 3.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: $orange;
+    margin-top: 1rem;
+  }
+}
+
+@mixin inline-title-orange {
+  color: $white;
+  font-size: 3.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  // @media #{$small-max} {
+  //   padding-bottom: 1rem;
+  // }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 199px;
+    height: 7px;
+    background-color: $orange;
+    margin-top: 0.5rem;
+  }
+}
+
+@mixin underline-title-blue {
+  color: $cwru-blue;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: $light-blue;
+    margin-top: 1rem;
+  }
+}
+
+// .underline-title {
+//   @include underline-title;
+
+//   &.white {
+//     color: $white;
+//   }
+// }

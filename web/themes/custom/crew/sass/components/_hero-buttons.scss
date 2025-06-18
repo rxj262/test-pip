@@ -1,0 +1,200 @@
+.field--name-field-hero-buttons-heading {
+  color: $white;
+  margin: 20px 40px;
+  font-size: 30px;
+  font-weight: 700;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: $link-blue;
+  }
+}
+
+.paragraph--type--hero-button-group {
+  display: flex;
+  background-color: $cwru-blue;
+  margin-left: -22px;
+  margin-right: -22px;
+
+  @media #{$medium-max} {
+    flex-direction: column;
+  }
+}
+
+.paragraph--type--hero-button {
+  border: 1px solid $link-blue;
+}
+
+.field--name-field-hero-buttons-group {
+  color: $white;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin: 20px 40px;
+  flex-wrap: wrap;
+
+  @media #{$large-max} {
+    > .field--item {
+      flex-basis: calc(50% - 20px);
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media #{$small-max} {
+    flex-direction: column;
+
+    > .field--item {
+      margin-left: 0;
+    }
+  }
+
+  .field--item a {
+    width: 100%;
+    padding: 15px 40px 15px 20px;
+    position: relative;
+    display: block;
+    color: $white;
+    background-color: $drk-blue;
+    transition: background-color 0.2s;
+
+    &:hover {
+      text-decoration: none;
+      background-color: $link-blue;
+    }
+
+    &::after {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      content: ">";
+      background-color: $blk;
+      color: $white;
+      padding: 4px;
+      font-weight: 700;
+    }
+
+    @media #{$medium-max} {
+      font-size: 18px;
+    }
+  }
+}
+
+//Rebranded
+
+.homepage-hero-quick-links {
+  margin: 0 calc(50% - 50vw);
+  background: $cwru-blue;
+  padding: 3rem 0;
+  @media #{$small-max} {
+    padding: 3rem 2rem;
+  }
+
+  .container {
+    padding: 0;
+
+    .paragraph--type--hero-button-group {
+      margin: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      background: transparent;
+
+      @media #{$small-max} {
+        flex-direction: column;
+      }
+
+      h2 {
+        margin: 0;
+        margin-right: 2rem;
+        padding: 0;
+        align-content: center;
+
+        @media #{$large-max} {
+          margin: 0 2rem 2rem 0;
+        }
+
+        .field--name-field-hero-buttons-heading {
+          margin: 0;
+          color: $white;
+          font-size: 2.8rem;
+          font-weight: 700;
+          @include underline-title-orange;
+        }
+      }
+
+      .field--name-field-hero-buttons-group {
+        margin: 0;
+        flex-wrap: nowrap;
+        display: flex;
+        gap: 1rem;
+        flex: 1;
+        justify-content: space-between;
+
+        @media #{$jumbo-max} {
+          flex-wrap: wrap;
+          justify-content: space-around;
+          gap: 2rem 1rem;
+        }
+
+        & > .field--item {
+          flex-grow: 1;
+          margin: 0;
+          @media #{$jumbo-max} {
+            flex-basis: 46%;
+            flex-grow: 0;
+          }
+
+          .paragraph--type--hero-button {
+            border: 0;
+            .field--name-field-button-hero {
+              a {
+                width: 100%;
+                position: relative;
+                @include button-white-bg;
+                border-color: $orange;
+                background: $off-white;
+                padding: 1.5rem 2.8rem 1.5rem 1rem;
+
+                &:hover {
+                  background: $orange;
+                  border-color: $orange;
+
+                  &::after {
+                    color: $white;
+                  }
+                }
+
+                &::after {
+                  color: $cwru-blue;
+                  background: transparent;
+                  padding: 4px;
+                  padding-right: 1rem;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  content: ">";
+                  font-weight: 700;
+                  text-align: center;
+                  cursor: pointer;
+                  line-height: 1.33333;
+                  font-size: 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

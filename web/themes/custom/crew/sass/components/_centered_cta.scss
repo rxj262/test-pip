@@ -1,0 +1,130 @@
+.paragraph--type--centered-cta {
+  padding: 2rem 4rem 3rem;
+  margin: 0;
+  text-align: center;
+  background: $white;
+  @media #{$small-max} {
+    margin: 0 calc(50% - 50vw);
+  }
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+    h2 {
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+
+    .field--name-field-centered-text-content {
+      margin: 2rem auto 0;
+      max-width: 800px;
+
+      h3 {
+        color: $cwru-blue;
+      }
+      p {
+        font-size: 18px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .field--name-field-centered-cta-buttons {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 3rem auto 0;
+      @media #{$small-max} {
+        flex-direction: column;
+      }
+
+      > .field--item {
+        margin: 0 2rem;
+        @media #{$small-max} {
+          margin-bottom: 2rem;
+        }
+
+        &:last-child {
+          @media #{$small-max} {
+            margin-bottom: 0;
+          }
+        }
+
+        a {
+          @media #{$smallx-max} {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .field--name-field-centered-cta-background-co {
+      display: none;
+    }
+  }
+  &.gray_background {
+    background: $off-white;
+    padding: 1.5rem 0;
+
+    .container {
+      padding: 1rem 2rem 1.3rem;
+    }
+  }
+
+  &.gray_pattern_background {
+    background: url("../images/pattern_hexagon_gray.jpg") center center;
+    padding: 1.5rem 0;
+
+    .container {
+      padding: 1rem 2rem 1.3rem;
+    }
+  }
+}
+
+.robust-3-column-page {
+  .paragraph--type--centered-cta {
+    .container {
+      width: 100%;
+    }
+  }
+  section.has-sidebar:has(aside) {
+    .paragraph--type--centered-cta {
+      @media #{$large-max} {
+        padding: 0;
+
+        .field--name-field-centered-cta-buttons {
+          flex-direction: column;
+          gap: 2;
+
+          & > .field--item {
+            a {
+              width: 100%;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.landing-page-rebranded,
+.home-page-rebranded {
+  .paragraph--type--centered-cta {
+    .container {
+      .field--name-field-centered-text-content {
+        max-width: 715px;
+        margin: 4rem auto 0;
+        @media #{$small-max} {
+          margin-top: 3rem;
+        }
+      }
+      .field--name-field-centered-cta-buttons {
+        margin: 5rem auto 0;
+        @media #{$small-max} {
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+}

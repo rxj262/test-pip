@@ -1,0 +1,30 @@
+.paragraph--type--stat-annotations {
+  padding: 2rem 0 3rem;
+  margin: 0;
+  background: none;
+  @media #{$small-max} {
+    margin: 0 calc(50% - 50vw);
+    padding: 2rem 2.5rem 3rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+
+    .field--name-field-stat-annotations-content {
+      color: $cwru-blue;
+      font-size: 1.5rem;
+      font-style: italic;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.gray_background {
+    background: $off-white;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
