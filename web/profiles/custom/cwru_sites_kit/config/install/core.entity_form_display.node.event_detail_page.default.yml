@@ -62,7 +62,7 @@ content:
         entity_browser_id: image_browser
   field_event_taxonomy:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -90,20 +90,20 @@ content:
     third_party_settings: {  }
   field_sites:
     type: options_buttons
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   moderation_state:
     type: workflow_buttons
-    weight: 8
+    weight: 9
     region: content
     settings:
       show_current_state: false
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

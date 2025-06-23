@@ -3,6 +3,5 @@ status: true
 dependencies: {  }
 name: Courses
 vid: course_name
-description: null
+description: ''
 weight: 0
-new_revision: false

@@ -2,13 +2,16 @@ langcode: en
 status: true
 dependencies:
   module:
+    - menu_force
     - menu_ui
 third_party_settings:
   menu_ui:
     available_menus:
-      - fu-lab
       - main
     parent: 'main:'
+  menu_force:
+    menu_force: true
+    menu_force_parent: false
 name: 'Robust 3-Column Page'
 type: robust_3_column_page
 description: null

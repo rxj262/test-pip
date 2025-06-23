@@ -3,6 +3,5 @@ status: true
 dependencies: {  }
 name: Schools
 vid: schools
-description: null
+description: ''
 weight: 0
-new_revision: false

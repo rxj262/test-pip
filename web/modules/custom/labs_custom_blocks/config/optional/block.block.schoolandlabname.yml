@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - labs_custom_blocks
+  theme:
+    - crew
+id: schoolandlabname
+theme: crew
+region: header
+weight: 0
+provider: null
+plugin: school_lab_name
+settings:
+  id: school_lab_name
+  label: 'School and Lab name'
+  label_display: '0'
+  provider: labs_custom_blocks
+visibility: {  }

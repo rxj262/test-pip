@@ -379,7 +379,7 @@ display:
           type: text_summary_or_trimmed
           settings:
             trim_length: 600
-          group_column: value
+          group_column: entity_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -575,6 +575,7 @@ display:
           admin_label: 'field_sites: Taxonomy term'
           plugin_id: standard
           required: false
+      group_by: true
       header: {  }
       footer: {  }
       display_extenders: {  }

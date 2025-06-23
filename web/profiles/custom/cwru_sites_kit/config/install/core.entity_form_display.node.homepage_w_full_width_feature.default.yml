@@ -81,7 +81,7 @@ mode: default
 content:
   field_hero_oncol_ref:
     type: paragraphs
-    weight: 31
+    weight: 7
     region: content
     settings:
       title: Paragraph
@@ -126,13 +126,13 @@ content:
     third_party_settings: {  }
   field_sites:
     type: options_buttons
-    weight: 5
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_subfeature_ref:
     type: paragraphs
-    weight: 34
+    weight: 8
     region: content
     settings:
       title: Paragraph
@@ -151,14 +151,14 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: workflow_buttons
-    weight: 4
+    weight: 5
     region: content
     settings:
       show_current_state: false
     third_party_settings: {  }
   path:
     type: path
-    weight: 2
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

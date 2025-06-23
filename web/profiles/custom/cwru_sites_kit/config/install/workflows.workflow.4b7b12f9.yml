@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.biography
+    - node.type.error_page
+  module:
+    - content_moderation
+id: 4b7b12f9
+label: 'Workflow 2'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      weight: 1
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 2
+      published: true
+      default_revision: true
+  transitions:
+    draft_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+      to: draft
+      weight: 1
+    draft_published:
+      label: Publish
+      from:
+        - draft
+      to: published
+      weight: 2
+    published_draft:
+      label: 'Create New Draft'
+      from:
+        - published
+      to: draft
+      weight: 3
+    published_published:
+      label: Publish
+      from:
+        - published
+      to: published
+      weight: 4
+  entity_types:
+    node:
+      - biography
+      - error_page
+  default_moderation_state: draft

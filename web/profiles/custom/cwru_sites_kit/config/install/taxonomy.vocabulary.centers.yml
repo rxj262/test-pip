@@ -3,6 +3,5 @@ status: true
 dependencies: {  }
 name: Centers
 vid: centers
-description: null
+description: ''
 weight: 0
-new_revision: false

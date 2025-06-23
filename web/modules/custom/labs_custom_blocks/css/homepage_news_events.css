@@ -1,0 +1,47 @@
+/*
+.field--name-field-subfeature-ref div.field--item .paragraph--type--view {
+  height: 100%;
+}
+
+.field--name-field-subfeature-ref div.field--item .paragraph--type--view div.view-header,
+.field--name-field-subfeature-ref div.field--item .paragraph--type--view div.view-footer {
+  height: auto;
+  font-size: unset;
+  font-weight: unset;
+  line-height: unset;
+  min-height: 0;
+}
+*/
+
+.field--name-field-subfeature-ref .view-news-article-listing,
+.field--name-field-subfeature-ref .view-homepage-events-listing {
+  display: flex;
+  flex-direction: column;
+}
+
+.field--name-field-subfeature-ref .paragraph--type--view .view-homepage-events-listing .view-header,
+.field--name-field-subfeature-ref .paragraph--type--view .view-news-article-listing .view-header {
+  height: auto;
+  font-size: unset;
+  font-weight: unset;
+  padding: unset;
+  line-height: unset;
+  min-height: unset;
+  background-color: unset;
+}
+
+.view-header .rss_section_title {
+  padding: 11px 22px;
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+
+.field--name-field-subfeature-ref .paragraph--type--view .view-homepage-events-listing .view-content,
+.field--name-field-subfeature-ref .paragraph--type--view .view-news-article-listing .view-content {
+  flex: 1;
+  padding: unset;
+}
+
+.view-homepage-events-listing .view-content .views-row {
+  border-bottom: 1px solid #c6c6c6;
+}

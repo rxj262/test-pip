@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - labs_custom_blocks
+  theme:
+    - crew
+id: labfooter
+theme: crew
+region: footer
+weight: 0
+provider: null
+plugin: lab_footer
+settings:
+  id: lab_footer
+  label: 'Lab Footer'
+  label_display: '0'
+  provider: labs_custom_blocks
+visibility: {  }

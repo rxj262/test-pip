@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Set weight of the My Funky Module module to 13.
+ */
+function labs_custom_blocks_update_9100() {
+  db_update('system')
+    ->fields(array('weight' => 1))
+    ->condition('name', 'labs_custom_blocks', '=')
+    ->execute();
+}

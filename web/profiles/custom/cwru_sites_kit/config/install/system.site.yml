@@ -1,11 +1,11 @@
 langcode: en
-name: 'Drush Site-Install'
+name: 'CWRU Sites SOM'
 mail: webteam@case.edu
 slogan: ''
 page:
   403: /node/3
   404: /node/4
-  front: /user/1
+  front: /node/3
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

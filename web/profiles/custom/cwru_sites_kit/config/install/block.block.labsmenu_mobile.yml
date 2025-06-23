@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - labs_custom_blocks
+  theme:
+    - crew
+id: labsmenu_mobile
+theme: crew
+region: navigation_collapsible
+weight: 0
+provider: null
+plugin: labs_menu
+settings:
+  id: labs_menu
+  label: 'Labs Menu Mobile'
+  label_display: '0'
+  provider: labs_custom_blocks
+visibility: {  }

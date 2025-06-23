@@ -1,0 +1,12 @@
+drop-icon:
+  version: 1.x
+  js:
+    js/app.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+  css:
+    theme:
+      css/homepage_news_events.css: {}

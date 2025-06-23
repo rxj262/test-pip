@@ -22,9 +22,9 @@ third_party_settings:
         - group_main_content
         - group_right_sidebar
       label: 'All Options'
-      region: hidden
+      region: content
       parent_name: ''
-      weight: 11
+      weight: 2
       format_type: tabs
       format_settings:
         classes: ''
@@ -34,7 +34,7 @@ third_party_settings:
       children:
         - field_robust_3_page_ref
       label: 'Main Content'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 21
       format_type: tab
@@ -48,7 +48,7 @@ third_party_settings:
       children:
         - field_robust_3_page_right_ref
       label: 'Right Sidebar'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 22
       format_type: tab
@@ -62,7 +62,7 @@ third_party_settings:
       children:
         - field_robust_3_hero_ref
       label: 'Hero Image'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 20
       format_type: tab
@@ -87,7 +87,7 @@ content:
     third_party_settings: {  }
   field_robust_3_hero_ref:
     type: paragraphs
-    weight: 26
+    weight: 7
     region: content
     settings:
       title: Paragraph
@@ -100,12 +100,14 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
       features:
+        add_above: '0'
         collapse_edit_all: collapse_edit_all
+        convert: '0'
         duplicate: duplicate
     third_party_settings: {  }
   field_robust_3_page_ref:
     type: paragraphs
-    weight: 27
+    weight: 8
     region: content
     settings:
       title: Paragraph
@@ -123,40 +125,47 @@ content:
     third_party_settings: {  }
   field_robust_3_page_right_ref:
     type: paragraphs
-    weight: 28
+    weight: 9
     region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: closed
+      edit_mode: open
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: _none
+      default_paragraph_type: ''
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
   field_sites:
     type: options_buttons
-    weight: 29
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   moderation_state:
     type: workflow_buttons
-    weight: 3
+    weight: 6
     region: content
     settings:
       show_current_state: false
     third_party_settings: {  }
   path:
     type: path
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -166,10 +175,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   promote: true
-  status: true
   sticky: true
   uid: true
-  url_redirects: true

@@ -3,6 +3,5 @@ status: true
 dependencies: {  }
 name: 'CWRU Sites'
 vid: cwru_sites
-description: null
+description: ''
 weight: 0
-new_revision: false

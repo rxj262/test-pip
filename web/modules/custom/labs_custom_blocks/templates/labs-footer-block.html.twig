@@ -1,0 +1,152 @@
+{#
+  data is passed down from LabsFooterBlock.php
+  '#data' => [
+    'node' => $siteinfo_node,
+    'lab_name' => $lab_term_name,
+    'footer_options' => theme_get_setting('footer_options', 'crew')
+    ],
+#}
+{% set node = data.node|first %}
+<div class="form-group">
+  <div class="views-row">
+    <div class="footer__block footer__block--university">
+      <img
+        src="https://dudbm6bcnmy8e.cloudfront.net/cwru/img/cwru_acronym_blue.svg"
+        onerror="this.src='https://dudbm6bcnmy8e.cloudfront.net/cwru/img/cwru_acronym_blue.png'"
+        alt="Case Western Reserve University Logo with Tagline"
+        class="footer__logo"
+        title="Case Western Reserve University">
+      <p>&copy; {{ 'now'|date('Y') }} <a href="//case.edu/">Case Western Reserve
+          University</a></p>
+      <address>10900 Euclid Ave. Cleveland, Ohio 44106</address>
+      <p>
+        <a href="tel:12163682000">216.368.2000</a>
+        <br/>
+        <a
+          href="https://case.edu/utech/departments/information-security/policies/legal-privacy-notice">Legal
+          Notice</a>
+        |
+        <a href="https://case.edu/privacy-statement/index.html">Privacy
+          Policy</a>
+      </p>
+    </div>
+
+    {% if data.footer_options.campus_location %}
+      <div class="footer__block footer__block--department">
+        <img
+          src="https://dudbm6bcnmy8e.cloudfront.net/cwru-drupal-assets/images/pin-icon.svg"
+          alt="map marker"
+          class="footer__map-icon hidden-sm hidden-xs">
+        <div class="footer__department-info">
+          <div class="footer__header h3">
+
+            {% if data.lab_name is empty %}
+              {{ theme.settings.department_header }}
+            {% else %}
+              {{ data.lab_name }}
+            {% endif %}
+
+          </div>
+          {% if node.field_site_street %}
+            <strong>Campus Location:</strong>
+            <p>
+              {{ node.field_site_street.0.value }}
+              {% if node.field_site_street_two %}
+                <br>
+                {{ node.field_site_street_two.0.value }}
+              {% endif %}
+              <br>
+              {{ node.field_site_city.0.value }},
+              {{ node.field_site_state.0.value }}
+              {{ node.field_site_zip.0.value }}
+            </p>
+          {% endif %}
+          {% if node.field_site_mailing_street %}
+            <strong>Mailing Address:</strong>
+            <p>
+              {{ node.field_site_mailing_street.0.value }}
+              {% if node.field_site_mailing_street_two.0.value %}
+                <br>
+                {{ node.field_site_mailing_street_two.0.value }}
+              {% endif %}
+              <br>
+              {{ node.field_site_mailing_city.0.value }},
+              {{ node.field_site_mailing_state.0.value }}
+              {{ node.field_site_mailing_zip_four.0.value }}
+            </p>
+          {% endif %}
+          {% if node.field_site_phone.0.value %}
+            <p>
+              <strong>Phone:</strong> <a
+                href="{{ node.field_site_phone.0.value }}">{{ node.field_site_phone.0.value }}</a>
+            </p>
+          {% endif %}
+          {# Fax when necessary #}
+          {% if node.field_fax %}
+            <p>
+              <strong>Fax:</strong> {{ node.field_fax.0.value }}
+            </p>
+          {% endif %}
+          {# Fax when necessary end #}
+          {% if node.field_site_email %}
+            {% for email in node.field_site_email %}
+              {% if email.title is defined and email is iterable %}
+                <p>
+                  <strong>Email:</strong> <a
+                    href="{{ email.uri }}">{{ email.title }}</a>
+                </p>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          {% if node.field_site_feedback %}
+            <p>
+              <a href="mailto:{{ node.field_site_feedback.0.value }}">Site
+                Feedback</a>
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if data.footer_options.social_media %}
+      {% for section in node.field_site_social_ref %}
+        {% if section.entity.field_social_title_ is defined and section is iterable %}
+          <div class="footer__block footer__block--social">
+          <div
+            class="footer__header h3">{{ section.entity.field_social_title_.0.value }}</div>
+          <div class="footer__social-icons">
+            {% for item in section.entity.field_social_ref %}
+              {% if item.entity.field_social_select.value %}
+
+
+                <a href="{{ item.entity.field_social_url.uri }}" target="_blank"
+                   title="CWRU {{ item.entity.field_social_select.value[6:]|capitalize }}"
+                   class="footer__social-icon {{ item.entity.field_social_select.value }}">
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <div class="footer__block footer__block--links">
+      <div class="footer__header h3" tabindex="0">CWRU Links</div>
+      <ul role="menu" class="footer-links">
+        <li role="menuitem">
+          <a href="https://case.edu/admissions/">Apply to CWRU</a>
+        </li>
+        <li role="menuitem">
+          <a href="https://case.edu/give/">Give Now</a>
+        </li>
+        <li role="menuitem">
+          <a href="https://case.edu/visit/">Visit Campus</a>
+        </li>
+        <li role="menuitem">
+          <a href="https://webapps.case.edu/directory/">University Directory</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

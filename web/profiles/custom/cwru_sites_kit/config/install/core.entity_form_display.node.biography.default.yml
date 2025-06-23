@@ -52,7 +52,9 @@ dependencies:
     - entity_browser_entity_form
     - field_group
     - ief_table_view_mode
+    - metatag
     - paragraphs
+    - path
     - telephone
     - text
     - workflow_buttons
@@ -74,7 +76,7 @@ third_party_settings:
         - group_areas_of_expertise
         - group_additional_information
       label: 'All Options'
-      region: hidden
+      region: content
       parent_name: ''
       weight: 1
       format_type: tabs
@@ -90,10 +92,11 @@ third_party_settings:
         - field_biography_role_ref
         - field_biography_title_ref
         - field_biography_drupal_site_ref
-        - field_biography_image_ref
+        - field_sites
         - group_contact_information
+        - field_biography_image_ref
       label: 'Main Details'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 10
       format_type: tab
@@ -115,9 +118,9 @@ third_party_settings:
         - field_biography_mailing_address
         - field_bio_mailing_location_code
       label: 'Contact Information'
-      region: hidden
+      region: content
       parent_name: group_main_details
-      weight: 19
+      weight: 15
       format_type: tab
       format_settings:
         classes: ''
@@ -128,11 +131,11 @@ third_party_settings:
     group_teaching_info:
       children:
         - field_biography_teaching_schedul
-        - field_biography_teaching_interes
         - group_course_information
+        - field_biography_teaching_interes
         - group_i
       label: 'Teaching Information'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 12
       format_type: tab
@@ -146,7 +149,7 @@ third_party_settings:
       children:
         - field_biography_office_hours
       label: 'Office Hours'
-      region: hidden
+      region: content
       parent_name: group_teaching_info
       weight: 10
       format_type: tab
@@ -160,7 +163,7 @@ third_party_settings:
       children:
         - field_biography_professional_mem
       label: 'Professional Memberships'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 15
       format_type: tab
@@ -176,7 +179,7 @@ third_party_settings:
         - field_biography_research_project
         - field_biography_recent_funding
       label: 'Research Information'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 13
       format_type: tab
@@ -190,7 +193,7 @@ third_party_settings:
       children:
         - field_biography_education_ref
       label: Education
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 19
       format_type: tab
@@ -204,7 +207,7 @@ third_party_settings:
       children:
         - field_biography_award_ref
       label: 'Awards and Honors'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 14
       format_type: tab
@@ -218,7 +221,7 @@ third_party_settings:
       children:
         - field_biography_course_name_ref
       label: 'Course Information'
-      region: hidden
+      region: content
       parent_name: group_teaching_info
       weight: 7
       format_type: tab
@@ -230,10 +233,10 @@ third_party_settings:
         required_fields: true
     group_publications:
       children:
-        - field_biography_publication_ref
         - field_biography_publications_ope
+        - field_biography_publication_ref
       label: Publications
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 17
       format_type: tab
@@ -246,10 +249,10 @@ third_party_settings:
         required_fields: true
     group_presentations:
       children:
-        - field_biography_presentation_ref
         - field_biography_presentations_op
+        - field_biography_presentation_ref
       label: Presentations
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 18
       format_type: tab
@@ -261,10 +264,10 @@ third_party_settings:
         required_fields: true
     group_external_appointment:
       children:
-        - field_biography_ext_appoint_ref
         - field_biography_ext_appt_open_en
+        - field_biography_ext_appoint_ref
       label: 'External Appointments'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 16
       format_type: tab
@@ -278,7 +281,7 @@ third_party_settings:
       children:
         - field_biography_residency_ref
       label: 'Residencies, Internships and Fellowships'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 20
       format_type: tab
@@ -292,7 +295,7 @@ third_party_settings:
       children:
         - field_biography_additional_infor
       label: 'Additional Information'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 22
       format_type: tab
@@ -309,7 +312,7 @@ third_party_settings:
         - field_biography_view_order
         - field_additional_view_order_ref
       label: 'Developer Use Only'
-      region: hidden
+      region: content
       parent_name: ''
       weight: 2
       format_type: fieldset
@@ -324,7 +327,7 @@ third_party_settings:
         - field_biography_secondary_job_de
         - field_biography_add_job_desc_ref
       label: 'Job Descriptions'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 11
       format_type: tab
@@ -339,7 +342,7 @@ third_party_settings:
         - field_biography_areas_of_experti
         - field_biography_specialties
       label: 'Areas of Expertise'
-      region: hidden
+      region: content
       parent_name: group_all_options
       weight: 21
       format_type: tab
@@ -356,33 +359,7 @@ mode: default
 content:
   field_additional_view_order_ref:
     type: paragraphs
-    weight: 18
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_bio_mailing_location_code:
-    type: string_textfield
-    weight: 42
-    region: content
-    settings:
-      size: 30
-      placeholder: ''
-    third_party_settings: {  }
-  field_biography_add_job_desc_ref:
-    type: paragraphs
-    weight: 106
+    weight: 22
     region: content
     settings:
       title: Paragraph
@@ -393,35 +370,28 @@ content:
       closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: _none
       features:
+        add_above: '0'
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-  field_biography_additional_infor:
-    type: text_textarea
-    weight: 44
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_biography_areas_of_experti:
+  field_bio_mailing_location_code:
     type: string_textfield
-    weight: 103
+    weight: 38
     region: content
     settings:
-      size: 60
+      size: 30
       placeholder: ''
     third_party_settings: {  }
-  field_biography_award_ref:
+  field_biography_add_job_desc_ref:
     type: paragraphs
-    weight: 28
+    weight: 42
     region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: closed
+      edit_mode: open
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
@@ -429,12 +399,48 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
       features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_biography_additional_infor:
+    type: text_textarea
+    weight: 39
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_areas_of_experti:
+    type: string_textfield
+    weight: 40
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_award_ref:
+    type: paragraphs
+    weight: 43
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
   field_biography_building_address:
     type: string_textarea
-    weight: 40
+    weight: 36
     region: content
     settings:
       rows: 2
@@ -442,7 +448,7 @@ content:
     third_party_settings: {  }
   field_biography_course_name_ref:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -452,7 +458,7 @@ content:
     third_party_settings: {  }
   field_biography_credential_ref:
     type: entity_reference_autocomplete_tags
-    weight: 12
+    weight: 10
     region: content
     settings:
       match_operator: CONTAINS
@@ -462,7 +468,7 @@ content:
     third_party_settings: {  }
   field_biography_drupal_site_ref:
     type: entity_reference_autocomplete_tags
-    weight: 17
+    weight: 13
     region: content
     settings:
       match_operator: CONTAINS
@@ -472,12 +478,12 @@ content:
     third_party_settings: {  }
   field_biography_education_ref:
     type: paragraphs
-    weight: 30
+    weight: 44
     region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: closed
+      edit_mode: open
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
@@ -485,12 +491,13 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
       features:
+        add_above: '0'
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
   field_biography_email:
     type: email_default
-    weight: 34
+    weight: 30
     region: content
     settings:
       placeholder: ''
@@ -498,12 +505,12 @@ content:
     third_party_settings: {  }
   field_biography_ext_appoint_ref:
     type: paragraphs
-    weight: 31
+    weight: 45
     region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: closed
+      edit_mode: open
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
@@ -511,12 +518,13 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
       features:
+        add_above: '0'
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
   field_biography_ext_appt_open_en:
     type: text_textarea
-    weight: 32
+    weight: 29
     region: content
     settings:
       rows: 5
@@ -524,7 +532,7 @@ content:
     third_party_settings: {  }
   field_biography_first_name:
     type: string_textfield
-    weight: 10
+    weight: 8
     region: content
     settings:
       size: 60
@@ -532,7 +540,7 @@ content:
     third_party_settings: {  }
   field_biography_image_ref:
     type: inline_entity_form_complex_table_view_mode
-    weight: 20
+    weight: 16
     region: content
     settings:
       form_mode: default
@@ -552,7 +560,7 @@ content:
         entity_browser_id: image_browser
   field_biography_job_description:
     type: text_textarea_with_summary
-    weight: 18
+    weight: 19
     region: content
     settings:
       rows: 9
@@ -562,7 +570,7 @@ content:
     third_party_settings: {  }
   field_biography_last_name:
     type: string_textfield
-    weight: 11
+    weight: 9
     region: content
     settings:
       size: 60
@@ -570,7 +578,7 @@ content:
     third_party_settings: {  }
   field_biography_mailing_address:
     type: string_textarea
-    weight: 41
+    weight: 37
     region: content
     settings:
       rows: 2
@@ -578,7 +586,7 @@ content:
     third_party_settings: {  }
   field_biography_office_hours:
     type: text_textarea
-    weight: 2
+    weight: 1
     region: content
     settings:
       rows: 5
@@ -586,7 +594,7 @@ content:
     third_party_settings: {  }
   field_biography_office_location:
     type: string_textfield
-    weight: 38
+    weight: 34
     region: content
     settings:
       size: 60
@@ -594,7 +602,7 @@ content:
     third_party_settings: {  }
   field_biography_office_number:
     type: string_textfield
-    weight: 39
+    weight: 35
     region: content
     settings:
       size: 30
@@ -602,7 +610,7 @@ content:
     third_party_settings: {  }
   field_biography_office_ref:
     type: entity_reference_autocomplete_tags
-    weight: 15
+    weight: 14
     region: content
     settings:
       match_operator: CONTAINS
@@ -612,156 +620,14 @@ content:
     third_party_settings: {  }
   field_biography_phone:
     type: telephone_default
-    weight: 35
+    weight: 31
     region: content
     settings:
       placeholder: '###.###.####'
     third_party_settings: {  }
   field_biography_presentation_ref:
     type: paragraphs
-    weight: 30
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_biography_presentations_op:
-    type: text_textarea
-    weight: 31
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_biography_professional_mem:
-    type: string_textfield
-    weight: 20
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_biography_publication_ref:
-    type: paragraphs
-    weight: 29
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_biography_publications_ope:
-    type: text_textarea
-    weight: 30
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_biography_recent_funding:
-    type: text_textarea
-    weight: 19
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_biography_research_interes:
-    type: text_textarea
-    weight: 17
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_biography_research_project:
-    type: text_textarea
-    weight: 18
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_biography_residency_ref:
-    type: paragraphs
-    weight: 32
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_biography_role_ref:
-    type: options_select
-    weight: 13
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_biography_secondary_job_de:
-    type: text_textarea_with_summary
-    weight: 19
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-  field_biography_specialties:
-    type: string_textfield
-    weight: 104
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_biography_teaching_interes:
-    type: text_textarea
-    weight: 9
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_biography_teaching_schedul:
-    type: text_textarea
-    weight: 6
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_biography_title_ref:
-    type: paragraphs
-    weight: 16
+    weight: 46
     region: content
     settings:
       title: Paragraph
@@ -772,14 +638,160 @@ content:
       closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: _none
       features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_biography_presentations_op:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_professional_mem:
+    type: string_textfield
+    weight: 25
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_publication_ref:
+    type: paragraphs
+    weight: 47
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_biography_publications_ope:
+    type: text_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_recent_funding:
+    type: text_textarea
+    weight: 23
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_research_interes:
+    type: text_textarea
+    weight: 16
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_research_project:
+    type: text_textarea
+    weight: 20
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_residency_ref:
+    type: paragraphs
+    weight: 48
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_biography_role_ref:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_biography_secondary_job_de:
+    type: text_textarea_with_summary
+    weight: 24
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_biography_specialties:
+    type: string_textfield
+    weight: 41
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_teaching_interes:
+    type: text_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_teaching_schedul:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_biography_title_ref:
+    type: paragraphs
+    weight: 12
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
   field_biography_view_order:
     type: string_textfield
-    weight: 17
+    weight: 21
     region: content
     settings:
       size: 5
@@ -787,27 +799,39 @@ content:
     third_party_settings: {  }
   field_cell_phone_number:
     type: telephone_default
-    weight: 36
+    weight: 32
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_fax_number:
     type: telephone_default
-    weight: 37
+    weight: 33
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-  field_sites:
-    type: options_buttons
-    weight: 6
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 4
     region: content
-    settings: {  }
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_sites:
+    type: entity_reference_autocomplete_tags
+    weight: 14
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: 'Leave empty except for "cwru-sites"'
     third_party_settings: {  }
   field_views_filter:
     type: entity_reference_autocomplete_tags
-    weight: 16
+    weight: 17
     region: content
     settings:
       match_operator: CONTAINS
@@ -817,10 +841,16 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: workflow_buttons
-    weight: 112
+    weight: 49
     region: content
     settings:
       show_current_state: false
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -832,10 +862,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_biography_media_mentions: true
-  field_biography_university_publi: true
-  field_meta_tags: true
-  path: true
   promote: true
   status: true
   sticky: true

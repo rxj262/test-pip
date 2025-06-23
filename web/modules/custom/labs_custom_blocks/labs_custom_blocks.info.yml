@@ -1,0 +1,5 @@
+name: Labs Custom Blocks
+type: module
+description: Generate header, nav, sidebar and footer for each lab
+package: Custom
+core_version_requirement: '>=10'

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: fu-lab
+label: 'fu lab'
+description: ''
+locked: false

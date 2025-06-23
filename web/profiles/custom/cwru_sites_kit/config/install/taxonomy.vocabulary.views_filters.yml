@@ -5,4 +5,3 @@ name: 'Views Filters'
 vid: views_filters
 description: 'Catch-all taxonomy for creating filtered views'
 weight: 0
-new_revision: false

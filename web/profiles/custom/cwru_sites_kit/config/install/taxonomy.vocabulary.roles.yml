@@ -3,6 +3,5 @@ status: true
 dependencies: {  }
 name: Roles
 vid: roles
-description: null
+description: ''
 weight: 0
-new_revision: false

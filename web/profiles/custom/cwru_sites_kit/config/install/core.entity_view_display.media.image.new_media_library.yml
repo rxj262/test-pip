@@ -35,7 +35,7 @@ content:
         granularity: 2
         refresh: 60
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_caption:
     type: string
@@ -43,7 +43,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_image:
     type: image
@@ -51,8 +51,10 @@ content:
     settings:
       image_link: ''
       image_style: media_library_thumbnail
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_photo_caption:
     type: string
@@ -60,7 +62,15 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 4
+    region: content
+  field_sites:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
     region: content
   name:
     type: string
@@ -68,7 +78,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   uid:
     type: entity_reference_label
@@ -76,10 +86,9 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
 hidden:
   field_media_image: true
   field_media_in_library: true
-  field_sites: true
   thumbnail: true

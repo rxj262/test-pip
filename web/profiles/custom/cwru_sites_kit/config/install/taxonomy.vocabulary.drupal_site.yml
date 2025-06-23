@@ -5,4 +5,3 @@ name: 'Drupal Site'
 vid: drupal_site
 description: 'Active Drupal Sites'
 weight: 0
-new_revision: false

@@ -8,12 +8,16 @@ distribution:
   install:
     theme: crew
 
-# Required modules
+
 install:
   - admin_toolbar
+  - labs_custom_blocks
+  - datetime_range
+  - devel
+  - twig_tweak
+  - menu_force
   - cwru_default_error_page
   - admin_toolbar_tools
-  - datetime_range
   - anchor_link
   - automated_cron
   - basic_auth
@@ -21,10 +25,10 @@ install:
   - big_pipe
   - blazy
   - block
-  - devel
   - block_content
   - breakpoint
   - cas
+  - field_permissions
   - checklistapi
   - ckeditor
   - coffee
@@ -142,10 +146,10 @@ install:
   - cms_content_sync_health
   - cms_content_sync_developer
   - cms_content_sync_views
-  - labs_custom_blocks
 
 themes:
   - bootstrap
   - crew
   - gin
   - olivero
+  - claro

@@ -1,0 +1,406 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - cms_content_sync.pool.content
+    - cms_content_sync.pool.cwru_sites_content
+id: cwru_sites_som_filter
+name: 'cwru_sites_som filter'
+type: pull
+variant: simple
+simple_settings:
+  pools:
+    - content
+    - cwru_sites_content
+  poolAssignment: force
+  mode: automatically
+  deletions: true
+  embeddedDeletions: true
+  updateBehavior: force_and_forbid_editing
+  entityTypeSettings:
+    block_content:
+      allBundles:
+        mode: disabled
+    crop:
+      allBundles:
+        mode: dependency
+    file:
+      perBundle:
+        file:
+          mode: dependency
+          previewViewMode: table
+    media:
+      perBundle:
+        document:
+          mode: disabled
+          previewViewMode: disabled
+        gallery:
+          mode: disabled
+          previewViewMode: disabled
+        image:
+          mode: dependency
+          previewViewMode: table
+        instagram:
+          mode: disabled
+          previewViewMode: disabled
+        tweet:
+          mode: disabled
+          previewViewMode: disabled
+        video:
+          mode: disabled
+          previewViewMode: disabled
+        audio:
+          mode: dependency
+        file:
+          mode: dependency
+    menu_link_content:
+      allBundles:
+        mode: disabled
+    node:
+      perBundle:
+        biography:
+          mode: default
+          previewViewMode: table
+          filters:
+            -
+              type: includes-reference
+              fieldMachineName: field_biography_drupal_site_ref
+              values:
+                -
+                  namespaceMachineName: taxonomy_term
+                  machineName: drupal_site
+                  remoteUuid: 83c922f2-b07c-46c2-bdf9-d26dac539a7f
+        error_page:
+          mode: disabled
+          previewViewMode: disabled
+        robust_3_column_page:
+          mode: disabled
+          previewViewMode: disabled
+        site_information:
+          mode: default
+          previewViewMode: table
+          filters:
+            -
+              type: includes-reference
+              fieldMachineName: field_site_drupal_site_ref
+              values:
+                -
+                  namespaceMachineName: taxonomy_term
+                  machineName: drupal_site
+                  remoteUuid: 83c922f2-b07c-46c2-bdf9-d26dac539a7f
+        homepage_w_full_width_feature:
+          mode: disabled
+        event_detail_page:
+          mode: disabled
+        news_article:
+          mode: disabled
+    paragraph:
+      perBundle:
+        accordion:
+          mode: disabled
+          previewViewMode: disabled
+        accordion_section:
+          mode: disabled
+          previewViewMode: disabled
+        additional_job_descriptions:
+          mode: dependency
+          previewViewMode: table
+        additional_view_orders:
+          mode: dependency
+          previewViewMode: table
+        aside:
+          mode: disabled
+          previewViewMode: disabled
+        award_honor:
+          mode: dependency
+          previewViewMode: table
+        biography_education:
+          mode: dependency
+          previewViewMode: table
+        button:
+          mode: disabled
+          previewViewMode: disabled
+        centered_intro_text:
+          mode: disabled
+          previewViewMode: disabled
+        content:
+          mode: disabled
+          previewViewMode: disabled
+        external_appointment:
+          mode: dependency
+          previewViewMode: table
+        gallery:
+          mode: disabled
+          previewViewMode: disabled
+        gallery_section:
+          mode: disabled
+          previewViewMode: disabled
+        hero_landing_page:
+          mode: disabled
+          previewViewMode: disabled
+        hero_one_column:
+          mode: disabled
+          previewViewMode: disabled
+        job_title_affiliation:
+          mode: dependency
+          previewViewMode: table
+        presentation:
+          mode: dependency
+          previewViewMode: table
+        publication:
+          mode: dependency
+          previewViewMode: table
+        residency:
+          mode: dependency
+          previewViewMode: table
+        site_affiliation:
+          mode: dependency
+          previewViewMode: table
+        social:
+          mode: dependency
+          previewViewMode: table
+        social_section:
+          mode: dependency
+          previewViewMode: table
+        subfeature:
+          mode: disabled
+          previewViewMode: disabled
+        subfeature_landing:
+          mode: disabled
+          previewViewMode: disabled
+        subfeature_section:
+          mode: disabled
+          previewViewMode: disabled
+        tab_section:
+          mode: disabled
+          previewViewMode: disabled
+        tabs:
+          mode: disabled
+          previewViewMode: disabled
+        view:
+          mode: dependency
+    taxonomy_term:
+      perBundle:
+        academic_credentials:
+          mode: dependency
+          previewViewMode: table
+        centers:
+          mode: dependency
+          previewViewMode: table
+        course_name:
+          mode: dependency
+          previewViewMode: table
+        degree:
+          mode: dependency
+          previewViewMode: table
+        departments:
+          mode: dependency
+          previewViewMode: table
+        drupal_site:
+          mode: default
+          previewViewMode: table
+          filters:
+            -
+              type: includes-reference
+              fieldMachineName: parent
+              values:
+                -
+                  namespaceMachineName: taxonomy_term
+                  machineName: drupal_site
+                  remoteUuid: 83c922f2-b07c-46c2-bdf9-d26dac539a7f
+        job_title:
+          mode: dependency
+          previewViewMode: table
+        roles:
+          mode: dependency
+          previewViewMode: table
+        schools:
+          mode: dependency
+          previewViewMode: table
+        tags:
+          mode: disabled
+          previewViewMode: disabled
+        views_filters:
+          mode: dependency
+          previewViewMode: table
+        cwru_sites:
+          mode: default
+          filters:
+            -
+              type: includes-reference
+              fieldMachineName: parent
+              values:
+                -
+                  namespaceMachineName: taxonomy_term
+                  machineName: cwru_sites
+                  remoteUuid: ca619f07-560c-44dc-957d-e5fb73fe0af3
+    redirect:
+      allBundles:
+        mode: disabled
+    block:
+      allBundles:
+        mode: dependency
+    view:
+      allBundles:
+        mode: dependency
+    action:
+      allBundles:
+        mode: disabled
+    base_field_override:
+      allBundles:
+        mode: disabled
+    block_content_type:
+      allBundles:
+        mode: disabled
+    cms_content_sync_entity_status:
+      allBundles:
+        mode: disabled
+    cms_content_sync_flow:
+      allBundles:
+        mode: disabled
+    cms_content_sync_pool:
+      allBundles:
+        mode: disabled
+    contact_form:
+      allBundles:
+        mode: disabled
+    contact_message:
+      allBundles:
+        mode: disabled
+    content_moderation_state:
+      allBundles:
+        mode: disabled
+    crop_type:
+      allBundles:
+        mode: disabled
+    date_format:
+      allBundles:
+        mode: disabled
+    editor:
+      allBundles:
+        mode: disabled
+    embed_button:
+      allBundles:
+        mode: disabled
+    encryption_profile:
+      allBundles:
+        mode: disabled
+    entity_browser:
+      allBundles:
+        mode: disabled
+    entity_embed_fake_entity:
+      allBundles:
+        mode: disabled
+    entity_form_display:
+      allBundles:
+        mode: disabled
+    entity_form_mode:
+      allBundles:
+        mode: disabled
+    entity_view_display:
+      allBundles:
+        mode: disabled
+    entity_view_mode:
+      allBundles:
+        mode: disabled
+    features_bundle:
+      allBundles:
+        mode: disabled
+    field_config:
+      allBundles:
+        mode: disabled
+    field_storage_config:
+      allBundles:
+        mode: disabled
+    filter_format:
+      allBundles:
+        mode: disabled
+    image_style:
+      allBundles:
+        mode: disabled
+    key:
+      allBundles:
+        mode: disabled
+    key_config_override:
+      allBundles:
+        mode: disabled
+    linkit_profile:
+      allBundles:
+        mode: disabled
+    media_type:
+      allBundles:
+        mode: disabled
+    menu:
+      allBundles:
+        mode: disabled
+    metatag_defaults:
+      allBundles:
+        mode: disabled
+    node_type:
+      allBundles:
+        mode: disabled
+    page:
+      allBundles:
+        mode: disabled
+    page_variant:
+      allBundles:
+        mode: disabled
+    paragraphs_type:
+      allBundles:
+        mode: disabled
+    path_alias:
+      allBundles:
+        mode: disabled
+    pathauto_pattern:
+      allBundles:
+        mode: disabled
+    remote_file:
+      allBundles:
+        mode: disabled
+    responsive_image_style:
+      allBundles:
+        mode: disabled
+    rest_resource_config:
+      allBundles:
+        mode: disabled
+    search_page:
+      allBundles:
+        mode: disabled
+    shortcut:
+      allBundles:
+        mode: disabled
+    shortcut_set:
+      allBundles:
+        mode: disabled
+    slick:
+      allBundles:
+        mode: disabled
+    taxonomy_vocabulary:
+      allBundles:
+        mode: disabled
+    tour:
+      allBundles:
+        mode: disabled
+    user:
+      allBundles:
+        mode: disabled
+    user_role:
+      allBundles:
+        mode: disabled
+    workflow:
+      allBundles:
+        mode: disabled
+    xmlsitemap:
+      allBundles:
+        mode: disabled
+  ignoreUnpublishedChanges: true
+  allowExplicitUnpublishing: true
+  pushMenuItems: true
+  pushPreviews: true
+  mergeLocalChanges: false
+  allowLocalDeletion: true
+  allowCrossSync: false
+  resolveUserReferences: mail
+  poolSelectionWidget: checkboxes
+per_bundle_settings: null
+sync_entities: null

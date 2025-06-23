@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.media.media_library
     - core.entity_view_mode.media.new_media_library
     - media.type.gallery
+    - taxonomy.vocabulary.cwru_sites
   module:
     - entity_browser
     - labs_custom_blocks
@@ -356,50 +357,7 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
-      tags:
-        - 'config:core.entity_view_display.media.audio.default'
-        - 'config:core.entity_view_display.media.document.default'
-        - 'config:core.entity_view_display.media.document.media_library'
-        - 'config:core.entity_view_display.media.file.default'
-        - 'config:core.entity_view_display.media.gallery.default'
-        - 'config:core.entity_view_display.media.gallery.media_library'
-        - 'config:core.entity_view_display.media.image.alternating_subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.article_image_style'
-        - 'config:core.entity_view_display.media.image.aside_image_style'
-        - 'config:core.entity_view_display.media.image.biography_listing_image_style'
-        - 'config:core.entity_view_display.media.image.biography_page_image_style'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.events_image_style_150x150'
-        - 'config:core.entity_view_display.media.image.gallery_item_image_style'
-        - 'config:core.entity_view_display.media.image.hero_full_width_image_style'
-        - 'config:core.entity_view_display.media.image.hero_landing_page_image_style'
-        - 'config:core.entity_view_display.media.image.hero_one_column'
-        - 'config:core.entity_view_display.media.image.hero_one_column_image_style'
-        - 'config:core.entity_view_display.media.image.hero_two_column_image_style'
-        - 'config:core.entity_view_display.media.image.ief_table'
-        - 'config:core.entity_view_display.media.image.image_with_caption'
-        - 'config:core.entity_view_display.media.image.image_with_caption_large'
-        - 'config:core.entity_view_display.media.image.image_with_caption_medium'
-        - 'config:core.entity_view_display.media.image.image_with_caption_small'
-        - 'config:core.entity_view_display.media.image.landing_page_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.media_embed'
-        - 'config:core.entity_view_display.media.image.media_image_large'
-        - 'config:core.entity_view_display.media.image.media_image_medium'
-        - 'config:core.entity_view_display.media.image.media_image_original'
-        - 'config:core.entity_view_display.media.image.media_image_small'
-        - 'config:core.entity_view_display.media.image.media_library'
-        - 'config:core.entity_view_display.media.image.new_media_library'
-        - 'config:core.entity_view_display.media.image.original_image'
-        - 'config:core.entity_view_display.media.image.photo_carousel_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_wide_image_style'
-        - 'config:core.entity_view_display.media.image.thumbnail_image_style'
-        - 'config:core.entity_view_display.media.instagram.default'
-        - 'config:core.entity_view_display.media.instagram.media_library'
-        - 'config:core.entity_view_display.media.tweet.default'
-        - 'config:core.entity_view_display.media.tweet.media_library'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.media_library'
+      tags: {  }
   gallery_media_select_modal:
     id: gallery_media_select_modal
     display_title: 'Gallery media select modal'
@@ -543,50 +501,7 @@ display:
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
         - user.permissions
-      tags:
-        - 'config:core.entity_view_display.media.audio.default'
-        - 'config:core.entity_view_display.media.document.default'
-        - 'config:core.entity_view_display.media.document.media_library'
-        - 'config:core.entity_view_display.media.file.default'
-        - 'config:core.entity_view_display.media.gallery.default'
-        - 'config:core.entity_view_display.media.gallery.media_library'
-        - 'config:core.entity_view_display.media.image.alternating_subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.article_image_style'
-        - 'config:core.entity_view_display.media.image.aside_image_style'
-        - 'config:core.entity_view_display.media.image.biography_listing_image_style'
-        - 'config:core.entity_view_display.media.image.biography_page_image_style'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.events_image_style_150x150'
-        - 'config:core.entity_view_display.media.image.gallery_item_image_style'
-        - 'config:core.entity_view_display.media.image.hero_full_width_image_style'
-        - 'config:core.entity_view_display.media.image.hero_landing_page_image_style'
-        - 'config:core.entity_view_display.media.image.hero_one_column'
-        - 'config:core.entity_view_display.media.image.hero_one_column_image_style'
-        - 'config:core.entity_view_display.media.image.hero_two_column_image_style'
-        - 'config:core.entity_view_display.media.image.ief_table'
-        - 'config:core.entity_view_display.media.image.image_with_caption'
-        - 'config:core.entity_view_display.media.image.image_with_caption_large'
-        - 'config:core.entity_view_display.media.image.image_with_caption_medium'
-        - 'config:core.entity_view_display.media.image.image_with_caption_small'
-        - 'config:core.entity_view_display.media.image.landing_page_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.media_embed'
-        - 'config:core.entity_view_display.media.image.media_image_large'
-        - 'config:core.entity_view_display.media.image.media_image_medium'
-        - 'config:core.entity_view_display.media.image.media_image_original'
-        - 'config:core.entity_view_display.media.image.media_image_small'
-        - 'config:core.entity_view_display.media.image.media_library'
-        - 'config:core.entity_view_display.media.image.new_media_library'
-        - 'config:core.entity_view_display.media.image.original_image'
-        - 'config:core.entity_view_display.media.image.photo_carousel_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_wide_image_style'
-        - 'config:core.entity_view_display.media.image.thumbnail_image_style'
-        - 'config:core.entity_view_display.media.instagram.default'
-        - 'config:core.entity_view_display.media.instagram.media_library'
-        - 'config:core.entity_view_display.media.tweet.default'
-        - 'config:core.entity_view_display.media.tweet.media_library'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.media_library'
+      tags: {  }
   gallery_user_media_select_modal:
     id: gallery_user_media_select_modal
     display_title: 'Gallery User Media select modal'
@@ -709,7 +624,7 @@ display:
           admin_label: ''
           entity_type: media
           entity_field: uid
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -735,6 +650,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: user
       filters:
         name:
           id: name
@@ -1013,50 +929,7 @@ display:
         - 'url.query_args:sort_order'
         - user
         - user.permissions
-      tags:
-        - 'config:core.entity_view_display.media.audio.default'
-        - 'config:core.entity_view_display.media.document.default'
-        - 'config:core.entity_view_display.media.document.media_library'
-        - 'config:core.entity_view_display.media.file.default'
-        - 'config:core.entity_view_display.media.gallery.default'
-        - 'config:core.entity_view_display.media.gallery.media_library'
-        - 'config:core.entity_view_display.media.image.alternating_subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.article_image_style'
-        - 'config:core.entity_view_display.media.image.aside_image_style'
-        - 'config:core.entity_view_display.media.image.biography_listing_image_style'
-        - 'config:core.entity_view_display.media.image.biography_page_image_style'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.events_image_style_150x150'
-        - 'config:core.entity_view_display.media.image.gallery_item_image_style'
-        - 'config:core.entity_view_display.media.image.hero_full_width_image_style'
-        - 'config:core.entity_view_display.media.image.hero_landing_page_image_style'
-        - 'config:core.entity_view_display.media.image.hero_one_column'
-        - 'config:core.entity_view_display.media.image.hero_one_column_image_style'
-        - 'config:core.entity_view_display.media.image.hero_two_column_image_style'
-        - 'config:core.entity_view_display.media.image.ief_table'
-        - 'config:core.entity_view_display.media.image.image_with_caption'
-        - 'config:core.entity_view_display.media.image.image_with_caption_large'
-        - 'config:core.entity_view_display.media.image.image_with_caption_medium'
-        - 'config:core.entity_view_display.media.image.image_with_caption_small'
-        - 'config:core.entity_view_display.media.image.landing_page_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.media_embed'
-        - 'config:core.entity_view_display.media.image.media_image_large'
-        - 'config:core.entity_view_display.media.image.media_image_medium'
-        - 'config:core.entity_view_display.media.image.media_image_original'
-        - 'config:core.entity_view_display.media.image.media_image_small'
-        - 'config:core.entity_view_display.media.image.media_library'
-        - 'config:core.entity_view_display.media.image.new_media_library'
-        - 'config:core.entity_view_display.media.image.original_image'
-        - 'config:core.entity_view_display.media.image.photo_carousel_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_wide_image_style'
-        - 'config:core.entity_view_display.media.image.thumbnail_image_style'
-        - 'config:core.entity_view_display.media.instagram.default'
-        - 'config:core.entity_view_display.media.instagram.media_library'
-        - 'config:core.entity_view_display.media.tweet.default'
-        - 'config:core.entity_view_display.media.tweet.media_library'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.media_library'
+      tags: {  }
   global_media_library_page:
     id: global_media_library_page
     display_title: 'Gobal Media Library'
@@ -1304,6 +1177,224 @@ display:
         options:
           perm: 'access media overview'
       arguments: {  }
+      filters:
+        name:
+          id: name
+          table: media_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: media
+          entity_field: name
+          plugin_id: string
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: name_op
+            label: 'Media name'
+            description: ''
+            use_operator: false
+            operator: name_op
+            identifier: name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        bundle:
+          id: bundle
+          table: media_field_data
+          field: bundle
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: media
+          entity_field: bundle
+          plugin_id: bundle
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: bundle_op
+            label: Bundle
+            description: ''
+            use_operator: false
+            operator: bundle_op
+            identifier: bundle
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        status:
+          id: status
+          table: media_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: media
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Publishing status'
+            description: ''
+            use_operator: false
+            operator: status_op
+            identifier: status
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        media__field_sites:
+          id: media__field_sites
+          table: views
+          field: media__field_sites
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: restrict_media_display
+          operator: '='
+          value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_sites_target_id:
+          id: field_sites_target_id
+          table: media__field_sites
+          field: field_sites_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_sites_target_id_op
+            label: Sites
+            description: 'Filter by a specific cwru site you have access to'
+            use_operator: false
+            operator: field_sites_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_sites_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              school_developer: '0'
+              school_admin: '0'
+              department_admin: '0'
+              content_reviewer: '0'
+              content_editor: '0'
+              anonymous: '0'
+              cms_content_sync: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: cwru_sites
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: default
         options:
@@ -1324,8 +1415,8 @@ display:
         row: false
         fields: false
         arguments: false
-        filters: true
-        filter_groups: true
+        filters: false
+        filter_groups: false
       display_description: 'View for the global media library.'
       display_extenders: {  }
       path: admin/content/media
@@ -1348,50 +1439,7 @@ display:
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
         - user.permissions
-      tags:
-        - 'config:core.entity_view_display.media.audio.default'
-        - 'config:core.entity_view_display.media.document.default'
-        - 'config:core.entity_view_display.media.document.media_library'
-        - 'config:core.entity_view_display.media.file.default'
-        - 'config:core.entity_view_display.media.gallery.default'
-        - 'config:core.entity_view_display.media.gallery.media_library'
-        - 'config:core.entity_view_display.media.image.alternating_subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.article_image_style'
-        - 'config:core.entity_view_display.media.image.aside_image_style'
-        - 'config:core.entity_view_display.media.image.biography_listing_image_style'
-        - 'config:core.entity_view_display.media.image.biography_page_image_style'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.events_image_style_150x150'
-        - 'config:core.entity_view_display.media.image.gallery_item_image_style'
-        - 'config:core.entity_view_display.media.image.hero_full_width_image_style'
-        - 'config:core.entity_view_display.media.image.hero_landing_page_image_style'
-        - 'config:core.entity_view_display.media.image.hero_one_column'
-        - 'config:core.entity_view_display.media.image.hero_one_column_image_style'
-        - 'config:core.entity_view_display.media.image.hero_two_column_image_style'
-        - 'config:core.entity_view_display.media.image.ief_table'
-        - 'config:core.entity_view_display.media.image.image_with_caption'
-        - 'config:core.entity_view_display.media.image.image_with_caption_large'
-        - 'config:core.entity_view_display.media.image.image_with_caption_medium'
-        - 'config:core.entity_view_display.media.image.image_with_caption_small'
-        - 'config:core.entity_view_display.media.image.landing_page_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.media_embed'
-        - 'config:core.entity_view_display.media.image.media_image_large'
-        - 'config:core.entity_view_display.media.image.media_image_medium'
-        - 'config:core.entity_view_display.media.image.media_image_original'
-        - 'config:core.entity_view_display.media.image.media_image_small'
-        - 'config:core.entity_view_display.media.image.media_library'
-        - 'config:core.entity_view_display.media.image.new_media_library'
-        - 'config:core.entity_view_display.media.image.original_image'
-        - 'config:core.entity_view_display.media.image.photo_carousel_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_wide_image_style'
-        - 'config:core.entity_view_display.media.image.thumbnail_image_style'
-        - 'config:core.entity_view_display.media.instagram.default'
-        - 'config:core.entity_view_display.media.instagram.media_library'
-        - 'config:core.entity_view_display.media.tweet.default'
-        - 'config:core.entity_view_display.media.tweet.media_library'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.media_library'
+      tags: {  }
   media_select_modal:
     id: media_select_modal
     display_title: 'Media select modal'
@@ -1758,50 +1806,7 @@ display:
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
         - user.permissions
-      tags:
-        - 'config:core.entity_view_display.media.audio.default'
-        - 'config:core.entity_view_display.media.document.default'
-        - 'config:core.entity_view_display.media.document.media_library'
-        - 'config:core.entity_view_display.media.file.default'
-        - 'config:core.entity_view_display.media.gallery.default'
-        - 'config:core.entity_view_display.media.gallery.media_library'
-        - 'config:core.entity_view_display.media.image.alternating_subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.article_image_style'
-        - 'config:core.entity_view_display.media.image.aside_image_style'
-        - 'config:core.entity_view_display.media.image.biography_listing_image_style'
-        - 'config:core.entity_view_display.media.image.biography_page_image_style'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.events_image_style_150x150'
-        - 'config:core.entity_view_display.media.image.gallery_item_image_style'
-        - 'config:core.entity_view_display.media.image.hero_full_width_image_style'
-        - 'config:core.entity_view_display.media.image.hero_landing_page_image_style'
-        - 'config:core.entity_view_display.media.image.hero_one_column'
-        - 'config:core.entity_view_display.media.image.hero_one_column_image_style'
-        - 'config:core.entity_view_display.media.image.hero_two_column_image_style'
-        - 'config:core.entity_view_display.media.image.ief_table'
-        - 'config:core.entity_view_display.media.image.image_with_caption'
-        - 'config:core.entity_view_display.media.image.image_with_caption_large'
-        - 'config:core.entity_view_display.media.image.image_with_caption_medium'
-        - 'config:core.entity_view_display.media.image.image_with_caption_small'
-        - 'config:core.entity_view_display.media.image.landing_page_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.media_embed'
-        - 'config:core.entity_view_display.media.image.media_image_large'
-        - 'config:core.entity_view_display.media.image.media_image_medium'
-        - 'config:core.entity_view_display.media.image.media_image_original'
-        - 'config:core.entity_view_display.media.image.media_image_small'
-        - 'config:core.entity_view_display.media.image.media_library'
-        - 'config:core.entity_view_display.media.image.new_media_library'
-        - 'config:core.entity_view_display.media.image.original_image'
-        - 'config:core.entity_view_display.media.image.photo_carousel_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_wide_image_style'
-        - 'config:core.entity_view_display.media.image.thumbnail_image_style'
-        - 'config:core.entity_view_display.media.instagram.default'
-        - 'config:core.entity_view_display.media.instagram.media_library'
-        - 'config:core.entity_view_display.media.tweet.default'
-        - 'config:core.entity_view_display.media.tweet.media_library'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.media_library'
+      tags: {  }
   user_media_library:
     id: user_media_library
     display_title: 'User Media Library'
@@ -2057,7 +2062,7 @@ display:
           admin_label: ''
           entity_type: media
           entity_field: uid
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -2084,6 +2089,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: user
       style:
         type: default
         options:
@@ -2127,50 +2133,7 @@ display:
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
         - user.permissions
-      tags:
-        - 'config:core.entity_view_display.media.audio.default'
-        - 'config:core.entity_view_display.media.document.default'
-        - 'config:core.entity_view_display.media.document.media_library'
-        - 'config:core.entity_view_display.media.file.default'
-        - 'config:core.entity_view_display.media.gallery.default'
-        - 'config:core.entity_view_display.media.gallery.media_library'
-        - 'config:core.entity_view_display.media.image.alternating_subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.article_image_style'
-        - 'config:core.entity_view_display.media.image.aside_image_style'
-        - 'config:core.entity_view_display.media.image.biography_listing_image_style'
-        - 'config:core.entity_view_display.media.image.biography_page_image_style'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.events_image_style_150x150'
-        - 'config:core.entity_view_display.media.image.gallery_item_image_style'
-        - 'config:core.entity_view_display.media.image.hero_full_width_image_style'
-        - 'config:core.entity_view_display.media.image.hero_landing_page_image_style'
-        - 'config:core.entity_view_display.media.image.hero_one_column'
-        - 'config:core.entity_view_display.media.image.hero_one_column_image_style'
-        - 'config:core.entity_view_display.media.image.hero_two_column_image_style'
-        - 'config:core.entity_view_display.media.image.ief_table'
-        - 'config:core.entity_view_display.media.image.image_with_caption'
-        - 'config:core.entity_view_display.media.image.image_with_caption_large'
-        - 'config:core.entity_view_display.media.image.image_with_caption_medium'
-        - 'config:core.entity_view_display.media.image.image_with_caption_small'
-        - 'config:core.entity_view_display.media.image.landing_page_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.media_embed'
-        - 'config:core.entity_view_display.media.image.media_image_large'
-        - 'config:core.entity_view_display.media.image.media_image_medium'
-        - 'config:core.entity_view_display.media.image.media_image_original'
-        - 'config:core.entity_view_display.media.image.media_image_small'
-        - 'config:core.entity_view_display.media.image.media_library'
-        - 'config:core.entity_view_display.media.image.new_media_library'
-        - 'config:core.entity_view_display.media.image.original_image'
-        - 'config:core.entity_view_display.media.image.photo_carousel_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_wide_image_style'
-        - 'config:core.entity_view_display.media.image.thumbnail_image_style'
-        - 'config:core.entity_view_display.media.instagram.default'
-        - 'config:core.entity_view_display.media.instagram.media_library'
-        - 'config:core.entity_view_display.media.tweet.default'
-        - 'config:core.entity_view_display.media.tweet.media_library'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.media_library'
+      tags: {  }
   user_media_select_modal:
     id: user_media_select_modal
     display_title: 'User Media select modal'
@@ -2293,7 +2256,7 @@ display:
           admin_label: ''
           entity_type: media
           entity_field: uid
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -2319,6 +2282,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: user
       filters:
         name:
           id: name
@@ -2555,47 +2519,4 @@ display:
         - 'url.query_args:sort_order'
         - user
         - user.permissions
-      tags:
-        - 'config:core.entity_view_display.media.audio.default'
-        - 'config:core.entity_view_display.media.document.default'
-        - 'config:core.entity_view_display.media.document.media_library'
-        - 'config:core.entity_view_display.media.file.default'
-        - 'config:core.entity_view_display.media.gallery.default'
-        - 'config:core.entity_view_display.media.gallery.media_library'
-        - 'config:core.entity_view_display.media.image.alternating_subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.article_image_style'
-        - 'config:core.entity_view_display.media.image.aside_image_style'
-        - 'config:core.entity_view_display.media.image.biography_listing_image_style'
-        - 'config:core.entity_view_display.media.image.biography_page_image_style'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.events_image_style_150x150'
-        - 'config:core.entity_view_display.media.image.gallery_item_image_style'
-        - 'config:core.entity_view_display.media.image.hero_full_width_image_style'
-        - 'config:core.entity_view_display.media.image.hero_landing_page_image_style'
-        - 'config:core.entity_view_display.media.image.hero_one_column'
-        - 'config:core.entity_view_display.media.image.hero_one_column_image_style'
-        - 'config:core.entity_view_display.media.image.hero_two_column_image_style'
-        - 'config:core.entity_view_display.media.image.ief_table'
-        - 'config:core.entity_view_display.media.image.image_with_caption'
-        - 'config:core.entity_view_display.media.image.image_with_caption_large'
-        - 'config:core.entity_view_display.media.image.image_with_caption_medium'
-        - 'config:core.entity_view_display.media.image.image_with_caption_small'
-        - 'config:core.entity_view_display.media.image.landing_page_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.media_embed'
-        - 'config:core.entity_view_display.media.image.media_image_large'
-        - 'config:core.entity_view_display.media.image.media_image_medium'
-        - 'config:core.entity_view_display.media.image.media_image_original'
-        - 'config:core.entity_view_display.media.image.media_image_small'
-        - 'config:core.entity_view_display.media.image.media_library'
-        - 'config:core.entity_view_display.media.image.new_media_library'
-        - 'config:core.entity_view_display.media.image.original_image'
-        - 'config:core.entity_view_display.media.image.photo_carousel_with_aside_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_image_style'
-        - 'config:core.entity_view_display.media.image.subfeature_wide_image_style'
-        - 'config:core.entity_view_display.media.image.thumbnail_image_style'
-        - 'config:core.entity_view_display.media.instagram.default'
-        - 'config:core.entity_view_display.media.instagram.media_library'
-        - 'config:core.entity_view_display.media.tweet.default'
-        - 'config:core.entity_view_display.media.tweet.media_library'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.media_library'
+      tags: {  }

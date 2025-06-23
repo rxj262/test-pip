@@ -1,28 +1,33 @@
-login_link_enabled: true
-login_link_label: 'CAS Login'
-login_success_message: ''
 server:
   version: '2.0'
-  protocol: https
   hostname: login.case.edu
   port: 443
   path: /cas
   verify: 0
   cert: ''
+  protocol: https
 gateway:
+  check_frequency: -2
   paths:
     id: request_path
-    negate: false
     pages: ''
-  check_frequency: -2
+    negate: false
 forced_login:
   enabled: false
   paths:
     id: request_path
-    negate: false
     pages: ''
+    negate: false
+logout:
+  logout_destination: ''
+  enable_single_logout: false
+  cas_logout: false
+  single_logout_session_lifetime: 25
+proxy:
+  initialize: false
+  can_be_proxied: false
+  proxy_chains: ''
 user_accounts:
-  prevent_normal_login: false
   auto_register: false
   email_assignment_strategy: 0
   email_hostname: ''
@@ -30,6 +35,13 @@ user_accounts:
   auto_assigned_roles: {  }
   restrict_password_management: true
   restrict_email_management: true
+  prevent_normal_login: false
+advanced:
+  debug_log: false
+  connection_timeout: 10
+login_link_enabled: true
+login_link_label: 'CAS Login'
+login_success_message: ''
 error_handling:
   login_failure_page: ''
   message_validation_failure: ''
@@ -38,15 +50,3 @@ error_handling:
   message_subscriber_denied_login: ''
   message_account_blocked: ''
   message_username_already_exists: ''
-logout:
-  cas_logout: false
-  logout_destination: ''
-  enable_single_logout: false
-  single_logout_session_lifetime: 25
-proxy:
-  initialize: false
-  can_be_proxied: false
-  proxy_chains: ''
-advanced:
-  debug_log: false
-  connection_timeout: 10

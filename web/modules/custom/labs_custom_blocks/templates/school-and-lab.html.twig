@@ -1,0 +1,10 @@
+{% block content %}
+
+  <a href="{{ data.host ~ data.base_url }}/{{ data.pathinfo|split('/')[1] }}">
+    <div class="department-header">
+      {# Uppercase first letter of each word #}
+      <h1>{{ data.label[:1]|upper ~ data.label[1:] }}</h1>
+    </div>
+  </a>
+
+{% endblock %}

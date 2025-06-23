@@ -1,0 +1,4 @@
+services:
+  labs_custom_blocks.get_user_site_info:
+    class: Drupal\labs_custom_blocks\LabsCustomBlockCurrentUserSiteInfo
+    arguments: ['@current_user']

@@ -1,0 +1,523 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Labs Custom Blocks module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\labs_custom_blocks\Access\LabsMediaAccess;
+use Drupal\labs_custom_blocks\Access\LabsMenuAccess;
+use Drupal\labs_custom_blocks\Access\LabsNodeAccess;
+use Drupal\system\Entity\Menu;
+use Drupal\views\ViewExecutable;
+use Drupal\node\NodeInterface;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\Core\Url;
+
+//use Drupal\labs_custom_blocks\Access\LabsBioAccess;
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ * TODO check menu exists before creation.
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function labs_custom_blocks_taxonomy_term_insert(EntityInterface $entity) : void {
+  // check if vocab is 'cwru_sites'
+  if (strtolower($entity->bundle()) !== 'cwru_sites') {
+    return;
+  }
+  $term_name = $entity->label();
+  // create a menu based on term name, should follow same validation rule from the menu_ui
+  /*
+    '#machine_name' => [
+    'exists' => [$this, 'menuNameExists'],
+    'source' => ['label'],
+    'replace_pattern' => '[^a-z0-9-]+',
+    'replace' => '-',
+  ],
+  */
+  $menu_name_lower = strtolower($term_name); // run lowercase first for easier regex pattern
+  $menu_machine_name = preg_replace("/[^a-z0-9-]+/", "-", $menu_name_lower);
+  $menu_creation = Drupal::entityTypeManager()
+    ->getStorage('menu')
+    ->create([
+      'id' => $menu_machine_name,
+      'label' => $term_name,
+    ]);
+  $menu_creation->save();
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function labs_custom_blocks_form_node_form_alter(&$form, FormStateInterface $form_state) : void {
+  // This is to override menu_ui_form_node_alter() so that
+  // each new menu does not have to be added to each content type.
+  // Also requires this module runs later than the menu_ui module (weight 0), so set this module's weight to 1.
+  //
+  // Generate a list of possible parents (not including this link or descendants).
+  // @todo This must be handled in a #process handler.
+  $node = $form_state->getFormObject()->getEntity();
+  $defaults = labs_custom_blocks_menu_ui_get_menu_link_defaults($node);
+  /** @var \Drupal\node\NodeTypeInterface $node_type */
+  $node_type = $node->type->entity;
+  /** @var \Drupal\Core\Menu\MenuParentFormSelectorInterface $menu_parent_selector */
+  $menu_parent_selector = Drupal::service('menu.parent_form_selector');
+  /** @var \Drupal\system\MenuInterface[] $type_menus */
+  $type_menus = Menu::loadMultiple();
+
+  // After removing these keys, we are left with all the actual "lab" menus.
+  unset($type_menus['main']);
+  unset($type_menus['account']);
+  unset($type_menus['admin']);
+  unset($type_menus['footer']);
+  unset($type_menus['tools']);
+  unset($type_menus['devel']);
+
+  $available_menus = [];
+  foreach ($type_menus as $menu) {
+    if ($menu->access('edit')) {
+      $available_menus[$menu->id()] = $menu->label();
+    }
+  }
+  if ($defaults['id']) {
+    $default = $defaults['menu_name'] . ':' . $defaults['parent'];
+  }
+  else {
+    $default = $node_type->getThirdPartySetting('menu_ui', 'parent', 'main:');
+  }
+  $parent_element = $menu_parent_selector->parentSelectElement($default, $defaults['id'], $available_menus);
+
+  if (\Drupal::currentUser()->isAuthenticated() && !\Drupal::currentUser()->hasRole('administrator')) {
+    foreach ($parent_element['#options'] as $k => $v ) {
+      // look for a '<...>' less/greater than bracket pattern, which suggests a root menu, then unset.
+      // non-admin users don't see a menu setting on homepage because it should not be modified by them.
+      $menu_root = preg_match('/<.+>/', $v);
+      if ($menu_root === 1) {
+        unset($parent_element['#options'][$k]);
+      }
+    }
+  }
+
+  // If no possible parent menu items were found, there is nothing to display.
+  if (empty($parent_element)) {
+    return;
+  }
+
+  $form['menu'] = [
+    '#type' => 'details',
+    '#title' => t('Menu settings'),
+    '#access' => Drupal::currentUser()->hasPermission('administer menu'),
+    '#open' => (bool) $defaults['id'],
+    '#group' => 'advanced',
+    '#attached' => [
+      'library' => ['menu_ui/drupal.menu_ui'],
+    ],
+    '#tree' => TRUE,
+    '#weight' => -2,
+    '#attributes' => ['class' => ['menu-link-form']],
+  ];
+  $form['menu']['enabled'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Provide a menu link'),
+    '#default_value' => (int) (bool) $defaults['id'],
+  ];
+  $form['menu']['link'] = [
+    '#type' => 'container',
+    '#parents' => ['menu'],
+    '#states' => [
+      'invisible' => [
+        'input[name="menu[enabled]"]' => ['checked' => FALSE],
+      ],
+    ],
+  ];
+
+  // Populate the element with the link data.
+  foreach (['id', 'entity_id'] as $key) {
+    $form['menu']['link'][$key] = [
+      '#type' => 'value',
+      '#value' => $defaults[$key],
+    ];
+  }
+
+  $form['menu']['link']['title'] = [
+    '#type' => 'textfield',
+    '#title' => t('Menu link title'),
+    '#default_value' => $defaults['title'],
+    '#maxlength' => $defaults['title_max_length'],
+  ];
+
+  $form['menu']['link']['description'] = [
+    '#type' => 'textfield',
+    '#title' => t('Description'),
+    '#default_value' => $defaults['description'],
+    '#description' => t('Shown when hovering over the menu link.'),
+    '#maxlength' => $defaults['description_max_length'],
+  ];
+
+  $form['menu']['link']['menu_parent'] = $parent_element;
+  $form['menu']['link']['menu_parent']['#title'] = t('Parent link');
+  $form['menu']['link']['menu_parent']['#attributes']['class'][] = 'menu-parent-select';
+
+  $form['menu']['link']['weight'] = [
+    '#type' => 'number',
+    '#title' => t('Weight'),
+    '#default_value' => $defaults['weight'],
+    '#description' => t('Menu links with lower weights are displayed before links with higher weights.'),
+  ];
+
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+      $form['actions'][$action]['#submit'][] = 'menu_ui_form_node_form_submit';
+    }
+  }
+
+  $form['#entity_builders'][] = 'menu_ui_node_builder';
+}
+
+/**
+ * This is an override to the menu_ui_get_menu_link_defaults function.
+ *
+ * @param \Drupal\node\NodeInterface $node
+ *   The node entity.
+ *
+ * @return array
+ *   An array that contains default values for the menu link form.
+ */
+function labs_custom_blocks_menu_ui_get_menu_link_defaults(NodeInterface $node) : array {
+  // Prepare the definition for the edit form.
+  /** @var \Drupal\node\NodeTypeInterface $node_type */
+  $node_type = $node->type->entity;
+  $menu_name = strtok($node_type->getThirdPartySetting('menu_ui', 'parent'), ':');
+  $defaults = FALSE;
+  if ($node->id()) {
+    $id = FALSE;
+    // Give priority to the default menu
+    $type_menus = array();
+
+    $all_menus = Menu::loadMultiple();
+    foreach ($all_menus as $type_menu) {
+      $default_menus = ['admin', 'account', 'footer', 'tools', 'main'];
+      if (!in_array($type_menu->id(), $default_menus)) {
+        $type_menus[] = $type_menu->id();
+      }
+    }
+
+    if (in_array($menu_name, $type_menus)) {
+      $query = \Drupal::entityQuery('menu_link_content')
+        ->accessCheck(TRUE)
+        ->condition('link.uri', 'entity:node/' . $node->id())
+        ->condition('menu_name', $menu_name)
+        ->sort('id', 'ASC')
+        ->range(0, 1);
+      $result = $query->execute();
+
+      $id = (!empty($result)) ? reset($result) : FALSE;
+    }
+    // Check all allowed menus if a link does not exist in the default menu.
+    if (!$id && !empty($type_menus)) {
+      $query = \Drupal::entityQuery('menu_link_content')
+        ->accessCheck(TRUE)
+        ->condition('link.uri', 'entity:node/' . $node->id())
+        ->condition('menu_name', array_values($type_menus), 'IN')
+        ->sort('id', 'ASC')
+        ->range(0, 1);
+      $result = $query->execute();
+
+      $id = (!empty($result)) ? reset($result) : FALSE;
+    }
+    if ($id) {
+      $menu_link = MenuLinkContent::load($id);
+      $menu_link = \Drupal::service('entity.repository')->getTranslationFromContext($menu_link);
+      $defaults = [
+        'entity_id' => $menu_link->id(),
+        'id' => $menu_link->getPluginId(),
+        'title' => $menu_link->getTitle(),
+        'title_max_length' => $menu_link->getFieldDefinitions()['title']->getSetting('max_length'),
+        'description' => $menu_link->getDescription(),
+        'description_max_length' => $menu_link->getFieldDefinitions()['description']->getSetting('max_length'),
+        'menu_name' => $menu_link->getMenuName(),
+        'parent' => $menu_link->getParentId(),
+        'weight' => $menu_link->getWeight(),
+      ];
+    }
+  }
+
+  if (!$defaults) {
+    // Get the default max_length of a menu link title from the base field
+    // definition.
+    $field_definitions = \Drupal::service('entity_field.manager')->getBaseFieldDefinitions('menu_link_content');
+    $max_length = $field_definitions['title']->getSetting('max_length');
+    $description_max_length = $field_definitions['description']->getSetting('max_length');
+    $defaults = [
+      'entity_id' => 0,
+      'id' => '',
+      'title' => '',
+      'title_max_length' => $max_length,
+      'description' => '',
+      'description_max_length' => $description_max_length,
+      'menu_name' => $menu_name,
+      'parent' => '',
+      'weight' => 0,
+    ];
+  }
+  return $defaults;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function labs_custom_blocks_theme($existing, $type, $theme, $path) {
+  return [
+// @TODO use twig within the module as the active region header template file
+    'region__labs_header' => [
+      'template' => 'region--labs-header',
+      'base hook' => 'region',
+//      'path' => $path,
+    ],
+    'schoolandlab' => [
+      'template' => 'school-and-lab',
+      'base hook' => 'block',
+      'variables' => [
+        'data' => [],
+      ],
+    ],
+    'labs_footer_block' => [
+      'variables' => [
+        'data' => [],
+      ],
+    ],
+    'block__labs_menu' => [
+      'template' => 'block--labs-menu',
+      'base hook' => 'block',
+    ],
+    'menu__general_labs' => [
+      'template' => 'menu--general-labs',
+      'base hook' => 'menu',
+    ],
+    'menu__general_labssidebar' => [
+      'template' => 'menu--general-labssidebar',
+      'base hook' => 'menu',
+    ],
+    'menu__labs_toolbar' => [
+      'template' => 'menu--labs-toolbar',
+      'base hook' => 'menu',
+    ]
+  ];
+}
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function labs_custom_blocks_views_pre_view(ViewExecutable $view, $display_id, array &$args) : void {
+  if ($view->id() == 'meet_our_staff') {
+    $view->element['#cache']['contexts']['url'];
+  }
+}
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function labs_custom_blocks_entity_type_alter(array &$entity_types) : void {
+  // comment out node and media and try to handle them from linkit.
+
+  if (isset($entity_types['node'])) {
+    $entity_types['node']->setHandlerClass('access', LabsNodeAccess::class);
+  }
+  if (isset($entity_types['media'])) {
+    $entity_types['media']->setHandlerClass('access', LabsMediaAccess::class);
+    $entity_types['media']->addConstraint('MediaFieldSites');
+  }
+  if (isset($entity_types['menu'])) {
+    $entity_types['menu']->setHandlerClass('access', LabsMenuAccess::class);
+  }
+  if (isset($entity_types['menu_link_content'])) {
+    $entity_types['menu_link_content']->addConstraint('MenuLinkContentParent');
+  }
+}
+
+/**
+ * Implements hook_views_data().
+ */
+function labs_custom_blocks_views_data() : array {
+  $data = [];
+
+  // handles /admin/content view, non-biography type
+  $data['views']['node__field_sites'] = [
+    'title' => t('/admin/content custom filter'),
+    'filter' => [
+      'group' => t('CWRU Sites custom filters'),
+      'title' => t('/admin/content custom filter'),
+      'field' => 'field_sites_target_id',
+      'id' => 'restrict_content_display',
+      'help' => 'add this to /admin/content view',
+    ],
+  ];
+
+  // handles /admin/content view, biography type TODO comment out after field move.
+  //  $data['views']['node__field_biography_drupal_site_ref'] = [
+  //    'title' => t('/admin/content custom filter for biographies'),
+  //    'filter' => [
+  //      'title' => t('/admin/content custom filter for biographies'),
+  //      'group' => t('CWRU Sites custom filters'),
+  //      'field' => 'field_biography_drupal_site_ref_target_id',
+  //      'id' => 'restrict_biography_display',
+  //      'help' => 'add this to /admin/content view to show biographies',
+  //    ],
+  //  ];
+
+  // handles e.g. meet-our-staff, news-article, events-listing
+  $data['views']['node__field_sites_1'] = [
+    'title' => t('Content with same term from current node'),
+    'filter' => [
+      'title' => t('Content with same term from current node'),
+      'group' => t('CWRU Sites custom filters'),
+      'field' => 'field_sites_target_id',
+      'id' => 'restrict_term_from_current_node_display',
+      'help' => 'add this to staff/news/event listing views',
+    ],
+  ];
+
+  // handles global media library and all media libraries
+  $data['views']['media__field_sites'] = [
+    'title' => t('Media filter based on current user terms'),
+    'filter' => [
+      'title' => t('Media filter based on current user terms'),
+      'group' => t('CWRU Sites custom filters'),
+      'field' => 'field_sites_target_id',
+      'id' => 'restrict_media_display',
+      'help' => 'add this to all media libraries so editor only sees relevant media entites',
+    ],
+  ];
+
+  // adds to 'available_sites' view (the view creates the 'field_sites' options)
+  $data['views']['taxonomy_term_field_data'] = [
+    'title' => t('Limit field_site term options to only terms assigned to current user'),
+    'filter' => [
+      'title' => t('Limit field_site term options to only terms assigned to current user'),
+      'group' => t('CWRU Sites custom filters'),
+      'field' => 'tid',
+      'id' => 'restrict_term_display',
+      'help' => 'add this to the available_sites view',
+    ],
+  ];
+
+  return $data;
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function labs_custom_blocks_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'labs_custom_blocks/drop-icon';
+  $userTermIds = \Drupal::service('labs_custom_blocks.get_user_site_info')->getCurrentUserTermIds();
+  $currentUserId = \Drupal::currentUser()->id();
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof NodeInterface) {
+    $node_bundle = $node->bundle();
+  }
+
+  if (!empty($node_bundle) && $node_bundle == 'error_page') {
+    $base_url = \Drupal::request()->getSchemeAndHttpHost() . \Drupal::request()->getBaseUrl();
+    $requested_uri = \Drupal::request()->getRequestUri();
+    $arg_1 = '/' . explode('/', $requested_uri)[1];
+    $path_alias_repository = \Drupal::service('path_alias.repository');
+    $arg1_array = $path_alias_repository->lookupByAlias($arg_1, 'en');
+
+    $homepage_redirect_url = theme_get_setting('department_header_url', 'crew');
+    if (!empty($arg1_array)) {
+      $homepage_redirect_url = $base_url . $arg1_array['alias'];
+    } elseif ($currentUserId > 0) {
+      $homepage_redirect_url = $base_url . '/admin/content';
+    }
+
+    $attachments['#attached']['drupalSettings']['labs_custom_blocks']['homepage_redirect_url'] = $homepage_redirect_url;
+  }
+
+  if (\Drupal::currentUser()->isAuthenticated() && \Drupal::currentUser()->hasRole('administrator')) {
+    $attachments['#attached']['drupalSettings']['labs_custom_blocks']['dropicon'] = Url::fromRoute('system.admin_content', [], ['absolute' => TRUE])->toString();
+  } elseif (\Drupal::currentUser()->isAuthenticated() && !\Drupal::currentUser()->hasRole('administrator') && !empty($userTermIds)) {
+    // pass node bundle so we can disable "menu settings" section on homepage for non-admin users.
+    if (!empty($node_bundle)) {
+      $node_bundle = $node->bundle();
+      $is_homepage = TRUE;
+      if (strpos($node_bundle, 'homepage') === FALSE) {
+        $is_homepage = FALSE;
+      }
+      $attachments['#attached']['drupalSettings']['labs_custom_blocks']['is_homepage'] = $is_homepage;
+
+    }
+
+    if (count($userTermIds) > 1) {
+      $attachments['#attached']['drupalSettings']['labs_custom_blocks']['dropicon'] = Url::fromRoute('system.admin_content', [], ['absolute' => TRUE])->toString();
+    } else {
+      $nodes = Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+        'type' => 'homepage_w_full_width_feature',
+        'field_sites' => $userTermIds,
+        'status' => [1],
+        ]);
+      // above should always return only one active homepage nid.
+      $nid = array_key_first($nodes);
+      if (!empty($nid)) {
+        $attachments['#attached']['drupalSettings']['labs_custom_blocks']['dropicon'] = Url::fromRoute('entity.node.canonical', ['node' => $nid], ['absolute' => TRUE])->toString();
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function labs_custom_blocks_form_menu_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#validate'][] = '_labs_custom_blocks_form_menu_edit_form_validation';
+}
+
+function _labs_custom_blocks_form_menu_edit_form_validation(&$form, \Drupal\Core\Form\FormStateInterface &$form_state) {
+  if (!empty($form_state->getUserInput()['links'])) {
+    $menu_links = $form_state->getUserInput()['links'];
+    $root_level_menu_link_ids = [];
+    foreach ($menu_links as $menu_link) {
+      if (empty($menu_link['parent'])) {
+        $root_level_menu_link_ids[] = $menu_link['id'];
+      }
+    }
+
+    $menu_link_content_entity = [];
+
+    foreach ($root_level_menu_link_ids as $root_level_menu_link_id) {
+      preg_match('/(menu_link_content:)(.*)/', $root_level_menu_link_id, $matches);
+      if (!empty($matches[2])) {
+        $menu_link_content_entity = \Drupal::entityTypeManager()
+          ->getStorage('menu_link_content')
+          ->loadByProperties(['uuid' => $matches[2]]);
+        $node_id = reset($menu_link_content_entity)->getUrlObject()
+          ->getRouteParameters()['node'];
+        $node_bundle = \Drupal\node\Entity\Node::load($node_id)->bundle();
+
+        if (strpos($node_bundle, 'homepage') === FALSE) {
+          $form_state->setError($form, t('Error: Regular pages must be nested under the homepage'));
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ * see @TODO in comment in the hook_theme function.
+ */
+function labs_custom_blocks_theme_suggestions_region_alter(array &$suggestions, array &$variables) {
+  // make sure the custom header region template only active on non-admin pages.
+  if (\Drupal::service('router.admin_context')->isAdminRoute() === FALSE) {
+    if (!empty($suggestions) && in_array('region__header', $suggestions)) {
+      $suggestions[] = 'region__labs_header';
+    }  // do stuff
+  }
+}

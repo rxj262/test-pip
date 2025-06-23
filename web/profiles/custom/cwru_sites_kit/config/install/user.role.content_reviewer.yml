@@ -2,9 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.embed_browser
+    - entity_browser.browser.file_browser
+    - entity_browser.browser.image_browser
+    - entity_browser.browser.media_embed
+    - entity_browser.browser.media_library
     - filter.format.basic_html
     - filter.format.full_html
     - node.type.robust_3_column_page
+    - workflows.workflow.4b7b12f9
     - workflows.workflow.ac84b3e9
   module:
     - content_moderation
@@ -47,6 +53,10 @@ permissions:
   - 'revert robust_3_column_page revisions'
   - 'update any media'
   - 'update media'
+  - 'use 4b7b12f9 transition draft_draft'
+  - 'use 4b7b12f9 transition draft_published'
+  - 'use 4b7b12f9 transition published_draft'
+  - 'use 4b7b12f9 transition published_published'
   - 'use ac84b3e9 transition archived_published'
   - 'use ac84b3e9 transition draft_draft'
   - 'use ac84b3e9 transition draft_published'

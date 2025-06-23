@@ -515,6 +515,7 @@ display:
           admin_label: 'field_sites: Taxonomy term'
           plugin_id: standard
           required: false
+      group_by: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -654,8 +655,9 @@ display:
           type: daterange_plain
           settings:
             timezone_override: ''
+            from_to: start_date
             separator: '-'
-          group_column: value
+          group_column: entity_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -718,7 +720,7 @@ display:
           type: text_summary_or_trimmed
           settings:
             trim_length: 600
-          group_column: value
+          group_column: entity_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -740,7 +742,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% set datepart = field_event_date_range|split(' - ') %}\r\n<div class=\"pqhs-event-calendar-icon\">\r\n<span class=\"month\">{{ datepart['0']|date('M') }}</span>\r\n<span class=\"day\">{{ datepart['0']|date('d') }}</span>\r\n<span class=\"year\">{{ datepart['0']|date('Y') }}</span>\r\n</div>\r\n<div class= \"pqhs-event-details\">\r\n<h2 class=\"font-medium\">{{ title }}</h2>\r\n<p>{{ field_event_description }}</p>\r\n</div>"
+            text: "<div class=\"pqhs-event-calendar-icon\">\r\n<span class=\"month\">{{ field_event_date_range|date('M') }}</span>\r\n<span class=\"day\">{{ field_event_date_range|date('d') }}</span>\r\n<span class=\"year\">{{ field_event_date_range|date('Y') }}</span>\r\n</div>\r\n<div class= \"pqhs-event-details\">\r\n<h2 class=\"font-medium\">{{ title }}</h2>\r\n<p>{{ field_event_description }}</p>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

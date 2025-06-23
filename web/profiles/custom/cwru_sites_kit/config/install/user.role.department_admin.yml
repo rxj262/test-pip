@@ -2,6 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.embed_browser
+    - entity_browser.browser.file_browser
+    - entity_browser.browser.image_browser
+    - entity_browser.browser.media_embed
+    - entity_browser.browser.media_library
     - filter.format.basic_html
     - filter.format.full_html
     - node.type.biography
@@ -9,6 +14,7 @@ dependencies:
     - node.type.homepage_w_full_width_feature
     - node.type.news_article
     - node.type.robust_3_column_page
+    - workflows.workflow.4b7b12f9
     - workflows.workflow.ac84b3e9
     - workflows.workflow.b8336871
   module:
@@ -18,7 +24,6 @@ dependencies:
     - filter
     - media
     - node
-    - path
     - system
     - toolbar
     - video_embed_field
@@ -42,7 +47,6 @@ permissions:
   - 'create media'
   - 'create news_article content'
   - 'create robust_3_column_page content'
-  - 'create url aliases'
   - 'delete any event_detail_page content'
   - 'delete any media'
   - 'delete any news_article content'
@@ -64,6 +68,10 @@ permissions:
   - 'revert robust_3_column_page revisions'
   - 'update any media'
   - 'update media'
+  - 'use 4b7b12f9 transition draft_draft'
+  - 'use 4b7b12f9 transition draft_published'
+  - 'use 4b7b12f9 transition published_draft'
+  - 'use 4b7b12f9 transition published_published'
   - 'use ac84b3e9 transition archived_published'
   - 'use ac84b3e9 transition draft_draft'
   - 'use ac84b3e9 transition draft_published'

@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.biography
     - node.type.event_detail_page
     - node.type.news_article
     - node.type.robust_3_column_page
@@ -74,7 +73,6 @@ type_settings:
       weight: 7
   entity_types:
     node:
-      - biography
       - event_detail_page
       - news_article
       - robust_3_column_page

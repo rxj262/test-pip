@@ -1,0 +1,4 @@
+domain: case.edu
+enabled: 'yes'
+allow_platform: 'yes'
+subpath: medicine/x

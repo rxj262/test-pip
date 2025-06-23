@@ -2,12 +2,16 @@ langcode: en
 status: true
 dependencies:
   module:
+    - menu_force
     - menu_ui
 third_party_settings:
   menu_ui:
     available_menus:
       - main
     parent: 'main:'
+  menu_force:
+    menu_force: true
+    menu_force_parent: false
 name: 'Event Detail Page'
 type: event_detail_page
 description: null
