@@ -449,6 +449,7 @@
             position: absolute;
             right: 1%;
             bottom: 2%;
+            z-index: 999;
 
             // &::before {
             //   content: url("../images/pause.svg");
@@ -470,61 +471,61 @@
             }
           }
         }
-        .title-tagline {
-          position: absolute;
-          bottom: 0;
+      }
+      .title-tagline {
+        position: absolute;
+        bottom: 0;
+        z-index: 99;
+        display: block;
+        width: 100%;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.6) 70%,
+          transparent
+        );
+        color: $white;
+        padding: 0;
 
-          display: block;
-          width: 100%;
-          background: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.6) 70%,
-            transparent
-          );
-          color: $white;
+        @media #{$medium-hero-max} {
+          padding-bottom: 3rem;
+        }
+        @media #{$small-max} {
+          padding-bottom: 1.8rem;
+          padding-left: 2rem;
+        }
+        .container {
           padding: 0;
-
+          padding-bottom: 4rem;
           @media #{$medium-hero-max} {
-            padding-bottom: 3rem;
+            padding-bottom: 0;
           }
           @media #{$small-max} {
-            padding-bottom: 1.8rem;
-            padding-left: 2rem;
-          }
-          .container {
             padding: 0;
-            padding-bottom: 4rem;
-            @media #{$medium-hero-max} {
-              padding-bottom: 0;
-            }
-            @media #{$small-max} {
-              padding: 0;
-              margin: 0;
-              width: 93%;
-            }
+            margin: 0;
+            width: 93%;
           }
-          .field--name-field-hero-with-video-title {
-            font-size: 6.4rem;
-            font-weight: 800;
+        }
+        .field--name-field-hero-with-video-title {
+          font-size: 6.4rem;
+          font-weight: 800;
 
-            @media #{$medium-hero-max} {
-              font-size: 5rem;
-            }
-            @media #{$small-max} {
-              font-size: 4rem;
-              line-height: 1.1;
-            }
+          @media #{$medium-hero-max} {
+            font-size: 5rem;
           }
-          .field--name-field-hero-with-video-tagline {
-            font-size: 2.4rem;
+          @media #{$small-max} {
+            font-size: 4rem;
+            line-height: 1.1;
+          }
+        }
+        .field--name-field-hero-with-video-tagline {
+          font-size: 2.4rem;
 
-            @media #{$medium-hero-max} {
-              font-size: 2.8rem;
-            }
+          @media #{$medium-hero-max} {
+            font-size: 2.8rem;
+          }
 
-            @media #{$small-max} {
-              font-size: 1.8rem;
-            }
+          @media #{$small-max} {
+            font-size: 1.8rem;
           }
         }
       }

@@ -50,6 +50,7 @@
       flex: 1;
 
       .paragraph--type--quote-and-citation {
+        position: relative;
         @media #{$small-min} {
           padding-left: 6rem;
         }
