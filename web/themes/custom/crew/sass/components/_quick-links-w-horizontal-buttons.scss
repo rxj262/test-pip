@@ -14,6 +14,7 @@
     h2 {
       margin-top: 0;
       padding: 0;
+      margin-bottom: 2rem;
 
       .field--name-field-quick-links-title {
         @include inline-title-orange;
@@ -22,13 +23,13 @@
     }
 
     .field--name-field-quick-links-body {
-      margin-top: 2rem;
+      margin-bottom: 3rem;
     }
 
     .field--name-field-quick-links-buttons {
       display: flex;
       justify-content: space-between;
-      margin: 2rem 0 0;
+      margin: 0;
       gap: 2rem;
 
       @media #{$small-max} {
@@ -36,17 +37,25 @@
       }
 
       & > .field--item {
-        .field--name-field-horizontal-buttons-button {
-          height: 100%;
+        .paragraph--type--horizontal-buttons {
           display: flex;
-          flex-direction: column;
-          justify-content: center;
+          height: 100%;
 
-          a {
-            @include button-blue-bg;
-            @media #{$small-max} {
-              width: 100%;
-              text-align: center;
+          .field--name-field-horizontal-buttons-button {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            a {
+              @include button-blue-bg;
+              display: flex;
+              height: 100%;
+              align-items: center;
+              @media #{$small-max} {
+                width: 100%;
+                text-align: center;
+              }
             }
           }
         }
@@ -89,6 +98,28 @@
           }
         }
       }
+    }
+  }
+}
+.robust-3-column-page {
+  .paragraph--type--quick-links-w-horizontal-buttons {
+    padding: 3rem 0 4rem;
+    @media #{$small-max} {
+      padding: 2rem 2.5rem 3rem;
+    }
+
+    &.gray_background {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    &.gray_pattern_background {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    .field--name-field-quick-links-buttons {
+      justify-content: space-evenly;
     }
   }
 }

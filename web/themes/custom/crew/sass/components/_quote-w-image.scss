@@ -19,6 +19,7 @@
     .quote-image-container {
       flex-basis: 30%;
       margin-left: 1rem;
+      padding-bottom: 1rem;
 
       .field--name-field-image {
         &::before {
@@ -104,6 +105,7 @@
 
 .robust-3-column-page {
   .paragraph--type--quote-with-image {
+    padding: 3rem 2rem 4rem;
     &.gray_background {
       @media #{$small-max} {
         padding-left: 0;

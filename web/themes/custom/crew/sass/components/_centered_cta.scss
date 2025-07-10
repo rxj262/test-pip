@@ -83,8 +83,18 @@
 
 .robust-3-column-page {
   .paragraph--type--centered-cta {
+    padding: 3rem 4rem 4rem;
+
     .container {
       width: 100%;
+    }
+
+    &.gray_background {
+      padding: 1.5rem 0;
+    }
+
+    &.gray_pattern_background {
+      padding: 1.5rem 0;
     }
   }
   section.has-sidebar:has(aside) {

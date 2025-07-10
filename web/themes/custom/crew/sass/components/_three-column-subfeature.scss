@@ -20,7 +20,7 @@
     }
     .field--name-field-three-col-subfeature-featu {
       display: flex;
-      margin-top: 2rem;
+      // margin-top: 2rem;
       gap: 3rem;
 
       @media #{$small-max} {
@@ -264,6 +264,25 @@
   }
 }
 
+.robust-3-column-page {
+  .paragraph--type--three-column-subfeature {
+    padding: 3rem 0 4rem;
+    @media #{$small-max} {
+      padding: 2rem 2.5rem 3rem;
+    }
+
+    &.gray_background {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    &.gray_pattern_background {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+}
+
 .landing-page-rebranded,
 .home-page-rebranded {
   .paragraph--type--three-column-subfeature {
@@ -285,7 +304,7 @@
       @media #{$small-min} {
         .field--name-field-three-col-subfeature-descr,
         .field--name-field-three-col-subfeature-featu {
-          margin-top: 4rem;
+          // margin-top: 4rem;
           gap: 6rem;
 
           & > .field--item {
@@ -301,6 +320,10 @@
               }
             }
           }
+        }
+
+        .field--name-field-three-col-subfeature-descr {
+          margin-bottom: 4rem;
         }
       }
 

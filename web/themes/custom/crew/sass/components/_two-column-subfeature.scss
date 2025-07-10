@@ -13,16 +13,18 @@
 
     .paragraph-section-title {
       margin-top: 0;
+      margin-bottom: 2rem;
       padding-bottom: 0;
     }
 
     .field--name-field-two-column-subfeature-desc {
-      margin-top: 2rem;
+      // margin-top: 2rem;
+      margin-bottom: 2rem;
     }
     .field--name-field-two-column-subfeature-subf {
       display: flex;
       justify-content: space-between;
-      margin-top: 2rem;
+      // margin-top: 2rem;
       gap: 6rem;
 
       @media #{$small-max} {
@@ -263,6 +265,25 @@
   }
 }
 
+.robust-3-column-page {
+  .paragraph--type--two-column-subfeature {
+    padding: 3rem 0 4rem;
+    @media #{$small-max} {
+      padding: 2rem 2.5rem 3rem;
+    }
+
+    &.gray_background {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    &.gray_pattern_background {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+}
+
 .landing-page-rebranded,
 .home-page-rebranded {
   .paragraph--type--two-column-subfeature {
@@ -282,7 +303,7 @@
       @media #{$small-min} {
         .field--name-field-two-column-subfeature-desc,
         .field--name-field-two-column-subfeature-subf {
-          margin-top: 4rem;
+          // margin-top: 4rem;
           gap: 18rem;
 
           & > .field--item {
@@ -300,6 +321,11 @@
               }
             }
           }
+        }
+
+        .field--name-field-two-column-subfeature-desc {
+          margin-bottom: 4rem;
+          margin-top: 3rem;
         }
       }
 
