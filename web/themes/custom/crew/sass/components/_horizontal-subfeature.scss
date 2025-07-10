@@ -302,6 +302,7 @@
   section.has-sidebar:has(aside) {
     .paragraph--type--horizontal-subfeature {
       padding-top: 0;
+
       .two-column-container.container {
         flex-direction: column-reverse;
 
@@ -324,11 +325,13 @@
       .play-button-container {
         display: none;
       }
+
       .featured-photo.img-col {
         .paragraph--type--image-or-video {
           .field--name-field-image-or-video-image {
             position: relative;
           }
+
           .play-button-container {
             display: none;
           }
@@ -341,10 +344,21 @@
 .paragraph--type--horizontal-subfeature {
   .two-column-container.container:has(div.paragraph--type--aside-for-horizontal-subfeature) {
     align-items: flex-start;
+
+    .description-column {
+      flex-basis: 65%;
+    }
+
+    .featured-photo.img-col {
+      flex-basis: 35%;
+    }
+
     @media #{$small-max} {
       flex-direction: column;
+
       .featured-photo.img-col {
         margin-bottom: 0;
+
         .paragraph--type--aside-for-horizontal-subfeature {
           margin-top: 2rem;
         }
@@ -360,12 +374,12 @@
       @media #{$small-min} {
         .description-column {
           .field--name-field-horizontal-subfeature-desc {
-            margin-top: 3rem;
+            margin-top: 2rem;
           }
         }
 
         .field--name-field-horizontal-subfeature-link {
-          margin-top: 5rem;
+          margin-top: 3rem;
         }
       }
     }

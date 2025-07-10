@@ -265,6 +265,12 @@ section.has-sidebar:has(aside) {
   }
 }
 
+.robust-3-column-page {
+  .paragraph--type--stats-group {
+    padding: 3rem 2.5rem 4rem;
+  }
+}
+
 .landing-page-rebranded,
 .home-page-rebranded {
   .paragraph--type--stats-group {

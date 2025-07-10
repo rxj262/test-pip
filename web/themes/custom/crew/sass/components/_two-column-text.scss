@@ -72,6 +72,25 @@
   }
 }
 
+.robust-3-column-page {
+  .paragraph--type--two-column-text {
+    padding: 3rem 0 4rem;
+    @media #{$small-max} {
+      padding: 2rem 2.5rem 3rem;
+    }
+
+    &.gray_background {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    &.gray_pattern_background {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+}
+
 .landing-page-rebranded,
 .home-page-rebranded {
   .paragraph--type--two-column-text {
