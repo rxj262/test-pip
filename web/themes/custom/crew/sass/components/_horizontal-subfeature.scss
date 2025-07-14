@@ -242,8 +242,10 @@
       .paragraph--type--image-or-video {
         .field--name-field-image-or-video-image {
           position: absolute;
+          top: 0;
+          left: 0;
         }
-
+dl-sw-fixes
         .play-button-container {
           display: block;
         }
