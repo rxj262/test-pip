@@ -20,6 +20,40 @@ function rss_feed_preprocess_paragraph__external_rss(&$variables)
   $is_sidebar_content = _is_sidebar_content($variables);
   $variables['content']['is_sidebar_content'] = $is_sidebar_content;
 
+  // \Drupal::logger('rss_feed')->notice($variables['elements']['field_external_rss_type']['#items']->value);
+  if ($type == 'newsroom_all_fields' || $type == 'newsroom_no_image' || $type == 'newsroom_title_and_date') {
+    $url = $variables['elements']['field_external_rss_sources'][0]['#url']->getUri();
+    $remote_data = simplexml_load_file($url);
+    $items = $remote_data->channel->item; 
+    $feed = array();
+    foreach ($items as $item) {
+      $feed[] = $item;
+    }
+
+    $feed_vars = array();
+    for ($i = 0; $i < count($feed); $i++) {
+      $title = isset($feed[$i]->title) ? $feed[$i]->title->__toString() : '';
+      $desc = isset($feed[$i]->description) ? $feed[$i]->description->__toString() : '';
+      $link = isset($feed[$i]->link) ? $feed[$i]->link->__toString() : '';
+      $date = isset($feed[$i]->pubDate) ? $feed[$i]->pubDate->__toString() : '';
+      $imgLink = isset($feed[$i]->imageSource) ? html_entity_decode($feed[$i]->imageSource->__toString(), ENT_QUOTES | ENT_HTML5, 'UTF-8') : '';
+      $imgAlt = isset($feed[$i]->imageAlt) ? $feed[$i]->imageAlt->__toString() : '';
+
+      $feed_vars[$i]['title'] = $title;
+      $feed_vars[$i]['link'] = $link;
+      $feed_vars[$i]['pubDate'] = $date;
+      $feed_vars[$i]['img'] = $imgLink;
+      $feed_vars[$i]['description'] = $desc;
+      $feed_vars[$i]['imgAlt'] = $imgAlt;
+    }
+
+    $build = $feed_vars;
+    $variables['content']['rss'] = $build;
+    return null;
+  }
+
+
+
   // PubMed feed listing
   if ($type == 'pubmed') {
     $pubmed_source = $variables['paragraph']->field_external_rss_sources->uri;
@@ -358,7 +392,7 @@ function rss_feed_preprocess_paragraph__external_rss(&$variables)
       $feed_vars[$i]['link'] = $feed[$i]->link->__toString();
       $feed_vars[$i]['pubDate'] = $feed[$i]->pubDate->__toString();
       preg_match('/([\w\W]+)(<img.*?src="(.*?)" (.*?) alt="(.*?)"[^\>]+>)([\w\W]+)<\/p>$/', $feed[$i]->description->__toString(), $matches);
-      $feed_vars[$i]['description']['image_src'] = $matches[3];
+      $feed_vars[$i]['description']['image_src'] = html_entity_decode($matches[3], ENT_QUOTES | ENT_HTML5, 'UTF-8');
       $feed_vars[$i]['description']['image_alt'] = $matches[5];
       $feed_vars[$i]['description']['text'] = $matches[6];
     }
@@ -403,7 +437,7 @@ function rss_feed_preprocess_paragraph__external_rss(&$variables)
         $feed_arr[$key]['month'] = date("M", strtotime($timestamp));
         $feed_arr[$key]['day'] = date("d", strtotime($timestamp));
         preg_match('/([\w\W]+)(<img.*?src="(.*?)" (.*?) alt="(.*?)"[^\>]+>)([\w\W]+)<\/p>$/', $item->description->__toString(), $matches);
-        $feed_arr[$key]['description']['image_src'] = $matches[3];
+        $feed_arr[$key]['description']['image_src'] = html_entity_decode($matches[3], ENT_QUOTES | ENT_HTML5, 'UTF-8');
         $feed_arr[$key]['description']['image_alt'] = $matches[5];
         $feed_arr[$key]['description']['text'] = $matches[6];
       }

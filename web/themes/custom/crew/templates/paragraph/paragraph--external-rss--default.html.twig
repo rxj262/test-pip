@@ -61,12 +61,73 @@
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes, flex_classes) }}>
+  <div class="container">
       {% block content %}
+        {# print this if type is campusgroup_img or athletics #}
+				{% if type == 'newsroom_all_fields' or type == 'newsroom_no_image' or type == 'newsroom_title_and_date' %}
+					{% if content.field_external_rss_title.0['#context'].value %}
+						<h2 class='rss_section_title'>{{ content.field_external_rss_title.0['#context'].value }}</h2>
+					{% endif %}
+					<ul>
+            {#  Type Name - Newsroom: All fields
+                  Image, Title, Date, Description
+                Type Name - Newsroom: No Image
+                  Title, Date, Description
+                Type Name - Newsroom: Title and Date
+                  Title, Date
+                <div class=“news-feed”>
+                  <div class=“feed-img”>Image</div>
+                  <div class=“feed-body”>
+                      <div class=“feed-title”><a href=“LINK”>Title</a></div>
+                      <div class=“feed-date”>Date</div>
+                      <div class=“feed-descr”>Description</div>
+                  </div>
+                </div>
+            #}
+						{% for i in 0..min(count, feedcount) %}
+							<li>
+                <div class='news-feed'>
+                {% if type == 'newsroom_all_fields' %}
+                  {% if content.rss[i].img == '' %}
+                  <div>No Image</div>
+                  {% else %}
+                  <img class='feed-img' src={{content.rss[i].img}} alt="{{content.rss[i].imgAlt}}">
+                  {% endif %}
+                {% endif %}
+                  <div class='feed-body'>
+                    <div class='feed-title'><a href={{ content.rss[i].link }}>{{ content.rss[i].title }}</a></div>
+                    <div class='feed-date'>{{ content.rss[i].pubDate }}</div>
+                    {% if type != 'newsroom_title_and_date' %}
+                    <div class='feed-descr'>{{ content.rss[i].description }}</div>
+                    {% endif %}
+                  </div>
+                </div>
+							</li>
+						{% endfor %}
+					</ul>
+				{# print button if it has values #}
+				{% if content.field_external_rss_button.0['#title'] %}
+					{% if content.field_external_rss_button.0['#url'].uri is not defined %}
+						{{ link(content.field_external_rss_button.0['#title'],
+                          content.field_external_rss_button.0['#url'].uri,
+                          { 'class':['btn', 'blue'], 'target':['_blank']} )
+                      }}
+					{% else %}
+						<div class={{ content.is_sidebar_content ? 'field--name-field-aside-button' : 'field--name-field-subfeature-link' }}>
+							<a href={{content.field_external_rss_button.0['#url_title']}}>{{content.field_external_rss_button.0['#title']}}<span class="arrow-right"></span>
+							</a>
+						</div>
+					{% endif %}
+				{% endif %}
+			{% else %}
           {% if content.field_external_rss_news_type['#items'].value is null or content.field_external_rss_news_type['#items'].value == 'events' %}
+              <div class="events-head">
               {# print sectional title if set #}
               {% if content.field_external_rss_title.0['#context'].value %}
-                <div class='rss_section_title'>{{ content.field_external_rss_title.0['#context'].value }}</div>
+                <h2 class='rss_section_title'>{{ content.field_external_rss_title.0['#context'].value }}</h2>
               {% endif %}
+              </div>
+                 
               {# print this if type is gcal #}
               {% if type == 'gcal' %}
                 {% if content.field_external_rss_gcal['#is_multiple'] == FALSE %}
@@ -110,6 +171,17 @@
               {% else %} {# multiple google calendar check #}
                 {{ content.rss }}
               {% endif %}
+							{% if content.field_external_rss_button.0['#url'].uri is not defined %}
+								{{ link(content.field_external_rss_button.0['#title'],
+                                content.field_external_rss_button.0['#url'].uri,
+                                { 'class':['btn', 'blue'], 'target':['_blank']} )
+                            }}
+							{% else %}
+								<div class={{ content.is_sidebar_content ? 'field--name-field-aside-button' : 'field--name-field-subfeature-link' }}>
+									<a href={{content.field_external_rss_button.0['#url_title']}}>{{content.field_external_rss_button.0['#title']}}<span class="arrow-right"></span>
+									</a>
+								</div>
+							{% endif %}
             {% endif %}
               {# print this if type is theDaily or mailchimp #}
               {% if (type == 'd8' or type == 'daily' or type == 'mailchimp' or type == 'learningstream' or type == 'rawrss' or type == 'tb_cg' or type == 'rawrssjobs') %}
@@ -121,14 +193,14 @@
                         {% for i in 0..min(count, feedcount) %}
                               {% if content.rss[i].eventmonth and content.rss[i].eventday %}
                                 <li class='feed-item-block flex feed-events-date'>
-                                <div>
+                                <div class="feed-item-daterange-container">
                                   <div class='feed-item-daterange feed-me'>
                                       <span class='month'>{{ content.rss[i].eventmonth }}</span>
                                       <span class='day'>{{ content.rss[i].eventday }}</span>
                                   </div>
                               {% else %}
                                 <li class='feed-item-block flex feed-news-date'>
-                                <div>
+                                <div class="feed-item-daterange-container">
                                 {% if type == 'd8' %}
                                   <div class='feed-item-daterange'>
                                       {{ content.rss[i]['timestamp']|date("F d, o") }}
@@ -141,7 +213,7 @@
                                 {% endif %}
                               {% endif %}
                             </div>
-                            <div>
+                            <div class="feed-item-title-container">
                               {% if content.rss[i].eventtype and type == 'tb_cg' %}
                                 <div class='event-type'>
                                   <p>{{ content.rss[i].eventtype }}</p>
@@ -158,33 +230,27 @@
                                   {% endif %}
                                 </a>
                               </div>
-                              {% if content.rss[i].groupname %}
-                                  <div>{{ content.rss[i].groupname }}</div>
-                              {% endif %}
-                              {% if content.rss[i].eventtime %}
-                                  <span>{{ content.rss[i].eventtime }}</span>
-                              {% endif %}
                             </div>
                           </li>
                         {% endfor %}
                     </ul>
                   </div>
+                        {# print button if it has values #}
+                    {% if content.field_external_rss_button.0['#title'] %}
+                        {% if content.field_external_rss_button.0['#url'].uri is not defined %}
+                            {{ link(content.field_external_rss_button.0['#title'],
+                                content.field_external_rss_button.0['#url'].uri,
+                                { 'class':['btn', 'blue'], 'target':['_blank']} )
+                            }}
+                        {% else %}
+                          <div class={{ content.is_sidebar_content ? 'field--name-field-aside-button' : 'field--name-field-subfeature-link' }}>
+                            <a href={{content.field_external_rss_button.0['#url_title']}}>{{content.field_external_rss_button.0['#title']}}<span class="arrow-right"></span></a>
+                          </div>
+                        {% endif %}
+                      {% endif %}
                 {% endif %}
               {% endif %}
 
-              {# print button if it has values #}
-              {% if content.field_external_rss_button.0['#title'] %}
-                  {% if content.field_external_rss_button.0['#url'].uri is not defined %}
-                      {{ link(content.field_external_rss_button.0['#title'],
-                          content.field_external_rss_button.0['#url'].uri,
-                          { 'class':['btn', 'blue'], 'target':['_blank']} )
-                      }}
-                  {% else %}
-                    <div class={{ content.is_sidebar_content ? 'field--name-field-aside-button' : 'field--name-field-subfeature-link' }}>
-                      <a href={{content.field_external_rss_button.0['#url_title']}}>{{content.field_external_rss_button.0['#title']}}</a>
-                    </div>
-                  {% endif %}
-              {% endif %}
 
           {% elseif content.field_external_rss_news_type['#items'].value is defined and content.field_external_rss_news_type['#items'].value == 'news' %}
             <div class='feed-news'>{{ content.rss }}</div>
@@ -194,7 +260,9 @@
             <div class='feed-full-news'>{{ content.rss }}</div>
           {% endif %}
 
+        {% endif %}
       {% endblock %}
 
   </div>
+</div>
 {% endblock paragraph %}

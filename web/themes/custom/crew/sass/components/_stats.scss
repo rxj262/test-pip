@@ -242,22 +242,22 @@
   }
 }
 
-section.has-sidebar:has(aside) {
+section.has-sidebar:has(.field--name-field-robust-3-page-right-ref) {
   .paragraph--type--stats-group {
     .container {
       .stats-grouping {
-        .field--name-field-stat-items {
-          gap: 6rem;
-          & > .field--item {
-            flex-grow: 0;
-          }
-          @media #{$large-max} {
-            flex-direction: column;
+        padding: 0 6rem;
+        margin-top: 0;
+        @media #{$small-max} {
+          padding: 0;
+        }
 
-            & > .field--item {
-              flex-basis: 100%;
-              flex-grow: 1;
-            }
+        .field--name-field-stat-items {
+          gap: 5rem;
+          flex-direction: column;
+          & > .field--item {
+            flex-basis: 100%;
+            flex-grow: 1;
           }
         }
       }
@@ -267,7 +267,8 @@ section.has-sidebar:has(aside) {
 
 .robust-3-column-page {
   .paragraph--type--stats-group {
-    padding: 3rem 2.5rem 4rem;
+    padding: 3rem 2.5rem 3.5rem;
+    margin: 2rem 0;
   }
 }
 
