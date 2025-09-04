@@ -1,0 +1,301 @@
+.paragraph--type--external-rss {
+  background: none;
+
+  & > .container {
+    background: none;
+    margin: 0 auto;
+
+    h2.rss_section_title {
+      background: none;
+      margin: 0;
+      margin-top: 0.7rem;
+      margin-bottom: 2rem;
+      color: $cwru-blue;
+      font-size: 34px;
+      font-weight: bold;
+      text-transform: capitalize;
+      padding-left: 1em;
+      padding-top: 0;
+      @media #{$small-max} {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    // Start Latest News
+    ul {
+      list-style-type: none;
+      display: flex;
+      padding: 0;
+      gap: 4rem;
+      @media #{$small-max} {
+        flex-direction: column;
+        padding: 0;
+        gap: 3rem;
+      }
+
+      li {
+        flex-basis: 33%;
+        @media #{$small-max} {
+          flex-basis: 100%;
+        }
+
+        .news-feed,
+        .feed-body {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          flex: 1;
+        }
+
+        .news-feed {
+          img {
+            height: 175px;
+            object-fit: cover;
+            @media #{$small-max} {
+              flex-basis: auto;
+            }
+          }
+
+          .feed-body {
+            .feed-title {
+              a {
+                font-size: 2.2rem;
+                text-decoration: underline;
+              }
+            }
+
+            .feed-date {
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+    // End Latest News
+
+    // Start Upcoming Events
+    .feed.flex-1 {
+      padding: 0;
+
+      ul {
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+        @media #{$large-max} {
+          flex-wrap: wrap;
+          gap: 5rem 3rem;
+        }
+        @media #{$small-max} {
+          flex-direction: column;
+          gap: 3rem;
+        }
+
+        li.feed-item-block.feed-events-date {
+          border: 0;
+          padding: 0;
+          flex-basis: 31%;
+          @media #{$large-max} {
+            flex-basis: 48%;
+          }
+          @media #{$small-max} {
+            flex-basis: 100%;
+          }
+
+          @media #{$large-min} {
+            &:nth-child(4) {
+              margin-top: 3rem;
+            }
+            &:nth-child(5) {
+              margin-top: 3rem;
+            }
+            &:nth-child(6) {
+              margin-top: 3rem;
+            }
+          }
+
+          .feed-item-daterange-container {
+            .feed-item-daterange.feed-me {
+              border: 0;
+              background: url("../images/calendar_date_background.svg")
+                no-repeat;
+              display: flex;
+              flex-direction: column;
+              gap: 0.3rem;
+              width: auto;
+              font-size: unset;
+              text-align: center;
+              background-size: cover;
+              height: 90px;
+              width: 90px;
+              justify-content: center;
+
+              span.month {
+                background: none;
+                color: $white;
+                font-size: 2.4rem;
+                text-transform: uppercase;
+                font-weight: 800;
+                line-height: 0.8;
+                width: 100%;
+              }
+
+              span.day {
+                background: none;
+                color: $white;
+                font-size: 6rem;
+                font-weight: 800;
+                line-height: 0.8;
+                width: 100%;
+              }
+            }
+          }
+
+          .feed-item-title-container {
+            .feed-item-title {
+              font-size: 2.2rem;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    // End Upcoming Events
+
+    .field--name-field-subfeature-link {
+      justify-content: flex-end;
+      padding: 0 2rem;
+      margin-top: 3rem;
+
+      a {
+        display: inline-block;
+        background-color: $link-blue;
+        color: #fff;
+        padding: 1em 1.5em;
+        margin: 0;
+        border-radius: 20em;
+        line-height: 1;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        width: auto;
+        @media #{$small-max} {
+          width: 100%;
+        }
+
+        &:hover {
+          background-color: $cwru-blue;
+        }
+      }
+    }
+  }
+}
+
+.robust-3-column-page {
+  .paragraph--type--external-rss {
+    & > .container {
+      width: auto;
+      padding: 0;
+
+      // Start Latest News
+      ul {
+        flex-direction: column;
+        padding: 0;
+
+        li {
+          .news-feed {
+            flex-direction: row;
+            gap: 4rem;
+            @media #{$small-max} {
+              flex-direction: column;
+              gap: 1rem;
+            }
+
+            img {
+              margin: 0;
+              flex-basis: 32%;
+              background: none;
+              align-content: flex-start;
+              @media #{$small-max} {
+                flex-basis: auto;
+              }
+            }
+
+            .feed-body {
+              flex-basis: 68%;
+              @media #{$small-max} {
+                flex-basis: 100%;
+              }
+            }
+          }
+        }
+      }
+      // End Latest News
+    }
+  }
+}
+
+.field--name-field-twocol-sidebar-ref {
+  .paragraph--type--external-rss {
+    & > .container {
+      background: $off-white;
+
+      h2.rss_section_title {
+        background-color: $dark-gray;
+        color: $white;
+        text-transform: uppercase;
+        overflow-wrap: break-word;
+        padding: 11px 22px;
+        min-height: 50px;
+        font-size: 2rem;
+        font-weight: normal;
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      // Start Latest News
+      ul {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+
+        li {
+          border-bottom: 1px solid $light-gray;
+          padding-bottom: 1.5rem;
+
+          &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+
+          .news-feed {
+            .feed-body {
+              .feed-title {
+                a {
+                  font-size: 2rem;
+                  text-decoration: none;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+
+              .feed-date {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $dark-gray;
+                font-style: normal;
+              }
+            }
+          }
+        }
+      }
+      // End Latest News
+    }
+  }
+}
