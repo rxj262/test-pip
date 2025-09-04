@@ -95,6 +95,7 @@
           border: 0;
           padding: 0;
           flex-basis: 31%;
+          gap: 2rem;
           @media #{$large-max} {
             flex-basis: 48%;
           }
@@ -162,10 +163,17 @@
     }
     // End Upcoming Events
 
+    .field--name-field-aside-button {
+      margin: 0px;
+    }
+
     .field--name-field-subfeature-link {
       justify-content: flex-end;
       padding: 0 2rem;
       margin-top: 3rem;
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
 
       a {
         display: inline-block;
@@ -230,6 +238,15 @@
         }
       }
       // End Latest News
+    }
+  }
+
+  .field--name-field-robust-3-page-ref .paragraph--type--external-rss {
+    padding: 0;
+    background-color: $white;
+
+    div.feed {
+      padding: 0;
     }
   }
 }
@@ -299,3 +316,176 @@
     }
   }
 }
+
+// Other feed styling
+.field--name-field-aside-ref .view-security-reports,
+.view-news {
+  background-color: $off-white;
+  padding-bottom: 1px;
+  margin-bottom: 20px;
+  border: 1px solid $light-gray;
+
+  &.subfeature-news-view {
+    padding-bottom: 0px;
+    margin-bottom: -15px;
+  }
+
+  &.full-news-view {
+    background-color: $white;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border: none;
+
+    .views-row {
+      margin-bottom: 15px;
+      padding: 0px;
+    }
+  }
+}
+
+#root-cebp-aside {
+  background-color: $off-white;
+  .gcf-item-block {
+    display: grid;
+  }
+}
+
+// Start Upcoming Events Google Calendar
+.field--name-field-aside-ref {
+  .paragraph--type--external-rss {
+    .gCalFlow {
+      padding: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .gcf-item-block {
+        border-bottom: 1px solid $light-gray;
+        font-size: 17px;
+        font-weight: 400;
+        list-style-type: none;
+        text-align: left;
+        width: 100%;
+        padding: 20px 0px 20px;
+
+        &:first-child {
+          padding-top: 0px;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .gcf-item-header-block {
+          display: flex;
+
+          .gcf-item-daterange {
+            border: 1px solid $lighter-gray;
+            color: $med-gray;
+            display: block;
+            float: left;
+            font-size: 90%;
+            font-weight: bold;
+            line-height: 1;
+            //margin-bottom: 1em;
+            margin-bottom: 0;
+            margin-right: 10px;
+            text-align: center;
+            width: 50px;
+
+            & .month {
+              background: none repeat scroll 0 0 $cwru-blue;
+              color: $white;
+              display: block;
+              font-size: 13px;
+              font-weight: 300;
+              line-height: 1.4;
+              width: 50px;
+            }
+
+            & .day {
+              background-color: $white;
+              display: block;
+              font-size: 25px;
+              font-weight: 300;
+              line-height: 1.4;
+            }
+          }
+
+          .gcf-item-title {
+            display: block;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 0;
+            word-wrap: break-word;
+          }
+        }
+      }
+
+      .gcf-no-items .no-events {
+        margin: 0 10px 20px;
+      }
+    }
+  }
+}
+// End Upcoming Events Google Calendar
+
+//Sidebars, asides, subfeatures
+.field--name-field-robust-3-page-right-ref,
+.field--name-field-twocol-sidebar-ref,
+.field--name-field-aside-ref,
+.field--name-field-subfeature-ref {
+  .paragraph--type--external-rss {
+    background: $off-white;
+
+    .rss_section_title {
+      background: $dark-gray;
+      color: $white;
+      text-transform: uppercase;
+      overflow-wrap: break-word;
+      padding: 11px 22px;
+      min-height: 50px;
+      margin-bottom: 20px;
+
+      & + p {
+        flex-grow: 1px;
+        padding: 0 10px;
+      }
+    }
+
+    .field--name-field-aside-button {
+      margin: 0px;
+    }
+  }
+}
+
+//From old rss.scss file
+// .field--name-field-robust-3-page-ref .paragraph--type--external-rss {
+//   padding: 0;
+//   background-color: $white;
+
+//   div.feed {
+//     padding: 0;
+//   }
+
+//   .feed-news {   WHERE IS THIS??????????
+//     ul {
+//       li.feed-item-block {
+//         padding-left: 0;
+//         margin-left: 0;
+//         border: none;
+
+//         p.feed-item-title {
+//           a {
+//             padding-left: 0;
+//             font-size: 1.25em;
+//           }
+//         }
+
+//         span.feed-item-date {
+//           font-size: 0.75em;
+//           font-weight: 400;
+//         }
+//       }
+//     }
+//   }
+// }
