@@ -1,0 +1,566 @@
+.paragraph--type--external-rss {
+  background: none;
+
+  & > .container {
+    background: none;
+    margin: 0 auto;
+
+    h2.rss_section_title {
+      background: none;
+      margin: 0;
+      margin-top: 0.7rem;
+      margin-bottom: 2rem;
+      color: $cwru-blue;
+      font-size: 34px;
+      font-weight: bold;
+      text-transform: capitalize;
+      padding-left: 1em;
+      padding-top: 0;
+      @media #{$small-max} {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    // Start Latest News
+    ul {
+      list-style-type: none;
+      display: flex;
+      padding: 0;
+      gap: 4rem;
+      @media #{$small-max} {
+        flex-direction: column;
+        padding: 0;
+        gap: 3rem;
+      }
+
+      li {
+        flex-basis: 33%;
+        @media #{$small-max} {
+          flex-basis: 100%;
+        }
+
+        .news-feed,
+        .feed-body {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          flex: 1;
+        }
+
+        .news-feed {
+          img {
+            height: 175px;
+            object-fit: cover;
+            @media #{$small-max} {
+              flex-basis: auto;
+            }
+          }
+
+          .feed-body {
+            .feed-title {
+              a {
+                font-size: 2.2rem;
+                text-decoration: underline;
+              }
+            }
+
+            .feed-date {
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+    // End Latest News
+
+    // Start Upcoming Events
+    .feed.flex-1 {
+      padding: 0;
+
+      ul {
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+        @media #{$large-max} {
+          flex-wrap: wrap;
+          gap: 5rem 3rem;
+        }
+        @media #{$small-max} {
+          flex-direction: column;
+          gap: 3rem;
+        }
+
+        li.feed-item-block.feed-events-date {
+          border: 0;
+          padding: 0;
+          flex-basis: 31%;
+          gap: 2rem;
+          @media #{$large-max} {
+            flex-basis: 48%;
+          }
+          @media #{$small-max} {
+            flex-basis: 100%;
+          }
+
+          @media #{$large-min} {
+            &:nth-child(4) {
+              margin-top: 3rem;
+            }
+            &:nth-child(5) {
+              margin-top: 3rem;
+            }
+            &:nth-child(6) {
+              margin-top: 3rem;
+            }
+          }
+
+          .feed-item-daterange-container {
+            .feed-item-daterange.feed-me {
+              border: 0;
+              background: url("../images/calendar_date_background.svg")
+                no-repeat;
+              display: flex;
+              flex-direction: column;
+              gap: 0.3rem;
+              width: auto;
+              font-size: unset;
+              text-align: center;
+              background-size: cover;
+              height: 90px;
+              width: 90px;
+              justify-content: center;
+
+              span.month {
+                background: none;
+                color: $white;
+                font-size: 2.4rem;
+                text-transform: uppercase;
+                font-weight: 800;
+                line-height: 0.8;
+                width: 100%;
+              }
+
+              span.day {
+                background: none;
+                color: $white;
+                font-size: 6rem;
+                font-weight: 800;
+                line-height: 0.8;
+                width: 100%;
+              }
+            }
+          }
+
+          .feed-item-title-container {
+            .feed-item-title {
+              font-size: 2.2rem;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    // End Upcoming Events
+
+    .field--name-field-aside-button {
+      margin: 0px;
+    }
+
+    .field--name-field-subfeature-link {
+      justify-content: flex-end;
+      padding: 0 2rem;
+      margin-top: 3rem;
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+
+      a {
+        display: inline-block;
+        background-color: $link-blue;
+        color: #fff;
+        padding: 1em 1.5em;
+        margin: 0;
+        border-radius: 20em;
+        line-height: 1;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        width: auto;
+        @media #{$small-max} {
+          width: 100%;
+        }
+
+        &:hover {
+          background-color: $cwru-blue;
+        }
+      }
+    }
+  }
+}
+
+.robust-3-column-page {
+  .paragraph--type--external-rss {
+    & > .container {
+      width: auto;
+      padding: 0;
+
+      // Start Latest News
+      ul {
+        flex-direction: column;
+        padding: 0;
+
+        li {
+          .news-feed {
+            flex-direction: row;
+            gap: 4rem;
+            @media #{$small-max} {
+              flex-direction: column;
+              gap: 1rem;
+            }
+
+            img {
+              margin: 0;
+              flex-basis: 32%;
+              background: none;
+              align-content: flex-start;
+              @media #{$small-max} {
+                flex-basis: auto;
+              }
+            }
+
+            .feed-body {
+              flex-basis: 68%;
+              @media #{$small-max} {
+                flex-basis: 100%;
+              }
+            }
+          }
+        }
+      }
+      // End Latest News
+    }
+  }
+
+  .field--name-field-robust-3-page-ref .paragraph--type--external-rss {
+    padding: 0;
+    background-color: $white;
+
+    div.feed {
+      padding: 0;
+    }
+  }
+}
+
+.field--name-field-twocol-sidebar-ref {
+  .paragraph--type--external-rss {
+    & > .container {
+      background: $off-white;
+
+      h2.rss_section_title {
+        background-color: $dark-gray;
+        color: $white;
+        text-transform: uppercase;
+        overflow-wrap: break-word;
+        padding: 11px 22px;
+        min-height: 50px;
+        font-size: 2rem;
+        font-weight: normal;
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      // Start Latest News
+      ul {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+
+        li {
+          border-bottom: 1px solid $light-gray;
+          padding-bottom: 1.5rem;
+
+          &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+
+          .news-feed {
+            .feed-body {
+              .feed-title {
+                a {
+                  font-size: 2rem;
+                  text-decoration: none;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+
+              .feed-date {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $dark-gray;
+                font-style: normal;
+              }
+            }
+          }
+        }
+      }
+      // End Latest News
+    }
+  }
+}
+
+// Other feed styling
+.field--name-field-aside-ref .view-security-reports,
+.view-news {
+  background-color: $off-white;
+  padding-bottom: 1px;
+  margin-bottom: 20px;
+  border: 1px solid $light-gray;
+
+  &.subfeature-news-view {
+    padding-bottom: 0px;
+    margin-bottom: -15px;
+  }
+
+  &.full-news-view {
+    background-color: $white;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border: none;
+
+    .views-row {
+      margin-bottom: 15px;
+      padding: 0px;
+    }
+  }
+}
+
+#root-cebp-aside {
+  background-color: $off-white;
+  .gcf-item-block {
+    display: grid;
+  }
+}
+
+// Start Upcoming Events Google Calendar
+.field--name-field-aside-ref {
+  .paragraph--type--external-rss {
+    .gCalFlow {
+      padding: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .gcf-item-block {
+        border-bottom: 1px solid $light-gray;
+        font-size: 17px;
+        font-weight: 400;
+        list-style-type: none;
+        text-align: left;
+        width: 100%;
+        padding: 20px 0px 20px;
+
+        &:first-child {
+          padding-top: 0px;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .gcf-item-header-block {
+          display: flex;
+
+          .gcf-item-daterange {
+            border: 1px solid $lighter-gray;
+            color: $med-gray;
+            display: block;
+            float: left;
+            font-size: 90%;
+            font-weight: bold;
+            line-height: 1;
+            //margin-bottom: 1em;
+            margin-bottom: 0;
+            margin-right: 10px;
+            text-align: center;
+            width: 50px;
+
+            & .month {
+              background: none repeat scroll 0 0 $cwru-blue;
+              color: $white;
+              display: block;
+              font-size: 13px;
+              font-weight: 300;
+              line-height: 1.4;
+              width: 50px;
+            }
+
+            & .day {
+              background-color: $white;
+              display: block;
+              font-size: 25px;
+              font-weight: 300;
+              line-height: 1.4;
+            }
+          }
+
+          .gcf-item-title {
+            display: block;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 0;
+            word-wrap: break-word;
+          }
+        }
+      }
+
+      .gcf-no-items .no-events {
+        margin: 0 10px 20px;
+      }
+    }
+  }
+}
+// End Upcoming Events Google Calendar
+
+//Sidebars, asides, subfeatures
+.field--name-field-robust-3-page-right-ref,
+.field--name-field-twocol-sidebar-ref,
+.field--name-field-aside-ref,
+.field--name-field-subfeature-ref {
+  .paragraph--type--external-rss {
+    background: $off-white;
+
+    .rss_section_title {
+      background: $dark-gray;
+      color: $white;
+      text-transform: uppercase;
+      overflow-wrap: break-word;
+      padding: 11px 22px;
+      min-height: 50px;
+      margin-bottom: 20px;
+
+      & + p {
+        flex-grow: 1px;
+        padding: 0 10px;
+      }
+    }
+
+    .field--name-field-aside-button {
+      margin: 0px;
+    }
+  }
+}
+
+// START From old rss.scss file
+.btn.blue {
+  @include button-blue;
+  border-radius: 0;
+}
+
+.paragraph--type--external-rss a.btn.blue {
+  @include button-block-blue;
+}
+
+.paragraph--type--subfeatures-group {
+  .paragraph--type--external-rss {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .gCalFlow {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -moz-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+  }
+}
+
+.more-link {
+  margin: 10px;
+
+  a {
+    @include button-block-blue;
+  }
+}
+
+.field--name-field-robust-3-page-ref .paragraph--type--external-rss {
+  padding: 0;
+  background-color: $white;
+
+  div.feed {
+    padding: 0;
+  }
+
+  .feed-news {
+    ul {
+      li.feed-item-block {
+        padding-left: 0;
+        margin-left: 0;
+        border: none;
+
+        p.feed-item-title {
+          a {
+            padding-left: 0;
+            font-size: 1.25em;
+          }
+        }
+
+        span.feed-item-date {
+          font-size: 0.75em;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.paragraph--type--external-rss {
+  div.main-content-feed.news-feed {
+    ul {
+      padding: 20px 0 0 0;
+      list-style: none;
+      .img-responsive {
+        width: 175px;
+        @media #{$phone-max} {
+          width: 100%;
+        }
+      }
+      li div.feed-item-block {
+        border: none;
+      }
+      .article-date {
+        font-size: 17px;
+        margin-top: -5px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  div.main-content-feed.events-feed {
+    ul {
+      list-style: none;
+      li .feed-item-block {
+        border: none;
+      }
+    }
+  }
+}
+// END From old rss.scss file
