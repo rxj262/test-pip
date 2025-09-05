@@ -177,12 +177,12 @@
 
       a {
         display: inline-block;
-        background-color: $link-blue;
+        background-color: $cwru-blue;
         color: #fff;
         padding: 1em 1.5em;
         margin: 0;
-        border-radius: 20em;
-        line-height: 1;
+        border-radius: 0;
+        line-height: 1.333;
         transition: background-color 0.3s;
         text-decoration: none;
         width: auto;
@@ -191,7 +191,7 @@
         }
 
         &:hover {
-          background-color: $cwru-blue;
+          background-color: $link-blue;
         }
       }
     }
@@ -236,6 +236,11 @@
             }
           }
         }
+      }
+      .field--name-field-subfeature-link {
+        padding: 0;
+        justify-content: flex-start;
+        align-items: flex-start;
       }
       // End Latest News
     }
