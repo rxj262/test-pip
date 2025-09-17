@@ -177,21 +177,12 @@
 
       a {
         display: inline-block;
-<<<<<<< HEAD
         background-color: $cwru-blue;
         color: #fff;
         padding: 0.8em 1em;
         margin: 0;
         border-radius: 0;
         line-height: 1.333;
-=======
-        background-color: $link-blue;
-        color: #fff;
-        padding: 1em 1.5em;
-        margin: 0;
-        border-radius: 20em;
-        line-height: 1;
->>>>>>> origin/dl-external-feed-file
         transition: background-color 0.3s;
         text-decoration: none;
         width: auto;
@@ -200,11 +191,7 @@
         }
 
         &:hover {
-<<<<<<< HEAD
           background-color: $link-blue;
-=======
-          background-color: $cwru-blue;
->>>>>>> origin/dl-external-feed-file
         }
       }
     }
@@ -250,7 +237,6 @@
           }
         }
       }
-<<<<<<< HEAD
       .field--name-field-subfeature-link {
         padding: 0;
         justify-content: flex-start;
@@ -260,8 +246,6 @@
           padding: 10px 16px;
         }
       }
-=======
->>>>>>> origin/dl-external-feed-file
       // End Latest News
     }
   }
