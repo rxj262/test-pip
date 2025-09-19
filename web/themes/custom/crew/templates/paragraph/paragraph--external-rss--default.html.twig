@@ -64,7 +64,7 @@
   <div class="container">
       {% block content %}
         {# print this if type is campusgroup_img or athletics #}
-				{% if type == 'newsroom_all_fields' or type == 'newsroom_no_image' or type == 'newsroom_title_and_date' %}
+				{% if type == 'newsroom_all_fields' or type == 'newsroom_no_image' or type == 'newsroom_title_and_date' or type == 'newsroom_no_description' %}
 					{% if content.field_external_rss_title.0['#context'].value %}
 						<h2 class='rss_section_title'>{{ content.field_external_rss_title.0['#context'].value }}</h2>
 					{% endif %}
@@ -87,7 +87,7 @@
 						{% for i in 0..min(count, feedcount) %}
 							<li>
                 <div class='news-feed'>
-                {% if type == 'newsroom_all_fields' %}
+                {% if type == 'newsroom_all_fields' or type == 'newsroom_no_description' %}
                   {% if content.rss[i].img == '' %}
                   <div>No Image</div>
                   {% else %}
@@ -97,7 +97,7 @@
                   <div class='feed-body'>
                     <div class='feed-title'><a href={{ content.rss[i].link }}>{{ content.rss[i].title }}</a></div>
                     <div class='feed-date'>{{ content.rss[i].pubDate }}</div>
-                    {% if type != 'newsroom_title_and_date' %}
+                    {% if type != 'newsroom_title_and_date' and type != 'newsroom_no_description' %}
                     <div class='feed-descr'>{{ content.rss[i].description }}</div>
                     {% endif %}
                   </div>
@@ -183,8 +183,8 @@
 								</div>
 							{% endif %}
             {% endif %}
-              {# print this if type is theDaily or mailchimp #}
-              {% if (type == 'd8' or type == 'daily' or type == 'mailchimp' or type == 'learningstream' or type == 'rawrss' or type == 'tb_cg' or type == 'rawrssjobs') %}
+              {# print this if type is theDaily or mailchimp or Campus Groups #}
+              {% if (type == 'd8' or type == 'daily' or type == 'mailchimp' or type == 'learningstream' or type == 'rawrss' or type == 'tb_cg' or type == 'rawrssjobs' or type == 'campus_groups') %}
                 {% if content.rss is null %}
                   <p class='m-20'>No data available at this time...</p>
                 {% else %}
@@ -230,6 +230,11 @@
                                   {% endif %}
                                 </a>
                               </div>
+                                {% if type == 'campus_groups' %}
+                                  <div class='feed-item-time'>
+                                    {{ content.rss[i]['eventtime'] }}
+                                  </div>
+                               {% endif %}
                             </div>
                           </li>
                         {% endfor %}

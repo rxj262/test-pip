@@ -326,6 +326,169 @@
   }
 }
 
+// Updated news and events styling
+.homepage-w-sidebar {
+  .content-col {
+    .field--name-field-twocol-subfeature-ref {
+      & > .field--item {
+        .paragraph--type--external-rss {
+          & > .container {
+            width: 100%;
+            padding: 0;
+
+            h2.rss_section_title {
+              padding: 0;
+            }
+
+            .field--name-field-subfeature-link {
+              margin-top: 0;
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Original News and Events Styling
+.homepage-w-sidebar {
+  .content-col {
+    .field--name-field-twocol-subfeature-ref {
+      & > .field--item {
+        .paragraph--type--external-rss {
+          background: $off-white;
+
+          & > .container {
+            width: 100%;
+            padding: 0;
+
+            h2.rss_section_title {
+              padding: 0;
+              background: $dark-gray;
+              color: $white;
+              text-transform: uppercase;
+              overflow-wrap: break-word;
+              padding: 15px;
+              min-height: 50px;
+              margin-bottom: 0;
+              margin-top: 0;
+              font-size: 2.6rem;
+              font-weight: 500;
+            }
+
+            ul {
+              padding: 20px 15px;
+              flex-direction: column;
+
+              li {
+                .news-feed {
+                  flex-direction: row;
+                  gap: 2rem;
+                }
+              }
+            }
+
+            .feed.flex-1 {
+              ul {
+                li.feed-item-block.feed-events-date {
+                  gap: 1.4rem;
+                  flex-basis: 100%;
+                  margin-top: 0;
+                  .feed-item-daterange-container {
+                    .feed-item-daterange.feed-me {
+                      width: 65px;
+                      height: 65px;
+                      .month {
+                        font-size: 1.9rem;
+                      }
+                      .day {
+                        font-size: 3.5rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .field--name-field-subfeature-link {
+              margin-top: 0;
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar-col {
+    .field--name-field-twocol-sidebar-ref {
+      .paragraph--type--external-rss {
+        & > .container {
+          width: 100%;
+          padding: 0;
+
+          .news-feed {
+            .feed-body {
+              .feed-date {
+                font-size: 1.7rem;
+              }
+            }
+          }
+
+          .feed.flex-1 {
+            ul {
+              li.feed-item-block.feed-events-date {
+                gap: 1.4rem;
+                flex-basis: 100%;
+                .feed-item-daterange-container {
+                  .feed-item-daterange.feed-me {
+                    width: 55px;
+                    height: 55px;
+                    .month {
+                      font-size: 1.6rem;
+                    }
+                    .day {
+                      font-size: 2.9rem;
+                    }
+                  }
+                }
+
+                .feed-item-title-container {
+                  .feed-item-title {
+                    font-size: 2rem;
+                    line-height: 1.2;
+                    a {
+                      overflow-wrap: break-word;
+                    }
+                  }
+
+                  .feed-item-time {
+                    font-size: 1.7rem;
+                    font-weight: 500;
+                    color: $dark-gray;
+                    font-style: normal;
+                    margin-top: 0.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.robust-3-column-page {
+  .paragraph--type--external-rss {
+    & > .container {
+      h2.rss_section_title {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
 // Other feed styling
 .field--name-field-aside-ref .view-security-reports,
 .view-news {

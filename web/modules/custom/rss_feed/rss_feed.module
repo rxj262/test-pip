@@ -21,7 +21,7 @@ function rss_feed_preprocess_paragraph__external_rss(&$variables)
   $variables['content']['is_sidebar_content'] = $is_sidebar_content;
 
   // \Drupal::logger('rss_feed')->notice($variables['elements']['field_external_rss_type']['#items']->value);
-  if ($type == 'newsroom_all_fields' || $type == 'newsroom_no_image' || $type == 'newsroom_title_and_date') {
+  if ($type == 'newsroom_all_fields' || $type == 'newsroom_no_image' || $type == 'newsroom_title_and_date' || $type == 'newsroom_no_description') {
     $url = $variables['elements']['field_external_rss_sources'][0]['#url']->getUri();
     $remote_data = simplexml_load_file($url);
     $items = $remote_data->channel->item; 
@@ -109,7 +109,7 @@ function rss_feed_preprocess_paragraph__external_rss(&$variables)
     $variables['content']['rss'] = $build;
   }
 
-  if (isset($variables['elements']['field_external_rss_type']['#items']) && $variables['elements']['field_external_rss_type']['#items']->value != 'rawrss' && empty($variables['elements']['field_external_rss_news_type']['#items']->value) or (!empty($variables['elements']['field_external_rss_news_type']['#items']->value) && $variables['elements']['field_external_rss_news_type']['#items']->value != 'news') && in_array($variables['elements']['field_external_rss_type']['#items']->value, array('daily', 'mailchimp', 'learningstream', 'd8', 'tb_cg'))) {
+  if (isset($variables['elements']['field_external_rss_type']['#items']) && $variables['elements']['field_external_rss_type']['#items']->value != 'rawrss' && empty($variables['elements']['field_external_rss_news_type']['#items']->value) or (!empty($variables['elements']['field_external_rss_news_type']['#items']->value) && $variables['elements']['field_external_rss_news_type']['#items']->value != 'news') && in_array($variables['elements']['field_external_rss_type']['#items']->value, array('daily', 'mailchimp', 'learningstream', 'd8', 'tb_cg', 'campus_groups'))) {
     if (isset($variables['elements']['field_external_rss_sources']['#items'])) {
       $paragraph_id = $variables['elements']['#paragraph']->id();
 
