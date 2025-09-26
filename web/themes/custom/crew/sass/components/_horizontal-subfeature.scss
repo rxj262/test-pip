@@ -273,7 +273,16 @@
 
 .paragraph--type--horizontal-subfeature:has(.paragraph--type--view) {
   .two-column-container.container {
+    @media #{$small-max} {
+      flex-direction: column;
+    }
+
     .featured-photo.img-col {
+      @media #{$small-max} {
+        margin-bottom: 0;
+        margin-top: 3rem;
+      }
+
       .field--name-field-horizontal-subfeature-medi {
         .paragraph--type--view {
           .views-element-container.form-group {
