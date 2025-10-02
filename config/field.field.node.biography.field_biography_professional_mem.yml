@@ -1,0 +1,21 @@
+uuid: 64264367-3206-4684-82f5-002581f01b22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_professional_mem
+    - node.type.biography
+_core:
+  default_config_hash: Nz2-NI9b-DuoRPo82FK-_W6EQEfj1bUL_svFJLeD0Mo
+id: node.biography.field_biography_professional_mem
+field_name: field_biography_professional_mem
+entity_type: node
+bundle: biography
+label: 'Professional Memberships'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

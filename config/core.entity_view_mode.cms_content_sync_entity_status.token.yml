@@ -1,0 +1,11 @@
+uuid: d63cb4e2-9e43-4310-9fe6-2a6bf6ef4ac1
+langcode: en
+status: true
+dependencies:
+  module:
+    - cms_content_sync
+id: cms_content_sync_entity_status.token
+label: Token
+description: ''
+targetEntityType: cms_content_sync_entity_status
+cache: true

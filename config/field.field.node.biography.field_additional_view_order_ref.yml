@@ -1,0 +1,66 @@
+uuid: 5bb2067e-4f5c-4732-86d0-eccc1633546e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_view_order_ref
+    - node.type.biography
+    - paragraphs.paragraphs_type.additional_view_orders
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: KhbET5vo0i3jdGctHW-nW7UG8p0b3EdTGk2AIIAfiKI
+id: node.biography.field_additional_view_order_ref
+field_name: field_additional_view_order_ref
+entity_type: node
+bundle: biography
+label: 'Additional View Order'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      additional_view_orders: additional_view_orders
+    target_bundles_drag_drop:
+      additional_job_descriptions:
+        weight: 13
+        enabled: false
+      additional_view_orders:
+        enabled: true
+        weight: 14
+      award_honor:
+        weight: 15
+        enabled: false
+      biography_education:
+        weight: 16
+        enabled: false
+      external_appointment:
+        weight: 17
+        enabled: false
+      job_title_affiliation:
+        weight: 18
+        enabled: false
+      presentation:
+        weight: 19
+        enabled: false
+      publication:
+        weight: 20
+        enabled: false
+      residency:
+        weight: 21
+        enabled: false
+      site_affiliation:
+        weight: 22
+        enabled: false
+      social:
+        weight: 23
+        enabled: false
+      social_section:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

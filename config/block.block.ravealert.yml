@@ -1,0 +1,23 @@
+uuid: 833c8d75-16d3-4333-9b7f-c1ece111f0e0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - crew
+_core:
+  default_config_hash: 0ncHT4GyQrOqByBYV9ynMYAQR61dDmG99a7sGUxFMcQ
+id: ravealert
+theme: crew
+region: rave_region
+weight: -8
+provider: null
+plugin: 'block_content:f56c66be-a247-4f62-8a55-ca2c32197469'
+settings:
+  id: 'block_content:f56c66be-a247-4f62-8a55-ca2c32197469'
+  label: 'RAVE Alert'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

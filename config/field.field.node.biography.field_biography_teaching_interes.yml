@@ -1,0 +1,24 @@
+uuid: bb1f10fa-e4ef-46ba-8691-54b905ece70b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_teaching_interes
+    - node.type.biography
+  module:
+    - text
+_core:
+  default_config_hash: Jv9uJfzjKpnpqV1TDMnTS_Imnv-ol_1G_rwddyoNBRw
+id: node.biography.field_biography_teaching_interes
+field_name: field_biography_teaching_interes
+entity_type: node
+bundle: biography
+label: 'Teaching Interests'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

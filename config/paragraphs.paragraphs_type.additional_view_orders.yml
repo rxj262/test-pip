@@ -1,0 +1,12 @@
+uuid: 5b6937cf-5d16-496b-aa41-4a5a1c2ccd5a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: V6C0CPgbJsaMB5Yh9xP31b3_dFKYksooV1oiUkfzdd8
+id: additional_view_orders
+label: 'Additional View Order'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

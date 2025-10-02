@@ -1,0 +1,21 @@
+uuid: d0f5eea3-b482-4be7-a55c-5df7988af59d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_publication_name
+    - paragraphs.paragraphs_type.publication
+_core:
+  default_config_hash: c5aVAIhbGLjAsBhJp4f01E1AqDYs3a-jSbAE2rgCm84
+id: paragraph.publication.field_biography_publication_name
+field_name: field_biography_publication_name
+entity_type: paragraph
+bundle: publication
+label: 'Publication Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

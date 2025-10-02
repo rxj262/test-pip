@@ -1,0 +1,41 @@
+uuid: edea03a9-1af6-46c3-8be8-5236a172a0a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.site_affiliation.field_site_center_ref
+    - field.field.paragraph.site_affiliation.field_site_department_ref
+    - field.field.paragraph.site_affiliation.field_site_school_ref
+    - paragraphs.paragraphs_type.site_affiliation
+_core:
+  default_config_hash: QPTEFdP-O0bASUrdAJfumjld0lYSGZ3BSA6TLONytBE
+id: paragraph.site_affiliation.default
+targetEntityType: paragraph
+bundle: site_affiliation
+mode: default
+content:
+  field_site_center_ref:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_site_department_ref:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_site_school_ref:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

@@ -1,0 +1,41 @@
+uuid: 533d37f2-f37a-4bf1-ad96-2bd8a5b01c67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.award_honor.field_biography_award_honor
+    - field.field.paragraph.award_honor.field_biography_award_year
+    - field.field.paragraph.award_honor.field_biography_organization_spo
+    - paragraphs.paragraphs_type.award_honor
+_core:
+  default_config_hash: LosZVFdxNX5XrhgHYXqemsbMhrdDAZE2Vl_WY4T2_ck
+id: paragraph.award_honor.default
+targetEntityType: paragraph
+bundle: award_honor
+mode: default
+content:
+  field_biography_award_honor:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_biography_award_year:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_biography_organization_spo:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

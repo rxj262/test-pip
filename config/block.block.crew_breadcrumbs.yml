@@ -1,0 +1,39 @@
+uuid: f98610bc-5ded-4ac4-a695-07914da00ded
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - crew
+_core:
+  default_config_hash: j9xW6fMwMnCzolZkPrMVyru9UZmO7eT4v0FNYqcOYwA
+id: crew_breadcrumbs
+theme: crew
+region: breadcrumbs
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+      biography: biography
+      event_detail_page: event_detail_page
+      landing_page: landing_page
+      landing_page_alternate_subfeatur: landing_page_alternate_subfeatur
+      landing_page_robust: landing_page_robust
+      news_article: news_article
+      personal_profile: personal_profile
+      robust_3_column_page: robust_3_column_page
+      site_information: site_information
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

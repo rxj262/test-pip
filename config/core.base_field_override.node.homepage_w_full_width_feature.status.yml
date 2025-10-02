@@ -1,0 +1,24 @@
+uuid: d79ade1c-a88d-43a3-b207-7f569ee6e25f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.homepage_w_full_width_feature
+_core:
+  default_config_hash: ZiIDA2FlthlQhT5sAQImPUkavuBzKGVJ00MNyrIyh-4
+id: node.homepage_w_full_width_feature.status
+field_name: status
+entity_type: node
+bundle: homepage_w_full_width_feature
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

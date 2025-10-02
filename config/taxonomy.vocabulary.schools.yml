@@ -1,0 +1,11 @@
+uuid: cd02370d-a783-4777-86df-da298297226f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FQ6KWtSsezNlZnGHQT78RIkk0kPnnmluMYLEIrYmaTI
+name: Schools
+vid: schools
+description: null
+weight: 0
+new_revision: false

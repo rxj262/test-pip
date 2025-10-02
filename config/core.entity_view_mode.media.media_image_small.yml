@@ -1,0 +1,13 @@
+uuid: 38ef54b8-59ee-446f-ae0d-cf6dd8fb476b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: Ei4qJhH_Vv_46vSDX1wcXrjwxnhKD7hEA1k0xDCzroU
+id: media.media_image_small
+label: 'Media Image - 2 (Small)'
+description: ''
+targetEntityType: media
+cache: true

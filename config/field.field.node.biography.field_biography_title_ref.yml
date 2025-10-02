@@ -1,0 +1,125 @@
+uuid: 2a232d79-bc52-4117-8c0f-198f8a87da53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_title_ref
+    - node.type.biography
+    - paragraphs.paragraphs_type.job_title_affiliation
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: FIE988isCmxCdynm2zFS0hL8J_3fsml6GBiyUzdiAC0
+id: node.biography.field_biography_title_ref
+field_name: field_biography_title_ref
+entity_type: node
+bundle: biography
+label: 'Title and Affiliation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      job_title_affiliation: job_title_affiliation
+    target_bundles_drag_drop:
+      accordion:
+        weight: 33
+        enabled: false
+      accordion_section:
+        weight: 34
+        enabled: false
+      alternating_subfeature:
+        weight: 35
+        enabled: false
+      aside:
+        weight: 36
+        enabled: false
+      award_honor:
+        weight: 37
+        enabled: false
+      biography_education:
+        weight: 38
+        enabled: false
+      button:
+        weight: 39
+        enabled: false
+      centered_intro_text:
+        weight: 40
+        enabled: false
+      content:
+        weight: 41
+        enabled: false
+      external_appointment:
+        weight: 42
+        enabled: false
+      gallery:
+        weight: 43
+        enabled: false
+      gallery_section:
+        weight: 44
+        enabled: false
+      hero_full_width:
+        weight: 45
+        enabled: false
+      hero_landing_page:
+        weight: 46
+        enabled: false
+      hero_one_column:
+        weight: 47
+        enabled: false
+      hero_overlay_text:
+        weight: 48
+        enabled: false
+      hero_text_heavy:
+        weight: 49
+        enabled: false
+      hero_two_column:
+        weight: 50
+        enabled: false
+      icon_subfeature:
+        weight: 51
+        enabled: false
+      iframe:
+        weight: 52
+        enabled: false
+      job_title_affiliation:
+        enabled: true
+        weight: 53
+      presentation:
+        weight: 54
+        enabled: false
+      publication:
+        weight: 55
+        enabled: false
+      residency:
+        weight: 56
+        enabled: false
+      stacked_buttons:
+        weight: 57
+        enabled: false
+      subfeature:
+        weight: 58
+        enabled: false
+      subfeature_two_column:
+        weight: 59
+        enabled: false
+      tabs:
+        weight: 60
+        enabled: false
+      tab_section:
+        weight: 61
+        enabled: false
+      vertical_subfeature:
+        weight: 62
+        enabled: false
+      video:
+        weight: 63
+        enabled: false
+      well:
+        weight: 64
+        enabled: false
+field_type: entity_reference_revisions

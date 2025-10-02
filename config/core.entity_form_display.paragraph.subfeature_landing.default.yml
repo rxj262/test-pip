@@ -1,0 +1,32 @@
+uuid: f3f7fce9-6dcb-41df-9cbf-69050c24b424
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.subfeature_landing.field_subfeature_section_ref
+    - paragraphs.paragraphs_type.subfeature_landing
+  module:
+    - paragraphs
+_core:
+  default_config_hash: LnO3Wg04MbKpNH1qLHxsjOn9c21GspHlqTKHpAVi8rY
+id: paragraph.subfeature_landing.default
+targetEntityType: paragraph
+bundle: subfeature_landing
+mode: default
+content:
+  field_subfeature_section_ref:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

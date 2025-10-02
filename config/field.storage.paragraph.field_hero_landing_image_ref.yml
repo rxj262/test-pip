@@ -1,0 +1,22 @@
+uuid: d2a51531-c1d5-49c5-bc33-0b79f215492d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: PTKPyhcqc3ojMu0POD_5aAT0lWhYlLN5DC5-bWrqgFI
+id: paragraph.field_hero_landing_image_ref
+field_name: field_hero_landing_image_ref
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

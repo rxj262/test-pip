@@ -1,0 +1,23 @@
+uuid: 5bf9fb90-15cc-4994-9fb2-c813bfc26335
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.schools
+  module:
+    - text
+_core:
+  default_config_hash: ejSlKyRDLL0dPSBWsnr7bQKn35FHUcbgOUzYj1MLyMI
+id: taxonomy_term.schools.default
+targetEntityType: taxonomy_term
+bundle: schools
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 733049f2-2d79-4e17-b7e8-1597bf3cf6cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_error_type
+    - node.type.error_page
+  module:
+    - options
+_core:
+  default_config_hash: _dwoGD8Y9fOFw7s315N_PpdTXyS7f92dgzzfm4QoYSQ
+id: node.error_page.field_error_type
+field_name: field_error_type
+entity_type: node
+bundle: error_page
+label: 'Error Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

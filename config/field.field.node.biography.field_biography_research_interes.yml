@@ -1,0 +1,24 @@
+uuid: 9cd497a8-6ab2-4398-bd23-22147885ed0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_research_interes
+    - node.type.biography
+  module:
+    - text
+_core:
+  default_config_hash: q05jR9fpT5Ld-xeVkQz6bIFUMZbHV0M_OkcJZ2uBtp0
+id: node.biography.field_biography_research_interes
+field_name: field_biography_research_interes
+entity_type: node
+bundle: biography
+label: 'Research Interests'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

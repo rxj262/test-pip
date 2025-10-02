@@ -1,0 +1,25 @@
+uuid: 83a3755f-1148-4683-8c8c-b58996022ed8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_residency_year
+    - paragraphs.paragraphs_type.residency
+  module:
+    - yearonly
+_core:
+  default_config_hash: w-M32swLFEZU4h7GnbO0Y-XmWYzXf-Wkvxs6X4HEDI8
+id: paragraph.residency.field_residency_year
+field_name: field_residency_year
+entity_type: paragraph
+bundle: residency
+label: Year
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1930'
+  yearonly_to: now
+field_type: yearonly

@@ -1,0 +1,23 @@
+uuid: e4e0c254-8ed1-43ef-9cac-bc13c6cae780
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: HsnJ1r1mUmL64QoYf_D7kZFAv13kJ8Ozag0nDiyw22Y
+id: node.field_biography_professional_mem
+field_name: field_biography_professional_mem
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

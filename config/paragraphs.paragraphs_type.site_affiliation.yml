@@ -1,0 +1,12 @@
+uuid: 61eea34c-a3b1-45d8-8a66-0b229f239f31
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _txNui_7mWSAyRZswfZrAo7_0s3t2CkW-fszxw2MmQI
+id: site_affiliation
+label: Affiliation
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

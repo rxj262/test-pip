@@ -1,0 +1,12 @@
+uuid: 90a0c8b2-ac3d-4ba5-9a6e-ffa2c753a9d1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8MM01xSZMWKlSYOSW_3U3e6QQml0HKXh4CKbgH6DULU
+id: award_honor
+label: Awards/Honors
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

@@ -1,0 +1,16 @@
+uuid: 48fc87af-ffd3-44de-9187-48c4c878c515
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.cms_content_sync
+  module:
+    - user
+_core:
+  default_config_hash: Vkwfs2VNQ81wJB_kTM2CZT7V6BgY4FuFdik5KV36brg
+id: user_add_role_action.cms_content_sync
+label: 'Add the Content Sync role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: cms_content_sync

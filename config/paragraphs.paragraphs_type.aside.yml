@@ -1,0 +1,12 @@
+uuid: 9020d3a6-af92-4bc2-8201-43a3df76ca74
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: h7ihzWPC3uuHOwJrgertV4RKKUhVkx60a1ZZ4LWr7mM
+id: aside
+label: Aside
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

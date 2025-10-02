@@ -1,0 +1,23 @@
+uuid: f59a9e1a-722e-4384-a647-c73af76b6933
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: '-HzDvdyI2f4DxV8Kb8NkLcQKKLlkCS7QTwoXHyo3UsI'
+id: node.field_biography_specialties
+field_name: field_biography_specialties
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

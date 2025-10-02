@@ -1,0 +1,21 @@
+uuid: 3bdbdc7d-c1a6-42ae-b264-6e8265ed6169
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: c2qW1um8VsQtG8e5VAm0TCcNtsLui09d81uXl6H1Q_U
+id: node.field_biography_ext_appt_open_en
+field_name: field_biography_ext_appt_open_en
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

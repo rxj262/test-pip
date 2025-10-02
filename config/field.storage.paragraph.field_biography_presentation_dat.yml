@@ -1,0 +1,22 @@
+uuid: 494dd143-1de7-4a6b-b3d0-ccdf9d3619eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+_core:
+  default_config_hash: wxQHNYX89T4KUcGbpCRHyNCiYV5Xzxg1ObO0Gbw-u9o
+id: paragraph.field_biography_presentation_dat
+field_name: field_biography_presentation_dat
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

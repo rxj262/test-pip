@@ -1,0 +1,21 @@
+uuid: 90c5cf59-1950-4e79-9d78-ae5e15745241
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_res_area_study
+    - paragraphs.paragraphs_type.residency
+_core:
+  default_config_hash: i9Kc28rOpbWpJ4u4p1Spsc0LCQKofwi5KNjP8QlR8B4
+id: paragraph.residency.field_biography_res_area_study
+field_name: field_biography_res_area_study
+entity_type: paragraph
+bundle: residency
+label: 'Area of Study'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

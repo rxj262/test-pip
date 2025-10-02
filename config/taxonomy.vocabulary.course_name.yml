@@ -1,0 +1,11 @@
+uuid: 75a55452-50aa-4928-a16e-80691fa117ca
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QMHyCIRcEclF00qCd0At6A_cn4C30EaslqNRWQafDtY
+name: Courses
+vid: course_name
+description: null
+weight: 0
+new_revision: false

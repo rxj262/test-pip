@@ -1,0 +1,13 @@
+uuid: 633e0d90-573f-4c66-a79c-48a1e0b012e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: SbbYcesPwhLh18s2G_jo4GctUHs3nXvPsTM1wAmY-Dw
+id: media.events_image_style_150x150
+label: 'Events Image Style 150x150'
+description: ''
+targetEntityType: media
+cache: true

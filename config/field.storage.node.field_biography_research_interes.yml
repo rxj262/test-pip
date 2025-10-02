@@ -1,0 +1,21 @@
+uuid: feffa18a-dd53-4c59-867a-6a44c8c2f492
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: Teh6-KAK8iagAztYVLmW1iFIMjRlbIaSNs0Bl8vKJyo
+id: node.field_biography_research_interes
+field_name: field_biography_research_interes
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 8830aa1c-5da0-4d55-b4a7-3622e0bd7c17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_aside_title
+    - paragraphs.paragraphs_type.aside
+_core:
+  default_config_hash: luB5BasItw6aYWRNRkLYmX0lvIOZ7eWEsB7YutVOhKI
+id: paragraph.aside.field_aside_title
+field_name: field_aside_title
+entity_type: paragraph
+bundle: aside
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

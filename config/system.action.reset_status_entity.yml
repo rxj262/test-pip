@@ -1,0 +1,13 @@
+uuid: b98cfa5d-e8b2-47f1-a890-192a37bd0051
+langcode: en
+status: true
+dependencies:
+  module:
+    - cms_content_sync_views
+_core:
+  default_config_hash: E9aucYT8ejTm5En9bDoku5LFofu09Bv5ssgbqDmCkgg
+id: reset_status_entity
+label: 'Reset Status'
+type: cms_content_sync_entity_status
+plugin: reset_status_entity
+configuration: {  }

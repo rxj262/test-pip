@@ -1,0 +1,21 @@
+uuid: 1f185e62-498a-4ee2-9047-2889b31d4425
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_tweet_id
+    - media.type.tweet
+_core:
+  default_config_hash: nFNQ8KxNOXG8GM6YrwJMwJKME216-pYNp4WFHg8dRzI
+id: media.tweet.field_tweet_id
+field_name: field_tweet_id
+entity_type: media
+bundle: tweet
+label: 'Tweet ID'
+description: 'This field stores the id of the tweet. Example: 20 is the id in twitter.com/jack/status/20'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 1f7c50d4-2812-4659-8b9d-f7158ed3e9ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: pI7UAUwPiledR3pE0iR__ySVNlbTaEDwHx6u2elcnDY
+id: node.field_biography_office_location
+field_name: field_biography_office_location
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

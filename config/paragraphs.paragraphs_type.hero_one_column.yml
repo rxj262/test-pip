@@ -1,0 +1,12 @@
+uuid: 5b3975b5-6b11-4007-8118-a2d2933bda26
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cglMP6yt20p2rkuJCORYoqE7o1I8U2hDcJbuGY2UKzQ
+id: hero_one_column
+label: 'Hero Image One Column'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

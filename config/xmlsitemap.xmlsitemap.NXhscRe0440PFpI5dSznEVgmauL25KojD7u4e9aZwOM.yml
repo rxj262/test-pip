@@ -1,0 +1,9 @@
+uuid: f338a6c9-3a46-4352-b193-0db0bd461c7e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ItvbIcLmHkd7WjbLEcJe5EJc5nE-9vJ3361UdS-3oJg
+id: NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
+label: 'https://cwru-bhli.lndo.site/core/install.php'
+context: {  }

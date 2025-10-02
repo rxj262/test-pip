@@ -1,0 +1,25 @@
+uuid: 10f06ff3-53e4-4dba-bc2c-26294b6c78bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_external_appointment_start
+    - paragraphs.paragraphs_type.external_appointment
+  module:
+    - yearonly
+_core:
+  default_config_hash: 9VWriY8iXBkt864NISlMDlfFAZjjG2jw4QWX5XiSLks
+id: paragraph.external_appointment.field_external_appointment_start
+field_name: field_external_appointment_start
+entity_type: paragraph
+bundle: external_appointment
+label: 'Start Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1930'
+  yearonly_to: now
+field_type: yearonly

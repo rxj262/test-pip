@@ -1,0 +1,12 @@
+uuid: 0e59239a-77d5-444c-9bf4-335257207967
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: y5v__ErBh7q6RbY7NIWiclfqCCcCguzOzYknJACJ848
+id: subfeature
+label: Subfeature
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+uuid: 5a2366c4-4eff-490a-85a1-3ef762c4fe44
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+_core:
+  default_config_hash: Z3DKkQBLGQI0HbdWL6LbvuB87djWb1C58usS_J_Z2Tc
+id: paragraph.field_website_job_description_sh
+field_name: field_website_job_description_sh
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

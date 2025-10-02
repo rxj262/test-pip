@@ -1,0 +1,39 @@
+uuid: 253f92ac-1c18-423c-bca8-4f8f78901090
+langcode: en
+status: true
+dependencies:
+  module:
+    - slick
+_core:
+  default_config_hash: r5Td2sLJ0wcnENlWRm9sbFyGUr0Oi7A96Lq06iY2BZI
+name: 'Plain text'
+format: plain_text
+weight: -7
+filters:
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: true
+    weight: -10
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

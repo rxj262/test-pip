@@ -1,0 +1,23 @@
+uuid: e78e1905-c8ea-4f42-822f-945ae0ee215f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: YF77aDYBNTPa81AIrkckHx4YqegLtukJUmlpMwjh9V4
+id: paragraph.field_biography_title_work
+field_name: field_biography_title_work
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

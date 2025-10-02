@@ -1,0 +1,13 @@
+uuid: 5e36d664-b804-4ca4-bbe5-39e3a91f2fe8
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 0CRqbeHMIuUht1OLi860OhHIeZ2aLpC3MXN5xfYwLGQ
+id: media.landing_page_with_aside_image_style
+label: 'Landing Page With Aside Image Style'
+description: ''
+targetEntityType: media
+cache: true

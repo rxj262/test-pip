@@ -1,0 +1,24 @@
+uuid: d6e7b6b8-bcbe-42b4-bb56-9157ba275b5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_aside_content
+    - paragraphs.paragraphs_type.aside
+  module:
+    - text
+_core:
+  default_config_hash: 8YC34uenIaY1zjlexWSqG7nfdOXXftmmaz39tIV9k2I
+id: paragraph.aside.field_aside_content
+field_name: field_aside_content
+entity_type: paragraph
+bundle: aside
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

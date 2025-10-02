@@ -1,0 +1,21 @@
+uuid: c47dd7da-6f73-4728-a8bc-2320179338b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: 8dhI4hvhDpL5ZSRpVESMuVtKA72O0tmaxu5Q6CXJQE8
+id: node.field_site_email
+field_name: field_site_email
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

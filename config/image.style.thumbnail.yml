@@ -1,0 +1,17 @@
+uuid: be0545cf-c10f-46f0-b323-2bbc23d85ee0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yAxzlGJv_XKKdgOI-cx1P7gw_6cEp-FLZYTY5ImI0vc
+name: thumbnail
+label: 'Thumbnail (100×100)'
+effects:
+  496628ac-996e-4ffc-a1ee-2596c06c30cc:
+    uuid: 496628ac-996e-4ffc-a1ee-2596c06c30cc
+    id: image_scale
+    weight: 2
+    data:
+      width: 100
+      height: 100
+      upscale: true

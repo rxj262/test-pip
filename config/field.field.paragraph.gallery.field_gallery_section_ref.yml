@@ -1,0 +1,158 @@
+uuid: b843d585-173c-4ed9-b790-b7e2dfc31339
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gallery_section_ref
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.gallery_section
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 4AZrDtVZSEXpb1Bi0JKhx6w_NkeWVW67wdoYU4F-Bc8
+id: paragraph.gallery.field_gallery_section_ref
+field_name: field_gallery_section_ref
+entity_type: paragraph
+bundle: gallery
+label: Gallery
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      gallery_section: gallery_section
+    target_bundles_drag_drop:
+      accordion:
+        weight: 44
+        enabled: false
+      accordion_section:
+        weight: 45
+        enabled: false
+      alternating_subfeature:
+        weight: 46
+        enabled: false
+      aside:
+        weight: 47
+        enabled: false
+      award_honor:
+        weight: 48
+        enabled: false
+      biography_education:
+        weight: 49
+        enabled: false
+      button:
+        weight: 50
+        enabled: false
+      centered_intro_text:
+        weight: 51
+        enabled: false
+      content:
+        weight: 52
+        enabled: false
+      external_appointment:
+        weight: 53
+        enabled: false
+      gallery:
+        weight: 54
+        enabled: false
+      gallery_section:
+        enabled: true
+        weight: 55
+      hero_full_width:
+        weight: 56
+        enabled: false
+      hero_landing_page:
+        weight: 57
+        enabled: false
+      hero_one_column:
+        weight: 58
+        enabled: false
+      hero_overlay_text:
+        weight: 59
+        enabled: false
+      hero_text_heavy:
+        weight: 60
+        enabled: false
+      hero_two_column:
+        weight: 61
+        enabled: false
+      icon_picker:
+        weight: 62
+        enabled: false
+      icon_subfeature:
+        weight: 63
+        enabled: false
+      iframe:
+        weight: 64
+        enabled: false
+      job_title_affiliation:
+        weight: 65
+        enabled: false
+      presentation:
+        weight: 66
+        enabled: false
+      program_degree_website:
+        weight: 67
+        enabled: false
+      publication:
+        weight: 68
+        enabled: false
+      residency:
+        weight: 69
+        enabled: false
+      site_affiliation:
+        weight: 70
+        enabled: false
+      social:
+        weight: 71
+        enabled: false
+      social_section:
+        weight: 72
+        enabled: false
+      stacked_buttons:
+        weight: 73
+        enabled: false
+      subfeature:
+        weight: 74
+        enabled: false
+      subfeature_landing:
+        weight: 75
+        enabled: false
+      subfeature_multi_row:
+        weight: 76
+        enabled: false
+      subfeature_section:
+        weight: 77
+        enabled: false
+      subfeature_two_column:
+        weight: 78
+        enabled: false
+      tabs:
+        weight: 79
+        enabled: false
+      tab_section:
+        weight: 80
+        enabled: false
+      teaser:
+        weight: 81
+        enabled: false
+      twitter_embed:
+        weight: 82
+        enabled: false
+      vertical_subfeature:
+        weight: 83
+        enabled: false
+      video:
+        weight: 84
+        enabled: false
+      view:
+        weight: 85
+        enabled: false
+      well:
+        weight: 86
+        enabled: false
+field_type: entity_reference_revisions

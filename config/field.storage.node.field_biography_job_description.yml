@@ -1,0 +1,21 @@
+uuid: 10556057-4370-4169-9647-d9697056b81d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: tzGbNrU3vXLd035R9V1yfmkO2DR1g0TQmsJh-8Wr_fk
+id: node.field_biography_job_description
+field_name: field_biography_job_description
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

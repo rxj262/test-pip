@@ -1,0 +1,23 @@
+uuid: ecd7bc28-1721-43b9-a654-89722d81898e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: xSs7OPw3LOdAdnAo_VCJsY6fcilRBlJOJt4I6zZISLQ
+id: node.field_site_mailing_zip_four
+field_name: field_site_mailing_zip_four
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

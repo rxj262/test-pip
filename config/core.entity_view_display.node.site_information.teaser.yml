@@ -1,0 +1,58 @@
+uuid: 0b8b8429-b89b-4961-b515-2b8946efec12
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.site_information.field_meta_tags
+    - field.field.node.site_information.field_site_affiliation
+    - field.field.node.site_information.field_site_city
+    - field.field.node.site_information.field_site_drupal_site_ref
+    - field.field.node.site_information.field_site_email
+    - field.field.node.site_information.field_site_feedback
+    - field.field.node.site_information.field_site_mailing_city
+    - field.field.node.site_information.field_site_mailing_state
+    - field.field.node.site_information.field_site_mailing_street
+    - field.field.node.site_information.field_site_mailing_street_two
+    - field.field.node.site_information.field_site_mailing_zip
+    - field.field.node.site_information.field_site_mailing_zip_four
+    - field.field.node.site_information.field_site_phone
+    - field.field.node.site_information.field_site_social_ref
+    - field.field.node.site_information.field_site_state
+    - field.field.node.site_information.field_site_street
+    - field.field.node.site_information.field_site_street_two
+    - field.field.node.site_information.field_site_url
+    - field.field.node.site_information.field_site_zip
+    - node.type.site_information
+  module:
+    - user
+_core:
+  default_config_hash: bmhQM4LR0W1bWwWBpDouOJCtz7nwh8rfd8zoxtaanqM
+id: node.site_information.teaser
+targetEntityType: node
+bundle: site_information
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_meta_tags: true
+  field_site_affiliation: true
+  field_site_city: true
+  field_site_drupal_site_ref: true
+  field_site_email: true
+  field_site_feedback: true
+  field_site_mailing_city: true
+  field_site_mailing_state: true
+  field_site_mailing_street: true
+  field_site_mailing_street_two: true
+  field_site_mailing_zip: true
+  field_site_mailing_zip_four: true
+  field_site_phone: true
+  field_site_social_ref: true
+  field_site_state: true
+  field_site_street: true
+  field_site_street_two: true
+  field_site_url: true
+  field_site_zip: true

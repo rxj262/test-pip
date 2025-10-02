@@ -1,0 +1,25 @@
+uuid: f823bd27-6b41-42dd-ac46-66c3b69ff3b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - crew
+_core:
+  default_config_hash: 6XFix1Mj3ylP3bKk_iLnuwO83SQi5Rd0hRmTj3lzkCs
+id: sitebranding
+theme: crew
+region: header
+weight: -9
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

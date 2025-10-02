@@ -1,0 +1,22 @@
+uuid: 98522f1c-d134-46a8-97d4-33daec48d14c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - crew
+_core:
+  default_config_hash: vJ5wzluD-zugu4Uo3-DkhNyZuwKcnV5AZkiHS1ImdEw
+id: crew_messages
+theme: crew
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

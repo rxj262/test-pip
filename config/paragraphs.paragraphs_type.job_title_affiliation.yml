@@ -1,0 +1,12 @@
+uuid: a08b2769-24e6-4cce-ac7e-8375149e55ad
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Y3gm6iJg71oceS6OesT3-UqR9Yd8vZDGwT1WiRG0b44
+id: job_title_affiliation
+label: 'Title and Affiliation'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

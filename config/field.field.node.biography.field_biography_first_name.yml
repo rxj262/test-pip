@@ -1,0 +1,21 @@
+uuid: e63ce384-a25a-4ca8-93ff-87e5a113e194
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_first_name
+    - node.type.biography
+_core:
+  default_config_hash: vu_4VMNEvqXl-ysXcC28mSOZYGd1yx-Hz9iJ4-k-w7c
+id: node.biography.field_biography_first_name
+field_name: field_biography_first_name
+entity_type: node
+bundle: biography
+label: 'First Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

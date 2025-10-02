@@ -1,0 +1,22 @@
+uuid: 4a3b35fa-86d9-4850-863c-17998c4640f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+_core:
+  default_config_hash: fSeAr-UIDbOYHOWCOJ30wxKdUx4k_BULpGrRom60S7s
+id: paragraph.field_website_view_order_should_
+field_name: field_website_view_order_should_
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

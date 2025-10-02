@@ -1,0 +1,12 @@
+uuid: 78b8c23b-71dc-4ec8-96b7-e3f23325e50b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: uE34tAhNFgwc-5m6QNNk7wN52RS81FUPu3LS98HtsoI
+id: additional_job_descriptions
+label: 'Additional Job Description'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

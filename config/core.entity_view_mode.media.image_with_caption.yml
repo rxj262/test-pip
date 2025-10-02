@@ -1,0 +1,13 @@
+uuid: 5a267104-dc08-4dbc-9f8d-4d17353dcf9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 3HmpfzjOA9piZw9RMrjrFdpfaLBYx96eSsY-BMoY-yM
+id: media.image_with_caption
+label: 'Media Image with Caption - 1 (Original)'
+description: ''
+targetEntityType: media
+cache: true

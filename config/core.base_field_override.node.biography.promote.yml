@@ -1,0 +1,24 @@
+uuid: f5abd782-1cbe-4688-8972-0f72fec15d1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.biography
+_core:
+  default_config_hash: zcZY3poD6V52kegFr1eaAFGwA4tY8RHYFAOLqEfeefE
+id: node.biography.promote
+field_name: promote
+entity_type: node
+bundle: biography
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

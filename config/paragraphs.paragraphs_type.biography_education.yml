@@ -1,0 +1,12 @@
+uuid: 1ad4cc5d-3f0e-4bce-be87-d872980fcb13
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UoccOs3aIZx4u9arFBi3zglq26KVef4cYRE_p78ggq4
+id: biography_education
+label: 'Education Information'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

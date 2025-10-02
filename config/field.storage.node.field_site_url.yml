@@ -1,0 +1,21 @@
+uuid: c9ce0cac-c396-4cd8-ab97-a507037b401f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: tM1CgQZ3tPbVQTP_RhXSIeAdJ0Eq26FnYfe2ZIzYvH8
+id: node.field_site_url
+field_name: field_site_url
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

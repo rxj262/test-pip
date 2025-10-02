@@ -1,0 +1,11 @@
+uuid: 08386fa4-91e4-495a-aba4-6261ee6647dc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FNRj6C_neCQfjW4xJELFh_fEcv1fWPQbhW9wRX613AA
+name: 'Departments & Offices'
+vid: departments
+description: null
+weight: 0
+new_revision: false

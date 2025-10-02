@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: EMlUjzMs3tzTKFsFjIRsTzwnfXevn5sujD_x0Pmfie0
+langcode: en
+uuid: 91175c9d-ddba-4272-a9aa-5ea2f15d81e4
+name: 'Drush Site-Install'
+mail: webteam@case.edu
+slogan: ''
+page:
+  403: /node/3
+  404: /node/4
+  front: /user/1
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

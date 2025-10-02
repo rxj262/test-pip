@@ -1,0 +1,16 @@
+uuid: a333ce02-f11a-4159-9289-cc2543d94d5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.school_developer
+  module:
+    - user
+_core:
+  default_config_hash: Zf4KYKbtn07VdecLLfVBGeedw3_fg8eSeKt9QV_50vw
+id: user_remove_role_action.school_developer
+label: 'Remove the School Developer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: school_developer

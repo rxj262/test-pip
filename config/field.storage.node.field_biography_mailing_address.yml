@@ -1,0 +1,21 @@
+uuid: 491988ec-5827-42a1-b932-4c1f2304837e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Kwjle_noxh2fR61_y5LJzkQ9Px7I-U991rVv_tCh2co
+id: node.field_biography_mailing_address
+field_name: field_biography_mailing_address
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

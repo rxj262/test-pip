@@ -1,0 +1,21 @@
+uuid: 76e90c47-f9f4-42ca-8296-56dec9be5b71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_ext_title
+    - paragraphs.paragraphs_type.external_appointment
+_core:
+  default_config_hash: YqYX6E_kpJid4aNbVwxs_kH4Pb1je2w6rduSsJKVTQE
+id: paragraph.external_appointment.field_biography_ext_title
+field_name: field_biography_ext_title
+entity_type: paragraph
+bundle: external_appointment
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

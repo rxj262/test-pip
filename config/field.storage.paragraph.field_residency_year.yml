@@ -1,0 +1,21 @@
+uuid: 468f5c88-fe7b-45c9-a81e-799f6039dbd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - yearonly
+_core:
+  default_config_hash: 68_hbWscRWLf4rTX2G2i2YA4S-w59zJH32GHXnhXHb8
+id: paragraph.field_residency_year
+field_name: field_residency_year
+entity_type: paragraph
+type: yearonly
+settings: {  }
+module: yearonly
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

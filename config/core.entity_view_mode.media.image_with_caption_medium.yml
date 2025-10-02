@@ -1,0 +1,13 @@
+uuid: 776b2fba-a727-4ba1-8207-a9f77ce0dd80
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: YiuqwBF-KFVEoTeaQwhlRBIPBjeuQhK5M8yV79OLjPo
+id: media.image_with_caption_medium
+label: 'Media Image with Caption - 3 (Medium)'
+description: ''
+targetEntityType: media
+cache: true

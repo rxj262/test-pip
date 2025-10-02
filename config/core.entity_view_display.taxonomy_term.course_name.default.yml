@@ -1,0 +1,23 @@
+uuid: 2efcfa29-a54f-4438-b51a-06d61234de8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.course_name
+  module:
+    - text
+_core:
+  default_config_hash: IUsGAEs0b7ZKwP581nbmgsV3AnReZ4BgZ_u_Y3tF1wE
+id: taxonomy_term.course_name.default
+targetEntityType: taxonomy_term
+bundle: course_name
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: c815a424-c5da-443b-8b2f-909eb3539333
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_email
+    - node.type.biography
+_core:
+  default_config_hash: Rw9dXNuEiqgnkx1c3t9T00uJxOHOeka1elZqYPXRqFY
+id: node.biography.field_biography_email
+field_name: field_biography_email
+entity_type: node
+bundle: biography
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

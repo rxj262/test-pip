@@ -1,0 +1,21 @@
+uuid: 47ba5a72-418d-4560-860b-406fd4ca2dd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: e8IPjvNY6laXz35tPgB3wHrln9ok2n85VNoZoAZsrTU
+id: node.field_biography_secondary_job_de
+field_name: field_biography_secondary_job_de
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

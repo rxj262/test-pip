@@ -1,0 +1,30 @@
+uuid: faf105ea-d20f-445a-b1a9-c43abddec3f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_degree
+    - paragraphs.paragraphs_type.biography_education
+    - taxonomy.vocabulary.degree
+_core:
+  default_config_hash: Nj3q5sH5ssQxgmA_1kwPPmA1vzLZmRZATfarNmE6HxY
+id: paragraph.biography_education.field_biography_degree
+field_name: field_biography_degree
+entity_type: paragraph
+bundle: biography_education
+label: Degree
+description: '*Please do not abbreviate'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      degree: degree
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

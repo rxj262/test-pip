@@ -1,0 +1,13 @@
+uuid: c3b62031-20b6-4d9d-adfb-12051fc000e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 0QBeLKdmK-b1WU9_YGHuPab5_dDBo8Etft-9IjgLImM
+id: media.media_image_large
+label: 'Media Image - 4 (Large)'
+description: ''
+targetEntityType: media
+cache: true

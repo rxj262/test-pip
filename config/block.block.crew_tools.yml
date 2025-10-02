@@ -1,0 +1,27 @@
+uuid: 9b47211d-6f5e-4406-bcb1-6ae05575e66b
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - crew
+_core:
+  default_config_hash: s63HcY_rC3EGDuH-8w333VoB9m-ebkSV3j_qAslzELc
+id: crew_tools
+theme: crew
+region: footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

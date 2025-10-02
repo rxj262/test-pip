@@ -1,0 +1,24 @@
+uuid: 22b441cf-d4f6-40f2-85a9-ad37591df644
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_research_project
+    - node.type.biography
+  module:
+    - text
+_core:
+  default_config_hash: c7P9ezWhhmrppSAS7KNTAXzITAJK-IP2RKDQSbipyGc
+id: node.biography.field_biography_research_project
+field_name: field_biography_research_project
+entity_type: node
+bundle: biography
+label: 'Research Projects'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

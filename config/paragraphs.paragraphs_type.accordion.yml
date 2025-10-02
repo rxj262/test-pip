@@ -1,0 +1,12 @@
+uuid: b55d9b06-44d5-4cf5-980d-dfa8b6a90662
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GZSBygl-gwIM3SV_UoXlh_b-0GdGeSLnnP1G7mRI88U
+id: accordion
+label: Accordion
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

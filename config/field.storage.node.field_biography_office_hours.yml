@@ -1,0 +1,21 @@
+uuid: c74afa84-513b-4fda-81ec-20c7f6a8b025
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: KKgfwnVAI9I3Bu_K2cR1LErFn2r1lCqsouPITTI4C1g
+id: node.field_biography_office_hours
+field_name: field_biography_office_hours
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

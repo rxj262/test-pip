@@ -1,0 +1,13 @@
+uuid: 5d009fb2-e0bb-40b3-a05b-ad5aa3b65de3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: tIYfB8xGv7ISp9uqZ5UvWEeFcKmHnH77OUP7jwXvU38
+id: media.biography_listing_image_style
+label: 'Biography Listing Image Style'
+description: ''
+targetEntityType: media
+cache: true

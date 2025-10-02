@@ -1,0 +1,23 @@
+uuid: b8ddb770-5b39-4275-81bc-8c2239da0bcd
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: YFKWpCl6_NTWsI2O0QwSyTCNdKpVBND9TD3QB04LtJg
+id: paragraph.field_biography_presentation_tit
+field_name: field_biography_presentation_tit
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

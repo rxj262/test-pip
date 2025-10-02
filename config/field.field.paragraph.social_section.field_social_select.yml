@@ -1,0 +1,23 @@
+uuid: d9fa6a8f-dfa2-4e6e-b94b-b576e4c0335e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_select
+    - paragraphs.paragraphs_type.social_section
+  module:
+    - options
+_core:
+  default_config_hash: laMpVs6AcpaZDE9dhzAGTMiTFaGFadxRLPQXT6xcCJs
+id: paragraph.social_section.field_social_select
+field_name: field_social_select
+entity_type: paragraph
+bundle: social_section
+label: 'Social Select List'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,9 @@
+uuid: 65408411-dec4-4084-aa3e-a4c45f4c94d4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DN-x8zh9D7n7jl00urOLKgVJgMhfnn-Lkapp-HRlem8
+id: content
+label: Content
+backend_url: null

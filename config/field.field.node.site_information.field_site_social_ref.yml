@@ -1,0 +1,59 @@
+uuid: 6dc6f552-30e5-40f3-89cf-d75827684d92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_social_ref
+    - node.type.site_information
+    - paragraphs.paragraphs_type.social
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: TKIJfSjGYNwEerbpEWoO2OudTqVRRbI5iy_ZSg_v6-A
+id: node.site_information.field_site_social_ref
+field_name: field_site_social_ref
+entity_type: node
+bundle: site_information
+label: Social
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social: social
+    target_bundles_drag_drop:
+      award_honor:
+        weight: 11
+        enabled: false
+      biography_education:
+        weight: 12
+        enabled: false
+      external_appointment:
+        weight: 13
+        enabled: false
+      job_title_affiliation:
+        weight: 14
+        enabled: false
+      presentation:
+        weight: 15
+        enabled: false
+      publication:
+        weight: 16
+        enabled: false
+      residency:
+        weight: 17
+        enabled: false
+      site_affiliation:
+        weight: 18
+        enabled: false
+      social:
+        enabled: true
+        weight: 19
+      social_section:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

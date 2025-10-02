@@ -1,0 +1,16 @@
+uuid: edef46b5-7853-4ada-9be3-58fa84cafbff
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.school_developer
+  module:
+    - user
+_core:
+  default_config_hash: L66nCkHMz87HxrOMP9YTmSRZ3oCHUv-0Jjn9Yms7xDY
+id: user_add_role_action.school_developer
+label: 'Add the School Developer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: school_developer

@@ -1,0 +1,12 @@
+uuid: 7870ad30-09b3-4bba-84e8-46f43f2de0a9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TYLr4XoEJvNTX14iKspouFxceHpDcWcED9zVwryfYuM
+id: presentation
+label: Presentation
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

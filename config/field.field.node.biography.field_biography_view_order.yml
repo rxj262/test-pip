@@ -1,0 +1,21 @@
+uuid: 73197f67-a4d4-4ae1-b5ab-d9095333909b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_view_order
+    - node.type.biography
+_core:
+  default_config_hash: bZbfaFNcOIqfB-D13RKejXy4gk4RaogTThwFTk5b1Qg
+id: node.biography.field_biography_view_order
+field_name: field_biography_view_order
+entity_type: node
+bundle: biography
+label: 'View Order'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

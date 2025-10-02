@@ -1,0 +1,21 @@
+uuid: e0a04fab-1b3f-4d66-a038-9b91cc714649
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: zFdhI-i2ge5oYWTqJ4OO2Kp7TtfsQ0AHTrdoa0ykji4
+id: node.field_biography_teaching_interes
+field_name: field_biography_teaching_interes
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+uuid: e69cecac-518c-4be0-920d-8d3422e6a81d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_publication_date
+    - paragraphs.paragraphs_type.publication
+  module:
+    - datetime
+_core:
+  default_config_hash: HxhfGt6ooibkRChil90vJqu8yQoHIqLK0k_0oSRbxeI
+id: paragraph.publication.field_publication_date
+field_name: field_publication_date
+entity_type: paragraph
+bundle: publication
+label: 'Publication Date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

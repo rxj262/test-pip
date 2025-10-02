@@ -1,0 +1,20 @@
+uuid: 7d23efbd-c9a4-4deb-b4e0-0be7f58e4c83
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zLp9edOvI0teHbMufkoK6c423JWhBCRgFCvDdiXHn-s
+id: front
+label: 'Front page'
+tags:
+  shortlink: '[site:url]'
+  title: '[site:name] | Case Western Reserve University'
+  canonical_url: '[site:url]'
+  keywords: ''
+  og_image_width: '265'
+  og_image: 'https://case.edu/images/cwru-social-logo.jpg'
+  og_image_height: '265'
+  og_type: website
+  og_url: '[site:url]'
+  og_image_type: "'image/jpeg'"
+  og_title: '[site:name] | Case Western Reserve University'

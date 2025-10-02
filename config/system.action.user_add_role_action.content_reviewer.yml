@@ -1,0 +1,16 @@
+uuid: c7b98251-be35-44e5-abda-5536d259c98b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_reviewer
+  module:
+    - user
+_core:
+  default_config_hash: B_-b_4a8GJEdlpawaDZaH1ucutCmwZAjTVOXaeCiMo8
+id: user_add_role_action.content_reviewer
+label: 'Add the Content Reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: content_reviewer

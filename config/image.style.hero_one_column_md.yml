@@ -1,0 +1,19 @@
+uuid: e87e909e-62d4-419f-9537-088d49ceda8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: qtc-ECJh49uKwQ8qsvsryyILSlYkXCbiXwSbzPHLwnc
+name: hero_one_column_md
+label: 'Hero One Column MD (940x353)'
+effects:
+  76b24eca-5a78-4271-aa5f-58dac6f2af9f:
+    uuid: 76b24eca-5a78-4271-aa5f-58dac6f2af9f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 940
+      height: 353
+      crop_type: focal_point

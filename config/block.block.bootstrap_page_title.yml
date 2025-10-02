@@ -1,0 +1,20 @@
+uuid: 3b8367c9-763f-4dcf-9363-9e22e77223af
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bootstrap
+_core:
+  default_config_hash: 2RSRThijrDfZ2XQIoazk2xi87xmFp0mVC4lfj8rWy28
+id: bootstrap_page_title
+theme: bootstrap
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

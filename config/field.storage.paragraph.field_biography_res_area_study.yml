@@ -1,0 +1,23 @@
+uuid: 6f5ff44e-8cef-400c-9177-5d6f356c6bad
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: DxORH-gQJs9uoIi2-QupDBA2Fuj5FPkPnKiRtyQXgpY
+id: paragraph.field_biography_res_area_study
+field_name: field_biography_res_area_study
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

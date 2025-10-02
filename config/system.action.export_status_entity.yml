@@ -1,0 +1,13 @@
+uuid: 2be6b54d-d7d6-4ac6-b1dd-706686fdfb63
+langcode: en
+status: true
+dependencies:
+  module:
+    - cms_content_sync_views
+_core:
+  default_config_hash: fE50L9Z7igdq7pyPcNQ8xVBMfKPyVWDuWc2sX-AnQO4
+id: export_status_entity
+label: 'Force Push'
+type: cms_content_sync_entity_status
+plugin: export_status_entity
+configuration: {  }

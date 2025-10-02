@@ -1,0 +1,24 @@
+uuid: 45a49cd2-4125-4736-930b-8fb6d6469399
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_teaching_schedul
+    - node.type.biography
+  module:
+    - text
+_core:
+  default_config_hash: SF3NbVmDPvx2UnfC4pv6DSvQA4wCOhLtO4J678eZ7Hw
+id: node.biography.field_biography_teaching_schedul
+field_name: field_biography_teaching_schedul
+entity_type: node
+bundle: biography
+label: 'Teaching Schedule'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

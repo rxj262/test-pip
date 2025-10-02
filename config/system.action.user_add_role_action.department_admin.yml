@@ -1,0 +1,16 @@
+uuid: 59828e7f-713f-4235-9104-fba5c8ed736a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.department_admin
+  module:
+    - user
+_core:
+  default_config_hash: _x4CRED2Dy8nNf74AgDkxhfxBsgwhiO-mO8oT9uNKeQ
+id: user_add_role_action.department_admin
+label: 'Add the Department Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: department_admin

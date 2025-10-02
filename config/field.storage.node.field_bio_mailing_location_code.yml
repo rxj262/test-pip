@@ -1,0 +1,23 @@
+uuid: 47f2e844-778d-4629-93ff-63e7615f79fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: c9kraMEeR8AEyZv3FK1LIrLtDQMdIt2e-gYSQwex3DQ
+id: node.field_bio_mailing_location_code
+field_name: field_bio_mailing_location_code
+entity_type: node
+type: string
+settings:
+  max_length: 4
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: a6de8652-c6b2-4ba7-8c83-4332dce0a9db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_publications_ope
+    - node.type.biography
+  module:
+    - text
+_core:
+  default_config_hash: qMirnKoM29Bxa7DanpirTINXMEpAFX0K7Yg57y5J_5o
+id: node.biography.field_biography_publications_ope
+field_name: field_biography_publications_ope
+entity_type: node
+bundle: biography
+label: 'Publications Open Entry'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

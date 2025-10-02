@@ -1,0 +1,21 @@
+uuid: 3c67c7ce-7471-4dc7-8f37-706c181f5810
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_instagram_shortcode
+    - media.type.instagram
+_core:
+  default_config_hash: aIkNUKt5TkVxlSIyErU48ODvFukg0U7Q13v4R2OYOgE
+id: media.instagram.field_instagram_shortcode
+field_name: field_instagram_shortcode
+entity_type: media
+bundle: instagram
+label: 'Instagram Shortcode'
+description: "Instagram post's unique identifier. Ex: BHak8cShinX is the shortcode for www.instagram.com/p/BHak8cShinX/"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

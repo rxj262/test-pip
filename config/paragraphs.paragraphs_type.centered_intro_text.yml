@@ -1,0 +1,12 @@
+uuid: 29669896-0a75-4c7f-9b87-1a6d32e7c086
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ecOyngk6gRQiuAVcLArTbZTmy6cpacnJIcdAnHU_xjk
+id: centered_intro_text
+label: 'Centered Intro Text'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

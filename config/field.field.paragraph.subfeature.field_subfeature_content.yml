@@ -1,0 +1,24 @@
+uuid: d4cb294e-8f9f-4900-8b03-0310e8989e7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subfeature_content
+    - paragraphs.paragraphs_type.subfeature
+  module:
+    - text
+_core:
+  default_config_hash: uGc3lI7WLZqv7_OOCM6JlcQTymZO740CzkhxJ_3Y6XQ
+id: paragraph.subfeature.field_subfeature_content
+field_name: field_subfeature_content
+entity_type: paragraph
+bundle: subfeature
+label: 'Subfeature Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

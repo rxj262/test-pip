@@ -1,0 +1,83 @@
+uuid: ffb72d0c-e671-4afa-b861-62954d0892e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.robust_3_column_page.field_meta_tags
+    - field.field.node.robust_3_column_page.field_robust_3_hero_ref
+    - field.field.node.robust_3_column_page.field_robust_3_page_ref
+    - field.field.node.robust_3_column_page.field_robust_3_page_right_ref
+    - node.type.robust_3_column_page
+  module:
+    - entity_reference_revisions
+    - metatag
+    - slick_paragraphs
+    - user
+_core:
+  default_config_hash: yrQu-CdytrD4YjQ-cpkD3tPRbTxcW7p1iCkstRKFT38
+id: node.robust_3_column_page.default
+targetEntityType: node
+bundle: robust_3_column_page
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: hidden
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_robust_3_hero_ref:
+    type: slick_paragraphs_vanilla
+    label: hidden
+    settings:
+      optionset: cwru
+      view_mode: default
+      cache: 0
+      use_theme_field: false
+      skin: ''
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      override: false
+      skin_arrows: ''
+      skin_dots: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_robust_3_page_ref:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_robust_3_page_right_ref:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  workflow_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: hidden
+hidden:
+  links: true

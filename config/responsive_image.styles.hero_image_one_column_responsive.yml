@@ -1,0 +1,44 @@
+uuid: 7e2b253d-950e-4213-a469-98b6ce36780a
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_one_column
+    - image.style.hero_one_column_lg
+    - image.style.hero_one_column_md
+    - image.style.hero_one_column_sm
+    - image.style.hero_one_column_xs
+  theme:
+    - crew
+_core:
+  default_config_hash: uJXv_ZmIKvBtjhle6EOPAFrNnlfNNtesZ2V_hLXUe0Q
+id: hero_image_one_column_responsive
+label: 'Hero Image One Column Responsive'
+image_style_mappings:
+  -
+    breakpoint_id: crew.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_one_column_xs
+  -
+    breakpoint_id: crew.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_one_column_sm
+  -
+    breakpoint_id: crew.screen-md-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_one_column_md
+  -
+    breakpoint_id: crew.screen-lg-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_one_column_lg
+  -
+    breakpoint_id: crew.screen-xl-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_one_column
+breakpoint_group: crew
+fallback_image_style: hero_one_column

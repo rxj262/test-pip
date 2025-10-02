@@ -1,0 +1,19 @@
+uuid: c7c96030-7297-4a6f-853e-87705622bf6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: F28-iu68WeUvmCuIJxyv8aIpqoFVC4ExYDBledu0W4A
+name: biography_listing
+label: 'Biography Listing (176x210)'
+effects:
+  d8902c73-f809-4305-a0ba-efb15990468f:
+    uuid: d8902c73-f809-4305-a0ba-efb15990468f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 176
+      height: 210
+      crop_type: focal_point

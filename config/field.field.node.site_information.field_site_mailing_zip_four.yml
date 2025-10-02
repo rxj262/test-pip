@@ -1,0 +1,23 @@
+uuid: 65ac9531-b24d-4bd0-84db-50772d6e1d0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_mailing_zip_four
+    - node.type.site_information
+_core:
+  default_config_hash: Koo9f-Y_VLRNUCz81qvEuu0HJyLIQVoJeKPvpjkPuBg
+id: node.site_information.field_site_mailing_zip_four
+field_name: field_site_mailing_zip_four
+entity_type: node
+bundle: site_information
+label: 'Zip+Four Code'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 44106-
+default_value_callback: ''
+settings: {  }
+field_type: string

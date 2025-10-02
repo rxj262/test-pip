@@ -1,0 +1,33 @@
+uuid: 108ca2c8-866b-48ad-86f5-8e626bc56aad
+langcode: en
+status: true
+dependencies:
+  config:
+    - rest.resource.cms_content_sync_entity_resource
+    - rest.resource.cms_content_sync_sync_core_entity_item
+    - rest.resource.cms_content_sync_sync_core_entity_list
+    - rest.resource.cms_content_sync_sync_core_site_status
+  module:
+    - cms_content_sync
+    - rest
+  enforced:
+    module:
+      - cms_content_sync
+_core:
+  default_config_hash: f6aY2CLHPoHaK9eslEE4UI5ealbCTrtqgK72ahKrrsw
+id: cms_content_sync
+label: 'Content Sync'
+weight: 2
+is_admin: false
+permissions:
+  - 'restful delete cms_content_sync_entity_resource'
+  - 'restful delete cms_content_sync_sync_core_entity_item'
+  - 'restful get cms_content_sync_entity_resource'
+  - 'restful get cms_content_sync_preview_resource'
+  - 'restful get cms_content_sync_sync_core_entity_item'
+  - 'restful get cms_content_sync_sync_core_entity_list'
+  - 'restful get cms_content_sync_sync_core_site_status'
+  - 'restful patch cms_content_sync_entity_resource'
+  - 'restful post cms_content_sync_entity_resource'
+  - 'restful post cms_content_sync_sync_core_entity_item'
+  - 'restful put cms_content_sync_sync_core_entity_item'

@@ -1,0 +1,21 @@
+uuid: 643f4227-e74f-4672-80af-ad3a73f4928f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_additional_view_order
+    - paragraphs.paragraphs_type.additional_view_orders
+_core:
+  default_config_hash: LT0LGZVeKianmCNSRMd2YGIq8jHCPmW_n4Xs-bk0zoo
+id: paragraph.additional_view_orders.field_additional_view_order
+field_name: field_additional_view_order
+entity_type: paragraph
+bundle: additional_view_orders
+label: 'Additional View Order'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

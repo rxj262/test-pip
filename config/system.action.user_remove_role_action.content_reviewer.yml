@@ -1,0 +1,16 @@
+uuid: d96ff40a-7f5c-4954-910a-8c5f4d1619cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_reviewer
+  module:
+    - user
+_core:
+  default_config_hash: e0I34fF_jJYoYNUjIv6dKq5TjhvlgbifTA7hGMBoJoo
+id: user_remove_role_action.content_reviewer
+label: 'Remove the Content Reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: content_reviewer

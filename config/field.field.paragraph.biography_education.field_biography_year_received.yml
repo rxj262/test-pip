@@ -1,0 +1,21 @@
+uuid: 31d6be54-17b8-4ee7-9836-8e2e218a6bbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_year_received
+    - paragraphs.paragraphs_type.biography_education
+_core:
+  default_config_hash: EHCnQ1vhiPhEXK3hOGXqMHRYx5T77oTsbcF13DaR6UQ
+id: paragraph.biography_education.field_biography_year_received
+field_name: field_biography_year_received
+entity_type: paragraph
+bundle: biography_education
+label: 'Year Received'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,13 @@
+uuid: 971af41f-56c1-449b-b1c4-624011323603
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: nZQfD_MJ4HcWcC8J-nW7fUcbBCbHIdjbmotEf3BB5vI
+id: media.thumbnail_image_style
+label: 'Thumbnail Image Style'
+description: ''
+targetEntityType: media
+cache: true

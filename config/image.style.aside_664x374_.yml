@@ -1,0 +1,19 @@
+uuid: 3c5f6cd3-2c05-4c10-a0ff-93eb770d2d30
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: IVGLPM1CBt2XEUF4gpFs4Rz-0RTtTLbwkYEJMpzlUvk
+name: aside_664x374_
+label: 'Aside (664x374)'
+effects:
+  d7a5fb49-b78e-46d7-bdf6-f30892c47a2e:
+    uuid: d7a5fb49-b78e-46d7-bdf6-f30892c47a2e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 664
+      height: 374
+      crop_type: focal_point

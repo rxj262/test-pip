@@ -1,0 +1,22 @@
+uuid: 76086e61-6b08-406d-b64e-16658f8dbfc3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - crew
+_core:
+  default_config_hash: _HeRkSkeXvSEpn2lOxw3Nb3Ltwos0R4U5pWPLEpmGIo
+id: crew_local_tasks
+theme: crew
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

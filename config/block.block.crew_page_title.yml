@@ -1,0 +1,45 @@
+uuid: 1f39f372-043c-459e-a461-bd7e626f5b75
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - crew
+_core:
+  default_config_hash: o_mKGsjtM95hAOzxGj_DajJh3fo8ys5HS1B_TQc6yAM
+id: crew_page_title
+theme: crew
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page Title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+      biography: biography
+      event_detail_page: event_detail_page
+      landing_page: landing_page
+      landing_page_alternate_subfeatur: landing_page_alternate_subfeatur
+      landing_page_robust: landing_page_robust
+      news_article: news_article
+      personal_profile: personal_profile
+      program: program
+      robust_3_column_page: robust_3_column_page
+      site_information: site_information
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

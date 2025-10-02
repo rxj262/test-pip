@@ -1,0 +1,23 @@
+uuid: 21321ac7-2132-4509-bfe7-47c9a0fe8ae8
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+_core:
+  default_config_hash: V-nJq1v6KXb_o7q4GvHKZrmT5UvVjJdTHPsX7GOz8RY
+id: node.field_robust_3_page_ref
+field_name: field_robust_3_page_ref
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

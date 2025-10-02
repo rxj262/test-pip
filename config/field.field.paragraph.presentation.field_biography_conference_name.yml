@@ -1,0 +1,21 @@
+uuid: cae2b342-6e50-45ee-af0c-58301fafdb62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_conference_name
+    - paragraphs.paragraphs_type.presentation
+_core:
+  default_config_hash: '-T3PzXXqZp9A13UiyhGTzB7s-AdCOsi-7aL6vNW5xKk'
+id: paragraph.presentation.field_biography_conference_name
+field_name: field_biography_conference_name
+entity_type: paragraph
+bundle: presentation
+label: 'Conference/Event Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

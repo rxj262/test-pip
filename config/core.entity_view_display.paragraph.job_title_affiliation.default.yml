@@ -1,0 +1,50 @@
+uuid: c777985d-672d-4ae8-a50a-7e6cebec5601
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.job_title_affiliation.field_biography_center_ref
+    - field.field.paragraph.job_title_affiliation.field_biography_dept_ref
+    - field.field.paragraph.job_title_affiliation.field_biography_school_ref
+    - field.field.paragraph.job_title_affiliation.field_job_title_ref
+    - paragraphs.paragraphs_type.job_title_affiliation
+_core:
+  default_config_hash: sXx3mzeVI-zmgHiIie6IIMv6M04_rd79eo1aRDOaX-o
+id: paragraph.job_title_affiliation.default
+targetEntityType: paragraph
+bundle: job_title_affiliation
+mode: default
+content:
+  field_biography_center_ref:
+    weight: 2
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_biography_dept_ref:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_biography_school_ref:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_job_title_ref:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

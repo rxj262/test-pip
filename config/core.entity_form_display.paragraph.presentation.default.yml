@@ -1,0 +1,44 @@
+uuid: 443db48a-25e6-4c40-b31b-0f612a219b4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.presentation.field_biography_conference_name
+    - field.field.paragraph.presentation.field_biography_presentation_dat
+    - field.field.paragraph.presentation.field_biography_presentation_tit
+    - paragraphs.paragraphs_type.presentation
+  module:
+    - datetime
+_core:
+  default_config_hash: Mrv4tpyztJeeNyd9HokbT-C_8XSBKW_kzRPvQ0nmCDg
+id: paragraph.presentation.default
+targetEntityType: paragraph
+bundle: presentation
+mode: default
+content:
+  field_biography_conference_name:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_biography_presentation_dat:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_biography_presentation_tit:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

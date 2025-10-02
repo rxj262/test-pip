@@ -1,0 +1,22 @@
+uuid: d0122346-46bf-4fae-8924-a339f67ea3d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: cNfzPkXeiuyrU9GKz0RNOsFY2NRwW3L31tuumg8Fj8g
+id: paragraph.field_sf_section_image_ref
+field_name: field_sf_section_image_ref
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

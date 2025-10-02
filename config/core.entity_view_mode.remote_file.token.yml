@@ -1,0 +1,13 @@
+uuid: 7185cdbc-6644-4451-91c4-4268b007c561
+langcode: en
+status: true
+dependencies:
+  module:
+    - file_url
+_core:
+  default_config_hash: jrGxhyVzfJ182tucXCUeC_gG9ZDaBsRymgwasbTkiK4
+id: remote_file.token
+label: Token
+description: ''
+targetEntityType: remote_file
+cache: true

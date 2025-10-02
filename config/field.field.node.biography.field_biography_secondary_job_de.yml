@@ -1,0 +1,26 @@
+uuid: 2b587106-d384-482b-9c5c-c3fe5a237f6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_secondary_job_de
+    - node.type.biography
+  module:
+    - text
+_core:
+  default_config_hash: UoQjxy-S_-LhTZI-nY9x_TLTCl8QE454Y96uu6bIYOU
+id: node.biography.field_biography_secondary_job_de
+field_name: field_biography_secondary_job_de
+entity_type: node
+bundle: biography
+label: 'Secondary Job Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

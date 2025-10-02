@@ -1,0 +1,25 @@
+uuid: c8b654e5-c69c-4cfc-b993-d928602a14d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_twitter
+_core:
+  default_config_hash: g3VRZ_Fvj1t8CGksU8AWUKRim9aEMZr227mO-H9qxVY
+id: tweet
+label: Tweet
+description: 'Use this to embed Twitter content on your site.'
+source: twitter
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_tweet_url
+  use_twitter_api: false
+  consumer_key: ''
+  consumer_secret: ''
+  oauth_access_token: ''
+  oauth_access_token_secret: ''
+  generate_thumbnails: false
+field_map:
+  id: field_tweet_id
+  user: field_tweet_author

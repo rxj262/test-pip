@@ -1,0 +1,25 @@
+uuid: ede67c3e-3d0f-4c8c-a4c8-16130762b5b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_url
+    - node.type.site_information
+  module:
+    - link
+_core:
+  default_config_hash: uGLDxdQelap5rNqc4Yn4AAR2o7nsDNaWHNHJObJTgXU
+id: node.site_information.field_site_url
+field_name: field_site_url
+entity_type: node
+bundle: site_information
+label: URL
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

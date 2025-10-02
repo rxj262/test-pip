@@ -1,0 +1,117 @@
+uuid: 61a0ebd1-7021-4cf2-a1b3-dcf6b85abced
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_award_ref
+    - node.type.biography
+    - paragraphs.paragraphs_type.award_honor
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 13xm7LVLUYTlP_FqxTD4KPqT-ENh4ol3c5xDbIcDuqE
+id: node.biography.field_biography_award_ref
+field_name: field_biography_award_ref
+entity_type: node
+bundle: biography
+label: 'Awards and Honors'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      award_honor: award_honor
+    target_bundles_drag_drop:
+      accordion:
+        weight: 28
+        enabled: false
+      accordion_section:
+        weight: 29
+        enabled: false
+      aside:
+        weight: 31
+        enabled: false
+      award_honor:
+        enabled: true
+        weight: 32
+      biography_education:
+        weight: 33
+        enabled: false
+      button:
+        weight: 35
+        enabled: false
+      centered_intro_text:
+        weight: 36
+        enabled: false
+      content:
+        weight: 37
+        enabled: false
+      gallery:
+        weight: 38
+        enabled: false
+      external_appointment:
+        weight: 38
+        enabled: false
+      hero_landing_page:
+        weight: 40
+        enabled: false
+      gallery_section:
+        weight: 40
+        enabled: false
+      hero_one_column:
+        weight: 41
+        enabled: false
+      hero_text_heavy:
+        weight: 43
+        enabled: false
+      icon_picker:
+        weight: 44
+        enabled: false
+      icon_subfeature:
+        weight: 45
+        enabled: false
+      job_title_affiliation:
+        weight: 46
+        enabled: false
+      presentation:
+        weight: 47
+        enabled: false
+      subfeature:
+        weight: 48
+        enabled: false
+      publication:
+        weight: 48
+        enabled: false
+      residency:
+        weight: 49
+        enabled: false
+      site_affiliation:
+        weight: 50
+        enabled: false
+      tabs:
+        weight: 50
+        enabled: false
+      tab_section:
+        weight: 51
+        enabled: false
+      social:
+        weight: 51
+        enabled: false
+      social_section:
+        weight: 52
+        enabled: false
+      subfeature_landing:
+        weight: 54
+        enabled: false
+      subfeature_section:
+        weight: 55
+        enabled: false
+      view:
+        weight: 58
+        enabled: false
+field_type: entity_reference_revisions

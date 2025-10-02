@@ -1,0 +1,35 @@
+uuid: b1fd254a-bf24-42fd-8e75-e748e0ad4e1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_section.field_social_select
+    - field.field.paragraph.social_section.field_social_url
+    - paragraphs.paragraphs_type.social_section
+  module:
+    - link
+_core:
+  default_config_hash: KGkmnXxn23g8uGkG0WVaM8-NJJgXndQK09h_jtD3Zgc
+id: paragraph.social_section.default
+targetEntityType: paragraph
+bundle: social_section
+mode: default
+content:
+  field_social_select:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_social_url:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,13 @@
+uuid: 74d09b0b-9da8-492c-afed-0a8a6f1794d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: u2Z22y3-APXOTHl2-9aIQAV1axkE-zldFPoRCGF06SE
+id: media.image_with_caption_large
+label: 'Media Image with Caption - 4 (Large)'
+description: ''
+targetEntityType: media
+cache: true

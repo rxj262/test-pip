@@ -1,0 +1,21 @@
+uuid: f35eea53-f97e-4eeb-a6c2-71df82a47b5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_zip
+    - node.type.site_information
+_core:
+  default_config_hash: hunPwrPKTs_68u84jR9fuZXkF-HsDSshyTnwHsjffIE
+id: node.site_information.field_site_zip
+field_name: field_site_zip
+entity_type: node
+bundle: site_information
+label: Zip
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

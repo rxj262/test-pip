@@ -1,0 +1,26 @@
+uuid: 0f732761-bf37-4fe6-a912-389a4ba9b63d
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - file_url
+    - paragraphs
+_core:
+  default_config_hash: G5O3WR0BDHV75CQOg1obNBotzp81d8vl5N_jlIP5Brw
+id: paragraph.field_sf_section_pdf_link
+field_name: field_sf_section_pdf_link
+entity_type: paragraph
+type: file_url
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file_url
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

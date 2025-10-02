@@ -1,0 +1,21 @@
+uuid: d867ab13-73a4-41ec-9e41-d06a5564d0e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: YPko2XMWYTX6LaY_DV-DlH2HKvoGahTv-1_KCkrySbg
+id: paragraph.field_hero_landing_description
+field_name: field_hero_landing_description
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

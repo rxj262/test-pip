@@ -1,0 +1,24 @@
+uuid: 5d0470ff-f60e-4a74-a6d4-863f2996d4ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_recent_funding
+    - node.type.biography
+  module:
+    - text
+_core:
+  default_config_hash: lqpIG_lF7q-Dg3MQuv_GwaV8sg0IiFC4ZK_tYtuhZ8A
+id: node.biography.field_biography_recent_funding
+field_name: field_biography_recent_funding
+entity_type: node
+bundle: biography
+label: 'Recent Funding'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

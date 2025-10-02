@@ -1,0 +1,29 @@
+uuid: 308ada05-a329-4396-94a5-1655f28409fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: PeEh5mkzcOsoEA6_bEOLks_T-Zgx9IWs0X5NQauiQMM
+id: paragraph.field_gallery_size
+field_name: field_gallery_size
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: small-gallery
+      label: Small
+    -
+      value: ful-width-gallery
+      label: 'Full Width'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

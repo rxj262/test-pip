@@ -1,0 +1,26 @@
+uuid: fcf47db9-decd-43e8-8193-a46dbcef2202
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.additional_job_descriptions.field_additional_job_description
+    - field.field.paragraph.additional_job_descriptions.field_website_job_description_sh
+    - paragraphs.paragraphs_type.additional_job_descriptions
+  module:
+    - text
+_core:
+  default_config_hash: A1zF5EmXhzEbbmCyI8I2Ybd_ZdX_aLy4YhRAfcgTN44
+id: paragraph.additional_job_descriptions.default
+targetEntityType: paragraph
+bundle: additional_job_descriptions
+mode: default
+content:
+  field_additional_job_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_website_job_description_sh: true

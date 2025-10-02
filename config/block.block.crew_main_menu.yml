@@ -1,0 +1,27 @@
+uuid: 3e6dffc8-07a0-4c50-8965-43ae4a91daba
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - crew
+_core:
+  default_config_hash: HSDU5WSNwJqvs6z48XmaxkqyxrXkRi6Dtr2aCn2n1FU
+id: crew_main_menu
+theme: crew
+region: navigation
+weight: -7
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main Navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,11 @@
+uuid: ab2d5d98-ad63-45ca-9c98-c935d1f30273
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eZtTdf2-tAx7WUphEldcH3EBI7ywyJU9Xq_dN3dSWu0
+name: Centers
+vid: centers
+description: null
+weight: 0
+new_revision: false

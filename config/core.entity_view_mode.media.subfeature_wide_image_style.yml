@@ -1,0 +1,13 @@
+uuid: 41715e09-a0ec-4774-9470-2e7902154e13
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 5AnTM0j9CaztImyIdena_na4Dp78zo8QqityiqpTz0o
+id: media.subfeature_wide_image_style
+label: 'Subfeature Wide Image Style'
+description: ''
+targetEntityType: media
+cache: true

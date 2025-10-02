@@ -1,0 +1,138 @@
+uuid: 673ba886-a312-4091-8f73-42db47daead0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_text_ref
+    - node.type.homepage_w_full_width_feature
+    - paragraphs.paragraphs_type.centered_intro_text
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: I2WsUmxwaTPDzRGGZZWVQuRADmAIxf2nVZG56zcJmdc
+id: node.homepage_w_full_width_feature.field_intro_text_ref
+field_name: field_intro_text_ref
+entity_type: node
+bundle: homepage_w_full_width_feature
+label: 'Intro Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      centered_intro_text: centered_intro_text
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 36
+        enabled: false
+      accordion_section:
+        weight: 37
+        enabled: false
+      additional_job_descriptions:
+        weight: 38
+        enabled: false
+      additional_view_orders:
+        weight: 39
+        enabled: false
+      aside:
+        weight: 40
+        enabled: false
+      award_honor:
+        weight: 41
+        enabled: false
+      biography_education:
+        weight: 42
+        enabled: false
+      button:
+        weight: 43
+        enabled: false
+      centered_intro_text:
+        weight: 72
+        enabled: true
+      content:
+        weight: 44
+        enabled: false
+      external_appointment:
+        weight: 45
+        enabled: false
+      external_rss:
+        weight: 46
+        enabled: false
+      gallery:
+        weight: 47
+        enabled: false
+      gallery_section:
+        weight: 48
+        enabled: false
+      hero_landing_page:
+        weight: 49
+        enabled: false
+      hero_one_column:
+        weight: 50
+        enabled: false
+      hero_two_column:
+        weight: 51
+        enabled: false
+      icon_picker:
+        weight: 52
+        enabled: false
+      job_title_affiliation:
+        weight: 53
+        enabled: false
+      presentation:
+        weight: 54
+        enabled: false
+      publication:
+        weight: 55
+        enabled: false
+      residency:
+        weight: 56
+        enabled: false
+      site_affiliation:
+        weight: 57
+        enabled: false
+      social:
+        weight: 58
+        enabled: false
+      social_section:
+        weight: 59
+        enabled: false
+      stacked_button_wrapper:
+        weight: 61
+        enabled: false
+      stacked_buttons:
+        weight: 60
+        enabled: false
+      subfeature:
+        weight: 62
+        enabled: false
+      subfeature_landing:
+        weight: 64
+        enabled: false
+      subfeature_section:
+        weight: 65
+        enabled: false
+      subfeature_two_column:
+        weight: 66
+        enabled: false
+      subfeatures_group:
+        weight: 63
+        enabled: false
+      tab_section:
+        weight: 68
+        enabled: false
+      tabs:
+        weight: 67
+        enabled: false
+      video:
+        weight: 69
+        enabled: false
+      view:
+        weight: 70
+        enabled: false
+field_type: entity_reference_revisions

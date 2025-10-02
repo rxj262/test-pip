@@ -1,0 +1,23 @@
+uuid: 572ee6f9-0f5a-4d7a-8ade-f5eafa2b2b11
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: N7_HeMXSPrbbLEHPigawL9W8KyNRnF6P-DyLFWptmuY
+id: paragraph.field_biography_res_institution
+field_name: field_biography_res_institution
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

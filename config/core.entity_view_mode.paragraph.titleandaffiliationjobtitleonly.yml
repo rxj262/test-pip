@@ -1,0 +1,13 @@
+uuid: d0590c34-8ef2-45a0-9b1c-e2ca76edf20e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: Ot_s9yGLaNMmOHfhc8Su-NPG1l9r84tjKApFCsjwsP0
+id: paragraph.titleandaffiliationjobtitleonly
+label: TitleAndAffiliationJobTitleOnly
+description: ''
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,26 @@
+uuid: fa837f21-125d-4d56-a11a-bf88948e1cde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_additional_job_description
+    - paragraphs.paragraphs_type.additional_job_descriptions
+  module:
+    - text
+_core:
+  default_config_hash: HhEdsVv-iJfEX_eJnDJkjjGzaJlOBX4Qd95hbnWsOf0
+id: paragraph.additional_job_descriptions.field_additional_job_description
+field_name: field_additional_job_description
+entity_type: paragraph
+bundle: additional_job_descriptions
+label: 'Additional Job Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -1,0 +1,27 @@
+uuid: c440b64a-c10f-4179-afdd-4e71e6d81a2f
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - crew
+_core:
+  default_config_hash: GX_eMZ5RL8aWDhY3R_ClZVM7M51hblx3d7TjyJgNEHQ
+id: crew_footer
+theme: crew
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,24 @@
+uuid: dcab92e1-1710-4dd6-8fa6-13726fa40e74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_landing_description
+    - paragraphs.paragraphs_type.hero_landing_page
+  module:
+    - text
+_core:
+  default_config_hash: Q2XBvzdo8zWGExyvn3Y-JvsB-1uYKlAw213YkexCbDU
+id: paragraph.hero_landing_page.field_hero_landing_description
+field_name: field_hero_landing_description
+entity_type: paragraph
+bundle: hero_landing_page
+label: 'Image Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

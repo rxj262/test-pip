@@ -1,0 +1,12 @@
+uuid: d8f1881a-92c5-4bfc-afca-04e9b3c36d21
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 45r16q4uYGQzkmLu2j4J_W-5Yr-h7a10C0i3rjhjPYE
+id: hero_landing_page
+label: 'Hero Image Landing Page'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

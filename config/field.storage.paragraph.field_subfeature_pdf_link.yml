@@ -1,0 +1,26 @@
+uuid: 9f9d3064-863a-4ebe-8c45-53de2513f0d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - file_url
+    - paragraphs
+_core:
+  default_config_hash: MIhpTsqExFURFAoSU-xZ8Zf1Kqkhn1kEGsSWF17Avbo
+id: paragraph.field_subfeature_pdf_link
+field_name: field_subfeature_pdf_link
+entity_type: paragraph
+type: file_url
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file_url
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

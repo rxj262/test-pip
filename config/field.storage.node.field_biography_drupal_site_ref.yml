@@ -1,0 +1,22 @@
+uuid: 69ec4830-03b0-4caf-9870-9dfa09bb455b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: SdvcU_87W6Ui2LK9HFWX_IxWcheGrq61drtMvQXTv5s
+id: node.field_biography_drupal_site_ref
+field_name: field_biography_drupal_site_ref
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

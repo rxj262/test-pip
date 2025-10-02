@@ -1,0 +1,21 @@
+uuid: 98b044e1-3135-4332-b17c-08e8c8f5bcf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_specialties
+    - node.type.biography
+_core:
+  default_config_hash: WyY5WyL6m9nlJz9RP-1w6FBRMXumJ0Yt71YDVIlBqoc
+id: node.biography.field_biography_specialties
+field_name: field_biography_specialties
+entity_type: node
+bundle: biography
+label: Specialties
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

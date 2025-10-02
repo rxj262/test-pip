@@ -1,0 +1,20 @@
+uuid: c3bde915-4ce6-4f71-a41c-aa68ffda7ec6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: mS-zlJusk1q0FL7hMixdIQaf-RUbEwkGUGihZcKvsUg
+name: Biography
+type: biography
+description: null
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

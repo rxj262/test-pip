@@ -1,0 +1,19 @@
+uuid: 47f28f93-3776-4d25-96b4-140695ea5454
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: aj_ujdSzNe6crLjohELc6SPU_YWD6-q0vQe1sa6leRs
+name: subfeature3_sm
+label: 'Subfeature 3-wide SM (720x300)'
+effects:
+  2f119ef9-3c0c-40c7-80c0-56516258e1a8:
+    uuid: 2f119ef9-3c0c-40c7-80c0-56516258e1a8
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 300
+      crop_type: focal_point

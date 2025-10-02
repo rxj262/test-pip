@@ -1,0 +1,23 @@
+uuid: a04569dd-42b5-42db-b2cc-7fd8ec8490fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: zFolsk89wT3iecQ3Pn37UcTRX68O96upwP3zHwj17j0
+id: paragraph.field_biography_award_year
+field_name: field_biography_award_year
+entity_type: paragraph
+type: string
+settings:
+  max_length: 4
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

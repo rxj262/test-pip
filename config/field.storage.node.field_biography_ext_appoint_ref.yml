@@ -1,0 +1,23 @@
+uuid: 64a36ed5-99e0-41c8-b922-3e160fab1362
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+_core:
+  default_config_hash: bkOvM7V_-8NN1lLABd-Lf_YyR58GYJE6f1oGj8TgarU
+id: node.field_biography_ext_appoint_ref
+field_name: field_biography_ext_appoint_ref
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

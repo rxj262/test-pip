@@ -1,0 +1,19 @@
+uuid: a00f513b-a958-4a38-9dd7-66b0e5921bef
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: 1H-hBdoMwBquZtGDqiZCbeDrrs6DFNSu0sbVNfnn65o
+name: subfeature3_xs
+label: 'Subfeature 3-wide XS (440x200)'
+effects:
+  b100a9d6-bbe6-4ec2-8a59-4ad4624205b7:
+    uuid: b100a9d6-bbe6-4ec2-8a59-4ad4624205b7
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 440
+      height: 200
+      crop_type: focal_point

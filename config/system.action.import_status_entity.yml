@@ -1,0 +1,13 @@
+uuid: 9ae3aed9-3b46-4b51-95d6-71c1a693e686
+langcode: en
+status: true
+dependencies:
+  module:
+    - cms_content_sync_views
+_core:
+  default_config_hash: xTTZDJ6ukNxPDYvPyEBhLKSnXhAKRQkmSx6nbsDyJfc
+id: import_status_entity
+label: 'Force Pull'
+type: cms_content_sync_entity_status
+plugin: import_status_entity
+configuration: {  }

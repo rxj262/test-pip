@@ -1,0 +1,12 @@
+uuid: 452b61cb-cc23-4c01-a7a4-49d7225ae494
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: __WJiGbh-_VDhWoiFbg4w5FsrHgWzuMUWvUNbgXsZEc
+id: tab_section
+label: 'Tab Section'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

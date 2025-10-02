@@ -1,0 +1,27 @@
+uuid: d488f688-1b4d-4f09-a0e2-21f21ce833e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - crew
+_core:
+  default_config_hash: rHasTN_TWA9qdGC0NhTW-dZTiVpKmXlcFtNgVkPbjv4
+id: crew_mobile_nav
+theme: crew
+region: navigation_collapsible
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Mobile Navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 5
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 1a99eff8-b0b1-4b80-b823-ec83626feccd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_feedback
+    - node.type.site_information
+_core:
+  default_config_hash: '---nHgSPhFMRaRGmhdwtXvPw9atNNmW6zKBTSUP6vBg'
+id: node.site_information.field_site_feedback
+field_name: field_site_feedback
+entity_type: node
+bundle: site_information
+label: 'Site Feedback'
+description: 'Please list the email you would like to have feedback about your site sent to.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

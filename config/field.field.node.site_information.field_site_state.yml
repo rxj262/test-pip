@@ -1,0 +1,21 @@
+uuid: 0d0ee9e4-dee8-42fa-974a-08f6376a03c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_state
+    - node.type.site_information
+_core:
+  default_config_hash: 10zEawCGJfxq8L33jE0_rfnPE7NTZObFdhDMeMNVXdQ
+id: node.site_information.field_site_state
+field_name: field_site_state
+entity_type: node
+bundle: site_information
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

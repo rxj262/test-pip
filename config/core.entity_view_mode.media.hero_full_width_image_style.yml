@@ -1,0 +1,13 @@
+uuid: bc2f05c9-41d2-49db-a99a-73c19831c2a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 0YCdRSYchFHNcFC18TJPIluzxQp6XmgkuBUcP_sOW5w
+id: media.hero_full_width_image_style
+label: 'Hero Full Width Image Style'
+description: ''
+targetEntityType: media
+cache: true

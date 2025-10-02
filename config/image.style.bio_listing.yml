@@ -1,0 +1,19 @@
+uuid: 5208a7c4-35dd-482c-8175-151c66660244
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: ucfR1iGtHuBO-v1XpCU1Mpthm4-sAY0R_sk6Jgsvrzc
+name: bio_listing
+label: 'Bio Listing (250x298)'
+effects:
+  b91c3eec-603e-4d9e-ab29-628291e6779f:
+    uuid: b91c3eec-603e-4d9e-ab29-628291e6779f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 298
+      crop_type: focal_point

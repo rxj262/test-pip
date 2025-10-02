@@ -1,0 +1,122 @@
+uuid: 0ad42925-5bbd-4c06-9b45-6f844b84fdc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_residency_ref
+    - node.type.biography
+    - paragraphs.paragraphs_type.residency
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: yqMQIpH72xLBUsPL4oanI2WnRTit2ikzn-AxCoQA_wM
+id: node.biography.field_biography_residency_ref
+field_name: field_biography_residency_ref
+entity_type: node
+bundle: biography
+label: Residency
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      residency: residency
+    target_bundles_drag_drop:
+      accordion:
+        weight: 32
+        enabled: false
+      accordion_section:
+        weight: 33
+        enabled: false
+      alternating_subfeature:
+        weight: 34
+        enabled: false
+      aside:
+        weight: 35
+        enabled: false
+      award_honor:
+        weight: 36
+        enabled: false
+      biography_education:
+        weight: 37
+        enabled: false
+      biography_job_title_department:
+        weight: 38
+        enabled: false
+      button:
+        weight: 39
+        enabled: false
+      centered_intro_text:
+        weight: 40
+        enabled: false
+      content:
+        weight: 41
+        enabled: false
+      external_appointment:
+        weight: 42
+        enabled: false
+      gallery:
+        weight: 43
+        enabled: false
+      hero_full_width:
+        weight: 44
+        enabled: false
+      hero_landing_page:
+        weight: 45
+        enabled: false
+      hero_one_column:
+        weight: 46
+        enabled: false
+      hero_overlay_text:
+        weight: 47
+        enabled: false
+      hero_text_heavy:
+        weight: 48
+        enabled: false
+      hero_two_column:
+        weight: 49
+        enabled: false
+      icon_subfeature:
+        weight: 50
+        enabled: false
+      iframe:
+        weight: 51
+        enabled: false
+      presentation:
+        weight: 52
+        enabled: false
+      publication:
+        weight: 53
+        enabled: false
+      residency:
+        enabled: true
+        weight: 54
+      stacked_buttons:
+        weight: 55
+        enabled: false
+      subfeature:
+        weight: 56
+        enabled: false
+      subfeature_two_column:
+        weight: 57
+        enabled: false
+      tab_section:
+        weight: 58
+        enabled: false
+      tabs:
+        weight: 59
+        enabled: false
+      vertical_subfeature:
+        weight: 60
+        enabled: false
+      video:
+        weight: 61
+        enabled: false
+      well:
+        weight: 62
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,24 @@
+uuid: f5cdfe63-9554-43c2-bb25-b7dc5e879c1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_additional_infor
+    - node.type.biography
+  module:
+    - text
+_core:
+  default_config_hash: je-x6gBFdb65qOBKmIUVmu771kUH_ZEw9e3QX-CFC2o
+id: node.biography.field_biography_additional_infor
+field_name: field_biography_additional_infor
+entity_type: node
+bundle: biography
+label: 'Additional Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

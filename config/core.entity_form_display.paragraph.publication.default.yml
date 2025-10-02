@@ -1,0 +1,44 @@
+uuid: 0360de27-f381-4da9-a94d-4336f32da214
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.publication.field_biography_publication_name
+    - field.field.paragraph.publication.field_biography_title_work
+    - field.field.paragraph.publication.field_publication_date
+    - paragraphs.paragraphs_type.publication
+  module:
+    - datetime
+_core:
+  default_config_hash: UiO4I2fFCq8JDL1U6QO-l1c7alM8_rbL_hlAT14dNaM
+id: paragraph.publication.default
+targetEntityType: paragraph
+bundle: publication
+mode: default
+content:
+  field_biography_publication_name:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_biography_title_work:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_publication_date:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

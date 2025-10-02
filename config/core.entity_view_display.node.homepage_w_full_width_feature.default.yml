@@ -1,0 +1,85 @@
+uuid: 1de744a5-8565-4724-85f1-12f0b2a796b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage_w_full_width_feature.field_hero_oncol_ref
+    - field.field.node.homepage_w_full_width_feature.field_intro_text
+    - field.field.node.homepage_w_full_width_feature.field_intro_text_ref
+    - field.field.node.homepage_w_full_width_feature.field_meta_tags
+    - field.field.node.homepage_w_full_width_feature.field_subfeature_ref
+    - node.type.homepage_w_full_width_feature
+  module:
+    - entity_reference_revisions
+    - metatag
+    - slick_paragraphs
+    - user
+_core:
+  default_config_hash: RIi_QT1Y3gwNI9w_AIOt-kKh7HYCoi5hC4quvUZOXEw
+id: node.homepage_w_full_width_feature.default
+targetEntityType: node
+bundle: homepage_w_full_width_feature
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_hero_oncol_ref:
+    type: slick_paragraphs_vanilla
+    label: hidden
+    settings:
+      optionset: cwru_slideshow
+      view_mode: default
+      cache: 0
+      use_theme_field: false
+      skin: ''
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      override: false
+      skin_arrows: ''
+      skin_dots: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_intro_text:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_subfeature_ref:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_intro_text_ref: true
+  workflow_buttons: true

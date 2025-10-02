@@ -1,0 +1,22 @@
+uuid: 539c24a5-150a-4e27-9343-fd65bf71aa58
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - crew
+_core:
+  default_config_hash: HSNHHtqi67KEtN_YTyZMfA01YcwOBhbN0ZU7QNtL6FY
+id: crew_content
+theme: crew
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

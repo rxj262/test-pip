@@ -1,0 +1,26 @@
+uuid: 8b3501b7-8e5b-4273-8ead-d111c598851d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_presentation_dat
+    - paragraphs.paragraphs_type.presentation
+  module:
+    - datetime
+_core:
+  default_config_hash: AYg7T5gV88nM9M9zl95FMdzcjt64zOnakiR9fRtAkDk
+id: paragraph.presentation.field_biography_presentation_dat
+field_name: field_biography_presentation_dat
+entity_type: paragraph
+bundle: presentation
+label: 'Biography Presentation Date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

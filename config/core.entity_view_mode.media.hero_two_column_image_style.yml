@@ -1,0 +1,13 @@
+uuid: 25f2e18a-27fa-4e15-81a9-6252525aee73
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: YvtcpEKD9tMApQwql-HNtRm30B9U6lKoh5MupPlOHOM
+id: media.hero_two_column_image_style
+label: 'Hero Two Column Image Style'
+description: ''
+targetEntityType: media
+cache: true

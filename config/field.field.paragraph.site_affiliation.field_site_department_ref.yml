@@ -1,0 +1,30 @@
+uuid: eb9b11b8-3991-4e60-9369-2b80cdd4d08e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_site_department_ref
+    - paragraphs.paragraphs_type.site_affiliation
+    - taxonomy.vocabulary.departments
+_core:
+  default_config_hash: rO9pBqxaUNmUQB_oYgc8UHFL6FqJnvkghOofvBWDjfI
+id: paragraph.site_affiliation.field_site_department_ref
+field_name: field_site_department_ref
+entity_type: paragraph
+bundle: site_affiliation
+label: Department
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      departments: departments
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

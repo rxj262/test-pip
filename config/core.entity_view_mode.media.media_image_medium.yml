@@ -1,0 +1,13 @@
+uuid: 25fa6fab-e1a1-4fdf-939a-5ca2108e3791
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: PWRKOTF2thNytahIYmHdf_DDaHGCuIOLTnopesUyr7s
+id: media.media_image_medium
+label: 'Media Image - 3 (Medium)'
+description: ''
+targetEntityType: media
+cache: true

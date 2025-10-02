@@ -1,0 +1,24 @@
+uuid: 8ad64fd0-febc-4b66-9046-5907160f34ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - cms_content_sync
+    - serialization
+    - user
+  enforced:
+    module:
+      - cms_content_sync
+_core:
+  default_config_hash: 501FmUfVjViEcNOyRgc3x_QbhO1nkkLwgF7_eaaL1kM
+id: cms_content_sync_import_entity
+plugin_id: cms_content_sync_import_entity
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+  formats:
+    - json
+  authentication:
+    - cookie

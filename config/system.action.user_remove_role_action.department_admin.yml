@@ -1,0 +1,16 @@
+uuid: 50b08387-7772-48fa-b291-b600175c6870
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.department_admin
+  module:
+    - user
+_core:
+  default_config_hash: uGmcQSet-K7s8s6gUbLANj1ARGzHFfgc47Ur_Sb9dL8
+id: user_remove_role_action.department_admin
+label: 'Remove the Department Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: department_admin

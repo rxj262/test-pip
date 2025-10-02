@@ -1,0 +1,19 @@
+uuid: 6f9a944f-0eb5-4509-9461-916d7bbedb03
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: ul9AnLRWeLjZVHbvNaJkBLRDpe9Sg6pYoHRo6x6SWH0
+name: landing_page_image_w_aside_705x400_
+label: 'Landing Page Image w/Aside (705x400)'
+effects:
+  634c91a3-5f26-4ba7-ba4e-0f9e5f3b81d8:
+    uuid: 634c91a3-5f26-4ba7-ba4e-0f9e5f3b81d8
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 705
+      height: 400
+      crop_type: focal_point

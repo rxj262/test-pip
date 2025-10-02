@@ -1,0 +1,50 @@
+uuid: 81a762ed-773f-405a-ba5b-bae82207df39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.external_appointment.field_biography_ext_org_pub
+    - field.field.paragraph.external_appointment.field_biography_ext_title
+    - field.field.paragraph.external_appointment.field_external_appointment_end
+    - field.field.paragraph.external_appointment.field_external_appointment_start
+    - paragraphs.paragraphs_type.external_appointment
+  module:
+    - yearonly
+_core:
+  default_config_hash: teaXpdzPeQNziTR1DmQI37jWj6V6-PjkHHg9RCDPSUw
+id: paragraph.external_appointment.default
+targetEntityType: paragraph
+bundle: external_appointment
+mode: default
+content:
+  field_biography_ext_org_pub:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_biography_ext_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_external_appointment_end:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: yearonly_default
+    region: content
+  field_external_appointment_start:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: yearonly_default
+    region: content
+hidden: {  }

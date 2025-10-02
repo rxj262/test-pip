@@ -1,0 +1,23 @@
+uuid: c3900115-4b4c-4a3b-bb12-52fe550c2353
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fax_number
+    - node.type.biography
+  module:
+    - telephone
+_core:
+  default_config_hash: jQOnf7RAi5-GmvQok7KLKn77J9SiRcbUTSqGZdSJzuY
+id: node.biography.field_fax_number
+field_name: field_fax_number
+entity_type: node
+bundle: biography
+label: 'Fax Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

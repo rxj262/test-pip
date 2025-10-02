@@ -1,0 +1,13 @@
+uuid: c0615278-1a3d-455e-858d-09dc94df87ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: tV8A8TFEVx8187OD5XERRLOYhD11997VTArScPCwsbg
+id: media.subfeature_image_style
+label: 'Subfeature Image Style'
+description: ''
+targetEntityType: media
+cache: true

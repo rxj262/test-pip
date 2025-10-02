@@ -1,0 +1,24 @@
+uuid: 98d4cfd4-77b7-4b8e-9725-eab782420a84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_intro_text
+    - paragraphs.paragraphs_type.centered_intro_text
+  module:
+    - text
+_core:
+  default_config_hash: otUcRYVfXqDRb9mHQCwTgppIeD1Cz4BvxJpr_X12g78
+id: paragraph.centered_intro_text.field_intro_text
+field_name: field_intro_text
+entity_type: paragraph
+bundle: centered_intro_text
+label: 'Centered Intro Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

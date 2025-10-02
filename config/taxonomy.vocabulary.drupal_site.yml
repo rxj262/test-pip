@@ -1,0 +1,11 @@
+uuid: 108c829c-ddad-4161-abfb-fb274f600a45
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TWSkyFqj-2sMtSrhS-AOeaImOOOcww1t6DR-QheJHro
+name: 'Drupal Site'
+vid: drupal_site
+description: 'Active Drupal Sites'
+weight: 0
+new_revision: false

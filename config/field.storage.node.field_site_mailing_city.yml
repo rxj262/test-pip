@@ -1,0 +1,23 @@
+uuid: 84f0c112-3953-44d9-941b-4c3c08287045
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: JVX8t-w7AegSwNGzy4nFKZivcaPQ9OOwQnCXIlM8ozE
+id: node.field_site_mailing_city
+field_name: field_site_mailing_city
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

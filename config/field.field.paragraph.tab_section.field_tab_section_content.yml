@@ -1,0 +1,24 @@
+uuid: fa61049c-b83a-47ad-b386-c8f85b10872a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_section_content
+    - paragraphs.paragraphs_type.tab_section
+  module:
+    - text
+_core:
+  default_config_hash: 4b-3fQDzom3WvPqgRJrmC2hfi_vgYrnGmNxaWZTAyhM
+id: paragraph.tab_section.field_tab_section_content
+field_name: field_tab_section_content
+entity_type: paragraph
+bundle: tab_section
+label: 'Tab Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

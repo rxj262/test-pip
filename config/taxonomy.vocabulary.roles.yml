@@ -1,0 +1,11 @@
+uuid: 2bf8b0de-3189-4196-8e2d-76037ea7ced9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sekKVU0uijA2gJnGuOowezw0qGcsCxW8G9RZsE2qpXg
+name: Roles
+vid: roles
+description: null
+weight: 0
+new_revision: false

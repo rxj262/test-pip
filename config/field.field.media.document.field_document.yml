@@ -1,0 +1,29 @@
+uuid: e6f2147b-3fe8-43c4-a8d8-350d34d54e09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_document
+    - media.type.document
+  module:
+    - file
+_core:
+  default_config_hash: H-M0YSJLDFpN0h5KNWO7jZtoT-_JggAwz1j-uMip-dM
+id: media.document.field_document
+field_name: field_document
+entity_type: media
+bundle: document
+label: Document
+description: 'This field stores the document file.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf doc docx odf ods odt otp ots ott odp ppt pptx rtf xls xlsx csv'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

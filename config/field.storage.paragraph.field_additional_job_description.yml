@@ -1,0 +1,21 @@
+uuid: a9fe1d54-9f0e-4c9a-be69-67daf9fd6242
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: fEIQNey2dvlCRiu_sUbL11TemYmf2yNBTDDE3bWRx0M
+id: paragraph.field_additional_job_description
+field_name: field_additional_job_description
+entity_type: paragraph
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

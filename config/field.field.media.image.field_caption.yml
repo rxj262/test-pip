@@ -1,0 +1,21 @@
+uuid: 6cb94444-1983-4212-82b4-9ddecb33fa7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_caption
+    - media.type.image
+_core:
+  default_config_hash: 1Mq5J-jZXjoYXj7ZWuoWycJXXmqCM_J95lKN9H3lzQA
+id: media.image.field_caption
+field_name: field_caption
+entity_type: media
+bundle: image
+label: 'Photo Credit'
+description: 'If the image you are using requires a photo credit, please fill out this field and it will be included any time the image is used.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,26 @@
+uuid: 190b8141-c648-41de-b822-00a5e1912315
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs.field_tab_section_ref
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: OyceYaT4PMnkHvEeXWrPI5E38MVLn4JB-jMWgITj33s
+id: paragraph.tabs.default
+targetEntityType: paragraph
+bundle: tabs
+mode: default
+content:
+  field_tab_section_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

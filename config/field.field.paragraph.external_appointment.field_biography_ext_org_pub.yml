@@ -1,0 +1,21 @@
+uuid: e39fe384-7ee2-4ca3-8403-7304b5a35696
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_ext_org_pub
+    - paragraphs.paragraphs_type.external_appointment
+_core:
+  default_config_hash: QFiIy1q-YRUx9BiYmQiitsnzl2aO96SF0xdgu91ouF0
+id: paragraph.external_appointment.field_biography_ext_org_pub
+field_name: field_biography_ext_org_pub
+entity_type: paragraph
+bundle: external_appointment
+label: Organization/Publication
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

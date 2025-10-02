@@ -1,0 +1,20 @@
+uuid: 1d9e7855-b0f0-4f79-95b6-2c11b5fe9ee3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - crew
+_core:
+  default_config_hash: j4ihFXmKTxqO6ATcEPSl868xFjUag8TRU6QQGWGbJyM
+id: crew_local_actions
+theme: crew
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

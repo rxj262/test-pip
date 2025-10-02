@@ -1,0 +1,12 @@
+uuid: 83ff7935-6fda-4ef6-b39e-34614a9b3f5b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BsK8aqy8RlciDcD8CpUkYd8YKOp5_fFnpMNAxUWdkCk
+id: external_appointment
+label: 'External Appointment'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

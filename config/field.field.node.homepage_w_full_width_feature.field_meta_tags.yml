@@ -1,0 +1,25 @@
+uuid: bc14fa6a-2279-4a68-9142-62c70b8bc6ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.homepage_w_full_width_feature
+  module:
+    - metatag
+_core:
+  default_config_hash: 7QdSCy0zAvtFlUIuljdg-XORruqj3lhw7pTORXubad4
+id: node.homepage_w_full_width_feature.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: homepage_w_full_width_feature
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

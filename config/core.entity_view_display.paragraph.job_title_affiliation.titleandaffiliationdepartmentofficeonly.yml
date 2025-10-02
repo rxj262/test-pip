@@ -1,0 +1,30 @@
+uuid: 24ba8f1a-2242-4d26-85eb-7d135e330ddc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.titleandaffiliationdepartmentofficeonly
+    - field.field.paragraph.job_title_affiliation.field_biography_center_ref
+    - field.field.paragraph.job_title_affiliation.field_biography_dept_ref
+    - field.field.paragraph.job_title_affiliation.field_biography_school_ref
+    - field.field.paragraph.job_title_affiliation.field_job_title_ref
+    - paragraphs.paragraphs_type.job_title_affiliation
+_core:
+  default_config_hash: aZseFLVsJH5g3Dy7nh1QsHafe_k0cC6kFwrv4-bZ3JQ
+id: paragraph.job_title_affiliation.titleandaffiliationdepartmentofficeonly
+targetEntityType: paragraph
+bundle: job_title_affiliation
+mode: titleandaffiliationdepartmentofficeonly
+content:
+  field_biography_dept_ref:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_biography_center_ref: true
+  field_biography_school_ref: true
+  field_job_title_ref: true

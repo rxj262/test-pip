@@ -1,0 +1,24 @@
+uuid: 71858a8e-006b-4941-8977-4f031a6439a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.biography
+_core:
+  default_config_hash: rpmjje5CBxsmugjN4gy1Llf39usc_rOga3w6MrhibWw
+id: node.biography.status
+field_name: status
+entity_type: node
+bundle: biography
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

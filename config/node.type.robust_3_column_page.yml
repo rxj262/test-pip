@@ -1,0 +1,20 @@
+uuid: 7cb18f87-b60f-4ca1-acac-413c71bf9594
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: fOVDVILt5xB09qY9wpd4YVc-7RqkzH3ILSWHqdvneFY
+name: 'Robust 3-Column Page'
+type: robust_3_column_page
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

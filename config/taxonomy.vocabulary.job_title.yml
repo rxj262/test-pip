@@ -1,0 +1,11 @@
+uuid: b1b6a50c-44cd-4f2f-a648-eb29b7e29e92
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hpLKQszgjQYU4ebQrV_3dQ2mimeYsgsPi5y8nmXNuS4
+name: 'Job Title'
+vid: job_title
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,22 @@
+uuid: 9a5a0106-00a3-4cbf-a18a-7d3a7a16d8ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - crew
+_core:
+  default_config_hash: UPRpf73fiAYBBTRAqwqIxf4vsCnIJErr0sts9fFjfqE
+id: crew_help
+theme: crew
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: db293abd-19ee-4ab7-9dc8-b3b400e9fb86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.button
+  module:
+    - options
+_core:
+  default_config_hash: 2D7-8NaVLYSMYsNAFF8k9F3j7c5aEFiMAlWitxEJ9W4
+id: paragraph.button.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: button
+label: Style
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: button-block-blue-link
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 9a5ccf6e-20d1-4389-b9b8-8cf2a518b691
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_mailing_zip
+    - node.type.site_information
+_core:
+  default_config_hash: IzRtCHheiwxwJzjnipcQE4jX7Kmoih3uKB6RynbZi2g
+id: node.site_information.field_site_mailing_zip
+field_name: field_site_mailing_zip
+entity_type: node
+bundle: site_information
+label: Zip
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

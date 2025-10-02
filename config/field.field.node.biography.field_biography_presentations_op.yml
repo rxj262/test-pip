@@ -1,0 +1,24 @@
+uuid: 445f64d0-5943-4d1c-8ec3-62c0ba69a7d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_presentations_op
+    - node.type.biography
+  module:
+    - text
+_core:
+  default_config_hash: 9OUgAQ7PALk8iPwZN3HpfE-Bz2QQa5RyxtS45k2p53g
+id: node.biography.field_biography_presentations_op
+field_name: field_biography_presentations_op
+entity_type: node
+bundle: biography
+label: 'Presentations Open Entry'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

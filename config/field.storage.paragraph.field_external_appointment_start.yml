@@ -1,0 +1,21 @@
+uuid: e168c75c-7662-4c49-8115-5dd0fa1469f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - yearonly
+_core:
+  default_config_hash: XC3hN7WBzyCBTmXrFiOPLJnw0wOaWQaCuaxP_4dZSCM
+id: paragraph.field_external_appointment_start
+field_name: field_external_appointment_start
+entity_type: paragraph
+type: yearonly
+settings: {  }
+module: yearonly
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

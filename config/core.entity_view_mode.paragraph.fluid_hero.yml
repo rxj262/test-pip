@@ -1,0 +1,13 @@
+uuid: 882c9237-8d1d-4d79-9bc2-102ef1625cf7
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: SQUjf-t4kokYFCAnfNazCBwATc6JKjp-t_PNxhgCkrk
+id: paragraph.fluid_hero
+label: 'Fluid Hero'
+description: ''
+targetEntityType: paragraph
+cache: true

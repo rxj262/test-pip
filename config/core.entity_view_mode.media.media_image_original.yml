@@ -1,0 +1,13 @@
+uuid: 938c5bbb-7017-4991-a5b6-9f8c6a61aceb
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: HcQeQkZy7_9EEcancw5jOX2ZVct9smYIdVr7ow_L05I
+id: media.media_image_original
+label: 'Media Image - 1 (Original)'
+description: ''
+targetEntityType: media
+cache: true

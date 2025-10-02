@@ -1,0 +1,23 @@
+uuid: c2b46867-aeda-46a7-9125-8d32ac38c8dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: vTUhxiIHq723N_dA_bbL_DWbjhrmIv6yr62FTz52PPY
+id: node.field_site_zip
+field_name: field_site_zip
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

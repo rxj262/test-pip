@@ -1,0 +1,27 @@
+uuid: 6c85aa22-0d32-4e31-8993-3586342808d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - cms_content_sync
+    - serialization
+    - user
+  enforced:
+    module:
+      - cms_content_sync
+_core:
+  default_config_hash: sCDCr0vxYzJbu0GptCDHmNg_ZoG1ifgerryxRfofcgY
+id: cms_content_sync_sync_core_entity_item
+plugin_id: cms_content_sync_sync_core_entity_item
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+  formats:
+    - json
+  authentication:
+    - cookie
+    - basic_auth

@@ -1,0 +1,21 @@
+uuid: fbe9943b-5c7f-4cc6-b9c7-890d39b5d8a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: fr35ki5-t07stdBE1ENuy71R4XZs-4RLh9R3zNdDs-A
+id: node.field_biography_publications_ope
+field_name: field_biography_publications_ope
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

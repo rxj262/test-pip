@@ -1,0 +1,30 @@
+uuid: cea18518-3bdd-4d5a-a7fb-ccf5c8726d84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_field_aside_image_ref
+    - media.type.image
+    - paragraphs.paragraphs_type.aside
+_core:
+  default_config_hash: Ed8UWz5Xn4mYCRsT5eHQ4xUp4t6kXeFTHujaJXmNucw
+id: paragraph.aside.field_field_aside_image_ref
+field_name: field_field_aside_image_ref
+entity_type: paragraph
+bundle: aside
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

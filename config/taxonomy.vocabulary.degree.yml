@@ -1,0 +1,11 @@
+uuid: b403ba09-bd38-4464-b501-3dc0b097931f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _em3kBv3Z0w6_7xMrFsXEW0NzlMSI8sa8BNmAseLqyg
+name: Degree
+vid: degree
+description: null
+weight: 0
+new_revision: false

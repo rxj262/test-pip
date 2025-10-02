@@ -1,0 +1,30 @@
+uuid: a181cafe-acb3-4e94-8e19-f924bb5409ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_dept_ref
+    - paragraphs.paragraphs_type.job_title_affiliation
+    - taxonomy.vocabulary.departments
+_core:
+  default_config_hash: 1LUtq0bNea5w-RkkpsDH_ZAEpvKdwqYWTX18YrCvfTE
+id: paragraph.job_title_affiliation.field_biography_dept_ref
+field_name: field_biography_dept_ref
+entity_type: paragraph
+bundle: job_title_affiliation
+label: Department/Office
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      departments: departments
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

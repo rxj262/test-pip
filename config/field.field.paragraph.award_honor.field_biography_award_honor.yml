@@ -1,0 +1,21 @@
+uuid: 4af768b1-b94f-4840-a88d-f566c96b464a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_award_honor
+    - paragraphs.paragraphs_type.award_honor
+_core:
+  default_config_hash: Gnb6IC5o70fj-N9WDM4SnxHD6SGiabm_1vNYFqSX53s
+id: paragraph.award_honor.field_biography_award_honor
+field_name: field_biography_award_honor
+entity_type: paragraph
+bundle: award_honor
+label: 'Award/Honor Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

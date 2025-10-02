@@ -1,0 +1,22 @@
+uuid: 9070fdae-4949-40a4-9222-8a729b909499
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - crew
+_core:
+  default_config_hash: DsKvDMwFc4ox6k0RcqwGEmGL-pyZdMCCUcBINuLEuJ8
+id: crew_powered
+theme: crew
+region: footer
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

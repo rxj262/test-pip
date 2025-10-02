@@ -1,0 +1,23 @@
+uuid: 36bf7e2a-4b8a-49af-b34d-ba57c26dca1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: iegWlKHTf_qAJlmcEorpsBs0-DquHn_ww7lyUnZ7q7k
+id: node.field_biography_view_order
+field_name: field_biography_view_order
+entity_type: node
+type: string
+settings:
+  max_length: 5
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

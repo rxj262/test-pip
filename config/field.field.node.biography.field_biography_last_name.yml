@@ -1,0 +1,21 @@
+uuid: 072b0391-c7fc-4c24-91e7-d9b494203634
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_biography_last_name
+    - node.type.biography
+_core:
+  default_config_hash: zW4qP-FuC8f3mHNZJ7RAJQjsxBaT41DO2ZFEt2PvcSM
+id: node.biography.field_biography_last_name
+field_name: field_biography_last_name
+entity_type: node
+bundle: biography
+label: 'Last Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

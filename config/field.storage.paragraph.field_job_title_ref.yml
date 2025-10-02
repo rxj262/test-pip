@@ -1,0 +1,22 @@
+uuid: bc7e8f47-e11d-480b-846d-ded200774384
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+_core:
+  default_config_hash: TIanmDRblJm02Nx4641piSSJfPHObFrNnQVxRuCgh24
+id: paragraph.field_job_title_ref
+field_name: field_job_title_ref
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

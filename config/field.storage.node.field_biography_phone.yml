@@ -1,0 +1,21 @@
+uuid: 2ffc2054-c452-4414-a713-bc6a3089e096
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - telephone
+_core:
+  default_config_hash: 3bqcxh_SJKRjTS94YCaub8I7b0k6B7Y5c8ueUCO3MNo
+id: node.field_biography_phone
+field_name: field_biography_phone
+entity_type: node
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

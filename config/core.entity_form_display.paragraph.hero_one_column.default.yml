@@ -1,0 +1,68 @@
+uuid: 6e267acc-a839-40d0-a163-fa1a431f2785
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_one_column.field_hero_one_description
+    - field.field.paragraph.hero_one_column.field_hero_one_image_ref
+    - field.field.paragraph.hero_one_column.field_hero_one_link
+    - field.field.paragraph.hero_one_column.field_hero_one_title
+    - paragraphs.paragraphs_type.hero_one_column
+  module:
+    - entity_browser_entity_form
+    - ief_table_view_mode
+    - link
+    - text
+_core:
+  default_config_hash: CLaixJCdadMJSK3Zo88BAS-MG4tGMI_HrtJxMzvs0Yw
+id: paragraph.hero_one_column.default
+targetEntityType: paragraph
+bundle: hero_one_column
+mode: default
+content:
+  field_hero_one_description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_hero_one_image_ref:
+    weight: 0
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser
+    type: inline_entity_form_complex_table_view_mode
+    region: content
+  field_hero_one_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_hero_one_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

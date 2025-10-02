@@ -1,0 +1,20 @@
+uuid: ecc734b5-3f3c-4eff-bdff-87dbe7e09334
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: YfiEsNTR2bgEGHmAwXjzUPa3sXFTkAuMF6axD4vg9HI
+name: 'Error Page'
+type: error_page
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

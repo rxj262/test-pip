@@ -1,0 +1,23 @@
+uuid: 53185870-191e-4daa-b46a-e8c6a9684e6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+_core:
+  default_config_hash: hQuaZ4x2LHd0txthih5hv6cU7-O7Q8OUBB-4-Wp5qR0
+id: node.field_biography_education_ref
+field_name: field_biography_education_ref
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

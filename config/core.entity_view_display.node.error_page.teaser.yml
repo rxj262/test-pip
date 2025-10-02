@@ -1,0 +1,22 @@
+uuid: 413d6386-ad96-4632-9db8-8bbc5b0f33a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.error_page.field_error_type
+    - node.type.error_page
+  module:
+    - user
+_core:
+  default_config_hash: QF94krpjvuI5JhpcdYq52YhAglbzYrrUZO1UHCDhu8M
+id: node.error_page.teaser
+targetEntityType: node
+bundle: error_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_error_type: true

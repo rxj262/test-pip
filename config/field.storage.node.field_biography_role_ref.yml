@@ -1,0 +1,22 @@
+uuid: 09543b7a-c21a-40d6-a35b-65f5961494b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: oE753YFfvDPwq60wNzIB9tSiHjuOjMPtylYUvGEHECU
+id: node.field_biography_role_ref
+field_name: field_biography_role_ref
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

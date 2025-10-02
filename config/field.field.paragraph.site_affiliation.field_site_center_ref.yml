@@ -1,0 +1,30 @@
+uuid: dd1eff52-84be-423e-bccf-7fbdec062cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_site_center_ref
+    - paragraphs.paragraphs_type.site_affiliation
+    - taxonomy.vocabulary.centers
+_core:
+  default_config_hash: 5B2M2DIgvHMP9vIlBiPfSG83hHGoVuaTm7f94oDja8I
+id: paragraph.site_affiliation.field_site_center_ref
+field_name: field_site_center_ref
+entity_type: paragraph
+bundle: site_affiliation
+label: Center
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      centers: centers
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

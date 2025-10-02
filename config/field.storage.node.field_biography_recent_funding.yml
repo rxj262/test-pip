@@ -1,0 +1,21 @@
+uuid: 46b6293e-130f-4a23-9e14-068611768831
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: mpqRAX8qM5V3LW6Vlp3zmgQthGVtfIrLQ-3r0nQTWf0
+id: node.field_biography_recent_funding
+field_name: field_biography_recent_funding
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

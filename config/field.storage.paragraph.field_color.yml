@@ -1,0 +1,35 @@
+uuid: 60b095ac-9cfa-4ec4-856e-c1f714920fb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: Q0ACr90g3kzuB5XSj3sPsSDtcwvFAumPG5h2x4u362M
+id: paragraph.field_color
+field_name: field_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: button-blue-link
+      label: Blue
+    -
+      value: button-gray-link
+      label: Gray
+    -
+      value: button-block-blue-link
+      label: 'Blue (Full Width)'
+    -
+      value: button-block-gray-link
+      label: 'Gray (Full Width)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

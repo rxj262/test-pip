@@ -1,0 +1,59 @@
+uuid: 70e39540-db5e-49ad-98ac-116a5673410b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_section_ref
+    - paragraphs.paragraphs_type.tab_section
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: Xg4jB-llB7aLUNIHMiJNzk1lMKFTnaYre37OWBdfEMg
+id: paragraph.tabs.field_tab_section_ref
+field_name: field_tab_section_ref
+entity_type: paragraph
+bundle: tabs
+label: 'Tab Section Ref'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tab_section: tab_section
+    target_bundles_drag_drop:
+      accordion:
+        weight: 11
+        enabled: false
+      accordion_section:
+        weight: 12
+        enabled: false
+      aside:
+        weight: 13
+        enabled: false
+      button:
+        weight: 14
+        enabled: false
+      gallery:
+        weight: 15
+        enabled: false
+      icon_subfeature:
+        weight: 16
+        enabled: false
+      subfeature:
+        weight: 17
+        enabled: false
+      tab_section:
+        enabled: true
+        weight: 18
+      tabs:
+        weight: 19
+        enabled: false
+      vertical_subfeature:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

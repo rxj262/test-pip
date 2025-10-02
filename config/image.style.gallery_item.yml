@@ -1,0 +1,17 @@
+uuid: 833a7f39-dc2d-437a-83ba-c614f4c2c2a2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Q3GbNJVHO0zNgmFSEFK_ZocGgbvUHRgihNcf-1T5Jeg
+name: gallery_item
+label: 'Gallery item'
+effects:
+  e01cd55f-e046-4caa-aaf7-0f0b70e5aa3a:
+    uuid: e01cd55f-e046-4caa-aaf7-0f0b70e5aa3a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 946
+      height: 473
+      anchor: center-center

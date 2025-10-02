@@ -1,0 +1,19 @@
+uuid: 9301991a-ff95-4be7-a480-3bfb178cd270
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: iOOrEzSNxAOlXrDkr8S_OjPNvW_d8Mc11Ucnp1mPmWA
+name: hero_full_width
+label: 'Hero Full Width (1200x500)'
+effects:
+  3a42d304-072b-4582-90e8-26460e4621d5:
+    uuid: 3a42d304-072b-4582-90e8-26460e4621d5
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 500
+      crop_type: focal_point

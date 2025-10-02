@@ -1,0 +1,37 @@
+uuid: 25aa0cba-32d6-4d3a-b837-4388c991b4eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.centered_intro_text.field_intro_text
+    - field.field.paragraph.centered_intro_text.field_intro_text_title
+    - paragraphs.paragraphs_type.centered_intro_text
+  module:
+    - text
+_core:
+  default_config_hash: 8stA3QhdMu3Sh1z56tPHdpn1U8c0Ltc9QN8fpOXMRx0
+id: paragraph.centered_intro_text.default
+targetEntityType: paragraph
+bundle: centered_intro_text
+mode: default
+content:
+  field_intro_text:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_intro_text_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

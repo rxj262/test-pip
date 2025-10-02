@@ -1,0 +1,22 @@
+uuid: 04a1f7f1-d6ae-447b-b4e1-1bce78726084
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+_core:
+  default_config_hash: AMIqpUFVR5DPDj1q0vAy6HjsL8LiJkT5WmrTjrWp5N8
+id: paragraph.field_biography_school_ref
+field_name: field_biography_school_ref
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

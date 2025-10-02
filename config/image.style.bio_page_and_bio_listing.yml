@@ -1,0 +1,19 @@
+uuid: 76791a62-36a0-4c72-9e96-1b86cb3f44ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: tWu1q7Z4Cq-WlDRq9osb68-cncu6tHkc41t4HKTDwNc
+name: bio_page_and_bio_listing
+label: 'Bio Page and Bio Listing (725x350)'
+effects:
+  7427e4ad-9cd2-46ba-a1a6-38955448efe4:
+    uuid: 7427e4ad-9cd2-46ba-a1a6-38955448efe4
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 725
+      height: 350
+      crop_type: focal_point

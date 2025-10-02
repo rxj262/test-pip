@@ -1,0 +1,12 @@
+uuid: 39ad0b2c-bdca-4292-939c-5ff17722c4a0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: VX_ePzJK63FFlurp49tiLtZnigiqthG_8XGjT0u_MTE
+id: residency
+label: Residency
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

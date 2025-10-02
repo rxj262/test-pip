@@ -1,0 +1,40 @@
+uuid: b8532f47-3da8-4d0e-a94c-6f92eeb97d8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.error_page.field_error_type
+    - node.type.error_page
+  module:
+    - options
+    - user
+_core:
+  default_config_hash: Ax6AeK-XTQUQhzu0aVEcWEBzJ5uuFkl22E3_niKmgC4
+id: node.error_page.default
+targetEntityType: node
+bundle: error_page
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: hidden
+  field_error_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  workflow_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: hidden
+hidden: {  }

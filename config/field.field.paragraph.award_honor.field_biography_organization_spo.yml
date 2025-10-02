@@ -1,0 +1,21 @@
+uuid: 51d72c9c-d8c3-4fff-a30e-9801ab44e4b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_biography_organization_spo
+    - paragraphs.paragraphs_type.award_honor
+_core:
+  default_config_hash: FcsX-QW-HcVfesePkoJNl9WI1v_Tjdb9Y3mBiXF2o78
+id: paragraph.award_honor.field_biography_organization_spo
+field_name: field_biography_organization_spo
+entity_type: paragraph
+bundle: award_honor
+label: Organization/Sponsor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,12 @@
+uuid: e788c0ba-3c20-42df-ada9-3dc644f2011d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YWiW062HiiR7Y7BIePZk8mM7ATgqwQjqYnsEVcESmi8
+id: publication
+label: Publication
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

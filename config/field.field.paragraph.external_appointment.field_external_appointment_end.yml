@@ -1,0 +1,25 @@
+uuid: b30dbb96-497a-42cb-8a01-3a121fa7f89c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_external_appointment_end
+    - paragraphs.paragraphs_type.external_appointment
+  module:
+    - yearonly
+_core:
+  default_config_hash: VPBUbKWC00gZcKxTEfDA1mGa4HcHWBk8AoaLOnTD6y4
+id: paragraph.external_appointment.field_external_appointment_end
+field_name: field_external_appointment_end
+entity_type: paragraph
+bundle: external_appointment
+label: 'End Date'
+description: 'Leave the End Date blank to display a current appointment Ex:) 2015-Present'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1930'
+  yearonly_to: now
+field_type: yearonly

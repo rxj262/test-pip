@@ -1,0 +1,20 @@
+uuid: 9056c6b0-f592-4f49-bada-074634c7577b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 88DAUS4BfwPplpIb8ts91DJb9a8nfKbTMC2DoD_0J3g
+id: node.field_biography_email
+field_name: field_biography_email
+entity_type: node
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

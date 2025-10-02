@@ -1,0 +1,30 @@
+uuid: 4c2c86aa-5af3-484a-8ee8-c01c44071fea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subfeature_image_ref
+    - media.type.image
+    - paragraphs.paragraphs_type.subfeature
+_core:
+  default_config_hash: biM8FkhO5zd5_OOfOs33FQMcrMASagiaLB1Vk9xzz2M
+id: paragraph.subfeature.field_subfeature_image_ref
+field_name: field_subfeature_image_ref
+entity_type: paragraph
+bundle: subfeature
+label: 'Subfeature Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

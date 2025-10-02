@@ -1,0 +1,19 @@
+uuid: ff306edf-2aef-49e1-9a86-1701a4b0b386
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: Mc95VhWW1knI2VRhyCbLeP9pSknSOWnHcTybF6g5Gww
+name: teaser_705x528_
+label: 'Teaser (705x528)'
+effects:
+  1514d341-fd62-402e-bcdc-2ff29d2719bf:
+    uuid: 1514d341-fd62-402e-bcdc-2ff29d2719bf
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 705
+      height: 528
+      crop_type: focal_point

@@ -1,0 +1,13 @@
+uuid: 0bcd8d85-b223-4c4f-99b5-d0796a8be094
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 0x2NnWmrUv5NGABN-Li08Cw0vUKuNsQaDR3RdFMU6zg
+id: media.photo_carousel_with_aside_image_style
+label: 'Photo Carousel With Aside Image Style'
+description: ''
+targetEntityType: media
+cache: true

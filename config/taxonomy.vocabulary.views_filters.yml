@@ -1,0 +1,11 @@
+uuid: ef9de217-342c-43c4-829f-8416e3f7b057
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FLp18_xS_hZ_46-Lnl1tUr2Mj3yxz_1klWzKdlHlgvo
+name: 'Views Filters'
+vid: views_filters
+description: 'Catch-all taxonomy for creating filtered views'
+weight: 0
+new_revision: false

@@ -1,0 +1,12 @@
+uuid: b9117e32-9a4b-49a4-9c9d-30d9a03e5ec7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: G0EAVlIDCYnGMSRzWVk_juUEByGOYhztp3RVIG78SYY
+id: social_section
+label: 'Social URL/Icon Section'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }
