@@ -698,6 +698,7 @@
   }
 
   // fix comma issue for biographies
+/* Ruiqi moved following logic into paragraph's twig
   if ($(".field--name-field-biography-title-ref").length) {
     $(
       ".field--name-field-biography-title-ref .paragraph--type--job-title-affiliation"
@@ -714,6 +715,7 @@
       $(this).html("<strong>" + str + "</strong>");
     });
   }
+*/
 
   //Student Life Homepage Grid
   $(".field--name-field-student-life-grid-descript").css("display", "none");
