@@ -83,6 +83,10 @@
       margin-left: -8px;
     }
   }
+
+  .paragraph--type--job-title-affiliation {
+    font-weight: bold;
+  }
 }
 
 .field--name-field-biography-title-ref > .field--item,
@@ -98,7 +102,6 @@
   display: inline;
 }
 
-.paragraph--type--job-title-affiliation .field--item:before,
 .paragraph--type--biography-education .field:before,
 .paragraph--type--external-appointment .field:before,
 .paragraph--type--residency .field:before,
