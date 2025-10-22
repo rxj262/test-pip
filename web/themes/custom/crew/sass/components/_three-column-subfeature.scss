@@ -20,15 +20,23 @@
     }
     .field--name-field-three-col-subfeature-featu {
       display: flex;
-      // margin-top: 2rem;
+      flex-wrap: wrap;
       gap: 3rem;
-
       @media #{$small-max} {
         flex-direction: column;
       }
 
       & > .field--item {
-        flex-basis: 32%;
+        flex-basis: 30%;
+        @media #{$jumbo-max} {
+          flex-basis: 29%;
+        }
+        @media #{$medium-max} {
+          flex-basis: 28%;
+        }
+        @media #{$small-max} {
+          flex-basis: 100%;
+        }
 
         .subfeature-section {
           background: transparent;
