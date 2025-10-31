@@ -21,7 +21,7 @@ function rss_feed_preprocess_paragraph__external_rss(&$variables)
   $variables['content']['is_sidebar_content'] = $is_sidebar_content;
 
   // \Drupal::logger('rss_feed')->notice($variables['elements']['field_external_rss_type']['#items']->value);
-  if ($type == 'newsroom_all_fields' || $type == 'newsroom_no_image' || $type == 'newsroom_title_and_date' || $type == 'newsroom_no_description') {
+  if ($type == 'newsroom_all_fields' || $type == 'newsroom_no_image' || $type == 'newsroom_title_and_date' || $type == 'newsroom_homepage_news' || $type == 'newsroom_no_description') {
     $url = $variables['elements']['field_external_rss_sources'][0]['#url']->getUri();
     $remote_data = simplexml_load_file($url);
     $items = $remote_data->channel->item; 
@@ -34,6 +34,7 @@ function rss_feed_preprocess_paragraph__external_rss(&$variables)
     for ($i = 0; $i < count($feed); $i++) {
       $title = isset($feed[$i]->title) ? $feed[$i]->title->__toString() : '';
       $desc = isset($feed[$i]->description) ? $feed[$i]->description->__toString() : '';
+      $desc = html_entity_decode(html_entity_decode($desc, ENT_QUOTES | ENT_HTML5, 'UTF-8'), ENT_QUOTES | ENT_HTML5, 'UTF-8');
       $link = isset($feed[$i]->link) ? $feed[$i]->link->__toString() : '';
       $date = isset($feed[$i]->pubDate) ? $feed[$i]->pubDate->__toString() : '';
       $imgLink = isset($feed[$i]->imageSource) ? html_entity_decode($feed[$i]->imageSource->__toString(), ENT_QUOTES | ENT_HTML5, 'UTF-8') : '';
@@ -408,6 +409,7 @@ function rss_feed_preprocess_paragraph__external_rss(&$variables)
     ];
     $variables['content']['rss'] = $build;
   }
+  
 
   if (!empty($variables['elements']['field_external_rss_news_type']['#items']->value) && $variables['elements']['field_external_rss_news_type']['#items']->value == 'mixed') {
     $parent_field = $variables['paragraph']->parent_field_name->first()->value;
@@ -505,6 +507,9 @@ function rss_feed_theme()
       'variables' => array('vars' => NULL)
     ],
     'rss_feed_mixed' => [
+      'variables' => array('vars' => NULL)
+    ],
+    'rss_feed_in_the_news' => [
       'variables' => array('vars' => NULL)
     ],
     'rss_feed_multi_gcal' => [

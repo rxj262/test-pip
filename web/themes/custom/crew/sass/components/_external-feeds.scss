@@ -76,6 +76,29 @@
               font-style: italic;
             }
           }
+
+          &.in-the-news-feed {
+            align-items: flex-start;
+
+            .feed-img {
+              max-height: 65px;
+              object-fit: contain;
+            }
+
+            .feed-descr {
+              font-weight: bold;
+            }
+
+            .feed-title {
+              a {
+                text-decoration: underline;
+
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+            }
+          }
         }
       }
     }
