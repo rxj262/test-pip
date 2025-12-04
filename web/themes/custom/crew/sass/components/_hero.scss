@@ -368,6 +368,9 @@
 
         .field--name-field-hero-with-video-image {
           position: absolute;
+          height: auto;
+          min-height: 0;
+          width: 100%;
           @media #{$medium-hero-min} {
             min-height: 588px;
             height: 588px;
