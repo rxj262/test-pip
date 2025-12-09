@@ -65,14 +65,29 @@
         flex: 2;
         position: relative;
 
+        .img-vid-container {
+          @media #{$jumbo-max} {
+            margin-bottom: 30px;
+          }
+          @media #{$medium-max} {
+            margin-bottom: 0;
+          }
+        }
+
         .video-embed-field-responsive-video {
           margin-bottom: 0;
+          @media #{$medium-max} {
+            margin-bottom: 30px;
+          }
         }
 
         .field--name-field-image-or-video-image {
           max-height: 367px;
           overflow: hidden;
           position: relative;
+          @media #{$small-max} {
+            max-height: none;
+          }
 
           .field--name-field-image {
             border: 2px solid $orange;
@@ -94,7 +109,9 @@
         }
 
         .field--name-field-image-or-video-caption {
-          margin-top: 1rem;
+          @media #{$jumbo-max} {
+            margin-top: 0;
+          }
         }
 
         .play-button-container {
@@ -256,7 +273,16 @@
 
 .paragraph--type--horizontal-subfeature:has(.paragraph--type--view) {
   .two-column-container.container {
+    @media #{$small-max} {
+      flex-direction: column;
+    }
+
     .featured-photo.img-col {
+      @media #{$small-max} {
+        margin-bottom: 0;
+        margin-top: 3rem;
+      }
+
       .field--name-field-horizontal-subfeature-medi {
         .paragraph--type--view {
           .views-element-container.form-group {
