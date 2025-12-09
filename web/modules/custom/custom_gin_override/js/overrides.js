@@ -2,12 +2,12 @@
   $(document).ready(function () {
    $('#gin-sticky-edit-preview').remove();
    $('.gin-more-actions__trigger').remove();
- 
+
   //  $("<div class='saving-options-header'>Saving Options</div>").insertBefore(".page-wrapper__node-edit-form header .gin-more-actions__menu");
   //  if (window.location.pathname.indexOf("/node/add") !== -1) {
   //   $('header').addClass('page-add');
   //  }
- 
+
    // force file replacement to use override.
    if (window.location.pathname.indexOf("/media/") !== -1) {
     if ($('input[name=keep_original_filename]').length > 0) {
@@ -19,7 +19,7 @@
      $('input#edit-keep-original-filename + span.checkbox-toggle .checkbox-toggle__inner').css('background-color', '#ccc');
     }
    }
- 
+
    // only allow to add 'document' and 'image' on /media/add page for non-admin roles
    if (
     window.location.pathname.indexOf("/media/add") !== -1 &&
@@ -37,7 +37,7 @@
      $('div.admin-list div.admin-item a[href*="/media/add/hr_document"]').parent().show();
     }
    }
- 
+
    if ($(".toolbar-menu").length > 0) {
     function asc_sort(a, b) {
      return $(b).get(0).innerText < $(a).get(0).innerText ? 1 : -1;
@@ -45,22 +45,22 @@
     function asc_sort_dropdown(a, b) {
      return $(b).text().trim() < $(a).text().trim() ? 1 : -1;
     }
- 
+
     // add menu link for content hub biographies
     bio_link_node_add = '<div class="admin-item"><a class="admin-item__link" title="Biographies - Content Hub" href="https://live-cwru-biographies.pantheonsite.io/caslogin"></a><div class="admin-item__title"> Biographies- Content Hub</div></div>';
- 
+
     if (window.location.pathname.indexOf("/node/add") !== -1) {
      $("div.admin-list").append(bio_link_node_add);
      $("div.admin-list div.admin-item").sort(asc_sort).appendTo("div.admin-list");
     }
- 
+
     bio_link_dropdown = '<li class="menu-item"><a href="https://live-cwru-biographies.pantheonsite.io/caslogin" class="toolbar-icon toolbar-icon-admin-toolbar-tools-extra-linksnode-add-basic-page">Biographies - Content Hub</a></li>';
- 
+
     $("a.toolbar-icon-admin-toolbar-tools-extra-linksnode-add+ul").append(bio_link_dropdown);
- 
+
     // sort them in add content dropdown
     $("a.toolbar-icon-admin-toolbar-tools-extra-linksnode-add+ul li.menu-item").sort(asc_sort_dropdown).appendTo("a.toolbar-icon-admin-toolbar-tools-extra-linksnode-add+ul");
- 
+
     // hide extra menu links for media
     linkholder = $(
      'a[data-drupal-link-system-path="admin/content/media"]'
@@ -107,8 +107,8 @@
                 $('ul.admin-list li').sort(asc_sort).appendTo('ul.admin-list');
             }
     */
- 
- 
+
+
     if (
      drupalSettings.user.uid !== "1" &&
      window.location.pathname.indexOf("admin/content/media") !== -1
@@ -125,7 +125,7 @@
       }
      });
     }
- 
+
     $(
      '.toolbar-menu a[href="https://live-cwru-biographies.pantheonsite.io/caslogin"], ' +
      '.toolbar-menu a[href="https://live-cwru-personalprofiles.pantheonsite.io/caslogin"]'
@@ -135,12 +135,12 @@
      '.toolbar-menu a[href="https://case.edu/personalprofiles/caslogin"]'
     ).attr("target", "_blank"); //potential prod ENV
    }
- 
+
    $("a.toolbar-icon").removeAttr("title");
    // $('input.field-add-more-submit').each(function() {
    //   $(this).val($(this).val().replace("Add", ($(this).val().endsWith("s") ? "Add More" : "Add Another")));
    // });
- 
+
    function setLinkButtons() {
     // changes normal link icon to linkit icon with the plus sign
     $(".cke_button__link_icon").css(
@@ -150,7 +150,7 @@
     // changes tooltip for linkit to Internal Link
     $(".cke_button__drupallink").attr("title", "Internal Link (⌘+K)");
    }
- 
+
    // Limit Image Styles from Embedded Image List
    var imageOptions = [
     "Media Image - 1 (Original)",
@@ -175,7 +175,7 @@
      });
     }
     setLinkButtons();
- 
+
     // hide 'center' align option for media embed
     // var centeroption = $(
     //   '#entity-embed-dialog-form [data-drupal-selector="edit-attributes-data-align"] .form-item-attributes-data-align:nth-child(3)'
@@ -183,7 +183,7 @@
     // if (centeroption) {
     //   centeroption.css("display", "none");
     // }
- 
+
     if ($(".field--name-field-youtube-embed").length > 0) {
      $(
       ".field--name-field-youtube-embed .js-form-item:nth-of-type(1) label"
@@ -193,7 +193,7 @@
      ).text("Youtube embed Title");
     }
    });
- 
+
    // Function for the link dialog - remove the following options
    var linkDialogOptions = [
     "ftp://",
@@ -223,7 +223,7 @@
      setTimeout(waitForDialog, 500);
     });
    }
- 
+
    if (typeof CKEDITOR != "undefined") {
     CKEDITOR.on("instanceReady", function (evt) {
      setLinkButtons();
@@ -231,8 +231,9 @@
     });
     CKEDITOR.tools.extend(CKEDITOR.config, {
      linkShowAdvancedTab: false,
+     forcePasteAsPlainText: true,
     });
- 
+
     CKEDITOR.on("dialogDefinition", function (evt) {
      var definition = evt.data.definition;
      if (definition.title == "Table Properties") {
@@ -241,7 +242,7 @@
      }
     });
    }
- 
+
    // hide unwanted icons from ck-editor
    var toHide = $(
     ".fa-angellist, .fa-git, .fa-git-square, .fa-github, .fa-github-alt, .fa-google-wallet, .fa-hand-spock-o, .fa-rebel, .fa-ra, .fa-resistance"
@@ -249,42 +250,42 @@
    toHide.each(function () {
     $(this).parent().hide();
    });
- 
+
    // function enableSaveButton() {
    //   var saveButton = $('#edit-submit');
    //   saveButton.removeAttr('disabled').removeClass('is-disabled');
    // }
- 
+
    // // on interaction with the menu link section, enable save button and remove disabled class
    // $('#edit-menu-enabled').click(function () {
    //   enableSaveButton();
    // });
- 
+
    // $('#edit-menu-menu-parent').click(function () {
    //   enableSaveButton();
    // });
- 
+
    // $('#edit-menu').click(function () {
    //   enableSaveButton();
    // });
- 
- 
+
+
    // set CKeditor default table width to 100%
   });
  })(jQuery);
- 
+
  // // FUNCTIONN FOR MEDIA SELECTION
  // (function ($, Drupal) {
  //   "use strict";
- 
+
  //   /**
  //    * Registers behaviours related to view widget.
  //    */
- 
+
  //   Drupal.behaviors.MediaLibraryView = {
  //     attach: function (context, settings) {
  //       $(".item-container").css("display", "inline-block");
- 
+
  //       $(once('bind-click-event', '.grid-item', context)).each(function () {
  //         $(this).on('click', function () {
  //           var input = $(this).find(".views-field-entity-browser-select input");
@@ -304,8 +305,8 @@
  //           }
  //         });
  //       });
- 
- 
+
+
  //       /*
  //             $(".grid-item")
  //               .once("bind-click-event")
@@ -329,7 +330,7 @@
  //       */
  //     },
  //   };
- 
+
  //   $(document).ready(function () {
  //     if (window.location.pathname.indexOf("/node/add/") !== -1) {
  //       alert('add');
@@ -344,16 +345,16 @@
  //       alert('delete');
  //       // DONT ADD CLASSES ON DELETE PAGE
  //     } else if (window.location.pathname.indexOf("/node") !== -1) {
- 
+
  //       $("#edit-actions--3").addClass("action-big-margin-changer");
  //       $("#edit-moderation-state-0-state > option").each(function () {
- 
+
  //         if (typeof $(this)[0] !== 'undefined') {
- 
+
  //           if ($(this)[0].innerText == "Draft") {
- 
+
  //             $(this)[0].innerText = "Save Draft";
- 
+
  //             $(this)[0].innerText = $(this)[0].innerText.replace("ed", "");
  //           }
  //         }
@@ -371,4 +372,4 @@
  //     }
  //   });
  // })(jQuery, Drupal);
- 
+
