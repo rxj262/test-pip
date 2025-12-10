@@ -84,13 +84,11 @@
                 "Modified external link detect": "patches/external-link-pantheon.patch"
             },
             "drupal/core": {
-                "Increase char limit for entityautocomplete field": "patches/entity_autocomplete_char_limit.patch"
+                "Increase char limit for entityautocomplete field": "patches/entity_autocomplete_char_limit.patch", 
+                "https://www.drupal.org/project/drupal/issues/3460773": "https://www.drupal.org/files/issues/2024-07-11/ThemeRegistry_0.patch"
             },
             "drupal/xmlsitemap": {
                 "Fix xsl path issue when generating sitemap in case.edu domain": "patches/sitemap_fix.patch"
-            },
-            "drupal/workflow_buttons": {
-                "limit loading of node edit form on full view mode only": "https://www.drupal.org/files/issues/2022-12-21/workflow_buttons_limit_form.patch"
             }
         },
         "patchLevel": {
@@ -108,9 +106,6 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": false,
-        "platform": {
-            "php": "8.2.0"
-        },
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
