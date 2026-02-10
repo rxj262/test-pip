@@ -143,3 +143,16 @@
     }
   }
 }
+
+.home-page-rebranded {
+  .field--name-field-rebranded-quote-with-image {
+    .paragraph--type--quote-with-image
+      .two-column-container.container
+      .quote-content
+      .paragraph--type--quote-and-citation
+      .quote-and-citation-section
+      .field--name-field-quote {
+      font-size: 3.6rem;
+    }
+  }
+}

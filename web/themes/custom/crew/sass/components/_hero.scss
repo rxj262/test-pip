@@ -235,7 +235,7 @@
 
 //Landing Page Rebranded
 .landing-page-rebranded {
-  #block-crew-socialwork-views-block-fluid-hero-block-2 {
+  .block-views-blockfluid-hero-block-2 {
     margin: 0 calc(50% - 50vw);
 
     .form-group {
@@ -368,6 +368,9 @@
 
         .field--name-field-hero-with-video-image {
           position: absolute;
+          height: auto;
+          min-height: 0;
+          width: 100%;
           @media #{$medium-hero-min} {
             min-height: 588px;
             height: 588px;
@@ -475,7 +478,7 @@
       .title-tagline {
         position: absolute;
         bottom: 0;
-        z-index: 99;
+        z-index: 1;
         display: block;
         width: 100%;
         background: linear-gradient(
