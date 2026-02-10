@@ -27,3 +27,4 @@ jobs:
           site: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
           machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
           multidev: pr-${{ github.event.pull_request.number }}
+          ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
