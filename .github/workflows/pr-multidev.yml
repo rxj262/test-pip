@@ -1,1 +1,29 @@
+name: Deploy PR to Pantheon Multidev
 
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  deployments: write
+  pull-requests: read
+
+concurrency:
+  group: pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Push to Pantheon
+        uses: pantheon-systems/push-to-pantheon@v1
+        with:
+          site: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
+          machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
+          multidev: pr-${{ github.event.pull_request.number }}
