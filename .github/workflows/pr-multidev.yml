@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Push to Pantheon
-        uses: pantheon-systems/push-to-pantheon@v1
+        uses: pantheon-systems/push-to-pantheon@0.7.0
         with:
           site: ${{ vars.PANTHEON_SITE_MACHINE_NAME }}
           machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
