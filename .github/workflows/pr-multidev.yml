@@ -21,6 +21,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Echo somthing
+        run: echo "hw"
+
       - name: Composer install
         run: composer install --no-dev --optimize-autoloader
 
