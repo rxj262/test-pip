@@ -1,4 +1,5 @@
 api_version: 1
+build_step: false
 
 workflows:
   deploy:
