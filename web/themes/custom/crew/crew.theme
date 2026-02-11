@@ -165,6 +165,7 @@ function crew_preprocess_menu__main(&$variables) {
  */
 function crew_preprocess_page(&$variables) {
   // Limit content area length to improve readability on some content types
+  print("123321");
   if (isset($variables['node']) && is_object($variables['node'])) {
     $node_array = $variables['node']->toArray();
     $readability_content_types = array('landing_page', 'basic_page', 'landing_page_robust', 'robust_3_column_page', 'biography', 'news_article', 'funding_opportunity2', 'article', 'webform', 'event_detail_page', 'tools', 'research_projects');
