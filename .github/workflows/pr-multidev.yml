@@ -21,6 +21,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Composer install
+        run: composer install --no-dev --optimize-autoloader
+
       - name: Push to Pantheon
         uses: pantheon-systems/push-to-pantheon@0.7.0
         with:
