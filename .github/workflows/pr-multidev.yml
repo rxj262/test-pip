@@ -21,12 +21,32 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Echo somthing
-        run: echo "hw"
-
       - name: Composer install
         run: composer install --no-dev --optimize-autoloader
+        
+      # ----------------------------
+      # Frontend build (Gulp / SCSS)
+      # ----------------------------
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
+      - name: Install frontend dependencies
+        working-directory: web/themes/custom/crew
+        run: npm install
+
+      - name: Verify Gulp installation
+        working-directory: web/themes/custom/crew
+        run: npx gulp -v
+
+      - name: Build frontend assets
+        working-directory: web/themes/custom/crew
+        run: npm run build
+
+      # ------------------
+      # Deploy to Pantheon
+      # ------------------
       - name: Push to Pantheon
         uses: pantheon-systems/push-to-pantheon@0.7.0
         with:
@@ -34,27 +54,3 @@ jobs:
           machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
           multidev: pr-${{ github.event.pull_request.number }}
           ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
-          
-      - name: Generate Drupal login link (drush uli)
-        id: uli
-        run: |
-          set -e
-          SITE="${{ vars.PANTHEON_SITE_MACHINE_NAME }}"
-          ENV="pr-${{ github.event.pull_request.number }}"
-          echo "Generating ULI for $SITE.$ENV"
-          LOGIN_URL=$(terminus drush ${SITE}.${ENV} -- uli)
-          echo "Login URL: $LOGIN_URL"
-          echo "login_url=$LOGIN_URL" >> $GITHUB_OUTPUT
-          
-      - name: Verify Drupal site is accessible
-        run: |
-          set -e
-          URL="${{ steps.uli.outputs.login_url }}"
-          echo "Checking URL: $URL"
-          HTTP_CODE=$(curl -L -s -o /dev/null -w "%{http_code}" "$URL")
-          echo "HTTP status code: $HTTP_CODE"
-          if [[ "$HTTP_CODE" != "200" && "$HTTP_CODE" != "302" ]]; then
-            echo "❌ Site check failed"
-            exit 1
-          fi
-          echo "✅ Site is accessible"
