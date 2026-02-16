@@ -34,3 +34,27 @@ jobs:
           machine_token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
           multidev: pr-${{ github.event.pull_request.number }}
           ssh_key: ${{ secrets.PANTHEON_SSH_KEY }}
+          
+      - name: Generate Drupal login link (drush uli)
+        id: uli
+        run: |
+          set -e
+          SITE="${{ vars.PANTHEON_SITE_MACHINE_NAME }}"
+          ENV="pr-${{ github.event.pull_request.number }}"
+          echo "Generating ULI for $SITE.$ENV"
+          LOGIN_URL=$(terminus drush ${SITE}.${ENV} -- uli)
+          echo "Login URL: $LOGIN_URL"
+          echo "login_url=$LOGIN_URL" >> $GITHUB_OUTPUT
+          
+      - name: Verify Drupal site is accessible
+        run: |
+          set -e
+          URL="${{ steps.uli.outputs.login_url }}"
+          echo "Checking URL: $URL"
+          HTTP_CODE=$(curl -L -s -o /dev/null -w "%{http_code}" "$URL")
+          echo "HTTP status code: $HTTP_CODE"
+          if [[ "$HTTP_CODE" != "200" && "$HTTP_CODE" != "302" ]]; then
+            echo "❌ Site check failed"
+            exit 1
+          fi
+          echo "✅ Site is accessible"
