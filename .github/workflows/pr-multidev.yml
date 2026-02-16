@@ -23,7 +23,30 @@ jobs:
 
       - name: Composer install
         run: composer install --no-dev --optimize-autoloader
+        
+      # ----------------------------
+      # Frontend build (Gulp / SCSS)
+      # ----------------------------
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
+      - name: Install frontend dependencies
+        working-directory: web/themes/custom/crew
+        run: npm install
+
+      - name: Verify Gulp installation
+        working-directory: web/themes/custom/crew
+        run: npx gulp -v
+
+      - name: Build frontend assets
+        working-directory: web/themes/custom/crew
+        run: npm run build
+
+      # ------------------
+      # Deploy to Pantheon
+      # ------------------
       - name: Push to Pantheon
         uses: pantheon-systems/push-to-pantheon@0.7.0
         with:
